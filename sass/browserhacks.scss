@@ -108,6 +108,15 @@ body[data-theme='browserhacks'] {
   h3 span[class*="entypo-"] {
     padding-right: 0.3em;
   }
+  
+  h1 {
+  }
+
+  h2 {
+  }
+
+  h3 {
+  }
 
   a,
   a:visited,
@@ -143,6 +152,8 @@ body[data-theme='browserhacks'] {
 
     &:hover {
       background: $ie;
+      font-size:1.15em;
+      @include user-select(none);
     }
   }
 
@@ -201,16 +212,11 @@ body[data-theme='browserhacks'] {
     > div:nth-of-type(2) {
       padding-left:.5em;
     }
-  }
+ }
 
   section {
     padding: 0 1em;
   }
-
-  /*section > div {
-    display:block;
-    padding:0;
-  }*/
 
   section[data-valign='center'] {
     text-align:center;
