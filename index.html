@@ -47,8 +47,8 @@
                     
 <pre class="language-css ie ie6 selector-hack"><code>/* IE 6 and below */
 * html .selector  { }
-.suckyie6.selector { } 
-/* .suckyie6 can be any unused class */</code></pre>
+.ie6fix.selector { } 
+/* .ie6fix can be any unused class */</code></pre>
 
 <pre class="language-css ie ie6 ie7 selector-hack"><code>/* IE 7 and below */
 .selector, { } 
@@ -57,13 +57,13 @@
 <pre class="language-css ie ie7 selector-hack"><code>/* IE 7 */
 *:first-child + html .selector { } 
 .selector, x:-IE7 { } 
-*+html .selector { }</code></pre>
+* + html .selector { }</code></pre>
 
 <pre class="language-css ch op sa mf ie ie7 ie8 ie9 ie10 selector-hack"><code>/* Everything but IE 6  */
 html > body .selector { }</code></pre>
 
 <pre class="language-css ch op sa mf ie ie8 ie9 ie10 selector-hack"><code>/* Everything but IE 6/7 */
-html > /**/body .selector { }</code></pre>
+html > /**/ body .selector { }</code></pre>
 
 <pre class="language-css ch op sa mf ie ie9 ie10 selector-hack"><code>/* Everything but IE 6/7/8 */
 :root * > .selector { }
@@ -78,7 +78,7 @@ _ - £ ¬ ¦ */
 .selector { ¦color: blue; }</code></pre>
 
 <pre class="language-css ie ie7 ie6 selector-hack"><code>/* IE 6/7 - any combination of these characters 
-! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
+! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : &lt; > | */
 .selector { !color: blue; }
 .selector { $color: blue; }
 .selector { &color: blue; }
@@ -272,7 +272,7 @@ window.opera && window.opera.version() == X</code></pre>
             </div>
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks/issues" target="_blank">
-                    <button data-type="2"><span class="entypo-chat"></span>Contribute
+                    <button data-type="2"><span class="entypo-chat"></span>Contribute</button>
                 </a>
             </div>
         </section>
@@ -283,9 +283,7 @@ window.opera && window.opera.version() == X</code></pre>
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top"><span class="entypo-up-open-big"></span></a></p>
-                    <br>
-                    <p>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
+                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="entypo-up-open-big"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
                 </footer>
             </div>
         </section>

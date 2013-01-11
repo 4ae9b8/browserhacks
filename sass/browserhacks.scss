@@ -94,13 +94,10 @@ body[data-theme='browserhacks'] {
 
   pre { 
     width: 31%; 
-    margin: 0.5%;
+    margin: 0.8%;
     display: inline-block;
     vertical-align: middle;
-  }
-
-  h1 {
-    font-size: 2.5em;
+    box-shadow: 0 0 7px rgba(0,0,0,0.1);
   }
 
   h2 {
@@ -119,15 +116,6 @@ body[data-theme='browserhacks'] {
   h3 span[class*="entypo-"] {
     padding-right: 0.3em;
   }
-  
-  h1 {
-  }
-
-  h2 {
-  }
-
-  h3 {
-  }
 
   a,
   a:visited,
@@ -141,9 +129,6 @@ body[data-theme='browserhacks'] {
 
   a:hover {
     color: $sa;
-  }
-
-  p, ul {
   }
 
   hr {
@@ -174,21 +159,6 @@ body[data-theme='browserhacks'] {
 
   button[data-width="33"] {
     width:33.3%;
-  }
-
-  button[data-high='1'] {
-  }
-
-  button[data-high='2'] {
-  }
-
-  button[data-high='3'] {
-  }
-
-  nav {
-  }
-
-  footer {
   }
 
   article {
@@ -242,7 +212,8 @@ body[data-theme='browserhacks'] {
     white-space: pre-wrap;
   }
 
-  footer {
+  .btn-top {
+    padding-right: 1em;
   }
 }
 
@@ -264,7 +235,7 @@ body[data-theme='browserhacks'] {
 
     pre { 
       width: 48% ; 
-      margin: 0.5%; 
+      margin: 0.8%; 
     }
   }
 }
