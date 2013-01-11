@@ -87,6 +87,7 @@ body[data-theme='browserhacks'] {
     background-image: url('../img/browser-logos.png');
     background-repeat: no-repeat;
     background-size: 2em;
+    clear: both;
   }
 
   .th.ie h3 { 
@@ -113,7 +114,7 @@ body[data-theme='browserhacks'] {
   pre { 
     width: 31%; 
     margin: 0.8%;
-    display: inline-block;
+    float: left;
     vertical-align: middle;
     box-shadow: 0 0 7px rgba(0,0,0,0.1);
   }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Browserhacks</title>
+    <title>Browserhacks - Tests</title>
 
     <meta charset="utf-8">
     <meta name="author" content="Hugo Giraudel, Tim Pietrusky">
@@ -15,118 +15,123 @@
     <meta property="og:url" content="http://browserhacks.com">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/crystallo-min.css">
-    <link rel="stylesheet" href="css/browserhacks.css">
+    <!--<link rel="stylesheet" href="css/crystallo-min.css">-->
+    <!--<link rel="stylesheet" href="css/browserhacks.css">-->
+    <link rel="stylesheet" href="css/browserhacks-tests.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
 
-    <article data-high="1">
-        <section data-cols="2">
-            <h1 class="main-title">Browserhacks</h1>
-            <p class="catch-phrase">#browser { <span class="catch-phrase__anim"></span><span class="catch-phrase__space">hack</span>: now; }</p>
-            <div>
-                <h2><span class="entypo-info-circled"></span>What's this?</h2>
-                <p>Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
-            </div>
-            <div>
-                <h2><span class="entypo-attention"></span>Reminder!</h2>
-                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most case you might want to check your CSS to see if you can fix the problem with a clean solution before using some browser sniffing.</p>
-            </div>
-        </section>
-    </article>
-
     <!-- selector hacks -->
     <article data-high="2" data-text="">
         <section data-cols="1">
-            <h2><span class="entypo-lamp"></span>Hacks</h2>
+            <h2><span class="entypo-lamp"></span>Tests</h2>
             <div class="th ie">
                 <h3>Internet Explorer</h3>
                 <div class="snippet-container">
                     
-<pre class="language-css ie ie6 selector-hack"><code>/* IE 6 and below */
-* html .selector  { }
-.ie6fix.selector { } 
+<pre class="language-css"><code>/* IE 6 and below */
+<span class="test1">* html .test1  { background: red; } </span>
+<span class="test2">.ie6fix.test2 { background: red; } </span>
 /* .ie6fix can be any unused class */</code></pre>
 
 <pre class="language-css ie ie6 ie7 selector-hack"><code>/* IE 7 and below */
-.selector, { } 
-//.selector { } /* To be tested */</code></pre>
+<span class="test3">.test3, { background: red; }</span> 
+<span class="test4">//.test4 { background: red; }</span> /* Doesn't seem to work */</code></pre>
 
 <pre class="language-css ie ie7 selector-hack"><code>/* IE 7 */
-*:first-child + html .selector { } 
-.selector, x:-IE7 { } 
-* + html .selector { }</code></pre>
+<span class="test5">*:first-child + html .test5 { background: red; }</span> 
+<span class="test6">.test6, x:-IE7 { background: red; } </span>
+<span class="test7">* + html .test7 { background: red; }</span></code></pre>
 
 <pre class="language-css ch op sa mf ie ie7 ie8 ie9 ie10 selector-hack"><code>/* Everything but IE 6  */
-html > body .selector { }</code></pre>
+<span class="test8">html > body .test8 { background: red; }</span></code></pre>
 
 <pre class="language-css ch op sa mf ie ie8 ie9 ie10 selector-hack"><code>/* Everything but IE 6/7 */
-html > /**/ body .selector { }</code></pre>
+<span class="test9">html > /**/ body .test9 { background: red; }</span></code></pre>
 
 <pre class="language-css ch op sa mf ie ie9 ie10 selector-hack"><code>/* Everything but IE 6/7/8 */
-:root * > .selector { }
-body:last-child .selector { }</code></pre>
+<span class="test10">:root * > .test10 { background: red; }</span>
+<span class="test11">body:last-child .test11 { background: red; }</span></code></pre>
 
 <pre class="language-css ie ie6 selector-hack"><code>/* IE 6 any combination of these characters 
 _ - £ ¬ ¦ */
-.selector { _color: blue; }
-.selector { -color: blue; }
-.selector { £color: blue; }
-.selector { ¬color: blue; }
-.selector { ¦color: blue; }</code></pre>
+<span class="test12">.test12 { _background: red; }</span>
+<span class="test13">.test13 { -background: red; }</span>
+<span class="test14">.test14 { £background: red; }</span>
+<span class="test15">.test15 { ¬background: red; }</span>
+<span class="test16">.test16 { ¦background: red; }</span></code></pre>
 
 <pre class="language-css ie ie7 ie6 selector-hack"><code>/* IE 6/7 any combination of these characters
 ! $ & * ( ) = % + @ , .
  / ` [ ] # ~ ? : &lt; > | */
-.selector { !$&*()color: blue; }
-.selector { =%+@,.color: blue; }
-.selector { /`[]#~color: blue; }
-.selector { ?:&lt;>|color: blue; }</code></pre>
+<span class="test17">.test17 { !background: red; }</span>
+<span class="test18">.test18 { $background: red; }</span>
+<span class="test19">.test19 { &background: red; }</span>
+<span class="test20">.test20 { *background: red; }</span>
+<span class="test21">.test21 { (background: red; }</span>
+<span class="test22">.test22 { )background: red; }</span>
+<span class="test23">.test23 { =background: red; }</span>
+<span class="test24">.test24 { %background: red; }</span>
+<span class="test25">.test25 { +background: red; }</span>
+<span class="test26">.test26 { @background: red; }</span>
+<span class="test27">.test27 { ,background: red; }</span>
+<span class="test28">.test28 { .background: red; }</span>
+<span class="test29">.test29 { /background: red; }</span>
+<span class="test30">.test30 { `background: red; }</span>
+<span class="test31">.test31 { [background: red; }</span>
+<span class="test32">.test32 { ]background: red; }</span>
+<span class="test33">.test33 { #background: red; }</span>
+<span class="test34">.test34 { ~background: red; }</span>
+<span class="test35">.test35 { ?background: red; }</span>
+<span class="test36">.test36 { :background: red; }</span>
+<span class="test37">.test37 { &lt;background: red; }</span>
+<span class="test38">.test38 { &gt;background: red; }</span>
+<span class="test39">.test39 { |background: red; }</span></code></pre>
 
 <pre class="language-css ie ie6 ie7 selector-hack"><code>/* IE 6/7 - acts as an !important */
-.selector { color: blue !ie; } 
+<span class="test40">.test40 { background: red; !ie; } </span>
 /* string after ! can be anything */</code></pre>
 
 <pre class="language-css ie ie6 ie7 ie8 ie9 selector-hack"><code>/* IE 6/7/8 but also IE9 in some cases */
-.selector { color: blue\9; }</code></pre>
+<span class="test41">.test41 { background: red\9; }</span></code></pre>
 
 <pre class="language-css ie ie7 ie8 selector-hack"><code>/* IE 7/8 */
-.selector { color/*\**/: blue\9; }</code></pre>
+<span class="test42">.test42 { background/*\**/: red\9; }</span></code></pre>
 
 <pre class="language-css ie ie8 ie9 selector-hack"><code>/* IE 8/9 */
-.selector { color: blue\0/; } 
+<span class="test43">.test43 { background: red\0/; } </span>
 /* must go at the END of all rules */</code></pre>
 
 <pre class="language-css ch op sa mf ie ie7 ie8 ie9 ie10 selector-hack"><code>/* Everything but IE 6 */
-.selector { color/**/: blue; }</code></pre>
+<span class="test44">.test44 { background/**/: red; }</span></code></pre>
 
-<pre class="language-css ch op sa mf ie ie9 ie10 selector-hack"><code>/* Everything but IE6/7/8 */
-body:nth-of-type(1) .selector { }
-body:first-of-type .selector { }</code></pre>
+<pre class="language-css ch op sa mf ie ie9 ie10 selector-hack"><code>/* Everything but IE 6/7/8 */
+<span class="test45">body:nth-of-type(1) .test45 { background: red; }</span>
+<span class="test46">body:first-of-type .test46 { background: red; }</span></code></pre>
 
-<pre class="language-css ie ie6 ie7 ie8 media-hack"><code>/* IE 6/7/8 (via Keith Clarke) */
-@media \0screen\,screen\9 { } </code></pre>
+<pre class="language-css ie ie6 ie7 ie8 media-hack"><code>/* IE 6/7/8 */
+<span class="test47">@media \0screen\,screen\9 { .test47 { background: red; } }</span> </code></pre>
 
 <pre class="language-css ie ie8 media-hack"><code>/* IE 8 (via Keith Clarke) */
-@media \0screen { }</code></pre>
+<span class="test48">@media \0screen { .test48 { background: red; } }</span></code></pre>
 
 <pre class="language-css ie ie8 ie9 media-hack"><code>/* IE 8/9 */
-@media screen\0 { }</code></pre>
+<span class="test49">@media screen\0 { .test49 { background: red; } }</span></code></pre>
 
 <pre class="language-css ie ie9 ie10 media-hack"><code>/* IE 9/10 */
-@media screen and (min-width:0\0) { }</code></pre>
+<span class="test50">@media screen and (min-width:0\0) { .test50 { background: red; } }</span></code></pre>
 
-<pre class="language-css ie ie10 media-hack"><code>/* IE 10+ */
-@media screen and(-ms-high-contrast: active),
-(-ms-high-contrast: none) { }</code></pre>
+<pre class="language-css ie ie10 media-hack"><code>/* IE 10+ - WTF, Chrome too? :s */
+<span class="test51">@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) { .test51 { background: red; } }</span></code></pre>
 
 <pre class="language-css ch op sa mf media-hack"><code>/* Everything but IE 6/7/8 - not a hack */ 
-@media screen and (min-width: 400px) { }</code></pre>
+<span class="test52">@media screen and (min-width: 400px) { .test52 { background: red; } }</span></code></pre>
 
-<pre class="language-css ch op sa mf misc-hack"><code>/* Everything but IE 6/7 */
-@import "stylesheet.css" all;</code></pre>
+<pre class="language-css ch op sa mf misc-hack"><code>/* Everything but IE 6/7 - doesn't seem to work at all */
+<span class="test53">@import "test53.css" all; </span>
+/* test34.css contains .test34 { background: red; } */</code></pre>
 
 <pre class="language-javascript ie js-hack"><code>/* IE */
 IE='\v'=='v'</code></pre>
@@ -144,20 +149,20 @@ try {IE6=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){
             <h3>Mozilla Firefox</h3>
                 <div class="snippet-container">
 
-<pre class="language-css mf mf2 ie ie7 selector-hack"><code>/* Firefox 2 & IE 7*/
-.selector, x:-moz-any-link { }</code></pre>
+<pre class="language-css mf mf2 ie ie7 selector-hack"><code>/* Firefox 2 & IE 7 */
+<span class="test54">.test54, x:-moz-any-link { background: red; }</span></code></pre>
 
 <pre class="language-css mf mf3 ie ie7 windows selector-hack"><code>/* Firefox 3 (Windows?) & IE 7*/
-.selector, x:-moz-any-link, x:default { }</code></pre>
+<span class="test55">.test55, x:-moz-any-link, x:default { background: red; }</span></code></pre>
 
 <pre class="language-css mf mf3-5 selector-hack"><code>/* Firefox 3.5+ */
-body:not(:-moz-handler-blocked) .selector { }</code></pre>
+<span class="test56">body:not(:-moz-handler-blocked) .test56 { background: red; }</span></code></pre>
 
 <pre class="language-css mf mf3 mf3-5 mf3-6 mf4 mf5 mf6 mf7 media-hack"><code>/* Firefox 3.5 to Firefox 7 */
-@media screen and (min-resolution: +72dpi) {}</code></pre>
+<span class="test57">@media screen and (min-resolution: +72dpi) { .test57 { background: red; } }</span></code></pre>
 
 <pre class="language-css mf mf3 mf4 misc-hack"><code>/* Firefox 3/4 (+?) */
-@-moz-document url-prefix() { }</code></pre>
+<span class="test58">@-moz-document url-prefix() { .test58 { background: red; } }</span></code></pre>
 
 <pre class="language-javascript mf mf2 js-hack"><code>/* Firefox 2 */
 FF2=(function x(){})[-6]=='x'</code></pre>
@@ -175,12 +180,8 @@ FF=/a/[-1]=='a'</code></pre>
                 <h3>Chrome</h3>
                 <div class="snippet-container">
     
-<pre class="language-css sa ch selector-hack"><code>/* Safari (version?) and Chrome */
-::made-up-pseudo-element, .selector { }</code></pre>
-
-<pre class="language-css sa sa3 ch op op9 media-hack"><code>/* Safari 3+, Chrome, Opera 9 */
-@media screen and 
-(-webkit-min-device-pixel-ratio:0) { }</code></pre>
+<pre class="language-css sa ch selector-hack"><code>/* Safari (version?) and Chrome (not Canary) */
+<span class="test59">::made-up-pseudo-element, .test59 { background: red; }</span></code></pre>
 
 <pre class="language-javascript ch js-hack"><code>/* Chrome */
 Chr=/source/.test((/a/.toString+''))</code></pre>
@@ -192,18 +193,14 @@ Chr=/source/.test((/a/.toString+''))</code></pre>
                 <div class="snippet-container">
 
 <pre class="language-css sa sa2 sa3 selector-hack"><code>/* Safari 2/3 */
-html[xmlns*=""] body:last-child .selector { }
-html[xmlns*=""]:root .selector  { }</code></pre>
+<span class="test60">html[xmlns*=""] body:last-child .test60 { background: red; }</span>
+<span class="test61">html[xmlns*=""]:root .test61  { background: red; }</span></code></pre>
 
 <pre class="language-css sa sa2 sa3 op op9-25 selector-hack"><code>/* Safari 2/3.1, Opera 9.25 */
-*|html[xmlns*=""] .selector { }</code></pre>
-
-<pre class="language-css sa ch selector-hack"><code>/* Safari (version?) and Chrome */
-::made-up-pseudo-element, .selector { }</code></pre>
+<span class="test62">*|html[xmlns*=""] .test62 { background: red; }</span></code></pre>
 
 <pre class="language-css sa sa3 ch op op9 media-hack"><code>/* Safari 3+, Chrome, Opera 9 */
-@media screen and 
-(-webkit-min-device-pixel-ratio:0) { }</code></pre>
+<span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .test63 { background: red; } }</span></code></pre>
 
 <pre class="language-javascript sa js-hack"><code>/* Safari */
 Saf=/a/.__proto__=='//'</code></pre>
@@ -215,15 +212,8 @@ Saf=/a/.__proto__=='//'</code></pre>
                 <h3>Opera</h3>
                 <div class="snippet-container">
 
-<pre class="language-css sa sa2 sa3 op op9-25 selector-hack"><code>/* Safari 2/3.1, Opera 9.25 */
-*|html[xmlns*=""] .selector { }</code></pre>
-
 <pre class="language-css op op9-5 selector-hack"><code>/* Opera 9.5+ */
-noindex:-o-prefocus, .selector { }</code></pre>
-
-<pre class="language-css sa sa3 ch op op9 media-hack"><code>/* Safari 3+, Chrome, Opera 9 */
-@media screen and 
-(-webkit-min-device-pixel-ratio:0) { }</code></pre>
+<span class="test64">noindex:-o-prefocus, .test64 { background: red; }</span></code></pre>
 
 <pre class="language-javascript op js-hack"><code>/* Opera */
 Op=/^function \(/.test([].sort)</code></pre>
@@ -236,38 +226,6 @@ window.opera && window.opera.version() == X</code></pre>
         </section>
     </article>
 
-    <!-- Social -->
-    <article data-high="4">
-        <section data-cols="3">
-            <div>
-                <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="2"><span class="entypo-github"></span>Fork me</button>
-                </a>
-            </div>
-            <div>
-                <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                    <button data-type="1"><span class="entypo-twitter"></span>Spread the word</button>
-                </a>
-            </div>
-            <div>
-                <a href="test.html" target="_blank">
-                    <button data-type="2"><span class="entypo-paper-plane"></span>Test page</button>
-                </a>
-            </div>
-        </section>
-    </article>
-
-    <!-- Top & Handcrafted -->
-    <article data-high="3">
-        <section data-cols="1">
-            <div>
-                <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="entypo-up-open-big"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
-                </footer>
-            </div>
-        </section>
-    </article>  
-
 
     <!-- hackTemplate -->
     <script id="hackTemplate" type="text/template">
@@ -277,7 +235,7 @@ window.opera && window.opera.version() == X</code></pre>
         </section>
     </script>
 
-    <script src="js/libs.js"></script>
+    <!--<script src="js/libs.js"></script>
     <script src="js/main.js"></script>
     <script src="js/prism.js"></script>
     <script>
@@ -288,7 +246,7 @@ window.opera && window.opera.version() == X</code></pre>
         if (i == tips.length) --i;
         $(".catch-phrase__anim").html(tips[i]);
     }, 200);
-    </script>
+    </script>-->
 
     <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     </body>

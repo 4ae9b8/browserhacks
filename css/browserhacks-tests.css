@@ -1,0 +1,129 @@
+pre span {
+	background: lightgreen;
+}
+
+/* IE 6 and below - .ie6fix can be any unused class */
+* html .test1  { background: lightpink; }
+.ie6fix.test2 { background: lightpink; } 
+
+/* IE 7 and below */
+.test3, { background: lightpink; } 
+//.test4 { background: lightpink; } /* Doesn't seem to work */
+
+/* IE 7 */
+*:first-child + html .test5 { background: lightpink; } 
+.test6, x:-IE7 { background: lightpink; } 
+* + html .test7 { background: lightpink; }
+
+/* Everything but IE 6  */
+html > body .test8 { background: lightpink; }
+
+/* Everything but IE 6/7 */
+html > /**/ body .test9 { background: lightpink; }
+
+/* Everything but IE 6/7/8 */
+:root * > .test10 { background: lightpink; }
+body:last-child .test11 { background: lightpink; }
+
+/* IE 6 any combination of these characters _ - £ ¬ ¦ */
+.test12 { _background: lightpink; }
+.test13 { -background: lightpink; }
+.test14 { £background: lightpink; }
+.test15 { ¬background: lightpink; }
+.test16 { ¦background: lightpink; }
+
+/* IE 6/7 any combination of these characters ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
+.test17 { !background: lightpink; }
+.test18 { $background: lightpink; }
+.test19 { &background: lightpink; }
+.test20 { *background: lightpink; }
+.test21 { (background: lightpink; }
+.test22 { )background: lightpink; }
+.test23 { =background: lightpink; }
+.test24 { %background: lightpink; }
+.test25 { +background: lightpink; }
+.test26 { @background: lightpink; }
+.test27 { ,background: lightpink; }
+.test28 { .background: lightpink; }
+.test29 { /background: lightpink; }
+.test30 { `background: lightpink; }
+.test31 { [background: lightpink; }
+.test32 { ]background: lightpink; }
+.test33 { #background: lightpink; }
+.test34 { ~background: lightpink; }
+.test35 { ?background: lightpink; }
+.test36 { :background: lightpink; }
+.test37 { <background: lightpink; }
+.test38 { >background: lightpink; }
+.test39 { |background: lightpink; }
+
+/* IE 6/7 - acts as an !important - string after ! can be anything*/
+.test40 { background: lightpink !ie; } 
+
+/* IE 6/7/8 but also IE9 in some cases */
+.test41 { background: lightpink\9; }
+
+/* IE 7/8 */
+.test42 { background/*\**/: lightpink\9; }
+
+/* IE 8/9 - must go at the END of all rules */
+.test43 { background: lightpink\0/; } 
+
+/* Everything but IE 6 */
+.test44 { background/**/: lightpink; }
+
+/* Everything but IE6/7/8 */
+body:nth-of-type(1) .test45 { background: lightpink; }
+body:first-of-type .test46 { background: lightpink; }
+
+/* IE 6/7/8 (via Keith Clarke) */
+@media \0screen\,screen\9 { .test47 { background: lightpink;  } } 
+
+/* IE 8 (via Keith Clarke) */
+@media \0screen { .test48 { background: lightpink;  } } 
+
+/* IE 8/9 */
+@media screen\0 { .test49 { background: lightpink;  } } 
+ 
+/* IE 9/10 */
+@media screen and (min-width:0\0) {.test50 { background: lightpink;  } } 
+
+/* IE 10+ */
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) { .test51 { background: lightpink; } } 
+
+/* Everything but IE 6/7/8 - not a hack */ 
+@media screen and (min-width: 400px) { .test52 { background: lightpink;  } } 
+
+/* Everything but IE 6/7 */
+@import "test53.css" all;
+
+/* Firefox 2 & IE 7 */
+.test54, x:-moz-any-link { background: lightpink; }
+
+/* Firefox 3 (Windows?) & IE 7 */
+.test55, x:-moz-any-link, x:default { background: lightpink; }
+
+/* Firefox 3.5+ */
+body:not(:-moz-handler-blocked) .test56 { background: lightpink; }
+
+/* Firefox 3.5 to Firefox 7 */
+@media screen and (min-resolution: +72dpi) { .test57 { background: lightpink; } }
+
+/* Firefox 3/4 (+?) */
+@-moz-document url-prefix() { .test58 { background: lightpink; } }
+
+/* Safari (version?) and Chrome */
+::made-up-pseudo-element, .test59 { background: lightpink; }
+
+/* Safari 2/3 */
+html[xmlns*=""] body:last-child .test60 { background: lightpink; }
+html[xmlns*=""]:root .test61  { background: lightpink; }
+
+/* Safari 2/3.1, Opera 9.25 */
+*|html[xmlns*=""] .test62 { background: lightpink; }
+
+/* Safari 3+, Chrome, Opera 9 */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test63 { background: lightpink; } }
+
+/* Opera 9.5+ */
+noindex:-o-prefocus, .test64 { background: lightpink; }
