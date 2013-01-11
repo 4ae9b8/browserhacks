@@ -83,14 +83,32 @@ body[data-theme='browserhacks'] {
 
   .th h3 {
     border-bottom: 3px solid;
-    padding-bottom: 0.5em;
+    padding: 0.5em 2em;
+    background-image: url('../img/browser-logos.png');
+    background-repeat: no-repeat;
+    background-size: 2em;
   }
 
-  .th.ie h3 { border-color: $ie; }
-  .th.ch h3 { border-color: $ch; }
-  .th.sa h3 { border-color: $sa; }
-  .th.op h3 { border-color: $op; }
-  .th.mf h3 { border-color: $mf; }
+  .th.ie h3 { 
+    border-color: $ie;
+    background-position: -3px 5px;
+  }
+  .th.ch h3 { 
+    border-color: $ch;
+    background-position: -3px -99px;
+  }
+  .th.sa h3 { 
+    border-color: $sa;
+    background-position: -3px -155px;
+  }
+  .th.op h3 { 
+    border-color: $op;
+    background-position: -3px -207px;
+  }
+  .th.mf h3 { 
+    border-color: $mf;
+    background-position: -3px -44px;
+  }
 
   pre { 
     width: 31%; 
@@ -244,7 +262,7 @@ body[data-theme='browserhacks'] {
   body[data-theme='browserhacks'] {
     pre { 
       width: 100%; 
-      margin: 0; 
+      margin: 1% 0; 
     }
   }
 }
