@@ -5,6 +5,7 @@
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url(http://fonts.googleapis.com/css?family=PT+Mono);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import "prism";
 
 $ie: #0a90dd;
 $mf: #e26c0c;
@@ -76,10 +77,13 @@ body[data-theme='browserhacks'] {
     padding-left: 1ch;
   }
 
+  .th {
+    margin-top: 1em;
+  }
+
   .th h3 {
     border-bottom: 3px solid;
     padding-bottom: 0.5em;
-    box-shadow: 0 2px 2px rgba(0,0,0,.1);
   }
 
   .th.ie h3 { border-color: $ie; }
@@ -87,7 +91,14 @@ body[data-theme='browserhacks'] {
   .th.sa h3 { border-color: $sa; }
   .th.op h3 { border-color: $op; }
   .th.mf h3 { border-color: $mf; }
-  
+
+  pre { 
+    width: 31%; 
+    margin: 0.5%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   h1 {
     font-size: 2.5em;
   }
@@ -245,10 +256,24 @@ body[data-theme='browserhacks'] {
 @media screen and (max-width: 66em) {
   body[data-theme='browserhacks'] {
 
-    font-size:.925em;
+    /*font-size:.925em;*/
 
     section > div {
       padding: 0 .5em;
+    }
+
+    pre { 
+      width: 48% ; 
+      margin: 0.5%; 
+    }
+  }
+}
+
+@media screen and (max-width: 44em) {
+  body[data-theme='browserhacks'] {
+    pre { 
+      width: 100%; 
+      margin: 0; 
     }
   }
 }
