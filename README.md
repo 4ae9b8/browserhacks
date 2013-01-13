@@ -1,6 +1,11 @@
 Browserhacks.com
 ===
 
+13/01/13
+--------
+* Fixed a layout bug
+* Improved some styles
+
 11/01/13
 --------
 * First layout shot (3 then 2 then 1 column)

@@ -18,6 +18,16 @@ body {
   height:100%;
 }
 
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 * {
   &::-moz-selection,
   &::selection { 
@@ -76,7 +86,7 @@ body[data-theme='browserhacks'] {
   }
 
   .th {
-    margin-top: 1em;
+    margin-top: 2.5em;
   }
 
   .th h3 {
