@@ -23,9 +23,15 @@
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
 
     <article data-high="1">
-        <section data-cols="2">
+        <section data-cols="1" >
             <h1 class="main-title">Browserhacks</h1>
-            <p class="catch-phrase">#browser { <span class="catch-phrase__anim"></span><span class="catch-phrase__space">hack</span>: now; }</p>
+                
+            <p class="catch-phrase">
+                #browser { <span class="catch-phrase__anim"></span><span class="catch-phrase__space">hack</span>: now; }
+            </p>
+        </section>
+        
+        <section data-cols="2" data-valign="center">
             <div>
                 <h2><span class="entypo-info-circled"></span>What's this?</h2>
                 <p>Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
@@ -279,16 +285,6 @@ window.opera && window.opera.version() == X</code></pre>
 
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/prism.js"></script>
-    <script>
-    var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
-
-    setInterval(function() {
-        var i = Math.round((Math.random()) * tips.length);
-        if (i == tips.length) --i;
-        $(".catch-phrase__anim").html(tips[i]);
-    }, 200);
-    </script>
 
     <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     </body>

@@ -3,12 +3,11 @@
 @import "compass/css3";
 @import "compass/css3/user-interface";
 @import url(http://weloveiconfonts.com/api/?family=entypo);
-@import url(http://fonts.googleapis.com/css?family=PT+Mono);
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono|Montserrat);
 @import "prism";
 
 $ie: #0a90dd;
-$mf: #e26c0c;
+$mf: #f77918; // #e26c0c
 $ch: #3cbc44;
 $sa: #46bfe6;
 $op: #f63b3c;
@@ -42,9 +41,8 @@ body[data-theme='browserhacks'] {
     left: 0;
     right: 0;
     top: 0;
-    height: 3px;
+    height: .25em;
     @include background-image(linear-gradient(left, $ie 0%, $ie 20%, $mf 20%, $mf 40%, $ch 40%, $ch 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
-    box-shadow: 0 2px 2px rgba(0,0,0,.15);
   }
 
   .main-title {
@@ -82,33 +80,34 @@ body[data-theme='browserhacks'] {
   }
 
   .th h3 {
-    border-bottom: 3px solid;
+    border-bottom: .25em solid;
     padding: 0.5em 2em;
-    background-image: url('../img/browser-logos.png');
-    background-repeat: no-repeat;
+    background: url('../img/browser-logos.png') no-repeat;
     background-size: 2em;
     clear: both;
   }
 
+  $logo_left: -.25em;
+
   .th.ie h3 { 
     border-color: $ie;
-    background-position: -3px 5px;
+    background-position: $logo_left .25em;
   }
   .th.ch h3 { 
     border-color: $ch;
-    background-position: -3px -99px;
+    background-position: $logo_left -4.25em;
   }
   .th.sa h3 { 
     border-color: $sa;
-    background-position: -3px -155px;
+    background-position: $logo_left -6.65em;
   }
   .th.op h3 { 
     border-color: $op;
-    background-position: -3px -207px;
+    background-position: $logo_left -8.75em;
   }
   .th.mf h3 { 
     border-color: $mf;
-    background-position: -3px -44px;
+    background-position: $logo_left -2em;
   }
 
   pre { 
@@ -120,20 +119,21 @@ body[data-theme='browserhacks'] {
   }
 
   h2 {
-    font-size: 1.5em;
+    font: 1.85em 'Montserrat', sans-serif;
     padding-bottom: 0.4em;
     margin-bottom: 0.4em;
     border-bottom: 1px solid #ddd;
   }
 
   h3 {
-    font-size: 1.25em;
+    font: bold 1.15em 'PT Mono', sans-serif;
   }
 
   h1 span[class*="entypo-"],
   h2 span[class*="entypo-"],
   h3 span[class*="entypo-"] {
-    padding-right: 0.3em;
+    padding-right: .35em;
+    font-weight: normal;
   }
 
   a,
@@ -189,7 +189,7 @@ body[data-theme='browserhacks'] {
   }
 
   article[data-text] {
-    margin-top:4em;
+    margin-top:2em;
   }
 
   article[data-text]:after {
@@ -212,7 +212,22 @@ body[data-theme='browserhacks'] {
     > div:nth-of-type(2) {
       padding-left:.5em;
     }
- }
+  }
+
+  section[data-cols="3"] {
+    > div:nth-of-type(1) {
+      padding-right:.5em;
+    }
+
+    > div:nth-of-type(2) {
+      padding-left:.5em;
+      padding-right:.5em;
+    }
+
+    > div:nth-of-type(3) {
+      padding-left:.5em;
+    }
+  }
 
   section {
     padding: 0 1em;
@@ -220,6 +235,10 @@ body[data-theme='browserhacks'] {
 
   section[data-valign='center'] {
     text-align:center;
+
+    p {
+      text-align: left;
+    }
   }
 
   section[data-valign='right'] {
