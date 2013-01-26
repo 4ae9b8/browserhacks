@@ -125,6 +125,9 @@
 	/* IE 9/10 */
 	@media screen and (min-width:0\0) { }
 
+	/* Opera 7 */
+	@media all and (min-width: 0px){ }
+
 	/* IE 10+ */
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { }
 
@@ -135,7 +138,7 @@
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Everything but IE 6/7/8 - not a hack */ 
-@media screen and (min-width: 400px) { }
+	@media screen and (min-width: 400px) { }
 
 
 ## MISCELLANEOUS
