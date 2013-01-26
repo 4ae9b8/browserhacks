@@ -180,5 +180,5 @@
 	/* IE 10 */
 	/*@cc_on!@*/false && document.documentMode === 10
 
-/* Transition on pseudo elements (or something like that) */
-userAgent.toLowerCase().indexOf('firefox') > -1 || userAgent.toLowerCase().indexOf('chrome') > -1
+	/* Transition on pseudo elements (or something like that) */
+	userAgent.toLowerCase().indexOf('firefox') > -1 || userAgent.toLowerCase().indexOf('chrome') > -1
