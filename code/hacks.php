@@ -1,5 +1,20 @@
 <?php
 
+  $hack_types = array (
+    'selector' => array (
+      'title' => 'Selector Hacks', 
+      'icon' => 'entypo-lamp'
+    ),
+    'media' => array (
+      'title' => 'Media Query Hacks',
+      'icon' => 'entypo-rocket'
+    ),
+    'javascript' => array (
+      'title' => 'JavaScript Hacks',
+      'icon' => 'entypo-code'
+    )
+  ); 
+
   $hacks = array (
     'ch' => array (
       'name' => 'Chrome',
@@ -15,6 +30,20 @@
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
           )
+        ),
+        'media' => array(
+          array (
+            'version' => 'Chrome, Safari 3+, Opera 9',
+            'language' => 'language-css',
+            'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
+          ),
+        ),
+        'javascript' => array(
+          array (
+            'version' => 'Chrome',
+            'language' => 'language-javascript',
+            'code' => "Chr=/source/.test((/a/.toString+''))"
+          ),
         )
       )
     ),
@@ -99,18 +128,17 @@
     <section data-cols="1">
         <h2 class="th"><?php echo $browser['name']; ?></h2>
     </section>
-
-    <section data-cols="1">
-      <h3><span class="entypo-lamp"></span>Selector Hacks</h3>
-    </section>
   
     <?php 
       // Type of hack
-      foreach($browser['hacks'] as $hack): 
+      foreach($browser['hacks'] as $type => $hack): 
     ?>
+    
+      <section data-cols="1">
+        <h3><span class="<?php echo $hack_types[$type]['icon']; ?>"></span><?php echo $hack_types[$type]['title']; ?></h3>
+      </section>
   
       <section data-cols="2">
-      
         <?php 
           // Single hack
           for($i = 0; $i < count($hack); $i++): 
@@ -120,7 +148,6 @@
             echo $hack[$i]['code']; ?></code></pre>
           </div>
         <?php endfor; ?>
-        
       </section>
   
     <?php endforeach; ?>
