@@ -24,7 +24,7 @@
 
     <article data-high="1">
         <section data-cols="1" >
-            <h1 class="main-title">Browserhacks</h1>
+            <h1>Browserhacks</h1>
                 
             <p class="catch-phrase">
                 #browser { <span class="catch-phrase__anim"></span><span class="catch-phrase__space">hack</span>: now; }
@@ -35,7 +35,7 @@
     <article data-high="2">    
         <section data-cols="1">
           <div>
-              <input type="text" placeholder="Search here...">
+              <input type="text" placeholder="What?">
           </div>
         </section>
     </article>

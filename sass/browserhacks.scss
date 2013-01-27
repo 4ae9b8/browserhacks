@@ -37,7 +37,7 @@ body {
 }
 
 body[data-theme='browserhacks'] {
-  font: 1.2em/1.4 sans-serif;
+  font: 1.2em/1.5 sans-serif;
   background: url(http://subtlepatterns.com/patterns/norwegian_rose.png) #fff;
   position: relative;
 
@@ -55,13 +55,12 @@ body[data-theme='browserhacks'] {
     @include background-image(linear-gradient(left, $ch 0%, $ch 20%, $fx 20%, $fx 40%, $ie 40%, $ie 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
   }
 
-  .main-title {
+  h1 {
     text-align: center;
-    font-size: 4em;
-    text-shadow: 0 2px white, 0 4px silver;
+    font:4em 'PT Mono', sans-serif;
+    text-shadow: 0 .05em white, 0 .05em silver;
     text-transform: uppercase;
-    font-family: 'PT Mono', sans-serif;
-    margin-bottom: 0;
+    margin:1.5em 0 0 0;
     color: #333;
   }
 
@@ -100,7 +99,10 @@ body[data-theme='browserhacks'] {
   $logo_left: -.15em;
 
   .ie {
-     box-shadow:inset 0 -.25em 0 .25em $ie;
+    box-shadow: 
+      0 -.25em 0 .25em $ie, 
+      0 .25em 0 .25em $ie
+    ;
     .th { 
       border-color: $ie;
       background-position: $logo_left .25em;
@@ -108,7 +110,10 @@ body[data-theme='browserhacks'] {
   }
 
   .ch { 
-    box-shadow:inset 0 -.25em 0 .25em $ch;
+    box-shadow: 
+      0 -.25em 0 .25em $ch, 
+      0 .25em 0 .25em $ch
+    ;
     .th { 
       border-color: $ch;
       background-position: $logo_left -4.25em;
@@ -116,7 +121,10 @@ body[data-theme='browserhacks'] {
   }
 
   .sa {
-    box-shadow:inset 0 -.25em 0 .25em $sa;
+    box-shadow: 
+      0 -.25em 0 .25em $sa, 
+      0 .25em 0 .25em $sa
+    ;
     .th { 
       border-color: $sa;
       background-position: $logo_left -6.65em;
@@ -124,7 +132,10 @@ body[data-theme='browserhacks'] {
   }
 
   .op {
-    box-shadow:inset 0 -.25em 0 .25em $op;
+    box-shadow: 
+      0 -.25em 0 .25em $op, 
+      0 .25em 0 .25em $op
+    ;
     .th { 
       border-color: $op;
       background-position: $logo_left -8.75em;
@@ -132,7 +143,10 @@ body[data-theme='browserhacks'] {
   }
 
   .fx {
-    box-shadow:inset 0 -.25em 0 .25em $fx;
+    box-shadow: 
+      0 -.25em 0 .25em $fx, 
+      0 .25em 0 .25em $fx
+    ;
     .th { 
       border-color: $fx;
       background-position: $logo_left -2em;
@@ -150,7 +164,7 @@ body[data-theme='browserhacks'] {
     font: 1.85em 'Montserrat', sans-serif;
     padding-bottom: 0.4em;
     margin-bottom: 0.4em;
-    border-bottom: .35em solid #ddd;
+    border-bottom: .35em solid rgba(165, 165, 165, .7);
   }
 
   h3 {
@@ -219,7 +233,7 @@ body[data-theme='browserhacks'] {
   article[data-high="2"] {
     input {
       width:100%;
-      background:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/blackorchid.png) rgba(0, 0, 0, .5);
+      background:rgba(0, 0, 0, .5);
       height:2em;
       font: 2em/1em sans-serif;
       padding:0 .25em 0 .25em;
@@ -229,8 +243,8 @@ body[data-theme='browserhacks'] {
       color:#fff;
       outline:none;
       border: rgba(255,255,255, .2) solid .015em;
-      border-right: rgba(255, 255, 255, .7) solid .25em;
-      border-left: rgba(255, 255, 255, .7) solid .25em;
+      border-right: rgba(255, 255, 255, .4) solid .25em;
+      border-left: rgba(255, 255, 255, .4) solid .25em;
       @include transition(background .25s ease-in-out, border .25s ease-in-out);
 
       &:focus {
@@ -318,10 +332,14 @@ body[data-theme='browserhacks'] {
 @media screen and (max-width: 66em) {
   body[data-theme='browserhacks'] {
 
-    /*font-size:.925em;*/
+    h1 {
+      font-size:2em;
+    }
 
-    section > div {
-      padding: 0 .5em;
+    section > div,
+    section[data-cols="2"] > div:nth-child(even),
+    section[data-cols="2"] > div:nth-child(odd) {
+      padding: 0;
     }
   }
 }
