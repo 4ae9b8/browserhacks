@@ -18,16 +18,6 @@ body {
   height:100%;
 }
 
-.clearfix {
-  *zoom: 1;
-}
-
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
 * {
   &::-moz-selection,
   &::selection { 
@@ -338,8 +328,11 @@ body[data-theme='browserhacks'] {
 
     section > div,
     section[data-cols="2"] > div:nth-child(even),
-    section[data-cols="2"] > div:nth-child(odd) {
-      padding: 0;
+    section[data-cols="2"] > div:nth-child(odd),
+    section[data-cols="3"] > div:nth-of-type(1),
+    section[data-cols="3"] > div:nth-of-type(2),
+    section[data-cols="3"] > div:nth-of-type(3) {
+      padding: .25em 0 .25em 0;
     }
   }
 }
