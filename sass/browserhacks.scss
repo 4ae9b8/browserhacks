@@ -7,7 +7,7 @@
 @import "prism";
 
 $ie: #0a90dd;
-$mf: #f77918; // #e26c0c
+$fx: #f77918; // #e26c0c
 $ch: #3cbc44;
 $sa: #46bfe6;
 $op: #f63b3c;
@@ -38,7 +38,7 @@ body {
 
 body[data-theme='browserhacks'] {
   font: 1.2em/1.4 sans-serif;
-  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/pw_maze_white.png) #fff;
+  background: url(http://subtlepatterns.com/patterns/norwegian_rose.png) #fff;
   position: relative;
 
   [class*="entypo-"]:before {
@@ -52,7 +52,7 @@ body[data-theme='browserhacks'] {
     right: 0;
     top: 0;
     height: .25em;
-    @include background-image(linear-gradient(left, $ie 0%, $ie 20%, $mf 20%, $mf 40%, $ch 40%, $ch 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
+    @include background-image(linear-gradient(left, $ch 0%, $ch 20%, $fx 20%, $fx 40%, $ie 40%, $ie 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
   }
 
   .main-title {
@@ -86,10 +86,10 @@ body[data-theme='browserhacks'] {
   }
 
   .th {
-    margin-top: 2.5em;
+    margin: .85em 0 .85em 0;
   }
 
-  .th h3 {
+  .th {
     border-bottom: .25em solid;
     padding: 0.5em 2em;
     background: url('../img/browser-logos.png') no-repeat;
@@ -97,42 +97,60 @@ body[data-theme='browserhacks'] {
     clear: both;
   }
 
-  $logo_left: -.25em;
+  $logo_left: -.15em;
 
-  .th.ie h3 { 
-    border-color: $ie;
-    background-position: $logo_left .25em;
+  .ie {
+     box-shadow:inset 0 -.25em 0 .25em $ie;
+    .th { 
+      border-color: $ie;
+      background-position: $logo_left .25em;
+    }
   }
-  .th.ch h3 { 
-    border-color: $ch;
-    background-position: $logo_left -4.25em;
+
+  .ch { 
+    box-shadow:inset 0 -.25em 0 .25em $ch;
+    .th { 
+      border-color: $ch;
+      background-position: $logo_left -4.25em;
+    }
   }
-  .th.sa h3 { 
-    border-color: $sa;
-    background-position: $logo_left -6.65em;
+
+  .sa {
+    box-shadow:inset 0 -.25em 0 .25em $sa;
+    .th { 
+      border-color: $sa;
+      background-position: $logo_left -6.65em;
+    }
   }
-  .th.op h3 { 
-    border-color: $op;
-    background-position: $logo_left -8.75em;
+
+  .op {
+    box-shadow:inset 0 -.25em 0 .25em $op;
+    .th { 
+      border-color: $op;
+      background-position: $logo_left -8.75em;
+    }
   }
-  .th.mf h3 { 
-    border-color: $mf;
-    background-position: $logo_left -2em;
+
+  .fx {
+    box-shadow:inset 0 -.25em 0 .25em $fx;
+    .th { 
+      border-color: $fx;
+      background-position: $logo_left -2em;
+    }
   }
 
   pre { 
-    width: 48%; 
-    margin: 0.8%;
+    width:100%;
     display: inline-block;
     vertical-align: middle;
-    box-shadow: 0 0 7px rgba(0,0,0,0.1);
+    box-shadow: 0 0 .15em rgba(0,0,0,0.1);
   }
 
   h2 {
     font: 1.85em 'Montserrat', sans-serif;
     padding-bottom: 0.4em;
     margin-bottom: 0.4em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: .35em solid #ddd;
   }
 
   h3 {
@@ -198,6 +216,37 @@ body[data-theme='browserhacks'] {
     margin-bottom:2em;
   }
 
+  article[data-high="2"] {
+    input {
+      width:100%;
+      background:url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/blackorchid.png) rgba(0, 0, 0, .5);
+      height:2em;
+      font: 2em/1em sans-serif;
+      padding:0 .25em 0 .25em;
+      box-shadow:
+        inset 0 0 .25em 0 rgba(0, 0, 0, .5)
+      ;
+      color:#fff;
+      outline:none;
+      border: rgba(255,255,255, .2) solid .015em;
+      border-right: rgba(255, 255, 255, .7) solid .25em;
+      border-left: rgba(255, 255, 255, .7) solid .25em;
+      @include transition(background .25s ease-in-out, border .25s ease-in-out);
+
+      &:focus {
+        background:rgba(255, 255, 255, .8);
+        border:none;
+        box-shadow:none;
+        color:#000;
+      }
+    }
+  }
+
+  article[data-high="3"] {
+    background:rgba(255, 255, 255, .3);
+    padding-bottom:.85em;
+  }
+
   article[data-text] {
     margin-top:2em;
   }
@@ -209,18 +258,12 @@ body[data-theme='browserhacks'] {
     z-index:-1;
   }
 
-  article[data-high="2"] {
-    section[data-cols="2"] {
-    }
-  }
-
   section[data-cols="2"] {
-    > div:nth-of-type(1) {
-      padding-right:.5em;
+    > div:nth-child(odd) {
+      padding: 0 .5em 0 0;
     }
-
-    > div:nth-of-type(2) {
-      padding-left:.5em;
+    > div:nth-child(even) {
+      padding: 0 0 0 .5em;
     }
   }
 
