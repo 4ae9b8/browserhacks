@@ -8,7 +8,7 @@
 	
 	/* IE 7 and below */
 	.selector, { } 
-	//.selector { }
+	//.selector { } /* To be tested */
 	 
 	/* IE 7 */
 	*:first-child+html .selector { } 
