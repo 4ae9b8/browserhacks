@@ -51,7 +51,7 @@ body[data-theme='browserhacks'] {
     left: 0;
     right: 0;
     top: 0;
-    height: .25em;
+    height: 1.65em;
     @include background-image(linear-gradient(left, $ch 0%, $ch 20%, $fx 20%, $fx 40%, $ie 40%, $ie 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
   }
 
