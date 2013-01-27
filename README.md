@@ -1,6 +1,12 @@
 Browserhacks.com
 ===
 
+27/01/13
+--------
+* Added code/hacks.php to auto generate the hacks and the corresponding HTML
+* Improved some styles
+* Added an input field
+
 13/01/13
 --------
 * Fixed a layout bug
