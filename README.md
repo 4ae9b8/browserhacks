@@ -6,6 +6,8 @@ Browserhacks.com
 * Added code/hacks.php to auto generate the hacks and the corresponding HTML
 * Improved some styles
 * Added an input field
+* Improved small / normal screen version
+* Added some sub categories
 
 13/01/13
 --------
