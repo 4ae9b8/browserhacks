@@ -102,7 +102,7 @@
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by the fabulous <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> team.</p>
+                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by The Fabulous <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
                 </footer>
             </div>
         </section>
