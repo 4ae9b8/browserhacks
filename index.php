@@ -64,6 +64,7 @@
     </article>
         
 <?php
+  // HTML for the hacks
   include_once('code/hacks.php');
 ?>
     
@@ -93,7 +94,7 @@
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="entypo-up-open-big"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
+                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
                 </footer>
             </div>
         </section>
