@@ -64,7 +64,7 @@ body:last-child .test11 { background: lightpink; }
 /* IE 6/7 - acts as an !important - string after ! can be anything*/
 .test40 { background: lightpink !ie; } 
 
-/* IE 6/7/8 but also IE9 in some cases */
+/* IE 6/7/8/9/10 */
 .test41 { background: lightpink\9; }
 
 /* IE 7/8 */
@@ -137,3 +137,15 @@ body:empty .test65 { background: lightpink; }
 
 /* Opera 7 */
 @media all and (min-width: 0px){ body:empty .test66 { background: lightpink; } }
+
+/* Firefox 3.6+ */
+@media screen and (-moz-images-in-menus:0) { .test67 { background: lightpink; } }
+
+/* Firefox 4+ */ 
+@media screen and (min--moz-device-pixel-ratio:0) { .test68 { background: lightpink; } }
+
+/* IE 9/10 */
+.test69:nth-of-type(1n) { background: lightpink\9; }
+
+/* Opera 12- */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test70 { background: lightpink; } }

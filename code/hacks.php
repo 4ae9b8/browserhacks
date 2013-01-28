@@ -60,6 +60,11 @@
       'hacks' => array(
         'selector' => array(
           array (
+            'version' => 'Firefox 1.5',
+            'language' => 'language-css',
+            'code' => "body:empty .selector {}"
+          ),
+          array (
             'version' => 'Firefox 2',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link {}"
@@ -89,7 +94,12 @@
           array (
             'version' => 'Firefox 3.6+',
             'language' => 'language-css',
-            'code' => "@media screen and (-moz-images-in-menus:0) {} \n/* To be tested */"
+            'code' => "@media screen and (-moz-images-in-menus:0) {}"
+          ),
+          array (
+            'version' => 'Firefox 4+',
+            'language' => 'language-css',
+            'code' => "@media screen and (min--moz-device-pixel-ratio:0) {}"
           )
         ),
         'javascript' => array(
@@ -170,11 +180,6 @@
             'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
           ),
           array (
-            'version' => 'IE 6/7/8 but also IE9 in some cases',
-            'language' => 'language-css',
-            'code' => ".selector { color: blue\9; }"
-          ),
-          array (
             'version' => 'IE 7/8',
             'language' => 'language-css',
             'code' => ".selector { color/*\**/: blue\9; }"
@@ -183,6 +188,16 @@
             'version' => 'IE 8/9',
             'language' => 'language-css',
             'code' => ".selector { color: blue\0/; } \n/* must go at the END of all rules */"
+          ),
+          array (
+            'version' => 'IE 9/10',
+            'language' => 'language-css',
+            'code' => ".selector:nth-of-type(1n) { color: blue\9; }"
+          ),
+          array (
+            'version' => 'IE 6/7/8/9/10',
+            'language' => 'language-css',
+            'code' => ".selector { color: blue\9; }"
           ),
           array (
             'version' => 'Everything but IE 6',
@@ -217,6 +232,11 @@
             'code' => "@media screen and (min-width:0\0) {}"
           ),
           array (
+            'version' => 'IE 10',
+            'language' => 'language-css',
+            'code' => "@media screen and (-ms-transform-3d) {} \n/* To be tested */"
+          ),
+          array (
             'version' => 'IE 10+',
             'language' => 'language-css',
             'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}"
@@ -224,7 +244,7 @@
           array (
             'version' => 'Everything but IE6/7/8 - not a hack',
             'language' => 'language-css',
-            'code' => "@media screen and (min-width: 400px) { }"
+            'code' => "@media screen and (min-width: 400px) {}"
           )
         ),
         "javascript" => array(
@@ -329,7 +349,12 @@
             'version' => 'Opera 9, Safari 3+, Chrome',
             'language' => 'language-css',
             'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
-          )
+          ),
+          array (
+            'version' => 'Opera 12-',
+            'language' => 'language-css',
+            'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
+          )  
         ),
         'javascript' => array(
           array (

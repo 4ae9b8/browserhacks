@@ -95,14 +95,17 @@
 	/* IE 6/7 - acts as an !important */
 	.selector { color: blue !ie; } /* string after ! can be anything */
 	 
-	/* IE 6/7/8 but also IE9 in some cases */
-	.selector { color: blue\9; }
-	 
 	/* IE 7/8 */
 	.selector { color/*\**/: blue\9; }
 
 	/* IE 8/9 */
 	.selector { color: blue\0/; } /* must go at the END of all rules */
+
+	/* IE 9/10 */
+	.selector:nth-of-type(1n) { color: blue\9; }
+
+	/* IE 6/7/8/9/10 */
+	.selector { color: blue\9; }
 
 	/* Everything but IE 6 */
 	.selector { color/**/: blue; }
@@ -124,6 +127,9 @@
 	/* IE 9/10 */
 	@media screen and (min-width:0\0) { }
 
+	/* IE 10 */
+	@media screen and (-ms-transform-3d) { } /* To be tested */
+
 	/* Opera 7 */
 	@media all and (min-width: 0px){ }
 
@@ -138,6 +144,9 @@
 
 	/* Firefox 3.6+ */
 	@media screen and (-moz-images-in-menus:0) { } /* To be tested */
+
+	/* Firefox 4+ */ 
+    @media screen and (min--moz-device-pixel-ratio:0) { }
 
 	/* Everything but IE 6/7/8 - not a hack */ 
 	@media screen and (min-width: 400px) { }
