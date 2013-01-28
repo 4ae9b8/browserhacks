@@ -5,9 +5,10 @@
 
 //Imports
 @import "crystallo",
-        "font-awesome",
-        "google-fonts",
         "prism";
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=PT+Mono|Montserrat);
 
 //Variables
 $ie: #0a90dd;
