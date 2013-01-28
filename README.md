@@ -10,6 +10,7 @@ Resources
 
 28/01/13
 --------
+* Merging stylesheets
 * Completed the array of hacks
 * Added a few hacks
 * Improved some styles

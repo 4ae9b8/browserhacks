@@ -16,6 +16,12 @@ $ch: gold; //#3cbc44;
 $sa: #999; //#46bfe6;
 $op: #f63b3c;
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 html,
 body {
   width:100%;
@@ -39,7 +45,7 @@ body[data-theme='browserhacks'] {
     font-family:'fontawesome', sans-serif;
   }
 
-  &:before {
+  /*&:before {
     content: "";
     position: absolute;
     left: 0;
@@ -47,6 +53,48 @@ body[data-theme='browserhacks'] {
     top: 0;
     height: 1em;
     @include background-image(linear-gradient(left, $ch 0%, $ch 20%, $fx 20%, $fx 40%, $ie 40%, $ie 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
+  }*/
+
+  .nav-browser {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 1em;
+
+    li {
+      width: 20%;
+      height: 100%;
+      float: left;
+      position: relative;
+    }
+
+    a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      display: block;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 1em;
+      border-top: 1em solid;
+      
+      background: url('../img/browser-logos.png') no-repeat;
+      background-size: 3em;
+      //@include transition(all 0.15s ease-out);
+
+      &:hover {
+        height: 4.5em;
+      }
+    }
+
+    .ch a { border-color: $ch; background-position: center -5.8em; }
+    .fx a { border-color: $fx; background-position: center -2.6em; }
+    .ie a { border-color: $ie; background-position: center 0.8em; }
+    .sa a { border-color: $sa; background-position: center -9.4em; }
+    .op a { border-color: $op; background-position: center -12.6em; }
+
   }
 
   h1 {

@@ -21,6 +21,14 @@
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
 
+    <ul class="nav-browser clearfix">
+        <li class="ch"><a href="#ch">Google Chrome</a></li>
+        <li class="fx"><a href="#ch">Mozilla Firefox</a></li>
+        <li class="ie"><a href="#ch">Internet Explorer</a></li>
+        <li class="sa"><a href="#ch">Safari</a></li>
+        <li class="op"><a href="#ch">Opera</a></li>
+    </ul>
+
     <article data-high="1">
         <section data-cols="1" >
             <h1>Browserhacks</h1>
