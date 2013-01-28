@@ -12,6 +12,14 @@
     'javascript' => array (
       'title' => 'JavaScript Hacks',
       'icon' => 'entypo-code'
+    ),
+    'property/value' => array (
+      'title' => 'Property/Value Hacks',
+      'icon' => 'entypo-share'
+    ),
+    'misc' => array (
+      'title' => 'Miscellaneous',
+      'icon' => 'entypo-paper-plane'
     )
   ); 
 
@@ -52,14 +60,55 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Firefox 3.5+, Chrome, Safari 3+, Opera 9+',
+            'version' => 'Firefox 2',
             'language' => 'language-css',
-            'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
+            'code' => ".selector, x:-moz-any-link {}"
           ),
+          array (
+            'version' => 'Firefox 3 Windows',
+            'language' => 'language-css',
+            'code' => ".selector, x:-moz-any-link; x:default {}"
+          )
           array (
             'version' => 'Firefox 3.5+',
             'language' => 'language-css',
             'code' => "body:not(:-moz-handler-blocked) .selector {}"
+          ),
+          array (
+            'version' => 'Firefox 3.5+, Chrome, Safari 3+, Opera 9+',
+            'language' => 'language-css',
+            'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
+          )
+        ),
+        'media' => array(
+          array (
+            'version' => 'Firefox 3.5 to Firefox 7',
+            'language' => 'language-css',
+            'code' => "@media screen and (min-resolution: +72dpi) {}"
+          )
+        ),
+        'javascript' => array(
+          array (
+            'version' => 'Firefox 2',
+            'language' => 'language-javascript',
+            'code' => "FF2=(function x(){})[-6]=='x'"
+          ),
+          array (
+            'version' => 'Firefox 3',
+            'language' => 'language-javascript',
+            'code' => "FF3=(function x(){})[-5]=='x'"
+          ),
+          array (
+            'version' => 'Firefox 2/3',
+            'language' => 'language-javascript',
+            'code' => "FF=/a/[-1]=='a'"
+          )
+        ),
+        'misc' => array(
+          array (
+            'version' => 'Firefox 3/4 (+?)',
+            'language' => 'language-css',
+            'code' => "@-moz-document url-prefix() {}"
           )
         )
       )
@@ -77,6 +126,92 @@
             'version' => 'IE7 and below',
             'language' => 'language-css',
             'code' => ".selector, {}"
+          ),
+          array (
+            'version' => 'IE7',
+            'language' => 'language-css',
+            'code' => "*:first-child+html .selector {} \n.selector, x:-IE7 {} \n*+html .selector {} "
+          )
+        ),
+        'property/value' => array(
+          array (
+            'version' => 'IE6 - any combination of these characters: _ - £ ¬ ¦',
+            'language' => 'language-css',
+            'code' => ".selector { _color: blue; } \n.selector { -color: blue; } \n.selector { £color: blue; } \n.selector { ¬color: blue; } \n.selector { ¦color: blue; }"
+          ),
+          array (
+            'version' => 'IE6/7 - any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |',
+            'language' => 'language-css',
+            'code' => ".selector { !color: blue; } \n.selector { $color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n.selector { (color: blue; } \n.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }"
+          ),
+          array (
+            'version' => 'IE 6/7 - acts as an !important',
+            'language' => 'language-css',
+            'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
+          ),
+          array (
+            'version' => 'IE 6/7/8 but also IE9 in some cases',
+            'language' => 'language-css',
+            'code' => ".selector { color: blue\9; }"
+          ),
+          array (
+            'version' => 'IE 7/8',
+            'language' => 'language-css',
+            'code' => ".selector { color/*\**/: blue\9; }"
+          ),
+          array (
+            'version' => 'IE 8/9',
+            'language' => 'language-css',
+            'code' => ".selector { color: blue\0/; } \n/* must go at the END of all rules */"
+          )
+        ),
+        "media" => array(
+          array (
+            'version' => 'IE 6/7',
+            'language' => 'language-css',
+            'code' => "@media screen\9 {}"
+          ),
+          array (
+            'version' => 'IE 6/7/8',
+            'language' => 'language-css',
+            'code' => "@media \0screen\,screen\9 {}"
+          ),
+          array (
+            'version' => 'IE 8',
+            'language' => 'language-css',
+            'code' => "@media \0screen {}"
+          ),
+          array (
+            'version' => 'IE 8/9',
+            'language' => 'language-css',
+            'code' => "@media screen\0 {}"
+          ),
+          array (
+            'version' => 'IE 9/10',
+            'language' => 'language-css',
+            'code' => "@media screen and (min-width:0\0) {}"
+          ),
+          array (
+            'version' => 'IE 10+',
+            'language' => 'language-css',
+            'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}"
+          )
+        ),
+        "javascript" => array(
+          array (
+            'version' => 'IE',
+            'language' => 'language-javascript',
+            'code' => "IE='\v'=='v'"
+          ),
+          array (
+            'version' => 'IE 6 - using conditional comments',
+            'language' => 'language-javascript',
+            'code' => "try {IE6=@cc_on @_jscript_version <= 5.7&&@_jscript_build<10000} catch(e){IE6=false;}"
+          ),
+          array (
+            'version' => 'IE 10',
+            'language' => 'language-javascript',
+            'code' => "/*@cc_on!@*/false && document.documentMode === 10"
           )
         )
       )
@@ -86,6 +221,16 @@
       'hacks' => array(
         'selector' => array(
           array (
+            'version' => 'Safari 2/3',
+            'language' => 'language-css',
+            'code' => "html[xmlns*=""] body:last-child .selector {} \nhtml[xmlns*=""]:root .selector  {}"
+          ),
+          array (
+            'version' => 'Safari 2/3.1, Opera 9.25',
+            'language' => 'language-css',
+            'code' => "*|html[xmlns*=""] .selector {}"
+          ),
+          array (
             'version' => 'Safari 3+, Firefox 3.5+, Chrome, Opera 9+',
             'language' => 'language-css',
             'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
@@ -94,6 +239,20 @@
             'version' => 'Safari (version?) and Chrome',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
+          )
+        ),
+        "media" => array(
+          array (
+            'version' => 'Safari 3+, Chrome, Opera 9',
+            'language' => 'language-css',
+            'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
+          )
+        ),
+        "javascript" => array(
+          array (
+            'version' => 'Safari',
+            'language' => 'language-javascript',
+            'code' => "Saf=/a/.__proto__=='//'"
           )
         )
       )
@@ -108,9 +267,38 @@
             'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
           ),
           array (
+            'version' => 'Opera 9.25, Safari 2/3.1',
+            'language' => 'language-css',
+            'code' => "*|html[xmlns*=""] .selector {}"
+          ),
+          array (
             'version' => 'Opera 9.27 and below, Safari 2',
             'language' => 'language-css',
             'code' => "html:first-child .selector {}"
+          ),
+          array (
+            'version' => 'Opera 9.5+',
+            'language' => 'language-css',
+            'code' => "noindex:-o-prefocus, .selector {}"
+          )
+        ),
+        'media' => array(
+          array (
+            'version' => 'Opera 7',
+            'language' => 'language-css',
+            'code' => "@media all and (min-width: 0px){}"
+          ),
+          array (
+            'version' => 'Opera 9, Safari 3+, Chrome',
+            'language' => 'language-css',
+            'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
+          )
+        ),
+        'javascript' => array(
+          array (
+            'version' => 'Opera',
+            'language' => 'language-javascript',
+            'code' => "Op=/^function \(/.test([].sort) \nwindow.opera && window.opera.version() == X"
           )
         )
       )

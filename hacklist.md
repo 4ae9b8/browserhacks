@@ -97,10 +97,7 @@
 	 
 	/* IE 7/8 */
 	.selector { color/*\**/: blue\9; }
-
-	/* IE 8 - possibly matches IE 7 as well; to be verified */
-	.selector { color/*\**/: blue\9 }
-	  
+	
 	/* IE 8/9 */
 	.selector { color: blue\0/; } /* must go at the END of all rules */
 
