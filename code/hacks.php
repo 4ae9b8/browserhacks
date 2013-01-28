@@ -123,31 +123,46 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'IE6 and below',
+            'version' => 'IE 6 and below',
             'language' => 'language-css',
             'code' => "* html .selector  {} \n.suckyie6.selector {} /* .suckyie6 can be any unused class */"
           ),
           array (
-            'version' => 'IE7 and below',
+            'version' => 'IE 7 and below',
             'language' => 'language-css',
             'code' => ".selector, {}"
           ),
           array (
-            'version' => 'IE7',
+            'version' => 'IE 7',
             'language' => 'language-css',
             'code' => "*:first-child+html .selector {} \n.selector, x:-IE7 {} \n*+html .selector {} "
+          ),
+          array (
+            'version' => 'Everything but IE 6',
+            'language' => 'language-css',
+            'code' => "html > body .selector {}"
+          ),
+          array (
+            'version' => 'Everything but IE 6/7',
+            'language' => 'language-css',
+            'code' => "html > /**/ body .selector {}"
+          ),
+          array (
+            'version' => 'Everything but IE 6/7/8',
+            'language' => 'language-css',
+            'code' => ":root *> .selector {} \nbody:last-child {}"
           )
         ),
         'property/value' => array(
           array (
-            'version' => 'IE6 - any combination of these characters: _ - £ ¬ ¦',
+            'version' => 'IE 6 - any combination of these characters: _ - £ ¬ ¦',
             'language' => 'language-css',
             'code' => ".selector { _color: blue; } \n.selector { -color: blue; } \n.selector { £color: blue; } \n.selector { ¬color: blue; } \n.selector { ¦color: blue; }"
           ),
           array (
-            'version' => 'IE6/7 - any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |',
+            'version' => 'IE 6/7 - any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |',
             'language' => 'language-css',
-            'code' => ".selector { !color: blue; } \n.selector { $color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n.selector { (color: blue; } \n.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }"
+            'code' => ".selector { !color: blue; } \n.selector { \$color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n.selector { (color: blue; } \n.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }"
           ),
           array (
             'version' => 'IE 6/7 - acts as an !important',
@@ -168,6 +183,11 @@
             'version' => 'IE 8/9',
             'language' => 'language-css',
             'code' => ".selector { color: blue\0/; } \n/* must go at the END of all rules */"
+          ),
+          array (
+            'version' => 'Everything but IE 6',
+            'language' => 'language-css',
+            'code' => ".selector { color/**/: blue; }"
           )
         ),
         "media" => array(
@@ -200,6 +220,11 @@
             'version' => 'IE 10+',
             'language' => 'language-css',
             'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}"
+          ),
+          array (
+            'version' => 'Everything but IE6/7/8 - not a hack',
+            'language' => 'language-css',
+            'code' => "@media screen and (min-width: 400px) { }"
           )
         ),
         "javascript" => array(
@@ -218,6 +243,13 @@
             'language' => 'language-javascript',
             'code' => "/*@cc_on!@*/false && document.documentMode === 10"
           )
+        ),
+        "misc" => array(
+          array (
+            'version' => 'Everything but IE 6/7',
+            'language' => 'language-javascript',
+            'code' => "@import \"stylesheet.css\" all; \n/* To be tested */"
+          )
         )
       )
     ),
@@ -228,12 +260,12 @@
           array (
             'version' => 'Safari 2/3',
             'language' => 'language-css',
-            'code' => "html[xmlns*=""] body:last-child .selector {} \nhtml[xmlns*=""]:root .selector  {}"
+            'code' => "html[xmlns*=\"\"] body:last-child .selector {} \nhtml[xmlns*=\"\"]:root .selector  {}"
           ),
           array (
             'version' => 'Safari 2/3.1, Opera 9.25',
             'language' => 'language-css',
-            'code' => "*|html[xmlns*=""] .selector {}"
+            'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
             'version' => 'Safari 3+, Firefox 3.5+, Chrome, Opera 9+',
@@ -274,7 +306,7 @@
           array (
             'version' => 'Opera 9.25, Safari 2/3.1',
             'language' => 'language-css',
-            'code' => "*|html[xmlns*=""] .selector {}"
+            'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
             'version' => 'Opera 9.27 and below, Safari 2',
