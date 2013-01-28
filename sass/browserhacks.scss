@@ -20,6 +20,7 @@ $fx: #f77918; // #e26c0c
 $ch: gold; //#3cbc44;
 $sa: #999; //#46bfe6;
 $op: #f63b3c;
+$us: #4ae9b8; // Our awesome colour :D
 
 .clearfix:after {
   content: "";
@@ -61,9 +62,14 @@ body[data-theme='browserhacks'] {
   }*/
 
   .nav-browser {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     list-style: none;
     margin: 0;
     padding: 0;
+    z-index: 99;
 
     li {
       width: 20%;
@@ -76,25 +82,62 @@ body[data-theme='browserhacks'] {
       white-space: nowrap;
       overflow: hidden;
       height: 1em;
+      color: #000;
+      background: url("../img/browser-logos.png") no-repeat;
+      background-size: 5em;
       
-      &:hover { opacity: 0.5; }
-      
-      /*
-      background: url('../img/browser-logos.png') no-repeat;
-      background-size: 3em;
-      
-      &:hover {
+      &:hover { 
         height: 4.5em;
+        color: #000;
       }
-      */
 
+      &:visited { color: #000; }
     }
 
-    .ch a { background: $ch; /*background-position: center -5.8em;*/ }
-    .fx a { background: $fx; /*background-position: center -2.6em;*/ }
-    .ie a { background: $ie; /*background-position: center 0.8em;*/ }
-    .sa a { background: $sa; /*background-position: center -9.4em;*/ }
-    .op a { background: $op; /*background-position: center -12.6em;*/ }
+    .ch a { 
+      background-color: rgba($ch, .5);
+      background-position: center -11.1em;
+
+      &:hover {
+        background-color: $ch;
+      }
+    }
+
+    .fx a { 
+      background-color: rgba($fx, .5);
+      background-position: center -5.5em;
+
+      &:hover {
+        background-color: $fx; 
+      }
+    }
+
+    .ie a { 
+      background-color: rgba($ie, .5);
+      background-position: center 0.1em;
+
+      &:hover {
+        background-color: $ie; 
+      }
+    }
+
+    .sa a { 
+      background-color: rgba($sa, .5);
+      background-position: center -16.9em;
+
+      &:hover {
+        background-color: $sa; 
+      }
+    }
+
+    .op a { 
+      background-color: rgba($op, .5);
+      background-position: center -22.3em;
+
+      &:hover {
+        background-color: $op; 
+      }
+    }
 
   }
 
@@ -304,7 +347,7 @@ body[data-theme='browserhacks'] {
   }
 
   article[data-high="3"] {
-    background:rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .3);
     padding-bottom:.85em;
   }
 

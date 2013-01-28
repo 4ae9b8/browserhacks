@@ -29,6 +29,8 @@
         <li class="op"><a href="#op">Opera</a></li>
     </ul>
 
+    <br />
+
     <article data-high="1">
         <section data-cols="1" >
             <h1>Browserhacks</h1>
@@ -100,7 +102,7 @@
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
+                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a>, <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a> &amp; the rest of <a href="https://github.com/4ae9b8?tab=members" target="_blank">The #4ae9b8 Team</a>.</p>
                 </footer>
             </div>
         </section>
