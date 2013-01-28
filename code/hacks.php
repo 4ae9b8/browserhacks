@@ -13,7 +13,7 @@
       'title' => 'JavaScript Hacks',
       'icon' => 'fontawesome-fire'
     ),
-    'property/value' => array (
+    'property-value' => array (
       'title' => 'Property/Value Hacks',
       'icon' => 'fontawesome-paper-clip'
     ),
