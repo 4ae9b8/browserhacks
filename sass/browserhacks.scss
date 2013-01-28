@@ -27,7 +27,7 @@ body {
 }
 
 body[data-theme='browserhacks'] {
-  font: 1.2em/1.5 sans-serif;
+  font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
   background: url(http://subtlepatterns.com/patterns/norwegian_rose.png) #fff;
   position: relative;
 
@@ -72,6 +72,10 @@ body[data-theme='browserhacks'] {
   .catch-phrase__space {
     padding-left: 0.85em;
     padding-left: 1ch;
+  }
+
+  .top-content {
+    font-size: 1.2em;
   }
 
   .th {

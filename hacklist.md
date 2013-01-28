@@ -151,7 +151,7 @@
 	/* Everything but IE 6/7/8 - not a hack */ 
 	@media screen and (min-width: 400px) { }
 
-	/* Everything supporting -min-device-pixel-ratio but -webkit (Opera, Firefox & IE10?)
+	/* Opera 12- */
 	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { }
 
 

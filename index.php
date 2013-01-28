@@ -35,16 +35,16 @@
     <article data-high="2">    
         <section data-cols="1">
           <div>
-              <input type="text" placeholder="What?">
+              <input type="text" name="search" id="search" placeholder="Browse hacks... i.e. 'ie6'">
           </div>
         </section>
     </article>
     
     <article data-high="1">
-        <section data-cols="3" data-valign="center">
+        <section data-cols="3" data-valign="center" class="top-content">
             <div>
                 <h2><span class="fontawesome-info-sign"></span>What's this?</h2>
-                <p>Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
+                <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
             </div>
             <div>
                 <h2><span class="fontawesome-question-sign"></span>How to?</h2>
