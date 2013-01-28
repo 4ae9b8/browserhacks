@@ -64,20 +64,13 @@ body[data-theme='browserhacks'] {
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 1em;
 
     li {
       width: 20%;
-      height: 100%;
       float: left;
-      position: relative;
     }
 
     a {
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
       display: block;
       text-indent: 100%;
       white-space: nowrap;
@@ -85,13 +78,17 @@ body[data-theme='browserhacks'] {
       height: 1em;
       border-top: 1em solid;
       
+      &:hover { opacity: 0.5; }
+      
+      /*
       background: url('../img/browser-logos.png') no-repeat;
       background-size: 3em;
-      //@include transition(all 0.15s ease-out);
-
+      
       &:hover {
         height: 4.5em;
       }
+      */
+
     }
 
     .ch a { border-color: $ch; background-position: center -5.8em; }
