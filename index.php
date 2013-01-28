@@ -23,11 +23,13 @@
 
     <ul class="nav-browser clearfix">
         <li class="ch"><a href="#ch">Google Chrome</a></li>
-        <li class="fx"><a href="#ch">Mozilla Firefox</a></li>
-        <li class="ie"><a href="#ch">Internet Explorer</a></li>
-        <li class="sa"><a href="#ch">Safari</a></li>
-        <li class="op"><a href="#ch">Opera</a></li>
+        <li class="fx"><a href="#fx">Mozilla Firefox</a></li>
+        <li class="ie"><a href="#ie">Internet Explorer</a></li>
+        <li class="sa"><a href="#sa">Safari</a></li>
+        <li class="op"><a href="#op">Opera</a></li>
     </ul>
+
+    <br />
 
     <article data-high="1">
         <section data-cols="1" >
@@ -100,7 +102,7 @@
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a> &amp; <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a>.</p>
+                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by <a href="http://twitter.com/HugoGiraudel" target="_blank">@HugoGiraudel</a>, <a href="http://twitter.com/TimPietrusky" target="_blank">@TimPietrusky</a> &amp; the rest of <a href="https://github.com/4ae9b8?tab=members" target="_blank">The #4ae9b8 Team</a>.</p>
                 </footer>
             </div>
         </section>
