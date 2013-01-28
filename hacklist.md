@@ -15,8 +15,6 @@
 	.selector, x:-IE7 { } 
 	* + html .selector { } 
 
-	/* IE 9 */
-
 	/* Opera 9.27 and below, Safari 2 */
 	html:first-child .selector { }
 
@@ -57,7 +55,6 @@
 
 	/* Everything but IE 6/7/8 */
 	:root * > .selector { }
-	:root .selector { }
 	body:last-child { }
 
 

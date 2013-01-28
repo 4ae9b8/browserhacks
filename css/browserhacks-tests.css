@@ -1,5 +1,9 @@
 pre span {
 	background: lightgreen;
+	padding: 5px;
+	margin: 5px;
+	display: inline-block;
+	border-radius: 3px;
 }
 
 /* IE 6 and below - .ie6fix can be any unused class */
@@ -95,7 +99,7 @@ body:first-of-type .test46 { background: lightpink; }
 @media screen and (min-width: 400px) { .test52 { background: lightpink;  } } 
 
 /* Everything but IE 6/7 */
-@import "test53.css" all;
+@import "selector.css" all;
 
 /* Firefox 2 & IE 7 */
 .test54, x:-moz-any-link { background: lightpink; }
@@ -127,3 +131,9 @@ html[xmlns*=""]:root .test61  { background: lightpink; }
 
 /* Opera 9.5+ */
 noindex:-o-prefocus, .test64 { background: lightpink; }
+
+/* Firefox 1.5/2 */
+body:empty .test65 { background: lightpink; }
+
+/* Opera 7 */
+@media all and (min-width: 0px){ body:empty .test66 { background: lightpink; } }
