@@ -30,11 +30,10 @@
             <div class="th ie">
                 <h3>Internet Explorer</h3>
                 <div class="snippet-container">
-                    
+                    <h4>Selector hacks</h4>
 <pre class="language-css"><code>/* IE 6 and below */
 <span class="test1">* html .selector  { background: red; } </span>
-<span class="test2">.fix.selector { background: red; } </span>
-/* .fix can be any unused class */</code></pre>
+<span class="test2">.fix.selector { background: red; } </span>/* .fix can be any unused class */</code></pre>
 
 <pre class="language-css"><code>/* IE 7 and below */
 <span class="test3">.selector, { background: red; }</span> 
@@ -55,6 +54,11 @@
 <span class="test10">:root * > .selector { background: red; }</span>
 <span class="test11">body:last-child .selector { background: red; }</span></code></pre>
 
+<pre class="language-css"><code>/* Everything but IE 6/7/8 */
+<span class="test45">body:nth-of-type(1) .selector { background: red; }</span>
+<span class="test46">body:first-of-type .selector { background: red; }</span></code></pre>
+
+<h4>Property/value hacks</h4>
 <pre class="language-css"><code>/* IE 6 any combination of these characters: _ - £ ¬ ¦ */
 <span class="test12">.selector { _background: red; }</span>
 <span class="test13">.selector { -background: red; }</span>
@@ -88,29 +92,24 @@
 <span class="test39">.selector { |background: red; }</span></code></pre>
 
 <pre class="language-css"><code>/* IE 6/7 - acts as an !important */
-<span class="test40">.selector { background: red; !ie; } </span>
-/* string after ! can be anything */</code></pre>
-
-<pre class="language-css"><code>/* IE 6/7/8/9/10 */
-<span class="test41">.selector { background: red\9; }</span></code></pre>
+<span class="test40">.selector { background: red; !ie; } </span>/* string after ! can be anything */</code></pre>
 
 <pre class="language-css"><code>/* IE 7/8 */
 <span class="test42">.selector { background/*\**/: red\9; }</span></code></pre>
 
 <pre class="language-css"><code>/* IE 8/9 */
-<span class="test43">.selector { background: red\0/; } </span>
-/* must go at the END of all rules */</code></pre>
+<span class="test43">.selector { background: red\0/; } </span>/* must go at the END of all rules */</code></pre>
 
 <pre class="language-css"><code>/* IE 9/10 */
 <span class="test69">.selector:nth-of-type(1n) { background: red\9; }</span></code></pre>
 
+<pre class="language-css"><code>/* IE 6/7/8/9/10 */
+<span class="test41">.selector { background: red\9; }</span></code></pre>
+
 <pre class="language-css"><code>/* Everything but IE 6 */
 <span class="test44">.selector { background/**/: red; }</span></code></pre>
 
-<pre class="language-css"><code>/* Everything but IE 6/7/8 */
-<span class="test45">body:nth-of-type(1) .selector { background: red; }</span>
-<span class="test46">body:first-of-type .selector { background: red; }</span></code></pre>
-
+<h4>Media hacks</h4>
 <pre class="language-css"><code>/* IE 6/7/8 */
 <span class="test47">@media \0screen\,screen\9 { .selector { background: red; } }</span> </code></pre>
 
@@ -129,10 +128,11 @@
 <pre class="language-css"><code>/* Everything but IE 6/7/8 - not a hack */ 
 <span class="test52">@media screen and (min-width: 400px) { .selector { background: red; } }</span></code></pre>
 
+<h4>Miscellaneous hacks</h4>
 <pre class="language-css"><code>/* Everything but IE 6/7 - doesn't seem to work at all */
-<span class="test53">@import "selector.css" all; </span>
-/* test34.css contains .test34 { background: red; } */</code></pre>
+<span class="test53">@import "selector.css" all;</span></code></pre>
 
+<h4>JavaScript hacks</h4>
 <pre class="language-javascript"><code>/* IE */
 IE='\v'=='v'</code></pre>
 
@@ -148,7 +148,7 @@ try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=fa
             <div class="th mf">
             <h3>Mozilla Firefox</h3>
                 <div class="snippet-container">
-
+                    <h4>Selector hacks</h4>
 <pre class="language-css"><code>/* Firefox 1.5/2 */
 <span class="test65">body:empty .selector { }</span></code></pre>
 
@@ -160,7 +160,7 @@ try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=fa
 
 <pre class="language-css"><code>/* Firefox 3.5+ */
 <span class="test56">body:not(:-moz-handler-blocked) .selector { background: red; }</span></code></pre>
-
+<h4>Media hacks</h4>
 <pre class="language-css"><code>/* Firefox 3.5 to Firefox 7 */
 <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: red; } }</span></code></pre>
 
@@ -169,10 +169,10 @@ try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=fa
 
 <pre class="language-css"><code>/* Firefox 4+ */ 
 <span class="test68">@media screen and (min--moz-device-pixel-ratio:0) { .selector { background: lightpink; } }</span></code></pre>
-
+<h4>Miscellaneous hacks</h4>
 <pre class="language-css"><code>/* Firefox 3/4 (+?) */
 <span class="test58">@-moz-document url-prefix() { .selector { background: red; } }</span></code></pre>
-
+<h4>JavaScript hacks</h4>
 <pre class="language-javascript"><code>/* Firefox 2 */
 FF2=(function x(){})[-6]=='x'</code></pre>
 
@@ -188,10 +188,10 @@ FF=/a/[-1]=='a'</code></pre>
             <div class="th ch">
                 <h3>Chrome</h3>
                 <div class="snippet-container">
-    
+    <h4>Selector hacks</h4>
 <pre class="language-css"><code>/* Safari (version?) and Chrome (not Canary) */
 <span class="test59">::made-up-pseudo-element, .selector { background: red; }</span></code></pre>
-
+<h4>JavaScript hacks</h4>
 <pre class="language-javascript"><code>/* Chrome */
 Chr=/source/.test((/a/.toString+''))</code></pre>
                 </div>
@@ -200,17 +200,17 @@ Chr=/source/.test((/a/.toString+''))</code></pre>
             <div class="th sa">
                 <h3>Safari</h3>
                 <div class="snippet-container">
-
+<h4>Selector hacks</h4>
 <pre class="language-css"><code>/* Safari 2/3 */
 <span class="test60">html[xmlns*=""] body:last-child .selector { background: red; }</span>
 <span class="test61">html[xmlns*=""]:root .selector  { background: red; }</span></code></pre>
 
 <pre class="language-css"><code>/* Safari 2/3.1, Opera 9.25 */
 <span class="test62">*|html[xmlns*=""] .selector { background: red; }</span></code></pre>
-
+<h4>Media hacks</h4>
 <pre class="language-css"><code>/* Safari 3+, Chrome, Opera 9 */
 <span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: red; } }</span></code></pre>
-
+<h4>JavaScript hacks</h4>
 <pre class="language-javascript"><code>/* Safari */
 Saf=/a/.__proto__=='//'</code></pre>
             
@@ -220,16 +220,16 @@ Saf=/a/.__proto__=='//'</code></pre>
             <div class="th op">       
                 <h3>Opera</h3>
                 <div class="snippet-container">
-
+<h4>Selector hacks</h4>
 <pre class="language-css"><code>/* Opera 9.5+ */
 <span class="test64">noindex:-o-prefocus, .selector { background: red; }</span></code></pre>
-
+<h4>Media hacks</h4>
 <pre class="language-css"><code>/* Opera 7 */
 <span class="test66">@media all and (min-width: 0px){ }</span></code></pre>
 
 <pre class="language-css"><code>/* Opera 12- */
 <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { }</span></code></pre>
-
+<h4>JavaScript hacks</h4>
 <pre class="language-javascript"><code>/* Opera */
 Op=/^function \(/.test([].sort)</code></pre>
 
