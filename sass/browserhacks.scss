@@ -1,11 +1,15 @@
-/* theme */
+//Compass
 @import "compass/css3/images";
 @import "compass/css3";
 @import "compass/css3/user-interface";
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-@import url(http://fonts.googleapis.com/css?family=PT+Mono|Montserrat);
-@import "prism";
 
+//Imports
+@import "crystallo",
+        "font-awesome",
+        "google-fonts",
+        "prism";
+
+//Variables
 $ie: #0a90dd;
 $fx: #f77918; // #e26c0c
 $ch: gold; //#3cbc44;
