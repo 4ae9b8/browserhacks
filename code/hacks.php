@@ -163,7 +163,7 @@
             'code' => ":root *> .selector {} \nbody:last-child {}"
           )
         ),
-        'property/value' => array(
+        'property-value' => array(
           array (
             'version' => "IE 6 - any combination of these characters: \n_ - £ ¬ ¦",
             'language' => 'language-css',
