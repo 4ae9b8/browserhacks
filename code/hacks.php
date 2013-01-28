@@ -85,6 +85,11 @@
             'version' => 'Firefox 3.5 to Firefox 7',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
+          ),
+          array (
+            'version' => 'Firefox 3.6+',
+            'language' => 'language-css',
+            'code' => "@media screen and (-moz-images-in-menus:0) {} \n/* To be tested */"
           )
         ),
         'javascript' => array(

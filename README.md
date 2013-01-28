@@ -4,12 +4,13 @@ Browserhacks.com
 Resources
 ---------
 
-* [crystallo documentation](http://timpietrusky.github.com/crystallo/)
+* [Crystallo documentation](http://timpietrusky.github.com/crystallo/)
 * [Git CheatSheet](http://gitref.org/remotes/)
 * [Git Quick Guide](http://rogerdudler.github.com/git-guide/)
 
 28/01/13
 --------
+* Completed the array of hacks
 * Improved some styles
 * Improved the responsiveness
 

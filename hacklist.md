@@ -11,13 +11,15 @@
 	//.selector { } /* To be tested */
 	 
 	/* IE 7 */
-	*:first-child+html .selector { } 
+	*:first-child + html .selector { } 
 	.selector, x:-IE7 { } 
-	*+html .selector { } 
+	* + html .selector { } 
+
+	/* IE 9 */
 
 	/* Opera 9.27 and below, Safari 2 */
 	html:first-child .selector { }
-	 
+
 	/* Safari 2/3 */
 	html[xmlns*=""] body:last-child .selector { }
 	html[xmlns*=""]:root .selector  { }
@@ -35,6 +37,9 @@
 	/* Opera 9.5+ credits */
 	noindex:-o-prefocus, .selector { }
 
+	/* Firefox 1.5/2 */
+	body:empty .selector { }
+
 	/* Firefox 2 */
 	.selector, x:-moz-any-link { }
 
@@ -51,7 +56,8 @@
 	html>/**/body .selector { }
 
 	/* Everything but IE 6/7/8 */
-	:root *> .selector { }
+	:root * > .selector { }
+	:root .selector { }
 	body:last-child { }
 
 
@@ -97,13 +103,12 @@
 	 
 	/* IE 7/8 */
 	.selector { color/*\**/: blue\9; }
-	
+
 	/* IE 8/9 */
 	.selector { color: blue\0/; } /* must go at the END of all rules */
 
 	/* Everything but IE 6 */
 	.selector { color/**/: blue; }
-
 
 ## MEDIA HACKS
 
@@ -134,8 +139,14 @@
 	/* Firefox 3.5 to Firefox 7 */
 	@media screen and (min-resolution: +72dpi) { }
 
+	/* Firefox 3.6+ */
+	@media screen and (-moz-images-in-menus:0) { } /* To be tested */
+
 	/* Everything but IE 6/7/8 - not a hack */ 
 	@media screen and (min-width: 400px) { }
+
+	/* Everything supporting -min-device-pixel-ratio but -webkit (Opera, Firefox & IE10?)
+	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { }
 
 
 ## MISCELLANEOUS
@@ -145,7 +156,6 @@
 
 	/* Firefox 3/4 (+?) */
 	@-moz-document url-prefix() { }
-
 
 
 ## JAVASCRIPT HACKS
