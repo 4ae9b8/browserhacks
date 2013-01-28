@@ -76,7 +76,6 @@ body[data-theme='browserhacks'] {
       white-space: nowrap;
       overflow: hidden;
       height: 1em;
-      border-top: 1em solid;
       
       &:hover { opacity: 0.5; }
       
@@ -91,11 +90,11 @@ body[data-theme='browserhacks'] {
 
     }
 
-    .ch a { border-color: $ch; background-position: center -5.8em; }
-    .fx a { border-color: $fx; background-position: center -2.6em; }
-    .ie a { border-color: $ie; background-position: center 0.8em; }
-    .sa a { border-color: $sa; background-position: center -9.4em; }
-    .op a { border-color: $op; background-position: center -12.6em; }
+    .ch a { background: $ch; /*background-position: center -5.8em;*/ }
+    .fx a { background: $fx; /*background-position: center -2.6em;*/ }
+    .ie a { background: $ie; /*background-position: center 0.8em;*/ }
+    .sa a { background: $sa; /*background-position: center -9.4em;*/ }
+    .op a { background: $op; /*background-position: center -12.6em;*/ }
 
   }
 
