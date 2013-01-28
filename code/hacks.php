@@ -165,14 +165,15 @@
         ),
         'property/value' => array(
           array (
-            'version' => 'IE 6 - any combination of these characters: _ - £ ¬ ¦',
+            'version' => "IE 6 - any combination of these characters: \n_ - £ ¬ ¦",
             'language' => 'language-css',
             'code' => ".selector { _color: blue; } \n.selector { -color: blue; } \n.selector { £color: blue; } \n.selector { ¬color: blue; } \n.selector { ¦color: blue; }"
           ),
           array (
-            'version' => 'IE 6/7 - any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |',
+            'version' => "IE 6/7 - any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
             'language' => 'language-css',
-            'code' => ".selector { !color: blue; } \n.selector { \$color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n.selector { (color: blue; } \n.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }"
+            'code' => ".selector { !color: blue; } \n.selector { \$color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n/* ... */"
+              /*.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }*/
           ),
           array (
             'version' => 'IE 6/7 - acts as an !important',
@@ -360,7 +361,7 @@
           array (
             'version' => 'Opera',
             'language' => 'language-javascript',
-            'code' => "Op=/^function \(/.test([].sort) \nwindow.opera && window.opera.version() == X"
+            'code' => "Op=/^function \(/.test([].sort) \n/* or */ \nwindow.opera && window.opera.version() == X"
           )
         )
       )
