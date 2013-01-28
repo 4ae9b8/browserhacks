@@ -48,7 +48,6 @@
             </div>
             <div>
                 <h2><span class="fontawesome-question-sign"></span>How to?</h2>
-                <p>Nothing easier.</p>
                 <ol>
                     <li>Pick the hack you want,</li>
                     <li>Copy it into your stylesheet,</li>
