@@ -2,7 +2,7 @@
 @import "compass/css3/images";
 @import "compass/css3";
 @import "compass/css3/user-interface";
-@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 @import url(http://fonts.googleapis.com/css?family=PT+Mono|Montserrat);
 @import "prism";
 
@@ -31,8 +31,8 @@ body[data-theme='browserhacks'] {
   background: url(http://subtlepatterns.com/patterns/norwegian_rose.png) #fff;
   position: relative;
 
-  [class*="entypo-"]:before {
-    font-family:'entypo', sans-serif;
+  [class*="fontawesome-"]:before {
+    font-family:'fontawesome', sans-serif;
   }
 
   &:before {
@@ -159,11 +159,13 @@ body[data-theme='browserhacks'] {
 
   h3 {
     font: bold 1.15em 'PT Mono', sans-serif;
+    border-bottom: 1px solid silver;
+    padding-bottom: 0.5em;
   }
 
-  h1 span[class*="entypo-"],
-  h2 span[class*="entypo-"],
-  h3 span[class*="entypo-"] {
+  h1 span[class*="fontawesome-"],
+  h2 span[class*="fontawesome-"],
+  h3 span[class*="fontawesome-"] {
     padding-right: .35em;
     font-weight: normal;
   }

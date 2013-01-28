@@ -3,23 +3,23 @@
   $hack_types = array (
     'selector' => array (
       'title' => 'Selector Hacks', 
-      'icon' => 'entypo-link'
+      'icon' => 'fontawesome-link'
     ),
     'media' => array (
       'title' => 'Media Query Hacks',
-      'icon' => 'entypo-resize-small'
+      'icon' => 'fontawesome-resize-small'
     ),
     'javascript' => array (
       'title' => 'JavaScript Hacks',
-      'icon' => 'entypo-code'
+      'icon' => 'fontawesome-fire'
     ),
     'property/value' => array (
       'title' => 'Property/Value Hacks',
-      'icon' => 'entypo-share'
+      'icon' => 'fontawesome-paper-clip'
     ),
     'misc' => array (
       'title' => 'Miscellaneous',
-      'icon' => 'entypo-paper-plane'
+      'icon' => 'fontawesome-beaker'
     )
   ); 
 

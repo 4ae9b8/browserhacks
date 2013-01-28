@@ -43,11 +43,11 @@
     <article data-high="1">
         <section data-cols="3" data-valign="center">
             <div>
-                <h2><span class="entypo-info-circled"></span>What's this?</h2>
+                <h2><span class="fontawesome-info-sign"></span>What's this?</h2>
                 <p>Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
             </div>
             <div>
-                <h2><span class="entypo-tools"></span>How to?</h2>
+                <h2><span class="fontawesome-question-sign"></span>How to?</h2>
                 <p>Nothing easier.</p>
                 <ol>
                     <li>Pick the hack you want,</li>
@@ -57,7 +57,7 @@
                 </ol>
             </div>
             <div>
-                <h2><span class="entypo-attention"></span>Reminder!</h2>
+                <h2><span class="fontawesome-warning-sign"></span>Reminder!</h2>
                 <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most case you might want to check your CSS to see if you can fix the problem with a clean solution before using some browser sniffing.</p>
             </div>
         </section>
@@ -72,17 +72,17 @@
         <section data-cols="3">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="2"><span class="entypo-github"></span>Fork me</button>
+                    <button data-type="2"><span class="fontawesome-github"></span>Fork me</button>
                 </a>
             </div>
             <div>
                 <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                    <button data-type="1"><span class="entypo-twitter"></span>Spread the word</button>
+                    <button data-type="1"><span class="fontawesome-twitter"></span>Spread the word</button>
                 </a>
             </div>
             <div>
                 <a href="test.html" target="_blank">
-                    <button data-type="2"><span class="entypo-paper-plane"></span>Test page</button>
+                    <button data-type="2"><span class="fontawesome-road"></span>Test page</button>
                 </a>
             </div>
         </section>
