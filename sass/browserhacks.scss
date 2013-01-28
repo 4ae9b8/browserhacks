@@ -41,7 +41,7 @@ body[data-theme='browserhacks'] {
     left: 0;
     right: 0;
     top: 0;
-    height: 1.65em;
+    height: 1em;
     @include background-image(linear-gradient(left, $ch 0%, $ch 20%, $fx 20%, $fx 40%, $ie 40%, $ie 60%, $sa 60%, $sa 80%, $op 80%, $op 100%));
   }
 
@@ -89,10 +89,10 @@ body[data-theme='browserhacks'] {
   $logo_left: -.15em;
 
   .ie {
-    box-shadow: 
+    /*box-shadow: 
       0 -.25em 0 .25em $ie, 
       0 .25em 0 .25em $ie
-    ;
+    ;*/
     .th { 
       border-color: $ie;
       background-position: $logo_left .25em;
@@ -100,10 +100,10 @@ body[data-theme='browserhacks'] {
   }
 
   .ch { 
-    box-shadow: 
+    /*box-shadow: 
       0 -.25em 0 .25em $ch, 
       0 .25em 0 .25em $ch
-    ;
+    ;*/
     .th { 
       border-color: $ch;
       background-position: $logo_left -4.25em;
@@ -111,10 +111,10 @@ body[data-theme='browserhacks'] {
   }
 
   .sa {
-    box-shadow: 
+    /*box-shadow: 
       0 -.25em 0 .25em $sa, 
       0 .25em 0 .25em $sa
-    ;
+    ;*/
     .th { 
       border-color: $sa;
       background-position: $logo_left -6.65em;
@@ -122,10 +122,10 @@ body[data-theme='browserhacks'] {
   }
 
   .op {
-    box-shadow: 
+    /*box-shadow: 
       0 -.25em 0 .25em $op, 
       0 .25em 0 .25em $op
-    ;
+    ;*/
     .th { 
       border-color: $op;
       background-position: $logo_left -8.75em;
@@ -133,10 +133,10 @@ body[data-theme='browserhacks'] {
   }
 
   .fx {
-    box-shadow: 
+    /*box-shadow: 
       0 -.25em 0 .25em $fx, 
       0 .25em 0 .25em $fx
-    ;
+    ;*/
     .th { 
       border-color: $fx;
       background-position: $logo_left -2em;
@@ -222,26 +222,24 @@ body[data-theme='browserhacks'] {
 
   article[data-high="2"] {
     input {
-      width:100%;
-      background:rgba(0, 0, 0, .5);
-      height:2em;
-      font: 2em/1em sans-serif;
-      padding:0 .25em 0 .25em;
-      box-shadow:
-        inset 0 0 .25em 0 rgba(0, 0, 0, .5)
-      ;
+      width: 100%;
+      background: rgba(0, 0, 0, .5);
+      height: 2em;
+      font: 2em/1.5 sans-serif;
+      padding: 0 .5em;
+      box-shadow: inset 0 0 .25em 0 rgba(0, 0, 0, .5) ;
       color:#fff;
       outline:none;
       border: rgba(255,255,255, .2) solid .015em;
       border-right: rgba(255, 255, 255, .4) solid .25em;
       border-left: rgba(255, 255, 255, .4) solid .25em;
-      @include transition(background .25s ease-in-out, border .25s ease-in-out);
+      @include transition(background .25s ease-in-out);
 
       &:focus {
-        background:rgba(255, 255, 255, .8);
-        border:none;
-        box-shadow:none;
-        color:#000;
+        background: rgba(255, 255, 255, .8);
+        border-size: 0;
+        box-shadow: none;
+        color: #000;
       }
     }
   }
@@ -293,8 +291,12 @@ body[data-theme='browserhacks'] {
   section[data-valign='center'] {
     text-align:center;
 
-    p {
+    p, ul, ol {
       text-align: left;
+    }
+
+    ul, ol {
+      padding-left: 1.5em;
     }
   }
 
@@ -332,8 +334,24 @@ body[data-theme='browserhacks'] {
     section[data-cols="3"] > div:nth-of-type(1),
     section[data-cols="3"] > div:nth-of-type(2),
     section[data-cols="3"] > div:nth-of-type(3) {
-      padding: .25em 0 .25em 0;
+      //padding: .25em 0 .25em 0;
     }
+
+    section[data-cols="3"] {
+    > div:nth-of-type(1) {
+      padding-right:.5em;
+    }
+
+    > div:nth-of-type(2) {
+      padding-left:.5em;
+      padding-right:0;
+    }
+
+    > div:nth-of-type(3) {
+      padding-left:0;
+      padding-top: 1em;
+    }
+  }
   }
 }
 

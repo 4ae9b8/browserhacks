@@ -3,11 +3,11 @@
   $hack_types = array (
     'selector' => array (
       'title' => 'Selector Hacks', 
-      'icon' => 'entypo-lamp'
+      'icon' => 'entypo-link'
     ),
     'media' => array (
       'title' => 'Media Query Hacks',
-      'icon' => 'entypo-rocket'
+      'icon' => 'entypo-resize-small'
     ),
     'javascript' => array (
       'title' => 'JavaScript Hacks',

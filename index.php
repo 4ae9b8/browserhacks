@@ -41,10 +41,20 @@
     </article>
     
     <article data-high="1">
-        <section data-cols="2" data-valign="center">
+        <section data-cols="3" data-valign="center">
             <div>
                 <h2><span class="entypo-info-circled"></span>What's this?</h2>
                 <p>Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
+            </div>
+            <div>
+                <h2><span class="entypo-tools"></span>How to?</h2>
+                <p>Nothing easier.</p>
+                <ol>
+                    <li>Pick the hack you want,</li>
+                    <li>Copy it into your stylesheet,</li>
+                    <li>Add the style you want between the braces,</li>
+                    <li>Enjoy the new styles for the browser you targeted!</li>
+                </ol>
             </div>
             <div>
                 <h2><span class="entypo-attention"></span>Reminder!</h2>
