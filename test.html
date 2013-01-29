@@ -15,7 +15,6 @@
     <meta property="og:url" content="http://browserhacks.com">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/crystallo-min.css">
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-tests.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -80,54 +79,55 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* IE 6 any combination of these characters: _ - £ ¬ ¦ */
-    <span class="test12">.selector { _background: lightgreen; }</span>
-    <span class="test13">.selector { -background: lightgreen; }</span>
-    <span class="test14">.selector { £background: lightgreen; }</span>
-    <span class="test15">.selector { ¬background: lightgreen; }</span>
-    <span class="test16">.selector { ¦background: lightgreen; }</span></code></pre>
+    <span class="test12" style="_background: lightgreen;">.selector { _background: lightgreen; }</span>
+    <span class="test13" style="-background: lightgreen;">.selector { -background: lightgreen; }</span>
+    <span class="test14" style="£background: lightgreen;">.selector { £background: lightgreen; }</span>
+    <span class="test15" style="¬background: lightgreen;">.selector { ¬background: lightgreen; }</span>
+    <span class="test16" style="¦background: lightgreen;">.selector { ¦background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 6/7 any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : &lt; > | */
-    <span class="test17">.selector { !background: lightgreen; }</span>
-    <span class="test18">.selector { $background: lightgreen; }</span>
-    <span class="test19">.selector { &background: lightgreen; }</span>
-    <span class="test20">.selector { *background: lightgreen; }</span>
-    <span class="test21">.selector { (background: lightgreen; }</span>
-    <span class="test22">.selector { )background: lightgreen; }</span>
-    <span class="test23">.selector { =background: lightgreen; }</span>
-    <span class="test24">.selector { %background: lightgreen; }</span>
-    <span class="test25">.selector { +background: lightgreen; }</span>
-    <span class="test26">.selector { @background: lightgreen; }</span>
-    <span class="test27">.selector { ,background: lightgreen; }</span>
-    <span class="test28">.selector { .background: lightgreen; }</span>
-    <span class="test29">.selector { /background: lightgreen; }</span>
-    <span class="test30">.selector { `background: lightgreen; }</span>
-    <span class="test31">.selector { [background: lightgreen; }</span>
-    <span class="test32">.selector { ]background: lightgreen; }</span>
-    <span class="test33">.selector { #background: lightgreen; }</span>
-    <span class="test34">.selector { ~background: lightgreen; }</span>
-    <span class="test35">.selector { ?background: lightgreen; }</span>
-    <span class="test36">.selector { :background: lightgreen; }</span>
-    <span class="test37">.selector { &lt;background: lightgreen; }</span>
-    <span class="test38">.selector { &gt;background: lightgreen; }</span>
-    <span class="test39">.selector { |background: lightgreen; }</span></code></pre>
+    <span class="test17" style="!background: lightgreen;">.selector { !background: lightgreen; }</span>
+    <span class="test18" style="$background: lightgreen;">.selector { $background: lightgreen; }</span>
+    <span class="test19" style="&background: lightgreen;">.selector { &background: lightgreen; }</span>
+    <span class="test20" style="*background: lightgreen;">.selector { *background: lightgreen; }</span>
+    <span class="test21" style="(background: lightgreen;">.selector { (background: lightgreen; }</span>
+    <span class="test22" style=")background: lightgreen;">.selector { )background: lightgreen; }</span>
+    <span class="test23" style="=background: lightgreen;">.selector { =background: lightgreen; }</span>
+    <span class="test24" style="%background: lightgreen;">.selector { %background: lightgreen; }</span>
+    <span class="test25" style="+background: lightgreen;">.selector { +background: lightgreen; }</span>
+    <span class="test26" style="@background: lightgreen;">.selector { @background: lightgreen; }</span>
+    <span class="test27" style=",background: lightgreen;">.selector { ,background: lightgreen; }</span>
+    <span class="test28" style=".background: lightgreen;">.selector { .background: lightgreen; }</span>
+    <span class="test29" style="/background: lightgreen;">.selector { /background: lightgreen; }</span>
+    <span class="test30" style="`background: lightgreen;">.selector { `background: lightgreen; }</span>
+    <span class="test31" style="[background: lightgreen;">.selector { [background: lightgreen; }</span>
+    <span class="test32" style="]background: lightgreen;">.selector { ]background: lightgreen; }</span>
+    <span class="test33" style="#background: lightgreen;">.selector { #background: lightgreen; }</span>
+    <span class="test34" style="~background: lightgreen;">.selector { ~background: lightgreen; }</span>
+    <span class="test35" style="?background: lightgreen;">.selector { ?background: lightgreen; }</span>
+    <span class="test36" style=":background: lightgreen;">.selector { :background: lightgreen; }</span>
+    <span class="test37" style="&lt;background: lightgreen;">.selector { &lt;background: lightgreen; }</span>
+    <span class="test38" style="&gt;background: lightgreen;">.selector { &gt;background: lightgreen; }</span>
+    <span class="test39" style="|background: lightgreen;">.selector { |background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 6/7 - acts as an !important */
-    <span class="test40">.selector { background: lightgreen; !ie; } </span>/* string after ! can be anything */</code></pre>
+    <span class="test40">.selector { background: lightgreen !ie; } </span>/* string after ! can be anything */</code></pre>
 
-    <pre class="language-css"><code>/* IE 7/8 */
-    <span class="test42">.selector { background/*\**/: red\9; }</span></code></pre>
+    <pre class="language-css"><code>/* IE 7/8/9 */
+    <span class="test42">.selector { background/*\**/: lightgreen\9; }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 8/9 */
-    <span class="test43">.selector { background: red\0/; } </span>/* must go at the END of all rules */</code></pre>
+    <pre class="language-css"><code>/* IE 8 */
+    <span class="test43">.selector { background: lightgreen\0/; } </span>
+    /* must go at the END of all rules */</code></pre>
 
     <pre class="language-css"><code>/* IE 9/10 */
-    <span class="test69">.selector:nth-of-type(1n) { background: red\9; }</span></code></pre>
+    <span class="test69">.selector:nth-of-type(1n) { background: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 6/7/8/9/10 */
-    <span class="test41">.selector { background: red\9; }</span></code></pre>
+    <span class="test41">.selector { background: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6 */
-    <span class="test44">.selector { background/**/: red; }</span></code></pre>
+    <span class="test44">.selector { background/**/: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -138,7 +138,7 @@
     <pre class="language-css"><code>/* IE 6/7/8 */
     <span class="test47">@media \0screen\,screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
 
-    <pre class="language-css"><code>/* IE 8 (via Keith Clarke) */
+    <pre class="language-css"><code>/* IE 8 */
     <span class="test48">@media \0screen { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 8/9 */
@@ -208,7 +208,7 @@
     </section>
 
     <section data-cols="1">  
-    <pre class="language-css"><code>/* Firefox 3.5 to Firefox 7 */
+    <pre class="language-css"><code>/* Firefox 3.5 to Firefox 7 & IE 9 */
     <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.6+ */
@@ -314,7 +314,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Opera 9.5+ */
+    <pre class="language-css"><code>/* Opera 9.5+ 12- */
     <span class="test64">noindex:-o-prefocus, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
@@ -324,10 +324,10 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Opera 7 */
-    <span class="test66">@media all and (min-width: 0px){ }</span></code></pre>
+    <span class="test66">@media all and (min-width: 0px){ .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera 12- */
-    <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { }</span></code></pre>
+    <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">

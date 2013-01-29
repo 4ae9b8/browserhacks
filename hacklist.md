@@ -32,7 +32,7 @@
 	/* Safari (version?) and Chrome */
 	::made-up-pseudo-element, .selector { }
 
-	/* Opera 9.5+ credits */
+	/* Opera 9.5+ 12- */
 	noindex:-o-prefocus, .selector { }
 
 	/* Firefox 1.5/2 */
@@ -95,10 +95,10 @@
 	/* IE 6/7 - acts as an !important */
 	.selector { color: blue !ie; } /* string after ! can be anything */
 	 
-	/* IE 7/8 */
+	/* IE 7/8/9 */
 	.selector { color/*\**/: blue\9; }
 
-	/* IE 8/9 */
+	/* IE 8 */
 	.selector { color: blue\0/; } /* must go at the END of all rules */
 
 	/* IE 9/10 */
@@ -139,7 +139,7 @@
 	/* Safari 3+, Chrome, Opera 9 */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
-	/* Firefox 3.5 to Firefox 7 */
+	/* Firefox 3.5 to Firefox 7 & IE 9 */
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Firefox 3.6+ */

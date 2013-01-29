@@ -87,7 +87,7 @@
         ),
         'media' => array(
           array (
-            'version' => 'Firefox 3.5 to Firefox 7',
+            'version' => 'Firefox 3.5 to Firefox 7 & IE 9',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
@@ -181,12 +181,12 @@
             'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
           ),
           array (
-            'version' => 'IE 7/8',
+            'version' => 'IE 7/8/9',
             'language' => 'language-css',
             'code' => ".selector { color/*\**/: blue\9; }"
           ),
           array (
-            'version' => 'IE 8/9',
+            'version' => 'IE 8',
             'language' => 'language-css',
             'code' => ".selector { color: blue\0/; } \n/* must go at the END of all rules */"
           ),
@@ -226,6 +226,11 @@
             'version' => 'IE 8/9',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"
+          ),
+          array (
+            'version' => 'IE 9 & Firefox 3.5 to Firefox 7',
+            'language' => 'language-css',
+            'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
           array (
             'version' => 'IE 9/10',
@@ -335,7 +340,7 @@
             'code' => "html:first-child .selector {}"
           ),
           array (
-            'version' => 'Opera 9.5+',
+            'version' => 'Opera 9.5+ 12-',
             'language' => 'language-css',
             'code' => "noindex:-o-prefocus, .selector {}"
           )

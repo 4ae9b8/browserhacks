@@ -28,14 +28,18 @@ html > /**/ body .test9 { background: lightgreen; }
 :root * > .test10 { background: lightgreen; }
 body:last-child .test11 { background: lightgreen; }
 
+
 /* IE 6 any combination of these characters _ - £ ¬ ¦ */
+/*
 .test12 { _background: lightgreen; }
 .test13 { -background: lightgreen; }
 .test14 { £background: lightgreen; }
 .test15 { ¬background: lightgreen; }
 .test16 { ¦background: lightgreen; }
+*/
 
 /* IE 6/7 any combination of these characters ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
+/*
 .test17 { !background: lightgreen; }
 .test18 { $background: lightgreen; }
 .test19 { &background: lightgreen; }
@@ -59,6 +63,7 @@ body:last-child .test11 { background: lightgreen; }
 .test37 { <background: lightgreen; }
 .test38 { >background: lightgreen; }
 .test39 { |background: lightgreen; }
+*/
 
 /* IE 6/7 - acts as an !important - string after ! can be anything*/
 .test40 { background: lightgreen !ie; } 
@@ -66,10 +71,10 @@ body:last-child .test11 { background: lightgreen; }
 /* IE 6/7/8/9/10 */
 .test41 { background: lightgreen\9; }
 
-/* IE 7/8 */
+/* IE 7/8/9 */
 .test42 { background/*\**/: lightgreen\9; }
 
-/* IE 8/9 - must go at the END of all rules */
+/* IE 8 - must go at the END of all rules */
 .test43 { background: lightgreen\0/; } 
 
 /* Everything but IE 6 */
@@ -109,7 +114,7 @@ body:first-of-type .test46 { background: lightgreen; }
 /* Firefox 3.5+ */
 body:not(:-moz-handler-blocked) .test56 { background: lightgreen; }
 
-/* Firefox 3.5 to Firefox 7 */
+/* Firefox 3.5 to Firefox 7 & IE 9 */
 @media screen and (min-resolution: +72dpi) { .test57 { background: lightgreen; } }
 
 /* Firefox 3/4 (+?) */
