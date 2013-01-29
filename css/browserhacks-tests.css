@@ -1,5 +1,4 @@
 pre span {
-	background: lightgreen;
 	padding: 5px;
 	margin: 5px;
 	display: inline-block;
@@ -7,145 +6,145 @@ pre span {
 }
 
 /* IE 6 and below - .ie6fix can be any unused class */
-* html .test1  { background: lightpink; }
-.ie6fix.test2 { background: lightpink; } 
+* html .test1  { background: lightgreen; }
+.ie6fix.test2 { background: lightgreen; } 
 
 /* IE 7 and below */
-.test3, { background: lightpink; } 
-//.test4 { background: lightpink; } /* Doesn't seem to work */
+.test3, { background: lightgreen; } 
+//.test4 { background: lightgreen; } /* Doesn't seem to work */
 
 /* IE 7 */
-*:first-child + html .test5 { background: lightpink; } 
-.test6, x:-IE7 { background: lightpink; } 
-* + html .test7 { background: lightpink; }
+*:first-child + html .test5 { background: lightgreen; } 
+.test6, x:-IE7 { background: lightgreen; } 
+* + html .test7 { background: lightgreen; }
 
 /* Everything but IE 6  */
-html > body .test8 { background: lightpink; }
+html > body .test8 { background: lightgreen; }
 
 /* Everything but IE 6/7 */
-html > /**/ body .test9 { background: lightpink; }
+html > /**/ body .test9 { background: lightgreen; }
 
 /* Everything but IE 6/7/8 */
-:root * > .test10 { background: lightpink; }
-body:last-child .test11 { background: lightpink; }
+:root * > .test10 { background: lightgreen; }
+body:last-child .test11 { background: lightgreen; }
 
 /* IE 6 any combination of these characters _ - £ ¬ ¦ */
-.test12 { _background: lightpink; }
-.test13 { -background: lightpink; }
-.test14 { £background: lightpink; }
-.test15 { ¬background: lightpink; }
-.test16 { ¦background: lightpink; }
+.test12 { _background: lightgreen; }
+.test13 { -background: lightgreen; }
+.test14 { £background: lightgreen; }
+.test15 { ¬background: lightgreen; }
+.test16 { ¦background: lightgreen; }
 
 /* IE 6/7 any combination of these characters ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
-.test17 { !background: lightpink; }
-.test18 { $background: lightpink; }
-.test19 { &background: lightpink; }
-.test20 { *background: lightpink; }
-.test21 { (background: lightpink; }
-.test22 { )background: lightpink; }
-.test23 { =background: lightpink; }
-.test24 { %background: lightpink; }
-.test25 { +background: lightpink; }
-.test26 { @background: lightpink; }
-.test27 { ,background: lightpink; }
-.test28 { .background: lightpink; }
-.test29 { /background: lightpink; }
-.test30 { `background: lightpink; }
-.test31 { [background: lightpink; }
-.test32 { ]background: lightpink; }
-.test33 { #background: lightpink; }
-.test34 { ~background: lightpink; }
-.test35 { ?background: lightpink; }
-.test36 { :background: lightpink; }
-.test37 { <background: lightpink; }
-.test38 { >background: lightpink; }
-.test39 { |background: lightpink; }
+.test17 { !background: lightgreen; }
+.test18 { $background: lightgreen; }
+.test19 { &background: lightgreen; }
+.test20 { *background: lightgreen; }
+.test21 { (background: lightgreen; }
+.test22 { )background: lightgreen; }
+.test23 { =background: lightgreen; }
+.test24 { %background: lightgreen; }
+.test25 { +background: lightgreen; }
+.test26 { @background: lightgreen; }
+.test27 { ,background: lightgreen; }
+.test28 { .background: lightgreen; }
+.test29 { /background: lightgreen; }
+.test30 { `background: lightgreen; }
+.test31 { [background: lightgreen; }
+.test32 { ]background: lightgreen; }
+.test33 { #background: lightgreen; }
+.test34 { ~background: lightgreen; }
+.test35 { ?background: lightgreen; }
+.test36 { :background: lightgreen; }
+.test37 { <background: lightgreen; }
+.test38 { >background: lightgreen; }
+.test39 { |background: lightgreen; }
 
 /* IE 6/7 - acts as an !important - string after ! can be anything*/
-.test40 { background: lightpink !ie; } 
+.test40 { background: lightgreen !ie; } 
 
 /* IE 6/7/8/9/10 */
-.test41 { background: lightpink\9; }
+.test41 { background: lightgreen\9; }
 
 /* IE 7/8 */
-.test42 { background/*\**/: lightpink\9; }
+.test42 { background/*\**/: lightgreen\9; }
 
 /* IE 8/9 - must go at the END of all rules */
-.test43 { background: lightpink\0/; } 
+.test43 { background: lightgreen\0/; } 
 
 /* Everything but IE 6 */
-.test44 { background/**/: lightpink; }
+.test44 { background/**/: lightgreen; }
 
 /* Everything but IE6/7/8 */
-body:nth-of-type(1) .test45 { background: lightpink; }
-body:first-of-type .test46 { background: lightpink; }
+body:nth-of-type(1) .test45 { background: lightgreen; }
+body:first-of-type .test46 { background: lightgreen; }
 
 /* IE 6/7/8 (via Keith Clarke) */
-@media \0screen\,screen\9 { .test47 { background: lightpink;  } } 
+@media \0screen\,screen\9 { .test47 { background: lightgreen;  } } 
 
 /* IE 8 (via Keith Clarke) */
-@media \0screen { .test48 { background: lightpink;  } } 
+@media \0screen { .test48 { background: lightgreen;  } } 
 
 /* IE 8/9 */
-@media screen\0 { .test49 { background: lightpink;  } } 
+@media screen\0 { .test49 { background: lightgreen;  } } 
  
 /* IE 9/10 */
-@media screen and (min-width:0\0) {.test50 { background: lightpink;  } } 
+@media screen and (min-width:0\0) {.test50 { background: lightgreen;  } } 
 
 /* IE 10+ */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test51 { background: lightpink; } } 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test51 { background: lightgreen; } } 
 
 /* Everything but IE 6/7/8 - not a hack */ 
-@media screen and (min-width: 400px) { .test52 { background: lightpink;  } } 
+@media screen and (min-width: 400px) { .test52 { background: lightgreen;  } } 
 
 /* Everything but IE 6/7 */
 @import "selector.css" all;
 
 /* Firefox 2 & IE 7 */
-.test54, x:-moz-any-link { background: lightpink; }
+.test54, x:-moz-any-link { background: lightgreen; }
 
 /* Firefox 3 (Windows?) & IE 7 */
-.test55, x:-moz-any-link, x:default { background: lightpink; }
+.test55, x:-moz-any-link, x:default { background: lightgreen; }
 
 /* Firefox 3.5+ */
-body:not(:-moz-handler-blocked) .test56 { background: lightpink; }
+body:not(:-moz-handler-blocked) .test56 { background: lightgreen; }
 
 /* Firefox 3.5 to Firefox 7 */
-@media screen and (min-resolution: +72dpi) { .test57 { background: lightpink; } }
+@media screen and (min-resolution: +72dpi) { .test57 { background: lightgreen; } }
 
 /* Firefox 3/4 (+?) */
-@-moz-document url-prefix() { .test58 { background: lightpink; } }
+@-moz-document url-prefix() { .test58 { background: lightgreen; } }
 
 /* Safari (version?) and Chrome */
-::made-up-pseudo-element, .test59 { background: lightpink; }
+::made-up-pseudo-element, .test59 { background: lightgreen; }
 
 /* Safari 2/3 */
-html[xmlns*=""] body:last-child .test60 { background: lightpink; }
-html[xmlns*=""]:root .test61  { background: lightpink; }
+html[xmlns*=""] body:last-child .test60 { background: lightgreen; }
+html[xmlns*=""]:root .test61  { background: lightgreen; }
 
 /* Safari 2/3.1, Opera 9.25 */
-*|html[xmlns*=""] .test62 { background: lightpink; }
+*|html[xmlns*=""] .test62 { background: lightgreen; }
 
 /* Safari 3+, Chrome, Opera 9 */
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test63 { background: lightpink; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test63 { background: lightgreen; } }
 
 /* Opera 9.5+ */
-noindex:-o-prefocus, .test64 { background: lightpink; }
+noindex:-o-prefocus, .test64 { background: lightgreen; }
 
 /* Firefox 1.5/2 */
-body:empty .test65 { background: lightpink; }
+body:empty .test65 { background: lightgreen; }
 
 /* Opera 7 */
-@media all and (min-width: 0px){ body:empty .test66 { background: lightpink; } }
+@media all and (min-width: 0px){ body:empty .test66 { background: lightgreen; } }
 
 /* Firefox 3.6+ */
-@media screen and (-moz-images-in-menus:0) { .test67 { background: lightpink; } }
+@media screen and (-moz-images-in-menus:0) { .test67 { background: lightgreen; } }
 
 /* Firefox 4+ */ 
-@media screen and (min--moz-device-pixel-ratio:0) { .test68 { background: lightpink; } }
+@media screen and (min--moz-device-pixel-ratio:0) { .test68 { background: lightgreen; } }
 
 /* IE 9/10 */
-.test69:nth-of-type(1n) { background: lightpink\9; }
+.test69:nth-of-type(1n) { background: lightgreen\9; }
 
 /* Opera 12- */
-@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test70 { background: lightpink; } }
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test70 { background: lightgreen; } }

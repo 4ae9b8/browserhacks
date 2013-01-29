@@ -69,7 +69,7 @@ body[data-theme='browserhacks'] {
     list-style: none;
     margin: 0;
     padding: 0;
-    z-index: 99;
+    z-index: 2;
 
     li {
       width: 20%;
@@ -85,6 +85,7 @@ body[data-theme='browserhacks'] {
       color: #000;
       background: url("../img/browser-logos.png") no-repeat;
       background-size: 5em;
+      box-shadow: 0 3px 2px rgba(0,0,0,.1);
       
       &:hover { 
         height: 4.5em;
@@ -95,7 +96,7 @@ body[data-theme='browserhacks'] {
     }
 
     .ch a { 
-      background-color: rgba($ch, .5);
+      background-color: rgba($ch, 1);
       background-position: center -11.1em;
 
       &:hover {
@@ -104,7 +105,7 @@ body[data-theme='browserhacks'] {
     }
 
     .fx a { 
-      background-color: rgba($fx, .5);
+      background-color: rgba($fx, 1);
       background-position: center -5.5em;
 
       &:hover {
@@ -113,7 +114,7 @@ body[data-theme='browserhacks'] {
     }
 
     .ie a { 
-      background-color: rgba($ie, .5);
+      background-color: rgba($ie, 1);
       background-position: center 0.1em;
 
       &:hover {
@@ -122,7 +123,7 @@ body[data-theme='browserhacks'] {
     }
 
     .sa a { 
-      background-color: rgba($sa, .5);
+      background-color: rgba($sa, 1);
       background-position: center -16.9em;
 
       &:hover {
@@ -131,7 +132,7 @@ body[data-theme='browserhacks'] {
     }
 
     .op a { 
-      background-color: rgba($op, .5);
+      background-color: rgba($op, 1);
       background-position: center -22.3em;
 
       &:hover {
