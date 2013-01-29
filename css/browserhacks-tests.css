@@ -5,41 +5,23 @@ pre span {
 	border-radius: 3px;
 }
 
-/* IE 6 and below - .ie6fix can be any unused class */
 * html .test1  { background: lightgreen; }
 .ie6fix.test2 { background: lightgreen; } 
-
-/* IE 7 and below */
 .test3, { background: lightgreen; } 
 //.test4 { background: lightgreen; } /* Doesn't seem to work */
-
-/* IE 7 */
 *:first-child + html .test5 { background: lightgreen; } 
 .test6, x:-IE7 { background: lightgreen; } 
 * + html .test7 { background: lightgreen; }
-
-/* Everything but IE 6  */
 html > body .test8 { background: lightgreen; }
-
-/* Everything but IE 6/7 */
 html > /**/ body .test9 { background: lightgreen; }
-
-/* Everything but IE 6/7/8 */
 :root * > .test10 { background: lightgreen; }
 body:last-child .test11 { background: lightgreen; }
-
-
-/* IE 6 any combination of these characters _ - £ ¬ ¦ */
 /*
 .test12 { _background: lightgreen; }
 .test13 { -background: lightgreen; }
 .test14 { £background: lightgreen; }
 .test15 { ¬background: lightgreen; }
 .test16 { ¦background: lightgreen; }
-*/
-
-/* IE 6/7 any combination of these characters ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
-/*
 .test17 { !background: lightgreen; }
 .test18 { $background: lightgreen; }
 .test19 { &background: lightgreen; }
@@ -64,92 +46,34 @@ body:last-child .test11 { background: lightgreen; }
 .test38 { >background: lightgreen; }
 .test39 { |background: lightgreen; }
 */
-
-/* IE 6/7 - acts as an !important - string after ! can be anything*/
 .test40 { background: lightgreen !ie; } 
-
-/* IE 6/7/8/9/10 */
 .test41 { background: lightgreen\9; }
-
-/* IE 7/8/9 */
 .test42 { background/*\**/: lightgreen\9; }
-
-/* IE 8 - must go at the END of all rules */
 .test43 { background: lightgreen\0/; } 
-
-/* Everything but IE 6 */
 .test44 { background/**/: lightgreen; }
-
-/* Everything but IE6/7/8 */
 body:nth-of-type(1) .test45 { background: lightgreen; }
 body:first-of-type .test46 { background: lightgreen; }
-
-/* IE 6/7/8 (via Keith Clarke) */
 @media \0screen\,screen\9 { .test47 { background: lightgreen;  } } 
-
-/* IE 8 (via Keith Clarke) */
 @media \0screen { .test48 { background: lightgreen;  } } 
-
-/* IE 8/9 */
 @media screen\0 { .test49 { background: lightgreen;  } } 
- 
-/* IE 9/10 */
 @media screen and (min-width:0\0) {.test50 { background: lightgreen;  } } 
-
-/* IE 10+ */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test51 { background: lightgreen; } } 
-
-/* Everything but IE 6/7/8 - not a hack */ 
 @media screen and (min-width: 400px) { .test52 { background: lightgreen;  } } 
-
-/* Everything but IE 6/7 */
 @import "selector.css" all;
-
-/* Firefox 2 & IE 7 */
 .test54, x:-moz-any-link { background: lightgreen; }
-
-/* Firefox 3 (Windows?) & IE 7 */
 .test55, x:-moz-any-link, x:default { background: lightgreen; }
-
-/* Firefox 3.5+ */
 body:not(:-moz-handler-blocked) .test56 { background: lightgreen; }
-
-/* Firefox 3.5 to Firefox 7 & IE 9 */
 @media screen and (min-resolution: +72dpi) { .test57 { background: lightgreen; } }
-
-/* Firefox 3/4 (+?) */
 @-moz-document url-prefix() { .test58 { background: lightgreen; } }
-
-/* Safari (version?) and Chrome */
 ::made-up-pseudo-element, .test59 { background: lightgreen; }
-
-/* Safari 2/3 */
 html[xmlns*=""] body:last-child .test60 { background: lightgreen; }
 html[xmlns*=""]:root .test61  { background: lightgreen; }
-
-/* Safari 2/3.1, Opera 9.25 */
 *|html[xmlns*=""] .test62 { background: lightgreen; }
-
-/* Safari 3+, Chrome, Opera 9 */
 @media screen and (-webkit-min-device-pixel-ratio:0) { .test63 { background: lightgreen; } }
-
-/* Opera 9.5+ */
 noindex:-o-prefocus, .test64 { background: lightgreen; }
-
-/* Firefox 1.5/2 */
 body:empty .test65 { background: lightgreen; }
-
-/* Opera 7 */
 @media all and (min-width: 0px){ body:empty .test66 { background: lightgreen; } }
-
-/* Firefox 3.6+ */
 @media screen and (-moz-images-in-menus:0) { .test67 { background: lightgreen; } }
-
-/* Firefox 4+ */ 
 @media screen and (min--moz-device-pixel-ratio:0) { .test68 { background: lightgreen; } }
-
-/* IE 9/10 */
 .test69:nth-of-type(1n) { background: lightgreen\9; }
-
-/* Opera 12- */
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test70 { background: lightgreen; } }

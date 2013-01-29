@@ -139,7 +139,7 @@
 	/* Safari 3+, Chrome, Opera 9 */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
-	/* Firefox 3.5 to Firefox 7 & IE 9 */
+	/* Firefox 3.5+ & IE 9 */
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Firefox 3.6+ */
@@ -160,7 +160,7 @@
 	/* Everything but IE 6/7 */
 	@import "stylesheet.css" all;
 
-	/* Firefox 3/4 (+?) */
+	/* Firefox 3+ */
 	@-moz-document url-prefix() { }
 
 

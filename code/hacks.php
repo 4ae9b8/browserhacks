@@ -65,12 +65,12 @@
             'code' => "body:empty .selector {}"
           ),
           array (
-            'version' => 'Firefox 2',
+            'version' => 'Firefox 2+',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link {}"
           ),
           array (
-            'version' => 'Firefox 3 Windows',
+            'version' => 'Firefox 3+ (Windows ?)',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link; x:default {}"
           ),
@@ -87,7 +87,7 @@
         ),
         'media' => array(
           array (
-            'version' => 'Firefox 3.5 to Firefox 7 & IE 9',
+            'version' => 'Firefox 3.5+ & IE 9',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
