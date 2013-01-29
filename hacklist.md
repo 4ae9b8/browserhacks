@@ -25,7 +25,7 @@
 	/* Safari 2/3.1, Opera 9.25 */
 	*|html[xmlns*=""] .selector { }
 
-	/* Safari (version?) and Chrome */
+	/* Safari (version? 5 OK) and Chrome */
 	::made-up-pseudo-element, .selector { }
 
 	/* Opera 9.5+ */
@@ -200,17 +200,18 @@
 
 ## Things to be tested
 
-Firefox 3+ Mac
+Firefox 3+ Mac  
 	.selector, x:-moz-any-link; x:default { }
 
-IE 9
+IE 9  
 	.selector { color: blue\0/; }
 	@media screen and (min-resolution: +72dpi) { }
 
-IE 10
+IE 10  
 	everything
 
-Opera
+Opera  
 	@media screen\0 { }
 	@media screen and (min-resolution: +72dpi) { }
+	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 

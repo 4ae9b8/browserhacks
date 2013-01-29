@@ -24,6 +24,7 @@ IE 10
 Opera  
 	@media screen\0 { }
 	@media screen and (min-resolution: +72dpi) { }
+	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
 
 29/01/13
