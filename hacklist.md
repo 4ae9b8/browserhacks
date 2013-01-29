@@ -204,6 +204,10 @@ Firefox 3+ Mac
 
 	.selector, x:-moz-any-link; x:default { }
 
+IE7 
+
+	//.selector { background: lightgreen; }
+
 IE 9  
 
 	.selector { color: blue\0/; }
