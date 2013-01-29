@@ -25,10 +25,6 @@
 	/* Safari 2/3.1, Opera 9.25 */
 	*|html[xmlns*=""] .selector { }
 
-	/* Safari 3+, Chrome, Opera 9+, Firefox 3.5+ */
-	body:nth-of-type(1) .selector { }
-	body:first-of-type .selector { }
-
 	/* Safari (version?) and Chrome */
 	::made-up-pseudo-element, .selector { }
 
@@ -56,7 +52,8 @@
 	/* Everything but IE 6/7/8 */
 	:root * > .selector { }
 	body:last-child { }
-
+	body:nth-of-type(1) .selector { }
+	body:first-of-type .selector { }
 
 ## PROPERTY / VALUE HACKS
 

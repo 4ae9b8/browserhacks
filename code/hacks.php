@@ -29,11 +29,6 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome, Safari 3+, Opera 9+, Firefox 3.5+',
-            'language' => 'language-css',
-            'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
-          ),
-          array (
             'version' => 'Chrome and Safari (version?)',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -78,11 +73,6 @@
             'version' => 'Firefox 3.5+',
             'language' => 'language-css',
             'code' => "body:not(:-moz-handler-blocked) .selector {}"
-          ),
-          array (
-            'version' => 'Firefox 3.5+, Chrome, Safari 3+, Opera 9+',
-            'language' => 'language-css',
-            'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
           )
         ),
         'media' => array(
@@ -160,7 +150,7 @@
           array (
             'version' => 'Everything but IE 6/7/8',
             'language' => 'language-css',
-            'code' => ":root *> .selector {} \nbody:last-child {}"
+            'code' => ":root *> .selector {} \nbody:last-child .selector {} \nbody:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
           )
         ),
         'property-value' => array(
@@ -294,11 +284,6 @@
             'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
-            'version' => 'Safari 3+, Firefox 3.5+, Chrome, Opera 9+',
-            'language' => 'language-css',
-            'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
-          ),
-          array (
             'version' => 'Safari (version?) and Chrome',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -324,11 +309,6 @@
       'name' => 'Opera',
       'hacks' => array(
         'selector' => array(
-          array (
-            'version' => 'Opera 9+, Safari 3+, Firefox 3.5+, Chrome',
-            'language' => 'language-css',
-            'code' => "body:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
-          ),
           array (
             'version' => 'Opera 9.25, Safari 2/3.1',
             'language' => 'language-css',
