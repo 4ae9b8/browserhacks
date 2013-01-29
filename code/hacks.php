@@ -213,7 +213,7 @@
             'code' => "@media \0screen {}"
           ),
           array (
-            'version' => 'IE 8/9',
+            'version' => 'IE 8/9 & Opera 12',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"
           ),
@@ -320,7 +320,7 @@
             'code' => "html:first-child .selector {}"
           ),
           array (
-            'version' => 'Opera 9.5+ 12-',
+            'version' => 'Opera 9.5+',
             'language' => 'language-css',
             'code' => "noindex:-o-prefocus, .selector {}"
           )
@@ -340,7 +340,12 @@
             'version' => 'Opera 12-',
             'language' => 'language-css',
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
-          )  
+          ),
+          array (
+            'version' => 'IE 8/9 & Opera 12',
+            'language' => 'language-css',
+            'code' => "@media screen\0 {}"
+          )
         ),
         'javascript' => array(
           array (

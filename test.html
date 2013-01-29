@@ -139,7 +139,7 @@
     <pre class="language-css"><code>/* IE 8 */
     <span class="test48">@media \0screen { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 8/9 */
+    <pre class="language-css"><code>/* IE 8/9 & Opera 12 */
     <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 9/10 */
@@ -206,7 +206,7 @@
     </section>
 
     <section data-cols="1">  
-    <pre class="language-css"><code>/* Firefox 3.5+ & IE 9 */
+    <pre class="language-css"><code>/* Firefox 3.5+, IE 9, Opera 12 */
     <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.6+ */
@@ -253,6 +253,15 @@
     <section data-cols="1">
     <pre class="language-css"><code>/* Safari (version?) and Chrome (not Canary) */
     <span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
+    </section>
+
+    <section data-cols="1">
+        <h3><span class="fontawesome-resize-small"></span>Media hacks</h3>
+    </section>
+
+    <section data-cols="1">
+    <pre class="language-css"><code>/* Chrome, Safari 3+, Opera 9 */
+    <span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -312,7 +321,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Opera 9.5+ 12- */
+    <pre class="language-css"><code>/* Opera 9.5+ */
     <span class="test64">noindex:-o-prefocus, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
@@ -326,6 +335,12 @@
 
     <pre class="language-css"><code>/* Opera 12- */
     <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
+
+    <pre class="language-css"><code>/* Opera 12 & IE 8/9 */
+    <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
+
+    <pre class="language-css"><code>/* Opera 12, Firefox 3.5+, IE 9 */
+    <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
