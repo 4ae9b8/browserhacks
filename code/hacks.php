@@ -77,7 +77,7 @@
         ),
         'media' => array(
           array (
-            'version' => 'Firefox 3.5+ & IE 9',
+            'version' => 'Firefox 3.5+, IE 9/10, Opera 12',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
@@ -213,12 +213,12 @@
             'code' => "@media \0screen {}"
           ),
           array (
-            'version' => 'IE 8/9 & Opera 12',
+            'version' => 'IE 8/9/10 & Opera 12',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"
           ),
           array (
-            'version' => 'IE 9 & Firefox 3.5 to Firefox 7',
+            'version' => 'IE 9/10, Firefox 3.5+, Opera 10',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
@@ -342,7 +342,12 @@
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
           ),
           array (
-            'version' => 'IE 8/9 & Opera 12',
+            'version' => 'Opera 12, Firefox 3.5+, IE 9/10',
+            'language' => 'language-css',
+            'code' => "@media screen and (min-resolution: +72dpi) {}"
+          ),
+          array (
+            'version' => 'Opera 12, IE 8/9/10',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"
           )

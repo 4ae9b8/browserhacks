@@ -92,7 +92,7 @@
 	/* IE 6/7 - acts as an !important */
 	.selector { color: blue !ie; } /* string after ! can be anything */
 	 
-	/* IE 7/8/9 */
+-	/* IE 7/8/9/10 */
 	.selector { color/*\**/: blue\9; }
 
 	/* IE 8 */
@@ -118,7 +118,7 @@
 	/* IE 8 */
 	@media \0screen { }
 	 
-	/* IE 8/9 & Opera 12 */
+-	/* IE 8/9/10 & Opera 12 */
 	@media screen\0 { }
 
 	/* IE 9/10 */
@@ -136,7 +136,7 @@
 	/* Safari 3+, Chrome, Opera 9 */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
-	/* Firefox 3.5+, IE 9 & Opera 12 */
+-	/* Firefox 3.5+, IE 9/10 & Opera 12 */
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Firefox 3.6+ */
@@ -195,31 +195,3 @@
 
 	/* Transition on pseudo elements (or something like that) */
 	userAgent.toLowerCase().indexOf('firefox') > -1 || userAgent.toLowerCase().indexOf('chrome') > -1
-
-
-
-## Things to be tested
-
-Firefox 3+ Mac  
-
-	.selector, x:-moz-any-link; x:default { }
-
-IE7 
-
-	//.selector { background: lightgreen; }
-
-IE 9  
-
-	.selector { color: blue\0/; }
-	@media screen and (min-resolution: +72dpi) { }
-
-IE 10  
-
-	everything
-
-Opera  
-
-	@media screen\0 { }
-	@media screen and (min-resolution: +72dpi) { }
-	@media screen and (-webkit-min-device-pixel-ratio:0) { }
-
