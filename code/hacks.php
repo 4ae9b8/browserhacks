@@ -171,7 +171,7 @@
             'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
           ),
           array (
-            'version' => 'IE 7/8/9',
+            'version' => 'IE 7/8/9/10',
             'language' => 'language-css',
             'code' => ".selector { color/*\**/: blue\9; }"
           ),
@@ -213,12 +213,12 @@
             'code' => "@media \0screen {}"
           ),
           array (
-            'version' => 'IE 8/9/10 & Opera 12',
+            'version' => 'IE 8/9/10 & Opera',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"
           ),
           array (
-            'version' => 'IE 9/10, Firefox 3.5+, Opera 10',
+            'version' => 'IE 9/10, Firefox 3.5+, Opera',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
@@ -238,7 +238,7 @@
             'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}"
           ),
           array (
-            'version' => 'Everything but IE6/7/8 - not a hack',
+            'version' => 'Everything but IE 6/7/8',
             'language' => 'language-css',
             'code' => "@media screen and (min-width: 400px) {}"
           )
@@ -291,7 +291,7 @@
         ),
         "media" => array(
           array (
-            'version' => 'Safari 3+, Chrome, Opera 9',
+            'version' => 'Safari 3+, Chrome',
             'language' => 'language-css',
             'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
           )
@@ -332,22 +332,17 @@
             'code' => "@media all and (min-width: 0px){}"
           ),
           array (
-            'version' => 'Opera 9, Safari 3+, Chrome',
-            'language' => 'language-css',
-            'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
-          ),
-          array (
             'version' => 'Opera 12-',
             'language' => 'language-css',
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
           ),
           array (
-            'version' => 'Opera 12, Firefox 3.5+, IE 9/10',
+            'version' => 'Opera, Firefox 3.5+, IE 9/10',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
           array (
-            'version' => 'Opera 12, IE 8/9/10',
+            'version' => 'Opera, IE 8/9/10',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"
           )

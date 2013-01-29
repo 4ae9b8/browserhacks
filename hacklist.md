@@ -118,14 +118,14 @@
 	/* IE 8 */
 	@media \0screen { }
 	 
--	/* IE 8/9/10 & Opera 12 */
+-	/* IE 8/9/10 & Opera */
 	@media screen\0 { }
 
 	/* IE 9/10 */
 	@media screen and (min-width:0\0) { }
 
 	/* IE 10 */
-	@media screen and (-ms-transform-3d) { } /* To be tested */
+	@media screen and (-ms-transform-3d) { }
 
 	/* Opera 7 */
 	@media all and (min-width: 0px){ }
@@ -133,19 +133,19 @@
 	/* IE 10+ */
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { }
 
-	/* Safari 3+, Chrome, Opera 9 */
+	/* Safari 3+, Chrome */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
--	/* Firefox 3.5+, IE 9/10 & Opera 12 */
+-	/* Firefox 3.5+, IE 9/10 & Opera */
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Firefox 3.6+ */
-	@media screen and (-moz-images-in-menus:0) { } /* To be tested */
+	@media screen and (-moz-images-in-menus:0) { }
 
 	/* Firefox 4+ */ 
     @media screen and (min--moz-device-pixel-ratio:0) { }
 
-	/* Everything but IE 6/7/8 - not a hack */ 
+	/* Everything but IE 6/7/8 */ 
 	@media screen and (min-width: 400px) { }
 
 	/* Opera 12- */
