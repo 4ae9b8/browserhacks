@@ -28,16 +28,16 @@
 	/* Safari (version?) and Chrome */
 	::made-up-pseudo-element, .selector { }
 
-	/* Opera 9.5+ 12- */
+	/* Opera 9.5+ */
 	noindex:-o-prefocus, .selector { }
 
 	/* Firefox 1.5/2 */
 	body:empty .selector { }
 
-	/* Firefox 2 */
+	/* Firefox 2+ */
 	.selector, x:-moz-any-link { }
 
-	/* Firefox 3 Windows */
+	/* Firefox 3+ (Windows ?) */
 	.selector, x:-moz-any-link; x:default { }
 
 	/* Firefox 3.5+ */
@@ -109,16 +109,16 @@
 
 ## MEDIA HACKS
 
-	/* IE 6/7 only (via Keith Clarke) */
+	/* IE 6/7 only */
 	@media screen\9 { }
 	 
-	/* IE 6/7/8 (via Keith Clarke) */
+	/* IE 6/7/8 */
 	@media \0screen\,screen\9 { } 
 	 
-	/* IE 8 (via Keith Clarke) */
+	/* IE 8 */
 	@media \0screen { }
 	 
-	/* IE 8/9 */
+	/* IE 8/9 & Opera 12 */
 	@media screen\0 { }
 
 	/* IE 9/10 */
@@ -136,7 +136,7 @@
 	/* Safari 3+, Chrome, Opera 9 */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
-	/* Firefox 3.5+ & IE 9 */
+	/* Firefox 3.5+, IE 9 & Opera 12 */
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Firefox 3.6+ */
@@ -195,3 +195,22 @@
 
 	/* Transition on pseudo elements (or something like that) */
 	userAgent.toLowerCase().indexOf('firefox') > -1 || userAgent.toLowerCase().indexOf('chrome') > -1
+
+
+
+## Things to be tested
+
+Firefox 3+ Mac
+	.selector, x:-moz-any-link; x:default { }
+
+IE 9
+	.selector { color: blue\0/; }
+	@media screen and (min-resolution: +72dpi) { }
+
+IE 10
+	everything
+
+Opera
+	@media screen\0 { }
+	@media screen and (min-resolution: +72dpi) { }
+
