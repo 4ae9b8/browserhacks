@@ -11,20 +11,27 @@ Resources
 Things requiring further tests
 ------------------------------
 
-Firefox 3+ Mac
+Firefox 3+ Mac  
 	.selector, x:-moz-any-link; x:default { }
 
-IE 9
+IE 9  
 	.selector { color: blue\0/; }
 	@media screen and (min-resolution: +72dpi) { }
 
-IE 10
+IE 10  
 	everything
 
-Opera
+Opera  
 	@media screen\0 { }
 	@media screen and (min-resolution: +72dpi) { }
 
+
+29/01/13
+--------
+* Did a new whole test page
+* Fixed a bunch of hacks
+* Did a lot of tries
+* Improved some styles
 
 28/01/13
 --------
