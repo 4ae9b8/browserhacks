@@ -12,19 +12,23 @@ Things requiring further tests
 ------------------------------
 
 Firefox 3+ Mac  
-	.selector, x:-moz-any-link; x:default { }
+
+	.selector, x:-moz-any-link; x:default { }  
 
 IE 9  
-	.selector { color: blue\0/; }
-	@media screen and (min-resolution: +72dpi) { }
+
+	.selector { color: blue\0/; }  
+	@media screen and (min-resolution: +72dpi) { }  
 
 IE 10  
+
 	everything
 
 Opera  
-	@media screen\0 { }
-	@media screen and (min-resolution: +72dpi) { }
-	@media screen and (-webkit-min-device-pixel-ratio:0) { }
+
+	@media screen\0 { }  
+	@media screen and (min-resolution: +72dpi) { }  
+	@media screen and (-webkit-min-device-pixel-ratio:0) { }  
 
 
 29/01/13
