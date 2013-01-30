@@ -40,7 +40,48 @@
         </section>
     </article>
      <!-- Social -->
-    <article data-high="4">
+
+     <article data-high="2">
+        <section data-cols="2">
+            <div>
+                <p class="form-wrapper">
+                    <label for="search"><span class="fontawesome-search"></span> Search for your hack</label>
+                    <input type="text" name="search" id="search" placeholder="i.e. 'ie6'">
+                </p>
+                <p><span class="fontawesome-random"></span> Order by: <a href="#">browsers</a>, <a href="#">type</a>.</p>
+            </div>
+            <div>
+                <section data-cols="1" class="btn-group">
+                    <div>
+                        <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
+                            <button data-type="2"><span class="fontawesome-github"></span> Report a bug or contribute</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
+                            <button data-type="1"><span class="fontawesome-twitter"></span> Spread the word</button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="test.html" target="_blank">
+                            <button data-type="2"><span class="fontawesome-magic"></span> Run some tests</button>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </section>
+     </article>
+   
+   <!--
+    <article data-high="2">    
+        <section data-cols="1">
+          <div>
+              <input type="text" name="search" id="search" placeholder="Browse hacks... i.e. 'ie6'">
+          </div>
+        </section>
+    </article>
+
+        <article data-high="4">
         <section data-cols="3">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
@@ -59,14 +100,7 @@
             </div>
         </section>
     </article>
-   
-    <article data-high="2">    
-        <section data-cols="1">
-          <div>
-              <input type="text" name="search" id="search" placeholder="Browse hacks... i.e. 'ie6'">
-          </div>
-        </section>
-    </article>
+-->
     
     <article data-high="1">
         <section data-cols="3" data-valign="center" class="top-content">
