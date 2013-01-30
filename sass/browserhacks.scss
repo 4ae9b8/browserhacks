@@ -462,33 +462,33 @@ body[data-theme='browserhacks'] {
   body[data-theme='browserhacks'] {
 
     h1 {
-      font-size:2em;
+      font-size:3em;
     }
 
-    section > div,
+    section:not('.btn-group') > div,
     section[data-cols="2"] > div:nth-child(even),
     section[data-cols="2"] > div:nth-child(odd),
     section[data-cols="3"] > div:nth-of-type(1),
     section[data-cols="3"] > div:nth-of-type(2),
     section[data-cols="3"] > div:nth-of-type(3) {
-      padding: .25em 0;
+      padding: .25em;
     }
 
     section[data-cols="3"] {
-    > div:nth-of-type(1) {
-      padding-right:.5em;
-    }
+      > div:nth-of-type(1) {
+        padding-right:.5em;
+      }
 
-    > div:nth-of-type(2) {
-      padding-left:.5em;
-      padding-right:0;
-    }
+      > div:nth-of-type(2) {
+        padding-left:.5em;
+        padding-right:0;
+      }
 
-    > div:nth-of-type(3) {
-      padding-left:0;
-      padding-top: 1em;
+      > div:nth-of-type(3) {
+        padding-left:0;
+        padding-top: 1em;
+      }
     }
-  }
   }
 }
 
@@ -497,6 +497,12 @@ body[data-theme='browserhacks'] {
     pre { 
       width: 100%; 
       margin: 1% 0; 
+    }
+
+    section[data-cols="2"] {
+      > div {
+        padding: 0 !important;
+      }
     }
   }
 }
