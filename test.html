@@ -31,8 +31,11 @@
 
     <article data-high="1">
         <section data-cols="1" >
-            <h1>Tests</h1>
+            <h1><a href="/">Browserhacks</a></h1>
         </section>
+        <p class="catch-phrase">
+            #test { <span class="catch-phrase__anim"></span><span class="catch-phrase__space">it</span>: now; }
+        </p>
     </article>
 
     <article data-high="3" data-text="" class="ie" id="ie">
@@ -380,11 +383,12 @@
         </section>
     </article>  
 
+    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="js/main.js"></script>
 
     <!--<script src="js/libs.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/prism.js"></script>
+    <script src="js/prism.js"></script>-->
     <script>
     var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
 
@@ -393,7 +397,7 @@
         if (i == tips.length) --i;
         $(".catch-phrase__anim").html(tips[i]);
     }, 200);
-    </script>-->
+    </script>
 
     <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
 

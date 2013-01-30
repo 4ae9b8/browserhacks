@@ -29,7 +29,6 @@
         <li class="op"><a href="#op">Opera</a></li>
     </ul>
 
-    <br />
 
     <article data-high="1">
         <section data-cols="1" >
