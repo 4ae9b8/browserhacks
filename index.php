@@ -40,7 +40,27 @@
             </p>
         </section>
     </article>
-    
+     <!-- Social -->
+    <article data-high="4">
+        <section data-cols="3">
+            <div>
+                <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
+                    <button data-type="2"><span class="fontawesome-github"></span> Report a bug or contribute</button>
+                </a>
+            </div>
+            <div>
+                <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
+                    <button data-type="1"><span class="fontawesome-twitter"></span> Spread the word</button>
+                </a>
+            </div>
+            <div>
+                <a href="test.html" target="_blank">
+                    <button data-type="2"><span class="fontawesome-road"></span> Run some tests</button>
+                </a>
+            </div>
+        </section>
+    </article>
+   
     <article data-high="2">    
         <section data-cols="1">
           <div>
