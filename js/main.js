@@ -15,7 +15,7 @@
    *
    * Models 
    */
-  App.Models.Hack = Backbone.Model.extend({
+  App.Models.Browser = Backbone.Model.extend({
   });
 
 
@@ -23,8 +23,8 @@
    *
    * Collections 
    */
-  App.Collections.Hack = Backbone.Collection.extend({
-    model : App.Models.Hack
+  App.Collections.Browser = Backbone.Collection.extend({
+    model : App.Models.Browser
   });
 
 
@@ -32,25 +32,42 @@
    *
    * Views 
    */
-  App.Views.Hack = Backbone.View.extend({
-    tagName : 'article[data-high="3"] div',
+
+  /* A single browser */
+  App.Views.Browser = Backbone.View.extend({
+    el : 'article[data-high="3"]',
 
     initialize : function() {
-      console.log('test');
-    },
-
-    // render : function() {
-    //   this.collection.each(this.addOne, this);
-    //   return this;
-    // },
-
-    // addOne : function(font) {
-    //   var fontView = new App.Views.Font({model : font});
-    //   this.$el.append(fontView.render().el);
-    // }
+      console.log(this.model.get('browser'));
+    }
   });
 
-  // var hackView = new App.Views.Hack();
+  /* All browser */
+  App.Views.Master = Backbone.View.extend({
+    initialize : function() {
+      this.collection.each(function(browser) {
+        new App.Views.Browser({model: browser});
+      }, this);
+    }
+  });
+
+
+  /*--------------------------------------------------
+   *
+   * Start the app
+   */
+
+  // A collection of browsers
+  var collection_browser = new App.Collections.Browser([
+    {'browser' : 'ch'}, 
+    {'browser' : 'fx'},
+    {'browser' : 'ie'},
+    {'browser' : 'sa'},
+    {'browser' : 'op'}
+  ]);
+
+  // All 
+  var view_master = new App.Views.Master({collection : collection_browser});
 
 
   // @TODO: [TimPietrusky] - Find a better place for this
