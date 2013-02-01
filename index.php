@@ -45,7 +45,7 @@
         <section data-cols="2">
             <div>
                 <p class="form-wrapper">
-                    <label for="search"><span class="fontawesome-search"></span> Search for your hack</label>
+                    <label for="search"><span class="fontawesome-search"></span> Find a hack</label>
                     <input type="text" name="search" id="search" placeholder="i.e. 'ie6'">
                 </p>
                 <p><span class="fontawesome-random"></span> Order by: <a href="#">browsers</a>, <a href="#">type</a>.</p>
@@ -54,17 +54,17 @@
                 <section data-cols="1" class="btn-group">
                     <div>
                         <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                            <button data-type="2"><span class="fontawesome-github"></span> Report a bug or contribute</button>
+                            <button data-type="2"><span class="fontawesome-github"></span> Add hacks or report bugs</button>
                         </a>
                     </div>
                     <div>
                         <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                            <button data-type="1"><span class="fontawesome-twitter"></span> Spread the word</button>
+                            <button data-type="2"><span class="fontawesome-twitter"></span> Spread the word</button>
                         </a>
                     </div>
                     <div>
                         <a href="test.html" target="_blank">
-                            <button data-type="2"><span class="fontawesome-magic"></span> Run some tests</button>
+                            <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
                         </a>
                     </div>
                 </section>
@@ -134,7 +134,7 @@
         <section data-cols="3">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="2"><span class="fontawesome-github"></span> Fork me</button>
+                    <button data-type="1"><span class="fontawesome-github"></span> Fork me</button>
                 </a>
             </div>
             <div>
@@ -144,7 +144,7 @@
             </div>
             <div>
                 <a href="test.html" target="_blank">
-                    <button data-type="2"><span class="fontawesome-road"></span> Test page</button>
+                    <button data-type="1"><span class="fontawesome-road"></span> Test page</button>
                 </a>
             </div>
         </section>

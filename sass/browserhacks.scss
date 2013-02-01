@@ -44,8 +44,7 @@ body {
 
 body[data-theme='browserhacks'] {
   font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
-  //background: url(http://subtlepatterns.com/patterns/norwegian_rose.png) #fff;
-  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/pw_maze_white.png) #eee;
+  background: url(http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/linedpaper.png) #eee;
   position: relative;
 
   [class*="fontawesome-"]:before {
@@ -61,6 +60,8 @@ body[data-theme='browserhacks'] {
     margin: 0;
     padding: 0;
     z-index: 2;
+    font-size:1em;
+    width:100%;
 
     li {
       width: 20%;
@@ -76,10 +77,11 @@ body[data-theme='browserhacks'] {
       color: #000;
       background: url("../img/browser-logos.png") no-repeat;
       background-size: 5em;
-      box-shadow: 0 3px 2px rgba(0,0,0,.1);
+      border-top:.125em solid rgba(255, 255, 255, .25);
+      border-bottom:.25em solid rgba(0, 0, 0, .5);
       
       &:hover { 
-        height: 4.5em;
+        height: 4.75em;
         color: #000;
       }
 
@@ -291,9 +293,7 @@ body[data-theme='browserhacks'] {
     background: #ccc;
     font-size:1.15em;
     overflow: hidden;
-    text-align: left;
     position: relative;
-    padding-left: 6em;
     @include user-select(none);
     @include transition-property(all);
     @include transition-duration(0.3s);
@@ -304,6 +304,11 @@ body[data-theme='browserhacks'] {
       color: white;
       font-size:1.15em;
       @include user-select(none);
+    }
+
+    &[data-type="2"] {
+      text-align:left;
+      padding-left: 6em;
     }
   }
 
@@ -344,16 +349,17 @@ body[data-theme='browserhacks'] {
 
       input {
         width: 100%;
-        background: rgba(0, 0, 0, .5);
+        // background: rgba(0, 0, 0, .5);
+        background: #fff;
         height: 1.7em;
         font: 2em/1.5 sans-serif;
         padding: 0 .5em;
-        box-shadow: inset 0 0 .25em 0 rgba(0, 0, 0, .5) ;
+        box-shadow: inset 0 0 .115em 0 rgba(0, 0, 0, .35) ;
         color:#fff;
         outline:none;
-        border: rgba(255,255,255, .2) solid .015em;
-        border-right: rgba(255, 255, 255, .4) solid .25em;
-        border-left: rgba(255, 255, 255, .4) solid .25em;
+        border: rgba(0,0,0, .75) solid .015em;
+        border-right: rgba(0, 0, 0, .4) solid .25em;
+        border-left: rgba(0, 0, 0, .4) solid .25em;
         @include transition(all .25s ease-in-out);
 
         &:focus {
@@ -465,6 +471,14 @@ body[data-theme='browserhacks'] {
       font-size:3em;
     }
 
+    .nav-browser {
+      font-size:.75em;
+
+      a {
+        height:2em;
+      }
+    }
+
     section:not('.btn-group') > div,
     section[data-cols="2"] > div:nth-child(even),
     section[data-cols="2"] > div:nth-child(odd),
@@ -494,6 +508,8 @@ body[data-theme='browserhacks'] {
 
 @media screen and (max-width: 44em) {
   body[data-theme='browserhacks'] {
+    font-size:.925em;
+
     pre { 
       width: 100%; 
       margin: 1% 0; 
@@ -502,6 +518,14 @@ body[data-theme='browserhacks'] {
     section[data-cols="2"] {
       > div {
         padding: 0 !important;
+      }
+    }
+
+    section[data-cols="3"] {
+      > div:nth-of-type(1),
+      > div:nth-of-type(2),
+      > div:nth-of-type(3) {
+        padding: 0 0 .5em 0;
       }
     }
   }
