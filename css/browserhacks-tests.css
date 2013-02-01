@@ -1,8 +1,13 @@
-pre span {
+pre span, .example-span {
 	padding: 5px;
 	margin: 5px;
 	display: inline-block;
 	border-radius: 3px;
+}
+
+.example-span {
+	background: lightgreen;
+	margin: 0;
 }
 
 * html .test1  { background: lightgreen; }
