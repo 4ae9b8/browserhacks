@@ -13,40 +13,43 @@ Things requiring further tests
 
 https://github.com/4ae9b8/browserhacks/issues/6
 
-29/01/13
---------
+Changelog
+------------------------------
+
+### 01/02/13
+* Added basic Backbone stuff
+* Improved the responsiveness
+* Improved top navigation
+* Changed various text
+* Changed the background-image
+
+### 29/01/13
 * Did a new whole test page
 * Fixed a bunch of hacks
 * Did a lot of tries
 * Improved some styles
 
-28/01/13
---------
+### 28/01/13
 * Merging stylesheets
 * Completed the array of hacks
 * Added a few hacks
 * Improved some styles
 * Improved the responsiveness
 
-27/01/13
---------
+### 27/01/13
 * Added code/hacks.php to auto generate the hacks and the corresponding HTML
 * Improved some styles
 * Added an input field
 * Improved small / normal screen version
 * Added some sub categories
 
-13/01/13
---------
+### 13/01/13
 * Fixed a layout bug
 * Improved some styles
 
-11/01/13
---------
+### 11/01/13
 * First layout shot (3 then 2 then 1 column)
 * Dumped a bunch of content in index.html to play around
 * Assigned a bunch of classes for each snippet (ie, ie6, selector-hack, etc.)
 * Included Prism.js for the syntax highlighting
 * Added icon for each browser
-
-
