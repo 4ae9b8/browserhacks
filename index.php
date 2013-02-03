@@ -102,7 +102,7 @@
     </article>
 -->
     
-    <article data-high="1">
+    <article data-high="1" data-type="description">
         <section data-cols="3" data-valign="center" class="top-content">
             <div>
                 <h2><span class="fontawesome-info-sign"></span>What's this?</h2>
