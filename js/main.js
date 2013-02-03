@@ -35,10 +35,30 @@
 
   /* A single browser */
   App.Views.Browser = Backbone.View.extend({
-    el : 'article[data-high="3"]',
-
     initialize : function() {
-      console.log(this.model.get('browser'));
+      this.$el = $('#' + this.model.get('browser'));
+
+      vent.bind("search", this.handleSearch, this);
+      vent.bind("searchCancelled", this.searchCancelled, this);
+    },
+
+    handleSearch : function(data) {
+      var names = this.model.get('names');
+
+      // Match
+      if (names[0].indexOf(data.value) == 0 || names[1].indexOf(data.value) == 0) {
+        this.$el.show();
+      } else {
+        this.$el.hide();
+      }
+    },
+
+    searchCancelled : function() {
+      this.$el.show();
+    },
+
+    toggleView : function() {
+
     }
   });
 
@@ -51,6 +71,33 @@
     }
   });
 
+  /* Search */
+  App.Views.Search = Backbone.View.extend({
+    el : 'input#search',
+
+    events : {
+      'keyup' : 'keyup'
+    },
+
+    keyup : function(e) {
+      var value = this.$el.val();
+
+      if (value != '') {
+        value = value.toLowerCase().trim();
+        vent.trigger("search", {'value' : value});
+
+        // Hide description
+        $('article[data-type="description"]').hide();
+      } else {
+        // Show all browser
+        vent.trigger("searchCancelled");
+
+        // Show description
+        $('article[data-type="description"]').show();
+      }
+    }
+  });
+
 
   /*--------------------------------------------------
    *
@@ -59,15 +106,18 @@
 
   // A collection of browsers
   var collection_browser = new App.Collections.Browser([
-    {'browser' : 'ch'}, 
-    {'browser' : 'fx'},
-    {'browser' : 'ie'},
-    {'browser' : 'sa'},
-    {'browser' : 'op'}
+    {'browser' : 'ch', 'names' : ['chrome', 'ch']}, 
+    {'browser' : 'fx', 'names' : ['firefox', 'mozilla firefox']},
+    {'browser' : 'ie', 'names' : ['internet explorer', 'ie']},
+    {'browser' : 'sa', 'names' : ['safari', 'apple safari']},
+    {'browser' : 'op', 'names' : ['opera', 'op']}
   ]);
 
-  // All 
+  // Holds all browser
   var view_master = new App.Views.Master({collection : collection_browser});
+
+  // Handles the search
+  var view_search = new App.Views.Search();
 
 
   // @TODO: [TimPietrusky] - Find a better place for this
