@@ -241,6 +241,20 @@ body[data-theme='browserhacks'] {
     }
   }
 
+  article[data-high="3"].active {
+    margin-top:0;
+  }
+
+  .filtered section[data-cols="2"] > div {
+    width:100%;
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+
   pre { 
     width:100%;
     display: inline-block;
@@ -252,7 +266,7 @@ body[data-theme='browserhacks'] {
     font: 1.85em 'Montserrat', sans-serif;
     padding-bottom: 0.4em;
     margin-bottom: 0.4em;
-    border-bottom: .35em solid rgba(165, 165, 165, .7);
+    border-bottom: .225em solid rgba(165, 165, 165, .7);
   }
 
   h3 {
@@ -338,6 +352,14 @@ body[data-theme='browserhacks'] {
 
   article[data-high="2"] {
 
+    div[data-type="search"] {
+      @include transition(.15s width ease-in-out);
+    }
+
+    div[data-type="search"].active {
+      width:100%;
+    }
+
     .form-wrapper {
       margin: 0;
 
@@ -353,7 +375,7 @@ body[data-theme='browserhacks'] {
         height: 1.7em;
         font: 2em/1.5 sans-serif;
         padding: 0 .5em;
-        box-shadow: inset 0 0 .115em 0 rgba(0, 0, 0, .35) ;
+        // box-shadow: inset 0 0 .115em 0 rgba(0, 0, 0, .35);
         outline:none;
         border: rgba(0,0,0, .75) solid .015em;
         border-right: rgba(0, 0, 0, .4) solid .25em;
