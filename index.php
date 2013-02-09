@@ -43,14 +43,14 @@
 
      <article data-high="2">
         <section data-cols="2">
-            <div>
+            <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search"><span class="fontawesome-search"></span> Find a hack</label>
                     <input type="text" name="search" id="search" placeholder="i.e. 'ie6'">
                 </p>
                 <p><span class="fontawesome-random"></span> Order by: <a href="#">browsers</a>, <a href="#">type</a>.</p>
             </div>
-            <div>
+            <div data-type="top-buttons">
                 <section data-cols="1" class="btn-group">
                     <div>
                         <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
