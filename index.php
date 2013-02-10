@@ -39,9 +39,15 @@
             </p>
         </section>
     </article>
-     <!-- Social -->
-
-     <article data-high="2">
+    
+<?php
+  // TLD for local/live testing
+  $tld = strrchr($_SERVER['SERVER_NAME'], ".");
+  $tld = substr($tld, 1);
+?>    
+    
+    <!-- Social -->
+    <article data-high="2">
         <section data-cols="2">
             <div data-type="search">
                 <p class="form-wrapper">
@@ -62,14 +68,14 @@
                         </a>
                     </div>
                     <div>
-                        <a href="http://test.<?php echo $_SERVER['SERVER_NAME']; ?>" target="_blank">
+                        <a href="http://test.browserhacks.<?php echo $tld; ?>" target="_blank">
                             <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
                         </a>
                     </div>
                 </section>
             </div>
         </section>
-     </article>
+    </article>
     
     <article data-high="1" data-type="description">
         <section data-cols="3" data-valign="center" class="top-content">
@@ -112,7 +118,7 @@
                 </a>
             </div>
             <div>
-                <a href="http://test.<?php echo $_SERVER['SERVER_NAME']; ?>" target="_blank">
+                <a href="http://test.browserhacks.<?php echo $tld; ?>" target="_blank">
                     <button data-type="1"><span class="fontawesome-road"></span> Test page</button>
                 </a>
             </div>
