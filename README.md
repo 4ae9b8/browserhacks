@@ -18,7 +18,7 @@ Changelog
 
 ### 10/02/13
 * Added search
-* Implemented #3, #11 & #12
+* Implemented #3, #11, #12 & #16
 * Minor CSS improvements
 
 ### 01/02/13
