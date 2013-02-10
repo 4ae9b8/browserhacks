@@ -202,6 +202,8 @@
   App.Views.Search = Backbone.View.extend({
     el : 'input#search',
 
+    timeoutId : null,
+
     events : {
       'keyup' : 'keyup',
       'focus' : 'focus',
@@ -268,6 +270,7 @@
     focus : function(e) {
       // Hide buttons
       $('div[data-type="top-buttons"]').hide();
+      clearTimeout(this.timeoutId);
 
       // Search active
       $('div[data-type="search"]').addClass('active');
@@ -280,11 +283,8 @@
       // Search inactive
       $('div[data-type="search"]').removeClass('active');
 
-      /**
-       * @TODO [TimPietrusky] - Handle this otherwise. Why? When you hit the label the buttons are shown
-       */
       // Show buttons
-      setTimeout(function() {
+      this.timeoutId = setTimeout(function() {
         $('div[data-type="top-buttons"]').show();
       }, 175);
     }
