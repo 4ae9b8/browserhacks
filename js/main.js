@@ -98,15 +98,19 @@
      * Show or hide the browser after the search was triggered
      */
     handleSearch : function(data) {
-      var names = this.model.get('names');
+      var names = this.model.get('names'),
+          matched = false;
       
-      /*
-       * @TODO [TimPietrusky] - Add each
-       */
-       // Match
-      if (names[0].indexOf(data.browser) == 0 || names[1].indexOf(data.browser) == 0) {
-        this.show(data);
-      } else {
+      // Match the browser
+      _.each(names, function(browser) {
+        if (browser.indexOf(data.browser) == 0 && !matched) {
+          this.show(data);
+          matched = true;
+        }
+      }, this);
+
+      // Could not match browser
+      if (!matched) {
         this.hide(data);
       }
     },
@@ -295,7 +299,7 @@
   // A collection of browsers
   var collection_browser = new App.Collections.Browser([
     {'browser' : 'ch', 'names' : ['chrome', 'ch']}, 
-    {'browser' : 'fx', 'names' : ['firefox', 'mozilla firefox']},
+    {'browser' : 'fx', 'names' : ['firefox', 'mozilla firefox', 'ff']},
     {'browser' : 'ie', 'names' : ['internet explorer', 'ie']},
     {'browser' : 'sa', 'names' : ['safari', 'apple safari']},
     {'browser' : 'op', 'names' : ['opera', 'op']}
