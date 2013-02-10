@@ -62,7 +62,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="test.html" target="_blank">
+                        <a href="http://test.<?php echo $_SERVER['SERVER_NAME']; ?>" target="_blank">
                             <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
                         </a>
                     </div>
@@ -112,7 +112,7 @@
                 </a>
             </div>
             <div>
-                <a href="test.html" target="_blank">
+                <a href="http://test.<?php echo $_SERVER['SERVER_NAME']; ?>" target="_blank">
                     <button data-type="1"><span class="fontawesome-road"></span> Test page</button>
                 </a>
             </div>

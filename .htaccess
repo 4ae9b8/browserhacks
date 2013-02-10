@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{HTTP_HOST} ^test\.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule (.*) /test.html [L]
+
+</IfModule>
+
+
+<IfModule mod_deflate.c>
+
+  # Compression
+  AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/javascript
+
+</IfModule>
+
+
+<IfModule mod_expires.c>
+
+    ## Expire after some time
+    <FilesMatch "\.(jpg|jpeg|gif|png|css|woff|js|eot|svg|ttf)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 1 month"
+    </FilesMatch>
+
+</IfModule>
