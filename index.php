@@ -48,7 +48,6 @@
                     <label for="search"><span class="fontawesome-search"></span> Find a hack</label>
                     <input type="text" name="search" id="search" placeholder="i.e. 'ie6'">
                 </p>
-                <p><span class="fontawesome-random"></span> Order by: <a href="#">browsers</a>, <a href="#">type</a>.</p>
             </div>
             <div data-type="top-buttons">
                 <section data-cols="1" class="btn-group">
