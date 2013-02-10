@@ -17,9 +17,12 @@ Changelog
 ------------------------------
 
 ### 10/02/13
-* Added search
-* Implemented #3, #11, #12 & #16
+* Improved search
+* Implemented #3, #11, #12, #14 & #16
 * Minor CSS improvements
+
+### 09/02/13
+* Added search
 
 ### 01/02/13
 * Added basic Backbone stuff
