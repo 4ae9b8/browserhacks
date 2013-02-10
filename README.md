@@ -16,6 +16,11 @@ https://github.com/4ae9b8/browserhacks/issues/6
 Changelog
 ------------------------------
 
+### 10/02/13
+* Added search
+* Implemented #3 & #11
+* Minor CSS improvements
+
 ### 01/02/13
 * Added basic Backbone stuff
 * Improved the responsiveness
