@@ -24,6 +24,9 @@
    * Models 
    */
   App.Models.Browser = Backbone.Model.extend({
+    defaults : {
+      'hackTypes' : []
+    }
   });
 
 
@@ -57,12 +60,34 @@
    * A single browser 
    */
   App.Views.Browser = Backbone.View.extend({
-    childs : null,
+    hackChilds : null,
 
     initialize : function() {
+      // The browser 
       this.$el = $('#' + this.model.get('browser'));
-      this.childs = this.$el.find('pre');
 
+      /*
+       * @TODO [TimPietrusky] - This code is SHIT. Please prettify it.
+       */
+      var type = '',
+          hackParents,
+          hackTypes = [];
+
+      // Type of hacks (e.g. selector, javascript)
+      hackParents = this.$el.find('[data-type*="-parent"]');
+
+      // Create an array of hack types
+      _.each(hackParents, function(item, index) {
+        hackTypes.push($(item).attr('data-type').split('-')[0]);
+      }, this);
+
+      // Save the hack types into the model
+      this.model.set('hackTypes', hackTypes);
+
+      // The specific hacks
+      this.hackChilds = this.$el.find('pre');
+
+      // Listen to events
       vent.bind("search", this.handleSearch, this);
       vent.bind("searchCancelled", this.searchCancelled, this);
     },
@@ -76,7 +101,6 @@
       /*
        * @TODO [TimPietrusky] - Add each
        */
-
        // Match
       if (names[0].indexOf(data.browser) == 0 || names[1].indexOf(data.browser) == 0) {
         this.show(data);
@@ -95,7 +119,7 @@
       // Filter version
       if (data.version != null) {
         // Hide all childs
-        this.childs.hide();
+        this.hackChilds.hide();
 
         // Show only matched childs
         this.$el.find('pre[data-version*="'+data.version+'"]').show();
@@ -103,10 +127,22 @@
         // Change the style of filtered elements
         this.$el.addClass('filtered');
 
+        // Hide empty hack types
+        _.each(this.model.get('hackTypes'), function(type) {
+          // Get the amount of visible hacks
+          count = this.$el.find('[data-type="'+type+'-childs"] pre:visible').length;
+          
+          // Hide title if no hacks are visible
+          if (count == 0) {
+            this.$el.find('[data-type="'+type+'-parent"] h3').hide();
+          }
+        }, this);
+
       // Show all versions
       } else {
-        this.childs.show();
+        this.hackChilds.show();
         this.$el.removeClass('filtered');
+        this.$el.find('[data-type*="-parent"] h3').show();
       }
     },
 
@@ -125,8 +161,16 @@
       this.$el.show();
       this.$el.removeClass('filtered');
       this.$el.removeClass('active');
-      this.childs.show();
+      this.hackChilds.show();
+      this.$el.find('[data-type*="-parent"] h3').show();
     }
+  });
+
+  /* 
+   *  
+   */
+  App.Views.HackType = Backbone.View.extend({
+
   });
 
   /* 

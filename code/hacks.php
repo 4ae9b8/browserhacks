@@ -16,7 +16,7 @@
       'title' => 'JavaScript Hacks',
       'icon' => 'fontawesome-fire'
     ),
-    'property-value' => array (
+    'propertyValue' => array (
       'title' => 'Property/Value Hacks',
       'icon' => 'fontawesome-paper-clip'
     ),
@@ -190,7 +190,7 @@
             'code' => ":root *> .selector {} \nbody:last-child .selector {} \nbody:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}"
           )
         ),
-        'property-value' => array(
+        'propertyValue' => array(
           array (
             'version' => "IE 6 - any combination of these characters: \n_ - £ ¬ ¦",
             'data-version' => '6',
@@ -454,11 +454,11 @@
       foreach($browser['hacks'] as $type => $hack): 
     ?>
     
-      <section data-cols="1">
+      <section data-cols="1" data-type="<?php echo $type; ?>-parent">
         <h3><span class="<?php echo $hack_types[$type]['icon']; ?>"></span><?php echo $hack_types[$type]['title']; ?></h3>
       </section>
   
-      <section data-cols="2">
+      <section data-cols="2" data-type="<?php echo $type; ?>-childs">
         <?php 
           // Single hack
           for($i = 0; $i < count($hack); $i++): 
