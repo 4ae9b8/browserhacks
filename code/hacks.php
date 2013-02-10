@@ -444,7 +444,7 @@
   foreach($hacks as $name => $browser): 
 ?>
 
-  <article data-high="3" data-text="" class="<?php echo $name; ?>" id="<?php echo $name ?>">
+  <article data-high="3" class="<?php echo $name; ?>" id="<?php echo $name ?>">
     <section data-cols="1">
         <h2 class="th"><?php echo $browser['name']; ?></h2>
     </section>

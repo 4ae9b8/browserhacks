@@ -187,10 +187,6 @@ body[data-theme='browserhacks'] {
   $logo_left: -.15em;
 
   .ie {
-    /*box-shadow: 
-      0 -.25em 0 .25em $ie, 
-      0 .25em 0 .25em $ie
-    ;*/
     .th { 
       border-color: $ie;
       background-position: $logo_left .25em;
@@ -198,10 +194,6 @@ body[data-theme='browserhacks'] {
   }
 
   .ch { 
-    /*box-shadow: 
-      0 -.25em 0 .25em $ch, 
-      0 .25em 0 .25em $ch
-    ;*/
     .th { 
       border-color: $ch;
       background-position: $logo_left -4.25em;
@@ -209,10 +201,6 @@ body[data-theme='browserhacks'] {
   }
 
   .sa {
-    /*box-shadow: 
-      0 -.25em 0 .25em $sa, 
-      0 .25em 0 .25em $sa
-    ;*/
     .th { 
       border-color: $sa;
       background-position: $logo_left -6.65em;
@@ -220,10 +208,6 @@ body[data-theme='browserhacks'] {
   }
 
   .op {
-    /*box-shadow: 
-      0 -.25em 0 .25em $op, 
-      0 .25em 0 .25em $op
-    ;*/
     .th { 
       border-color: $op;
       background-position: $logo_left -8.75em;
@@ -231,10 +215,6 @@ body[data-theme='browserhacks'] {
   }
 
   .fx {
-    /*box-shadow: 
-      0 -.25em 0 .25em $fx, 
-      0 .25em 0 .25em $fx
-    ;*/
     .th { 
       border-color: $fx;
       background-position: $logo_left -2em;
@@ -354,15 +334,21 @@ body[data-theme='browserhacks'] {
     margin-bottom:2em;
   }
 
+  article[data-high="1"] {
+    margin-bottom:0;
+  }
+
   article[data-high="2"] {
+    min-height:12em;
+    margin-bottom:0;
 
     div[data-type="search"] {
       @include transition(.15s width ease-in-out);
-    }
 
-    div[data-type="search"].active {
-      width:100%;
-      padding-right:0;
+      &.active {
+        width:100%;
+        padding-right:0;
+      }
     }
 
     .form-wrapper {
@@ -404,10 +390,6 @@ body[data-theme='browserhacks'] {
   article[data-high="3"] {
     background: rgba(255, 255, 255, .3);
     padding-bottom:.85em;
-  }
-
-  article[data-text] {
-    margin-top:2em;
   }
 
   article[data-text]:after {
@@ -551,6 +533,16 @@ body[data-theme='browserhacks'] {
       > div:nth-of-type(2),
       > div:nth-of-type(3) {
         padding: 0 0 .5em 0;
+      }
+    }
+
+    article[data-high="2"] {
+      div[data-type="search"] {
+        @include transition(0s width ease-in-out);
+
+        &.active {
+          width:auto;
+        }
       }
     }
   }
