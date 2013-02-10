@@ -91,6 +91,7 @@
       // Listen to events
       vent.bind("search", this.handleSearch, this);
       vent.bind("searchCancelled", this.searchCancelled, this);
+      vent.bind("searchNumber", this.searchNumber, this);
     },
 
     /*
@@ -180,6 +181,13 @@
       this.$el.removeClass('active');
       this.hackChilds.show();
       this.$el.find('[data-type*="-parent"] h3').show();
+    },
+
+    /*
+     * Hide browser when just a number was entered into the search. 
+     */
+    searchNumber : function(data) {
+      this.hide();
     }
   });
 
@@ -217,17 +225,25 @@
         // Split Browser from version
         this.split = this.value.split(this.regex_split);
 
-        // Get the browser
-        this.browser = this.split[1].trim();
+        // Searched for a browser not a number
+        if (this.split.length > 1) {
+          // Get the browser
+          this.browser = this.split[1].trim();
 
-        // Get the version
-        if (this.split[2] != "") {
-          this.version = this.split[2].trim();
+          // Get the version
+          if (this.split[2] != "") {
+            this.version = this.split[2].trim();
+          } else {
+            this.version = null;
+          }
+
+          vent.trigger("search", {'browser' : this.browser, 'version' : this.version});
+
+        // Searched for a number
         } else {
-          this.version = null;
+          this.version = this.split;
+          vent.trigger("searchNumber", {'version' : this.version});
         }
-
-        vent.trigger("search", {'browser' : this.browser, 'version' : this.version});
 
         // Hide description
         $('article[data-type="description"]').hide();
