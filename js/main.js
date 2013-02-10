@@ -56,6 +56,7 @@
     }
   });
 
+
   /* 
    * A single browser 
    */
@@ -121,8 +122,24 @@
         // Hide all childs
         this.hackChilds.hide();
 
-        // Show only matched childs
-        this.$el.find('pre[data-version*="'+data.version+'"]').show();
+        // Find only matched childs
+        var matched = this.$el.find('pre[data-version*="'+data.version+'"]');
+
+        // Filter the matched childs
+        _.each(matched, function(item) {
+          _item = $(item);
+
+          // Get all versions
+          versions = _item.attr('data-version').split('|');
+          
+          _.each(versions, function(version) {
+
+            // Show version which starts with value
+            if (version.indexOf(data.version) == 0) {
+              _item.show();
+            }
+          }, this);
+        }, this);
 
         // Change the style of filtered elements
         this.$el.addClass('filtered');
@@ -166,12 +183,6 @@
     }
   });
 
-  /* 
-   *  
-   */
-  App.Views.HackType = Backbone.View.extend({
-
-  });
 
   /* 
    * Search 
@@ -192,7 +203,7 @@
     version : null,
 
     initialize : function() {
-      this.regex_split = new RegExp("(\\D+)", "gm");
+      this.regex_split = new RegExp("([a-z\\s]+)", "gm");
     },
 
     /*
