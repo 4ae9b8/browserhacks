@@ -9,10 +9,18 @@
         "font-awesome",
         "google-fonts";
 
-/*
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-@import url(http://fonts.googleapis.com/css?family=PT+Mono|Montserrat);
-*/
+//MQ
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (max-width: 79em) { @content; }
+  }
+  @if $point == mama-bear {
+    @media (max-width: 66em) { @content; }
+  }
+  @if $point == baby-bear {
+    @media (max-width: 44em) { @content; } 
+  }
+}
 
 //Variables
 $ie: #0a90dd;
@@ -47,6 +55,10 @@ body[data-theme='browserhacks'] {
   background: url(/img/linedpaper.png) #eee;
   position: relative;
 
+  @include breakpoint(baby-bear){
+    font-size:.925em;
+  }
+
   [class*="fontawesome-"]:before {
     font-family:'fontawesome', sans-serif;
   }
@@ -62,6 +74,10 @@ body[data-theme='browserhacks'] {
     z-index: 2;
     font-size:1em;
     width:100%;
+
+    @include breakpoint(mama-bear) {
+      font-size:.75em;
+    }
 
     li {
       width: 20%;
@@ -86,6 +102,11 @@ body[data-theme='browserhacks'] {
       }
 
       &:visited { color: #000; }
+
+
+      @include breakpoint(mama-bear) {
+        height:2em;
+      }
     }
 
     .ch a { 
@@ -145,6 +166,10 @@ body[data-theme='browserhacks'] {
 
     a {
       color: #333 !important;
+    }
+
+    @include breakpoint(mama-bear) {
+      font-size:3em;
     }
   }
 
@@ -243,6 +268,11 @@ body[data-theme='browserhacks'] {
 
     .token.comment {
       color:#666;
+    }
+
+    @include breakpoint(baby-bear) {
+        width: 100%; 
+        margin: 1% 0; 
     }
   }
 
@@ -348,6 +378,15 @@ body[data-theme='browserhacks'] {
       &.active {
         width:100%;
         padding-right:0;
+
+        @include breakpoint(baby-bear) {
+            width: auto;
+        }
+      }
+
+      @include breakpoint(baby-bear) {
+        @include transition(0s width ease-in-out);
+        margin-bottom: 1em;
       }
     }
 
@@ -408,24 +447,58 @@ body[data-theme='browserhacks'] {
   section[data-cols="2"] {
     > div:nth-child(odd) {
       padding: 0 .5em 0 0;
+
+      @include breakpoint(baby-bear) {
+        padding: 0;
+      }
     }
     > div:nth-child(even) {
       padding: 0 0 0 .5em;
+
+      @include breakpoint(baby-bear) {
+        padding: 0;
+      }
     }
   }
 
   section[data-cols="3"] {
     > div:nth-of-type(1) {
       padding-right:.5em;
+
+      @include breakpoint(mama-bear) {
+        padding-right:.5em;
+      }
+
+      @include breakpoint(baby-bear) {
+        padding: 0 0 .5em 0;
+      }
     }
 
     > div:nth-of-type(2) {
       padding-left:.5em;
       padding-right:.5em;
+
+      @include breakpoint(mama-bear) {
+        padding-left:.5em;
+        padding-right:0;
+      }
+
+      @include breakpoint(baby-bear) {
+        padding: 0 0 .5em 0;
+      }
     }
 
     > div:nth-of-type(3) {
       padding-left:.5em;
+
+      @include breakpoint(mama-bear) {
+        padding-left:0;
+        padding-top: 1em;
+      }
+
+      @include breakpoint(baby-bear) {
+        padding: 0 0 .5em 0;
+      }
     }
   }
 
@@ -474,18 +547,6 @@ body[data-theme='browserhacks'] {
 @media screen and (max-width: 66em) {
   body[data-theme='browserhacks'] {
 
-    h1 {
-      font-size:3em;
-    }
-
-    .nav-browser {
-      font-size:.75em;
-
-      a {
-        height:2em;
-      }
-    }
-
     section:not('.btn-group') > div,
     section[data-cols="2"] > div:nth-child(even),
     section[data-cols="2"] > div:nth-child(odd),
@@ -494,56 +555,10 @@ body[data-theme='browserhacks'] {
     section[data-cols="3"] > div:nth-of-type(3) {
       padding: .25em;
     }
-
-    section[data-cols="3"] {
-      > div:nth-of-type(1) {
-        padding-right:.5em;
-      }
-
-      > div:nth-of-type(2) {
-        padding-left:.5em;
-        padding-right:0;
-      }
-
-      > div:nth-of-type(3) {
-        padding-left:0;
-        padding-top: 1em;
-      }
-    }
   }
 }
 
 @media screen and (max-width: 44em) {
   body[data-theme='browserhacks'] {
-    font-size:.925em;
-
-    pre { 
-      width: 100%; 
-      margin: 1% 0; 
-    }
-
-    section[data-cols="2"] {
-      > div {
-        padding: 0 !important;
-      }
-    }
-
-    section[data-cols="3"] {
-      > div:nth-of-type(1),
-      > div:nth-of-type(2),
-      > div:nth-of-type(3) {
-        padding: 0 0 .5em 0;
-      }
-    }
-
-    article[data-high="2"] {
-      div[data-type="search"] {
-        @include transition(0s width ease-in-out);
-
-        &.active {
-          width:auto;
-        }
-      }
-    }
   }
 }
