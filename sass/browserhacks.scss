@@ -617,7 +617,12 @@ body[data-theme='browserhacks'] {
 //rotateWords(timePerWord, numberOfWord)
 @include rotateWords(.5, 28);
 
-.cssanimations .catch-phrase__anim span{
+.catch-phrase__anim span {
+  display: none;
+}
+
+.cssanimations .catch-phrase__anim span {
   position:absolute;
   opacity:0;
+  display: block;
 }
