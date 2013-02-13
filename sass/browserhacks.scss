@@ -562,3 +562,73 @@ body[data-theme='browserhacks'] {
   body[data-theme='browserhacks'] {
   }
 }
+
+/* ANIMATION */
+
+@mixin rotateWords($time, $words) {
+  $hidePoint : percentage(1/$words);
+  $hidePointP : percentage(1/($words - 0.01));
+  
+  .catch-phrase__anim span{
+    -webkit-animation: show $words * $time + s linear infinite;
+    -moz-animation: show $words * $time + s linear infinite;
+    -o-animation: show $words * $time + s linear infinite;
+    animation: show $words * $time + s linear infinite;
+  }
+  
+  @for $i from 1 through $words {
+  .catch-phrase__anim span:nth-child(#{$i}) {
+      -webkit-animation-delay: ($i - 1) * $time + s;
+      -moz-animation: show $words * $time + s linear infinite;
+      -o-animation: show $words * $time + s linear infinite;
+      animation: show $words * $time + s linear infinite;
+    }
+  }
+  
+  @-webkit-keyframes show {
+    0%            { opacity:1; }
+    #{$hidePoint} { opacity:1; }
+    #{$hidePointP}{ opacity:0; }
+    100%          { opacity:0; }
+  }
+
+  @-moz-keyframes show {
+    0%            { opacity:1; }
+    #{$hidePoint} { opacity:1; }
+    #{$hidePointP}{ opacity:0; }
+    100%          { opacity:0; }
+  }
+
+  @-o-keyframes show {
+    0%            { opacity:1; }
+    #{$hidePoint} { opacity:1; }
+    #{$hidePointP}{ opacity:0; }
+    100%          { opacity:0; }
+  }
+
+  @keyframes show {
+    0%            { opacity:1; }
+    #{$hidePoint} { opacity:1; }
+    #{$hidePointP}{ opacity:0; }
+    100%          { opacity:0; }
+  }
+}
+
+//rotateWords(timePerWord, numberOfWord)
+@include rotateWords(.5, 28);
+
+
+.cssanimations .catch-phrase__anim {
+  position:relative;
+  display:inline-block;
+  height:1em;
+  width:.6em;
+  color: #0a90dd;
+}
+
+.cssanimations .catch-phrase__anim span{
+  position:absolute;
+  opacity:0;
+  top:-3px;left:0;
+  display: block;
+}

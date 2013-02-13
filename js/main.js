@@ -312,12 +312,5 @@
   var view_search = new App.Views.Search();
 
 
-  // @TODO: [TimPietrusky] - Find a better place for this
-  var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
 
-  setInterval(function() {
-    var i = Math.round((Math.random()) * tips.length);
-    if (i == tips.length) --i;
-    $(".catch-phrase__anim").html(tips[i]);
-  }, 400);
 })();

@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/modernizr.custom.38859.js"></script>
+
 </head>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
@@ -35,7 +37,38 @@
             <h1>Browserhacks</h1>
                 
             <p class="catch-phrase">
-                #browser { <span class="catch-phrase__anim"></span><span class="catch-phrase__space">hack</span>: now; }
+                #browser { 
+                <span class="catch-phrase__anim">
+                    <span>_</span>
+                    <span>-</span>
+                    <span>£</span>
+                    <span>¬</span>
+                    <span>¦</span>
+                    <span>!</span>
+                    <span>$</span>
+                    <span>&amp;</span>
+                    <span>*</span>
+                    <span>(</span>
+                    <span>)</span>
+                    <span>=</span>
+                    <span>%</span>
+                    <span>+</span>
+                    <span>@</span>
+                    <span>,</span>
+                    <span>.</span>
+                    <span>/</span>
+                    <span>`</span>
+                    <span>[</span>
+                    <span>]</span>
+                    <span>#</span>
+                    <span>~</span>
+                    <span>?</span>
+                    <span>:</span>
+                    <span>&lt;</span>
+                    <span>&gt;</span>
+                    <span>|</span>
+                </span>
+                <span class="catch-phrase__space">hack</span>: now; }
             </p>
         </section>
     </article>
@@ -147,7 +180,18 @@
 
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    if (!Modernizr.cssanimations){
+        // @TODO: [TimPietrusky] - Find a better place for this
+        var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
 
+      setInterval(function() {
+        var i = Math.round((Math.random()) * tips.length);
+        if (i == tips.length) --i;
+        $(".catch-phrase__anim").html(tips[i]);
+      }, 400);
+    }
+    </script>
     <!-- 
     <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     -->
