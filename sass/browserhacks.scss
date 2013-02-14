@@ -3,11 +3,20 @@
 @import "compass/css3";
 @import "compass/css3/user-interface";
 
+//Variables
+$ie: #0a90dd;
+$fx: #f77918; // #e26c0c
+$ch: gold; //#3cbc44;
+$sa: #999; //#46bfe6;
+$op: #f63b3c;
+$us: #4ae9b8; // Our awesome colour :D
+
 //Imports
 @import "crystallo",
         "prism",
         "font-awesome",
-        "google-fonts";
+        "google-fonts",
+        "animation";
 
 //MQ
 @mixin breakpoint($point) {
@@ -21,14 +30,6 @@
     @media (max-width: 44em) { @content; } 
   }
 }
-
-//Variables
-$ie: #0a90dd;
-$fx: #f77918; // #e26c0c
-$ch: gold; //#3cbc44;
-$sa: #999; //#46bfe6;
-$op: #f63b3c;
-$us: #4ae9b8; // Our awesome colour :D
 
 .clearfix:after {
   content: "";
@@ -171,26 +172,6 @@ body[data-theme='browserhacks'] {
     @include breakpoint(mama-bear) {
       font-size:3em;
     }
-  }
-
-  .catch-phrase {
-    text-align: center;
-    font-size: 1.3em;
-    color: $fx;
-    text-shadow: 0 1px rgba(0,0,0,0.3);
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 0;
-    position: relative;
-  }
-
-  .catch-phrase__anim {
-    color: $ie;
-    position: absolute;
-  }
-
-  .catch-phrase__space {
-    padding-left: 0.85em;
-    padding-left: 1ch;
   }
 
   .top-content {
@@ -561,68 +542,4 @@ body[data-theme='browserhacks'] {
 @media screen and (max-width: 44em) {
   body[data-theme='browserhacks'] {
   }
-}
-
-/* ANIMATION */
-
-@mixin rotateWords($time, $words) {
-  $hidePoint : percentage(1/$words);
-  $hidePointP : percentage(1/($words - 0.01));
-  
-  .catch-phrase__anim span{
-    -webkit-animation: show $words * $time + s linear infinite;
-    -moz-animation: show $words * $time + s linear infinite;
-    -o-animation: show $words * $time + s linear infinite;
-    animation: show $words * $time + s linear infinite;
-  }
-  
-  @for $i from 1 through $words {
-  .catch-phrase__anim span:nth-child(#{$i}) {
-      -webkit-animation-delay: ($i - 1) * $time + s;
-      -moz-animation: show $words * $time + s linear infinite;
-      -o-animation: show $words * $time + s linear infinite;
-      animation: show $words * $time + s linear infinite;
-    }
-  }
-  
-  @-webkit-keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-
-  @-moz-keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-
-  @-o-keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-
-  @keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-}
-
-//rotateWords(timePerWord, numberOfWord)
-@include rotateWords(.5, 28);
-
-.catch-phrase__anim span {
-  display: none;
-}
-
-.cssanimations .catch-phrase__anim span {
-  position:absolute;
-  opacity:0;
-  display: block;
 }
