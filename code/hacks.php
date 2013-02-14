@@ -117,22 +117,28 @@
         ),
         'javascript' => array(
           array (
-            'version' => 'Firefox 2',
-            'data-version' => '2',
+            'version' => 'Firefox',
+            'data-version' => '',
             'language' => 'language-javascript',
-            'code' => "FF2=(function x(){})[-6]=='x'"
+            'code' => "var isFF = !!navigator.userAgent.match(/firefox/i);"
           ),
           array (
-            'version' => 'Firefox 3',
-            'data-version' => '3',
+            'version' => 'Firefox 2 - 13',
+            'data-version' => '2|3|4|5|6|7|8|9|10|11|12|13',
             'language' => 'language-javascript',
-            'code' => "FF3=(function x(){})[-5]=='x'"
+            'code' => "var isFF = Boolean(window.globalStorage);"
           ),
           array (
             'version' => 'Firefox 2/3',
             'data-version' => '2|3',
             'language' => 'language-javascript',
-            'code' => "FF=/a/[-1]=='a'"
+            'code' => "var isFF = /a/[-1]=='a';"
+          ),
+          array (
+            'version' => 'Firefox 3',
+            'data-version' => '3',
+            'language' => 'language-javascript',
+            'code' => "var isFF = (function x(){})[-5]=='x';"
           )
         ),
         'misc' => array(

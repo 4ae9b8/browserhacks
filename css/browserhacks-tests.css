@@ -1,11 +1,14 @@
-pre span, .example-span {
-	padding: 5px;
-	margin: 5px;
+pre span, 
+.example-span,
+.js {
+	padding: .2em;
+	margin: .15em 0;
 	display: inline-block;
 	border-radius: 3px;
 }
 
-.example-span {
+.example-span,
+.js {
 	background: lightgreen;
 	margin: 0;
 }

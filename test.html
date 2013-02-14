@@ -63,29 +63,29 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* IE 6 and below */
-    <span class="test1">* html .selector  { background: lightgreen; } </span>
-    <span class="test2">.fix.selector { background: lightgreen; } </span>/* .fix can be any unused class */</code></pre>
+<span class="test1">* html .selector  { background: lightgreen; } </span>
+<span class="test2">.fix.selector { background: lightgreen; } </span>/* .fix can be any unused class */</code></pre>
 
     <pre class="language-css"><code>/* IE 7 and below */
-    <span class="test3">.selector, { background: lightgreen; }</span> 
-    <span class="test4">//.selector { background: lightgreen; }</span> /* Doesn't seem to work */</code></pre>
+<span class="test3">.selector, { background: lightgreen; }</span> 
+<span class="test4">//.selector { background: lightgreen; }</span> /* Doesn't seem to work */</code></pre>
 
     <pre class="language-css"><code>/* IE 7 */
-    <span class="test5">*:first-child + html .selector { background: lightgreen; }</span> 
-    <span class="test6">.selector, x:- { background: lightgreen; } </span>
-    <span class="test7">* + html .selector { background: lightgreen; }</span></code></pre>
+<span class="test5">*:first-child + html .selector { background: lightgreen; }</span> 
+<span class="test6">.selector, x:- { background: lightgreen; } </span>
+<span class="test7">* + html .selector { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6  */
-    <span class="test8">html > body .selector { background: lightgreen; }</span></code></pre>
+<span class="test8">html > body .selector { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7 */
-    <span class="test9">html > /**/ body .selector { background: lightgreen; }</span></code></pre>
+<span class="test9">html > /**/ body .selector { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7/8 */
-    <span class="test10">:root * > .selector { background: lightgreen; }</span>
-    <span class="test11">body:last-child .selector { background: lightgreen; }</span>
-    <span class="test45">body:nth-of-type(1) .selector { background: lightgreen; }</span>
-    <span class="test46">body:first-of-type .selector { background: lightgreen; }</span></code></pre>
+<span class="test10">:root * > .selector { background: lightgreen; }</span>
+<span class="test11">body:last-child .selector { background: lightgreen; }</span>
+<span class="test45">body:nth-of-type(1) .selector { background: lightgreen; }</span>
+<span class="test46">body:first-of-type .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -94,55 +94,55 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* IE 6 any combination of these characters: _ - £ ¬ ¦ */
-    <span class="test12" style="_background: lightgreen;">.selector { _background: lightgreen; }</span>
-    <span class="test13" style="-background: lightgreen;">.selector { -background: lightgreen; }</span>
-    <span class="test14" style="£background: lightgreen;">.selector { £background: lightgreen; }</span>
-    <span class="test15" style="¬background: lightgreen;">.selector { ¬background: lightgreen; }</span>
-    <span class="test16" style="¦background: lightgreen;">.selector { ¦background: lightgreen; }</span></code></pre>
+<span class="test12" style="_background: lightgreen;">.selector { _background: lightgreen; }</span>
+<span class="test13" style="-background: lightgreen;">.selector { -background: lightgreen; }</span>
+<span class="test14" style="£background: lightgreen;">.selector { £background: lightgreen; }</span>
+<span class="test15" style="¬background: lightgreen;">.selector { ¬background: lightgreen; }</span>
+<span class="test16" style="¦background: lightgreen;">.selector { ¦background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 6/7 any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : &lt; > | */
-    <span class="test17" style="!background: lightgreen;">.selector { !background: lightgreen; }</span>
-    <span class="test18" style="$background: lightgreen;">.selector { $background: lightgreen; }</span>
-    <span class="test19" style="&background: lightgreen;">.selector { &background: lightgreen; }</span>
-    <span class="test20" style="*background: lightgreen;">.selector { *background: lightgreen; }</span>
-    <span class="test21" style="(background: lightgreen;">.selector { (background: lightgreen; }</span>
-    <span class="test22" style=")background: lightgreen;">.selector { )background: lightgreen; }</span>
-    <span class="test23" style="=background: lightgreen;">.selector { =background: lightgreen; }</span>
-    <span class="test24" style="%background: lightgreen;">.selector { %background: lightgreen; }</span>
-    <span class="test25" style="+background: lightgreen;">.selector { +background: lightgreen; }</span>
-    <span class="test26" style="@background: lightgreen;">.selector { @background: lightgreen; }</span>
-    <span class="test27" style=",background: lightgreen;">.selector { ,background: lightgreen; }</span>
-    <span class="test28" style=".background: lightgreen;">.selector { .background: lightgreen; }</span>
-    <span class="test29" style="/background: lightgreen;">.selector { /background: lightgreen; }</span>
-    <span class="test30" style="`background: lightgreen;">.selector { `background: lightgreen; }</span>
-    <span class="test31" style="[background: lightgreen;">.selector { [background: lightgreen; }</span>
-    <span class="test32" style="]background: lightgreen;">.selector { ]background: lightgreen; }</span>
-    <span class="test33" style="#background: lightgreen;">.selector { #background: lightgreen; }</span>
-    <span class="test34" style="~background: lightgreen;">.selector { ~background: lightgreen; }</span>
-    <span class="test35" style="?background: lightgreen;">.selector { ?background: lightgreen; }</span>
-    <span class="test36" style=":background: lightgreen;">.selector { :background: lightgreen; }</span>
-    <span class="test37" style="&lt;background: lightgreen;">.selector { &lt;background: lightgreen; }</span>
-    <span class="test38" style="&gt;background: lightgreen;">.selector { &gt;background: lightgreen; }</span>
-    <span class="test39" style="|background: lightgreen;">.selector { |background: lightgreen; }</span></code></pre>
+<span class="test17" style="!background: lightgreen;">.selector { !background: lightgreen; }</span>
+<span class="test18" style="$background: lightgreen;">.selector { $background: lightgreen; }</span>
+<span class="test19" style="&background: lightgreen;">.selector { &background: lightgreen; }</span>
+<span class="test20" style="*background: lightgreen;">.selector { *background: lightgreen; }</span>
+<span class="test21" style="(background: lightgreen;">.selector { (background: lightgreen; }</span>
+<span class="test22" style=")background: lightgreen;">.selector { )background: lightgreen; }</span>
+<span class="test23" style="=background: lightgreen;">.selector { =background: lightgreen; }</span>
+<span class="test24" style="%background: lightgreen;">.selector { %background: lightgreen; }</span>
+<span class="test25" style="+background: lightgreen;">.selector { +background: lightgreen; }</span>
+<span class="test26" style="@background: lightgreen;">.selector { @background: lightgreen; }</span>
+<span class="test27" style=",background: lightgreen;">.selector { ,background: lightgreen; }</span>
+<span class="test28" style=".background: lightgreen;">.selector { .background: lightgreen; }</span>
+<span class="test29" style="/background: lightgreen;">.selector { /background: lightgreen; }</span>
+<span class="test30" style="`background: lightgreen;">.selector { `background: lightgreen; }</span>
+<span class="test31" style="[background: lightgreen;">.selector { [background: lightgreen; }</span>
+<span class="test32" style="]background: lightgreen;">.selector { ]background: lightgreen; }</span>
+<span class="test33" style="#background: lightgreen;">.selector { #background: lightgreen; }</span>
+<span class="test34" style="~background: lightgreen;">.selector { ~background: lightgreen; }</span>
+<span class="test35" style="?background: lightgreen;">.selector { ?background: lightgreen; }</span>
+<span class="test36" style=":background: lightgreen;">.selector { :background: lightgreen; }</span>
+<span class="test37" style="&lt;background: lightgreen;">.selector { &lt;background: lightgreen; }</span>
+<span class="test38" style="&gt;background: lightgreen;">.selector { &gt;background: lightgreen; }</span>
+<span class="test39" style="|background: lightgreen;">.selector { |background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 6/7 - acts as an !important */
-    <span class="test40">.selector { background: lightgreen !ie; } </span>/* string after ! can be anything */</code></pre>
+<span class="test40">.selector { background: lightgreen !ie; } </span>/* string after ! can be anything */</code></pre>
 
     <pre class="language-css"><code>/* IE 7/8/9/10 */
-    <span class="test42">.selector { background/*\**/: lightgreen\9; }</span></code></pre>
+<span class="test42">.selector { background/*\**/: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 8/9 */
-    <span class="test43">.selector { background: lightgreen\0/; } </span>
+<span class="test43">.selector { background: lightgreen\0/; } </span>
     /* must go at the END of all rules */</code></pre>
 
     <pre class="language-css"><code>/* IE 9/10 */
-    <span class="test69">.selector:nth-of-type(1n) { background: lightgreen\9; }</span></code></pre>
+<span class="test69">.selector:nth-of-type(1n) { background: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 6/7/8/9/10 */
-    <span class="test41">.selector { background: lightgreen\9; }</span></code></pre>
+<span class="test41">.selector { background: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6 */
-    <span class="test44">.selector { background/**/: lightgreen; }</span></code></pre>
+<span class="test44">.selector { background/**/: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -151,27 +151,27 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* IE 6/7/8 */
-    <span class="test47">@media \0screen\,screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
+<span class="test47">@media \0screen\,screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
 
     <pre class="language-css"><code>/* IE 8 */
-    <span class="test48">@media \0screen { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test48">@media \0screen { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 9, Firefox 3.5+, Opera */
-    <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 8/9/10 & Opera */
-    <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 9/10 */
-    <span class="test50">@media screen and (min-width:0\0) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test50">@media screen and (min-width:0\0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 10+ */
-    <span class="test51">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+<span class="test51">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
     .selector { background: lightgreen; }
 }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7/8 - not a hack */ 
-    <span class="test52">@media screen and (min-width: 400px) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test52">@media screen and (min-width: 400px) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -180,7 +180,7 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Everything but IE 6/7 - doesn't seem to work at all */
-    <span class="test53">@import "selector.css" all;</span></code></pre>
+<span class="test53">@import "selector.css" all;</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -189,10 +189,10 @@
 
     <section data-cols="1">
     <pre class="language-javascript"><code>/* IE */
-    IE='\v'=='v'</code></pre>
+<span class="js-test-ie-1">var isIE = '\v'=='v';</span></code></pre>
 
-    <pre class="language-javascript"><code>/* IE 6 using conditionals */
-    try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=false;}</code></pre>
+    <pre class="language-javascript"><code>/* IE 6 */
+try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=false;}</code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
     /*@cc_on!@*/false && document.documentMode === 10</code></pre>
@@ -211,16 +211,16 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Firefox 1.5/2 */
-    <span class="test65">body:empty .selector { }</span></code></pre>
+<span class="test65">body:empty .selector { }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 2+ & IE 7 */
-    <span class="test54">.selector, x:-moz-any-link { background: lightgreen; }</span></code></pre>
+<span class="test54">.selector, x:-moz-any-link { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3+ (Windows?) & IE 7*/
-    <span class="test55">.selector, x:-moz-any-link, x:default { background: lightgreen; }</span></code></pre>
+<span class="test55">.selector, x:-moz-any-link, x:default { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.5+ */
-    <span class="test56">body:not(:-moz-handler-blocked) .selector { background: lightgreen; }</span></code></pre>
+<span class="test56">body:not(:-moz-handler-blocked) .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -229,13 +229,13 @@
 
     <section data-cols="1">  
     <pre class="language-css"><code>/* Firefox 3.5+, IE 9, Opera */
-    <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.6+ */
-    <span class="test67">@media screen and (-moz-images-in-menus:0) { .selector { background: lightpink; } }</span></code></pre>
+<span class="test67">@media screen and (-moz-images-in-menus:0) { .selector { background: lightpink; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 4+ */ 
-    <span class="test68">@media screen and (min--moz-device-pixel-ratio:0) { .selector { background: lightpink; } }</span></code></pre>
+<span class="test68">@media screen and (min--moz-device-pixel-ratio:0) { .selector { background: lightpink; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -244,7 +244,7 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Firefox 3+ */
-    <span class="test58">@-moz-document url-prefix() { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test58">@-moz-document url-prefix() { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -252,14 +252,17 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* Firefox 2 */
-    FF2=(function x(){})[-6]=='x'</code></pre>
-
-    <pre class="language-javascript"><code>/* Firefox 3 */ 
-    FF3=(function x(){})[-5]=='x'</code></pre>
+    <pre class="language-javascript"><code>/* Firefox */
+<span class="js-test-ff-4">var isFF = !!navigator.userAgent.match(/firefox/i);</span></code></pre>
+    
+    <pre class="language-javascript"><code>/* Firefox 2 - 13 */
+<span class="js-test-ff-1">var isFF = Boolean(window.globalStorage);</span></code></pre>
 
     <pre class="language-javascript"><code>/* Firefox 2/3 */
-    FF=/a/[-1]=='a'</code></pre>
+<span class="js-test-ff-3">var isFF = /a/[-1]=='a';</span></code></pre>
+    
+    <pre class="language-javascript"><code>/* Firefox 3 */ 
+<span class="js-test-ff-2">var isFF = (function x(){})[-5]=='x';</span></code></pre>
     </section>
 </article>
 
@@ -274,7 +277,7 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Safari (version?) and Chrome (not Canary) */
-    <span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
+<span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -283,7 +286,7 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Chrome, Safari 3+ */
-    <span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -292,7 +295,7 @@
 
     <section data-cols="1">
     <pre class="language-javascript"><code>/* Chrome */
-    Chr=/source/.test((/a/.toString+''))</code></pre>
+<span class="js-test-chrome-1">var isChrome = Boolean(window.chrome);</span></code></pre>
     </section>
 </article>
 
@@ -307,11 +310,11 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Safari 2/3 */
-    <span class="test60">html[xmlns*=""] body:last-child .selector { background: lightgreen; }</span>
-    <span class="test61">html[xmlns*=""]:root .selector  { background: lightgreen; }</span></code></pre>
+<span class="test60">html[xmlns*=""] body:last-child .selector { background: lightgreen; }</span>
+<span class="test61">html[xmlns*=""]:root .selector  { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Safari 2/3.1, Opera 9.25 */
-    <span class="test62">*|html[xmlns*=""] .selector { background: lightgreen; }</span></code></pre>
+<span class="test62">*|html[xmlns*=""] .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -320,7 +323,7 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Safari 3+, Chrome */
-    <span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test63">@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -344,7 +347,7 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Opera 9.5+ */
-    <span class="test64">noindex:-o-prefocus, .selector { background: lightgreen; }</span></code></pre>
+<span class="test64">noindex:-o-prefocus, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -353,16 +356,16 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Opera 7 */
-    <span class="test66">@media all and (min-width: 0px){ .selector { background: lightgreen; } }</span></code></pre>
+<span class="test66">@media all and (min-width: 0px){ .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera 12- */
-    <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera, IE 8/9/10 */
-    <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera, Firefox 3.5+, IE 9 */
-    <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
+<span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -379,14 +382,6 @@
 </article>
 
 
-    <!-- hackTemplate -->
-    <script id="hackTemplate" type="text/template">
-        <section data-cols="2">
-            <div>
-            </div>
-        </section>
-    </script>
-
      <article data-high="3">
         <section data-cols="1">
             <div>
@@ -398,11 +393,8 @@
     </article>  
 
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/browserhacks-tests.js"></script>
 
-    <!--<script src="js/libs.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/prism.js"></script>-->
     <script>
     var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
 
@@ -412,8 +404,5 @@
         $(".catch-phrase__anim").html(tips[i]);
     }, 200);
     </script>
-
-    <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
-
     </body>
 </html>
