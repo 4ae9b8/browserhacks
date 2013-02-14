@@ -57,7 +57,7 @@
             'version' => 'Chrome',
             'data-version' => '',
             'language' => 'language-javascript',
-            'code' => "Chr=/source/.test((/a/.toString+''))"
+            'code' => "var isChrome = Boolean(window.chrome);"
           ),
         )
       )
