@@ -114,45 +114,35 @@ body[data-theme='browserhacks'] {
       background-color: rgba($ch, 1);
       background-position: center -11.1em;
 
-      &:hover {
-        background-color: $ch;
-      }
+      &:hover { background-color: $ch; }
     }
 
     .fx a { 
       background-color: rgba($fx, 1);
       background-position: center -5.5em;
 
-      &:hover {
-        background-color: $fx; 
-      }
+      &:hover { background-color: $fx; }
     }
 
     .ie a { 
       background-color: rgba($ie, 1);
       background-position: center 0.1em;
 
-      &:hover {
-        background-color: $ie; 
-      }
+      &:hover { background-color: $ie; }
     }
 
     .sa a { 
       background-color: rgba($sa, 1);
       background-position: center -16.9em;
 
-      &:hover {
-        background-color: $sa; 
-      }
+      &:hover { background-color: $sa; }
     }
 
     .op a { 
       background-color: rgba($op, 1);
       background-position: center -22.3em;
 
-      &:hover {
-        background-color: $op; 
-      }
+      &:hover { background-color: $op; }
     }
 
   }
@@ -196,6 +186,10 @@ body[data-theme='browserhacks'] {
     .th { 
       border-color: $ie;
       background-position: $logo_left .25em;
+
+      @media all and (max-width: 370px) {
+        background-position: $logo_left 1.25em;
+      }
     }
   }
 
@@ -300,7 +294,7 @@ body[data-theme='browserhacks'] {
     border:none;
     height:3em;
     background: #ccc;
-    font-size:1.15em;
+    font-size: 1.2em;
     overflow: hidden;
     position: relative;
     @include user-select(none);
@@ -366,8 +360,9 @@ body[data-theme='browserhacks'] {
       }
 
       @include breakpoint(baby-bear) {
-        @include transition(0s width ease-in-out);
         margin-bottom: 1em;
+        @include transition(0s width ease-in-out);
+        
       }
     }
 
