@@ -1,0 +1,75 @@
+/* Home page - animation */
+
+.catch-phrase {
+    text-align: center;
+    font-size: 1.3em;
+    color: $fx;
+    text-shadow: 0 1px rgba(0,0,0,0.3);
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+    position: relative;
+}
+
+.catch-phrase__anim {
+    color: $ie;
+    position: absolute;
+}
+
+//All the spans from .catch-phrase__anim are hidden
+.catch-phrase__anim span {
+  display: none;
+}
+
+//If CSS animations are supported, all the spans from .catch-phrase__anim are displayed
+.cssanimations .catch-phrase__anim span {
+  position: absolute;
+  opacity: 0;
+  display: block;
+}
+
+.catch-phrase__space {
+    padding-left: 0.85em;
+    padding-left: 1ch;
+}
+
+@mixin rotateWords($time, $words, $selector, $nameAnim: showWord, $easing: linear, $infinite: true) {
+	$hidePoint  : percentage(1/ $words);
+	$hidePointP : percentage(1/($words - 0.01));
+	$browsers: '-webkit-', '-moz-', '';
+	  
+	#{$selector} span {
+		@each $browser in $browsers {
+			@if $infinite == true { 
+		    	#{$browser}animation: #{$nameAnim} $words * $time + s #{$easing} infinite;
+			} @else {
+				#{$browser}animation: #{$nameAnim} $words * $time + s #{$easing};
+			}
+		}
+	}
+	  
+	@for $i from 1 through $words {
+		#{$selector} span:nth-child(#{$i}) {
+			@each $browser in $browsers {
+	    		#{$browser}animation-delay: ($i - 1) * $time + s;
+	    	}
+	    }
+	}
+
+	@-webkit-keyframes #{$nameAnim} {
+	   	0%, #{$hidePoint}    { opacity:1; }
+	    #{$hidePointP}, 100% { opacity:0; }
+	}
+
+	@-moz-keyframes #{$nameAnim} {
+	   	0%, #{$hidePoint}    { opacity:1; }
+	    #{$hidePointP}, 100% { opacity:0; }
+	}
+
+	@keyframes #{$nameAnim} {
+	   	0%, #{$hidePoint}    { opacity:1; }
+	    #{$hidePointP}, 100% { opacity:0; }
+	}
+}
+
+@include rotateWords(.5, 28, '.catch-phrase__anim');
+

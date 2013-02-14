@@ -3,11 +3,20 @@
 @import "compass/css3";
 @import "compass/css3/user-interface";
 
+//Variables
+$ie: #0a90dd;
+$fx: #f77918; // #e26c0c
+$ch: gold; //#3cbc44;
+$sa: #999; //#46bfe6;
+$op: #f63b3c;
+$us: #4ae9b8; // Our awesome colour :D
+
 //Imports
 @import "crystallo",
         "prism",
         "font-awesome",
-        "google-fonts";
+        "google-fonts",
+        "animation";
 
 //MQ
 @mixin breakpoint($point) {
@@ -21,14 +30,6 @@
     @media (max-width: 44em) { @content; } 
   }
 }
-
-//Variables
-$ie: #0a90dd;
-$fx: #f77918; // #e26c0c
-$ch: gold; //#3cbc44;
-$sa: #999; //#46bfe6;
-$op: #f63b3c;
-$us: #4ae9b8; // Our awesome colour :D
 
 .clearfix:after {
   content: "";
@@ -113,45 +114,35 @@ body[data-theme='browserhacks'] {
       background-color: rgba($ch, 1);
       background-position: center -11.1em;
 
-      &:hover {
-        background-color: $ch;
-      }
+      &:hover { background-color: $ch; }
     }
 
     .fx a { 
       background-color: rgba($fx, 1);
       background-position: center -5.5em;
 
-      &:hover {
-        background-color: $fx; 
-      }
+      &:hover { background-color: $fx; }
     }
 
     .ie a { 
       background-color: rgba($ie, 1);
       background-position: center 0.1em;
 
-      &:hover {
-        background-color: $ie; 
-      }
+      &:hover { background-color: $ie; }
     }
 
     .sa a { 
       background-color: rgba($sa, 1);
       background-position: center -16.9em;
 
-      &:hover {
-        background-color: $sa; 
-      }
+      &:hover { background-color: $sa; }
     }
 
     .op a { 
       background-color: rgba($op, 1);
       background-position: center -22.3em;
 
-      &:hover {
-        background-color: $op; 
-      }
+      &:hover { background-color: $op; }
     }
 
   }
@@ -171,26 +162,6 @@ body[data-theme='browserhacks'] {
     @include breakpoint(mama-bear) {
       font-size:3em;
     }
-  }
-
-  .catch-phrase {
-    text-align: center;
-    font-size: 1.3em;
-    color: $fx;
-    text-shadow: 0 1px rgba(0,0,0,0.3);
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 0;
-    position: relative;
-  }
-
-  .catch-phrase__anim {
-    color: $ie;
-    position: absolute;
-  }
-
-  .catch-phrase__space {
-    padding-left: 0.85em;
-    padding-left: 1ch;
   }
 
   .top-content {
@@ -215,6 +186,10 @@ body[data-theme='browserhacks'] {
     .th { 
       border-color: $ie;
       background-position: $logo_left .25em;
+
+      @media all and (max-width: 370px) {
+        background-position: $logo_left 1.25em;
+      }
     }
   }
 
@@ -319,7 +294,7 @@ body[data-theme='browserhacks'] {
     border:none;
     height:3em;
     background: #ccc;
-    font-size:1.15em;
+    font-size: 1.2em;
     overflow: hidden;
     position: relative;
     @include user-select(none);
@@ -385,8 +360,9 @@ body[data-theme='browserhacks'] {
       }
 
       @include breakpoint(baby-bear) {
-        @include transition(0s width ease-in-out);
         margin-bottom: 1em;
+        @include transition(0s width ease-in-out);
+        
       }
     }
 
@@ -561,66 +537,14 @@ body[data-theme='browserhacks'] {
   }
 }
 
-/* ANIMATION */
-
-@mixin rotateWords($time, $words) {
-  $hidePoint : percentage(1/$words);
-  $hidePointP : percentage(1/($words - 0.01));
-  
-  .catch-phrase__anim span{
-    -webkit-animation: show $words * $time + s linear infinite;
-    -moz-animation: show $words * $time + s linear infinite;
-    -o-animation: show $words * $time + s linear infinite;
-    animation: show $words * $time + s linear infinite;
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  body[data-theme='browserhacks'] {
+    background: url(/img/linedpaper_@2x.png) #eee;
   }
-  
-  @for $i from 1 through $words {
-  .catch-phrase__anim span:nth-child(#{$i}) {
-      -webkit-animation-delay: ($i - 1) * $time + s;
-      -moz-animation: show $words * $time + s linear infinite;
-      -o-animation: show $words * $time + s linear infinite;
-      animation: show $words * $time + s linear infinite;
-    }
-  }
-  
-  @-webkit-keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-
-  @-moz-keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-
-  @-o-keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-
-  @keyframes show {
-    0%            { opacity:1; }
-    #{$hidePoint} { opacity:1; }
-    #{$hidePointP}{ opacity:0; }
-    100%          { opacity:0; }
-  }
-}
-
-//rotateWords(timePerWord, numberOfWord)
-@include rotateWords(.5, 28);
-
-.catch-phrase__anim span {
-  display: none;
-}
-
-.cssanimations .catch-phrase__anim span {
-  position:absolute;
-  opacity:0;
-  display: block;
 }
