@@ -8,11 +8,17 @@ class Browserhacks {
     function __construct() {
     }
 
+    /**
+     * Start the application.
+     */
     public static function run() {
         // Init
         self::init();
     }
 
+    /**
+     * Initialize.
+     */
     protected static function init() {
         self::$isLive = false;
 
@@ -25,10 +31,21 @@ class Browserhacks {
         self::$tld = substr(strrchr($_SERVER['SERVER_NAME'], "."), 1);
     }
 
+    /**
+     * Returns <CODE>true</CODE> if this is the live system
+     * otherwise <CODE>false</CODE>
+     *
+     * @return Boolean self::$isLive;
+     */
     public static function isLive() {
         return self::$isLive;
     }
 
+    /**
+     * Return the actual top level domain.
+     *
+     * @return String self::$tld
+     */
     public static function getTLD() {
       return self::$tld;
     }
