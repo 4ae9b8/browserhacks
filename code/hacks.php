@@ -308,7 +308,7 @@
             'version' => 'IE',
             'data-version' => '6|7|8|9|10',
             'language' => 'language-javascript',
-            'code' => "IE='\v'=='v'"
+            'code' => "var isIE = '\v'=='v';"
           ),
           array (
             'version' => 'IE 6 - using conditional comments',

@@ -24,8 +24,8 @@ if (js_test_ff_2) $('.js-test-ff-2').addClass(testClass);
 /*
  * Internet Explorer
  */
-// var js_test_ie_1 = '\v'=='v';
-// if (js_test_ie_1) $('.js-test-ie-1').addClass(testClass);
+var js_test_ie_1 = '\v'=='v';
+if (js_test_ie_1) $('.js-test-ie-1').addClass(testClass);
 
 // var js_test_ie_2; 
 // try {js_test_ie_2 = "/*@cc_on @_jscript_version == 5.6 || (@_jscript_version == 5.7 && !window.XMLHttpRequest) @*/"} catch(e) {js_test_ie_2=false;}
