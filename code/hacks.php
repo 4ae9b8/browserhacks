@@ -335,51 +335,6 @@
     ),
 
     /**
-     * Safari
-     */
-    'sa' => array (
-      'name' => 'Safari',
-      'hacks' => array(
-        'selector' => array(
-          array (
-            'version' => 'Safari 2/3',
-            'data-version' => '2|3',
-            'language' => 'language-css',
-            'code' => "html[xmlns*=\"\"] body:last-child .selector {} \nhtml[xmlns*=\"\"]:root .selector  {}"
-          ),
-          array (
-            'version' => 'Safari 2/3.1, Opera 9.25',
-            'data-version' => '2|3.1',
-            'language' => 'language-css',
-            'code' => "*|html[xmlns*=\"\"] .selector {}"
-          ),
-          array (
-            'version' => 'Safari (version?) and Chrome',
-            'data-version' => '',
-            'language' => 'language-css',
-            'code' => "::made-up-pseudo-element, .selector {}"
-          )
-        ),
-        "media" => array(
-          array (
-            'version' => 'Safari 3+, Chrome',
-            'data-version' => '3+',
-            'language' => 'language-css',
-            'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
-          )
-        ),
-        "javascript" => array(
-          array (
-            'version' => 'Safari',
-            'data-version' => '',
-            'language' => 'language-javascript',
-            'code' => "Saf=/a/.__proto__=='//'"
-          )
-        )
-      )
-    ),
-
-    /**
      * Opera
      */
     'op' => array (
@@ -439,7 +394,52 @@
             'code' => "Op=/^function \(/.test([].sort) \n/* or */ \nwindow.opera && window.opera.version() == X"
           )
         )
-      )
+      ),
+
+      /**
+       * Safari
+       */
+      'sa' => array (
+        'name' => 'Safari',
+        'hacks' => array(
+          'selector' => array(
+            array (
+              'version' => 'Safari 2/3',
+              'data-version' => '2|3',
+              'language' => 'language-css',
+              'code' => "html[xmlns*=\"\"] body:last-child .selector {} \nhtml[xmlns*=\"\"]:root .selector  {}"
+            ),
+            array (
+              'version' => 'Safari 2/3.1, Opera 9.25',
+              'data-version' => '2|3.1',
+              'language' => 'language-css',
+              'code' => "*|html[xmlns*=\"\"] .selector {}"
+            ),
+            array (
+              'version' => 'Safari (version?) and Chrome',
+              'data-version' => '',
+              'language' => 'language-css',
+              'code' => "::made-up-pseudo-element, .selector {}"
+            )
+          ),
+          "media" => array(
+            array (
+              'version' => 'Safari 3+, Chrome',
+              'data-version' => '3+',
+              'language' => 'language-css',
+              'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
+            )
+          ),
+          "javascript" => array(
+            array (
+              'version' => 'Safari',
+              'data-version' => '',
+              'language' => 'language-javascript',
+              'code' => "Saf=/a/.__proto__=='//'"
+            )
+          )
+        )
+      ),
     )
   );
 ?>
