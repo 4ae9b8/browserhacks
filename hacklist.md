@@ -92,7 +92,7 @@
 	/* IE 6/7 - acts as an !important */
 	.selector { color: blue !ie; } /* string after ! can be anything */
 	 
--	/* IE 7/8/9/10 */
+	/* IE 7/8/9/10 */
 	.selector { color/*\**/: blue\9; }
 
 	/* IE 8 */
@@ -118,14 +118,11 @@
 	/* IE 8 */
 	@media \0screen { }
 	 
--	/* IE 8/9/10 & Opera */
+	/* IE 8/9/10 & Opera */
 	@media screen\0 { }
 
 	/* IE 9/10 */
 	@media screen and (min-width:0\0) { }
-
-	/* IE 10 */
-	@media screen and (-ms-transform-3d) { }
 
 	/* Opera 7 */
 	@media all and (min-width: 0px){ }
@@ -136,7 +133,7 @@
 	/* Safari 3+, Chrome */
 	@media screen and (-webkit-min-device-pixel-ratio:0) { }
 
--	/* Firefox 3.5+, IE 9/10 & Opera */
+	/* Firefox 3.5+, IE 9/10 & Opera */
 	@media screen and (min-resolution: +72dpi) { }
 
 	/* Firefox 3.6+ */

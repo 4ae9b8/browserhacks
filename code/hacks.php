@@ -285,12 +285,6 @@
             'code' => "@media screen and (min-width:0\\0) {}"
           ),
           array (
-            'version' => 'IE 10',
-            'data-version' => '10',
-            'language' => 'language-css',
-            'code' => "@media screen and (-ms-transform-3d) {} \n/* To be tested */"
-          ),
-          array (
             'version' => 'IE 10+',
             'data-version' => '10+',
             'language' => 'language-css',
