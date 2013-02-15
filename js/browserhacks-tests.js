@@ -1,4 +1,4 @@
-var testClass = 'js';
+var testClass = 'js-succeed';
 
 /* 
  * Chrome 
