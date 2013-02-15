@@ -376,10 +376,10 @@
 
     <section data-cols="1">
     <pre class="language-javascript"><code>/* Opera */
-    Op=/^function \(/.test([].sort)</code></pre>
+<span class="test-js-op-1">var isOpera = /^function \(/.test([].sort);</span></code></pre>
 
-    <pre class="language-javascript"><code>/* Opera X */
-    window.opera && window.opera.version() == X</code></pre>
+    <pre class="language-javascript"><code>/* Opera <= 12 */
+<span class="test-js-op-2">var isOpera = Boolean(window.opera);</code></pre>
     </section>
 </article>
 

@@ -35,7 +35,16 @@ if (js_test_ff_2) $('.js-test-ff-2').addClass(testClass);
 //if (js_test_ie_3) = $('.js-test-ie-3').addClass(testClass);
 
 /*
+ * Opera
+ */
+var js_test_op_1 = /^function \(/.test([].sort);
+if (js_test_op_1) $('.js-test-op-1').addClass(testClass);
+
+var js_test_op_2 = Boolean(window.opera);
+if (js_test_op_2) $('.js-test-op-2').addClass(testClass);
+
+/*
  * Safari
  */
 var js_test_sa_1 = /a/.__proto__=='//';
-if (js_test_sa_1) $('js_test_sa_1').addClass(testClass);
+if (js_test_sa_1) $('.js-test-sa-1').addClass(testClass);
