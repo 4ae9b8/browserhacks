@@ -3,7 +3,7 @@
 
   RewriteCond %{HTTP_HOST} ^test\.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule (.*) /test.html [L]
+  RewriteRule (.*) /test.php [L]
 
 </IfModule>
 

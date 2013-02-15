@@ -21,6 +21,12 @@
 
 </head>
 
+<?php
+  // Load Browserhacks and run it
+  include_once('code/Browserhacks.php');
+  Browserhacks::run();
+?>
+
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
 
     <ul class="nav-browser clearfix">
@@ -71,13 +77,7 @@
                 <span class="catch-phrase__space">hack</span>: now; }
             </p>
         </section>
-    </article>
-    
-<?php
-  // TLD for local/live testing
-  $tld = strrchr($_SERVER['SERVER_NAME'], ".");
-  $tld = substr($tld, 1);
-?>    
+    </article>  
     
     <!-- Social -->
     <article data-high="2">
@@ -101,7 +101,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="http://test.browserhacks.<?php echo $tld; ?>" target="_blank">
+                        <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
                             <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
                         </a>
                     </div>
@@ -151,7 +151,7 @@
                 </a>
             </div>
             <div>
-                <a href="http://test.browserhacks.<?php echo $tld; ?>" target="_blank">
+                <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
                     <button data-type="1"><span class="fontawesome-road"></span> Test page</button>
                 </a>
             </div>
@@ -169,23 +169,14 @@
         </section>
     </article>  
 
-
-    <!-- hackTemplate -->
-    <script id="hackTemplate" type="text/template">
-        <section data-cols="2">
-            <div>
-            </div>
-        </section>
-    </script>
-
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
-    <script>
 
-    //Fallback CSS animation
+    <script type="text/javascript">
+    // Fallback CSS animation
     if (!Modernizr.cssanimations){
-        // @TODO: [TimPietrusky] - Find a better place for this
-        var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
+      // @TODO: [TimPietrusky] - Find a better place for this
+      var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
 
       setInterval(function() {
         var i = Math.round((Math.random()) * tips.length);
@@ -193,22 +184,10 @@
         $(".catch-phrase__anim").html(tips[i]);
       }, 400);
     }
-
-    //Google Analytics
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-38522111-1']);
-    _gaq.push(['_setDomainName', 'browserhacks.com']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
     </script>
-    <!-- 
-    <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-5596313-7']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
-    -->
+
+    <?php if (Browserhacks::isLive()): ?>
+        <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+    <?php endif; ?>
     </body>
 </html>
