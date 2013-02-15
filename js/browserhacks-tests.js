@@ -30,3 +30,12 @@ if (js_test_ff_2) $('.js-test-ff-2').addClass(testClass);
 // var js_test_ie_2; 
 // try {js_test_ie_2 = "/*@cc_on @_jscript_version == 5.6 || (@_jscript_version == 5.7 && !window.XMLHttpRequest) @*/"} catch(e) {js_test_ie_2=false;}
 // if (js_test_ie_2) $('.js-test-ie-2').addClass(testClass);
+
+//var js_test_ie_3 = /*@cc_on!@*/false && document.documentMode === 10;
+//if (js_test_ie_3) = $('.js-test-ie-3').addClass(testClass);
+
+/*
+ * Safari
+ */
+var js_test_sa_1 = /a/.__proto__=='//';
+if (js_test_sa_1) $('js_test_sa_1').addClass(testClass);

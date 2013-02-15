@@ -435,7 +435,7 @@
               'version' => 'Safari',
               'data-version' => '',
               'language' => 'language-javascript',
-              'code' => "Saf=/a/.__proto__=='//'"
+              'code' => "var isSafari = /a/.__proto__=='//';"
             )
           )
         )

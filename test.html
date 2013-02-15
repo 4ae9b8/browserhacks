@@ -324,10 +324,10 @@
 <span class="js-test-ie-1">var isIE = '\v'=='v';</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 6 */
-try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=false;}</code></pre>
+<span class="js-test-ie-2">try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=false;}</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
-    /*@cc_on!@*/false && document.documentMode === 10</code></pre>
+<span class="js-test-ie-3">/*@cc_on!@*/false && document.documentMode === 10</span></code></pre>
 
     </section>
 </article>
@@ -411,7 +411,7 @@ try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=fa
 
     <section data-cols="1">
     <pre class="language-javascript"><code>/* Safari */
-    Saf=/a/.__proto__=='//'</code></pre>
+<span class="js-test-sa-1">var isSafari = /a/.__proto__=='//';</span></code></pre>
     </section>
 </article>
      <article data-high="3">
@@ -424,10 +424,10 @@ try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=fa
         </section>
     </article>  
 
-    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>-->
+    <script src="js/jquery-1.9.0-min.js"></script>
     <script src="js/browserhacks-tests.js"></script>
     <script type="text/javascript">
-    <script>
 
     //Fallback CSS animation
     if (!Modernizr.cssanimations){
