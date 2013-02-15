@@ -369,7 +369,7 @@
           ),
           array (
             'version' => 'Opera 12-',
-            'data-version' => '12',
+            'data-version' => '12-',
             'language' => 'language-css',
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
           ),
@@ -395,7 +395,7 @@
           ),
           array (
             'version' => 'Opera <= 12',
-            'data-version' => '',
+            'data-version' => '12-',
             'language' => 'language-javascript',
             'code' => "var isOpera = Boolean(window.opera);"
           )

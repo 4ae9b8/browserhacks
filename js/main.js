@@ -124,6 +124,8 @@
 
       // Filter version
       if (data.version != null) {
+        // data.version = ~~data.version;
+
         // Hide all childs
         this.hackChilds.hide();
 
@@ -144,6 +146,32 @@
               _item.show();
             }
           }, this);
+        }, this);
+
+        // Find +
+        _.each(this.$el.find('pre[data-version*="+"]'), function(item) {
+          _item = $(item);
+          version_plus = _item.attr('data-version').split('+');
+          if (version_plus.length == 2) {
+            version_plus = parseFloat(version_plus[0]);
+
+            if (version_plus <= data.version) {
+              _item.show();
+            }
+          }
+        }, this);
+
+        // Find -
+        _.each(this.$el.find('pre[data-version*="-"]'), function(item) {
+          _item = $(item);
+          version_minus = _item.attr('data-version').split('-');
+          if (version_minus.length == 2) {
+            version_minus = parseFloat(version_minus[0]);
+
+            if (version_minus >= data.version) {
+              _item.show();
+            }
+          }
         }, this);
 
         // Change the style of filtered elements
