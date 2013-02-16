@@ -25,7 +25,7 @@
 	/* Safari 2/3.1, Opera 9.25 */
 	*|html[xmlns*=""] .selector { }
 
-	/* Safari (version? 5 OK) and Chrome */
+	/* Safari 5- and Chrome */
 	::made-up-pseudo-element, .selector { }
 
 	/* Opera 9.5+ */
@@ -37,7 +37,7 @@
 	/* Firefox 2+ */
 	.selector, x:-moz-any-link { }
 
-	/* Firefox 3+ (Windows ?) */
+	/* Firefox 3+ */
 	.selector, x:-moz-any-link; x:default { }
 
 	/* Firefox 3.5+ */
@@ -91,19 +91,19 @@
 
 	/* IE 6/7 - acts as an !important */
 	.selector { color: blue !ie; } /* string after ! can be anything */
-	 
+ 
 	/* IE 7/8/9/10 */
 	.selector { color/*\**/: blue\9; }
+	
+	/* IE 6/7/8/9/10 */
+	.selector { color: blue\9; }
 
 	/* IE 8 */
 	.selector { color: blue\0/; } /* must go at the END of all rules */
 
 	/* IE 9/10 */
 	.selector:nth-of-type(1n) { color: blue\9; }
-
-	/* IE 6/7/8/9/10 */
-	.selector { color: blue\9; }
-
+	
 	/* Everything but IE 6 */
 	.selector { color/**/: blue; }
 

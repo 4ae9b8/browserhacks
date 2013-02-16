@@ -1,63 +1,20 @@
 Browserhacks.com
 ================
 
-Resources
+What's this?
+------------
+
+Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs. Special thanks to [Paul Irish' comprehensive post](http://paulirish.com/2009/browser-specific-css-hacks/) and [Nicolas Gallagher's additions](https://gist.github.com/necolas/983116).
+
+How to?
+-------
+
+1. Pick the hack you want,
+2. Copy it into your stylesheet,
+3. Add the style you want between the braces,
+4. Enjoy the new styles for the browser you targeted!
+
+Reminder!
 ---------
 
-* [Crystallo documentation](http://timpietrusky.github.com/crystallo/)
-* [Git CheatSheet](http://gitref.org/remotes/)
-* [Git Quick Guide](http://rogerdudler.github.com/git-guide/)
-
-Things requiring further tests
-------------------------------
-
-https://github.com/4ae9b8/browserhacks/issues/6
-
-Changelog
-------------------------------
-
-### 10/02/13
-* Improved search
-* Implemented #3, #11, #12, #14 & #16
-* Minor CSS improvements
-
-### 09/02/13
-* Added search
-
-### 01/02/13
-* Added basic Backbone stuff
-* Improved the responsiveness
-* Improved top navigation
-* Changed various text
-* Changed the background-image
-
-### 29/01/13
-* Did a new whole test page
-* Fixed a bunch of hacks
-* Did a lot of tries
-* Improved some styles
-
-### 28/01/13
-* Merging stylesheets
-* Completed the array of hacks
-* Added a few hacks
-* Improved some styles
-* Improved the responsiveness
-
-### 27/01/13
-* Added code/hacks.php to auto generate the hacks and the corresponding HTML
-* Improved some styles
-* Added an input field
-* Improved small / normal screen version
-* Added some sub categories
-
-### 13/01/13
-* Fixed a layout bug
-* Improved some styles
-
-### 11/01/13
-* First layout shot (3 then 2 then 1 column)
-* Dumped a bunch of content in index.html to play around
-* Assigned a bunch of classes for each snippet (ie, ie6, selector-hack, etc.)
-* Included Prism.js for the syntax highlighting
-* Added icon for each browser
+Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most case you might want to check your CSS/JS to see if you can fix the problem with a clean solution.

@@ -38,7 +38,7 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome and Safari (version?)',
+            'version' => 'Chrome and Safari 5-',
             'data-version' => '',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -83,7 +83,7 @@
             'code' => ".selector, x:-moz-any-link {}"
           ),
           array (
-            'version' => 'Firefox 3+ (Windows ?)',
+            'version' => 'Firefox 3+',
             'data-version' => '3+',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link; x:default {}"
