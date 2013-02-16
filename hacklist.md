@@ -8,7 +8,6 @@
 	
 	/* IE 7 and below */
 	.selector, { } 
-	//.selector { } /* To be tested */
 	 
 	/* IE 7 */
 	*:first-child + html .selector { } 
@@ -103,7 +102,7 @@
 
 	/* IE 9/10 */
 	.selector:nth-of-type(1n) { color: blue\9; }
-	
+
 	/* Everything but IE 6 */
 	.selector { color/**/: blue; }
 
@@ -150,9 +149,6 @@
 
 
 ## MISCELLANEOUS
-
-	/* Everything but IE 6/7 */
-	@import "stylesheet.css" all;
 
 	/* Firefox 3+ */
 	@-moz-document url-prefix() { }

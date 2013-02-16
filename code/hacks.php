@@ -316,14 +316,6 @@
             'language' => 'language-javascript',
             'code' => "/*@cc_on!@*/false && document.documentMode === 10"
           )
-        ),
-        "misc" => array(
-          array (
-            'version' => 'Everything but IE 6/7',
-            'data-version' => '6|7',
-            'language' => 'language-javascript',
-            'code' => "@import \"stylesheet.css\" all; \n/* To be tested */"
-          )
         )
       )
     ),
