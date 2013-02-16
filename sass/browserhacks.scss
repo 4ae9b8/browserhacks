@@ -53,7 +53,7 @@ body {
 
 body[data-theme='browserhacks'] {
   font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
-  background: url(/img/linedpaper.png) #eee;
+  background: url(/img/grey.png) #eee;
   position: relative;
 
   @include breakpoint(baby-bear){
@@ -543,6 +543,6 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
   body[data-theme='browserhacks'] {
-    background: url(/img/linedpaper_@2x.png) #eee;
+    background: url(/img/grey_@2x.png) #eee;
   }
 }
