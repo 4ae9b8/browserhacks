@@ -229,10 +229,9 @@
    */
   App.Views.Search = Backbone.View.extend({
     el : 'input#search',
+    el_parent : null,
     el_description : null,
     el_buttons : null,
-
-    timeoutId : null,
 
     events : {
       'keyup' : 'keyup',
@@ -246,11 +245,13 @@
     split : null,
     browser : null,
     version : null,
+    timeoutId : null,
 
     initialize : function() {
       this.regex_split = new RegExp("([a-z\\s]+)", "gm");
 
       // Get elements
+      this.el_parent = $();
       this.el_description = $('article[data-type="description"]');
       this.el_buttons = $('div[data-type="top-buttons"]');
     },
@@ -358,5 +359,17 @@
   var view_search = new App.Views.Search();
 
 
+  /*--------------------------------------------------
+   *
+   * Fallback JS animation for the CSS rotating catch-phrase
+   */
+  if (!Modernizr.cssanimations){
+    var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
 
+    setInterval(function() {
+      var i = Math.round((Math.random()) * tips.length);
+      if (i == tips.length) --i;
+      $(".catch-phrase__anim").html(tips[i]);
+    }, 400);
+  }
 })();
