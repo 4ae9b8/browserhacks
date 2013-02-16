@@ -229,6 +229,8 @@
    */
   App.Views.Search = Backbone.View.extend({
     el : 'input#search',
+    el_description : null,
+    el_buttons : null,
 
     timeoutId : null,
 
@@ -238,6 +240,7 @@
       'blur' : 'blur'
     },
 
+    isSearching : false,
     regex_split : null,
     value : null,
     split : null,
@@ -246,6 +249,10 @@
 
     initialize : function() {
       this.regex_split = new RegExp("([a-z\\s]+)", "gm");
+
+      // Get elements
+      this.el_description = $('article[data-type="description"]');
+      this.el_buttons = $('div[data-type="top-buttons"]');
     },
 
     /*
@@ -256,6 +263,8 @@
 
       // Something was entered
       if (this.value != '') {
+        this.isSearching = true;
+
         // Split Browser from version
         this.split = this.value.split(this.regex_split);
 
@@ -280,15 +289,17 @@
         }
 
         // Hide description
-        $('article[data-type="description"]').hide();
+        this.el_description.hide();
 
       // Field is empty
       } else {
+        this.isSearching = false;
+
         // Show all browser
         vent.trigger("searchCancelled");
 
         // Show description
-        $('article[data-type="description"]').show();
+        this.el_description.show();
       }
     },
 
@@ -297,8 +308,11 @@
      */
     focus : function(e) {
       // Hide buttons
-      $('div[data-type="top-buttons"]').hide();
+      this.el_buttons.hide();
       clearTimeout(this.timeoutId);
+
+      // Hide description
+      this.el_description.hide();
 
       // Search active
       $('div[data-type="search"]').addClass('active');
@@ -311,10 +325,14 @@
       // Search inactive
       $('div[data-type="search"]').removeClass('active');
 
-      // Show buttons
-      this.timeoutId = setTimeout(function() {
-        $('div[data-type="top-buttons"]').show();
-      }, 175);
+      // Show buttons & description
+      this.timeoutId = setTimeout(_.bind(function() {
+        this.el_buttons.show();
+
+        if (!this.isSearching) {
+          this.el_description.show();
+        }
+      }, this), 175); 
     }
   });
 
