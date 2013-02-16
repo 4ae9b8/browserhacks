@@ -127,7 +127,7 @@
             </div>
             <div>
                 <h2><span class="fontawesome-warning-sign"></span>Reminder!</h2>
-                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most case you might want to check your CSS to see if you can fix the problem with a clean solution before using some browser sniffing.</p>
+                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most case you might want to check your CSS/JS to see if you can fix the problem with a clean solution.</p>
             </div>
         </section>
     </article>
