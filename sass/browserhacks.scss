@@ -10,6 +10,7 @@ $ch: gold; //#3cbc44;
 $sa: #999; //#46bfe6;
 $op: #f63b3c;
 $us: #4ae9b8; // Our awesome colour :D
+$prism_css: #690;
 
 //Imports
 @import "crystallo",
@@ -255,7 +256,13 @@ body[data-theme='browserhacks'] {
     font: 1.85em 'Montserrat', sans-serif;
     padding-bottom: 0.4em;
     margin-bottom: 0.4em;
-    border-bottom: .225em solid rgba(165, 165, 165, .7);
+    border-bottom: .225em solid #ccc;
+    border-bottom: .225em solid rgba(0, 0, 0, .3);
+
+    span {
+      color: #ccc;
+      color: rgba(0, 0, 0, .3);
+    }
   }
 
   h3 {
@@ -294,6 +301,7 @@ body[data-theme='browserhacks'] {
     border:none;
     height:3em;
     background: #ccc;
+    background: rgba(0, 0, 0, .3);
     font-size: 1.2em;
     overflow: hidden;
     position: relative;
@@ -381,8 +389,8 @@ body[data-theme='browserhacks'] {
         padding: 0 .5em;
         outline:none;
         border: rgba(0,0,0, .75) solid .015em;
-        border-right: rgba(0, 0, 0, .4) solid .25em;
-        border-left: rgba(0, 0, 0, .4) solid .25em;
+        border-right: .25em solid rgba(0, 0, 0, .3);
+        border-left: .25em solid rgba(0, 0, 0, .3);
         @include transition(all .25s ease-in-out);
 
         &:focus {

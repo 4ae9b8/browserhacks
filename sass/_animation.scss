@@ -3,9 +3,10 @@
 .catch-phrase {
     text-align: center;
     font-size: 1.3em;
-    color: $fx;
+    color: $prism_css;
     text-shadow: 0 1px rgba(0,0,0,0.3);
     font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 .05em white;
     margin-top: 0;
     position: relative;
 }
