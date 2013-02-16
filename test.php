@@ -33,8 +33,8 @@
         <li class="ch"><a href="#ch">Google Chrome</a></li>
         <li class="fx"><a href="#fx">Mozilla Firefox</a></li>
         <li class="ie"><a href="#ie">Internet Explorer</a></li>
-        <li class="sa"><a href="#sa">Safari</a></li>
         <li class="op"><a href="#op">Opera</a></li>
+        <li class="sa"><a href="#sa">Safari</a></li>
     </ul>
 
     <article data-high="1">
