@@ -263,6 +263,24 @@ body[data-theme='browserhacks'] {
       color: #ccc;
       color: rgba(0, 0, 0, .3);
     }
+
+    &[data-type="1"] {
+      span {
+        color: rgba($ie, .7);
+      }
+    }
+
+    &[data-type="2"] {
+      span {
+        color: rgba($fx, .7);
+      }
+    }
+
+    &[data-type="3"] {
+      span {
+        color: rgba($op, .7);
+      }
+    }
   }
 
   h3 {
