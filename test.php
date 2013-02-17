@@ -17,9 +17,7 @@
 
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-tests.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-
-    <script src="js/modernizr.custom.38859.js"></script>
+    <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
 </head>
 
 <?php
@@ -443,6 +441,7 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     </article>  
 
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="js/modernizr.custom.38859.js"></script>
     <script src="js/browserhacks-tests.js"></script>
 
     <!--[if (gte IE 6)&(lte IE 8)]>
