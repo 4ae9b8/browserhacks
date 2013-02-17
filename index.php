@@ -117,15 +117,15 @@
             <div>
                 <h2 data-type="2"><span class="fontawesome-question-sign"></span>How to?</h2>
                 <ol>
-                    <li>Pick the hack you want,</li>
-                    <li>Copy it into your stylesheet,</li>
-                    <li>Add the style you want between the braces,</li>
+                    <li>Pick the hack you want</li>
+                    <li>Copy it into your stylesheet</li>
+                    <li>Add the style you want between the braces</li>
                     <li>Enjoy the new styles for the browser you targeted!</li>
                 </ol>
             </div>
             <div>
                 <h2 data-type="3"><span class="fontawesome-warning-sign"></span>Reminder!</h2>
-                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most case you might want to check your CSS/JS to see if you can fix the problem with a clean solution.</p>
+                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most cases you should fix your CSS/JS.</p>
             </div>
         </section>
     </article>
