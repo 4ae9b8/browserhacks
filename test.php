@@ -445,6 +445,11 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="js/browserhacks-tests.js"></script>
 
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+
     <script type="text/javascript">
     // Fallback CSS animation
     if (!Modernizr.cssanimations){
