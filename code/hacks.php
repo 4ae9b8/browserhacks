@@ -372,7 +372,7 @@
             'code' => "@media all and (min-width: 0px){}"
           ),
           array (
-            'version' => 'Opera 12-',
+            'version' => 'Opera <= 12',
             'data-version' => '12-',
             'language' => 'language-css',
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
@@ -392,14 +392,14 @@
         ),
         'javascript' => array(
           array (
-            'version' => 'Opera',
-            'data-version' => '',
+            'version' => 'Opera <= 9.64',
+            'data-version' => '9.64-',
             'language' => 'language-javascript',
             'code' => "var isOpera = /^function \(/.test([].sort);"
           ),
           array (
             'version' => 'Opera <= 12',
-            'data-version' => '12-',
+            'data-version' => '12.11-',
             'language' => 'language-javascript',
             'code' => "var isOpera = Boolean(window.opera);"
           )

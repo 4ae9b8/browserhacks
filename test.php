@@ -326,7 +326,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* IE <= 8 */
+    <pre class="language-javascript"><code>/* IE &lt;= 8 */
 <span class="js-test-ie-1">var isIE = '\v'=='v';</span></code></pre>
     
     <pre class="language-javascript"><code>/* IE 6 */
@@ -372,7 +372,7 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <pre class="language-css"><code>/* Opera 7 */
 <span class="test66">@media all and (min-width: 0px){ .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* Opera 12- */
+    <pre class="language-css"><code>/* Opera &lt;= 12 */
 <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera, IE 8/9/10 */
@@ -387,11 +387,11 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* Opera */
-<span class="test-js-op-1">var isOpera = /^function \(/.test([].sort);</span></code></pre>
+    <pre class="language-javascript"><code>/* Opera &lt;= 9.64 */
+<span class="js-test-op-1">var isOpera = /^function \(/.test([].sort);</span></code></pre>
 
-    <pre class="language-javascript"><code>/* Opera <= 12 */
-<span class="test-js-op-2">var isOpera = Boolean(window.opera);</code></pre>
+    <pre class="language-javascript"><code>/* Opera &lt;= 12.11 */
+<span class="js-test-op-2">var isOpera = Boolean(window.opera);</span></code></pre>
     </section>
 </article>
 
