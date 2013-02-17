@@ -27,12 +27,24 @@ if (js_test_ff_2) $('.js-test-ff-2').addClass(testClass);
 var js_test_ie_1 = '\v'=='v';
 if (js_test_ie_1) $('.js-test-ie-1').addClass(testClass);
 
-// var js_test_ie_2; 
-// try {js_test_ie_2 = "/*@cc_on @_jscript_version == 5.6 || (@_jscript_version == 5.7 && !window.XMLHttpRequest) @*/"} catch(e) {js_test_ie_2=false;}
-// if (js_test_ie_2) $('.js-test-ie-2').addClass(testClass);
+(checkIE = document.createElement("b")).innerHTML = "<!--[if IE 6]><i></i><![endif]-->";
+var js_test_ie_2 = checkIE.getElementsByTagName("i").length == 1;
+if (js_test_ie_2) $('.js-test-ie-2').addClass(testClass);
 
-//var js_test_ie_3 = /*@cc_on!@*/false && document.documentMode === 10;
-//if (js_test_ie_3) = $('.js-test-ie-3').addClass(testClass);
+(checkIE = document.createElement("b")).innerHTML = "<!--[if IE 7]><i></i><![endif]-->";
+var js_test_ie_3 = checkIE.getElementsByTagName("i").length == 1;
+if (js_test_ie_3) $('.js-test-ie-3').addClass(testClass);
+
+(checkIE = document.createElement("b")).innerHTML = "<!--[if IE 8]><i></i><![endif]-->";
+var js_test_ie_4 = checkIE.getElementsByTagName("i").length == 1;
+if (js_test_ie_4) $('.js-test-ie-4').addClass(testClass);
+
+(checkIE = document.createElement("b")).innerHTML = "<!--[if IE 9]><i></i><![endif]-->";
+var js_test_ie_5 = checkIE.getElementsByTagName("i").length == 1;
+if (js_test_ie_5) $('.js-test-ie-5').addClass(testClass);
+
+var js_test_ie_6 = eval("/*@cc_on!@*/false") && document.documentMode === 10;
+if (js_test_ie_6) $('.js-test-ie-6').addClass(testClass);
 
 /*
  * Opera

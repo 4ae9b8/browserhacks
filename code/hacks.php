@@ -299,22 +299,40 @@
         ),
         "javascript" => array(
           array (
-            'version' => 'IE',
-            'data-version' => '6|7|8|9|10',
+            'version' => 'IE <= 8',
+            'data-version' => '6|7|8',
             'language' => 'language-javascript',
-            'code' => "var isIE = '\v'=='v';"
+            'code' => "var isIE = '\\v'=='v';"
           ),
           array (
-            'version' => 'IE 6 - using conditional comments',
+            'version' => 'IE 6',
             'data-version' => '6',
             'language' => 'language-javascript',
-            'code' => "try {IE6=@cc_on @_jscript_version <= 5.7&&@_jscript_build<10000} catch(e){IE6=false;}"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+          ),
+          array (
+            'version' => 'IE 7',
+            'data-version' => '7',
+            'language' => 'language-javascript',
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+          ),
+          array (
+            'version' => 'IE 8',
+            'data-version' => '8',
+            'language' => 'language-javascript',
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+          ),
+          array (
+            'version' => 'IE 9',
+            'data-version' => '9',
+            'language' => 'language-javascript',
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 10',
             'data-version' => '10',
             'language' => 'language-javascript',
-            'code' => "/*@cc_on!@*/false && document.documentMode === 10"
+            'code' => "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;"
           )
         )
       )

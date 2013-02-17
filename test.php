@@ -326,15 +326,27 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* IE */
+    <pre class="language-javascript"><code>/* IE <= 8 */
 <span class="js-test-ie-1">var isIE = '\v'=='v';</span></code></pre>
-
+    
     <pre class="language-javascript"><code>/* IE 6 */
-<span class="js-test-ie-2">try {=@cc_on @_jscript_version &lt;= 5.7&&@_jscript_build&lt;10000} catch(e){=false;}</span></code></pre>
+<span class="js-test-ie-2">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->";
+var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 7 */
+<span class="js-test-ie-3">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->";
+var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 8 */
+<span class="js-test-ie-4">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->";
+var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 9 */
+<span class="js-test-ie-5">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->";
+var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
-<span class="js-test-ie-3">/*@cc_on!@*/false && document.documentMode === 10</span></code></pre>
-
+<span class="js-test-ie-6">var isIE = eval("/*@cc_on!@*/false") && document.documentMode === 10;</span></code></pre>
     </section>
 </article>
             
