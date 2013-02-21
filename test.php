@@ -15,7 +15,9 @@
     <meta property="og:url" content="http://browserhacks.com">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/browserhacks.css">
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if gt IE 8]><!--><link rel="stylesheet" href="css/browserhacks.css"><!--<![endif]-->
+    <!--[if lt IE 9]><!--><link rel="stylesheet" href="css/browserhacks-ie.css"><!--<![endif]-->
     <link rel="stylesheet" href="css/browserhacks-tests.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
 </head>
@@ -73,7 +75,7 @@
         </p>
     </article>
 
-    <article data-high="1">
+    <article data-high="1" class="header-test">
         <section data-cols="2">
             <div>
                 <h2><span class="fontawesome-cog"></span>How does it work?</h2>
@@ -81,7 +83,7 @@
                 <p><strong>However</strong>, when the point is to target <em>everything but X</em> (which in most cases is IE), being <span class="example-span">green</span> means your browser is standard compliant so it's a very good thing!</p>
             </div>
             <div>
-                <h2><span class="fontawesome-cog"></span>Want to report something weird?</h2>
+                <h2><span class="fontawesome-flag"></span>Want to report something weird?</h2>
                 <p>You can help us making this tool even more accurate by reporting things you think are weird or even bugs. Or even better, if you ever happen to find a new hacks, just <a href="https://github.com/4ae9b8/browserhacks/issues?state=open">open an issue on a bug tracker on GitHub</a>. Thanks! :)</p>
             </div>
         </section>
@@ -430,7 +432,7 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 <span class="js-test-sa-1">var isSafari = /a/.__proto__=='//';</span></code></pre>
     </section>
 </article>
-     <article data-high="3">
+     <article data-high="3" class="footer-test">
         <section data-cols="1">
             <div>
                 <footer>
@@ -443,11 +445,6 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="js/modernizr.custom.38859.js"></script>
     <script src="js/browserhacks-tests.js"></script>
-
-    <!--[if (gte IE 6)&(lte IE 8)]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <script type="text/javascript" src="js/selectivizr-min.js"></script>
-    <![endif]-->
 
     <script type="text/javascript">
     // Fallback CSS animation

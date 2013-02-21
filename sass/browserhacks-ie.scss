@@ -1,0 +1,118 @@
+//Compass
+@import "compass/css3/images";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+
+//Variables
+$ie: #0a90dd;
+$fx: #f77918; // #e26c0c
+$ch: gold; //#3cbc44;
+$sa: #999; //#46bfe6;
+$op: #f63b3c;
+$us: #4ae9b8; // Our awesome colour :D
+$prism_css: #690;
+
+@import "google-fonts", "animation";
+
+%cf {
+	zoom: 1;
+
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
+  background: url(/img/grey.png) #eee;
+  position: relative;
+}
+
+.nav-browser {
+	@extend %cf;
+	width: 100%;
+	list-style: none;
+
+	li {
+		width: 19.9%;
+		float: left;
+		padding: 5px 0;
+	}
+
+	a {
+		text-align: center;
+		display: block;
+		color: #333;
+		text-decoration: none;
+	}
+
+	.ch { background: $ch; }
+	.sa { background: $sa; }
+	.op { background: $op; }
+	.fx { background: $fx; }
+	.ie { background: $ie; }
+}
+
+h1 {
+    text-align: center;
+    font:4em 'PT Mono', sans-serif;
+    text-shadow: 0 .03em white, 0 .06em silver;
+    text-transform: uppercase;
+    margin:1em 0 0 0;
+    color: #333;
+
+    a {
+      color: #333 !important;
+      text-decoration: none;
+    }
+}
+
+.header-test {
+	@extend %cf;
+	div {
+		float: left;
+		width: 47.9%;
+		padding: 1%;
+	}
+}
+
+#ch, #fx, #sa, #op, #ie {
+	margin: 1%;
+	padding: 1% 0;
+	border-top: 5px solid;
+
+	h2 {
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+		border-bottom: 1px dotted;
+	}
+
+	h3 {
+		border-bottom: 1px solid silver;
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+	}
+
+	pre {
+		margin-bottom: 15px;
+		border: 1px dotted silver;
+		padding: 5px
+	}
+}
+
+#ch, #ch h2 { border-color: $ch; }
+#fx, #fx h2 { border-color: $fx; }
+#op, #op h2 { border-color: $op; }
+#sa, #sa h2 { border-color: $sa; }
+#ie, #ie h2 { border-color: $ie; }
+
+.footer-test {
+	padding: 1%;
+}
