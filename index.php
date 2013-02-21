@@ -10,7 +10,7 @@
     <meta name="description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
 
     <meta property="og:title" content="browserhacks.com">
-    <meta property="og:description" content="An extensive list of browserhacks from all over the interwebs.">
+    <meta property="og:description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
     <meta property="og:image" content="http://browserhacks.com/img/browserhacks_200.jpg">
     <meta property="og:url" content="http://browserhacks.com">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
