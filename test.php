@@ -15,9 +15,11 @@
     <meta property="og:url" content="http://browserhacks.com">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
 
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <!--[if gt IE 8]><!--><link rel="stylesheet" href="css/browserhacks.css"><!--<![endif]-->
-    <!--[if lt IE 9]><!--><link rel="stylesheet" href="css/browserhacks-ie.css"><!--<![endif]-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/browserhacks-ie.css">
+    <![endif]-->
+    <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-tests.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
 </head>
