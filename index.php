@@ -7,7 +7,7 @@
     <meta name="author" content="Hugo Giraudel, Tim Pietrusky">
     <meta name="robots" content="index,follow">
     <meta name="revisit-after" content="1 days">
-    <meta name="description" content="An extensive list of browserhacks from all over the interwebs.">
+    <meta name="description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
 
     <meta property="og:title" content="browserhacks.com">
     <meta property="og:description" content="An extensive list of browserhacks from all over the interwebs.">
