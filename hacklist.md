@@ -56,12 +56,9 @@
 
 ## PROPERTY / VALUE HACKS
 
-	/* IE 6 - any combination of these characters _ - £ ¬ ¦ 
+	/* IE 6 */ 
 	.selector { _color: blue; }
 	.selector { -color: blue; }
-	.selector { £color: blue; }
-	.selector { ¬color: blue; }
-	.selector { ¦color: blue; }
 	 
 	/* IE 6/7 - any combination of these characters ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
 	.selector { !color: blue; }
@@ -91,10 +88,8 @@
 	/* IE 6/7 - acts as an !important */
 	.selector { color: blue !ie; } /* string after ! can be anything */
  
-	/* IE 7/8/9/10 */
-	.selector { color/*\**/: blue\9; }
-	
 	/* IE 6/7/8/9/10 */
+	.selector { color/*\**/: blue\9; }
 	.selector { color: blue\9; }
 
 	/* IE 8 */

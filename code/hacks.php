@@ -198,10 +198,10 @@
         ),
         'propertyValue' => array(
           array (
-            'version' => "IE 6 - any combination of these characters: \n_ - £ ¬ ¦",
+            'version' => "IE 6",
             'data-version' => '6',
             'language' => 'language-css',
-            'code' => ".selector { _color: blue; } \n.selector { -color: blue; } \n.selector { £color: blue; } \n.selector { ¬color: blue; } \n.selector { ¦color: blue; }"
+            'code' => ".selector { _color: blue; } \n.selector { -color: blue; }"
           ),
           array (
             'version' => "IE 6/7 - any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
@@ -229,16 +229,10 @@
             'code' => ".selector:nth-of-type(1n) { color: blue\9; }"
           ),
           array (
-            'version' => 'IE 7/8/9/10',
-            'data-version' => '7|8|9|10',
-            'language' => 'language-css',
-            'code' => ".selector { color/*\**/: blue\9; }"
-          ),
-          array (
             'version' => 'IE 6/7/8/9/10',
             'data-version' => '6|7|8|9|10',
             'language' => 'language-css',
-            'code' => ".selector { color: blue\9; }"
+            'code' => ".selector { color: blue\9; } \n.selector { color/*\**/: blue\9; }"
           ),
           array (
             'version' => 'Everything but IE 6',
