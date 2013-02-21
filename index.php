@@ -9,7 +9,7 @@
     <meta name="revisit-after" content="1 days">
     <meta name="description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
 
-    <meta property="og:title" content="browserhacks.com">
+    <meta property="og:title" content="Browserhacks">
     <meta property="og:description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
     <meta property="og:image" content="http://browserhacks.com/img/browserhacks_200.jpg">
     <meta property="og:url" content="http://browserhacks.com">
