@@ -94,7 +94,7 @@
                         </a>
                     </div>
                     <div>
-                        <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
+                        <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
                             <button data-type="2"><span class="fontawesome-twitter"></span> Spread the word</button>
                         </a>
                     </div>
@@ -140,17 +140,17 @@
         <section data-cols="3">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="1"><span class="fontawesome-github"></span> Fork me</button>
+                    <button data-type="1"><span class="fontawesome-github"></span> Add hacks or report bugs</button>
                 </a>
             </div>
             <div>
-                <a href="http://twitter.com/share?text=An+extensive+list+of+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
+                <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
                     <button data-type="1"><span class="fontawesome-twitter"></span> Spread the word</button>
                 </a>
             </div>
             <div>
                 <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                    <button data-type="1"><span class="fontawesome-road"></span> Test page</button>
+                    <button data-type="1"><span class="fontawesome-magic"></span> Almighty test page</button>
                 </a>
             </div>
         </section>
@@ -161,7 +161,15 @@
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by The Fabulous <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
+                    <p>
+                        <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
+                    </p>
+                        
+                    <p>    
+                        Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
+                        and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
+                        with contributions of the <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
+                    </p>
                 </footer>
             </div>
         </section>

@@ -441,7 +441,15 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
         <section data-cols="1">
             <div>
                 <footer>
-                    <p><a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-angle-up"></span></a>Handcrafted 2013 by The Fabulous <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
+                    <p>
+                        <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
+                    </p>
+                        
+                    <p>    
+                        Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
+                        and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
+                        with contributions of the <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
+                    </p>
                 </footer>
             </div>
         </section>

@@ -310,6 +310,19 @@ body[data-theme='browserhacks'] {
     color: $sa;
   }
 
+  .avatar:before {
+    vertical-align:-50%;
+    padding:0 .25em;
+  }
+
+  .avatar--hugo:before {
+    content: url(http://www.gravatar.com/avatar/729edf889ced7863dedba95452272bca?s=50);
+  };
+
+  .avatar--tim:before {
+    content: url(http://www.gravatar.com/avatar/13a9550a854af911366d9f5deb785cd6?s=50);
+  };
+
   hr {
     background:none;
     border:none;
