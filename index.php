@@ -168,7 +168,7 @@
                     <p>    
                         Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
                         and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
-                        with contributions of the <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
+                        with contributions of the <a href="http://4ae9b8.com" target="_blank">#4ae9b8</a> Team.</p>
                     </p>
                 </footer>
             </div>
