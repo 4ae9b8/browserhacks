@@ -46,6 +46,9 @@ if (js_test_ie_5) $('.js-test-ie-5').addClass(testClass);
 var js_test_ie_6 = eval("/*@cc_on!@*/false") && document.documentMode === 10;
 if (js_test_ie_6) $('.js-test-ie-6').addClass(testClass);
 
+var js_test_ie_7 = document.body.style.msTouchAction != undefined;
+if (js_test_ie_7) $('.js-test-ie-7').addClass(testClass);
+
 /*
  * Opera
  */

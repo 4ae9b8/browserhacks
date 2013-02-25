@@ -327,6 +327,12 @@
             'data-version' => '10',
             'language' => 'language-javascript',
             'code' => "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;"
+          ),
+          array (
+            'version' => 'IE 10',
+            'data-version' => '10',
+            'language' => 'language-javascript',
+            'code' => "var isIE = document.body.style.msTouchAction != undefined;"
           )
         )
       )

@@ -349,6 +349,9 @@ var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
 <span class="js-test-ie-6">var isIE = eval("/*@cc_on!@*/false") && document.documentMode === 10;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 10 */
+<span class="js-test-ie-7">var isIE = document.body.style.msTouchAction != undefined;</span></code></pre>
     </section>
 </article>
             
