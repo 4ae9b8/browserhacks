@@ -30,7 +30,7 @@
 
 .catch-phrase__space {
     padding-left: 0.85em;
-    padding-left: 1ch;
+    padding-left: 1.25ch;
 }
 
 @mixin rotateWords($time, $words, $selector, $nameAnim: showWord, $easing: linear, $infinite: true) {
