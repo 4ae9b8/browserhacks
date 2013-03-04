@@ -24,7 +24,7 @@
 	/* Safari 2/3.1, Opera 9.25 */
 	*|html[xmlns*=""] .selector { }
 
-	/* Safari 5- and Chrome */
+	/* Safari 5- and Chrome 24- */
 	::made-up-pseudo-element, .selector { }
 
 	/* Opera 9.5+ */
@@ -47,6 +47,7 @@
 
 	/* Everything but IE 6/7 */
 	html>/**/body .selector { }
+	head ~ /* */ body .selector { } 
 
 	/* Everything but IE 6/7/8 */
 	:root * > .selector { }
@@ -175,8 +176,25 @@
 	/* IE */
 	IE='\v'=='v'
 
-	/* IE 6 using conditionals */
+	/* IE 6 */
 	try {IE6=@cc_on @_jscript_version <= 5.7&&@_jscript_build<10000} catch(e){IE6=false;}
+
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\";
+	var isIE6 = checkIE.getElementsByTagName(\"i\").length == 1;
+
+	/* IE 7 */
+	var isIE7 = navigator.appVersion.indexOf("MSIE 7.")!=-1;
+
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\";
+	var isIE7 = checkIE.getElementsByTagName(\"i\").length == 1;
+	
+	/* IE 8 */
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\";
+	var isIE8 = checkIE.getElementsByTagName(\"i\").length == 1;
+
+	/* IE 9 */
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\";
+	var isIE9 = checkIE.getElementsByTagName(\"i\").length == 1;
 
 	/* IE 10 */
 	/*@cc_on!@*/false && document.documentMode === 10

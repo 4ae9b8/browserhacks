@@ -219,7 +219,8 @@
 <span class="test8">html > body .selector { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7 */
-<span class="test9">html > /**/ body .selector { background: lightgreen; }</span></code></pre>
+<span class="test9">html > /**/ body .selector { background: lightgreen; }</span>
+<span class="test71">head ~ /* */ body .a { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7/8 */
 <span class="test10">:root * > .selector { background: lightgreen; }</span>
@@ -329,29 +330,30 @@
 
     <section data-cols="1">
     <pre class="language-javascript"><code>/* IE &lt;= 8 */
-<span class="js-test-ie-1">var isIE = '\v'=='v';</span></code></pre>
+<span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
     
     <pre class="language-javascript"><code>/* IE 6 */
 <span class="js-test-ie-2">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->";
-var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+var isIE6 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 7 */
 <span class="js-test-ie-3">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->";
-var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+var isIE7 = checkIE.getElementsByTagName("i").length == 1;</span>
+<span class="js-test-ie-8">var isIE7 = navigator.appVersion.indexOf("MSIE 7.")!=-1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 8 */
 <span class="js-test-ie-4">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->";
-var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+var isIE8 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 9 */
 <span class="js-test-ie-5">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->";
-var isIE = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
-<span class="js-test-ie-6">var isIE = eval("/*@cc_on!@*/false") && document.documentMode === 10;</span></code></pre>
+<span class="js-test-ie-6">var isIE10 = eval("/*@cc_on!@*/false") && document.documentMode === 10;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
-<span class="js-test-ie-7">var isIE = document.body.style.msTouchAction != undefined;</span></code></pre>
+<span class="js-test-ie-7">var isIE10 = document.body.style.msTouchAction != undefined;</span></code></pre>
     </section>
 </article>
             

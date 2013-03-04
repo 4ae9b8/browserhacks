@@ -32,6 +32,21 @@ $prism_css: #690;
   }
 }
 
+//Retina
+@mixin retina() {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    
+    @content;
+
+  }
+}
+
 .clearfix:after {
   content: "";
   display: table;
@@ -93,8 +108,8 @@ body[data-theme='browserhacks'] {
       overflow: hidden;
       height: 1em;
       color: #000;
-      background: url("../img/browser-logos.png") no-repeat;
-      background-size: 5em;
+      background: url("../img/sprite-browser-logos.png") no-repeat;
+      background-size: 4.5em;
       border-top:.125em solid rgba(255, 255, 255, .25);
       border-bottom:.25em solid rgba(0, 0, 0, .5);
       
@@ -113,35 +128,35 @@ body[data-theme='browserhacks'] {
 
     .ch a { 
       background-color: rgba($ch, 1);
-      background-position: center -11.1em;
+      background-position: center -11.6em;
 
       &:hover { background-color: $ch; }
     }
 
     .fx a { 
       background-color: rgba($fx, 1);
-      background-position: center -5.5em;
+      background-position: center -5.7em;
 
       &:hover { background-color: $fx; }
     }
 
     .ie a { 
       background-color: rgba($ie, 1);
-      background-position: center 0.1em;
+      background-position: center -.1em;
 
       &:hover { background-color: $ie; }
     }
 
     .sa a { 
       background-color: rgba($sa, 1);
-      background-position: center -16.9em;
+      background-position: center -17.6em;
 
       &:hover { background-color: $sa; }
     }
 
     .op a { 
       background-color: rgba($op, 1);
-      background-position: center -22.3em;
+      background-position: center -23.4em;
 
       &:hover { background-color: $op; }
     }
@@ -175,8 +190,8 @@ body[data-theme='browserhacks'] {
 
   .th {
     border-bottom: .25em solid;
-    padding: 0.5em 2em;
-    background: url('../img/browser-logos.png') no-repeat;
+    padding: 0.5em 2.5em;
+    background: url('../img/sprite-browser-logos.png') no-repeat;
     background-size: 2em;
     clear: both;
   }
@@ -186,10 +201,10 @@ body[data-theme='browserhacks'] {
   .ie {
     .th { 
       border-color: $ie;
-      background-position: $logo_left .25em;
+      background-position: 0 0;
 
       @media all and (max-width: 370px) {
-        background-position: $logo_left 1.25em;
+        background-position: 0 1em;
       }
     }
   }
@@ -197,28 +212,28 @@ body[data-theme='browserhacks'] {
   .ch { 
     .th { 
       border-color: $ch;
-      background-position: $logo_left -4.25em;
+      background-position: 0 -5em;
     }
   }
 
   .sa {
     .th { 
       border-color: $sa;
-      background-position: $logo_left -6.65em;
+      background-position: 0 -7.7em;
     }
   }
 
   .op {
     .th { 
       border-color: $op;
-      background-position: $logo_left -8.75em;
+      background-position: 0 -10.3em;
     }
   }
 
   .fx {
     .th { 
       border-color: $fx;
-      background-position: $logo_left -2em;
+      background-position: 0 -2.5em;
     }
   }
 
@@ -313,6 +328,10 @@ body[data-theme='browserhacks'] {
   .avatar:before {
     vertical-align:-50%;
     padding:0 .25em;
+
+    @include breakpoint(baby-bear) {
+      display: none;
+    }
   }
 
   .avatar--hugo:before {
@@ -583,5 +602,10 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
   body[data-theme='browserhacks'] {
     background: url(/img/grey_@2x.png) #eee;
+  }
+
+  .nav-browser a,
+  .th {
+    background: url("../img/sprite-browser-logos_@2x.png") no-repeat;
   }
 }
