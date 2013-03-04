@@ -308,7 +308,7 @@
             'version' => 'IE 7',
             'data-version' => '7',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf("MSIE 7.")!=-1"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf(\"MSIE 7.\")!=-1"
           ),
           array (
             'version' => 'IE 8',
