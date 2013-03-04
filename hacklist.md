@@ -24,7 +24,7 @@
 	/* Safari 2/3.1, Opera 9.25 */
 	*|html[xmlns*=""] .selector { }
 
-	/* Safari 5- and Chrome */
+	/* Safari 5- and Chrome 24- */
 	::made-up-pseudo-element, .selector { }
 
 	/* Opera 9.5+ */

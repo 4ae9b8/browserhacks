@@ -38,8 +38,8 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome and Safari 5-',
-            'data-version' => '',
+            'version' => 'Chrome 24- and Safari 5-',
+            'data-version' => '24-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
           )
@@ -372,7 +372,7 @@
             'code' => "@media all and (min-width: 0px){}"
           ),
           array (
-            'version' => 'Opera <= 12',
+            'version' => 'Opera 12-',
             'data-version' => '12-',
             'language' => 'language-css',
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
@@ -392,13 +392,13 @@
         ),
         'javascript' => array(
           array (
-            'version' => 'Opera <= 9.64',
+            'version' => 'Opera 9.64-',
             'data-version' => '9.64-',
             'language' => 'language-javascript',
             'code' => "var isOpera = /^function \(/.test([].sort);"
           ),
           array (
-            'version' => 'Opera <= 12',
+            'version' => 'Opera 12-',
             'data-version' => '12.11-',
             'language' => 'language-javascript',
             'code' => "var isOpera = Boolean(window.opera);"
@@ -427,8 +427,8 @@
             'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
-            'version' => 'Safari (version?) and Chrome',
-            'data-version' => '',
+            'version' => 'Safari 5- and Chrome 24-',
+            'data-version' => '5-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
           )
