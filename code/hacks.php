@@ -187,7 +187,7 @@
             'version' => 'Everything but IE 6/7',
             'data-version' => '6|7',
             'language' => 'language-css',
-            'code' => "html > /**/ body .selector {}"
+            'code' => "html > /**/ body .selector {}\nhead ~ /* */ body .selector {}"
           ),
           array (
             'version' => 'Everything but IE 6/7/8',

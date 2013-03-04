@@ -219,7 +219,8 @@
 <span class="test8">html > body .selector { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7 */
-<span class="test9">html > /**/ body .selector { background: lightgreen; }</span></code></pre>
+<span class="test9">html > /**/ body .selector { background: lightgreen; }</span>
+<span class="test71">head ~ /* */ body .a { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7/8 */
 <span class="test10">:root * > .selector { background: lightgreen; }</span>

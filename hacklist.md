@@ -47,6 +47,7 @@
 
 	/* Everything but IE 6/7 */
 	html>/**/body .selector { }
+	head ~ /* */ body .selector { } 
 
 	/* Everything but IE 6/7/8 */
 	:root * > .selector { }
