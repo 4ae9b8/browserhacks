@@ -49,6 +49,9 @@ if (js_test_ie_6) $('.js-test-ie-6').addClass(testClass);
 var js_test_ie_7 = document.body.style.msTouchAction != undefined;
 if (js_test_ie_7) $('.js-test-ie-7').addClass(testClass);
 
+var js_test_ie_8 = navigator.appVersion.indexOf("MSIE 7.")!=-1;
+if (js_test_ie_8) $('.js-test-ie-8').addClass(testClass);
+
 /*
  * Opera
  */
