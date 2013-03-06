@@ -1,0 +1,82 @@
+.nav-browser {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    font-size:1em;
+    width:100%;
+
+    @include breakpoint(mama-bear) {
+      font-size:.75em;
+    }
+
+    li {
+      width: 20%;
+      float: left;
+    }
+
+    a {
+      display: block;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      height: 1em;
+      color: #000;
+      background: url("../img/sprite-browser-logos.png") no-repeat;
+      background-size: 4.5em;
+      border-top:.125em solid rgba(255, 255, 255, .25);
+      border-bottom:.25em solid rgba(0, 0, 0, .5);
+      
+      &:hover { 
+        height: 4.75em;
+        color: #000;
+      }
+
+      &:visited { color: #000; }
+
+
+      @include breakpoint(mama-bear) {
+        height:2em;
+      }
+    }
+
+    .ch a { 
+      background-color: rgba($ch, 1);
+      background-position: center -11.6em;
+
+      &:hover { background-color: $ch; }
+    }
+
+    .fx a { 
+      background-color: rgba($fx, 1);
+      background-position: center -5.7em;
+
+      &:hover { background-color: $fx; }
+    }
+
+    .ie a { 
+      background-color: rgba($ie, 1);
+      background-position: center -.1em;
+
+      &:hover { background-color: $ie; }
+    }
+
+    .sa a { 
+      background-color: rgba($sa, 1);
+      background-position: center -17.6em;
+
+      &:hover { background-color: $sa; }
+    }
+
+    .op a { 
+      background-color: rgba($op, 1);
+      background-position: center -23.4em;
+
+      &:hover { background-color: $op; }
+    }
+
+  }

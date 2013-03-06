@@ -135,6 +135,24 @@
   include_once('code/hacks.php');
 ?>
     
+
+    <!-- Quotes -->
+
+    <article data-high="4">
+        <section data-cols="1" class="quotes">
+            <blockquote class="quote">
+                <p class="quote-content"></p> 
+                &mdash; <a href="" class="quote-author"></a>
+            </blockquote>
+
+            <ul class="quote-authors clearfix">
+                <?php include('code/quotes.php'); ?>
+            </ul>
+        </section>
+    </article>
+
+
+
     <!-- Social -->
     <article data-high="4">
         <section data-cols="3">
@@ -181,7 +199,20 @@
     <!--[if (gte IE 6)&(lte IE 8)]>
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <script type="text/javascript" src="js/selectivizr-min.js"></script>
-    <![endif]-->
+    <![endif]-->   
+    <script>
+        $('.quote-authors > li').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            var author = $(this).attr("data-author");
+            var quote = $(this).attr("data-quote");
+            var link = $(this).attr("data-link");
+
+            $('.quote-content').html(quote);
+            $('.quote-author').html(author);
+            $('.quote-author').attr('href', link);
+        });
+        $('.quote-authors > li:nth-of-type(3)').click();
+    </script>
 
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
