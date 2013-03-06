@@ -201,17 +201,18 @@
       <script type="text/javascript" src="js/selectivizr-min.js"></script>
     <![endif]-->   
     <script>
-        $('.quote-authors > li').on('click', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-            var author = $(this).attr("data-author");
-            var quote = $(this).attr("data-quote");
-            var link = $(this).attr("data-link");
+        $('.quote-authors > li').on('click', '.quote-authors__avatar', function() {
+            $parent = $(this).parent();
+            $parent.addClass('active').siblings().removeClass('active');
+            var author = $parent.attr("data-author");
+            var quote  = $parent.attr("data-quote");
+            var link   = $parent.attr("data-link");
 
             $('.quote-content').html(quote);
             $('.quote-author').html(author);
             $('.quote-author').attr('href', link);
         });
-        $('.quote-authors > li:nth-of-type(3)').click();
+        $('.quote-authors > li:nth-of-type(3) .quote-authors__avatar').click();
     </script>
 
     <?php if (Browserhacks::isLive()): ?>

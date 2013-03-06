@@ -1,6 +1,6 @@
-.quotes {
+/*section*/.quotes {
 
-	blockquote {
+	/*blockquote*/.quote {
 		border-radius: 3px;
 		background: #EEE0B7;
 		box-shadow: inset 0 0 5px 3px rgba(0,0,0,.075);
@@ -12,7 +12,7 @@
 		color: darken(#EEE0B7, 50%);
 	}
 
-	.quote-content {
+	/*p*/.quote-content {
 		margin: 0;
 		@include inline-block(top);
 		
@@ -20,11 +20,11 @@
 		&:after  { content: '”'; }
 	}
 
-	.quote-author {
+	/*a*/.quote-author {
 		font-size: 0.8em;
 	}
 
-	.quote-authors {
+	/*ul*/.quote-authors {
 		list-style: none;
 		padding: 0;
 		margin: 0 auto;
@@ -48,17 +48,18 @@
 		}
 
 		.active .quote-authors__avatar {
-			box-shadow: 0 0 0 5px rgba(238,224,183,1), 0 0 0 6px rgba(0,0,0,.1);
+			box-shadow: 0 0 0 5px darken(#EEE0B7,8%), 0 0 0 6px rgba(0,0,0,.15);
 		}
 	}
 
-	.quote-authors__avatar {
+	/*div*/.quote-authors__avatar {
 		width: 60px;
 		height: 60px;
 		margin: 0 auto;
 		border-radius: 50%;
 		overflow: hidden;
-		box-shadow: 0 0 0 5px rgba(0,0,0,.1);
+		cursor: pointer;
+		box-shadow: 0 0 0 5px rgba(0,0,0,.075);
 		@include transition(.2s);
 
 		&:hover {
@@ -72,7 +73,7 @@
 		}
 	}
 
-	.quote-authors__name {
+	/*a*/.quote-authors__name {
 		margin-top: .5em;
 		display: block;
 		color: #333;

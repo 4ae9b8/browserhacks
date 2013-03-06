@@ -76,17 +76,32 @@ $quotes = array(
         "author" => "Russ Brown",
         "twitter" => "therusstler",
         "avatar" => "http://si0.twimg.com/profile_images/2900031473/5fa6b9bf448b8e7c2108ab4acd526cbe_bigger.jpeg"
+    ),
+    array(
+        "quote" => "Finally a home for browser-specific css/js hacks",
+        "from" => "https://twitter.com/shakeeb/status/307889195052056577",
+        "author" => "Shakeeb Rahman",
+        "twitter" => "shakeeb",
+        "avatar" => "http://si0.twimg.com/profile_images/2991299788/c055e675aad87364ecb564acad88723b_bigger.png"
     )
 );
 
 $dump = '';
-$picks = array_rand($quotes, 5);
+$picks = array_rand($quotes, 5); //Rand 5 quotes
 for($i = 0; $i < 5; $i++) {
-	$dump .= "<li data-quote=\"" . $quotes[$picks[$i]]['quote'] . "\" data-author=\"" . $quotes[$picks[$i]]['author'] . "\" data-link=\"" . $quotes[$picks[$i]]['from'] . "\">";
-    $dump .= "<div class=\"quote-authors__avatar\">";
-    $dump .= "<img src=\"" . $quotes[$picks[$i]]['avatar'] . "\" alt=\"" . $quotes[$picks[$i]]['author'] . "'s Twitter Avatar\">";
+	$dump .= "<li 
+			data-quote=\""  . $quotes[$picks[$i]]['quote']  . "\" 
+			data-author=\"" . $quotes[$picks[$i]]['author'] . "\" 
+			data-link=\"" 	. $quotes[$picks[$i]]['from'] 	. "\">";
+    $dump .= "<div 
+    		class=\"quote-authors__avatar\">";
+    $dump .= "<img 
+    		src=\"" . $quotes[$picks[$i]]['avatar'] . "\" 
+    		alt=\"" . $quotes[$picks[$i]]['author'] . "'s Twitter Avatar\">";
     $dump .= "</div>";
-    $dump .= "<a href=\"http://twitter.com/" . $quotes[$picks[$i]]['twitter'] . "\" class=\"quote-authors__name\">" . $quotes[$picks[$i]]['author'] . "</a>";
+    $dump .= "<a 
+   			href=\"http://twitter.com/" . $quotes[$picks[$i]]['twitter'] . "\" 
+    		class=\"quote-authors__name\">" . $quotes[$picks[$i]]['author'] . "</a>";
     $dump .= "</li>";
 }
 
