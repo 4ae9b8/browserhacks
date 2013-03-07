@@ -200,21 +200,6 @@
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
       <script type="text/javascript" src="js/selectivizr-min.js"></script>
     <![endif]-->   
-    <script>
-        $('.quote-authors > li').on('click', '.quote-authors__avatar', function() {
-            $parent = $(this).parent();
-            $parent.addClass('active').siblings().removeClass('active');
-            var author = $parent.attr("data-author");
-            var quote  = $parent.attr("data-quote");
-            var link   = $parent.attr("data-link");
-
-            $('.quote-content').html(quote);
-            $('.quote-author').html(author);
-            $('.quote-author').attr('href', link);
-        });
-        $('.quote-authors > li:nth-of-type(3) .quote-authors__avatar').click();
-    </script>
-
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     <?php endif; ?>

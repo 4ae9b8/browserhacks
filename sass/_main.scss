@@ -14,7 +14,7 @@
  */
 body {
   font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
-  background: url(/img/grey.png) #eee;
+  background: url('../img/grey.png') #eee;
   position: relative;
 
   @include breakpoint(baby-bear){ font-size:.925em; }
@@ -131,11 +131,11 @@ pre {
 }
 
 .avatar--hugo:before {
-  content: url(http://www.gravatar.com/avatar/729edf889ced7863dedba95452272bca?s=50);
+  content: url('../img/hugo_giraudel.jpg');
 };
 
 .avatar--tim:before {
-  content: url(http://www.gravatar.com/avatar/13a9550a854af911366d9f5deb785cd6?s=50);
+  content: url('../img/tim_pietrusky.jpg');
 };
 
 /**
