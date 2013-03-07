@@ -140,7 +140,7 @@
     <article data-high="4" id="quotes">
       <section data-cols="1" class="quotes">
           <blockquote class="quote"></blockquote>
-          <ul class="quote-authors clearfix"></ul>
+          <ul class="quote-authors"></ul>
       </section>
     </article>
 
@@ -185,17 +185,19 @@
         </section>
     </article>  
     
+    <!-- Template: Quote -->
+    <script id="template_quote" type="text/template">
+       <p class="quote-content"><%= quote %></p> 
+       &mdash; <a href="<%= from %>" class="quote-author" target="_blank"><%= author %></a>
+    </script>
+    
+    <!-- Template: Author -->
     <script id="template_author" type="text/template">
         <div class="quote-authors__avatar">
           <img src="img/avatar/<%= twitter %>.jpg" alt="<%= author %>'s Twitter Avatar">
         </div>
 
         <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
-    </script>
-
-    <script id="template_quote" type="text/template">
-       <p class="quote-content"><%= quote %></p> 
-       &mdash; <a href="<%= from %>" class="quote-author" target="_blank"><%= author %></a>
     </script>
 
     <script src="js/libs.js"></script>

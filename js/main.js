@@ -357,6 +357,7 @@
   App.Views.Quote = Backbone.View.extend({
     el : $('.quotes'),
     template : template('template_quote'),
+    current : 0,
 
     initialize : function() {
       // Set position of every author
@@ -379,12 +380,15 @@
     },
 
     updateText : function(id) {
-      var id = typeof id != 'undefined' ? id : 0;
-      var template = this.template(this.collection.toJSON()[id]);
+      current = typeof id != 'undefined' ? id : 0;
+      var template = this.template(this.collection.toJSON()[current]);
       this.$el.find('.quote').html(template);
     }
   });
 
+  /* 
+   * Author 
+   */
   App.Views.Author = Backbone.View.extend({
     tagName : 'li',
     template : template('template_author'),
