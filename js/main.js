@@ -29,6 +29,11 @@
     }
   });
 
+  App.Models.Author = Backbone.Model.extend({
+    initialize : function() {
+    }
+  });
+
 
   /***************************************************
    *
@@ -36,6 +41,14 @@
    */
   App.Collections.Browser = Backbone.Collection.extend({
     model : App.Models.Browser
+  });
+
+  App.Collections.Quote = Backbone.Collection.extend({
+    model : App.Models.Author,
+    url : 'code/quotes.php',
+
+    initialize : function() {
+    }
   });
 
 
@@ -337,6 +350,82 @@
     }
   });
 
+  /* 
+   * Quote 
+   */
+  App.Views.Quote = Backbone.View.extend({
+    el : $('.quotes'),
+    template : template('template_quote'),
+
+    initialize : function() {
+      vent.bind("click_author", this.updateText, this);
+    },
+
+    render : function() {
+      // Set class
+      // this.$el.attr('class', this.model.get('name'));
+      // Set title
+      // this.$el.attr('data-text', this.model.get('normal-name'));
+
+      // this.$el.find('.quote-content').html(this.model.get('quote'));
+      // this.$el.find('.quote-author').html(this.model.get('quote'));
+
+      this.updateText();
+
+      console.log(this.collection);
+
+      this.collection.each(this.addOne, this);
+      return this;
+    },
+
+    addOne : function(author) {
+      // author.update();
+      var view_author = new App.Views.Author({model : author});
+      this.$el.find('.quote-authors').append(view_author.render().el);
+    },
+
+    updateText : function(id) {
+
+      // var id = typeof id != 'undefined' ? id : 0;
+
+      // console.log(this.collection.models[id].attributes);
+
+
+
+      // var template = this.template(this.collection.models[id]);
+    }
+  });
+
+  App.Views.Author = Backbone.View.extend({
+    tagName : 'li',
+    template : template('template_author'),
+
+    events : {
+      'click' : 'clicked'
+    },
+
+    initialize : function() {
+    },
+
+    clicked : function() {
+      vent.trigger("click_author", {'class' : this.$el.attr('class')});
+
+      $(this.el.parentElement).find('li.active').removeClass('active');
+      this.$el.addClass('active');
+    },
+
+    render : function() {
+      var template = this.template(this.model.toJSON());
+
+      this.$el.attr('data-quote', this.model.get('quote'));
+      this.$el.attr('data-author', this.model.get('author'));
+      this.$el.attr('data-link', this.model.get('from'));
+
+      this.$el.html(template);
+      return this;
+    }
+  });
+
 
   /*--------------------------------------------------
    *
@@ -357,6 +446,29 @@
 
   // Handles the search
   var view_search = new App.Views.Search();
+
+  // Handles the quote
+  var quote_collection = new App.Collections.Quote();
+  quote_collection.fetch().then(function() {
+    var view_quote = new App.Views.Quote({ collection : quote_collection });
+
+    console.log(quote_collection);
+    view_quote.render();
+  });
+
+
+  // $('.quote-authors > li').on('click', function() {
+  //   $(this).addClass('active').siblings().removeClass('active');
+  //     var author = $(this).attr("data-author");
+  //     var quote = $(this).attr("data-quote");
+  //     var link = $(this).attr("data-link");
+
+  //     $('.quote-content').html(quote);
+  //     $('.quote-author').html(author);
+  //     $('.quote-author').attr('href', link);
+  // });
+
+  // $('.quote-authors > li:nth-of-type(3)').click();
 
 
   /*--------------------------------------------------

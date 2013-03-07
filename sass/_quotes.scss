@@ -36,6 +36,7 @@
 		li {
 			float: left;
 			width: 20%;
+			margin: 0 0 .75em 0;
 			text-align: center;
 
 			@include breakpoint(baby-bear) { width: 50%; margin: 1em 0; }
@@ -55,10 +56,11 @@
 	.quote-authors__avatar {
 		width: 60px;
 		height: 60px;
-		margin: 0 auto;
+		margin: 0 auto 1em auto;
 		border-radius: 50%;
 		overflow: hidden;
 		box-shadow: 0 0 0 5px rgba(0,0,0,.1);
+		cursor:pointer;
 		@include transition(.2s);
 
 		&:hover {
@@ -75,7 +77,6 @@
 	.quote-authors__name {
 		margin-top: .5em;
 		display: block;
-		color: #333;
 	}
 
 }

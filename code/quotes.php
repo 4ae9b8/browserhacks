@@ -79,17 +79,20 @@ $quotes = array(
     )
 );
 
-$dump = '';
-$picks = array_rand($quotes, 5);
-for($i = 0; $i < 5; $i++) {
-	$dump .= "<li data-quote=\"" . $quotes[$picks[$i]]['quote'] . "\" data-author=\"" . $quotes[$picks[$i]]['author'] . "\" data-link=\"" . $quotes[$picks[$i]]['from'] . "\">";
-    $dump .= "<div class=\"quote-authors__avatar\">";
-    $dump .= "<img src=\"" . $quotes[$picks[$i]]['avatar'] . "\" alt=\"" . $quotes[$picks[$i]]['author'] . "'s Twitter Avatar\">";
-    $dump .= "</div>";
-    $dump .= "<a href=\"http://twitter.com/" . $quotes[$picks[$i]]['twitter'] . "\" class=\"quote-authors__name\">" . $quotes[$picks[$i]]['author'] . "</a>";
-    $dump .= "</li>";
-}
+echo json_encode($quotes);
 
-echo $dump;
+
+// $dump = '';
+// $picks = array_rand($quotes, 5);
+// for($i = 0; $i < 5; $i++) {
+// 	$dump .= "<li data-quote=\"" . $quotes[$picks[$i]]['quote'] . "\" data-author=\"" . $quotes[$picks[$i]]['author'] . "\" data-link=\"" . $quotes[$picks[$i]]['from'] . "\">";
+//     $dump .= "<div class=\"quote-authors__avatar\">";
+//     $dump .= "<img src=\"" . $quotes[$picks[$i]]['avatar'] . "\" alt=\"" . $quotes[$picks[$i]]['author'] . "'s Twitter Avatar\">";
+//     $dump .= "</div>";
+//     $dump .= "<a href=\"http://twitter.com/" . $quotes[$picks[$i]]['twitter'] . "\" class=\"quote-authors__name\">" . $quotes[$picks[$i]]['author'] . "</a>";
+//     $dump .= "</li>";
+// }
+
+// echo $dump;
 
 ?>
