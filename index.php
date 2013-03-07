@@ -137,7 +137,7 @@
     
 
     <!-- Quotes -->
-    <article data-high="4">
+    <article data-high="4" id="quotes">
       <section data-cols="1" class="quotes">
           <blockquote class="quote"></blockquote>
           <ul class="quote-authors clearfix"></ul>
@@ -187,7 +187,7 @@
     
     <script id="template_author" type="text/template">
         <div class="quote-authors__avatar">
-          <img src="<%= avatar %>" alt="<%= author %>'s Twitter Avatar">
+          <img src="img/avatar/<%= twitter %>.jpg" alt="<%= author %>'s Twitter Avatar">
         </div>
 
         <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
