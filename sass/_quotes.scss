@@ -57,6 +57,10 @@
 			text-align: center;
 			@include filter(grayscale(100%) blur(1px));
 
+			&:hover {
+				@include filter(grayscale(0) blur(0));
+			}
+
 			@include breakpoint(baby-bear) { 
 				width: 10em; 
 				margin: 1em 0; 
