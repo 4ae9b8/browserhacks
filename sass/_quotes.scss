@@ -1,8 +1,14 @@
+/* ******* *
+ * $QUOTES *
+ * ******* */
+
+/*section*/
 .quotes {
 
-	blockquote {
+	/*blockquote*/
+	.quote {
 		border-radius: 3px;
-		background: #EEE0B7;
+		background: lighten(#EEE0B7, 10%);
 		box-shadow: inset 0 0 5px 3px rgba(0,0,0,.075);
 		padding: 20px;
 		margin: 0;
@@ -12,6 +18,7 @@
 		color: darken(#EEE0B7, 50%);
 	}
 
+	/*p*/
 	.quote-content {
 		margin: 0;
 		@include inline-block(top);
@@ -20,10 +27,12 @@
 		&:after  { content: '”'; }
 	}
 
+	/*a*/
 	.quote-author {
 		font-size: 0.8em;
 	}
 
+	/*ul*/
 	.quote-authors {
 		list-style: none;
 		padding: 0;
@@ -39,28 +48,53 @@
 			margin: 0 0 .75em 0;
 			text-align: center;
 
-			@include breakpoint(baby-bear) { width: 50%; margin: 1em 0; }
+			@include breakpoint(baby-bear) { 
+				width: 50%; 
+				margin: 1em 0; 
 
-			&:last-of-type {
-				@include breakpoint(baby-bear) {
+				&:last-of-type {
 					width: 100%;
 				}
 			}
 		}
 
-		.active .quote-authors__avatar {
-			box-shadow: 0 0 0 5px rgba(238,224,183,1), 0 0 0 6px rgba(0,0,0,.1);
+		.active {
+			position: relative;
+
+			&:before {
+				content: '';
+				@include transform(rotate(45deg));
+				background: lighten(#EEE0B7, 10%);
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 50%;
+				margin-left: -10px;
+				box-shadow: inset -3px -3px 4px 0px rgba(0,0,0,.075);
+				top: -40px;
+
+				@include breakpoint(baby-bear) { 
+					display: none;
+				}
+			}
+
+			.quote-authors__avatar {
+				box-shadow: 
+					0 0 0 5px darken(#EEE0B7,8%), 
+					0 0 0 6px rgba(0,0,0,.15);
+			}
 		}
 	}
 
+	/*div*/
 	.quote-authors__avatar {
-		width: 60px;
-		height: 60px;
-		margin: 0 auto 1em auto;
+		width: 73px;
+		height: 73px;
+		margin: 0 auto;
 		border-radius: 50%;
 		overflow: hidden;
-		box-shadow: 0 0 0 5px rgba(0,0,0,.1);
-		cursor:pointer;
+		cursor: pointer;
+		box-shadow: 0 0 0 5px rgba(0,0,0,.075);
 		@include transition(.2s);
 
 		&:hover {
@@ -74,6 +108,7 @@
 		}
 	}
 
+	/*a*/
 	.quote-authors__name {
 		margin-top: .5em;
 		display: block;

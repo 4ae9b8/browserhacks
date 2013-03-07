@@ -484,4 +484,17 @@
       $(".catch-phrase__anim").html(tips[i]);
     }, 400);
   }
+
+   $('.quote-authors > li').on('click', '.quote-authors__avatar', function() {
+      $parent = $(this).parent();
+      $parent.addClass('active').siblings().removeClass('active');
+      var author = $parent.attr("data-author");
+      var quote  = $parent.attr("data-quote");
+      var link   = $parent.attr("data-link");
+
+      $('.quote-content').html(quote);
+      $('.quote-author').html(author);
+      $('.quote-author').attr('href', link);
+  });
+  $('.quote-authors > li:nth-of-type(3) .quote-authors__avatar').click();
 })();
