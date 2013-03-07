@@ -1,0 +1,44 @@
+/* ********* *
+ * $HEADINGS *
+ * ********* */
+
+h1 {
+  text-align: center;
+  font:4em 'PT Mono', sans-serif;
+  text-shadow: 0 .03em white, 0 .06em silver;
+  text-transform: uppercase;
+  margin:1em 0 0 0;
+  color: #333;
+
+  @include breakpoint(mama-bear) {
+    font-size:3em;
+  }
+}
+
+h2 {
+  font: 1.85em 'Montserrat', sans-serif;
+  padding-bottom: 0.4em;
+  margin-bottom: 0.4em;
+  border-bottom: .225em solid #aaa;
+
+  span {
+    color: #aaa;
+  }
+
+  &[data-type="1"] { span { color: rgba($ie, .7); } }
+  &[data-type="2"] { span { color: rgba($fx, .7); } }
+  &[data-type="3"] { span { color: rgba($op, .7); } }
+}
+
+h3 {
+  font: bold 1.15em 'PT Mono', sans-serif;
+  border-bottom: 1px solid silver;
+  padding-bottom: 0.5em;
+}
+
+h1 span[class*="fontawesome-"],
+h2 span[class*="fontawesome-"],
+h3 span[class*="fontawesome-"] {
+  padding-right: .35em;
+  font-weight: normal;
+}

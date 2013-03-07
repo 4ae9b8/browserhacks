@@ -1,0 +1,50 @@
+/* ******* *
+ * $SEARCH *
+ * ******* */
+
+div[data-type="search"] {
+  @include transition(.15s width ease-in-out);
+
+  &.active {
+    width:100%;
+  }
+
+  @include breakpoint(baby-bear) {
+    padding: 0 !important;
+    margin-bottom: 1em;
+    @include transition(0s width ease-in-out);
+  }
+}
+
+.form-wrapper {
+  margin: 0;
+
+  label {
+    font-size: 2em; 
+    margin-bottom: 0.5em; 
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    background: #fff;
+    height: 1.7em;
+    font: 2em/1.5 sans-serif;
+    padding: 0 .5em;
+    outline:none;
+    border: rgba(0,0,0, .75) solid .015em;
+    border-right: .25em solid rgba(0, 0, 0, .3);
+    border-left: .25em solid rgba(0, 0, 0, .3);
+    @include transition(all .25s ease-in-out);
+
+    &:focus {
+      background: #fff;
+      border-color: $ie;
+      color: #000;
+    }
+  }
+
+  & + p {
+    font-size: 1.3em;
+  }
+}

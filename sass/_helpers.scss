@@ -1,13 +1,21 @@
-//Variables
+/* ******** *
+ * $HELPERS *
+ * ******** */
+
+/**
+ * Variables
+ */
 $ie: #0a90dd;
-$fx: #f77918; // #e26c0c
-$ch: gold; //#3cbc44;
-$sa: #999; //#46bfe6;
+$fx: #f77918;
+$ch: gold;
+$sa: #999;
 $op: #f63b3c;
-$us: #4ae9b8; // Our awesome colour :D
+$us: #4ae9b8;
 $prism_css: #690;
 
-//MQ
+/**
+ * Media Queries handler
+ */
 @mixin breakpoint($point) {
   @if $point == papa-bear {
     @media (max-width: 79em) { @content; }
@@ -20,7 +28,9 @@ $prism_css: #690;
   }
 }
 
-//Retina
+/**
+ * Retina dispalys handler
+ */
 @mixin retina() {
   @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -29,13 +39,20 @@ $prism_css: #690;
   only screen and (        min-device-pixel-ratio: 2),
   only screen and (                min-resolution: 192dpi),
   only screen and (                min-resolution: 2dppx) { 
-    
     @content;
-
   }
 }
 
+/**
+ * Clearfix + silent clearfix
+ */
 .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+%cf:after {
   content: "";
   display: table;
   clear: both;
