@@ -10,6 +10,8 @@
 .quotes {
 	padding-top:2em;
 
+	$color-quotes: lighten($op, 0);;
+
 	/*blockquote*/
 	.quote {
 		background: lighten($sa, 30%);
@@ -17,8 +19,8 @@
 		margin: 0;
 		font-size: 1.5em;
 		text-align: center;
-		color: lighten($op, 10%);
-		border-bottom:.25em solid lighten($op, 10%);
+		color: $color-quotes;
+		border-bottom:.25em solid $color-quotes;
 
 		@include breakpoint(baby-bear) { 
 			min-height:7.5em;
@@ -79,7 +81,7 @@
 			&:before {
 				content: '';
 				@include transform(rotate(45deg));
-				background: #f86c6d;
+				background: $color-quotes;
 				width: 1.25em;
 				height: 1.25em;
 				position: absolute;
@@ -91,7 +93,7 @@
 
 			.quote-authors__avatar {
 				box-shadow: 
-					0 0 0 .25em lighten($op, 10%), 
+					0 0 0 .25em $color-quotes, 
 					0 0 0 .45em rgba(0, 0, 0, .15)
 				;
 
