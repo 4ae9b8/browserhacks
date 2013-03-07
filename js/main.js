@@ -30,7 +30,8 @@
   });
 
   App.Models.Author = Backbone.Model.extend({
-    initialize : function() {
+    defaults : {
+      'position' : 0
     }
   });
 
@@ -358,41 +359,29 @@
     template : template('template_quote'),
 
     initialize : function() {
+      // Set position of every author
+      this.collection.each(function(author, i) {
+        author.set('position', i);
+      }, this);
+
       vent.bind("click_author", this.updateText, this);
     },
 
     render : function() {
-      // Set class
-      // this.$el.attr('class', this.model.get('name'));
-      // Set title
-      // this.$el.attr('data-text', this.model.get('normal-name'));
-
-      // this.$el.find('.quote-content').html(this.model.get('quote'));
-      // this.$el.find('.quote-author').html(this.model.get('quote'));
-
       this.updateText();
-
-      console.log(this.collection);
-
       this.collection.each(this.addOne, this);
       return this;
     },
 
     addOne : function(author) {
-      // author.update();
       var view_author = new App.Views.Author({model : author});
       this.$el.find('.quote-authors').append(view_author.render().el);
     },
 
     updateText : function(id) {
-
-      // var id = typeof id != 'undefined' ? id : 0;
-
-      // console.log(this.collection.models[id].attributes);
-
-
-
-      // var template = this.template(this.collection.models[id]);
+      var id = typeof id != 'undefined' ? id : 0;
+      var template = this.template(this.collection.toJSON()[id]);
+      this.$el.find('.quote').html(template);
     }
   });
 
@@ -405,13 +394,15 @@
     },
 
     initialize : function() {
+      // First element in the list get activated
+      if (this.model.get('position') == 0) {
+        this.activate();
+      }
     },
 
     clicked : function() {
-      vent.trigger("click_author", {'class' : this.$el.attr('class')});
-
-      $(this.el.parentElement).find('li.active').removeClass('active');
-      this.$el.addClass('active');
+      vent.trigger("click_author", this.model.get('position'));
+      this.activate();
     },
 
     render : function() {
@@ -423,6 +414,11 @@
 
       this.$el.html(template);
       return this;
+    },
+
+    activate : function() {
+      this.$el.parent().find('li.active').removeClass('active');
+      this.$el.addClass('active');
     }
   });
 
@@ -451,25 +447,8 @@
   var quote_collection = new App.Collections.Quote();
   quote_collection.fetch().then(function() {
     var view_quote = new App.Views.Quote({ collection : quote_collection });
-
-    console.log(quote_collection);
     view_quote.render();
   });
-
-
-  // $('.quote-authors > li').on('click', function() {
-  //   $(this).addClass('active').siblings().removeClass('active');
-  //     var author = $(this).attr("data-author");
-  //     var quote = $(this).attr("data-quote");
-  //     var link = $(this).attr("data-link");
-
-  //     $('.quote-content').html(quote);
-  //     $('.quote-author').html(author);
-  //     $('.quote-author').attr('href', link);
-  // });
-
-  // $('.quote-authors > li:nth-of-type(3)').click();
-
 
   /*--------------------------------------------------
    *
@@ -484,17 +463,4 @@
       $(".catch-phrase__anim").html(tips[i]);
     }, 400);
   }
-
-   $('.quote-authors > li').on('click', '.quote-authors__avatar', function() {
-      $parent = $(this).parent();
-      $parent.addClass('active').siblings().removeClass('active');
-      var author = $parent.attr("data-author");
-      var quote  = $parent.attr("data-quote");
-      var link   = $parent.attr("data-link");
-
-      $('.quote-content').html(quote);
-      $('.quote-author').html(author);
-      $('.quote-author').attr('href', link);
-  });
-  $('.quote-authors > li:nth-of-type(3) .quote-authors__avatar').click();
 })();

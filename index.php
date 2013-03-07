@@ -190,13 +190,13 @@
           <img src="<%= avatar %>" alt="<%= author %>'s Twitter Avatar">
         </div>
 
-        <a href="http://twitter.com/<%= twitter %>" class="quote-authors__name"><%= author %></a>
+        <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
     </script>
 
-    // <script id="template_quote" type="text/javascript">
-    //   <p class="quote-content"><%= quote %></p> 
-    //   &mdash; <a href="<%= from %>" class="quote-author"><%= author %></a>
-    // </script>
+    <script id="template_quote" type="text/template">
+       <p class="quote-content"><%= quote %></p> 
+       &mdash; <a href="<%= from %>" class="quote-author" target="_blank"><%= author %></a>
+    </script>
 
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
