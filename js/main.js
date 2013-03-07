@@ -365,6 +365,10 @@
         author.set('position', i);
       }, this);
 
+      this.$el.find('.quote-authors').bind('scroll', function(e) {
+        // console.log(e);
+      });
+
       vent.bind("click_author", this.updateText, this);
     },
 
