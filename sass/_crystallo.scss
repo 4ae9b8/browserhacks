@@ -18,98 +18,58 @@ body {
 }
 
 body {
-	overflow-x:hidden
-}
+	overflow-x: hidden;
+	$breakpoints: 860, 1024, 1152, 1280, 1400, 1600, 2048, 3200, 4000;
+	@each $breakpoint in $breakpoints {
+    	&[data-max-width="#{$breakpoint}"] section[data-cols] {
+			max-width: $breakpoint+px;
+		}
 
-body[data-max-width='860'] section[data-cols] {
-	max-width:860px
-}
-
-body[data-max-width='1024'] section[data-cols] {
-	max-width:1024px
-}
-
-body[data-max-width='1152'] section[data-cols] {
-	max-width:1152px
-}
-
-body[data-max-width='1280'] section[data-cols] {
-	max-width:1280px
-}
-
-body[data-max-width='1400'] section[data-cols] {
-	max-width:1400px
-}
-
-body[data-max-width='1600'] section[data-cols] {
-	max-width:1600px
-}
-
-@media screen and (min-width: 1600px) {
-	body[data-auto-extend="true"] section[data-cols] {
-		max-width:1600px
-	}
-}
-
-body[data-max-width='2048'] section[data-cols] {
-	max-width:2048px
-}
-
-@media screen and (min-width: 2048px) {
-	body[data-auto-extend="true"] section[data-cols] {
-		max-width:2048px
-	}
-}
-
-body[data-max-width='3200'] section[data-cols] {
-	max-width:3200px
-}
-
-@media screen and (min-width: 3200px) {
-	body[data-auto-extend="true"] section[data-cols] {
-		max-width:3200px
-	}
-}
-
-body[data-max-width='4000'] section[data-cols] {
-	max-width:4000px
-}
-
-@media screen and (min-width: 4000px) {
-	body[data-auto-extend="true"] section[data-cols] {
-		max-width:4000px
+		@if $breakpoint > 1500 {
+			@media screen and (min-width: $breakpoint+px) {
+				&[data-auto-extend="true"] section[data-cols] {
+					max-width: $breakpoint+px;
+				}
+			}
+		}
 	}
 }
 
 button {
-	width:100%;
-	cursor:pointer
+	width: 100%;
+	cursor: pointer
 }
 
 article {
-	position:relative;
-	margin-top:1em
+	position: relative;
+	margin-top: 1em
 }
 
 section {
-	position:relative;
-	overflow:hidden;
-	margin:0 auto
-}
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto
 
-section > div {
-	height:100%;
-	margin:0
-}
+	&[data-valign='center'] {
+		display:block
 
-section[data-valign='center'] {
-	display:block
-}
+		> div,
+		> div + * {
+			display:table-cell;
+			vertical-align:middle
 
-section[data-valign='center']>div,section[data-valign='center']>div+* {
-	display:table-cell;
-	vertical-align:middle
-}
+			@include breakpoint(baby-bear) {
+				display:block;
+			}
+		}
+	}
+
+	> div {
+		height:100%;
+		margin:0
+	}
+} 
+
 
 article[data-high]:before,
 article[data-high]:after,
@@ -124,64 +84,58 @@ pre[data-text]:after {
 }
 
 @media screen and (min-width: 44em) {
-	section[data-cols='2']>div,
-	section[data-cols='3']>div,
-	section[data-cols='4']>div,
-	section[data-cols='5']>div,
-	section[data-cols='5']>div:nth-child(4),
-	section[data-cols='5']>div:nth-child(5) {
+	section[data-cols='2'] > div,
+	section[data-cols='3'] > div,
+	section[data-cols='4'] > div,
+	section[data-cols='5'] > div,
+	section[data-cols='5'] > div:nth-child(4),
+	section[data-cols='5'] > div:nth-child(5) {
 		float:left;
 		width:50%
 	}
-	section[data-cols='2']>div:nth-child(odd) {
+	section[data-cols='2'] > div:nth-child(odd) {
 		clear:both
 	}
-	section[data-cols='3']>div:last-child,section[data-cols='5']>div:last-child {
+	section[data-cols='3'] > div:last-child,
+	section[data-cols='5'] > div:last-child {
 		width:100%
 	}
 }
 
 @media screen and (min-width: 66em) {
-	section[data-cols='3']>div,
-	section[data-cols='4']>div,
-	section[data-cols='5']>div {
+	section[data-cols='3'] > div,
+	section[data-cols='4'] > div,
+	section[data-cols='5'] > div {
 		width:33.3%
 	}
 
-	section[data-cols='3']>div:last-child {
+	section[data-cols='3'] > div:last-child {
 		width:33.3%
 	}
 
-	section[data-cols='5']>div:nth-child(5) {
+	section[data-cols='5'] > div:nth-child(5) {
 		width:50%
 	}
 
-	section[data-cols='4']>div:last-child {
+	section[data-cols='4'] > div:last-child {
 		width:100%
 	}
 }
 
 @media screen and (min-width: 74em) {
-	section[data-cols='4']>div,
-	section[data-cols='4']>div:last-child {
+	section[data-cols='4'] > div,
+	section[data-cols='4'] > div:last-child {
 		width:25%
 	}
-	section[data-cols='4']>div:nth-child(4n+1) {
+	section[data-cols='4'] > div:nth-child(4n+1) {
 		clear:both
 	}
 }
 
 @media screen and (min-width: 80em) {
-	section[data-cols='5']>div,
-	section[data-cols='5']>div:last-child,
-	section[data-cols='5']>div:nth-child(4) {
+	section[data-cols='5'] > div,
+	section[data-cols='5'] > div:last-child,
+	section[data-cols='5'] > div:nth-child(4) {
 		width:20%
-	}
-}
-
-@media screen and (max-width: 44em) {
-	section[data-valign='center']>div,
-	section[data-valign='center']>div+* {
-		display:block
 	}
 }
