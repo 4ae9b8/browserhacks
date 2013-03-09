@@ -476,7 +476,8 @@
       }
     },
 
-    clicked : function() {
+    clicked : function(e) {
+      e.preventDefault();
       vent.trigger("click_author", this.model.get('position'));
     },
 
