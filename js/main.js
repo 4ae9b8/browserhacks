@@ -356,37 +356,105 @@
    */
   App.Views.Quote = Backbone.View.extend({
     el : $('.quotes'),
+    el_authors : null,
+    el_quote : null,
     template : template('template_quote'),
-    current : 0,
+
+    current : -1,
+    authors : [],
+    authors_size : 0,
+
+    interval_move : null,
 
     initialize : function() {
+      this.el_authors = this.$el.find('.quote-authors');
+      this.el_quote = this.$el.find('.quote');
+
       // Set position of every author
       this.collection.each(function(author, i) {
         author.set('position', i);
       }, this);
 
-      this.$el.find('.quote-authors').bind('scroll', function(e) {
-        // console.log(e);
-      });
+      vent.bind("click_author", this.handleClick, this);
 
-      vent.bind("click_author", this.updateText, this);
+      // Rotate the authors
+      this.interval_move = setInterval(function() {
+        this.moveActive();
+      }.bind(this), this.options.speed);
     },
 
     render : function() {
-      this.updateText();
       this.collection.each(this.addOne, this);
+      this.authors_size = this.authors.length;
+      this.updateText();
       return this;
     },
 
     addOne : function(author) {
       var view_author = new App.Views.Author({model : author});
-      this.$el.find('.quote-authors').append(view_author.render().el);
+      this.el_authors.append(view_author.render().el);
+      this.authors.push(view_author);
     },
 
+    handleClick : function(id) {
+      if (this.interval_move != null) {
+        clearInterval(this.interval_move);
+        this.interval_move = null;
+      }
+
+      this.updateText(id);
+    },
+
+    /*
+     * Update the quotes content and activates/deactivates authors in the list
+     */
     updateText : function(id) {
-      current = typeof id != 'undefined' ? id : 0;
-      var template = this.template(this.collection.toJSON()[current]);
-      this.$el.find('.quote').html(template);
+      var id = typeof id != 'undefined' ? id : 0;
+
+      // Is loaded or at the end of
+      if (this.current != -1) {
+        // Deactivate current
+        this.authors[this.current].setActive(false);
+
+        // Activate another one
+        this.authors[id].setActive(true);
+        this.current = id;
+      } else {
+        // Deactivete the last author
+        this.authors[this.authors.length - 1].setActive(false);
+        this.current = id;
+
+        // Active first author
+        this.authors[this.current].setActive(true);
+      }
+
+      // Set content of quote
+      var template = this.template(this.collection.toJSON()[this.current]);
+      this.el_quote.html(template);
+    },
+
+    /*
+     * Move through the list of authors
+     */
+    moveActive : function() {
+      var frameWidth = this.el_quote.width();
+
+      // Jump to first element at the end
+      if ((this.current + 1) % this.authors_size === 0) {
+        this.current = -1;
+        this.el_authors.scrollLeft(0);
+      }
+
+      // Update active and quote text
+      this.updateText(this.current + 1);
+
+      var width = this.authors[this.current].$el.width(),
+          left = this.authors[this.current].$el.position().left;
+
+      // Scroll the list because the active element is out of the view width
+      if ((left + width) >= frameWidth) {
+        this.el_authors.scrollLeft(width * this.current);
+      }
     }
   });
 
@@ -404,13 +472,12 @@
     initialize : function() {
       // First element in the list get activated
       if (this.model.get('position') == 0) {
-        this.activate();
+        this.setActive(true);
       }
     },
 
     clicked : function() {
       vent.trigger("click_author", this.model.get('position'));
-      this.activate();
     },
 
     render : function() {
@@ -427,6 +494,14 @@
     activate : function() {
       this.$el.parent().find('li.active').removeClass('active');
       this.$el.addClass('active');
+    },
+
+    setActive : function(active) {
+      if (active) {
+        this.$el.addClass('active');
+      } else {
+        this.$el.removeClass('active');        
+      }
     }
   });
 
@@ -454,7 +529,7 @@
   // Handles the quote
   var quote_collection = new App.Collections.Quote();
   quote_collection.fetch().then(function() {
-    var view_quote = new App.Views.Quote({ collection : quote_collection });
+    var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 1750});
     view_quote.render();
   });
 
