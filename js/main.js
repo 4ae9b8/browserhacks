@@ -530,7 +530,7 @@
   // Handles the quote
   var quote_collection = new App.Collections.Quote();
   quote_collection.fetch().then(function() {
-    var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 1750});
+    var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 4000});
     view_quote.render();
   });
 
