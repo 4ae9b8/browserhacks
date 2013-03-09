@@ -17,6 +17,9 @@
 		color: $color-quotes;
 		background: rgba(0, 0, 0, .05);
 		border-bottom: .25em solid $color-quotes;
+
+    @include breakpoint(mama-bear){ min-height:7em; }
+		@include breakpoint(baby-bear){ min-height:8.5em; }
 	}
 
 	/*p*/
@@ -48,16 +51,21 @@
 			padding: 2.5em 0 0 0;
 			margin: 0 0 1em 0;
 			text-align: center;
+			opacity:.55;
 			@include inline-block(middle);
-
 			@include filter(grayscale(100%) blur(1px));
+			@include transition(.25s all ease-in-out);
 
 			&:hover {
 				@include filter(grayscale(0) blur(0));
+				opacity:1;
 			}
 		}
 
 		.active {
+
+			opacity:1;
+			@include transform(translateY(-1em));
 
 			&:before {
 				content: '';
@@ -69,7 +77,7 @@
 				z-index: 1;
 				left: 50%;
 				margin-left: -.625em;
-				top: -.625em;
+				top: .325em;
 			}
 
 			@include filter(grayscale(0) blur(0));
