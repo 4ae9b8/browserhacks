@@ -476,13 +476,6 @@
       'click' : 'clicked'
     },
 
-    initialize : function() {
-      // First element in the list get activated
-      if (this.model.get('position') == 0) {
-        this.setActive(true);
-      }
-    },
-
     clicked : function(e) {
       e.preventDefault();
       vent.trigger("click_author", this.model.get('position'));
@@ -497,11 +490,6 @@
 
       this.$el.html(template);
       return this;
-    },
-
-    activate : function() {
-      this.$el.parent().find('li.active').removeClass('active');
-      this.$el.addClass('active');
     },
 
     setActive : function(active) {
