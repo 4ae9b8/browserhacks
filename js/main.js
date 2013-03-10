@@ -375,7 +375,14 @@
         author.set('position', i);
       }, this);
 
+      // Listen to click on author
       vent.bind("click_author", this.handleClick, this);
+
+      // Mousewheel in author list
+      this.el_authors.mousewheel(function(e, delta) {
+        this.el_authors.scrollLeft(this.el_authors.scrollLeft() - (delta * 80));
+        e.preventDefault();
+      }.bind(this));
 
       // Rotate the authors
       this.interval_move = setInterval(function() {
