@@ -90,6 +90,13 @@ $quotes = array(
         "author" => "Ashley Callaha",
         "twitter" => "ashleycallahan",
         "avatar" => "https://twimg0-a.akamaihd.net/profile_images/2413062007/8gm2yddamxu9m2qrwn08_bigger.jpeg"
+    ),
+    array(
+        "quote" => "Just amazing.",
+        "from" => "https://twitter.com/fabien_doiron/status/311100048811368449",
+        "author" => "Fabien Doiron",
+        "twitter" => "fabien_doiron",
+        "avatar" => "https://si0.twimg.com/profile_images/2908074205/9056671919f7f52ba18a8b33a1083f47_bigger.png"
     )
 );
 
