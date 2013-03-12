@@ -97,6 +97,13 @@ $quotes = array(
         "author" => "Fabien Doiron",
         "twitter" => "fabien_doiron",
         "avatar" => "https://si0.twimg.com/profile_images/2908074205/9056671919f7f52ba18a8b33a1083f47_bigger.png"
+    ),
+    array(
+        "quote" => "Browserhacks lets you sleep at night. Or keep your hair. Or both.",
+        "from" => "https://twitter.com/slashlv/status/311316552966348800",
+        "author" => "Luke Van Deman",
+        "twitter" => "slashlv",
+        "avatar" => "https://si0.twimg.com/profile_images/27264932/favicon_bigger.jpg"
     )
 );
 
