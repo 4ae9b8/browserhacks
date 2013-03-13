@@ -57,7 +57,7 @@
             'version' => 'Chrome',
             'data-version' => '',
             'language' => 'language-javascript',
-            'code' => "var isChrome = Boolean(window.chrome);"
+            'code' => "var isChrome = !!window.chrome;"
           ),
         )
       )
@@ -126,7 +126,7 @@
             'version' => 'Firefox 2 - 13',
             'data-version' => '2|3|4|5|6|7|8|9|10|11|12|13',
             'language' => 'language-javascript',
-            'code' => "var isFF = Boolean(window.globalStorage);"
+            'code' => "var isFF = !!window.globalStorage;"
           ),
           array (
             'version' => 'Firefox 2/3',
@@ -401,7 +401,7 @@
             'version' => 'Opera 12-',
             'data-version' => '12.11-',
             'language' => 'language-javascript',
-            'code' => "var isOpera = Boolean(window.opera);"
+            'code' => "var isOpera = !!window.opera;"
           )
         )
       )
