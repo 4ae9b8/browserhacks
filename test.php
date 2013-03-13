@@ -121,7 +121,7 @@
 
     <section data-cols="1">
     <pre class="language-javascript"><code>/* Chrome */
-<span class="js-test-chrome-1">var isChrome = Boolean(window.chrome);</span></code></pre>
+<span class="js-test-chrome-1">var isChrome = !!window.chrome;</span></code></pre>
     </section>
 </article>
 
@@ -181,7 +181,7 @@
 <span class="js-test-ff-4">var isFF = !!navigator.userAgent.match(/firefox/i);</span></code></pre>
     
     <pre class="language-javascript"><code>/* Firefox 2 - 13 */
-<span class="js-test-ff-1">var isFF = Boolean(window.globalStorage);</span></code></pre>
+<span class="js-test-ff-1">var isFF = !!globalStorage;</span></code></pre>
 
     <pre class="language-javascript"><code>/* Firefox 2/3 */
 <span class="js-test-ff-3">var isFF = /a/[-1]=='a';</span></code></pre>
@@ -398,7 +398,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 <span class="js-test-op-1">var isOpera = /^function \(/.test([].sort);</span></code></pre>
 
     <pre class="language-javascript"><code>/* Opera &lt;= 12.11 */
-<span class="js-test-op-2">var isOpera = Boolean(window.opera);</span></code></pre>
+<span class="js-test-op-2">var isOpera = !!window.opera;</span></code></pre>
     </section>
 </article>
 

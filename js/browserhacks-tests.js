@@ -3,7 +3,7 @@ var testClass = 'js-succeed';
 /* 
  * Chrome 
  */
-var js_test_chrome_1 = Boolean(window.chrome);
+var js_test_chrome_1 = !!window.chrome;
 if (js_test_chrome_1) $('.js-test-chrome-1').addClass(testClass);
 
 /*
@@ -12,7 +12,7 @@ if (js_test_chrome_1) $('.js-test-chrome-1').addClass(testClass);
 var js_test_ff_4 = !!navigator.userAgent.match(/firefox/i);
 if (js_test_ff_4) $('.js-test-ff-4').addClass(testClass);
 
-var js_test_ff_1 = Boolean(window.globalStorage);
+var js_test_ff_1 = !!window.globalStorage;
 if (js_test_ff_1) $('.js-test-ff-1').addClass(testClass);
 
 var js_test_ff_3 = /a/[-1]=='a';
@@ -58,7 +58,7 @@ if (js_test_ie_8) $('.js-test-ie-8').addClass(testClass);
 var js_test_op_1 = /^function \(/.test([].sort);
 if (js_test_op_1) $('.js-test-op-1').addClass(testClass);
 
-var js_test_op_2 = Boolean(window.opera);
+var js_test_op_2 = !!window.opera;
 if (js_test_op_2) $('.js-test-op-2').addClass(testClass);
 
 /*
