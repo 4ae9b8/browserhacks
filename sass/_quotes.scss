@@ -27,8 +27,8 @@
 		margin: 0;
 		@include inline-block(top);
 		
-		&:before { content: '“'; }
-		&:after  { content: '”'; }
+		&:before { content: '\201c'; }
+		&:after  { content: '\201d'; }
 	}
 
 	/*a*/
