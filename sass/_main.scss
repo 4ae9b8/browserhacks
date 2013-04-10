@@ -58,6 +58,10 @@ a {
   background-size: 2em;
   clear: both;
 
+  @include breakpoint(baby-bear) {
+    width: 140%;
+  }
+
   .ie & {
     border-color: $ie;
     background-position: 0 0;
