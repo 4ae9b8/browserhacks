@@ -293,6 +293,12 @@
         ),
         "javascript" => array(
           array (
+            'version' => 'IE',
+            'data-version' => 'Any',
+            'language' => 'language-javascript',
+            'code' => "var IEVersion = 0/*@cc_on+ScriptEngineMajorVersion()@*/;"
+          ),
+          array (
             'version' => 'IE <= 8',
             'data-version' => '6|7|8',
             'language' => 'language-javascript',
