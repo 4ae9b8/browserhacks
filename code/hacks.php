@@ -86,7 +86,7 @@
             'version' => 'Firefox 3+',
             'data-version' => '3+',
             'language' => 'language-css',
-            'code' => ".selector, x:-moz-any-link; x:default {}"
+            'code' => ".selector, x:-moz-any-link, x:default {}"
           ),
           array (
             'version' => 'Firefox 3.5+',
