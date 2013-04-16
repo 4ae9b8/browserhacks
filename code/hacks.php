@@ -5,7 +5,7 @@
    */
   $hack_types = array (
     'selector' => array (
-      'title' => 'Selector Hacks', 
+      'title' => 'Selector Hacks',
       'icon' => 'fontawesome-link'
     ),
     'media' => array (
@@ -24,7 +24,7 @@
       'title' => 'Miscellaneous',
       'icon' => 'fontawesome-beaker'
     )
-  ); 
+  );
 
   /**
    * A list of all browser/hacks.
@@ -116,6 +116,12 @@
           )
         ),
         'javascript' => array(
+          array (
+            'version' => 'Firefox',
+            'data-version' => '',
+            'language' => 'language-javascript',
+            'code' => "var isFF = !!window.sidebar"
+          ),
           array (
             'version' => 'Firefox',
             'data-version' => '',
@@ -455,37 +461,37 @@
 ?>
 
 
-<?php 
+<?php
   // Browser
-  foreach($hacks as $name => $browser): 
+  foreach($hacks as $name => $browser):
 ?>
   <article data-high="3" class="<?php echo $name; ?>" id="<?php echo $name ?>">
     <section data-cols="1">
         <h2 class="th"><?php echo $browser['name']; ?></h2>
     </section>
-  
-    <?php 
+
+    <?php
       // Type of hack
-      foreach($browser['hacks'] as $type => $hack): 
+      foreach($browser['hacks'] as $type => $hack):
     ?>
-    
+
       <section data-cols="1" data-type="<?php echo $type; ?>-parent">
         <h3><span class="<?php echo $hack_types[$type]['icon']; ?>"></span><?php echo $hack_types[$type]['title']; ?></h3>
       </section>
-  
+
       <section data-cols="2" data-type="<?php echo $type; ?>-childs">
-        <?php 
+        <?php
           // Single hack
-          for($i = 0; $i < count($hack); $i++): 
+          for($i = 0; $i < count($hack); $i++):
         ?>
           <div>
-            <?php 
+            <?php
               // Version of a hack
               if (isset($hack[$i]['data-version'])):
             ?>
               <pre class="<?php echo $hack[$i]['language'];?>" data-version="<?php echo $hack[$i]['data-version'];?>"><code><?php echo "/* " . $hack[$i]['version'] . " */\n";
               echo $hack[$i]['code']; ?></code></pre>
-            <?php 
+            <?php
               else:
             ?>
               <pre class="<?php echo $hack[$i]['language']; ?>"><code><?php echo "/* " . $hack[$i]['version'] . " */\n";
@@ -494,9 +500,9 @@
           </div>
         <?php endfor; ?>
       </section>
-  
+
     <?php endforeach; ?>
-  
+
     </article>
-  
+
 <?php endforeach; ?>
