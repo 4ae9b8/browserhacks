@@ -153,14 +153,14 @@
         <h3><span class="fontawesome-resize-small"></span>Media hacks</h3>
     </section>
 
-    <section data-cols="1">  
+    <section data-cols="1">
     <pre class="language-css"><code>/* Firefox 3.5+, IE 9, Opera */
 <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.6+ */
 <span class="test67">@media screen and (-moz-images-in-menus:0) { .selector { background: lightpink; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* Firefox 4+ */ 
+    <pre class="language-css"><code>/* Firefox 4+ */
 <span class="test68">@media screen and (min--moz-device-pixel-ratio:0) { .selector { background: lightpink; } }</span></code></pre>
     </section>
 
@@ -178,16 +178,19 @@
     </section>
 
     <section data-cols="1">
+        <pre class="language-javascript"><code>/* Firefox */
+<span class="js-test-ff-4">var isFF = !!window.sidebar;</span></code></pre>
+
     <pre class="language-javascript"><code>/* Firefox */
 <span class="js-test-ff-4">var isFF = !!navigator.userAgent.match(/firefox/i);</span></code></pre>
-    
+
     <pre class="language-javascript"><code>/* Firefox 2 - 13 */
 <span class="js-test-ff-1">var isFF = !!globalStorage;</span></code></pre>
 
     <pre class="language-javascript"><code>/* Firefox 2/3 */
 <span class="js-test-ff-3">var isFF = /a/[-1]=='a';</span></code></pre>
-    
-    <pre class="language-javascript"><code>/* Firefox 3 */ 
+
+    <pre class="language-javascript"><code>/* Firefox 3 */
 <span class="js-test-ff-2">var isFF = (function x(){})[-5]=='x';</span></code></pre>
     </section>
 </article>
@@ -208,11 +211,11 @@
 <span class="test2">.fix.selector { background: lightgreen; } </span>/* .fix can be any unused class */</code></pre>
 
     <pre class="language-css"><code>/* IE 7 and below */
-<span class="test3">.selector, { background: lightgreen; }</span> 
+<span class="test3">.selector, { background: lightgreen; }</span>
 <span class="test4">//.selector { background: lightgreen; }</span> /* Doesn't seem to work */</code></pre>
 
     <pre class="language-css"><code>/* IE 7 */
-<span class="test5">*:first-child + html .selector { background: lightgreen; }</span> 
+<span class="test5">*:first-child + html .selector { background: lightgreen; }</span>
 <span class="test6">.selector, x:- { background: lightgreen; } </span>
 <span class="test7">* + html .selector { background: lightgreen; }</span></code></pre>
 
@@ -289,7 +292,7 @@
 
     <section data-cols="1">
         <h3><span class="fontawesome-resize-small"></span>Media hacks</h3>
-    </section> 
+    </section>
 
     <section data-cols="1">
     <pre class="language-css"><code>/* IE 6/7/8 */
@@ -308,11 +311,11 @@
 <span class="test50">@media screen and (min-width:0\0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 10+ */
-<span class="test51">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+<span class="test51">@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .selector { background: lightgreen; }
 }</span></code></pre>
 
-    <pre class="language-css"><code>/* Everything but IE 6/7/8 - not a hack */ 
+    <pre class="language-css"><code>/* Everything but IE 6/7/8 - not a hack */
 <span class="test52">@media screen and (min-width: 400px) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 
@@ -332,7 +335,7 @@
     <section data-cols="1">
     <pre class="language-javascript"><code>/* IE &lt;= 8 */
 <span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
-    
+
     <pre class="language-javascript"><code>/* IE 6 */
 <span class="js-test-ie-2">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->";
 var isIE6 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
@@ -357,7 +360,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 <span class="js-test-ie-7">var isIE10 = document.body.style.msTouchAction != undefined;</span></code></pre>
     </section>
 </article>
-            
+
 <article data-high="3" data-text="" class="op" id="op">
     <section data-cols="1">
         <h2 class="th">Opera</h2>
@@ -447,16 +450,16 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
                     <p>
                         <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
                     </p>
-                        
-                    <p>    
-                        Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
-                        and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
+
+                    <p>
+                        Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a>
+                        and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a>
                         with contributions of the <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
                     </p>
                 </footer>
             </div>
         </section>
-    </article>  
+    </article>
 
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <script src="js/modernizr.custom.38859.js"></script>
