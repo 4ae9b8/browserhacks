@@ -28,7 +28,8 @@ $prism_css: #690;
 %cf {
 	*zoom: 1;
 
-	&:after {
+	&:after,
+	&:before {
 		clear: both;
 		content: '';
 		display: table;
@@ -38,6 +39,10 @@ $prism_css: #690;
 * {
 	margin: 0;
 	padding: 0;
+}
+
+html {
+	max-height:100%;
 }
 
 body {
@@ -83,6 +88,12 @@ h1 {
       color: #333 !important;
       text-decoration: none;
     }
+}
+
+article,
+section,
+section > div {
+	@extend %cf;
 }
 
 .header-test {

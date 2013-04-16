@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+<!--[if lt IE 9]> <html class="ie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Browserhacks</title>
 
@@ -17,6 +18,10 @@
 
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/browserhacks-ie.css">
+    <![endif]-->
 </head>
 
 <?php
@@ -35,7 +40,7 @@
         <li class="sa"><a href="#sa">Safari</a></li>
     </ul>
 
-
+<div class="wrapper">
     <article data-high="1">
         <section data-cols="1" >
             <h1>Browserhacks</h1>
@@ -83,7 +88,7 @@
             <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search"><span class="fontawesome-search"></span> Find a hack</label>
-                    <input type="text" name="search" id="search" placeholder="i.e. 'ie6'">
+                    <input type="text" name="search" id="search" placeholder="e.g. 'ie6'">
                 </p>
             </div>
             <div data-type="top-buttons">
@@ -185,6 +190,8 @@
         </section>
     </article>  
     
+</div>
+    
     <!-- Template: Quote -->
     <script id="template_quote" type="text/template">
        <p class="quote-content"><%= quote %></p> 
@@ -202,11 +209,6 @@
 
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
-
-    <!--[if (gte IE 6)&(lte IE 8)]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <script type="text/javascript" src="js/selectivizr-min.js"></script>
-    <![endif]-->   
     
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>

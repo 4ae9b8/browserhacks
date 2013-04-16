@@ -38,57 +38,6 @@ section {
     padding: 0;
   }
 
-  &[data-cols="1"] {
-    > div {
-      margin-bottom: 0.5em;
-    }
-  }
-
-  &[data-cols="2"] {
-    > div:nth-child(odd)  { padding: 0 .5em 0 0; }
-    > div:nth-child(even) { padding: 0 0 0 .5em; }
-
-    > div {
-      @include breakpoint(baby-bear) {
-        padding: 0;
-      }
-    }
-  }
-
-  &[data-cols="3"] {
-    > div:nth-of-type(1) {
-      padding: 0 .5em 0 0;
-
-      @include breakpoint(baby-bear) {
-        padding: 0 0 .5em 0;
-      }
-    }
-
-    > div:nth-of-type(2) {
-      padding: 0 .5em;
-
-      @include breakpoint(mama-bear) {
-        padding: 0 0 0 .5em;
-      }
-
-      @include breakpoint(baby-bear) {
-        padding: 0 0 .5em 0;
-      }
-    }
-
-    > div:nth-of-type(3) {
-      padding: 0 0 0 .5em;
-
-      @include breakpoint(mama-bear) {
-        padding: .5em 0 0 0;
-      }
-
-      @include breakpoint(baby-bear) {
-        padding: 0 0 .5em 0;
-      }
-    }
-  }
-
   &[data-valign='center'] {
     text-align:center;
 
@@ -105,17 +54,3 @@ section {
     text-align:right;
   }
 }
-
-/* "small" screens */
-/*
-@media screen and (max-width: 66em) {
-  section:not('.btn-group') > div,
-  section[data-cols="2"] > div:nth-child(even),
-  section[data-cols="2"] > div:nth-child(odd),
-  section[data-cols="3"] > div:nth-of-type(1),
-  section[data-cols="3"] > div:nth-of-type(2),
-  section[data-cols="3"] > div:nth-of-type(3) {
-    padding: .25em;
-  }
-}
-*/

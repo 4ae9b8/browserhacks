@@ -1,137 +1,258 @@
-/* ********** *
- * $CRYSTALLO *
- * ********** */
+/*
+ * crystallo
+ * ultra responsive to be a responsive css framework.
+ *
+ * crystallo is a solid & simple responsive (not yet) framework 
+ * to help you kick-start any form of web application.
+ *
+ * Get it here
+ * http://github.com/TimPietrusky/crystallo
+ *
+ * 2012 - 2013 by Tim Pietrusky
+ * http://timpietrusky.com
+ */
 
-/**
- * Cool box-sizing
+/*
+ * compass
+ */
+@import "compass/css3/box-sizing";
+
+ /*
+  * Padding for the columns (section > div)
+  */
+$crystallo-padding: .5em;
+
+$crystallo-padding-top: $crystallo-padding;
+$crystallo-padding-right: $crystallo-padding;
+$crystallo-padding-bottom: $crystallo-padding;
+$crystallo-padding-left: $crystallo-padding;
+
+/*
+ * Do you need IE <= 8 support?
+ */
+ $crystallo-ie: true; 
+
+
+
+/*
+ * The code starts here...
  */
 *,
 *:before,
 *:after {
-	@include box-sizing(border-box);
+  @include box-sizing(border-box);
 }
 
 html,
 body {
-	margin:0;
-	padding:0;
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
 }
 
 body {
-	overflow-x: hidden;
-	$breakpoints: 860, 1024, 1152, 1280, 1400, 1600, 2048, 3200, 4000;
-	@each $breakpoint in $breakpoints {
-    	&[data-max-width="#{$breakpoint}"] section[data-cols] {
-			max-width: $breakpoint+px;
-		}
+  overflow-x: hidden;
+  $breakpoints: 860, 1024, 1152, 1280, 1400, 1600, 2048, 3200, 4000;
+  @each $breakpoint in $breakpoints {
+      &[data-max-width="#{$breakpoint}"] section[data-cols] {
+      max-width: $breakpoint+px;
+    }
 
-		@if $breakpoint > 1500 {
-			@media screen and (min-width: $breakpoint+px) {
-				&[data-auto-extend="true"] section[data-cols] {
-					max-width: $breakpoint+px;
-				}
-			}
-		}
-	}
+    @if $breakpoint > 1500 {
+      @media screen and (min-width: $breakpoint+px) {
+        &[data-auto-extend="true"] section[data-cols] {
+          max-width: $breakpoint+px;
+        }
+      }
+    }
+  }
 }
 
 button {
-	width: 100%;
-	cursor: pointer;
+  width:100%;
+  cursor:pointer;
+}
+
+img {
+  max-width:100%;
 }
 
 article {
-	position: relative;
-	margin-top: 1em;
+  position:relative;
+  margin-top:1em;
 }
 
 section {
-	position: relative;
-	overflow: hidden;
-	margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
 
-	&[data-valign='center'] {
-		display:block
+  /* vertical align */
+  &[data-valign='center'] {
+    display:block;
 
-		> div,
-		> div + * {
-			display:table-cell;
-			vertical-align:middle;
-		}
-	}
+    > div,
+    > div + * {
+      display:table-cell;
+      vertical-align:middle;
+    }
+  }
 
-	> div {
-		height:100%;
-		margin:0;
-	}
+  > div {
+    height:100%;
+    margin:0;
+    padding: $crystallo-padding-top $crystallo-padding-right $crystallo-padding-bottom $crystallo-padding-left;
+  }
 } 
 
-
+/* pseudo elements default stuff */
 article[data-high]:before,
 article[data-high]:after,
 article[data-text]:before,
 article[data-text]:after,
 pre[data-text]:before,
 pre[data-text]:after {
-	content:'';
-	position:absolute;
-	top:0;
-	left:0;
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
 }
 
+/*
+ * 1 column
+ */
+section[data-cols='1'] {
+  > div {
+    display:block;
+  }
+}
+
+/*
+ * 2 columns
+ */
+section[data-cols='2'] {}
+
+/* big screens */
 @media screen and (min-width: 44em) {
-	section[data-cols='2'] > div,
-	section[data-cols='3'] > div,
-	section[data-cols='4'] > div,
-	section[data-cols='5'] > div,
-	section[data-cols='5'] > div:nth-child(4),
-	section[data-cols='5'] > div:nth-child(5) {
-		float:left;
-		width:50%;
-	}
-	section[data-cols='2'] > div:nth-child(odd) {
-		clear:both;
-	}
-	section[data-cols='3'] > div:last-child,
-	section[data-cols='5'] > div:last-child {
-		width:100%;
-	}
+  section[data-cols='2'] > div,
+  section[data-cols='3'] > div,
+  section[data-cols='4'] > div,
+  section[data-cols='5'] > div,
+  section[data-cols='5'] > div:nth-child(4),
+  section[data-cols='5'] > div:nth-child(5) {
+    float: left;
+    width: 50%;
+  }
+
+  section[data-cols='2'] > div:nth-child(odd) {
+    clear:both;
+  }
+
+  section[data-cols='3'] > div:last-child,
+  section[data-cols='5'] > div:last-child {
+    width: 100%;
+  }
 }
 
+/*
+ * 3 columns
+ */
+section[data-cols='3'] {}
+
+/* big screens */
 @media screen and (min-width: 66em) {
-	section[data-cols='3'] > div,
-	section[data-cols='4'] > div,
-	section[data-cols='5'] > div {
-		width:33.3%;
-	}
+  section[data-cols='3'] > div,
+  section[data-cols='4'] > div,
+  section[data-cols='5'] > div {
+    width: 33.3%;
+  }
 
-	section[data-cols='3'] > div:last-child {
-		width:33.3%;
-	}
+  section[data-cols='3'] > div:last-child {
+    width: 33.3%;
+  }
 
-	section[data-cols='5'] > div:nth-child(5) {
-		width:50%;
-	}
+  section[data-cols='5'] > div:nth-child(5) {
+    width: 50%;
+  }
 
-	section[data-cols='4'] > div:last-child {
-		width:100%;
-	}
+  section[data-cols='4'] > div:last-child {
+     width: 100%;
+  }
 }
 
+/*
+ * 4 columns
+ */
+section[data-cols='4'] {}
+
+/* big screens */
 @media screen and (min-width: 74em) {
-	section[data-cols='4'] > div,
-	section[data-cols='4'] > div:last-child {
-		width:25%;
-	}
-	section[data-cols='4'] > div:nth-child(4n+1) {
-		clear:both;
-	}
+  section[data-cols='4'] > div,
+  section[data-cols='4'] > div:last-child {
+    width: 25%;
+  }
+
+  section[data-cols='4'] > div:nth-child(4n+1) {
+    clear: both;
+  }
 }
 
+/*
+ * 5 columns
+ */
+section[data-cols='5'] {}
+
+/* big screens */
 @media screen and (min-width: 80em) {
-	section[data-cols='5'] > div,
-	section[data-cols='5'] > div:last-child,
-	section[data-cols='5'] > div:nth-child(4) {
-		width:20%;
-	}
+  section[data-cols='5'] > div,
+  section[data-cols='5'] > div:last-child,
+  section[data-cols='5'] > div:nth-child(4) {
+    width: 20%;
+  }
+}
+
+/* small screens */
+@media screen and (max-width: 44em) {
+  section[data-valign='center'] > div,
+  section[data-valign='center'] > div + * {
+    display: block;
+  }
+}
+
+/* Include CSS for IE <= 8 */
+@if $crystallo-ie {
+  html.ie {
+    section[data-cols='2'] > div,
+    section[data-cols='3'] > div,
+    section[data-cols='4'] > div,
+    section[data-cols='5'] > div,
+    section[data-cols='5'] > div+div+div+div,
+    section[data-cols='5'] > div+div+div+div+div {
+      float: left;
+      width: 50%;
+    }
+
+    section[data-cols='2'] > div+div {
+      clear:both;
+    }
+
+    section[data-cols='3'] > div,
+    section[data-cols='4'] > div,
+    section[data-cols='5'] > div {
+      width: 33.3%;
+    }
+
+    section[data-cols='3'] > div+div+div {
+      width: 33.3%;
+    }
+
+    section[data-cols='5'] > div+div+div+div+div {
+      width: 50%;
+    }
+
+    section[data-cols='4'] > div+div+div+div {
+       width: 100%;
+    }
+  }
 }

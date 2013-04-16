@@ -111,6 +111,7 @@ pre {
   width:100%;
   @include inline-block(middle);
   box-shadow: 0 0 .15em rgba(0,0,0,0.1);
+  background: #f5f2f0;
 
   .token.comment {
     color:#666;
@@ -148,7 +149,7 @@ pre {
 button {
   border:none;
   height:3em;
-  background: #333;
+  background: #ccc;
   background: rgba(0, 0, 0, .125);
   font-size: 1.2em;
   overflow: hidden;
