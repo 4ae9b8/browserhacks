@@ -40,7 +40,6 @@
         <li class="sa"><a href="#sa">Safari</a></li>
     </ul>
 
-<div class="wrapper">
     <article data-high="1">
         <section data-cols="1" >
             <h1>Browserhacks</h1>
@@ -189,8 +188,6 @@
             </div>
         </section>
     </article>  
-    
-</div>
     
     <!-- Template: Quote -->
     <script id="template_quote" type="text/template">
