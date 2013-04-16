@@ -233,10 +233,6 @@ section[data-cols='5'] {}
       width: 50%;
     }
 
-    section[data-cols='2'] > div+div {
-      clear:both;
-    }
-
     section[data-cols='3'] > div,
     section[data-cols='4'] > div,
     section[data-cols='5'] > div {
@@ -247,12 +243,12 @@ section[data-cols='5'] {}
       width: 33.3%;
     }
 
-    section[data-cols='5'] > div+div+div+div+div {
-      width: 50%;
-    }
-
     section[data-cols='4'] > div+div+div+div {
        width: 100%;
+    }
+
+    section[data-cols='5'] > div+div+div+div+div {
+      width: 50%;
     }
   }
 }
