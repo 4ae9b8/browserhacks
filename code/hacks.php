@@ -380,7 +380,7 @@
             'version' => 'IE X (6, 7, 8, 9)',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '&lt;!--[if IE X]> Internet Explorer X <&lt;![endif]-->'
+            'code' => '&lt;!--[if IE X]> Internet Explorer X &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X- (6, 7, 8, 9)',
@@ -401,7 +401,7 @@
             'code' => '&lt;!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y &lt;![endif]-->'
           ),
           array (
-            'version' => 'IE X+ but Y-',
+            'version' => 'IE X+ but Y- (6, 7, 8, 9)',
             'data-version' => '6|7|8',
             'language' => 'language-markup',
             'code' => '&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->'
