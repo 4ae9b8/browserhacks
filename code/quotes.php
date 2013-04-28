@@ -104,6 +104,20 @@ $quotes = array(
         "author" => "Luke Van Deman",
         "twitter" => "slashlv",
         "avatar" => "https://si0.twimg.com/profile_images/27264932/favicon_bigger.jpg"
+    ),
+    array(
+        "quote" => "Knowledge is dangerous – especially *this* knowledge: http://browserhacks.com",
+        "from" => "https://twitter.com/garazi/status/327169357035745281",
+        "author" => "Greg R",
+        "twitter" => "garazi",
+        "avatar" => "https://si0.twimg.com/profile_images/1668242002/greg_santorini-sm_bigger.jpg"
+    ),
+    array(
+        "quote" => "browserhacks.com - well, no. don't",
+        "from" => "https://twitter.com/codepo8/status/322846891358420992",
+        "author" => "Christian Heilmann",
+        "twitter" => "codepo8",
+        "avatar" => "https://si0.twimg.com/profile_images/1666904408/codepo8_bigger.png"
     )
 );
 
