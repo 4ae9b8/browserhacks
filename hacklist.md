@@ -153,51 +153,50 @@
 ## JAVASCRIPT HACKS
 
 	/* Firefox 2 */
-	FF2=(function x(){})[-6]=='x'
+	var isFirefox-2 = (function x(){})[-6]=='x'
 
 	//Firefox 3 */ 
-	FF3=(function x(){})[-5]=='x'
+	var isFirefox-3 = (function x(){})[-5]=='x'
 
 	/* Firefox 2/3 (by DoctorDan) */
-	FF=/a/[-1]=='a'
+	var isFirefox = /a/[-1]=='a'
 
 	/* Safari */
-	Saf=/a/.__proto__=='//'
+	var isSafari = /a/.__proto__=='//'
 
 	/* Chrome */
-	Chr=/source/.test((/a/.toString+''))
+	var isChrome = /source/.test((/a/.toString+''))
 
 	/* Opera */
-	Op=/^function \(/.test([].sort)
+	var isOpera = /^function \(/.test([].sort)
 
 	/* Opera X credits */
-	window.opera && window.opera.version() == X
+	var isOperaX = window.opera && window.opera.version() == X
 
-	/* IE */
-	IE='\v'=='v'
+	/* IE 8- */
+	var isIE-lt8 = '\v'=='v'
+	var isIE-lt8 = !+'\v1' 
 
 	/* IE 6 */
 	try {IE6=@cc_on @_jscript_version <= 5.7&&@_jscript_build<10000} catch(e){IE6=false;}
 
-	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\";
-	var isIE6 = checkIE.getElementsByTagName(\"i\").length == 1;
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; var isIE6 = checkIE.getElementsByTagName(\"i\").length == 1;
 
 	/* IE 7 */
 	var isIE7 = navigator.appVersion.indexOf("MSIE 7.")!=-1;
-
-	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\";
-	var isIE7 = checkIE.getElementsByTagName(\"i\").length == 1;
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; var isIE7 = checkIE.getElementsByTagName(\"i\").length == 1;
+	var isIE7 = document.all && !document.querySelector;
 	
 	/* IE 8 */
-	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\";
-	var isIE8 = checkIE.getElementsByTagName(\"i\").length == 1;
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; var isIE8 = checkIE.getElementsByTagName(\"i\").length == 1;
+	var isIE8 = document.all && document.querySelector && !document.addEventListener
 
 	/* IE 9 */
-	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\";
-	var isIE9 = checkIE.getElementsByTagName(\"i\").length == 1;
+	(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; var isIE9 = checkIE.getElementsByTagName(\"i\").length == 1;
 
 	/* IE 10 */
-	/*@cc_on!@*/false && document.documentMode === 10
+	var isIE10 = /*@cc_on!@*/false && document.documentMode === 10
+	var isIE10 = document.body.style.msTouchAction != undefined;
 
 	/* Transition on pseudo elements (or something like that) */
 	userAgent.toLowerCase().indexOf('firefox') > -1 || userAgent.toLowerCase().indexOf('chrome') > -1

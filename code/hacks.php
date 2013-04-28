@@ -23,6 +23,10 @@
     'misc' => array (
       'title' => 'Miscellaneous',
       'icon' => 'fontawesome-beaker'
+    ),
+    'html' => array (
+      'title' => 'Conditional comments',
+      'icon' => 'fontawesome-th-large'
     )
   );
 
@@ -38,7 +42,7 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome 24- and Safari 5-',
+            'version' => 'Chrome 24- and Safari 6-',
             'data-version' => '24-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -132,19 +136,19 @@
             'version' => 'Firefox 2 - 13',
             'data-version' => '2|3|4|5|6|7|8|9|10|11|12|13',
             'language' => 'language-javascript',
-            'code' => "var isFF = !!window.globalStorage;"
+            'code' => "var isFF-2to13 = !!window.globalStorage;"
           ),
           array (
             'version' => 'Firefox 2/3',
             'data-version' => '2|3',
             'language' => 'language-javascript',
-            'code' => "var isFF = /a/[-1]=='a';"
+            'code' => "var isFF-2-3 = /a/[-1]=='a';"
           ),
           array (
             'version' => 'Firefox 3',
             'data-version' => '3',
             'language' => 'language-javascript',
-            'code' => "var isFF = (function x(){})[-5]=='x';"
+            'code' => "var isFF-3 = (function x(){})[-5]=='x';"
           )
         ),
         'misc' => array(
@@ -299,46 +303,108 @@
         ),
         "javascript" => array(
           array (
+            "version" => "Check for IE version",
+            "data-version" => "3|4|5|6|7|8|9|10",
+            "language" => "language-javascript",
+            "code" => "var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;"
+          ),
+          array (
+            'version' => 'IE <= 7',
+            'data-version' => '6|7',
+            'language' => 'language-javascript',
+            'code' => 'var isIE-lt7 = document.all && !document.querySelector;'
+          ),
+          array (
             'version' => 'IE <= 8',
             'data-version' => '6|7|8',
             'language' => 'language-javascript',
-            'code' => "var isIE = '\\v'=='v';"
+            'code' => "var isIE-lte8 = !+'\v1';"
           ),
           array (
             'version' => 'IE 6',
             'data-version' => '6',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE6 = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 7',
             'data-version' => '7',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf(\"MSIE 7.\")!=-1"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE7 = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf(\"MSIE 7.\")!=-1"
           ),
           array (
             'version' => 'IE 8',
             'data-version' => '8',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE8 = checkIE.getElementsByTagName(\"i\").length == 1;"
+          ),
+          array (
+            'version' => 'IE 8',
+            'data-version' => '8',
+            'language' => 'language-javascript',
+            'code' => 'var isIE8 = document.all && document.querySelector && !document.addEventListener;'
           ),
           array (
             'version' => 'IE 9',
             'data-version' => '9',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE9 = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 10',
             'data-version' => '10',
             'language' => 'language-javascript',
-            'code' => "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;"
+            'code' => "var isIE10 = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;"
           ),
           array (
             'version' => 'IE 10',
             'data-version' => '10',
             'language' => 'language-javascript',
-            'code' => "var isIE = document.body.style.msTouchAction != undefined;"
+            'code' => "var isIE10 = document.body.style.msTouchAction != undefined;"
+          )
+        ),
+        'html' => array (
+          array (
+            'version' => 'IE',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if IE]> Internet Explorer <![endif]-->'
+          ),
+          array (
+            'version' => 'Not IE',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if !IE]> Not Internet Explorer <![endif]-->'
+          ),
+          array (
+            'version' => 'IE X (6, 7, 8, 9)',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if IE X]> Internet Explorer X <![endif]-->'
+          ),
+          array (
+            'version' => 'IE X- (6, 7, 8, 9)',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if IE lte X]> Internet Explorer X or less <![endif]-->'
+          ),
+          array (
+            'version' => 'IE X+ (6, 7, 8, 9)',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if IE gte X]> Internet Explorer X or greater <![endif]-->'
+          ),
+          array (
+            'version' => 'IE X or Y (6, 7, 8, 9)',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y<![endif]-->'
+          ),
+          array (
+            'version' => 'IE X+ but Y-',
+            'data-version' => '6|7|8',
+            'language' => 'language-markup',
+            'code' => '<!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included) <![endif]-->'
           )
         )
       )
@@ -408,6 +474,12 @@
             'data-version' => '12.11-',
             'language' => 'language-javascript',
             'code' => "var isOpera = !!window.opera;"
+          ),
+          array (
+            'version' => 'Opera X',
+            'data-version' => '',
+            'language' => 'language-javascript',
+            'code' => 'var isOperaX = window.opera && window.opera.version() == X'
           )
         )
       )
@@ -433,8 +505,8 @@
             'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
-            'version' => 'Safari 5- and Chrome 24-',
-            'data-version' => '5-',
+            'version' => 'Safari 6- and Chrome 24-',
+            'data-version' => '6-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
           )
@@ -449,10 +521,16 @@
         ),
         "javascript" => array(
           array (
+            'version' => 'Safari 5-',
+            'data-version' => '2|3|4|5',
+            'language' => 'language-javascript',
+            'code' => "var isSafari = /a/.__proto__=='//';"
+          ),
+          array(
             'version' => 'Safari',
             'data-version' => '',
             'language' => 'language-javascript',
-            'code' => "var isSafari = /a/.__proto__=='//';"
+            'code' => 'var isSafari = /Constructor/.test(window.HTMLElement);'
           )
         )
       )
