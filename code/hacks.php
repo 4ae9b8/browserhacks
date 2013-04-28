@@ -368,43 +368,43 @@
             'version' => 'IE',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if IE]> Internet Explorer <![endif]-->'
+            'code' => '&lt;!--[if IE]> Internet Explorer &lt;![endif]-->'
           ),
           array (
             'version' => 'Not IE',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if !IE]> Not Internet Explorer <![endif]-->'
+            'code' => '&lt;!--[if !IE]> Not Internet Explorer &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X (6, 7, 8, 9)',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if IE X]> Internet Explorer X <![endif]-->'
+            'code' => '&lt;!--[if IE X]> Internet Explorer X <&lt;![endif]-->'
           ),
           array (
             'version' => 'IE X- (6, 7, 8, 9)',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if IE lte X]> Internet Explorer X or less <![endif]-->'
+            'code' => '&lt;!--[if IE lte X]> Internet Explorer X or less &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X+ (6, 7, 8, 9)',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if IE gte X]> Internet Explorer X or greater <![endif]-->'
+            'code' => '&lt;!--[if IE gte X]> Internet Explorer X or greater &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X or Y (6, 7, 8, 9)',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y<![endif]-->'
+            'code' => '&lt;!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X+ but Y-',
             'data-version' => '6|7|8',
             'language' => 'language-markup',
-            'code' => '<!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included) <![endif]-->'
+            'code' => '&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->'
           )
         )
       )
