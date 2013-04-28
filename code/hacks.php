@@ -136,19 +136,19 @@
             'version' => 'Firefox 2 - 13',
             'data-version' => '2|3|4|5|6|7|8|9|10|11|12|13',
             'language' => 'language-javascript',
-            'code' => "var isFF-2to13 = !!window.globalStorage;"
+            'code' => "var isFF = !!window.globalStorage;"
           ),
           array (
             'version' => 'Firefox 2/3',
             'data-version' => '2|3',
             'language' => 'language-javascript',
-            'code' => "var isFF-2-3 = /a/[-1]=='a';"
+            'code' => "var isFF = /a/[-1]=='a';"
           ),
           array (
             'version' => 'Firefox 3',
             'data-version' => '3',
             'language' => 'language-javascript',
-            'code' => "var isFF-3 = (function x(){})[-5]=='x';"
+            'code' => "var isFF = (function x(){})[-5]=='x';"
           )
         ),
         'misc' => array(
@@ -312,55 +312,55 @@
             'version' => 'IE <= 7',
             'data-version' => '6|7',
             'language' => 'language-javascript',
-            'code' => 'var isIE-lt7 = document.all && !document.querySelector;'
+            'code' => 'var isIE = document.all && !document.querySelector;'
           ),
           array (
             'version' => 'IE <= 8',
             'data-version' => '6|7|8',
             'language' => 'language-javascript',
-            'code' => "var isIE-lte8 = !+'\v1';"
+            'code' => "var isIE = !+'\v1';"
           ),
           array (
             'version' => 'IE 6',
             'data-version' => '6',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE6 = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 7',
             'data-version' => '7',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE7 = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf(\"MSIE 7.\")!=-1"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf(\"MSIE 7.\")!=-1"
           ),
           array (
             'version' => 'IE 8',
             'data-version' => '8',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE8 = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 8',
             'data-version' => '8',
             'language' => 'language-javascript',
-            'code' => 'var isIE8 = document.all && document.querySelector && !document.addEventListener;'
+            'code' => 'var isIE = document.all && document.querySelector && !document.addEventListener;'
           ),
           array (
             'version' => 'IE 9',
             'data-version' => '9',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE9 = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 10',
             'data-version' => '10',
             'language' => 'language-javascript',
-            'code' => "var isIE10 = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;"
+            'code' => "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;"
           ),
           array (
             'version' => 'IE 10',
             'data-version' => '10',
             'language' => 'language-javascript',
-            'code' => "var isIE10 = document.body.style.msTouchAction != undefined;"
+            'code' => "var isIE = document.body.style.msTouchAction != undefined;"
           )
         ),
         'html' => array (
@@ -479,7 +479,7 @@
             'version' => 'Opera X',
             'data-version' => '',
             'language' => 'language-javascript',
-            'code' => 'var isOperaX = window.opera && window.opera.version() == X'
+            'code' => 'var isOpera = window.opera && window.opera.version() == X'
           )
         )
       )
