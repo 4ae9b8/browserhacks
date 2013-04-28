@@ -58,6 +58,10 @@ a {
   background-size: 2em;
   clear: both;
 
+  a {
+    color: black;
+  }
+
   @include breakpoint(baby-bear) {
     width: 140%;
   }

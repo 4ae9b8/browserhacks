@@ -545,7 +545,7 @@
 ?>
   <article data-high="3" class="<?php echo $name; ?>" id="<?php echo $name ?>">
     <section data-cols="1">
-        <h2 class="th"><?php echo $browser['name']; ?></h2>
+        <h2 class="th"><a href="#<?php echo $name ?>"><?php echo $browser['name']; ?></a></h2>
     </section>
 
     <?php
