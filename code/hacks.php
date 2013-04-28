@@ -406,6 +406,12 @@
             'language' => 'language-markup',
             'code' => '<!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included) <![endif]-->'
           )
+          array (
+            'version' => 'Conditional classes',
+            'data-version' => '',
+            'language' => 'language-markup',
+            'code' => '<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]--> \n<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]--> \n<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]--> \n<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]--> \n<!--[if gt IE 9]>  <html> <![endif]--> \n<!--[if !IE]><!--> <html>             <!--<![endif]-->'
+          )
         )
       )
     ),
