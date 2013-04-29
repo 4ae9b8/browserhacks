@@ -405,7 +405,7 @@
             'data-version' => '6|7|8',
             'language' => 'language-markup',
             'code' => '&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->'
-          )
+          ),
           array (
             'version' => 'Conditional classes',
             'data-version' => '',
