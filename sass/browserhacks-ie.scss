@@ -142,3 +142,11 @@ section > div {
 * + html body {
 	overflow: visible;
 }
+
+* + html section[data-cols='2'] > div {
+	width: 48%;
+
+	h2 {
+		font-size: 1.7em;
+	}
+}
