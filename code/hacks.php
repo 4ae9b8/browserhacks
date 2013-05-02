@@ -309,6 +309,11 @@
             "code" => "var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;"
           ),
           array (
+            "version" => "Check for IE version",
+            "data-version" => "",
+            "language" => "language-javascript",
+            "code" => "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return -1; } })();")
+          array (
             'version' => 'IE 7-',
             'data-version' => '6|7',
             'language' => 'language-javascript',

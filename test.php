@@ -325,6 +325,9 @@
     </section>
 
     <section data-cols="1">
+    <pre class="language-javascript"><code>/* IE */
+<span class="js-test-ie-10">var isIE = /*@cc_on!@*/false;</span></code></pre>
+
     <pre class="language-javascript"><code>/* IE 8- */
 <span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
 

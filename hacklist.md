@@ -180,6 +180,12 @@
 	/* Check for IE version */
 	var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;
 
+	/* Check for IE version */
+	var ieVersion = (function() { if (new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return -1 } })();
+
+	/* IE */
+	var isIE = /*@cc_on!@*/false;
+
 	/* IE 7- */
 	var isIE = document.all && !document.querySelector;
 

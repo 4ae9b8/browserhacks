@@ -55,6 +55,9 @@ if (js_test_ie_8) $('.js-test-ie-8').addClass(testClass);
 var js_test_ie_9 = !+'\v1';
 if (js_test_ie_9) $('.js-test-ie-9').addClass(testClass);
 
+var js_test_ie_10 = /*@cc_on!@*/false;
+if (js_test_ie_10) $('.js-test-ie-10').addClass(testClass);
+
 /*
  * Opera
  */
