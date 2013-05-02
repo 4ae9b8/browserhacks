@@ -103,7 +103,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Safari 6-, Chrome 24- */
+    <pre class="language-css"><code>/* Safari 6-, Chrome 24-, IE 7- */
 <span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
@@ -142,7 +142,7 @@
     <pre class="language-css"><code>/* Firefox 2+, IE 7 */
 <span class="test54">.selector, x:-moz-any-link { background: lightgreen; }</span></code></pre>
 
-    <pre class="language-css"><code>/* Firefox 3+ (Windows?), IE 7*/
+    <pre class="language-css"><code>/* Firefox 3+ (Windows?), IE 7 */
 <span class="test55">.selector, x:-moz-any-link, x:default { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.5+ */
@@ -440,7 +440,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* Safari */
+    <pre class="language-javascript"><code>/* Safari 5- */
 <span class="js-test-sa-1">var isSafari = /a/.__proto__=='//';</span></code></pre>
     <pre class="language-javascript"><code>/* Safari */
 <span class="js-test-sa-2">var isSafari = /Constructor/.test(window.HTMLElement);</span></code></pre>

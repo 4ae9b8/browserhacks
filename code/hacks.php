@@ -42,7 +42,7 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome 24- and Safari 6-',
+            'version' => 'Chrome 24-, Safari 6-, IE 7-',
             'data-version' => '24-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -321,16 +321,10 @@
             'code' => "var isIE = !+'\\v1';"
           ),
           array (
-            'version' => 'IE 6',
-            'data-version' => '6',
+            'version' => 'IE X (6, 7, 8, 9)',
+            'data-version' => '',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
-          ),
-          array (
-            'version' => 'IE 7',
-            'data-version' => '7',
-            'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE X]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 7',
@@ -342,19 +336,7 @@
             'version' => 'IE 8',
             'data-version' => '8',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
-          ),
-          array (
-            'version' => 'IE 8',
-            'data-version' => '8',
-            'language' => 'language-javascript',
             'code' => 'var isIE = document.all && document.querySelector && !document.addEventListener;'
-          ),
-          array (
-            'version' => 'IE 9',
-            'data-version' => '9',
-            'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 9]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
           ),
           array (
             'version' => 'IE 10',
@@ -416,7 +398,7 @@
             'version' => 'Conditional classes',
             'data-version' => '',
             'language' => 'language-markup',
-            'code' => '<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]--> \n<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]--> \n<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> <![endif]--> \n<!--[if IE 9]>     <html class="ie ie9 lte9"> <![endif]--> \n<!--[if gt IE 9]>  <html> <![endif]--> \n<!--[if !IE]><!--> <html>             <!--<![endif]-->'
+            'code' => '&lt;!--[if lt IE 7]&gt;  &lt;html class="ie ie6 lte9 lte8 lte7"&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 7]&gt;     &lt;html class="ie ie7 lte9 lte8 lte7"&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 8]&gt;     &lt;html class="ie ie8 lte9 lte8"&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9 lte9"&gt; &lt;![endif]--&gt; \n&lt;!--[if gt IE 9]&gt;  &lt;html&gt; &lt;![endif]--&gt; \n&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html&gt;             &lt;!--&lt;![endif]--&gt;'
           )
         )
       )
