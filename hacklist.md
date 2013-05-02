@@ -226,12 +226,12 @@
 	<!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)<![endif]-->
 
 	/* Conditional classes */
-	&lt;!--[if lt IE 7]&gt;  &lt;html class="ie ie6 lte9 lte8 lte7"&gt; &lt;![endif]--&gt; 
-	&lt;!--[if IE 7]&gt;     &lt;html class="ie ie7 lte9 lte8 lte7"&gt; &lt;![endif]--&gt; 
-	&lt;!--[if IE 8]&gt;     &lt;html class="ie ie8 lte9 lte8"&gt; &lt;![endif]--&gt; 
-	&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9 lte9"&gt; &lt;![endif]--&gt; 
-	&lt;!--[if gt IE 9]&gt;  &lt;html&gt; &lt;![endif]--&gt; 
-	&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html&gt;             &lt;!--&lt;![endif]--&gt;
+	<!--[if lt IE 7]>  <html class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+	<!--[if IE 7]>     <html class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+	<!--[if IE 8]>     <html class="ie ie8 lte9 lte8"> 		<![endif]-->
+	<!--[if IE 9]>     <html class="ie ie9 lte9">			<![endif]-->
+	<!--[if gt IE 9]>  <html> 								<![endif]--> 
+	<!--[if !IE]><!--> <html>             					<!--<![endif]-->
 
 ## OPERA
 
