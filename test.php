@@ -103,7 +103,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Safari 6- and Chrome 24- */
+    <pre class="language-css"><code>/* Safari 6-, Chrome 24- */
 <span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
@@ -139,10 +139,10 @@
     <pre class="language-css"><code>/* Firefox 1.5/2 */
 <span class="test65">body:empty .selector { }</span></code></pre>
 
-    <pre class="language-css"><code>/* Firefox 2+ & IE 7 */
+    <pre class="language-css"><code>/* Firefox 2+, IE 7 */
 <span class="test54">.selector, x:-moz-any-link { background: lightgreen; }</span></code></pre>
 
-    <pre class="language-css"><code>/* Firefox 3+ (Windows?) & IE 7*/
+    <pre class="language-css"><code>/* Firefox 3+ (Windows?), IE 7*/
 <span class="test55">.selector, x:-moz-any-link, x:default { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.5+ */
@@ -211,8 +211,7 @@
 <span class="test2">.fix.selector { background: lightgreen; } </span>/* .fix can be any unused class */</code></pre>
 
     <pre class="language-css"><code>/* IE 7 and below */
-<span class="test3">.selector, { background: lightgreen; }</span>
-<span class="test4">//.selector { background: lightgreen; }</span> /* Doesn't seem to work */</code></pre>
+<span class="test3">.selector, { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 7 */
 <span class="test5">*:first-child + html .selector { background: lightgreen; }</span>
@@ -322,23 +321,14 @@
     </section>
 
     <section data-cols="1">
-        <h3><span class="fontawesome-beaker"></span>Miscellaneous hacks</h3>
-    </section>
-
-    <section data-cols="1">
-    <pre class="language-css"><code>/* Everything but IE 6/7 - doesn't seem to work at all */
-<span class="test53">@import "selector.css" all;</span></code></pre>
-    </section>
-
-    <section data-cols="1">
         <h3><span class="fontawesome-fire"></span>JavaScript hacks</h3>
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* IE &lt;= 8 */
+    <pre class="language-javascript"><code>/* IE 8- */
 <span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
 
-    <pre class="language-javascript"><code>/* IE &lt;= 8 */
+    <pre class="language-javascript"><code>/* IE 8- */
 <span class="js-test-ie-9">var isIElt8 = !+'\\v1';</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 6 */
@@ -376,7 +366,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Opera 9.5+ */
+    <pre class="language-css"><code>/* Opera 9.5+, IE 7 */
 <span class="test64">noindex:-o-prefocus, .selector { background: lightgreen; }</span></code></pre>
 
 <pre class="language-css"><code>/* Opera 9.25, Safari 2/3.1 */

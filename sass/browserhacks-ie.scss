@@ -138,3 +138,7 @@ section > div {
 .footer-test {
 	padding: 1%;
 }
+
+* + html body {
+	overflow: visible;
+}

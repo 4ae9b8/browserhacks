@@ -442,7 +442,7 @@
             'code' => "html:first-child .selector {}"
           ),
           array (
-            'version' => 'Opera 9.5+',
+            'version' => 'Opera 9.5+, IE 7',
             'data-version' => '9.5+',
             'language' => 'language-css',
             'code' => "noindex:-o-prefocus, .selector {}"
