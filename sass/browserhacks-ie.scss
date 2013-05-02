@@ -100,8 +100,12 @@ section > div {
 	@extend %cf;
 	div {
 		float: left;
-		width: 47.9%;
+		width: 47.9% !important;
 		padding: 1%;
+	}
+
+	h2 {
+		font-size: 1.7em;
 	}
 }
 
@@ -141,12 +145,4 @@ section > div {
 
 * + html body {
 	overflow: visible;
-}
-
-* + html section[data-cols='2'] > div {
-	width: 48%;
-
-	h2 {
-		font-size: 1.7em;
-	}
 }
