@@ -42,7 +42,7 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome 24-, Safari 6-, IE 7-',
+            'version' => 'Chrome 24-, Safari 6-, IE 7',
             'data-version' => '24-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -312,7 +312,8 @@
             "version" => "Check for IE version",
             "data-version" => "",
             "language" => "language-javascript",
-            "code" => "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return -1; } })();")
+            "code" => "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return -1; } })();"
+          ),
           array (
             'version' => 'IE 7-',
             'data-version' => '6|7',
