@@ -87,7 +87,7 @@
             'code' => ".selector, x:-moz-any-link {}"
           ),
           array (
-            'version' => 'Firefox 3+',
+            'version' => 'Firefox 3+ (Windows?), IE 7',
             'data-version' => '3+',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link, x:default {}"
@@ -170,13 +170,13 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'IE 6 and below',
+            'version' => 'IE 6-',
             'data-version' => '6',
             'language' => 'language-css',
             'code' => "* html .selector  {} \n.suckyie6.selector {} /* .suckyie6 can be any unused class */"
           ),
           array (
-            'version' => 'IE 7 and below',
+            'version' => 'IE 7-',
             'data-version' => '7',
             'language' => 'language-css',
             'code' => ".selector, {}"
@@ -309,16 +309,16 @@
             "code" => "var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;"
           ),
           array (
-            'version' => 'IE <= 7',
+            'version' => 'IE 7-',
             'data-version' => '6|7',
             'language' => 'language-javascript',
             'code' => 'var isIE = document.all && !document.querySelector;'
           ),
           array (
-            'version' => 'IE <= 8',
+            'version' => 'IE 8-',
             'data-version' => '6|7|8',
             'language' => 'language-javascript',
-            'code' => "var isIE = !+'\v1';"
+            'code' => "var isIE = !+'\\v1';"
           ),
           array (
             'version' => 'IE 6',
@@ -330,7 +330,13 @@
             'version' => 'IE 7',
             'data-version' => '7',
             'language' => 'language-javascript',
-            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;\nnavigator.appVersion.indexOf(\"MSIE 7.\")!=-1"
+            'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;"
+          ),
+          array (
+            'version' => 'IE 7',
+            'data-version' => '7',
+            'language' => 'language-javascript',
+            'code' => "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\")!=-1;"
           ),
           array (
             'version' => 'IE 8',
@@ -430,7 +436,7 @@
             'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
-            'version' => 'Opera 9.27 and below, Safari 2',
+            'version' => 'Opera 9.27-, Safari 2',
             'data-version' => '9.27',
             'language' => 'language-css',
             'code' => "html:first-child .selector {}"
@@ -485,7 +491,7 @@
             'version' => 'Opera X',
             'data-version' => '',
             'language' => 'language-javascript',
-            'code' => 'var isOpera = window.opera && window.opera.version() == X'
+            'code' => 'var isOpera = window.opera && window.opera.version() == X;'
           )
         )
       )

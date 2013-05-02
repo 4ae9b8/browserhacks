@@ -59,6 +59,7 @@ body:last-child .test11 { background: lightgreen; }
 .test44 { background/**/: lightgreen; }
 body:nth-of-type(1) .test45 { background: lightgreen; }
 body:first-of-type .test46 { background: lightgreen; }
+@media screen\9 { .test72 { background: lightgreen;  } } 
 @media \0screen\,screen\9 { .test47 { background: lightgreen;  } } 
 @media \0screen { .test48 { background: lightgreen;  } } 
 @media screen\0 { .test49 { background: lightgreen;  } } 
@@ -84,3 +85,5 @@ body:empty .test65 { background: lightgreen; }
 .test69:nth-of-type(1n) { background: lightgreen\9; }
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test70 { background: lightgreen; } }
 head ~ /* */ body .test71 { background: lightgreen; }
+*|html[xmlns*=""] .test73 { background: lightgreen; }
+html:first-child .test74 { background: lightgreen; }

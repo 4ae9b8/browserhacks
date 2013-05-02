@@ -52,6 +52,9 @@ if (js_test_ie_7) $('.js-test-ie-7').addClass(testClass);
 var js_test_ie_8 = navigator.appVersion.indexOf("MSIE 7.")!=-1;
 if (js_test_ie_8) $('.js-test-ie-8').addClass(testClass);
 
+var js_test_ie_9 = !+'\v1';
+if (js_test_ie_9) $('.js-test-ie-9').addClass(testClass);
+
 /*
  * Opera
  */
@@ -66,3 +69,6 @@ if (js_test_op_2) $('.js-test-op-2').addClass(testClass);
  */
 var js_test_sa_1 = /a/.__proto__=='//';
 if (js_test_sa_1) $('.js-test-sa-1').addClass(testClass);
+
+var js_test_sa_2 = /Constructor/.test(window.HTMLElement);
+if (js_test_sa_2) $('.js-test-sa-2').addClass(testClass);

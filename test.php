@@ -103,7 +103,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Safari (version?) and Chrome (not Canary) */
+    <pre class="language-css"><code>/* Safari 6- and Chrome 24- */
 <span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
@@ -273,8 +273,10 @@
     <pre class="language-css"><code>/* IE 6/7 - acts as an !important */
 <span class="test40">.selector { background: lightgreen !ie; } </span>/* string after ! can be anything */</code></pre>
 
-    <pre class="language-css"><code>/* IE 7/8/9/10 */
-<span class="test42">.selector { background/*\**/: lightgreen\9; }</span></code></pre>
+    <pre class="language-css"><code>/* IE 6/7/8/9/10 */
+<span class="test41">.selector { background: lightgreen\9; }</span>
+<span class="test42">.selector { background/*\**/: lightgreen\9; }</span>
+</code></pre>
 
     <pre class="language-css"><code>/* IE 8/9 */
 <span class="test43">.selector { background: lightgreen\0/; } </span>
@@ -282,9 +284,6 @@
 
     <pre class="language-css"><code>/* IE 9/10 */
 <span class="test69">.selector:nth-of-type(1n) { background: lightgreen\9; }</span></code></pre>
-
-    <pre class="language-css"><code>/* IE 6/7/8/9/10 */
-<span class="test41">.selector { background: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6 */
 <span class="test44">.selector { background/**/: lightgreen; }</span></code></pre>
@@ -295,6 +294,9 @@
     </section>
 
     <section data-cols="1">
+        <pre class="language-css"><code>/* IE 6/7 */
+<span class="test72">@media screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
+
     <pre class="language-css"><code>/* IE 6/7/8 */
 <span class="test47">@media \0screen\,screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
 
@@ -304,7 +306,7 @@
     <pre class="language-css"><code>/* IE 9, Firefox 3.5+, Opera */
 <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 8/9/10 & Opera */
+    <pre class="language-css"><code>/* IE 8/9/10, Opera */
 <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 9/10 */
@@ -335,6 +337,9 @@
     <section data-cols="1">
     <pre class="language-javascript"><code>/* IE &lt;= 8 */
 <span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE &lt;= 8 */
+<span class="js-test-ie-9">var isIElt8 = !+'\\v1';</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 6 */
 <span class="js-test-ie-2">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->";
@@ -373,6 +378,12 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <section data-cols="1">
     <pre class="language-css"><code>/* Opera 9.5+ */
 <span class="test64">noindex:-o-prefocus, .selector { background: lightgreen; }</span></code></pre>
+
+<pre class="language-css"><code>/* Opera 9.25, Safari 2/3.1 */
+<span class="test73">*|html[xmlns*=""] .selector { background: lightgreen; }</span></code></pre>
+
+<pre class="language-css"><code>/* Opera 9.27-, Safari 2 */
+<span class="test74">html:first-child .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -383,7 +394,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <pre class="language-css"><code>/* Opera 7 */
 <span class="test66">@media all and (min-width: 0px){ .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* Opera &lt;= 12 */
+    <pre class="language-css"><code>/* Opera 12- */
 <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera, IE 8/9/10 */
@@ -398,10 +409,10 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     </section>
 
     <section data-cols="1">
-    <pre class="language-javascript"><code>/* Opera &lt;= 9.64 */
+    <pre class="language-javascript"><code>/* Opera 9.64- */
 <span class="js-test-op-1">var isOpera = /^function \(/.test([].sort);</span></code></pre>
 
-    <pre class="language-javascript"><code>/* Opera &lt;= 12.11 */
+    <pre class="language-javascript"><code>/* Opera 12.11- */
 <span class="js-test-op-2">var isOpera = !!window.opera;</span></code></pre>
     </section>
 </article>
@@ -441,6 +452,8 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <section data-cols="1">
     <pre class="language-javascript"><code>/* Safari */
 <span class="js-test-sa-1">var isSafari = /a/.__proto__=='//';</span></code></pre>
+    <pre class="language-javascript"><code>/* Safari */
+<span class="js-test-sa-2">var isSafari = /Constructor/.test(window.HTMLElement);</span></code></pre>
     </section>
 </article>
      <article data-high="3" class="footer-test">
