@@ -49,6 +49,7 @@ body {
   font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
   background: url(/img/grey.png) #eee;
   position: relative;
+  overflow: visible;
 }
 
 .nav-browser {
@@ -143,6 +144,11 @@ section > div {
 	padding: 1%;
 }
 
-* + html body {
-	overflow: visible;
+.th {
+	background: none;
+	padding: 0;
+}
+
+.nav-browser a {
+	background-image: none;
 }
