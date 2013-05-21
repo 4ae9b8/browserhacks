@@ -87,3 +87,5 @@ body:empty .test65 { background: lightgreen; }
 head ~ /* */ body .test71 { background: lightgreen; }
 *|html[xmlns*=""] .test73 { background: lightgreen; }
 html:first-child .test74 { background: lightgreen; }
+.test75 { (;background: lightgreen;); }
+.test76 { [;background: lightgreen;]; }

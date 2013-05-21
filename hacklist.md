@@ -7,6 +7,12 @@
 	/* Chrome 24- and Safari 6- */
 	::made-up-pseudo-element, .selector {}
 
+### PROPERTY/VALUE HACKS
+
+	/* Chrome 28-, Safari 6- */ 
+	.selector { (;color: blue;); }
+	.selector { [;color: blue;]; }
+
 ### MEDIA HACKS
 
 	/* Chrome, Safari 3+ */
@@ -295,6 +301,12 @@
 
 	/* Safari 3+, Chrome */
 	@media screen and (-webkit-min-device-pixel-ratio:0) {}
+
+### PROPERTY/VALUE HACKS
+
+	/* Safari 6-, Chrome 28- */ 
+	.selector { (;color: blue;); }
+	.selector { [;color: blue;]; }
 
 ### JAVASCRIPT HACKS
 

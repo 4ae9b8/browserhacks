@@ -56,6 +56,14 @@
             'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
           ),
         ),
+        'propertyValue' => array(
+          array (
+            'version' => 'Chrome 28-, Safari 6-',
+            'data-version' => '28-',
+            'language' => 'language-css',
+            'code' => '.selector { (;color: blue;); }\n .selector { [;color: blue;]; }'
+          )
+        ),
         'javascript' => array(
           array (
             'version' => 'Chrome',
@@ -517,6 +525,14 @@
             'data-version' => '3+',
             'language' => 'language-css',
             'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}"
+          )
+        ),
+        'propertyValue' => array(
+          array (
+            'version' => 'Safari 6-, Chrome 28-',
+            'data-version' => '28-',
+            'language' => 'language-css',
+            'code' => '.selector { (;color: blue;); }\n .selector { [;color: blue;]; }'
           )
         ),
         "javascript" => array(
