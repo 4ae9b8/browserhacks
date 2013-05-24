@@ -89,6 +89,8 @@
 	*:first-child+html .selector {} 
 	.selector, x:-IE7 {} 
 	*+html .selector {} 
+	body*.selector {}
+	.selector\ {}
 
 	/* Everything but IE 6 */
 	html > body .selector {}

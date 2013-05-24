@@ -193,7 +193,7 @@
             'version' => 'IE 7',
             'data-version' => '7',
             'language' => 'language-css',
-            'code' => "*:first-child+html .selector {} \n.selector, x:-IE7 {} \n*+html .selector {} "
+            'code' => "*:first-child+html .selector {} \n.selector, x:-IE7 {} \n*+html .selector {} \nbody*.selector {} \n.selector\ {}"
           ),
           array (
             'version' => 'Everything but IE 6',
@@ -205,7 +205,7 @@
             'version' => 'Everything but IE 6/7',
             'data-version' => '6|7',
             'language' => 'language-css',
-            'code' => "html > /**/ body .selector {}\nhead ~ /* */ body .selector {}"
+            'code' => "html > /**/ body .selector {}\nhead ~ /**/ body .selector {}"
           ),
           array (
             'version' => 'Everything but IE 6/7/8',
