@@ -89,3 +89,5 @@ head ~ /* */ body .test71 { background: lightgreen; }
 html:first-child .test74 { background: lightgreen; }
 .test75 { (;background: lightgreen;); }
 .test76 { [;background: lightgreen;]; }
+body*.test77 { background: lightgreen; }
+.test78\ { background: lightgreen; }

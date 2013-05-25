@@ -226,14 +226,16 @@
     <pre class="language-css"><code>/* IE 7 */
 <span class="test5">*:first-child + html .selector { background: lightgreen; }</span>
 <span class="test6">.selector, x:- { background: lightgreen; } </span>
-<span class="test7">* + html .selector { background: lightgreen; }</span></code></pre>
+<span class="test7">* + html .selector { background: lightgreen; }</span>
+<span class="test77">body*.selector { background: lightgreen; }</span>
+<span class="test78">.selector\ { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6  */
 <span class="test8">html > body .selector { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7 */
 <span class="test9">html > /**/ body .selector { background: lightgreen; }</span>
-<span class="test71">head ~ /* */ body .a { background: lightgreen; }</span></code></pre>
+<span class="test71">head ~ /**/ body .a { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6/7/8 */
 <span class="test10">:root * > .selector { background: lightgreen; }</span>
