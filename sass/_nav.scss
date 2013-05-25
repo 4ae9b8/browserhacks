@@ -30,8 +30,9 @@
       overflow: hidden;
       height: 1em;
       color: #000;
-      background-image: url("../img/sprite-browser-logos.png") no-repeat;
+      background-image: url("../img/sprite-browser-logos.png");
       background-size: 4.5em;
+      background-repeat: no-repeat;
       border-top:.125em solid rgba(255, 255, 255, .25);
       border-bottom:.25em solid rgba(0, 0, 0, .5);
       
