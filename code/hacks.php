@@ -179,13 +179,13 @@
         'selector' => array(
           array (
             'version' => 'IE 6-',
-            'data-version' => '6',
+            'data-version' => '6-',
             'language' => 'language-css',
             'code' => "* html .selector  {} \n.suckyie6.selector {} /* .suckyie6 can be any unused class */"
           ),
           array (
             'version' => 'IE 7-',
-            'data-version' => '7',
+            'data-version' => '7-',
             'language' => 'language-css',
             'code' => ".selector, {}"
           ),
@@ -235,6 +235,12 @@
             'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
           ),
           array (
+            'version' => 'IE 6+',
+            'data-version' => '6+',
+            'language' => 'language-css',
+            'code' => ".selector { color: blue\9; } \n.selector { color/*\**/: blue\9; }"
+          ),
+          array (
             'version' => 'IE 8+',
             'data-version' => '8+',
             'language' => 'language-css',
@@ -245,12 +251,6 @@
             'data-version' => '9+',
             'language' => 'language-css',
             'code' => ".selector:nth-of-type(1n) { color: blue\9; }"
-          ),
-          array (
-            'version' => 'IE 6+',
-            'data-version' => '6+',
-            'language' => 'language-css',
-            'code' => ".selector { color: blue\9; } \n.selector { color/*\**/: blue\9; }"
           ),
           array (
             'version' => 'Everything but IE 6',
@@ -324,13 +324,13 @@
           ),
           array (
             'version' => 'IE 7-',
-            'data-version' => '6|7',
+            'data-version' => '7-',
             'language' => 'language-javascript',
             'code' => 'var isIE = document.all && !document.querySelector;'
           ),
           array (
             'version' => 'IE 8-',
-            'data-version' => '6|7|8',
+            'data-version' => '8-',
             'language' => 'language-javascript',
             'code' => "var isIE = !+'\\v1';"
           ),
@@ -386,37 +386,37 @@
           ),
           array (
             'version' => 'IE X (6, 7, 8, 9)',
-            'data-version' => '',
+            'data-version' => '6|7|8|9',
             'language' => 'language-markup',
             'code' => '&lt;!--[if IE X]> Internet Explorer X &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X- (6, 7, 8, 9)',
-            'data-version' => '',
+            'data-version' => '6|7|8|9',
             'language' => 'language-markup',
             'code' => '&lt;!--[if IE lte X]> Internet Explorer X or less &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X+ (6, 7, 8, 9)',
-            'data-version' => '',
+            'data-version' => '6|7|8|9',
             'language' => 'language-markup',
             'code' => '&lt;!--[if IE gte X]> Internet Explorer X or greater &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X or Y (6, 7, 8, 9)',
-            'data-version' => '',
+            'data-version' => '6|7|8|9',
             'language' => 'language-markup',
             'code' => '&lt;!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y &lt;![endif]-->'
           ),
           array (
             'version' => 'IE X+ but Y- (6, 7, 8, 9)',
-            'data-version' => '6|7|8',
+            'data-version' => '6|7|8|9',
             'language' => 'language-markup',
             'code' => '&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->'
           ),
           array (
             'version' => 'Conditional classes',
-            'data-version' => '',
+            'data-version' => '6|7|8|9',
             'language' => 'language-markup',
             'code' => '&lt;!--[if lt IE 7]&gt;  &lt;html class="ie ie6 lte9 lte8 lte7"&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 7]&gt;     &lt;html class="ie ie7 lte9 lte8 lte7"&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 8]&gt;     &lt;html class="ie ie8 lte9 lte8"&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 9]&gt;     &lt;html class="ie ie9 lte9"&gt; &lt;![endif]--&gt; \n&lt;!--[if gt IE 9]&gt;  &lt;html&gt; &lt;![endif]--&gt; \n&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html&gt;             &lt;!--&lt;![endif]--&gt;'
           )
@@ -536,7 +536,7 @@
         'propertyValue' => array(
           array (
             'version' => 'Safari 6-, Chrome 28-',
-            'data-version' => '28-',
+            'data-version' => '6-',
             'language' => 'language-css',
             'code' => '.selector { (;color: blue;); }\n .selector { [;color: blue;]; }'
           )
@@ -544,7 +544,7 @@
         "javascript" => array(
           array (
             'version' => 'Safari 5-',
-            'data-version' => '2|3|4|5',
+            'data-version' => '5-',
             'language' => 'language-javascript',
             'code' => "var isSafari = /a/.__proto__=='//';"
           ),
