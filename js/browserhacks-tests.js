@@ -58,6 +58,9 @@ if (js_test_ie_9) $('.js-test-ie-9').addClass(testClass);
 var js_test_ie_10 = /*@cc_on!@*/false;
 if (js_test_ie_10) $('.js-test-ie-10').addClass(testClass);
 
+var js_test_ie_11 = window.navigator.msPointerEnabled;
+if (js_test_ie_11) $('.js-test-ie-11').addClass(testClass);
+
 /*
  * Opera
  */

@@ -350,7 +350,9 @@ var isIE6 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 7 */
 <span class="js-test-ie-3">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->";
-var isIE7 = checkIE.getElementsByTagName("i").length == 1;</span>
+var isIE7 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 7 */
 <span class="js-test-ie-8">var isIE7 = navigator.appVersion.indexOf("MSIE 7.")!=-1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 8 */
@@ -366,6 +368,10 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 10 */
 <span class="js-test-ie-7">var isIE10 = document.body.style.msTouchAction != undefined;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 10 */
+<span class="js-test-ie-11">var isIE10 = window.navigator.msPointerEnabled;</span></code></pre>
+
     </section>
 </article>
 

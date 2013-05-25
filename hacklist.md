@@ -214,6 +214,9 @@
 	/* IE 10 */
 	var isIE = document.body.style.msTouchAction != undefined;
 
+	/* IE 10 */
+	var isIE = window.navigator.msPointerEnabled;
+
 ### CONDITIONAL COMMENTS
 
 	/* IE */

@@ -363,6 +363,12 @@
             'data-version' => '10',
             'language' => 'language-javascript',
             'code' => "var isIE = document.body.style.msTouchAction != undefined;"
+          ),
+          array (
+            'version' => 'IE 10',
+            'data-version' => '10',
+            'language' => 'language-javascript',
+            'code' => 'var isIE = window.navigator.msPointerEnabled;'
           )
         ),
         'html' => array (
