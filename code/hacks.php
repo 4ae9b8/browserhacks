@@ -95,7 +95,7 @@
             'code' => ".selector, x:-moz-any-link {}"
           ),
           array (
-            'version' => 'Firefox 3+ (Windows?), IE 7',
+            'version' => 'Firefox 3+, IE 7',
             'data-version' => '3+',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link, x:default {}"
@@ -109,7 +109,7 @@
         ),
         'media' => array(
           array (
-            'version' => 'Firefox 3.5+, IE 9/10, Opera',
+            'version' => 'Firefox 3.5+, IE 9+, Opera',
             'data-version' => '3.5+',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
@@ -235,20 +235,20 @@
             'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
           ),
           array (
-            'version' => 'IE 8/9',
-            'data-version' => '8|9',
+            'version' => 'IE 8+',
+            'data-version' => '8+',
             'language' => 'language-css',
             'code' => ".selector { color: blue\\0/; } \n/* must go at the END of all rules */"
           ),
           array (
-            'version' => 'IE 9/10',
-            'data-version' => '9|10',
+            'version' => 'IE 9+',
+            'data-version' => '9+',
             'language' => 'language-css',
             'code' => ".selector:nth-of-type(1n) { color: blue\9; }"
           ),
           array (
-            'version' => 'IE 6/7/8/9/10',
-            'data-version' => '6|7|8|9|10',
+            'version' => 'IE 6+',
+            'data-version' => '6+',
             'language' => 'language-css',
             'code' => ".selector { color: blue\9; } \n.selector { color/*\**/: blue\9; }"
           ),
@@ -279,20 +279,20 @@
             'code' => "@media \\0screen {}"
           ),
           array (
-            'version' => 'IE 8/9/10 & Opera',
-            'data-version' => '8|9|10',
+            'version' => 'IE 8+, Opera',
+            'data-version' => '8+',
             'language' => 'language-css',
             'code' => "@media screen\\0 {}"
           ),
           array (
-            'version' => 'IE 9/10, Firefox 3.5+, Opera',
-            'data-version' => '9|10',
+            'version' => 'IE 9+, Firefox 3.5+, Opera',
+            'data-version' => '9+',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
           array (
-            'version' => 'IE 9/10',
-            'data-version' => '9|10',
+            'version' => 'IE 9+',
+            'data-version' => '9+',
             'language' => 'language-css',
             'code' => "@media screen and (min-width:0\\0) {}"
           ),
@@ -464,13 +464,13 @@
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
           ),
           array (
-            'version' => 'Opera, Firefox 3.5+, IE 9/10',
+            'version' => 'Opera, Firefox 3.5+, IE 9+',
             'data-version' => '',
             'language' => 'language-css',
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
           array (
-            'version' => 'Opera, IE 8/9/10',
+            'version' => 'Opera, IE 8+',
             'data-version' => '',
             'language' => 'language-css',
             'code' => "@media screen\0 {}"

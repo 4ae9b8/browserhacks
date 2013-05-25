@@ -152,7 +152,7 @@
     <pre class="language-css"><code>/* Firefox 2+, IE 7 */
 <span class="test54">.selector, x:-moz-any-link { background: lightgreen; }</span></code></pre>
 
-    <pre class="language-css"><code>/* Firefox 3+ (Windows?), IE 7 */
+    <pre class="language-css"><code>/* Firefox 3+, IE 7 */
 <span class="test55">.selector, x:-moz-any-link, x:default { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.5+ */
@@ -216,11 +216,11 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* IE 6 and below */
+    <pre class="language-css"><code>/* IE 6- */
 <span class="test1">* html .selector  { background: lightgreen; } </span>
 <span class="test2">.fix.selector { background: lightgreen; } </span>/* .fix can be any unused class */</code></pre>
 
-    <pre class="language-css"><code>/* IE 7 and below */
+    <pre class="language-css"><code>/* IE 7- */
 <span class="test3">.selector, { background: lightgreen; }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 7 */
@@ -284,16 +284,16 @@
     <pre class="language-css"><code>/* IE 6/7 - acts as an !important */
 <span class="test40">.selector { background: lightgreen !ie; } </span>/* string after ! can be anything */</code></pre>
 
-    <pre class="language-css"><code>/* IE 6/7/8/9/10 */
+    <pre class="language-css"><code>/* IE 6+ */
 <span class="test41">.selector { background: lightgreen\9; }</span>
 <span class="test42">.selector { background/*\**/: lightgreen\9; }</span>
 </code></pre>
 
-    <pre class="language-css"><code>/* IE 8/9 */
+    <pre class="language-css"><code>/* IE 8+ */
 <span class="test43">.selector { background: lightgreen\0/; } </span>
     /* must go at the END of all rules */</code></pre>
 
-    <pre class="language-css"><code>/* IE 9/10 */
+    <pre class="language-css"><code>/* IE 9+ */
 <span class="test69">.selector:nth-of-type(1n) { background: lightgreen\9; }</span></code></pre>
 
     <pre class="language-css"><code>/* Everything but IE 6 */
@@ -314,13 +314,13 @@
     <pre class="language-css"><code>/* IE 8 */
 <span class="test48">@media \0screen { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 9, Firefox 3.5+, Opera */
-<span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
-
-    <pre class="language-css"><code>/* IE 8/9/10, Opera */
+    <pre class="language-css"><code>/* IE 8+, Opera */
 <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 9/10 */
+    <pre class="language-css"><code>/* IE 9+, Firefox 3.5+, Opera */
+<span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
+
+    <pre class="language-css"><code>/* IE 9+ */
 <span class="test50">@media screen and (min-width:0\0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 10+ */
@@ -408,10 +408,10 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <pre class="language-css"><code>/* Opera 12- */
 <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* Opera, IE 8/9/10 */
+    <pre class="language-css"><code>/* Opera, IE 8+  */
 <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* Opera, Firefox 3.5+, IE 9 */
+    <pre class="language-css"><code>/* Opera, Firefox 3.5+, IE 9+ */
 <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
     </section>
 

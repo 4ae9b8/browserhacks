@@ -31,10 +31,10 @@
 	/* Firefox 1.5 */
 	body:empty .selector {}
 
-	/* Firefox 2+ */
+	/* Firefox 2+, IE 7 */
 	.selector, x:-moz-any-link {}
 
-	/* Firefox 3+ */
+	/* Firefox 3+, IE 7 */
 	.selector, x:-moz-any-link, x:default {}
 
 	/* Firefox 3.5+ */
@@ -42,7 +42,7 @@
 
 ### MEDIA HACKS
 
-	/* Firefox 3.5+, IE 9/10, Opera */
+	/* Firefox 3.5+, IE 9+, Opera */
 	@media screen and (min-resolution: +72dpi) {}
 
 	/* Firefox 3.6+ */
@@ -78,11 +78,11 @@
 
 ### SELECTOR HACKS
 
-	/* IE 6 and below */
+	/* IE 6- */
 	* html .selector  {} 
 	.suckyie6.selector {} /* .suckyie6 can be any unused class */
 
-	/* IE 7 and below */
+	/* IE 7- */
 	.selector, {}
 
 	/* IE 7 */
@@ -143,14 +143,14 @@
 	.selector { color: blue !ie; } 
 	/* string after ! can be anything */
 
-	/* IE 8/9 */
+	/* IE 8+ */
 	.selector { color: blue\0/; } 
 	/* must go at the END of all rules */
 
-	/* IE 9/10 */
+	/* IE 9+ */
 	.selector:nth-of-type(1n) { color: blue\9; }
 
-	/* IE 6/7/8/9/10 */
+	/* IE 6+ */
 	.selector { color: blue\9; } 
 	.selector { color/*\**/: blue\9; }
 
@@ -168,13 +168,13 @@
 	/* IE 8 */
 	@media \0screen {}
 
-	/* IE 8/9/10, Opera */
+	/* IE 8+, Opera */
 	@media screen\0 {}
 
-	/* IE 9/10, Firefox 3.5+, Opera */
+	/* IE 9+, Firefox 3.5+, Opera */
 	@media screen and (min-resolution: +72dpi) {}
 
-	/* IE 9/10 */
+	/* IE 9+ */
 	@media screen and (min-width:0\0) {}
 
 	/* IE 10+ */
@@ -257,7 +257,7 @@
 	/* Opera 9.25, Safari 2/3.1 */
 	*|html[xmlns*=""] .selector {}
 
-	/* Opera 9.27 and below, Safari 2 */
+	/* Opera 9.27-, Safari 2 */
 	html:first-child .selector {}
 
 	/* Opera 9.5+ */
@@ -271,11 +271,11 @@
 	/* Opera 12- */
 	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}
 
-	/* Opera, Firefox 3.5+, IE 9/10 */
+	/* Opera, Firefox 3.5+, IE 9+ */
 	@media screen and (min-resolution: +72dpi) {}
 
-	/* Opera, IE 8/9/10 */
-	@media screen {}
+	/* Opera, IE 8+ */
+	@media screen\0 {}
 
 ### JAVASCRIPT HACKS
 
