@@ -61,6 +61,11 @@ if (js_test_ie_10) $('.js-test-ie-10').addClass(testClass);
 var js_test_ie_11 = window.navigator.msPointerEnabled;
 if (js_test_ie_11) $('.js-test-ie-11').addClass(testClass);
 
+var js_test_ie_12 = document.all && !document.querySelector;
+if (js_test_ie_12) $('.js-test-ie-12').addClass(testClass);
+
+var js_test_ie_13 = document.all && document.querySelector && !document.addEventListener;
+if (js_test_ie_13) $('.js-test-ie-13').addClass(testClass);
 /*
  * Opera
  */

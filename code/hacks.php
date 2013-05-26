@@ -42,7 +42,7 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Chrome 24-, Safari 6-, IE 7',
+            'version' => 'Chrome 24-, Safari 6, IE 7',
             'data-version' => '24-',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
@@ -83,13 +83,13 @@
       'hacks' => array(
         'selector' => array(
           array (
-            'version' => 'Firefox 1.5',
+            'version' => 'Firefox 1.5/2',
             'data-version' => '1.5',
             'language' => 'language-css',
             'code' => "body:empty .selector {}"
           ),
           array (
-            'version' => 'Firefox 2+',
+            'version' => 'Firefox 2+, IE 7',
             'data-version' => '2+',
             'language' => 'language-css',
             'code' => ".selector, x:-moz-any-link {}"
@@ -141,7 +141,7 @@
             'code' => "var isFF = !!navigator.userAgent.match(/firefox/i);"
           ),
           array (
-            'version' => 'Firefox 2 - 13',
+            'version' => 'Firefox 2-13',
             'data-version' => '2|3|4|5|6|7|8|9|10|11|12|13',
             'language' => 'language-javascript',
             'code' => "var isFF = !!window.globalStorage;"
@@ -196,6 +196,24 @@
             'code' => "*:first-child+html .selector {} \n.selector, x:-IE7 {} \n*+html .selector {} \nbody*.selector {} \n.selector\ {}"
           ),
           array (
+            'version' => 'IE 7, Firefox 2+',
+            'data-version' => '7',
+            'language' => 'language-css',
+            'code' => ".selector, x:-moz-any-link {}"
+          ),
+          array (
+            'version' => 'IE 7, Firefox 3+',
+            'data-version' => '7',
+            'language' => 'language-css',
+            'code' => ".selector, x:-moz-any-link, x:default {}"
+          ),
+          array (
+            'version' => 'IE 7, Chrome 24-, Safari 6',
+            'data-version' => '7',
+            'language' => 'language-css',
+            'code' => "::made-up-pseudo-element, .selector {}"
+          )
+          array (
             'version' => 'Everything but IE 6',
             'data-version' => '6',
             'language' => 'language-css',
@@ -222,15 +240,15 @@
             'code' => ".selector { _color: blue; } \n.selector { -color: blue; }"
           ),
           array (
-            'version' => "IE 6/7 - any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
-            'data-version' => '6|7',
+            'version' => "IE 7-, any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
+            'data-version' => '7-',
             'language' => 'language-css',
             'code' => ".selector { !color: blue; } \n.selector { \$color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n/* ... */"
               /*.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }*/
           ),
           array (
-            'version' => 'IE 6/7 - acts as an !important',
-            'data-version' => '6|7',
+            'version' => 'IE 7-, acts as an !important',
+            'data-version' => '7-',
             'language' => 'language-css',
             'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */"
           ),
@@ -241,7 +259,7 @@
             'code' => ".selector { color: blue\9; } \n.selector { color/*\**/: blue\9; }"
           ),
           array (
-            'version' => 'IE 8+',
+            'version' => 'IE 8+, Opera 10',
             'data-version' => '8+',
             'language' => 'language-css',
             'code' => ".selector { color: blue\\0/; } \n/* must go at the END of all rules */"
@@ -254,21 +272,21 @@
           ),
           array (
             'version' => 'Everything but IE 6',
-            'data-version' => '6',
+            'data-version' => '',
             'language' => 'language-css',
             'code' => ".selector { color/**/: blue; }"
           )
         ),
         "media" => array(
           array (
-            'version' => 'IE 6/7',
-            'data-version' => '6|7',
+            'version' => 'IE 7-',
+            'data-version' => '7-',
             'language' => 'language-css',
             'code' => "@media screen\9 {}"
           ),
           array (
-            'version' => 'IE 6/7/8',
-            'data-version' => '6|7|8',
+            'version' => 'IE 8-',
+            'data-version' => '8-',
             'language' => 'language-css',
             'code' => "@media \\0screen\,screen\9 {}"
           ),
@@ -291,7 +309,7 @@
             'code' => "@media screen and (min-resolution: +72dpi) {}"
           ),
           array (
-            'version' => 'IE 9+',
+            'version' => 'IE 9+, Safari 4',
             'data-version' => '9+',
             'language' => 'language-css',
             'code' => "@media screen and (min-width:0\\0) {}"
@@ -311,6 +329,12 @@
         ),
         "javascript" => array(
           array (
+            "version" => "IE",
+            "data-version" => "",
+            "language" => "language-javascript",
+            "code" => "var isIE = /*@cc_on!@*/false;"
+          ),
+          array (
             "version" => "Check for IE version",
             "data-version" => "3|4|5|6|7|8|9|10",
             "language" => "language-javascript",
@@ -329,12 +353,6 @@
             'code' => 'var isIE = document.all && !document.querySelector;'
           ),
           array (
-            'version' => 'IE 8-',
-            'data-version' => '8-',
-            'language' => 'language-javascript',
-            'code' => "var isIE = !+'\\v1';"
-          ),
-          array (
             'version' => 'IE X (6, 7, 8, 9)',
             'data-version' => '',
             'language' => 'language-javascript',
@@ -345,6 +363,18 @@
             'data-version' => '7',
             'language' => 'language-javascript',
             'code' => "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\")!=-1;"
+          ),
+          array (
+            'version' => 'IE 8-',
+            'data-version' => '8-',
+            'language' => 'language-javascript',
+            'code' => "var isIE = '\\v'=='v';"
+          ),
+          array (
+            'version' => 'IE 8-',
+            'data-version' => '8-',
+            'language' => 'language-javascript',
+            'code' => "var isIE = !+'\\v1';"
           ),
           array (
             'version' => 'IE 8',
@@ -439,7 +469,7 @@
           ),
           array (
             'version' => 'Opera 9.27-, Safari 2',
-            'data-version' => '9.27',
+            'data-version' => '9.27-',
             'language' => 'language-css',
             'code' => "html:first-child .selector {}"
           ),
@@ -458,8 +488,8 @@
             'code' => "@media all and (min-width: 0px){}"
           ),
           array (
-            'version' => 'Opera 12-',
-            'data-version' => '12-',
+            'version' => 'Opera 11-',
+            'data-version' => '11-',
             'language' => 'language-css',
             'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}"
           ),
@@ -485,7 +515,7 @@
           ),
           array (
             'version' => 'Opera 12-',
-            'data-version' => '12.11-',
+            'data-version' => '12-',
             'language' => 'language-javascript',
             'code' => "var isOpera = !!window.opera;"
           ),
@@ -519,8 +549,8 @@
             'code' => "*|html[xmlns*=\"\"] .selector {}"
           ),
           array (
-            'version' => 'Safari 6- and Chrome 24-',
-            'data-version' => '6-',
+            'version' => 'Safari 6, Chrome 24-, IE 7',
+            'data-version' => '6',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
           )

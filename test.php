@@ -103,7 +103,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Safari 6-, Chrome 24-, IE 7- */
+    <pre class="language-css"><code>/* Chrome 24-, Safari 6, IE 7 */
 <span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
@@ -164,7 +164,7 @@
     </section>
 
     <section data-cols="1">
-    <pre class="language-css"><code>/* Firefox 3.5+, IE 9, Opera */
+    <pre class="language-css"><code>/* Firefox 3.5+, IE 9+, Opera */
 <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Firefox 3.6+ */
@@ -194,7 +194,7 @@
     <pre class="language-javascript"><code>/* Firefox */
 <span class="js-test-ff-4">var isFF = !!navigator.userAgent.match(/firefox/i);</span></code></pre>
 
-    <pre class="language-javascript"><code>/* Firefox 2 - 13 */
+    <pre class="language-javascript"><code>/* Firefox 2-13 */
 <span class="js-test-ff-1">var isFF = !!globalStorage;</span></code></pre>
 
     <pre class="language-javascript"><code>/* Firefox 2/3 */
@@ -230,6 +230,15 @@
 <span class="test77">body*.selector { background: lightgreen; }</span>
 <span class="test78">.selector\ { background: lightgreen; }</span></code></pre>
 
+    <pre class="language-css"><code>/* IE 7, Chrome 24-, Safari 6 */
+<span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
+
+    <pre class="language-css"><code>/* IE 7, Firefox 2+  */
+<span class="test54">.selector, x:-moz-any-link { background: lightgreen; }</span></code></pre>
+
+    <pre class="language-css"><code>/* IE 7, Firefox 3+ */
+<span class="test55">.selector, x:-moz-any-link, x:default { background: lightgreen; }</span></code></pre>
+
     <pre class="language-css"><code>/* Everything but IE 6  */
 <span class="test8">html > body .selector { background: lightgreen; }</span></code></pre>
 
@@ -256,7 +265,7 @@
 <span class="test15" style="¬background: lightgreen;">.selector { ¬background: lightgreen; }</span>
 <span class="test16" style="¦background: lightgreen;">.selector { ¦background: lightgreen; }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 6/7 any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : &lt; > | */
+    <pre class="language-css"><code>/* IE 7-, any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : &lt; > | */
 <span class="test17" style="!background: lightgreen;">.selector { !background: lightgreen; }</span>
 <span class="test18" style="$background: lightgreen;">.selector { $background: lightgreen; }</span>
 <span class="test19" style="&background: lightgreen;">.selector { &background: lightgreen; }</span>
@@ -281,7 +290,7 @@
 <span class="test38" style="&gt;background: lightgreen;">.selector { &gt;background: lightgreen; }</span>
 <span class="test39" style="|background: lightgreen;">.selector { |background: lightgreen; }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 6/7 - acts as an !important */
+    <pre class="language-css"><code>/* IE 7-, acts as an !important */
 <span class="test40">.selector { background: lightgreen !ie; } </span>/* string after ! can be anything */</code></pre>
 
     <pre class="language-css"><code>/* IE 6+ */
@@ -305,22 +314,22 @@
     </section>
 
     <section data-cols="1">
-        <pre class="language-css"><code>/* IE 6/7 */
+        <pre class="language-css"><code>/* IE 7- */
 <span class="test72">@media screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
 
-    <pre class="language-css"><code>/* IE 6/7/8 */
+    <pre class="language-css"><code>/* IE 8- */
 <span class="test47">@media \0screen\,screen\9 { .selector { background: lightgreen; } }</span> </code></pre>
 
     <pre class="language-css"><code>/* IE 8 */
 <span class="test48">@media \0screen { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 8+, Opera */
+    <pre class="language-css"><code>/* IE 8+, Opera 10 */
 <span class="test49">@media screen\0 { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 9+, Firefox 3.5+, Opera */
 <span class="test57">@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* IE 9+ */
+    <pre class="language-css"><code>/* IE 9+, Safari 4 */
 <span class="test50">@media screen and (min-width:0\0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* IE 10+ */
@@ -340,15 +349,12 @@
     <pre class="language-javascript"><code>/* IE */
 <span class="js-test-ie-10">var isIE = /*@cc_on!@*/false;</span></code></pre>
 
-    <pre class="language-javascript"><code>/* IE 8- */
-<span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
-
-    <pre class="language-javascript"><code>/* IE 8- */
-<span class="js-test-ie-9">var isIElt8 = !+'\\v1';</span></code></pre>
-
     <pre class="language-javascript"><code>/* IE 6 */
 <span class="js-test-ie-2">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 6]>&lt;i>&lt;/i>&lt;![endif]-->";
 var isIE6 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 7- */
+<span class="js-test-ie-12">var isIE = document.all && !document.querySelector;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 7 */
 <span class="js-test-ie-3">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 7]>&lt;i>&lt;/i>&lt;![endif]-->";
@@ -356,6 +362,15 @@ var isIE7 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 7 */
 <span class="js-test-ie-8">var isIE7 = navigator.appVersion.indexOf("MSIE 7.")!=-1;</span></code></pre>
+   
+    <pre class="language-javascript"><code>/* IE 8- */
+<span class="js-test-ie-1">var isIElt8 = '\v'=='v';</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 8- */
+<span class="js-test-ie-9">var isIElt8 = !+'\\v1';</span></code></pre>
+
+    <pre class="language-javascript"><code>/* IE 8 */
+<span class="js-test-ie-13">var isIElt8 = document.all && document.querySelector && !document.addEventListener;</span></code></pre>
 
     <pre class="language-javascript"><code>/* IE 8 */
 <span class="js-test-ie-4">(checkIE = document.createElement("b")).innerHTML = "&lt;!--[if IE 8]>&lt;i>&lt;/i>&lt;![endif]-->";
@@ -405,7 +420,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <pre class="language-css"><code>/* Opera 7 */
 <span class="test66">@media all and (min-width: 0px){ .selector { background: lightgreen; } }</span></code></pre>
 
-    <pre class="language-css"><code>/* Opera 12- */
+    <pre class="language-css"><code>/* Opera 11- */
 <span class="test70">@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }</span></code></pre>
 
     <pre class="language-css"><code>/* Opera, IE 8+  */
@@ -423,7 +438,7 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
     <pre class="language-javascript"><code>/* Opera 9.64- */
 <span class="js-test-op-1">var isOpera = /^function \(/.test([].sort);</span></code></pre>
 
-    <pre class="language-javascript"><code>/* Opera 12.11- */
+    <pre class="language-javascript"><code>/* Opera 12- */
 <span class="js-test-op-2">var isOpera = !!window.opera;</span></code></pre>
     </section>
 </article>
@@ -445,6 +460,9 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <pre class="language-css"><code>/* Safari 2/3.1, Opera 9.25 */
 <span class="test62">*|html[xmlns*=""] .selector { background: lightgreen; }</span></code></pre>
+
+    <pre class="language-css"><code>/*  Safari 6, Chrome 24-, IE 7 */
+<span class="test59">::made-up-pseudo-element, .selector { background: lightgreen; }</span></code></pre>
     </section>
 
     <section data-cols="1">

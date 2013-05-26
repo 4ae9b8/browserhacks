@@ -4,7 +4,7 @@
 
 ### SELECTOR HACKS
 
-	/* Chrome 24- and Safari 6- */
+	/* Chrome 24-, Safari 6, IE 7 */
 	::made-up-pseudo-element, .selector {}
 
 ### PROPERTY/VALUE HACKS
@@ -59,7 +59,7 @@
 	/* Firefox */
 	var isFF = !!navigator.userAgent.match(/firefox/i);
 
-	/* Firefox 2 - 13 */
+	/* Firefox 2-13 */
 	var isFF = !!window.globalStorage;
 
 	/* Firefox 2/3 */
@@ -92,6 +92,15 @@
 	body*.selector {}
 	.selector\ {}
 
+	/* IE 7, Firefox 2+ */
+	.selector, x:-moz-any-link {}
+
+	/* IE 7, Firefox 3+ */
+	.selector, x:-moz-any-link, x:default {}
+
+	/* IE 7, Chrome 24-, Safari 6 */
+	::made-up-pseudo-element, .selector {}
+
 	/* Everything but IE 6 */
 	html > body .selector {}
 
@@ -114,7 +123,7 @@
 	.selector { ¬property: value; }
 	.selector { ¦property: value; }
 
-	/* IE 6/7 - any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
+	/* IE 7-, any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
 	.selector { !property: value; }
 	.selector { $property: value; }
 	.selector { &property: value; }
@@ -139,30 +148,30 @@
 	.selector { >property: value; }
 	.selector { |property: value; }
 
-	/* IE 6/7 - acts as an !important */
+	/* IE 7-, acts as an !important */
 	.selector { color: blue !ie; } 
 	/* string after ! can be anything */
 
-	/* IE 8+ */
+	/* IE 6+ */
+	.selector { color: blue\9; } 
+	.selector { color/*\**/: blue\9; }
+
+	/* IE 8+, Opera 10 */
 	.selector { color: blue\0/; } 
 	/* must go at the END of all rules */
 
 	/* IE 9+ */
 	.selector:nth-of-type(1n) { color: blue\9; }
 
-	/* IE 6+ */
-	.selector { color: blue\9; } 
-	.selector { color/*\**/: blue\9; }
-
 	/* Everything but IE 6 */
 	.selector { color/**/: blue; }
 
 ### MEDIA HACKS
 
-	/* IE 6/7 */
+	/* IE 7- */
 	@media screen\9 {}
 
-	/* IE 6/7/8 */
+	/* IE 8- */
 	@media \0screen\,screen\9 {}
 
 	/* IE 8 */
@@ -174,7 +183,7 @@
 	/* IE 9+, Firefox 3.5+, Opera */
 	@media screen and (min-resolution: +72dpi) {}
 
-	/* IE 9+ */
+	/* IE 9+, Safari 4 */
 	@media screen and (min-width:0\0) {}
 
 	/* IE 10+ */
@@ -197,18 +206,19 @@
 	/* IE 7- */
 	var isIE = document.all && !document.querySelector;
 
+	/* IE 7 */
+	var isIE = navigator.appVersion.indexOf("MSIE 7.")!=-1;
+
 	/* IE 8- */
 	var isIE = !+'\v1';
+	var isIE = '\\v'=='v';
+
+	/* IE 8 */
+	var isIE = document.all && document.querySelector && !document.addEventListener;
 
 	/* IE X (6, 7, 8, 9) */
 	(checkIE = document.createElement("b")).innerHTML = "<!--[if IE X]><i></i><![endif]-->"; 
 	var isIE = checkIE.getElementsByTagName("i").length == 1;
-
-	/* IE 7 */
-	var isIE = navigator.appVersion.indexOf("MSIE 7.")!=-1;
-
-	/* IE 8 */
-	var isIE = document.all && document.querySelector && !document.addEventListener;
 
 	/* IE 10 */
 	var isIE = eval("/*@cc_on!@*/false") && document.documentMode === 10;
@@ -260,7 +270,7 @@
 	/* Opera 9.27-, Safari 2 */
 	html:first-child .selector {}
 
-	/* Opera 9.5+ */
+	/* Opera 9.5+, IE 7 */
 	noindex:-o-prefocus, .selector {}
 
 ### MEDIA HACKS
@@ -268,7 +278,7 @@
 	/* Opera 7 */
 	@media all and (min-width: 0px){}
 
-	/* Opera 12- */
+	/* Opera 11-  */
 	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}
 
 	/* Opera, Firefox 3.5+, IE 9+ */
@@ -299,7 +309,7 @@
 	/* Safari 2/3.1, Opera 9.25 */
 	*|html[xmlns*=""] .selector {}
 
-	/* Safari 6-, Chrome 24- */
+	/* Safari 6, Chrome 24-, IE 7 */
 	::made-up-pseudo-element, .selector {}
 
 ### MEDIA HACKS
