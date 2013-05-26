@@ -212,7 +212,7 @@
             'data-version' => '7',
             'language' => 'language-css',
             'code' => "::made-up-pseudo-element, .selector {}"
-          )
+          ),
           array (
             'version' => 'Everything but IE 6',
             'data-version' => '6',
