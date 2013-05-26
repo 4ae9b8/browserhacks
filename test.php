@@ -122,8 +122,8 @@
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Chrome 28-, Safari 6- */
-    <span class="test75">.selector { (;background: lightgreen;); }</span>
-    <span class="test76">.selector { [;background: lightgreen;]; }</span></code></pre>
+<span class="test75">.selector { (;background: lightgreen;); }</span>
+<span class="test76">.selector { [;background: lightgreen;]; }</span></code></pre>
     </section>
 
     <section data-cols="1">
@@ -463,8 +463,8 @@ var isIE9 = checkIE.getElementsByTagName("i").length == 1;</span></code></pre>
 
     <section data-cols="1">
     <pre class="language-css"><code>/* Safari 6-, Chrome 28- */
-    <span class="test75">.selector { (;background: lightgreen;); }</span>
-    <span class="test76">.selector { [;background: lightgreen;]; }</span></code></pre>
+<span class="test75">.selector { (;background: lightgreen;); }</span>
+<span class="test76">.selector { [;background: lightgreen;]; }</span></code></pre>
     </section>
 
     <section data-cols="1">
