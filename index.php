@@ -27,7 +27,6 @@
 <?php
   // Load Browserhacks and run it
   include_once('code/Browserhacks.php');
-  include_once('code/Hack.php');
   Browserhacks::run();
 ?>
 

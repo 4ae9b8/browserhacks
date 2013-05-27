@@ -1,5 +1,27 @@
 <?php
 $last_type = null;
+$indexCSS = 0;
+$indexJS = 0;
+// CSS file
+$cssDump = "pre span, .example-span, .js-succeed { padding: .2em; display: inline-block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n\r";
+// JS file
+$jsDump = "var testClass = 'js-succeed';\n\r";
+
+function aasort (&$array, $key) {
+    $sorter=array();
+    $ret=array();
+    reset($array);
+    foreach ($array as $ii => $va) {
+        $sorter[$ii]=$va[$key];
+    }
+    asort($sorter);
+    foreach ($sorter as $ii => $va) {
+        $ret[$ii]=$array[$ii];
+    }
+    $array=$ret;
+}
+
+aasort($hacks,"type");
 
 foreach($browsers as $kb => $vb):
   ?>
@@ -11,19 +33,24 @@ foreach($browsers as $kb => $vb):
         // Check if current hack is from current browser
         // If it isn't or if current hack is not from current type, break
         $checkBrowser = in_array($kb, $k['browser']);
-        if(!$checkBrowser) continue;
+        if(!$checkBrowser || empty($k['test'])) continue;
+        
+        // Increment indexes
+        $indexCSS++;
+        $indexJS++;
 
         // If current type is different from type of last hack, display type heading
+        
         if($k['type'] != $last_type) {
           ?>
           </section>
           <section data-cols="1" data-type="<?php echo $k['type']; ?>-parent">
             <h3><span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span><?php echo $hack_types[$k['type']]['title']; ?></h3>
           </section>
-          <section data-cols="2" data-type="<?php echo $k['type']; ?>-childs">
+          <section data-cols="1" data-type="<?php echo $k['type']; ?>-childs">
           <?php
         }
-
+        
         // Get the index of the current browser in the array of hacked browsers
         $version = $checkBrowser ? array_search($kb, $k['browser']) : null; 
 
@@ -56,8 +83,47 @@ foreach($browsers as $kb => $vb):
         // Output the hack
         $dump  = "<div>";
         $dump .= "<pre class='language-".$k['language']."' ".$dv.">";
-        $dump .= "<code>";
-        $dump .= $label.$k['code'];
+        $dump .= "<code>".$label;
+
+        // If it's a CSS thing
+        if($k['language'] == 'css') {
+          
+          $lines = explode("\n", $k['test']); // Explode on line breaks
+
+          foreach($lines as $l) { // Foreach line
+            
+            // Wrap it in a span with a number
+            $dump .= "<span class='test_css_".$indexCSS."'>".$l."</span>";
+            
+            // Append things to the dump
+            $cssDump .= $label;
+            $cssDump .= str_replace('.selector','.test_css_'.$indexCSS, $l)."\n\r";
+            
+            $indexCSS++; // Increment index
+          }
+        // If it's a JS thing
+        } else if($k['language'] == 'javascript') {
+          $lines = explode("\n", $k['test']); // Explode on line breaks
+          
+          foreach($lines as $l) { // Foreach line
+            
+            // Wrap it in a span with a number
+            $name = "test_js_".$k['browser'][0]."_".$indexJS;
+            $dump .= "<span class='".$name."'>var isHacked = ".$l."</span>";
+            
+            // Append things to the dump
+            $jsDump .= $label;
+            $jsDump .= "var ".$name." = ".$k['test']."\n";
+            $jsDump .= "if (".$name.") $('.".$name."').addClass(testClass);\n\r";
+            
+            $indexJS++; // Increment index
+
+          }
+        // If it's neither CSS nor JS
+        } else {
+          $dump .= $k['code'];
+        }
+
         $dump .= "</code>";
         $dump .= "</pre>";
         $dump .= "</div>";
@@ -69,4 +135,8 @@ foreach($browsers as $kb => $vb):
     </section>
   </article>
 <?php endforeach; 
+
+// Create test files
+file_put_contents("css/browserhacks-test-page.css", $cssDump);
+file_put_contents("js/browserhacks-test-page.js", $jsDump);
 ?>
