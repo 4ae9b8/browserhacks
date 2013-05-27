@@ -35,7 +35,7 @@ $browsers = array(
     'name' => 'firefox',
   ),
   'ie' => array(
-    'name' => 'internet explorer',
+    'name' => 'Internet Explorer',
   ),
   'sa' => array(
     'name' => 'safari',
