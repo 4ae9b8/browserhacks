@@ -22,6 +22,7 @@ article {
     background: rgba(255, 255, 255, .3);
     padding-bottom:.85em;
 
+    section[data-cols="1"], 
     section[data-cols="2"] {
       > div {
         padding: 0;
