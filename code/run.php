@@ -1,15 +1,31 @@
 <?php
+// Save type from last hack
 $last_type = null;
 
+// Re-ordering array by type
+function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
+    $sort_col = array();
+    foreach ($arr as $key=> $row) {
+        $sort_col[$key] = $row[$col];
+    }
+
+    array_multisort($sort_col, $dir, $arr);
+}
+
+array_sort_by_column($hacks, 'type', SORT_DESC);
+
+// Sort by browser
 foreach($browsers as $kb => $vb):
+  // Output browser heading
   ?>
   <article data-high="3" class="<?php echo $kb; ?>" id="<?php echo $kb ?>">
     <section data-cols="1">
-      <h2 class="th"><a href="#<?php echo $kb ?>"><?php echo $vb['name']; ?></a></h2>
+      <h2 class="th"><a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
   <?php
+      // Foreach hack
       foreach($hacks as $k):
         // Check if current hack is from current browser
-        // If it isn't or if current hack is not from current type, break
+        // If it isn't, break
         $checkBrowser = in_array($kb, $k['browser']);
         if(!$checkBrowser) continue;
 

@@ -57,8 +57,8 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ch','sa'),
-    'data-version' => array('','3+'),
+    'browser' => array('ch','sa', 'op'),
+    'data-version' => array('','3+', '9.26-'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}",
@@ -658,6 +658,15 @@ $hacks = array(
     'language' => 'javascript',
     'code' => 'var isSafari = /Constructor/.test(window.HTMLElement);',
     'test' => '/Constructor/.test(window.HTMLElement);'
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('sa'),
+    'data-version' => array('6'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
+    'test' => "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";"
   )
 );
 

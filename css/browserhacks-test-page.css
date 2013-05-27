@@ -1,59 +1,79 @@
-pre span, .example-span, .js-succeed { padding: .2em; display: inline-block; border-radius: 3px; }
+pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }
 .example-span, .js-succeed { background: lightgreen; }
-/* Firefox 3.5+, Internet explorer 9+, Opera, Chrome 29+ */
-@media screen and (min-resolution: +72dpi) { .test_css_2 { background: lightgreen; } }
-/* Chrome, Safari 3+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_4 { background: lightgreen; } }
-/* Chrome 28-, Safari 6- */
-.test_css_6 { (;background: lightgreen;); } 
-/* Chrome 28-, Safari 6- */
-.test_css_7 { [;background: lightgreen;]; }
 /* Chrome 24-, Safari 6, Internet explorer 7 */
-::made-up-pseudo-element, .test_css_9 { background: lightgreen; }
-/* Firefox 3.6+ */
-@media screen and (-moz-images-in-menus:0) { .test_css_16 { background: lightgreen; } }
+::made-up-pseudo-element, .test_css_1 { background: lightgreen; }
+/* Chrome 28-, Safari 6- */
+.test_css_3 { (;background: lightgreen;); } 
+/* Chrome 28-, Safari 6- */
+.test_css_4 { [;background: lightgreen;]; }
+/* Chrome, Safari 3+, Opera 9.26- */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_6 { background: lightgreen; } }
 /* Firefox 3.5+, Internet explorer 9+, Opera, Chrome 29+ */
-@media screen and (min-resolution: +72dpi) { .test_css_18 { background: lightgreen; } }
-/* Firefox 4+ */
-@media screen and (min--moz-device-pixel-ratio:0) { .test_css_20 { background: lightgreen; } }
-/* Firefox 3+ */
-@-moz-document url-prefix() { .test_css_22 { background: lightgreen; } }
-/* Firefox 3+, Internet explorer 7 */
-.test_css_24, x:-moz-any-link, x:default { background: lightgreen; }
+@media screen and (min-resolution: +72dpi) { .test_css_8 { background: lightgreen; } }
 /* Firefox 1.5/2 */
-body:empty .test_css_26 { background: lightgreen; }
-/* Firefox 2+, Internet explorer 7 */
-.test_css_28, x:-moz-any-link { background: lightgreen; }
+body:empty .test_css_11 { background: lightgreen; }
 /* Firefox 3.5+ */
-body:not(:-moz-handler-blocked) .test_css_30 { background: lightgreen; }
-/* Internet explorer 10+ */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test_css_43 { background: lightgreen; } }
-/* Everything but Internet Explorer 6/7/8 */
-@media screen and (min-width: 400px) { .test_css_45 { background: lightgreen; } }
-/* Internet explorer 9+, Safari 4 */
-@media screen and (min-width:0\0) { .test_css_47 { background: lightgreen; } }
-/* Internet explorer 8+, Opera */
-@media screen\0 { .test_css_49 { background: lightgreen; } }
+body:not(:-moz-handler-blocked) .test_css_13 { background: lightgreen; }
+/* Firefox 2+, Internet explorer 7 */
+.test_css_15, x:-moz-any-link { background: lightgreen; }
+/* Firefox 3+, Internet explorer 7 */
+.test_css_17, x:-moz-any-link, x:default { background: lightgreen; }
+/* Firefox 3+ */
+@-moz-document url-prefix() { .test_css_19 { background: lightgreen; } }
+/* Firefox 3.6+ */
+@media screen and (-moz-images-in-menus:0) { .test_css_21 { background: lightgreen; } }
+/* Firefox 4+ */
+@media screen and (min--moz-device-pixel-ratio:0) { .test_css_23 { background: lightgreen; } }
 /* Firefox 3.5+, Internet explorer 9+, Opera, Chrome 29+ */
-@media screen and (min-resolution: +72dpi) { .test_css_51 { background: lightgreen; } }
-/* Internet explorer 8 */
-@media \0screen { .test_css_53 { background: lightgreen; } }
-/* Internet explorer 7- */
-@media screen\9 { .test_css_55 { background: lightgreen; } }
-/* Internet explorer 8- */
-@media \0screen\,screen\9 { .test_css_57 { background: lightgreen; } }
+@media screen and (min-resolution: +72dpi) { .test_css_25 { background: lightgreen; } }
 /* Everything but Internet Explorer 6 */
-.test_css_59 { background/**/: lightgreen; }
+html > body .test_css_32 { background: lightgreen; }
+/* Internet explorer 6- */
+* html .test_css_34  { background: lightgreen; } 
+/* Internet explorer 6- */
+.suckyie6.test_css_35 { background: lightgreen; } /* .suckyie6 can be any unused class */
+/* Everything but Internet Explorer 6/7 */
+html > /**/ body .test_css_37 { background: lightgreen; }
+/* Everything but Internet Explorer 6/7 */
+head ~ /**/ body .test_css_38 { background: lightgreen; }
+/* Everything but Internet Explorer 6/7/8 */
+:root *> .test_css_40 { background: lightgreen; } 
+/* Everything but Internet Explorer 6/7/8 */
+body:last-child .test_css_41 { background: lightgreen; } 
+/* Everything but Internet Explorer 6/7/8 */
+body:nth-of-type(1) .test_css_42 { background: lightgreen; } 
+/* Everything but Internet Explorer 6/7/8 */
+body:first-of-type .test_css_43 { background: lightgreen; }
+/* Internet explorer 7 */
+*:first-child+html .test_css_45 { background: lightgreen; } 
+/* Internet explorer 7 */
+.test_css_46, x:-IE7 { background: lightgreen; } 
+/* Internet explorer 7 */
+*+html .test_css_47 { background: lightgreen; } 
+/* Internet explorer 7 */
+body*.test_css_48 { background: lightgreen; } 
+/* Internet explorer 7 */
+.test_css_49\ { background: lightgreen; }
+/* Internet explorer 7- */
+.test_css_51, { background: lightgreen; }
+/* Firefox 2+, Internet explorer 7 */
+.test_css_53, x:-moz-any-link { background: lightgreen; }
+/* Firefox 3+, Internet explorer 7 */
+.test_css_55, x:-moz-any-link, x:default { background: lightgreen; }
+/* Opera 9.5+, Internet explorer 7 */
+noindex:-o-prefocus, .test_css_57 { background: lightgreen; }
+/* Chrome 24-, Safari 6, Internet explorer 7 */
+::made-up-pseudo-element, .test_css_59 { background: lightgreen; }
 /* Internet explorer 6 */
 .test_css_61 { _background: lightgreen;  } 
 /* Internet explorer 6 */
 .test_css_62 { -background: lightgreen;  }
+/* Everything but Internet Explorer 6 */
+.test_css_64 { background/**/: lightgreen; }
 /* Internet explorer 6+ */
-.test_css_64 { background: lightgreen\9; } 
+.test_css_66 { background: lightgreen\9; } 
 /* Internet explorer 6+ */
-.test_css_65 { background/*\**/: lightgreen\9; }
-/* Internet explorer 9+ */
-.test_css_67:nth-of-type(1n) { background: lightgreen\9; }
+.test_css_67 { background/*\**/: lightgreen\9; }
 /* Internet Explorer 7-, acts as an !important */
 .test_css_69 { background: lightgreen !ie; } 
 /* Internet Explorer 7-, acts as an !important */
@@ -73,82 +93,64 @@ body:not(:-moz-handler-blocked) .test_css_30 { background: lightgreen; }
 /* Internet Explorer 7-, any combination of these characters: 
  ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > | */
 /* ... */
+/* Internet explorer 9+ */
+.test_css_78:nth-of-type(1n) { background: lightgreen\9; }
 /* Internet explorer 8/9, Opera 10 */
-.test_css_78 { background: lightgreen\0/; } 
+.test_css_80 { background: lightgreen\0/; } 
 /* Internet explorer 8/9, Opera 10 */
 /* must go at the END of all rules */
-/* Firefox 3+, Internet explorer 7 */
-.test_css_81, x:-moz-any-link, x:default { background: lightgreen; }
-/* Firefox 2+, Internet explorer 7 */
-.test_css_83, x:-moz-any-link { background: lightgreen; }
-/* Internet explorer 6- */
-* html .test_css_85  { background: lightgreen; } 
-/* Internet explorer 6- */
-.suckyie6.test_css_86 { background: lightgreen; } /* .suckyie6 can be any unused class */
-/* Everything but Internet Explorer 6 */
-html > body .test_css_88 { background: lightgreen; }
-/* Everything but Internet Explorer 6/7 */
-html > /**/ body .test_css_90 { background: lightgreen; }
-/* Everything but Internet Explorer 6/7 */
-head ~ /**/ body .test_css_91 { background: lightgreen; }
+/* Internet explorer 10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test_css_83 { background: lightgreen; } }
 /* Everything but Internet Explorer 6/7/8 */
-:root *> .test_css_93 { background: lightgreen; } 
-/* Everything but Internet Explorer 6/7/8 */
-body:last-child .test_css_94 { background: lightgreen; } 
-/* Everything but Internet Explorer 6/7/8 */
-body:nth-of-type(1) .test_css_95 { background: lightgreen; } 
-/* Everything but Internet Explorer 6/7/8 */
-body:first-of-type .test_css_96 { background: lightgreen; }
-/* Internet explorer 7 */
-*:first-child+html .test_css_98 { background: lightgreen; } 
-/* Internet explorer 7 */
-.test_css_99, x:-IE7 { background: lightgreen; } 
-/* Internet explorer 7 */
-*+html .test_css_100 { background: lightgreen; } 
-/* Internet explorer 7 */
-body*.test_css_101 { background: lightgreen; } 
-/* Internet explorer 7 */
-.test_css_102\ { background: lightgreen; }
+@media screen and (min-width: 400px) { .test_css_85 { background: lightgreen; } }
 /* Internet explorer 7- */
-.test_css_104, { background: lightgreen; }
-/* Chrome 24-, Safari 6, Internet explorer 7 */
-::made-up-pseudo-element, .test_css_106 { background: lightgreen; }
-/* Opera 9.5+, Internet explorer 7 */
-noindex:-o-prefocus, .test_css_108 { background: lightgreen; }
-/* Internet explorer 9+, Safari 4 */
-@media screen and (min-width:0\0) { .test_css_112 { background: lightgreen; } }
-/* Chrome, Safari 3+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_114 { background: lightgreen; } }
-/* Chrome 28-, Safari 6- */
-.test_css_116 { (;background: lightgreen;); } 
-/* Chrome 28-, Safari 6- */
-.test_css_117 { [;background: lightgreen;]; }
-/* Safari 2/3.1, Opera 9.25 */
-*|html[xmlns*=""] .test_css_119 { background: lightgreen; }
-/* Safari 2/3 */
-html[xmlns*=""] body:last-child .test_css_121 { background: lightgreen; } 
-/* Safari 2/3 */
-html[xmlns*=""]:root .test_css_122  { background: lightgreen; }
-/* Opera 9.27-, Safari 2 */
-html:first-child .test_css_124 { background: lightgreen; }
-/* Chrome 24-, Safari 6, Internet explorer 7 */
-::made-up-pseudo-element, .test_css_126 { background: lightgreen; }
+@media screen\9 { .test_css_87 { background: lightgreen; } }
+/* Internet explorer 8 */
+@media \0screen { .test_css_89 { background: lightgreen; } }
+/* Internet explorer 8- */
+@media \0screen\,screen\9 { .test_css_91 { background: lightgreen; } }
 /* Internet explorer 8+, Opera */
-@media screen\0 { .test_css_131 { background: lightgreen; } }
+@media screen\0 { .test_css_93 { background: lightgreen; } }
+/* Internet explorer 9+, Safari 4 */
+@media screen and (min-width:0\0) { .test_css_95 { background: lightgreen; } }
 /* Firefox 3.5+, Internet explorer 9+, Opera, Chrome 29+ */
-@media screen and (min-resolution: +72dpi) { .test_css_133 { background: lightgreen; } }
+@media screen and (min-resolution: +72dpi) { .test_css_97 { background: lightgreen; } }
+/* Safari 2/3 */
+html[xmlns*=""] body:last-child .test_css_110 { background: lightgreen; } 
+/* Safari 2/3 */
+html[xmlns*=""]:root .test_css_111  { background: lightgreen; }
+/* Opera 9.27-, Safari 2 */
+html:first-child .test_css_113 { background: lightgreen; }
+/* Safari 2/3.1, Opera 9.25 */
+*|html[xmlns*=""] .test_css_115 { background: lightgreen; }
+/* Chrome 24-, Safari 6, Internet explorer 7 */
+::made-up-pseudo-element, .test_css_117 { background: lightgreen; }
+/* Chrome 28-, Safari 6- */
+.test_css_119 { (;background: lightgreen;); } 
+/* Chrome 28-, Safari 6- */
+.test_css_120 { [;background: lightgreen;]; }
+/* Internet explorer 9+, Safari 4 */
+@media screen and (min-width:0\0) { .test_css_122 { background: lightgreen; } }
+/* Chrome, Safari 3+, Opera 9.26- */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_124 { background: lightgreen; } }
+/* Opera 11- */
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_129 { background: lightgreen; } }
+/* Opera 7 */
+@media all and (min-width: 0px){ .test_css_131 { background: lightgreen; } }
+/* Opera 9.5+, Internet explorer 7 */
+noindex:-o-prefocus, .test_css_133 { background: lightgreen; }
+/* Opera 9.27-, Safari 2 */
+html:first-child .test_css_135 { background: lightgreen; }
+/* Safari 2/3.1, Opera 9.25 */
+*|html[xmlns*=""] .test_css_137 { background: lightgreen; }
 /* Internet explorer 8/9, Opera 10 */
-.test_css_135 { background: lightgreen\0/; } 
+.test_css_139 { background: lightgreen\0/; } 
 /* Internet explorer 8/9, Opera 10 */
 /* must go at the END of all rules */
-/* Opera 11- */
-@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_138 { background: lightgreen; } }
-/* Safari 2/3.1, Opera 9.25 */
-*|html[xmlns*=""] .test_css_140 { background: lightgreen; }
-/* Opera 7 */
-@media all and (min-width: 0px){ .test_css_142 { background: lightgreen; } }
-/* Opera 9.27-, Safari 2 */
-html:first-child .test_css_144 { background: lightgreen; }
-/* Opera 9.5+, Internet explorer 7 */
-noindex:-o-prefocus, .test_css_146 { background: lightgreen; }
+/* Internet explorer 8+, Opera */
+@media screen\0 { .test_css_142 { background: lightgreen; } }
+/* Chrome, Safari 3+, Opera 9.26- */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_144 { background: lightgreen; } }
+/* Firefox 3.5+, Internet explorer 9+, Opera, Chrome 29+ */
+@media screen and (min-resolution: +72dpi) { .test_css_146 { background: lightgreen; } }
 

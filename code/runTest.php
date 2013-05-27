@@ -1,33 +1,33 @@
 <?php
+// Save type from last hack
 $last_type = null;
+
+// Indexes
 $indexCSS = 0;
 $indexJS = 0;
+
 // CSS file
-$cssDump = "pre span, .example-span, .js-succeed { padding: .2em; display: inline-block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n\r";
+$cssDump = "pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n\r";
 // JS file
 $jsDump = "var testClass = 'js-succeed';\n\r";
 
-function aasort (&$array, $key) {
-    $sorter=array();
-    $ret=array();
-    reset($array);
-    foreach ($array as $ii => $va) {
-        $sorter[$ii]=$va[$key];
+// Re-ordering array by type
+function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
+    $sort_col = array();
+    foreach ($arr as $key=> $row) {
+        $sort_col[$key] = $row[$col];
     }
-    asort($sorter);
-    foreach ($sorter as $ii => $va) {
-        $ret[$ii]=$array[$ii];
-    }
-    $array=$ret;
+
+    array_multisort($sort_col, $dir, $arr);
 }
 
-aasort($hacks,"type");
+array_sort_by_column($hacks, 'type', SORT_DESC);
 
 foreach($browsers as $kb => $vb):
   ?>
   <article data-high="3" class="<?php echo $kb; ?>" id="<?php echo $kb ?>">
     <section data-cols="1">
-      <h2 class="th"><a href="#<?php echo $kb ?>"><?php echo $vb['name']; ?></a></h2>
+      <h2 class="th"><a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
   <?php
       foreach($hacks as $k):
         // Check if current hack is from current browser
