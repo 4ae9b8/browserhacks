@@ -96,16 +96,6 @@ a {
   }
 }
 
-.filtered section[data-cols="2"] > div {
-  width:100%;
-
-  &:nth-child(even),
-  &:nth-child(odd) {
-    padding-left:0;
-    padding-right:0;
-  }
-}
-
 /**
  * Hacks containers
  * More in _prism.scss

@@ -21,6 +21,33 @@ article {
   &[data-high="3"] {
     background: rgba(255, 255, 255, .3);
     padding-bottom:.85em;
+
+    section[data-cols="2"] {
+      > div {
+        padding: 0;
+
+        &:nth-child(even) {
+          padding-left: .5em;
+        }
+
+        &:nth-child(odd) {
+          padding-right: .5em;
+        }
+      }
+    }
+
+    &.filtered {
+      section[data-cols="2"] {
+        > div {
+          width: 100%;
+
+          &:nth-child(even), 
+          &:nth-child(odd) {
+            padding: 0;
+          }
+        }
+      }
+    }
   }
 
   &[data-text]:after {
