@@ -27,6 +27,7 @@
 <?php
   // Load Browserhacks and run it
   include_once('code/Browserhacks.php');
+  include_once('code/Hack.php');
   Browserhacks::run();
 ?>
 
@@ -136,7 +137,8 @@
         
 <?php
   // HTML for the hacks
-  include_once('code/hacks.php');
+  include_once('code/database.php');
+  include_once('code/run.php');
 ?>
     
 
