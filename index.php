@@ -177,11 +177,8 @@
         <section data-cols="1">
             <div>
                 <footer>
-                    <p>
-                        <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
-                    </p>
-                        
                     <p>    
+                        <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
                         &copy; Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
                         and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
                         with contributions of the <a href="http://4ae9b8.com" target="_blank">#4ae9b8</a> Team.</p>
