@@ -60,15 +60,15 @@ if (test_js_sa_81) $('.test_js_sa_81').addClass(testClass);
 var test_js_sa_83 = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== "undefined";
 if (test_js_sa_83) $('.test_js_sa_83').addClass(testClass);
 /* Opera 12- */
-var test_js_op_95 = !!window.opera;
-if (test_js_op_95) $('.test_js_op_95').addClass(testClass);
+var test_js_op_96 = !!window.opera;
+if (test_js_op_96) $('.test_js_op_96').addClass(testClass);
 /* Opera X (12-) */
-var test_js_op_97 = window.opera && window.opera.version() == X;
-if (test_js_op_97) $('.test_js_op_97').addClass(testClass);
+var test_js_op_98 = window.opera && window.opera.version() == X;
+if (test_js_op_98) $('.test_js_op_98').addClass(testClass);
 /* Opera 9.64- */
-var test_js_op_99 = /^function \(/.test([].sort);
-if (test_js_op_99) $('.test_js_op_99').addClass(testClass);
+var test_js_op_100 = /^function \(/.test([].sort);
+if (test_js_op_100) $('.test_js_op_100').addClass(testClass);
 /* Chrome, Opera 14+ */
-var test_js_ch_101 = !!window.chrome;
-if (test_js_ch_101) $('.test_js_ch_101').addClass(testClass);
+var test_js_ch_102 = !!window.chrome;
+if (test_js_ch_102) $('.test_js_ch_102').addClass(testClass);
 

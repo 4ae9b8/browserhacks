@@ -197,10 +197,12 @@ html:first-child .test_css_150 { background: lightgreen; }
 .test_css_157 { (;background: lightgreen;); } 
 /* Chrome 28-, Safari 6-, Opera 14+ */
 .test_css_158 { [;background: lightgreen;]; }
+/* Opera 12 */
+@media (min-resolution: .001dpcm) { _:-o-prefocus, .test_css_160 { background: lightgreen; } }
 /* Internet Explorer 8+, Opera 12- */
-@media screen\0 { .test_css_160 { background: lightgreen; } }
+@media screen\0 { .test_css_162 { background: lightgreen; } }
 /* Chrome, Safari 3+, Opera 9.26-/14+ */
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_162 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_164 { background: lightgreen; } }
 /* Firefox 3.5+, Internet Explorer 9+, Opera 12-, Chrome 29+ */
-@media screen and (min-resolution: +72dpi) { .test_css_164 { background: lightgreen; } }
+@media screen and (min-resolution: +72dpi) { .test_css_166 { background: lightgreen; } }
 

@@ -561,24 +561,6 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('op','sa'),
-    'data-version' => array('9.27-','2'),
-    'label' => '',
-    'language' => 'css',
-    'code' => "html:first-child .selector {}",
-    'test' => "html:first-child .selector { background: lightgreen; }"
-  ),
-  array(
-    'type' => 'selector',
-    'browser' => array('op','ie'),
-    'data-version' => array('9.5|10|11|12','7'),
-    'label' => 'Opera 9.5-12, Internet Explorer 7',
-    'language' => 'css',
-    'code' => "noindex:-o-prefocus, .selector {}",
-    'test' => "noindex:-o-prefocus, .selector { background: lightgreen; }"
-  ),
-  array(
-    'type' => 'selector',
     'browser' => array('op'),
     'data-version' => array('7|15'),
     'label' => '',
@@ -588,12 +570,12 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('op'),
-    'data-version' => array('11-'),
+    'browser' => array('op','sa'),
+    'data-version' => array('9.27-','2'),
     'label' => '',
     'language' => 'css',
-    'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}",
-    'test' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }"
+    'code' => "html:first-child .selector {}",
+    'test' => "html:first-child .selector { background: lightgreen; }"
   ),
   array(
     'type' => 'javascript',
@@ -604,6 +586,25 @@ $hacks = array(
     'code' => "var isOpera = /^function \(/.test([].sort);",
     'test' => "/^function \(/.test([].sort);"
   ),
+  array(
+    'type' => 'selector',
+    'browser' => array('op','ie'),
+    'data-version' => array('9.5|10|11|12','7'),
+    'label' => 'Opera 9.5-12, Internet Explorer 7',
+    'language' => 'css',
+    'code' => "_:-o-prefocus, .selector {}",
+    'test' => "_:-o-prefocus, .selector { background: lightgreen; }"
+  ),
+  array(
+    'type' => 'selector',
+    'browser' => array('op'),
+    'data-version' => array('11-'),
+    'label' => '',
+    'language' => 'css',
+    'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}",
+    'test' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }"
+  ),
+
   array(
     'type' => 'javascript',
     'browser' => array('op'),
@@ -621,6 +622,15 @@ $hacks = array(
     'language' => 'javascript',
     'code' => 'var isOpera = window.opera && window.opera.version() == X;',
     'test' => 'window.opera && window.opera.version() == X;'
+  ),
+  array(
+    'type' => 'media',
+    'browser' => array('op'),
+    'data-version' => array('12'),
+    'label' => '',
+    'language' => 'css',
+    'code' => '@media (min-resolution: .001dpcm) { _:-o-prefocus, .selector {} }',
+    'test' => '@media (min-resolution: .001dpcm) { _:-o-prefocus, .selector { background: lightgreen; } }'
   ),
   array(
     'type' => 'selector',
