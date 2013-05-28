@@ -58,7 +58,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ch','sa', 'op'),
-    'data-version' => array('','3+', '9.26-|14+'),
+    'data-version' => array('*','3+', '9.26-|14+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}",
@@ -76,7 +76,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ch', 'op'),
-    'data-version' => array('', '14+'),
+    'data-version' => array('*', '14+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isChrome = !!window.chrome;",
@@ -148,7 +148,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('fx'),
-    'data-version' => array(''),
+    'data-version' => array('*'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = !!window.sidebar",
@@ -157,7 +157,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('fx'),
-    'data-version' => array(''),
+    'data-version' => array('*'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = !!navigator.userAgent.match(/firefox/i);",
@@ -391,7 +391,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    "data-version" => array(""),
+    "data-version" => array('*'),
     'label' => "",
     "language" => "javascript",
     "code" => "var isIE = /*@cc_on!@*/false;",
@@ -409,7 +409,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    "data-version" => array(""),
+    "data-version" => array('*'),
     'label' => "Check for Internet Explorer version",
     "language" => "javascript",
     "code" => "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
@@ -499,7 +499,7 @@ $hacks = array(
   array(
     'type' => 'html',
     'browser' => array('ie'),
-    'data-version' => array(''),
+    'data-version' => array('*'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE]> Internet Explorer &lt;![endif]-->',
@@ -508,7 +508,7 @@ $hacks = array(
   array(
     'type' => 'html',
     'browser' => array('ie'),
-    'data-version' => array(''),
+    'data-version' => array('*'),
     'label' => 'Not Internet Explorer',
     'language' => 'markup',
     'code' => '&lt;!--[if !IE]> Not Internet Explorer &lt;![endif]-->',
@@ -671,7 +671,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('sa'), 
-    'data-version' => array(''),
+    'data-version' => array('*'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isSafari = /Constructor/.test(window.HTMLElement);',
