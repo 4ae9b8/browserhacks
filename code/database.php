@@ -212,10 +212,10 @@ $hacks = array(
     'type' => 'selector',
     'browser' => array('ie'),
     'data-version' => array('6-'),
-    'label' => '',
+    'label' => '.unused-class can be any unused class',
     'language' => 'css',
     'code' => "* html .selector  {} \n.unused-class.selector {}",
-    'test' => "* html .selector  { background: lightgreen; } \n.suckyie6.selector { background: lightgreen; } /* .suckyie6 can be any unused class */"
+    'test' => "* html .selector  { background: lightgreen; } \n.unused-class.selector { background: lightgreen; }"
   ),
   array(
     'type' => 'selector',
@@ -275,7 +275,7 @@ $hacks = array(
     'type' => 'propertyValue',
     'browser' => array('ie'),
     'data-version' => array('7-'),
-    'label' => "Internet Explorer 7-, any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
+    'label' => "Any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
     'language' => 'css',
     'code' => ".selector { !property: value; } \n.selector { \$property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n/* ... */",
     'test' => ".selector { !background: lightgreen; } \n.selector { \$background: lightgreen; } \n.selector { &background: lightgreen; } \n.selector { *background: lightgreen; } \n.selector { )background: lightgreen; } \n.selector { =background: lightgreen; } \n.selector { %background: lightgreen; } \n.selector { +background: lightgreen; } \n.selector { @background: lightgreen; } \n.selector { ,background: lightgreen; } \n.selector { .background: lightgreen; } \n.selector { /background: lightgreen; } \n.selector { `background: lightgreen; } \n.selector { [background: lightgreen; } \n.selector { ]background: lightgreen; } \n.selector { #background: lightgreen; } \n.selector { ~background: lightgreen; } \n.selector { ?background: lightgreen; } \n.selector { :background: lightgreen; } \n.selector { |background: lightgreen; }"
@@ -284,10 +284,10 @@ $hacks = array(
     'type' => 'propertyValue',
     'browser' => array('ie'),
     'data-version' => array('7-'),
-    'label' => 'Internet Explorer 7-, acts as an !important',
+    'label' => 'Acts as an !important; string after ! can be anything',
     'language' => 'css',
-    'code' => ".selector { property: value !ie; } \n/* string after ! can be anything */",
-    'test' => ".selector { background: lightgreen !ie; } \n/* string after ! can be anything */"
+    'code' => ".selector { property: value !ie; }",
+    'test' => ".selector { background: lightgreen !ie; }"
   ),
   array(
     'type' => 'propertyValue',
@@ -302,10 +302,10 @@ $hacks = array(
     'type' => 'propertyValue',
     'browser' => array('ie','op'),
     'data-version' => array('8|9','10'),
-    'label' => '',
+    'label' => 'Must go at the END of all rules',
     'language' => 'css',
-    'code' => ".selector { property: value\\0/; } \n/* must go at the END of all rules */",
-    'test' => ".selector { background: lightgreen\\0/; } \n/* must go at the END of all rules */"
+    'code' => ".selector { property: value\\0/; }",
+    'test' => ".selector { background: lightgreen\\0/; }"
   ),
   array(
     'type' => 'propertyValue',

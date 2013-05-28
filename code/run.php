@@ -52,10 +52,10 @@ foreach($browsers as $kb => $vb):
         foreach($k['browser'] as $b) {
 
           $label = ucfirst($browsers[$b]['name']);
-          $displayVersion = str_replace('|','/',$k['data-version'][$i]);
+          $displayVersion = ($k['data-version'][$i] != '') ? str_replace('|','/',$k['data-version'][$i]) : '*';
             
           $caption .= "<li class='browser-list__item'><span class='browser-icon browser-".$b."'></span> <span class='browser-name'>".$label."</span>";
-          if($k['data-version'][$i] != '') $caption .= " <span class='browser-version'>".$displayVersion."</span>";
+          $caption .= " <span class='browser-version'>".$displayVersion."</span>";
           $caption .= "</li>"; 
           $i++;
         }
