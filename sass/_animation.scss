@@ -8,7 +8,7 @@
 .catch-phrase {
     text-align: center;
     font-size: 1.3em;
-    color: $prism_css;
+    color: darken($sa,15%);
     text-shadow: 0 1px rgba(0,0,0,0.3);
     font-family: 'Montserrat', sans-serif;
     text-shadow: 0 .05em white;

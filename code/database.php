@@ -184,6 +184,15 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('fx'),
+    'data-version' => array('2'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isFF = (function x(){})[-6]=='x';",
+    'test' => "(function x(){})[-6]=='x';"
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('fx'),
     'data-version' => array('3'),
     'label' => '',
     'language' => 'javascript',
@@ -238,8 +247,8 @@ $hacks = array(
   array(
     'type' => 'selector',
     'browser' => array('ie'),
-    'data-version' => array('6|7'),
-    'label' => 'Everything but Internet Explorer 6/7',
+    'data-version' => array('7-'),
+    'label' => 'Everything but Internet Explorer 7-',
     'language' => 'css',
     'code' => "html > /**/ body .selector {}\nhead ~ /**/ body .selector {}",
     'test' => "html > /**/ body .selector { background: lightgreen; }\nhead ~ /**/ body .selector { background: lightgreen; }"
@@ -247,11 +256,11 @@ $hacks = array(
   array(
     'type' => 'selector',
     'browser' => array('ie'),
-    'data-version' => array('6|7|8'),
-    'label' => 'Everything but Internet Explorer 6/7/8',
+    'data-version' => array('8-'),
+    'label' => 'Everything but Internet Explorer 8-',
     'language' => 'css',
-    'code' => ":root *> .selector {} \nbody:last-child .selector {} \nbody:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}",
-    'test' => ":root *> .selector { background: lightgreen; } \nbody:last-child .selector { background: lightgreen; } \nbody:nth-of-type(1) .selector { background: lightgreen; } \nbody:first-of-type .selector { background: lightgreen; }"
+    'code' => ":root *> .selector {} \nbody:last-child .selector {} \nbody:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}\n.selector:not([attr*='']) {}",
+    'test' => ":root *> .selector { background: lightgreen; } \nbody:last-child .selector { background: lightgreen; } \nbody:nth-of-type(1) .selector { background: lightgreen; } \nbody:first-of-type .selector { background: lightgreen; }\n.selector:not([attr*='']) { background: lightgreen; }"
   ),
   array(
     'type' => 'propertyValue',
@@ -373,8 +382,8 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie'),
-    'data-version' => array('6|7|8'),
-    'label' => 'Everything but Internet Explorer 6/7/8',
+    'data-version' => array('8-'),
+    'label' => 'Everything but Internet Explorer 8-',
     'language' => 'css',
     'code' => "@media screen and (min-width: 400px) {}",
     'test' => "@media screen and (min-width: 400px) { .selector { background: lightgreen; } }"

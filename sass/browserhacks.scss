@@ -22,16 +22,17 @@
  * _quotes: quotes widget
  * _retina: retina specific stuff
  */
-@import "crystallo",
-        "helpers",
-        "prism",
-        "font-awesome",
-        "google-fonts",
-        "animation",
-        "structure",
-        "headings",
-        "nav",
-        "search",
-        "main",
-        "quotes",
-        "retina";
+@import "crystallo";
+@import "helpers";
+@import "prism";
+@import "font-awesome";
+@import "browser-icons";
+@import "google-fonts";
+@import "animation";
+@import "structure";
+@import "headings";
+@import "nav";
+@import "search";
+@import "main";
+@import "quotes";
+@import "retina";

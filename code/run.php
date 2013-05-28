@@ -20,7 +20,7 @@ foreach($browsers as $kb => $vb):
   ?>
   <article data-high="3" class="<?php echo $kb; ?>" id="<?php echo $kb ?>">
     <section data-cols="1">
-      <h2 class="th"><a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
+      <h2 class="th"><span class='browser-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
   <?php
       // Foreach hack
       foreach($hacks as $k):
@@ -34,48 +34,44 @@ foreach($browsers as $kb => $vb):
           ?>
           </section>
           <section data-cols="1" data-type="<?php echo $k['type']; ?>-parent">
-            <h3><span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span><?php echo $hack_types[$k['type']]['title']; ?></h3>
+            <h3><!--<span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span>--><?php echo $hack_types[$k['type']]['title']; ?></h3>
           </section>
           <section data-cols="2" data-type="<?php echo $k['type']; ?>-childs">
           <?php
         }
 
         // Get the index of the current browser in the array of hacked browsers
-        $version = $checkBrowser ? array_search($kb, $k['browser']) : null; 
-
         // Create the data-version output based on the $version variable
+        $version = $checkBrowser ? array_search($kb, $k['browser']) : null; 
         $dv = ($k['data-version'][$version] != 0) ? "data-version='".$k['data-version'][$version]."'" : '';
+       
+        // CAPTION
+        $caption = "<ul class='browser-list'>";
 
-        // Create label if it's empty
-        if(empty($k['label'])) {
-          $label = "/* "; $i = 0;
-          $targetBrowsers = $k['browser'];
+        $i = 0;
+        foreach($k['browser'] as $b) {
 
-          // For each target browser by the current hack
-          foreach($targetBrowsers as $b) {
-            // Display browser's name
-            $label .= ucfirst($browsers[$b]['name']);
-            // If a version is specified, display version
-            $displayVersion = str_replace('|','/',$k['data-version'][$i]);
-            if($k['data-version'][$i] != '') $label .= ' '.$displayVersion;
-            $i++; // Increment
-            // If it's not the last browser, put a comma
-            if($i != count($targetBrowsers)) $label .= ", ";
-          }
-
-          $label .= " */\n"; // End label
-
-        } else {
-          $label = "/* ".$k['label']." */\n";
+          $label = ucfirst($browsers[$b]['name']);
+          $displayVersion = str_replace('|','/',$k['data-version'][$i]);
+            
+          $caption .= "<li class='browser-list__item'><span class='browser-icon browser-".$b."'></span> <span class='browser-name'>".$label."</span>";
+          if($k['data-version'][$i] != '') $caption .= " <span class='browser-version'>".$displayVersion."</span>";
+          $caption .= "</li>"; 
+          $i++;
         }
 
+        $caption .= "</ul>";
+        // END CAPTION
+
         // Output the hack
-        $dump  = "<div>";
+        $dump  = "<div class='hack-wrapper'>";
         $dump .= "<pre class='language-".$k['language']."' ".$dv.">";
         $dump .= "<code>";
-        $dump .= $label.$k['code'];
+        $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';
+        $dump .= $k['code'];
         $dump .= "</code>";
         $dump .= "</pre>";
+        $dump .= $caption;
         $dump .= "</div>";
         
         echo $dump;

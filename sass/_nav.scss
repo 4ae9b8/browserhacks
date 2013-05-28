@@ -14,6 +14,7 @@
     font-size:1em;
     width:100%;
 
+
     @include breakpoint(mama-bear) {
       font-size:.75em;
     }
@@ -25,7 +26,9 @@
 
     a {
       display: block;
-      text-indent: 100%;
+      overflow: hidden;
+      height: 1em;
+      /*text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
       height: 1em;
@@ -35,9 +38,17 @@
       background-repeat: no-repeat;
       border-top:.125em solid rgba(255, 255, 255, .25);
       border-bottom:.25em solid rgba(0, 0, 0, .5);
+    */
+      span {
+        display: block;
+        text-align: center;
+        font-size: 3em;
+        color: white;
+        margin: .25em auto;
+      }
       
       &:hover { 
-        height: 4.75em;
+        height: 5em;
         color: #000;
       }
 

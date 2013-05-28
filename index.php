@@ -33,11 +33,11 @@
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
 
     <ul class="nav-browser clearfix">
-        <li class="ch"><a href="#ch">Google Chrome</a></li>
-        <li class="fx"><a href="#fx">Mozilla Firefox</a></li>
-        <li class="ie"><a href="#ie">Internet Explorer</a></li>
-        <li class="op"><a href="#op">Opera</a></li>
-        <li class="sa"><a href="#sa">Safari</a></li>
+        <li class="ch"><a href="#ch"><span class='browser-ch'></span></a></li>
+        <li class="fx"><a href="#fx"><span class='browser-fx'></span></a></li>
+        <li class="ie"><a href="#ie"><span class='browser-ie'></span></a></li>
+        <li class="op"><a href="#op"><span class='browser-op'></span></a></li>
+        <li class="sa"><a href="#sa"><span class='browser-sa'></span></a></li>
     </ul>
 
     <article data-high="1">
