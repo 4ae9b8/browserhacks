@@ -120,17 +120,20 @@ a {
   list-style: none;
   margin: 0 0 .5em 0;
   padding: 0;
-  background: #f5f2f0;
-  box-shadow: 0 0 .15em rgba(0,0,0,0.1);
+  
 }
 
 .browser-list__item {
-  padding: .5em;
+  padding: .25em .5em .25em .5em;
   display: inline-block;
   font-size: .75em;
   color: #333;
-  margin-top: 1px;
   border-right: 1px solid rgba(0,0,0,0.1);
+  background: #f5f2f0;
+
+  &:last-child {
+    border-right: none;
+  }
 
   @include breakpoint(mama-bear) { 
     font-size: 1em;
@@ -142,16 +145,13 @@ a {
 }
 
 .browser-version {
-  border: 1px solid rgba(0,0,0,0.1);
-  padding: 0 .25em;
-  margin-left: .5em;
+  padding: .15em .25em 0 .25em;
   font-size: .8em;
   font-weight: bold;
   display: inline-block;
 }
 
 .browser-name { 
-  vertical-align: middle;
   @include breakpoint(mama-bear) {
     display: none; 
   }
@@ -160,11 +160,10 @@ a {
 .hack-wrapper pre { 
   width:100%;
   @include inline-block(middle);
-  box-shadow: 0 0 .15em rgba(0,0,0,0.1);
   background: #f5f2f0;
   margin-bottom: 0;
   padding: .5em;
-  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-bottom: .15em solid rgba(0,0,0,.1);
 
   .token.comment {
     color:#666;

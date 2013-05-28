@@ -100,7 +100,7 @@
       this.model.set('hackTypes', hackTypes);
 
       // The specific hacks
-      this.hackChilds = this.$el.find('pre');
+      this.hackChilds = this.$el.find('.hack-wrapper');
 
       // Listen to events
       vent.bind("search", this.handleSearch, this);
@@ -144,7 +144,7 @@
         this.hackChilds.hide();
 
         // Find only matched childs
-        var matched = this.$el.find('pre[data-version*="'+data.version+'"]');
+        var matched = this.$el.find('.hack-wrapper[data-version*="'+data.version+'"], .hack-wrapper[data-version="*"]');
 
         // Filter the matched childs
         _.each(matched, function(item) {
@@ -152,18 +152,23 @@
 
           // Get all versions
           versions = _item.attr('data-version').split('|');
-          
+
           _.each(versions, function(version) {
 
             // Show version which starts with value
             if (version.indexOf(data.version) == 0) {
               _item.show();
             }
+
+            // Show item which matches all versions (*)
+            if (version == "*") {
+              _item.show();
+            }
           }, this);
         }, this);
 
         // Find +
-        _.each(this.$el.find('pre[data-version*="+"]'), function(item) {
+        _.each(this.$el.find('.hack-wrapper[data-version*="+"]'), function(item) {
           _item = $(item);
           version_plus = _item.attr('data-version').split('+');
           if (version_plus.length == 2) {
@@ -176,7 +181,7 @@
         }, this);
 
         // Find -
-        _.each(this.$el.find('pre[data-version*="-"]'), function(item) {
+        _.each(this.$el.find('.hack-wrapper[data-version*="-"]'), function(item) {
           _item = $(item);
           version_minus = _item.attr('data-version').split('-');
           if (version_minus.length == 2) {
@@ -194,7 +199,7 @@
         // Hide empty hack types
         _.each(this.model.get('hackTypes'), function(type) {
           // Get the amount of visible hacks
-          count = this.$el.find('[data-type="'+type+'-childs"] pre:visible').length;
+          count = this.$el.find('[data-type="'+type+'-childs"] .hack-wrapper:visible').length;
           
           // Hide title if no hacks are visible
           if (count == 0) {

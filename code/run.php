@@ -43,8 +43,8 @@ foreach($browsers as $kb => $vb):
         // Get the index of the current browser in the array of hacked browsers
         // Create the data-version output based on the $version variable
         $version = $checkBrowser ? array_search($kb, $k['browser']) : null; 
-        $dv = ($k['data-version'][$version] != 0) ? "data-version='".$k['data-version'][$version]."'" : '';
-       
+        $dv = (!empty($k['data-version'][$version])) ? "data-version='".$k['data-version'][$version]."'" : '';
+
         // CAPTION
         $caption = "<ul class='browser-list'>";
 
@@ -64,8 +64,8 @@ foreach($browsers as $kb => $vb):
         // END CAPTION
 
         // Output the hack
-        $dump  = "<div class='hack-wrapper'>";
-        $dump .= "<pre class='language-".$k['language']."' ".$dv.">";
+        $dump  = "<div class='hack-wrapper' ".$dv.">";
+        $dump .= "<pre class='language-".$k['language']."'>";
         $dump .= "<code>";
         $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';
         $dump .= $k['code'];

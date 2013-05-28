@@ -116,11 +116,11 @@
     <article data-high="1" data-type="description">
         <section data-cols="3" data-valign="center" class="top-content">
             <div>
-                <h2 data-type="1"><span class="fontawesome-info-sign"></span>What's this?</h2>
+                <h2 data-type="1"></span>What's this?</h2>
                 <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
             </div>
             <div>
-                <h2 data-type="2"><span class="fontawesome-question-sign"></span>How to?</h2>
+                <h2 data-type="2">How to?</h2>
                 <ol>
                     <li>Pick the hack you want</li>
                     <li>Copy it into your stylesheet</li>
@@ -129,7 +129,7 @@
                 </ol>
             </div>
             <div>
-                <h2 data-type="3"><span class="fontawesome-warning-sign"></span>Reminder!</h2>
+                <h2 data-type="3"></span>Reminder!</h2>
                 <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most cases you should fix your CSS/JS.</p>
             </div>
         </section>
