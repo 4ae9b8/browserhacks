@@ -3,15 +3,6 @@
 $last_type = null;
 
 // Re-ordering array by type
-function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
-    $sort_col = array();
-    foreach ($arr as $key=> $row) {
-        $sort_col[$key] = $row[$col];
-    }
-
-    array_multisort($sort_col, $dir, $arr);
-}
-
 array_sort_by_column($hacks, 'type', SORT_DESC);
 
 // Sort by browser
@@ -41,9 +32,7 @@ foreach($browsers as $kb => $vb):
         }
 
         // Get the index of the current browser in the array of hacked browsers
-        // Create the data-version output based on the $version variable
         $version = $checkBrowser ? array_search($kb, $k['browser']) : null; 
-        $dv = (!empty($k['data-version'][$version])) ? "data-version='".$k['data-version'][$version]."'" : '';
 
         // CAPTION
         $caption = "<ul class='browser-list'>";
@@ -52,8 +41,10 @@ foreach($browsers as $kb => $vb):
         foreach($k['browser'] as $b) {
 
           $label = ucfirst($browsers[$b]['name']);
-          $displayVersion = ($k['data-version'][$i] != '') ? str_replace('|','/',$k['data-version'][$i]) : '*';
-            
+          
+          $displayVersion = returnVersion($k['data-version'][$i]);
+          $displayVersion = str_replace('|','/', $displayVersion); 
+
           $caption .= "<li class='browser-list__item'><span class='browser-icon browser-".$b."'></span> <span class='browser-name'>".$label."</span>";
           $caption .= " <span class='browser-version'>".$displayVersion."</span>";
           $caption .= "</li>"; 
@@ -64,7 +55,7 @@ foreach($browsers as $kb => $vb):
         // END CAPTION
 
         // Output the hack
-        $dump  = "<div class='hack-wrapper' ".$dv.">";
+        $dump  = "<div class='hack-wrapper' data-version='".$k['data-version'][$version]."''>";
         $dump .= "<pre class='language-".$k['language']."'>";
         $dump .= "<code>";
         $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';

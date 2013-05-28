@@ -167,7 +167,7 @@ $hacks = array(
     'type' => 'javascript',
     'browser' => array('fx'),
     'data-version' => array('2|3|4|5|6|7|8|9|10|11|12|13'),
-    'label' => 'Firefox 2-13',
+    'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = !!window.globalStorage;",
     'test' => "!!window.globalStorage;"
@@ -266,7 +266,7 @@ $hacks = array(
     'type' => 'propertyValue',
     'browser' => array('ie'),
     'data-version' => array('6'),
-    'label' => "",
+    'label' => '',
     'language' => 'css',
     'code' => ".selector { _property: value; } \n.selector { -property: value; }",
     'test' => ".selector { _background: lightgreen;  } \n.selector { -background: lightgreen;  }"
@@ -313,7 +313,7 @@ $hacks = array(
     'data-version' => array('9+'),
     'label' => '',
     'language' => 'css',
-    'code' => ".selector:nth-of-type(1n) { property: blue\9; }",
+    'code' => ".selector:nth-of-type(1n) { property: value\9; }",
     'test' => ".selector:nth-of-type(1n) { background: lightgreen\9; }"
   ),
   array(
@@ -322,7 +322,7 @@ $hacks = array(
     'data-version' => array('6'),
     'label' => 'Everything but Internet Explorer 6',
     'language' => 'css',
-    'code' => ".selector { property/**/: blue; }",
+    'code' => ".selector { property/**/: value; }",
     'test' => ".selector { background/**/: lightgreen; }"
   ),
   array(
@@ -599,7 +599,7 @@ $hacks = array(
     'type' => 'selector',
     'browser' => array('op','ie'),
     'data-version' => array('9.5|10|11|12','7'),
-    'label' => 'Opera 9.5-12, Internet Explorer 7',
+    'label' => '',
     'language' => 'css',
     'code' => "_:-o-prefocus, .selector {}",
     'test' => "_:-o-prefocus, .selector { background: lightgreen; }"

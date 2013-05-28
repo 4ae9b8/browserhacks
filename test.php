@@ -29,6 +29,7 @@
 <?php
   // Load Browserhacks and run it
   include_once('code/Browserhacks.php');
+  include_once('code/functions.php');
   Browserhacks::run();
 ?>
 

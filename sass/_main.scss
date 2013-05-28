@@ -1,3 +1,19 @@
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.1); ;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.2); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1); 
+}
+
 /**
  * User selection
  */
@@ -120,20 +136,15 @@ a {
   list-style: none;
   margin: 0 0 .5em 0;
   padding: 0;
-  
+  background: #f5f2f0;
 }
 
 .browser-list__item {
   padding: .25em .5em .25em .5em;
   display: inline-block;
-  font-size: .75em;
+  font-size: .8em;
   color: #333;
   border-right: 1px solid rgba(0,0,0,0.1);
-  background: #f5f2f0;
-
-  &:last-child {
-    border-right: none;
-  }
 
   @include breakpoint(mama-bear) { 
     font-size: 1em;
@@ -145,25 +156,24 @@ a {
 }
 
 .browser-version {
-  padding: .15em .25em 0 .25em;
+  padding: 0 .25em;
   font-size: .8em;
   font-weight: bold;
-  display: inline-block;
+  @include inline-block(middle);
 }
 
 .browser-name { 
+  vertical-align: middle;
   @include breakpoint(mama-bear) {
     display: none; 
   }
 }
 
 .hack-wrapper pre { 
-  width:100%;
-  @include inline-block(middle);
   background: #f5f2f0;
   margin-bottom: 0;
   padding: .5em;
-  border-bottom: .15em solid rgba(0,0,0,.1);
+  border-bottom: .1em solid rgba(0,0,0,.1);
 
   .token.comment {
     color:#666;

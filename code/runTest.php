@@ -11,16 +11,6 @@ $cssDump = "pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0
 // JS file
 $jsDump = "var testClass = 'js-succeed';\n\r";
 
-// Re-ordering array by type
-function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
-    $sort_col = array();
-    foreach ($arr as $key=> $row) {
-        $sort_col[$key] = $row[$col];
-    }
-
-    array_multisort($sort_col, $dir, $arr);
-}
-
 array_sort_by_column($hacks, 'type', SORT_DESC);
 
 foreach($browsers as $kb => $vb):
@@ -63,8 +53,9 @@ foreach($browsers as $kb => $vb):
         foreach($k['browser'] as $b) {
 
           $label = ucfirst($browsers[$b]['name']);
-          $displayVersion = str_replace('|','/',$k['data-version'][$i]);
-            
+          $displayVersion = returnVersion($k['data-version'][$i]);
+          $displayVersion = str_replace('|','/', $displayVersion);  
+
           $caption .= "<li class='browser-list__item'><span class='browser-icon browser-".$b."'></span> <span class='browser-name'>".$label."</span>";
           if($k['data-version'][$i] != '') $caption .= " <span class='browser-version'>".$displayVersion."</span>";
           $caption .= "</li>"; 
