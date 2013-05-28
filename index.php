@@ -21,6 +21,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/browserhacks-ie.css">
+      <script src="js/browser-icons-IE7.jg"></script>
     <![endif]-->
 </head>
 

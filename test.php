@@ -8,13 +8,13 @@
     <meta name="author" content="Hugo Giraudel, Tim Pietrusky">
     <meta name="robots" content="index,follow">
     <meta name="revisit-after" content="1 days">
-    <meta name="description" content="An extensive list of browserhacks from all over the interwebs.">
+    <meta name="description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
 
-    <meta property="og:title" content="browserhacks.com">
-    <meta property="og:description" content="An extensive list of browserhacks from all over the interwebs.">
+    <meta property="og:title" content="Browserhacks">
+    <meta property="og:description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
     <meta property="og:image" content="http://browserhacks.com/img/browserhacks_200.jpg">
     <meta property="og:url" content="http://browserhacks.com">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-test-page.css">
@@ -22,6 +22,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/browserhacks-ie.css">
+      <script src="js/browser-icons-IE7.jg"></script>
     <![endif]-->
 </head>
 
