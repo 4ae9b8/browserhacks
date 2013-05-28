@@ -136,7 +136,13 @@ foreach($browsers as $kb => $vb):
   </article>
 <?php endforeach; 
 
-// Create test files
-file_put_contents("css/browserhacks-test-page.css", $cssDump);
-file_put_contents("js/browserhacks-test-page.js", $jsDump);
+// Create/update test files
+$CSSFile = "css/browserhacks-test-page.css";
+$JSFile  = "js/browserhacks-test-page.js";
+
+$currentCSSFile = file_get_contents($CSSFile);
+$currentJSFile  = file_get_contents($JSFile);
+
+if($currentCSSFile != $cssDump) file_put_contents("css/browserhacks-test-page.css", $cssDump);
+if($currentJSFile  != $jsDump)  file_put_contents("js/browserhacks-test-page.js", $jsDump);
 ?>

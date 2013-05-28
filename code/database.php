@@ -205,7 +205,7 @@ $hacks = array(
     'data-version' => array('6-'),
     'label' => '',
     'language' => 'css',
-    'code' => "* html .selector  {} \n.suckyie6.selector {} /* .suckyie6 can be any unused class */",
+    'code' => "* html .selector  {} \n.unused-class.selector {}",
     'test' => "* html .selector  { background: lightgreen; } \n.suckyie6.selector { background: lightgreen; } /* .suckyie6 can be any unused class */"
   ),
   array(
@@ -259,7 +259,7 @@ $hacks = array(
     'data-version' => array('6'),
     'label' => "",
     'language' => 'css',
-    'code' => ".selector { _color: blue; } \n.selector { -color: blue; }",
+    'code' => ".selector { _property: value; } \n.selector { -property: value; }",
     'test' => ".selector { _background: lightgreen;  } \n.selector { -background: lightgreen;  }"
   ),
   array(
@@ -268,9 +268,8 @@ $hacks = array(
     'data-version' => array('7-'),
     'label' => "Internet Explorer 7-, any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
     'language' => 'css',
-    'code' => ".selector { !color: blue; } \n.selector { \$color: blue; } \n.selector { &color: blue; } \n.selector { *color: blue; } \n/* ... */",
-    'test' => ".selector { !background: lightgreen; } \n.selector { \$background: lightgreen; } \n.selector { &background: lightgreen; } \n.selector { *background: lightgreen; } \n/* ... */"
-      /*.selector { )color: blue; } \n.selector { =color: blue; } \n.selector { %color: blue; } \n.selector { +color: blue; } \n.selector { @color: blue; } \n.selector { ,color: blue; } \n.selector { .color: blue; } \n.selector { /color: blue; } \n.selector { `color: blue; } \n.selector { [color: blue; } \n.selector { ]color: blue; } \n.selector { #color: blue; } \n.selector { ~color: blue; } \n.selector { ?color: blue; } \n.selector { :color: blue; } \n.selector { <color: blue; } \n.selector { >color: blue; } \n.selector { |color: blue; }*/
+    'code' => ".selector { !property: value; } \n.selector { \$property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n/* ... */",
+    'test' => ".selector { !background: lightgreen; } \n.selector { \$background: lightgreen; } \n.selector { &background: lightgreen; } \n.selector { *background: lightgreen; } \n.selector { )background: lightgreen; } \n.selector { =background: lightgreen; } \n.selector { %background: lightgreen; } \n.selector { +background: lightgreen; } \n.selector { @background: lightgreen; } \n.selector { ,background: lightgreen; } \n.selector { .background: lightgreen; } \n.selector { /background: lightgreen; } \n.selector { `background: lightgreen; } \n.selector { [background: lightgreen; } \n.selector { ]background: lightgreen; } \n.selector { #background: lightgreen; } \n.selector { ~background: lightgreen; } \n.selector { ?background: lightgreen; } \n.selector { :background: lightgreen; } \n.selector { |background: lightgreen; }"
   ),
   array(
     'type' => 'propertyValue',
@@ -278,7 +277,7 @@ $hacks = array(
     'data-version' => array('7-'),
     'label' => 'Internet Explorer 7-, acts as an !important',
     'language' => 'css',
-    'code' => ".selector { color: blue !ie; } \n/* string after ! can be anything */",
+    'code' => ".selector { property: value !ie; } \n/* string after ! can be anything */",
     'test' => ".selector { background: lightgreen !ie; } \n/* string after ! can be anything */"
   ),
   array(
@@ -287,7 +286,7 @@ $hacks = array(
     'data-version' => array('6+'),
     'label' => '',
     'language' => 'css',
-    'code' => ".selector { color: blue\9; } \n.selector { color/*\**/: blue\9; }",
+    'code' => ".selector { property: value\9; } \n.selector { property/*\**/: value\9; }",
     'test' => ".selector { background: lightgreen\9; } \n.selector { background/*\**/: lightgreen\9; }"
   ),
   array(
@@ -296,7 +295,7 @@ $hacks = array(
     'data-version' => array('8|9','10'),
     'label' => '',
     'language' => 'css',
-    'code' => ".selector { color: blue\\0/; } \n/* must go at the END of all rules */",
+    'code' => ".selector { property: value\\0/; } \n/* must go at the END of all rules */",
     'test' => ".selector { background: lightgreen\\0/; } \n/* must go at the END of all rules */"
   ),
   array(
@@ -305,7 +304,7 @@ $hacks = array(
     'data-version' => array('9+'),
     'label' => '',
     'language' => 'css',
-    'code' => ".selector:nth-of-type(1n) { color: blue\9; }",
+    'code' => ".selector:nth-of-type(1n) { property: blue\9; }",
     'test' => ".selector:nth-of-type(1n) { background: lightgreen\9; }"
   ),
   array(
@@ -314,7 +313,7 @@ $hacks = array(
     'data-version' => array('6'),
     'label' => 'Everything but Internet Explorer 6',
     'language' => 'css',
-    'code' => ".selector { color/**/: blue; }",
+    'code' => ".selector { property/**/: blue; }",
     'test' => ".selector { background/**/: lightgreen; }"
   ),
   array(
