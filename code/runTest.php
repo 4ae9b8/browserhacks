@@ -7,7 +7,7 @@ $indexCSS = 0;
 $indexJS = 0;
 
 // CSS file
-$cssDump = "pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n\r";
+$cssDump = "pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n.example-span { display: inline-block !important; }\n\r";
 // JS file
 $jsDump = "var testClass = 'js-succeed';\n\r";
 

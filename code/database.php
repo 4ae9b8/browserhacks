@@ -58,7 +58,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ch','sa', 'op'),
-    'data-version' => array('','3+', '9.26-'),
+    'data-version' => array('','3+', '9.26-|14+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}",
@@ -66,8 +66,8 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ch','sa'),
-    'data-version' => array('28-','6-'),
+    'browser' => array('ch','sa', 'op'),
+    'data-version' => array('28-','6-', '14+'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector { (;background: lightgreen;); } \n.selector { [;background: lightgreen;]; }",
@@ -75,8 +75,8 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ch'),
-    'data-version' => array(''),
+    'browser' => array('ch', 'op'),
+    'data-version' => array('', '14+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isChrome = !!window.chrome;",
@@ -121,7 +121,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('fx','ie','op', 'ch'),
-    'data-version' => array('3.5+','9+','','29+'),
+    'data-version' => array('3.5+','9+','12-','29+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (min-resolution: +72dpi) {}",
@@ -347,7 +347,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie','op'),
-    'data-version' => array('8+',''),
+    'data-version' => array('8+','12-'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen\\0 {}",
@@ -572,8 +572,8 @@ $hacks = array(
   array(
     'type' => 'selector',
     'browser' => array('op','ie'),
-    'data-version' => array('9.5+','7'),
-    'label' => '',
+    'data-version' => array('9.5|10|11|12','7'),
+    'label' => 'Opera 9.5-12, Internet Explorer 7',
     'language' => 'css',
     'code' => "noindex:-o-prefocus, .selector {}",
     'test' => "noindex:-o-prefocus, .selector { background: lightgreen; }"
@@ -581,7 +581,7 @@ $hacks = array(
   array(
     'type' => 'selector',
     'browser' => array('op'),
-    'data-version' => array('7'),
+    'data-version' => array('7|15'),
     'label' => '',
     'language' => 'css',
     'code' => "@media all and (min-width: 0px) {}",
@@ -617,8 +617,8 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('op'),
-    'data-version' => array(''),
-    'label' => 'Opera X',
+    'data-version' => array('12-'),
+    'label' => 'Opera X (12-)',
     'language' => 'javascript',
     'code' => 'var isOpera = window.opera && window.opera.version() == X;',
     'test' => 'window.opera && window.opera.version() == X;'
