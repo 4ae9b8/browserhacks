@@ -38,6 +38,10 @@ h1 {
     color: $fx;
   }
 
+  a {
+    color: #555 !important;
+  }
+
   @include breakpoint(baby-bear) {
     text-align: center;
     font-size: 2.75em;

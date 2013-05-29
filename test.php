@@ -62,6 +62,11 @@
 <article data-high="2" class="header header-test">
         <section data-cols="2">
             <div>
+                <h1><a href="/">Browser<span>hacks</span></a></h1>
+            </div>
+        </section>
+        <section data-cols="2">
+            <div>
                 <h2><span class="fontawesome-cog"></span>How does it work?</h2>
                 <p>When your browser matches a selector, the line turns <span class="example-span">green</span>. In most cases, it means your browser is likely to be targeted with a CSS hacks. You can't do much about it, sorry!</p>
                 <p><strong>However</strong>, when the point is to target <em>everything but X</em> (which in most cases is IE), being <span class="example-span">green</span> means your browser is standard compliant so it's a very good thing!</p>
