@@ -228,13 +228,17 @@ section[data-cols='5'] {}
     section[data-cols='5'] > div+div+div+div,
     section[data-cols='5'] > div+div+div+div+div {
       float: left;
-      width: 50%;
+      width: 48.9%;
+      padding-left: .5%;
+      padding-right: .5%; 
     }
 
     section[data-cols='3'] > div,
     section[data-cols='4'] > div,
     section[data-cols='5'] > div {
-      width: 33.3%;
+      width: 31.9%;
+      padding-left: .5%;
+      padding-right: .5%; 
     }
 
     section[data-cols='3'] > div+div+div {

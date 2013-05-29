@@ -23,7 +23,7 @@ $prism_css: #690;
 /**
  * File imports
  */
-@import "google-fonts", "animation";
+@import "google-fonts";
 
 %cf {
 	*zoom: 1;
@@ -50,45 +50,23 @@ body {
   background: url(/img/grey.png) #eee;
   position: relative;
   overflow: visible;
+  padding: 1px;
 }
+
 
 .nav-browser {
-	@extend %cf;
-	width: 100%;
-	list-style: none;
-
 	li {
 		width: 19.9%;
-		float: left;
-		padding: 5px 0;
 	}
-
-	a {
-		text-align: center;
-		display: block;
-		color: #333;
-		text-decoration: none;
-	}
-
-	.ch { background: $ch; }
-	.sa { background: $sa; }
-	.op { background: $op; }
-	.fx { background: $fx; }
-	.ie { background: $ie; }
 }
+
 
 h1 {
     text-align: center;
-    font:4em 'PT Mono', sans-serif;
-    text-shadow: 0 .03em white, 0 .06em silver;
+    font:3em 'Montserrat', sans-serif;
     text-transform: uppercase;
-    margin:1em 0 0 0;
+    margin: .1em 0 0 0;
     color: #333;
-
-    a {
-      color: #333 !important;
-      text-decoration: none;
-    }
 }
 
 article,
@@ -116,21 +94,15 @@ section > div {
 	border-top: 5px solid;
 
 	h2 {
-		padding-bottom: 10px;
-		margin-bottom: 10px;
-		border-bottom: 1px dotted;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+		border-bottom: 1px solid silver;
 	}
 
 	h3 {
-		border-bottom: 1px solid silver;
+		border-bottom: 1px dotted silver;
 		padding-bottom: 5px;
 		margin-bottom: 5px;
-	}
-
-	pre {
-		margin-bottom: 15px;
-		border: 1px dotted silver;
-		padding: 5px
 	}
 }
 
@@ -144,11 +116,18 @@ section > div {
 	padding: 1%;
 }
 
-.th {
-	background: none;
-	padding: 0;
-}
+.hack-wrapper {
+	width: 49% !important;
+	border: 1px solid silver;
+	margin: .5em 1% .5em 0;
 
-.nav-browser a {
-	background-image: none;
+	pre {
+		border-bottom: 1px solid silver;
+		padding: 5px;
+		margin :0;
+	}
+
+	ul {
+		margin :0;
+	}
 }

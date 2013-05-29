@@ -1,0 +1,71 @@
+@font-face {
+	font-family: 'Browserhacks-Icons';
+	src:url('../fonts/Browserhacks-Icons.eot');
+	src:url('../fonts/Browserhacks-Icons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Browserhacks-Icons.woff') format('woff'),
+		url('../fonts/Browserhacks-Icons.ttf') format('truetype'),
+		url('../fonts/Browserhacks-Icons.svg#Browserhacks-Icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.browserhacks-android, 
+.browserhacks-windows8, 
+.browserhacks-apple, 
+.browserhacks-ch, 
+.browserhacks-fx, 
+.browserhacks-ie, 
+.browserhacks-op, 
+.browserhacks-sa, 
+.browserhacks-github, 
+.browserhacks-magic, 
+.browserhacks-twitter, 
+.browserhacks-arrow-up {
+		&:before {
+		font-family: 'Browserhacks-Icons';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+.browserhacks-android:before {
+	content: "\e000";
+}
+.browserhacks-windows8:before {
+	content: "\e001";
+}
+.browserhacks-apple:before {
+	content: "\e002";
+}
+.browserhacks-ch:before {
+	content: "\e003";
+}
+.browserhacks-fx:before {
+	content: "\e004";
+}
+.browserhacks-ie:before {
+	content: "\e005";
+}
+.browserhacks-op:before {
+	content: "\e006";
+}
+.browserhacks-sa:before {
+	content: "\e007";
+}
+.browserhacks-github:before {
+	content: "\e008";
+}
+.browserhacks-magic:before {
+	content: "\e009";
+}
+.browserhacks-twitter:before {
+	content: "\e00a";
+}
+.browserhacks-arrow-up:before {
+	content: "\e00b";
+}

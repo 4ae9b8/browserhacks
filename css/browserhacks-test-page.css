@@ -63,7 +63,7 @@ body:first-of-type .test_css_52 { background: lightgreen; }
 .test_css_55, x:-moz-any-link { background: lightgreen; }
 /*  */
 .test_css_57, x:-moz-any-link, x:default { background: lightgreen; }
-/* Opera 9.5-12, Internet Explorer 7 */
+/*  */
 _:-o-prefocus, .test_css_59 { background: lightgreen; }
 /*  */
 ::made-up-pseudo-element, .test_css_61 { background: lightgreen; }
@@ -160,45 +160,45 @@ _:-o-prefocus, .test_css_59 { background: lightgreen; }
 /*  */
 @media screen and (min-resolution: +72dpi) { .test_css_112 { background: lightgreen; } }
 /*  */
-html[xmlns*=""] body:last-child .test_css_125 { background: lightgreen; } 
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_125 { background: lightgreen; } }
 /*  */
-html[xmlns*=""]:root .test_css_126  { background: lightgreen; }
+@media all and (min-width: 0px){ .test_css_127 { background: lightgreen; } }
 /*  */
-html:first-child .test_css_128 { background: lightgreen; }
+_:-o-prefocus, .test_css_129 { background: lightgreen; }
 /*  */
-*|html[xmlns*=""] .test_css_130 { background: lightgreen; }
+html:first-child .test_css_131 { background: lightgreen; }
 /*  */
-::made-up-pseudo-element, .test_css_132 { background: lightgreen; }
-/*  */
-.test_css_134 { (;background: lightgreen;); } 
-/*  */
-.test_css_135 { [;background: lightgreen;]; }
-/*  */
-@media screen and (min-width:0\0) { .test_css_137 { background: lightgreen; } }
-/*  */
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_139 { background: lightgreen; } }
-/*  */
-@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_144 { background: lightgreen; } }
-/*  */
-@media all and (min-width: 0px){ .test_css_146 { background: lightgreen; } }
-/* Opera 9.5-12, Internet Explorer 7 */
-_:-o-prefocus, .test_css_148 { background: lightgreen; }
-/*  */
-html:first-child .test_css_150 { background: lightgreen; }
-/*  */
-*|html[xmlns*=""] .test_css_152 { background: lightgreen; }
+*|html[xmlns*=""] .test_css_133 { background: lightgreen; }
 /* Must go at the END of all rules */
-.test_css_154 { background: lightgreen\0/; }
+.test_css_135 { background: lightgreen\0/; }
 /*  */
-.test_css_156 { (;background: lightgreen;); } 
+.test_css_137 { (;background: lightgreen;); } 
 /*  */
-.test_css_157 { [;background: lightgreen;]; }
+.test_css_138 { [;background: lightgreen;]; }
 /*  */
-@media (min-resolution: .001dpcm) { _:-o-prefocus, .test_css_159 { background: lightgreen; } }
+@media (min-resolution: .001dpcm) { _:-o-prefocus, .test_css_140 { background: lightgreen; } }
 /*  */
-@media screen\0 { .test_css_161 { background: lightgreen; } }
+@media screen\0 { .test_css_142 { background: lightgreen; } }
 /*  */
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_163 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_144 { background: lightgreen; } }
 /*  */
-@media screen and (min-resolution: +72dpi) { .test_css_165 { background: lightgreen; } }
+@media screen and (min-resolution: +72dpi) { .test_css_146 { background: lightgreen; } }
+/*  */
+html[xmlns*=""] body:last-child .test_css_152 { background: lightgreen; } 
+/*  */
+html[xmlns*=""]:root .test_css_153  { background: lightgreen; }
+/*  */
+html:first-child .test_css_155 { background: lightgreen; }
+/*  */
+*|html[xmlns*=""] .test_css_157 { background: lightgreen; }
+/*  */
+::made-up-pseudo-element, .test_css_159 { background: lightgreen; }
+/*  */
+.test_css_161 { (;background: lightgreen;); } 
+/*  */
+.test_css_162 { [;background: lightgreen;]; }
+/*  */
+@media screen and (min-width:0\0) { .test_css_164 { background: lightgreen; } }
+/*  */
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_166 { background: lightgreen; } }
 

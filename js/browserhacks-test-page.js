@@ -14,7 +14,7 @@ if (test_js_fx_19) $('.test_js_fx_19').addClass(testClass);
 /*  */
 var test_js_fx_21 = /a/[-1]=='a';
 if (test_js_fx_21) $('.test_js_fx_21').addClass(testClass);
-/* Firefox 2-13 */
+/*  */
 var test_js_fx_23 = !!window.globalStorage;
 if (test_js_fx_23) $('.test_js_fx_23').addClass(testClass);
 /*  */
@@ -54,24 +54,24 @@ if (test_js_ie_70) $('.test_js_ie_70').addClass(testClass);
 var test_js_ie_72 = '\v'=='v';
 if (test_js_ie_72) $('.test_js_ie_72').addClass(testClass);
 /*  */
-var test_js_sa_81 = /Constructor/.test(window.HTMLElement);
-if (test_js_sa_81) $('.test_js_sa_81').addClass(testClass);
-/*  */
-var test_js_sa_83 = /a/.__proto__=='//';
-if (test_js_sa_83) $('.test_js_sa_83').addClass(testClass);
-/*  */
-var test_js_sa_85 = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== "undefined";
-if (test_js_sa_85) $('.test_js_sa_85').addClass(testClass);
-/*  */
-var test_js_op_98 = !!window.opera;
-if (test_js_op_98) $('.test_js_op_98').addClass(testClass);
+var test_js_op_85 = !!window.opera;
+if (test_js_op_85) $('.test_js_op_85').addClass(testClass);
 /* Opera X (12-) */
-var test_js_op_100 = window.opera && window.opera.version() == X;
-if (test_js_op_100) $('.test_js_op_100').addClass(testClass);
+var test_js_op_87 = window.opera && window.opera.version() == X;
+if (test_js_op_87) $('.test_js_op_87').addClass(testClass);
 /*  */
-var test_js_op_102 = /^function \(/.test([].sort);
-if (test_js_op_102) $('.test_js_op_102').addClass(testClass);
+var test_js_op_89 = /^function \(/.test([].sort);
+if (test_js_op_89) $('.test_js_op_89').addClass(testClass);
 /*  */
-var test_js_ch_104 = !!window.chrome;
-if (test_js_ch_104) $('.test_js_ch_104').addClass(testClass);
+var test_js_ch_91 = !!window.chrome;
+if (test_js_ch_91) $('.test_js_ch_91').addClass(testClass);
+/*  */
+var test_js_sa_100 = /Constructor/.test(window.HTMLElement);
+if (test_js_sa_100) $('.test_js_sa_100').addClass(testClass);
+/*  */
+var test_js_sa_102 = /a/.__proto__=='//';
+if (test_js_sa_102) $('.test_js_sa_102').addClass(testClass);
+/*  */
+var test_js_sa_104 = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== "undefined";
+if (test_js_sa_104) $('.test_js_sa_104').addClass(testClass);
 

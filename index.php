@@ -21,7 +21,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/browserhacks-ie.css">
-      <script src="js/browser-icons-IE7.jg"></script>
+      <script src="js/browserhacks-icons-IE7.jg"></script>
     <![endif]-->
 </head>
 
@@ -35,11 +35,11 @@
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
 
     <ul class="nav-browser clearfix">
-        <li class="ch"><a href="#ch"><span class='browser-ch'></span></a></li>
-        <li class="fx"><a href="#fx"><span class='browser-fx'></span></a></li>
-        <li class="ie"><a href="#ie"><span class='browser-ie'></span></a></li>
-        <li class="op"><a href="#op"><span class='browser-op'></span></a></li>
-        <li class="sa"><a href="#sa"><span class='browser-sa'></span></a></li>
+        <li class="ch"><a href="#ch"><span class='browserhacks-ch'></span></a></li>
+        <li class="fx"><a href="#fx"><span class='browserhacks-fx'></span></a></li>
+        <li class="ie"><a href="#ie"><span class='browserhacks-ie'></span></a></li>
+        <li class="op"><a href="#op"><span class='browserhacks-op'></span></a></li>
+        <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
     </ul>
 <!--
     <article data-high="1">
@@ -94,7 +94,7 @@
                     </div>
                     <div data-type="search">
                         <p class="form-wrapper">
-                            <label for="search" class='visually-hidden'><span class="fontawesome-search"></span> Find a hack</label>
+                            <label for="search" class='visually-hidden'> Find a hack</label>
                             <input type="text" name="search" id="search" placeholder="Search a hack: e.g. 'ie6'">
                         </p>
                     </div>
@@ -104,17 +104,17 @@
                 <section data-cols="3" class="btn-group">
                     <div>
                         <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                            <button data-type="2"><span class="fontawesome-github"></span> Add hacks / report bugs</button>
+                            <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
                         </a>
                     </div>
                     <div>
                         <a class='test-page-btn' href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                            <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
+                            <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
                         </a>
                     </div>
                     <div>
                         <a href="http://twitter.com/Browserhacks" target="_blank">
-                            <button data-type="2"><span class="fontawesome-twitter"></span> @browserhacks</button>
+                            <button data-type="2"><span class="browserhacks-twitter"></span> @browserhacks</button>
                         </a>
                     </div>
                     
@@ -166,17 +166,17 @@
         <section data-cols="3">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="1"><span class="fontawesome-github"></span> Add hacks or report bugs</button>
+                    <button data-type="1"><span class="browserhacks-github"></span> Add hacks or report bugs</button>
                 </a>
             </div>
             <div>
                 <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                    <button data-type="1"><span class="fontawesome-twitter"></span> Spread the word</button>
+                    <button data-type="1"><span class="browserhacks-twitter"></span> Spread the word</button>
                 </a>
             </div>
             <div>
                 <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                    <button data-type="1"><span class="fontawesome-magic"></span> Almighty test page</button>
+                    <button data-type="1"><span class="browserhacks-magic"></span> Almighty test page</button>
                 </a>
             </div>
         </section>
@@ -188,7 +188,7 @@
             <div>
                 <footer>
                     <p>    
-                        <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
+                        <a href="#browserhacks" title="top" class="btn-top"><span class="browserhacks-circle-arrow-up"></span></a>
                         &copy; Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
                         and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
                         with contributions of the <a href="http://4ae9b8.com" target="_blank">#4ae9b8</a> Team.</p>

@@ -22,7 +22,7 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <link rel="stylesheet" href="css/browserhacks-ie.css">
-      <script src="js/browser-icons-IE7.jg"></script>
+      <script src="js/browserhacks-icons-IE7.jg"></script>
     <![endif]-->
 </head>
 
@@ -35,13 +35,13 @@
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
     <ul class="nav-browser clearfix">
-        <li class="ch"><a href="#ch"><span class='browser-ch'></span></a></li>
-        <li class="fx"><a href="#fx"><span class='browser-fx'></span></a></li>
-        <li class="ie"><a href="#ie"><span class='browser-ie'></span></a></li>
-        <li class="op"><a href="#op"><span class='browser-op'></span></a></li>
-        <li class="sa"><a href="#sa"><span class='browser-sa'></span></a></li>
+        <li class="ch"><a href="#ch"><span class='browserhacks-ch'></span></a></li>
+        <li class="fx"><a href="#fx"><span class='browserhacks-fx'></span></a></li>
+        <li class="ie"><a href="#ie"><span class='browserhacks-ie'></span></a></li>
+        <li class="op"><a href="#op"><span class='browserhacks-op'></span></a></li>
+        <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
     </ul>
-
+<!--
     <article data-high="1">
         <section data-cols="1" >
             <h1><a href="/">Browserhacks</a></h1>
@@ -58,8 +58,8 @@
                 </span><span class="catch-phrase__space">it</span>: now; }
         </p>
     </article>
-
-    <article data-high="1" class="header-test">
+-->
+<article data-high="2" class="header header-test">
         <section data-cols="2">
             <div>
                 <h2><span class="fontawesome-cog"></span>How does it work?</h2>
@@ -73,6 +73,7 @@
         </section>
     </article>
 
+
     <?php
     // OUTPUT THE WHOLE SHIT
     include_once('code/database.php');
@@ -85,7 +86,7 @@
                 <footer>
 
                     <p>
-                        <a href="#browserhacks" title="top" class="btn-top"><span class="fontawesome-circle-arrow-up"></span></a>
+                        <a href="#browserhacks" title="top" class="btn-top"><span class="browserhacks-circle-arrow-up"></span></a>
                         Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a>
                         and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a>
                         with contributions of the <a href="https://github.com/4ae9b8?tab=members" target="_blank">#4ae9b8</a> Team.</p>
@@ -95,10 +96,8 @@
         </section>
     </article>
 
-    <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-    <script src="js/modernizr.custom.38859.js"></script>
     <script src="js/browserhacks-test-page.js"></script>
-
+    <!--
     <script type="text/javascript">
     // Fallback CSS animation
     if (!Modernizr.cssanimations){
@@ -112,7 +111,7 @@
       }, 400);
     }
     </script>
-
+    -->
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     <?php endif; ?>

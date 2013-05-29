@@ -11,7 +11,7 @@ foreach($browsers as $kb => $vb):
   ?>
   <article data-high="3" class="<?php echo $kb; ?>" id="<?php echo $kb ?>">
     <section data-cols="1">
-      <h2 class="th"><span class='browser-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
+      <h2 class="th"><span class='browserhacks-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
   <?php
       // Foreach hack
       foreach($hacks as $k):
@@ -45,7 +45,9 @@ foreach($browsers as $kb => $vb):
           $displayVersion = returnVersion($k['data-version'][$i]);
           $displayVersion = str_replace('|','/', $displayVersion); 
 
-          $caption .= "<li class='browser-list__item'><span class='browser-icon browser-".$b."'></span> <span class='browser-name'>".$label."</span>";
+          $caption .= "<li class='browser-list__item'>";
+          $caption .= " <span class='browser-icon browserhacks-".$b."'></span>";
+          $caption .= " <span class='browser-name'>".$label."</span>";
           $caption .= " <span class='browser-version'>".$displayVersion."</span>";
           $caption .= "</li>"; 
           $i++;
