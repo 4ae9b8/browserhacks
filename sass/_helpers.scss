@@ -18,7 +18,7 @@ $prism_css: #690;
  */
 @mixin breakpoint($point) {
   @if $point == papa-bear {
-    @media (max-width: 79em) { @content; }
+    @media (min-width: 66em) { @content; }
   }
   @if $point == mama-bear {
     @media (max-width: 66em) { @content; }

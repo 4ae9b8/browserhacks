@@ -3,13 +3,28 @@
  * ********* */
 
 .header {
-  margin: 4em 0 0 0 ;
+  margin: 4em 0 0 0;
+
+  @include breakpoint(mama-bear) {
+    div {
+      width: 100% !important;
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+
+    div[data-type="search"] {
+      margin: 0;
+    }
+  }
 }
 
 h1 {
-  font:4em 'Montserrat', sans-serif;
+  font:3.2em 'Montserrat', sans-serif;
   text-transform: uppercase;
-  margin: .2em 0 .2em 0;
+  margin: .5em 0;
   color: #333;
   letter-spacing: -4px;
 
@@ -17,13 +32,12 @@ h1 {
     color: $fx;
   }
 
-  @include breakpoint(mama-bear) {
-    font-size:3em;
+  @include breakpoint(baby-bear) {
+    text-align: center;
+    font-size: 2em;
   }
 
-  @include breakpoint(baby-bear) {
-    font-size:2.25em;
-  }
+  
 }
 
 h2 {
