@@ -90,7 +90,7 @@
             <div >
                 <section data-cols="2">
                     <div>
-                        <h1>Browser<span>hacks</span></h1>
+                        <h1><a href="/">Browser<span>hacks</span></a></h1>
                     </div>
                     <div data-type="search">
                         <p class="form-wrapper">
