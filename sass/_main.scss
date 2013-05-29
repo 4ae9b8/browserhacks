@@ -32,7 +32,7 @@ body {
   // background: url('../img/grey.png') #fff;
   position: relative;
 
-  @include breakpoint(baby-bear){ font-size:.925em; }
+  @include breakpoint(baby-bear) { font-size:.925em; }
 }
 
 
@@ -45,9 +45,7 @@ a {
   &:active {
     text-decoration:none;
     color: $ie;
-    @include transition-property(all);
-    @include transition-duration(0.3s);
-    @include transition-timing-function(ease-in-out);
+    @include transition-property(.3s);
   }
 
   &:hover {
@@ -75,69 +73,6 @@ a {
   text-shadow: none;  
 }
 
-/**
- * Browser headings
- */
-.th {
-  margin: 0;
-  border-bottom: .25em solid;
-  //padding: 0.5em 2.5em;
-  //background: url('../img/sprite-browser-logos.png') no-repeat;
-  background-size: 2em;
-  clear: both;
-
-  a {
-    color: black;
-  }
-
-  @include breakpoint(baby-bear) {
-    width: 140%;
-  }
-
-  span {
-    font-size: 1.5em;
-    @include inline-block(middle);
-    vertical-align: middle;
-    text-shadow: 0 1px solid rgba(0,0,0,.1);
-  }
-
-  .ie & { border-color: $ie; span { color: $ie; } }
-  .sa & { border-color: $sa; span { color: $sa; } }
-  .op & { border-color: $op; span { color: $op; } }
-  .ch & { border-color: $ch; span { color: $ch; } }
-  .fx & { border-color: $fx; span { color: $fx; } }
-
-  /*
-  .ie & {
-    border-color: $ie;
-    background-position: 0 0;
-
-    @media all and (max-width: 370px) {
-      background-position: 0 1em;
-    }
-  }
-
-  .ch & {
-    border-color: $ch;
-    background-position: 0 -5em;
-  }
-
-  .sa & {
-    border-color: $sa;
-    background-position: 0 -7.7em;
-  }
-
-  .op & { 
-    border-color: $op;
-    background-position: 0 -10.3em;
-  }
-
-  .fx & { 
-    border-color: $fx;
-    background-position: 0 -2.5em;
-  }
-  */
-}
 
 /**
  * Hacks containers
@@ -209,13 +144,8 @@ a {
   }
 }
 
-.avatar--hugo:before {
-  content: url('../img/hugo_giraudel.png');
-};
-
-.avatar--tim:before {
-  content: url('../img/tim_pietrusky.jpg');
-};
+.avatar--hugo:before { content: url('../img/hugo_giraudel.png'); };
+.avatar--tim:before {  content: url('../img/tim_pietrusky.jpg'); };
 
 /**
  * Buttons

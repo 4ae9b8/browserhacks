@@ -12,87 +12,82 @@
     padding: 0;
     z-index: 2;
     font-size:1em;
-    width:100%;
-
 
     @include breakpoint(mama-bear) {
-      font-size:.75em;
+        font-size:.75em;
     }
 
     li {
-      width: 20%;
-      float: left;
+        width: 20%;
+        float: left;
     }
 
     a {
-      display: block;
-      overflow: hidden;
-      height: .5em;
-      /*text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      height: 1em;
-      color: #000;
-      background-image: url("../img/sprite-browser-logos.png");
-      background-size: 4.5em;
-      background-repeat: no-repeat;
-      border-top:.125em solid rgba(255, 255, 255, .25);
-      border-bottom:.25em solid rgba(0, 0, 0, .5);
-    */
-      span {
         display: block;
-        text-align: center;
-        font-size: 3em;
-        color: white;
-        margin: .25em auto;
-      }
-      
-      &:hover { 
-        height: 4.5em;
-        color: #000;
-      }
+        overflow: hidden;
+        height: .5em;
 
-      &:visited { color: #000; }
+        span {
+            display: block;
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            margin: .1em auto;
+        }
+
+        &:hover { 
+            height: 4.5em;
+            color: #000;
+        }
+
+        &:visited { color: #000; }
 
 
-      @include breakpoint(mama-bear) {
-        height:2em;
-      }
+        @include breakpoint(mama-bear) {
+            height:2em;
+        }
     }
 
-    .ch a { 
-      background-color: rgba($ch, 1);
-      background-position: center -11.6em;
+    .ch a { background: $ch; }
+    .ie a { background: $ie; }
+    .fx a { background: $fx; }
+    .op a { background: $op; }
+    .sa a { background: $sa; }
 
-      &:hover { background-color: $ch; }
+    /*
+    .ch a { 
+    background-color: rgba($ch, 1);
+    background-position: center -11.6em;
+
+    &:hover { background-color: $ch; }
     }
 
     .fx a { 
-      background-color: rgba($fx, 1);
-      background-position: center -5.7em;
+    background-color: rgba($fx, 1);
+    background-position: center -5.7em;
 
-      &:hover { background-color: $fx; }
+    &:hover { background-color: $fx; }
     }
 
     .ie a { 
-      background-color: rgba($ie, 1);
-      background-position: center -.1em;
+    background-color: rgba($ie, 1);
+    background-position: center -.1em;
 
-      &:hover { background-color: $ie; }
+    &:hover { background-color: $ie; }
     }
 
     .sa a { 
-      background-color: rgba($sa, 1);
-      background-position: center -17.6em;
+    background-color: rgba($sa, 1);
+    background-position: center -17.6em;
 
-      &:hover { background-color: $sa; }
+    &:hover { background-color: $sa; }
     }
 
     .op a { 
-      background-color: rgba($op, 1);
-      background-position: center -23.4em;
+    background-color: rgba($op, 1);
+    background-position: center -23.4em;
 
-      &:hover { background-color: $op; }
+    &:hover { background-color: $op; }
     }
-
-  }
+    */
+}
