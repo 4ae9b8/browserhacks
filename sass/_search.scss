@@ -13,13 +13,27 @@ div[data-type="search"] {
   @include breakpoint(baby-bear) {
     padding: 0 !important;
     margin-bottom: 1em;
-    @include transition(0s width ease-in-out);
   }
 }
 
 .form-wrapper {
   margin: 0;
   padding: .5em;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0;
+    left: -1.8em; 
+    border-top: 1.9em solid transparent;
+    border-bottom: 1.9em solid transparent; 
+    border-right: 1.9em solid rgba(0,0,0,.3); 
+    @include transition(.25s ease-in-out);
+  }
+
+  .active &:before { border-right-color: $ie; }
 
   label {
     margin-bottom: 0.5em; 

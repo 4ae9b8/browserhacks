@@ -41,7 +41,7 @@
         <li class="op"><a href="#op"><span class='browser-op'></span></a></li>
         <li class="sa"><a href="#sa"><span class='browser-sa'></span></a></li>
     </ul>
-
+<!--
     <article data-high="1">
         <section data-cols="1" >
             <h1>Browserhacks</h1>
@@ -82,21 +82,29 @@
             </p>
         </section>
     </article>  
+-->
     
     <!-- Social -->
-    <article data-high="2">
+    <article data-high="2" class="header">
         <section data-cols="1">
-            <div data-type="search">
-                <p class="form-wrapper">
-                    <label for="search"><span class="fontawesome-search"></span> Find a hack</label>
-                    <input type="text" name="search" id="search" placeholder="e.g. 'ie6'">
-                </p>
+            <div >
+                <section data-cols="2">
+                    <div>
+                        <h1>Browser<span>hacks</span></h1>
+                    </div>
+                    <div data-type="search">
+                        <p class="form-wrapper">
+                            <label for="search" class='visually-hidden'><span class="fontawesome-search"></span> Find a hack</label>
+                            <input type="text" name="search" id="search" placeholder="Search a hack: e.g. 'ie6'">
+                        </p>
+                    </div>
+                </section>
             </div>
             <div data-type="top-buttons">
                 <section data-cols="3" class="btn-group">
                     <div>
                         <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                            <button data-type="2"><span class="fontawesome-github"></span> Add hacks or report bugs</button>
+                            <button data-type="2"><span class="fontawesome-github"></span> Add hacks / report bugs</button>
                         </a>
                     </div>
                     <div>

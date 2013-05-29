@@ -2,12 +2,20 @@
  * $HEADINGS *
  * ********* */
 
+.header {
+  margin: 4em 0 0 0 ;
+}
+
 h1 {
-  text-align: center;
   font:4em 'Montserrat', sans-serif;
   text-transform: uppercase;
-  margin:1em 0 0 0;
+  margin: .2em 0 .2em 0;
   color: #333;
+  letter-spacing: -4px;
+
+  span {
+    color: $fx;
+  }
 
   @include breakpoint(mama-bear) {
     font-size:3em;
