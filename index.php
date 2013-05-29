@@ -51,7 +51,7 @@
             <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search" class='visually-hidden'> Find a hack</label>
-                    <input type="text" name="search" id="search" placeholder="Search e.g. ie6 or chrome">
+                    <input type="text" name="search" id="search" placeholder="Search e.g. IE 6 or chrome">
                 </p>
             </div>
         </section>
@@ -79,7 +79,9 @@
         <section data-cols="3" data-valign="center">
             <div>
                 <h2 data-type="1"></span>What's this?</h2>
-                <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
+                <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs.
+                <!-- Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>.-->
+                <span class="desktop-only">Press the first letter of a browser to jump to the according section, like <span class="shortcut">F</span> for Firefox.</span></p>
             </div>
             <div>
                 <h2 data-type="2">How to?</h2>
@@ -142,7 +144,7 @@
             <div>
                 <footer>
                     <p>    
-                        <a href="#browserhacks" title="top" class="btn-top"><span class="browserhacks-circle-arrow-up"></span></a>
+                        <a href="#browserhacks" title="top" class="btn-top"><span class="browserhacks-arrow-up"></span></a>
                         &copy; Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> 
                         and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> 
                         with contributions of the <a href="http://4ae9b8.com" target="_blank">#4ae9b8</a> Team.</p>
@@ -169,6 +171,18 @@
 
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
+    <script>
+    // @TIM: to move!
+    $(document).on('keydown', function (e) {
+      var el;
+      if(e.which == 67) el = document.getElementById('ch');
+      if(e.which == 83) el = document.getElementById('sa');
+      if(e.which == 79) el = document.getElementById('op');
+      if(e.which == 70) el = document.getElementById('fx');
+      if(e.which == 73) el = document.getElementById('ie');
+      el.scrollIntoView(true);
+    });
+    </script>
     
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>

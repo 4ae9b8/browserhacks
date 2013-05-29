@@ -106,7 +106,7 @@ $quotes = array(
         "avatar" => "https://si0.twimg.com/profile_images/27264932/favicon_bigger.jpg"
     ),
     array(
-        "quote" => "Knowledge is dangerous – especially *this* knowledge: http://browserhacks.com",
+        "quote" => "Knowledge is dangerous – especially *this* knowledge",
         "from" => "https://twitter.com/garazi/status/327169357035745281",
         "author" => "Greg R",
         "twitter" => "garazi",
@@ -118,8 +118,15 @@ $quotes = array(
         "author" => "Christian Heilmann",
         "twitter" => "codepo8",
         "avatar" => "https://si0.twimg.com/profile_images/1666904408/codepo8_bigger.png"
+    ),
+    array(
+        "quote" => "A sometimes necessary evil.",
+        "from" => "https://twitter.com/grimmweb/status/339470059820949504",
+        "author" => "Hans Grimm",
+        "twitter" => "grimmweb",
+        "avatar" => "https://si0.twimg.com/profile_images/1891287990/HG_avatar_2010_HR_bigger.jpg"
     )
-);
+); 
 
 shuffle($quotes);
 echo json_encode($quotes);

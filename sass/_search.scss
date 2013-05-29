@@ -13,7 +13,9 @@ div[data-type="search"] {
   margin: 0;
   padding: .5em 0 .5em .5em;
   position: relative;
-
+  width: 75%;
+  float: right;
+  
   @include breakpoint(papa-bear) {
     &:before {
       content: '';

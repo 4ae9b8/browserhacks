@@ -27,7 +27,7 @@
     a {
       display: block;
       overflow: hidden;
-      height: 1em;
+      height: .5em;
       /*text-indent: 100%;
       white-space: nowrap;
       overflow: hidden;
@@ -48,7 +48,7 @@
       }
       
       &:hover { 
-        height: 5em;
+        height: 4.5em;
         color: #000;
       }
 
