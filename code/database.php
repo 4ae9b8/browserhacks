@@ -37,11 +37,11 @@ $browsers = array(
   'ie' => array(
     'name' => 'Internet Explorer',
   ),
-  'sa' => array(
-    'name' => 'safari',
-  ),
   'op' => array(
     'name' => 'opera',
+  ),
+  'sa' => array(
+    'name' => 'safari',
   )
 );
 
