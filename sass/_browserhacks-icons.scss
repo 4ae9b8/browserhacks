@@ -1,4 +1,8 @@
-@font-face {
+/* ****** *
+ * $ICONS *
+ * ****** */
+
+ @font-face {
 	font-family: 'Browserhacks-Icons';
 	src:url('../fonts/Browserhacks-Icons.eot');
 	src:url('../fonts/Browserhacks-Icons.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +25,7 @@
 .browserhacks-magic, 
 .browserhacks-twitter, 
 .browserhacks-arrow-up {
-		&:before {
+	&:before {
 		font-family: 'Browserhacks-Icons';
 		speak: none;
 		font-style: normal;

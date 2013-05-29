@@ -26,6 +26,7 @@
         display: block;
         overflow: hidden;
         height: .5em;
+        @include transition(.25s);
 
         span {
             display: block;
@@ -35,7 +36,8 @@
             margin: .1em auto;
         }
 
-        &:hover { 
+        &:hover,
+        &:focus { 
             height: 4.5em;
             color: #000;
         }

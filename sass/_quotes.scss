@@ -97,12 +97,10 @@
 			height: .5em;
 		}
 		
-		&::-webkit-file-upload-button element,
 		&::-webkit-scrollbar-thumb {
       		background: rgba(104, 104, 104, .5);
     	}
     
-    	&::-webkit-slider-thumb element,
     	&::-webkit-scrollbar-track {
       		background-color: rgba(217, 217, 217, .5);
 		}
