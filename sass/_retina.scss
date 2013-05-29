@@ -10,7 +10,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
   body[data-theme='browserhacks'] {
-    background: url(/img/grey_@2x.png) #eee;
+    // background: url(/img/grey_@2x.png) #fff;
   }
 
   .nav-browser a,
