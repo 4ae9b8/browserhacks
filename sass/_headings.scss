@@ -12,6 +12,10 @@ h1 {
   @include breakpoint(mama-bear) {
     font-size:3em;
   }
+
+  @include breakpoint(baby-bear) {
+    font-size:2.25em;
+  }
 }
 
 h2 {

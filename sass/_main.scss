@@ -1,17 +1,16 @@
 ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+  width: .5em;
+  height: .35em;
 }
  
 /* Track */
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.1); ;
+  background: rgba(217, 217, 217, .5);
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,.2); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.1); 
+  background: #aaa; 
 }
 
 /**
@@ -30,7 +29,7 @@
  */
 body {
   font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
-  background: url('../img/grey.png') #eee;
+  // background: url('../img/grey.png') #fff;
   position: relative;
 
   @include breakpoint(baby-bear){ font-size:.925em; }
