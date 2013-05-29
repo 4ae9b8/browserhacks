@@ -51,7 +51,7 @@
             <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search" class='visually-hidden'> Find a hack</label>
-                    <input type="text" name="search" id="search" placeholder="Search e.g. IE 6 or chrome">
+                    <input type="text" name="search" id="search" placeholder="Search e.g. IE 6 or chrome" spellcheck="false">
                 </p>
             </div>
         </section>
