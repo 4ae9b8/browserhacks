@@ -48,12 +48,11 @@ div[data-type="search"] {
     padding: 0 .5em;
     outline:none;
     border: rgba(0,0,0, .75) solid .015em;
-    border-right: .25em solid rgba(0, 0, 0, .3);
     border-left: .25em solid rgba(0, 0, 0, .3);
-    @include transition(all .25s ease-in-out);
+    @include transition(background .25s ease-in-out);
 
     &:focus {
-      background: #fff;
+      background: rgba($sa, 0.2);
       border-color: $ie;
       color: #000;
     }
