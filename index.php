@@ -46,12 +46,12 @@
     <article data-high="2" class="header">
         <section data-cols="2">
             <div>
-                <h1><a href="/">Browser<span>hacks</span></a></h1>
+                <h1><a href="/" class="logo">Browser<span>hacks</span></a></h1>
             </div>
             <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search" class='visually-hidden'> Find a hack</label>
-                    <input type="text" name="search" id="search" placeholder="Search a hack: e.g. 'ie6'">
+                    <input type="text" name="search" id="search" placeholder="Search e.g. ie6 or chrome">
                 </p>
             </div>
         </section>
