@@ -31,15 +31,23 @@ h1 {
   font:3.2em 'Montserrat', sans-serif;
   text-transform: uppercase;
   margin: 0;
-  color: #333;
   letter-spacing: -2px;
 
   span {
     color: $fx;
+    @include transition(color .25s ease-in-out);
   }
 
-  a {
-    color: #555 !important;
+  a.logo {
+    color: #555;
+
+    &:hover {
+      color: $fx;
+
+      span {
+        color: #555;
+      }
+    }
   }
 
   @include breakpoint(baby-bear) {
