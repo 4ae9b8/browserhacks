@@ -105,10 +105,11 @@
                         </a>
                     </div>
                     <div>
-                        <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                            <button data-type="2"><span class="fontawesome-twitter"></span> Spread the word</button>
+                        <a href="http://twitter.com/Browserhacks" target="_blank">
+                            <button data-type="2"><span class="fontawesome-twitter"></span> @browserhacks</button>
                         </a>
                     </div>
+                    
                 </section>
             </div>
         </section>

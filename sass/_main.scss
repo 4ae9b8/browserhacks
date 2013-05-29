@@ -62,10 +62,6 @@ a {
   font-size: 1.2em;
 }
 
-.test-page-btn button {
-  background: $ie;
-}
-
 .btn-group {
     button { 
       text-transform: uppercase;
@@ -75,6 +71,11 @@ a {
     }
 }
 
+.test-page-btn button {
+  background: $ie;
+  color: white;
+  text-shadow: none;  
+}
 
 /**
  * Browser headings
