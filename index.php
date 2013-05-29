@@ -198,7 +198,7 @@
     <!-- Template: Author -->
     <script id="template_author" type="text/template">
         <div class="quote-authors__avatar">
-          <img src="img/avatar/<%= twitter %>.jpg" width="73" height="73" alt="<%= author %>'s Twitter Avatar">
+          <div class="avatar-<%= twitter %>"></div>
         </div>
 
         <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>

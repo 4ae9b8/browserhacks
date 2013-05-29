@@ -2,6 +2,9 @@
  * $QUOTES *
  * ******* */
 
+@import "avatar/*.png";
+@include all-avatar-sprites;
+
 /*section*/
 .quotes {
 	padding-top:2em;
@@ -116,10 +119,10 @@
 		margin: 0 auto;
 		cursor: pointer;
 
-		img {
+		> div {
+			width: 73px;
+			height: 73px;
 			display: block;
-			max-width: 100%;
-			height: auto;
 			border-radius: 50%;	
 		}
 	}
