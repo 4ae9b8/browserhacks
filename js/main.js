@@ -328,7 +328,7 @@
      */
     focus : function(e) {
       // Hide buttons
-      this.el_buttons.hide();
+      //this.el_buttons.hide();
       clearTimeout(this.timeoutId);
 
       // Hide description
@@ -347,7 +347,7 @@
 
       // Show buttons & description
       this.timeoutId = setTimeout(_.bind(function() {
-        this.el_buttons.show();
+        //this.el_buttons.show();
 
         if (!this.isSearching) {
           this.el_description.show();

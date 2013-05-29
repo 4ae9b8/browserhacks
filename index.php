@@ -85,7 +85,7 @@
     
     <!-- Social -->
     <article data-high="2">
-        <section data-cols="2">
+        <section data-cols="1">
             <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search"><span class="fontawesome-search"></span> Find a hack</label>
@@ -93,20 +93,20 @@
                 </p>
             </div>
             <div data-type="top-buttons">
-                <section data-cols="1" class="btn-group">
+                <section data-cols="3" class="btn-group">
                     <div>
                         <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
                             <button data-type="2"><span class="fontawesome-github"></span> Add hacks or report bugs</button>
                         </a>
                     </div>
                     <div>
-                        <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                            <button data-type="2"><span class="fontawesome-twitter"></span> Spread the word</button>
+                        <a class='test-page-btn' href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
+                            <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
                         </a>
                     </div>
                     <div>
-                        <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                            <button data-type="2"><span class="fontawesome-magic"></span> Almighty test page</button>
+                        <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
+                            <button data-type="2"><span class="fontawesome-twitter"></span> Spread the word</button>
                         </a>
                     </div>
                 </section>

@@ -7,7 +7,7 @@ div[data-type="search"] {
   margin-top:1em;
 
   &.active {
-    width:100%;
+    //width:100%;
   }
 
   @include breakpoint(baby-bear) {
@@ -19,11 +19,12 @@ div[data-type="search"] {
 
 .form-wrapper {
   margin: 0;
+  padding: .5em;
 
   label {
-    font-size: 2em; 
     margin-bottom: 0.5em; 
     display: block;
+    font: 2em 'Montserrat', sans-serif;
   }
 
   input {

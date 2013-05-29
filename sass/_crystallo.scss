@@ -59,11 +59,9 @@ body {
       max-width: $breakpoint+px;
     }
 
-    @if $breakpoint > 1500 {
-      @media screen and (min-width: $breakpoint+px) {
-        &[data-auto-extend="true"] section[data-cols] {
-          max-width: $breakpoint+px;
-        }
+    @media screen and (min-width: $breakpoint+px) {
+      &[data-auto-extend="true"] section[data-cols] {
+        max-width: $breakpoint+px;
       }
     }
   }
