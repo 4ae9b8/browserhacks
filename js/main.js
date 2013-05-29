@@ -528,18 +528,4 @@
     var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 4000});
     view_quote.render();
   });
-
-  /*--------------------------------------------------
-   *
-   * Fallback JS animation for the CSS rotating catch-phrase
-   */
-  if (!Modernizr.cssanimations){
-    var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
-
-    setInterval(function() {
-      var i = Math.round((Math.random()) * tips.length);
-      if (i == tips.length) --i;
-      $(".catch-phrase__anim").html(tips[i]);
-    }, 400);
-  }
 })();
