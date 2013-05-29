@@ -41,90 +41,42 @@
         <li class="op"><a href="#op"><span class='browserhacks-op'></span></a></li>
         <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
     </ul>
-<!--
-    <article data-high="1">
-        <section data-cols="1" >
-            <h1>Browserhacks</h1>
-                
-            <p class="catch-phrase">
-                #browser { 
-                <span class="catch-phrase__anim">
-                    <span>_</span>
-                    <span>-</span>
-                    <span>£</span>
-                    <span>¬</span>
-                    <span>¦</span>
-                    <span>!</span>
-                    <span>$</span>
-                    <span>&amp;</span>
-                    <span>*</span>
-                    <span>(</span>
-                    <span>)</span>
-                    <span>=</span>
-                    <span>%</span>
-                    <span>+</span>
-                    <span>@</span>
-                    <span>,</span>
-                    <span>.</span>
-                    <span>/</span>
-                    <span>`</span>
-                    <span>[</span>
-                    <span>]</span>
-                    <span>#</span>
-                    <span>~</span>
-                    <span>?</span>
-                    <span>:</span>
-                    <span>&lt;</span>
-                    <span>&gt;</span>
-                    <span>|</span>
-                </span>
-                <span class="catch-phrase__space">hack</span>: now; }
-            </p>
-        </section>
-    </article>  
--->
     
     <!-- Social -->
     <article data-high="2" class="header">
-        <section data-cols="1">
-            <div >
-                <section data-cols="2">
-                    <div>
-                        <h1>Browser<span>hacks</span></h1>
-                    </div>
-                    <div data-type="search">
-                        <p class="form-wrapper">
-                            <label for="search" class='visually-hidden'> Find a hack</label>
-                            <input type="text" name="search" id="search" placeholder="Search a hack: e.g. 'ie6'">
-                        </p>
-                    </div>
-                </section>
+        <section data-cols="2">
+            <div>
+                <h1>Browser<span>hacks</span></h1>
             </div>
-            <div data-type="top-buttons">
-                <section data-cols="3" class="btn-group">
-                    <div>
-                        <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                            <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
-                        </a>
-                    </div>
-                    <div>
-                        <a class='test-page-btn' href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                            <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="http://twitter.com/Browserhacks" target="_blank">
-                            <button data-type="2"><span class="browserhacks-twitter"></span> @browserhacks</button>
-                        </a>
-                    </div>
-                    
-                </section>
+            <div data-type="search">
+                <p class="form-wrapper">
+                    <label for="search" class='visually-hidden'> Find a hack</label>
+                    <input type="text" name="search" id="search" placeholder="Search a hack: e.g. 'ie6'">
+                </p>
+            </div>
+        </section>
+        
+        <section data-cols="3" class="btn-group">
+            <div>
+                <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
+                    <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
+                </a>
+            </div>
+            <div>
+                <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
+                    <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
+                </a>
+            </div>
+            <div>
+                <a href="http://twitter.com/Browserhacks" target="_blank">
+                    <button data-type="2"><span class="browserhacks-twitter"></span> @browserhacks</button>
+                </a>
             </div>
         </section>
     </article>
     
     <article data-high="1" data-type="description">
-        <section data-cols="3" data-valign="center" class="top-content">
+        <section data-cols="3" data-valign="center">
             <div>
                 <h2 data-type="1"></span>What's this?</h2>
                 <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs. Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>. </p>
@@ -155,28 +107,30 @@
     <!-- Quotes -->
     <article data-high="4" id="quotes">
       <section data-cols="1" class="quotes">
+        <div>
           <blockquote class="quote"></blockquote>
           <ul class="quote-authors"></ul>
+        </div>
       </section>
     </article>
 
 
     <!-- Social -->
     <article data-high="4">
-        <section data-cols="3">
+        <section data-cols="3" class="btn-group">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="1"><span class="browserhacks-github"></span> Add hacks or report bugs</button>
-                </a>
-            </div>
-            <div>
-                <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
-                    <button data-type="1"><span class="browserhacks-twitter"></span> Spread the word</button>
+                    <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
                 </a>
             </div>
             <div>
                 <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                    <button data-type="1"><span class="browserhacks-magic"></span> Almighty test page</button>
+                    <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
+                </a>
+            </div>
+            <div>
+                <a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank">
+                    <button data-type="2"><span class="browserhacks-twitter"></span> Spread the word</button>
                 </a>
             </div>
         </section>

@@ -11,7 +11,9 @@ foreach($browsers as $kb => $vb):
   ?>
   <article data-high="3" class="<?php echo $kb; ?>" id="<?php echo $kb ?>">
     <section data-cols="1">
-      <h2 class="th"><span class='browserhacks-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
+      <div>
+        <h2 class="th"><span class='browserhacks-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
+      </div>
   <?php
       // Foreach hack
       foreach($hacks as $k):
@@ -25,7 +27,9 @@ foreach($browsers as $kb => $vb):
           ?>
           </section>
           <section data-cols="1" data-type="<?php echo $k['type']; ?>-parent">
-            <h3><!--<span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span>--><?php echo $hack_types[$k['type']]['title']; ?></h3>
+            <div>
+              <h3><!--<span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span>--><?php echo $hack_types[$k['type']]['title']; ?></h3>
+            </div>
           </section>
           <section data-cols="2" data-type="<?php echo $k['type']; ?>-childs">
           <?php

@@ -3,7 +3,13 @@
  * ********* */
 
 .header {
-  margin: 5em 0 0 0;
+  margin: 4em 0 2.5em 0;
+
+  section {
+    &:first-child {
+      margin-bottom: 2.5em;
+    }
+  }
 
   @include breakpoint(mama-bear) {
     div {
@@ -34,16 +40,16 @@ h1 {
 
   @include breakpoint(baby-bear) {
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
   }
 
-  
 }
 
 h2 {
   font: 1.8em 'Montserrat', sans-serif;
-  padding-bottom: 0.4em;
-  margin-bottom: 0.4em;
+  padding-bottom: .4em;
+  margin-bottom: 0;
+  margin-top: 0;
   border-bottom: .225em solid #aaa;
   text-align: left;
 
@@ -55,5 +61,7 @@ h2 {
 h3 {
   font: bold 1.15em 'PT Mono', sans-serif;
   border-bottom: 1px solid silver;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.25em;
+  margin-bottom:0;
+  margin-top:.25em;
 }

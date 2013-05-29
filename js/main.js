@@ -250,7 +250,6 @@
     el : 'input#search',
     el_parent : null,
     el_description : null,
-    el_buttons : null,
 
     events : {
       'keyup' : 'keyup',
@@ -272,7 +271,6 @@
       // Get elements
       this.el_parent = $();
       this.el_description = $('article[data-type="description"]');
-      this.el_buttons = $('div[data-type="top-buttons"]');
     },
 
     /*
@@ -328,7 +326,6 @@
      */
     focus : function(e) {
       // Hide buttons
-      //this.el_buttons.hide();
       clearTimeout(this.timeoutId);
 
       // Hide description
@@ -347,8 +344,6 @@
 
       // Show buttons & description
       this.timeoutId = setTimeout(_.bind(function() {
-        //this.el_buttons.show();
-
         if (!this.isSearching) {
           this.el_description.show();
         }

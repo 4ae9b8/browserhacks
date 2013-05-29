@@ -11,9 +11,8 @@ div[data-type="search"] {
 
 .form-wrapper {
   margin: 0;
-  padding: .5em;
+  padding: .5em 0 .5em .5em;
   position: relative;
-
 
   @include breakpoint(papa-bear) {
     &:before {
@@ -29,6 +28,10 @@ div[data-type="search"] {
     }
 
     .active &:before { border-right-color: $ie; }
+  }
+
+  @include breakpoint(baby-bear) {
+    padding: .5em;
   }
 
   label {

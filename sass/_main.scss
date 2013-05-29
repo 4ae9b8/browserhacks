@@ -55,19 +55,17 @@ a {
   }
 }
 
-/**
- * Top content - introduction
- */
-.top-content {
-  font-size: 1.2em;
-}
-
 .btn-group {
     button { 
       text-transform: uppercase;
       color: #333;
       font: 1em 'Montserrat', sans-serif;
       text-shadow: 0 1px rgba(255,255,255,.3);
+      letter-spacing: -1px;
+
+      &:hover {
+        text-shadow: none;
+      }
     }
 }
 
@@ -81,7 +79,7 @@ a {
  * Browser headings
  */
 .th {
-  margin: .85em 0 .85em 0;
+  margin: 0;
   border-bottom: .25em solid;
   //padding: 0.5em 2.5em;
   //background: url('../img/sprite-browser-logos.png') no-repeat;
@@ -241,7 +239,7 @@ button {
 
   &[data-type="2"] {
     text-align:left;
-    padding-left: 6em;
+    padding-left: 5em;
   }
 
   &[data-width="50"] {

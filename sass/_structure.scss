@@ -9,28 +9,13 @@ article {
     margin-top: 0;
   }
 
-  &[data-high] {
-    margin-bottom:2em;
-  }
-
-  &[data-high="1"],
-  &[data-high="2"] {
-    margin-bottom:0;
-  }
-
   &[data-high="3"] {
     background: rgba(255, 255, 255, .3);
-    padding-bottom:.85em;
-
-    section[data-cols="1"] {
-      > div {
-        padding: 0;
-      }
-    }
+    margin-bottom:1em;
 
     section[data-cols="2"] {
       > div {
-        padding: 0;
+        // padding: 0;
 
         &:nth-child(even) {
           padding-left: .5em;
@@ -62,6 +47,10 @@ article {
         }
       }
     }
+  }
+
+  &[data-high="4"] {
+    margin-bottom:2em;
   }
 
   &[data-text]:after {
