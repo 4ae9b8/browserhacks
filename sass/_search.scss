@@ -3,13 +3,6 @@
  * ******* */
 
 div[data-type="search"] {
-  @include transition(.15s width ease-in-out);
-  margin-top:1em;
-
-  &.active {
-    //width:100%;
-  }
-
   @include breakpoint(baby-bear) {
     padding: 0 !important;
     margin-bottom: 1em;
@@ -28,10 +21,10 @@ div[data-type="search"] {
       position: absolute;
       width: 0; 
       height: 0;
-      left: -1.8em; 
-      border-top: 1.9em solid transparent;
-      border-bottom: 1.9em solid transparent; 
-      border-right: 1.9em solid rgba(0,0,0,.3); 
+      left: -1.3em; 
+      border-top: 1.5em solid transparent;
+      border-bottom: 1.5em solid transparent; 
+      border-right: 1.5em solid rgba(0,0,0,.3); 
       @include transition(.25s ease-in-out);
     }
 
@@ -47,7 +40,7 @@ div[data-type="search"] {
   input {
     width: 100%;
     background: rgba(#eee, .3);
-    height: 1.85em;
+    height: 1.5em;
     font: 2em/1.5 sans-serif;
     padding: 0 .5em;
     outline:none;
