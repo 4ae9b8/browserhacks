@@ -172,7 +172,7 @@
     <script src="js/libs.js"></script>
     <script src="js/main.js"></script>
     <script>
-    // @TIM: to move!
+    // @TIM: Move into new Backbone VIEW
     $(document).on('keydown', function (e) {
       var el;
       if(e.which == 67) el = document.getElementById('ch');
@@ -180,7 +180,10 @@
       if(e.which == 79) el = document.getElementById('op');
       if(e.which == 70) el = document.getElementById('fx');
       if(e.which == 73) el = document.getElementById('ie');
-      el.scrollIntoView(true);
+
+      if (typeof el !== "undefined") {
+        el.scrollIntoView(true);
+      }
     });
     </script>
     

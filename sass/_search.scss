@@ -4,7 +4,7 @@
 
 .form-wrapper {
     margin: 0;
-    padding: .5em;
+    padding: .5em 0 .5em .5em;
     position: relative;
     width: 75%;
     float: right;
@@ -46,5 +46,6 @@
     @include breakpoint(mama-bear) {
         width: 100%;
         float: none;
+        padding: 0;
     }
 }

@@ -42,7 +42,7 @@ a {
     &:active {
         text-decoration:none;
         color: $ie;
-        @include transition-property(.3s);
+        @include transition(color .25s ease-in-out)
     }
 
     &:hover,
