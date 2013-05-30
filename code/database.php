@@ -39,8 +39,8 @@ $browsers = array(
   ),
   'op' => array(
     'name' => 'opera',
-  ),
-  'sa' => array(
+  )
+,  'sa' => array(
     'name' => 'safari',
   )
 );
@@ -428,7 +428,7 @@ $hacks = array(
     'type' => 'javascript',
     'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
-    'label' => 'IE X (6, 7, 8, 9)',
+    'label' => '',
     'language' => 'javascript',
     'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE X]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;",
     'test' => ""
@@ -518,7 +518,7 @@ $hacks = array(
     'type' => 'html',
     'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
-    'label' => 'Internet Explorer X (6, 7, 8, 9)',
+    'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE X]> Internet Explorer X &lt;![endif]-->',
     'test' => ''
@@ -527,7 +527,7 @@ $hacks = array(
     'type' => 'html',
     'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
-    'label' => 'Internet Explorer X- (6, 7, 8, 9)',
+    'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE lte X]> Internet Explorer X or less &lt;![endif]-->',
     'test' => ''
@@ -536,7 +536,7 @@ $hacks = array(
     'type' => 'html',
     'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
-    'label' => 'Internet Explorer X+ (6, 7, 8, 9)',
+    'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE gte X]> Internet Explorer X or greater &lt;![endif]-->',
     'test' => ''
@@ -545,7 +545,7 @@ $hacks = array(
     'type' => 'html',
     'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
-    'label' => 'Internet Explorer X or Y (6, 7, 8, 9)',
+    'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y &lt;![endif]-->',
     'test' => ''
@@ -554,7 +554,7 @@ $hacks = array(
     'type' => 'html',
     'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
-    'label' => 'Internet Explorer X+ but Y- (6, 7, 8, 9)',
+    'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->',
     'test' => ''
@@ -627,7 +627,7 @@ $hacks = array(
     'type' => 'javascript',
     'browser' => array('op'),
     'data-version' => array('12-'),
-    'label' => 'Opera X (12-)',
+    'label' => '',
     'language' => 'javascript',
     'code' => 'var isOpera = window.opera && window.opera.version() == X;',
     'test' => 'window.opera && window.opera.version() == X;'
