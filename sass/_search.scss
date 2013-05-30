@@ -60,4 +60,9 @@
     clear: both;
     margin: 0;
     font-weight: bold;
+
+    @include breakpoint(mama-bear) {
+        float: none;
+        margin: 1em 0;
+    }
 }

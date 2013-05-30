@@ -24,6 +24,10 @@
         div[data-type="search"] {
             margin: 0;
         }
+
+        section:first-child {
+            margin-bottom: 0;
+        }
     }
 }
 
