@@ -62,7 +62,7 @@
 <article data-high="2" class="header header-test">
         <section data-cols="2">
             <div>
-                <h1><a href="/">Browser<span>hacks</span></a></h1>
+                <h1><a href="/" class="logo">Browser<span>hacks</span></a></h1>
             </div>
         </section>
         <section data-cols="2">

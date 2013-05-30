@@ -49,3 +49,15 @@
         padding: 0;
     }
 }
+
+.ua {
+    background: lighten($ie, 45%);
+    border-radius: .2em;
+    font-size: .8em;
+    color: lighten($ie, 25%);
+    padding: .5em;
+    float: right;
+    clear: both;
+    margin: 0;
+    font-weight: bold;
+}
