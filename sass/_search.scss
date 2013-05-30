@@ -54,7 +54,7 @@
     background: lighten($ie, 45%);
     border-radius: .2em;
     font-size: .8em;
-    color: lighten($ie, 25%);
+    color: adjust-hue(lighten($ie, 25%), 10%);
     padding: .5em;
     float: right;
     clear: both;

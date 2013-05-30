@@ -3,19 +3,19 @@
 window.onload = function() {
 	function addIcon(el, entity) {
 		var html = el.innerHTML;
-		el.innerHTML = '<span style="font-family: \'Browserhacks-Icons\'">' + entity + '</span>' + html;
+		el.innerHTML = '<span style="font-family: \'Browserhacks-Icons\'">' + entity + '</span> ' + html;
 	}
 	var icons = {
 			'browserhacks-android' : '&#xe000;',
 			'browserhacks-windows8' : '&#xe001;',
 			'browserhacks-apple' : '&#xe002;',
-			'browserhacks-chrome' : '&#xe003;',
-			'browserhacks-firefox' : '&#xe004;',
-			'browserhacks-IE' : '&#xe005;',
-			'browserhacks-opera' : '&#xe006;',
-			'browserhacks-safari' : '&#xe007;',
+			'browserhacks-ch' : '&#xe003;',
+			'browserhacks-fx' : '&#xe004;',
+			'browserhacks-ie' : '&#xe005;',
+			'browserhacks-op' : '&#xe006;',
+			'browserhacks-sa' : '&#xe007;',
 			'browserhacks-github' : '&#xe008;',
-			'browserhacks-wand' : '&#xe009;',
+			'browserhacks-magic' : '&#xe009;',
 			'browserhacks-twitter' : '&#xe00a;',
 			'browserhacks-arrow-up' : '&#xe00b;'
 		},
