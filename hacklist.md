@@ -113,6 +113,7 @@
 	body:last-child .selector {} 
 	body:nth-of-type(1) .selector {} 
 	body:first-of-type .selector {}
+	.selector:not([attr*='']) {}
 
 ### PROPERTY/VALUE HACKS
 
@@ -270,8 +271,8 @@
 	/* Opera 9.27-, Safari 2 */
 	html:first-child .selector {}
 
-	/* Opera 9.5+, IE 7 */
-	noindex:-o-prefocus, .selector {}
+	/* Opera 9.5-12, IE 7 */
+	_:-o-prefocus, .selector {}
 
 ### MEDIA HACKS
 
@@ -295,8 +296,11 @@
 	/* Opera 12- */
 	var isOpera = !!window.opera;
 
-	/* Opera X */
+	/* Opera X (12-) */
 	var isOpera = window.opera && window.opera.version() == X
+
+	/* Opera 12 */
+	@media (min-resolution: .001dpcm) { _:-o-prefocus, .selector {} }
 
 ## SAFARI
 
@@ -325,8 +329,11 @@
 
 ### JAVASCRIPT HACKS
 
+	/* Safari */
+	var isSafari = /Constructor/.test(window.HTMLElement); 
+
 	/* Safari 5- */
 	var isSafari = /a/.__proto__=='//';
 
-	/* Safari */
-	var isSafari = /Constructor/.test(window.HTMLElement);
+	/* Safari 6 */
+	var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== "undefined";
