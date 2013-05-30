@@ -151,7 +151,7 @@ $hacks = array(
     'data-version' => array('*'),
     'label' => '',
     'language' => 'javascript',
-    'code' => "var isFF = !!window.sidebar",
+    'code' => "var isFF = !!window.sidebar;",
     'test' => "!!window.sidebar;"
   ),
   array(

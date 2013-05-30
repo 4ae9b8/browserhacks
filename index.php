@@ -94,7 +94,7 @@
             </div>
             <div>
                 <h2 data-type="3"></span>Reminder!</h2>
-                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most cases you should fix your CSS/JS.</p>
+                <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most cases you should fix your CSS/JS or use <a href="http://modernizr.com">feature detection</a>.</p>
             </div>
         </section>
     </article>
@@ -173,20 +173,28 @@
     <script src="js/main.js"></script>
     <script>
     // @TIM: Move into new Backbone VIEW
+    var isCtrl = false;
+
+    $(document).on('keyup', function(e) {
+        if(e.which == 17) isCtrl = false;
+    });
+
     $(document).on('keydown', function (e) {
       var el;
-      if(e.which == 67) el = document.getElementById('ch');
-      if(e.which == 83) el = document.getElementById('sa');
-      if(e.which == 79) el = document.getElementById('op');
-      if(e.which == 70) el = document.getElementById('fx');
-      if(e.which == 73) el = document.getElementById('ie');
+      if(e.which == 17) isCtrl = true;
+
+      if(e.which == 67 && !isCtrl) el = document.getElementById('ch');
+      if(e.which == 83 && !isCtrl) el = document.getElementById('sa');
+      if(e.which == 79 && !isCtrl) el = document.getElementById('op');
+      if(e.which == 70 && !isCtrl) el = document.getElementById('fx');
+      if(e.which == 73 && !isCtrl) el = document.getElementById('ie');
 
       if (typeof el !== "undefined") {
         el.scrollIntoView(true);
       }
     });
     </script>
-    
+
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     <?php endif; ?>
