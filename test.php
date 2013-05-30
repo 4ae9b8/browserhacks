@@ -43,28 +43,11 @@
         <li class="op"><a href="#op"><span class='browserhacks-op'></span></a></li>
         <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
     </ul>
-<!--
-    <article data-high="1">
-        <section data-cols="1" >
-            <h1><a href="/">Browserhacks</a></h1>
-        </section>
-        <p class="catch-phrase">
-            #test { <span class="catch-phrase__anim">
-                    <span>_</span><span>-</span><span>£</span><span>¬</span>
-                    <span>¦</span><span>!</span><span>$</span><span>&amp;</span>
-                    <span>*</span><span>(</span><span>)</span><span>=</span>
-                    <span>%</span><span>+</span><span>@</span><span>,</span>
-                    <span>.</span><span>/</span><span>`</span><span>[</span>
-                    <span>]</span><span>#</span><span>~</span><span>?</span>
-                    <span>:</span><span>&lt;</span><span>&gt;</span><span>|</span>
-                </span><span class="catch-phrase__space">it</span>: now; }
-        </p>
-    </article>
--->
-<article data-high="2" class="header header-test" id="js-header">
-        <section data-cols="2">
+
+    <article data-high="2" class="header header-test">
+        <section data-cols="1">
             <div>
-                <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
+                <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a> Testpage</h1>
             </div>
         </section>
         <section data-cols="2">
@@ -105,21 +88,6 @@
 
     <script src="js/lib/jquery.js"></script>
     <script src="js/browserhacks-test-page.js"></script>
-    <!--
-    <script type="text/javascript">
-    // Fallback CSS animation
-    if (!Modernizr.cssanimations){
-      // @TODO: [TimPietrusky] - Find a better place for this
-      var tips = ["_","-", "£", "¬", "¦", "!", "$", "&", "*", "(", ")", "=", "%", "+", "@", ",", ".", "/", "`", "[", "]", "#", "~", "?", ":", "<", ">", "|"];
-
-      setInterval(function() {
-        var i = Math.round((Math.random()) * tips.length);
-        if (i == tips.length) --i;
-        $(".catch-phrase__anim").html(tips[i]);
-      }, 400);
-    }
-    </script>
-    -->
     <script>
         var BrowserDetect = {
             init: function () {
@@ -239,7 +207,7 @@
 
         };
         var ua = BrowserDetect.init();
-        $("#js-header").append("<section data-cols='1'><div><p class='ua'>"+ua+"</p></div></section>");
+        $(".header section:first-child").append("<div><p class='ua'>"+ua+"</p></div>");
     </script>
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
