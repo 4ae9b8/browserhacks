@@ -172,30 +172,12 @@
     </script>
 
     <script src="js/libs.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-    // @TIM: Move into new Backbone VIEW
-    var isCtrl = false;
-
-    $(document).on('keyup', function(e) {
-        if(e.which == 17) isCtrl = false;
-    });
-
-    $(document).on('keydown', function (e) {
-      var el;
-      if(e.which == 17) isCtrl = true;
-
-      if(e.which == 67 && !isCtrl) el = document.getElementById('ch');
-      if(e.which == 83 && !isCtrl) el = document.getElementById('sa');
-      if(e.which == 79 && !isCtrl) el = document.getElementById('op');
-      if(e.which == 70 && !isCtrl) el = document.getElementById('fx');
-      if(e.which == 73 && !isCtrl) el = document.getElementById('ie');
-
-      if (typeof el !== "undefined") el.scrollIntoView(true);
-    });
-    </script>
+    
     <?php if (Browserhacks::isLive()): ?>
+        <script src="js/main-min.js"></script> 
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+    <?php else: ?>
+        <script src="js/main.js"></script>
     <?php endif; ?>
     </body>
 </html>

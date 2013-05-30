@@ -528,4 +528,20 @@
     var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 4000});
     view_quote.render();
   });
+
+  // Listen to keydown to jump to a specific browser
+  // @TODO [TimPietrusky] - Create a own view
+  $(document).on('keydown', function (e) {
+    var el, 
+        specialKey = e.metaKey || e.ctrlKey;
+    if(e.which == 67 && !specialKey) el = document.getElementById('ch');
+    if(e.which == 83 && !specialKey) el = document.getElementById('sa');
+    if(e.which == 79 && !specialKey) el = document.getElementById('op');
+    if(e.which == 70 && !specialKey) el = document.getElementById('fx');
+    if(e.which == 73 && !specialKey) el = document.getElementById('ie');
+
+    if (typeof el !== "undefined") {
+      el.scrollIntoView(true);
+    }
+    });
 })();
