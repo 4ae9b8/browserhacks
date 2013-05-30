@@ -61,7 +61,7 @@
         </p>
     </article>
 -->
-<article data-high="2" class="header header-test">
+<article data-high="2" class="header header-test" id="js-header">
         <section data-cols="2">
             <div>
                 <h1><a href="/" class="logo">Browser<span>hacks</span></a></h1>
@@ -103,6 +103,7 @@
         </section>
     </article>
 
+    <script src="js/lib/jquery.js"></script>
     <script src="js/browserhacks-test-page.js"></script>
     <!--
     <script type="text/javascript">
@@ -119,6 +120,127 @@
     }
     </script>
     -->
+    <script>
+        var BrowserDetect = {
+            init: function () {
+                this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+                this.version = this.searchVersion(navigator.userAgent)
+                    || this.searchVersion(navigator.appVersion)
+                    || "an unknown version";
+                this.OS = this.searchString(this.dataOS) || "an unknown OS";
+                return "You seem to be using " + this.browser + " " + this.version + " on " + this.OS + ".";
+            },
+            searchString: function (data) {
+                for (var i=0;i<data.length;i++) {
+                    var dataString = data[i].string;
+                    var dataProp = data[i].prop;
+                    this.versionSearchString = data[i].versionSearch || data[i].identity;
+                    if (dataString) {
+                        if (dataString.indexOf(data[i].subString) != -1)
+                            return data[i].identity;
+                    }
+                    else if (dataProp)
+                        return data[i].identity;
+                }
+            },
+            searchVersion: function (dataString) {
+                var index = dataString.indexOf(this.versionSearchString);
+                if (index == -1) return;
+                return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+            },
+            dataBrowser: [
+                {
+                    string: navigator.userAgent,
+                    subString: "Chrome",
+                    identity: "Chrome"
+                },
+                {   string: navigator.userAgent,
+                    subString: "OmniWeb",
+                    versionSearch: "OmniWeb/",
+                    identity: "OmniWeb"
+                },
+                {
+                    string: navigator.vendor,
+                    subString: "Apple",
+                    identity: "Safari",
+                    versionSearch: "Version"
+                },
+                {
+                    prop: window.opera,
+                    identity: "Opera",
+                    versionSearch: "Version"
+                },
+                {
+                    string: navigator.vendor,
+                    subString: "iCab",
+                    identity: "iCab"
+                },
+                {
+                    string: navigator.vendor,
+                    subString: "KDE",
+                    identity: "Konqueror"
+                },
+                {
+                    string: navigator.userAgent,
+                    subString: "Firefox",
+                    identity: "Firefox"
+                },
+                {
+                    string: navigator.vendor,
+                    subString: "Camino",
+                    identity: "Camino"
+                },
+                {       // for newer Netscapes (6+)
+                    string: navigator.userAgent,
+                    subString: "Netscape",
+                    identity: "Netscape"
+                },
+                {
+                    string: navigator.userAgent,
+                    subString: "MSIE",
+                    identity: "Explorer",
+                    versionSearch: "MSIE"
+                },
+                {
+                    string: navigator.userAgent,
+                    subString: "Gecko",
+                    identity: "Mozilla",
+                    versionSearch: "rv"
+                },
+                {       // for older Netscapes (4-)
+                    string: navigator.userAgent,
+                    subString: "Mozilla",
+                    identity: "Netscape",
+                    versionSearch: "Mozilla"
+                }
+            ],
+            dataOS : [
+                {
+                    string: navigator.platform,
+                    subString: "Win",
+                    identity: "Windows"
+                },
+                {
+                    string: navigator.platform,
+                    subString: "Mac",
+                    identity: "Mac"
+                },
+                {
+                    string: navigator.userAgent,
+                    subString: "iPhone",
+                    identity: "iPhone/iPod"
+                },
+                {
+                    string: navigator.platform,
+                    subString: "Linux",
+                    identity: "Linux"
+                }
+            ]
+
+        };
+        var ua = BrowserDetect.init();
+        $("#js-header").append("<section data-cols='1'><div><p class='ua'>"+ua+"</p></div></section>");
+    </script>
     <?php if (Browserhacks::isLive()): ?>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     <?php endif; ?>

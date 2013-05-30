@@ -206,3 +206,20 @@ button {
     color: rgba(0,0,0,.6);
     border: 1px solid rgba(0,0,0,0.15);
 }
+
+
+.ua {
+    background: lighten($ie, 45%);
+    border-radius: .2em;
+    font-size: .8em;
+    color: adjust-hue(lighten($ie, 25%), 10%);
+    padding: .5em;
+    float: left;
+    margin: 0;
+    font-weight: bold;
+
+    @include breakpoint(mama-bear) {
+        float: none;
+        margin: 1em 0;
+    }
+}
