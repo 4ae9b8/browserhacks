@@ -570,8 +570,8 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('op'),
-    'data-version' => array('7|15'),
+    'browser' => array('op','ch'),
+    'data-version' => array('7|15','*'),
     'label' => '',
     'language' => 'css',
     'code' => "@media all and (min-width: 0px) {}",

@@ -9,18 +9,18 @@
 
 ### PROPERTY/VALUE HACKS
 
-	/* Chrome 28-, Safari 6- */ 
+	/* Chrome 28-, Safari 6-, Opera 14+ */ 
 	.selector { (;color: blue;); }
 	.selector { [;color: blue;]; }
 
 ### MEDIA HACKS
 
-	/* Chrome, Safari 3+ */
+	/* Chrome, Safari 3+, Opera 14+ */
 	@media screen and (-webkit-min-device-pixel-ratio:0) {}
 
 ### JAVASCRIPT HACKS
 
-	/* Chrome */
+	/* Chrome, Opera 14+ */
 	var isChrome = !!window.chrome;
 
 
@@ -42,7 +42,7 @@
 
 ### MEDIA HACKS
 
-	/* Firefox 3.5+, IE 9+, Opera */
+	/* Firefox 3.5+, IE 9+, Opera 12- */
 	@media screen and (min-resolution: +72dpi) {}
 
 	/* Firefox 3.6+ */
@@ -104,11 +104,11 @@
 	/* Everything but IE 6 */
 	html > body .selector {}
 
-	/* Everything but IE 6/7 */
+	/* Everything but IE 7- */
 	html > /**/ body .selector {}
 	head ~ /* */ body .selector {}
 
-	/* Everything but IE 6/7/8 */
+	/* Everything but IE 8- */
 	:root *> .selector {} 
 	body:last-child .selector {} 
 	body:nth-of-type(1) .selector {} 
@@ -178,10 +178,10 @@
 	/* IE 8 */
 	@media \0screen {}
 
-	/* IE 8+, Opera */
+	/* IE 8+, Opera 12- */
 	@media screen\0 {}
 
-	/* IE 9+, Firefox 3.5+, Opera */
+	/* IE 9+, Firefox 3.5+, Opera 12- */
 	@media screen and (min-resolution: +72dpi) {}
 
 	/* IE 9+, Safari 4 */
@@ -190,7 +190,7 @@
 	/* IE 10+ */
 	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}
 
-	/* Everything but IE 6/7/8 */
+	/* Everything but IE 8- */
 	@media screen and (min-width: 400px) {}
 
 ### JAVASCRIPT HACKS
@@ -276,16 +276,16 @@
 
 ### MEDIA HACKS
 
-	/* Opera 7 */
+	/* Opera 7/15, Chrome */
 	@media all and (min-width: 0px){}
 
 	/* Opera 11-  */
 	@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}
 
-	/* Opera, Firefox 3.5+, IE 9+ */
+	/* Opera 12-, Firefox 3.5+, IE 9+ */
 	@media screen and (min-resolution: +72dpi) {}
 
-	/* Opera, IE 8+ */
+	/* Opera 12-, IE 8+ */
 	@media screen\0 {}
 
 ### JAVASCRIPT HACKS
