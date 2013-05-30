@@ -16,6 +16,7 @@
  * _google-fonts: custom fonts
  * _animation: CSS powered animation on the home page
  * _structure: layout
+ * _header: header
  * _headings: titles
  * _nav: top navigation
  * _search: main search engine
@@ -31,6 +32,7 @@
 @import "google-fonts";
 // @import "animation";
 @import "structure";
+@import "header";
 @import "headings";
 @import "nav";
 @import "search";

@@ -64,7 +64,7 @@
 <article data-high="2" class="header header-test" id="js-header">
         <section data-cols="2">
             <div>
-                <h1><a href="/" class="logo">Browser<span>hacks</span></a></h1>
+                <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
             </div>
         </section>
         <section data-cols="2">

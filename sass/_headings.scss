@@ -2,69 +2,6 @@
  * $HEADINGS *
  * ********* */
 
-.header {
-    margin: 3em 0 2.5em 0;
-
-    section {
-        &:first-child {
-            margin-bottom: 2.5em;
-        }
-    }
-
-    @include breakpoint(mama-bear) {
-        div {
-            width: 100% !important;
-        }
-
-        h1 {
-            margin: 0;
-            text-align: center;
-        }
-
-        div[data-type="search"] {
-            margin: 0;
-        }
-
-        section:first-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-h1 {
-    font:3.5em 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: -2px;
-
-    span {
-        color: $fx;
-        @include transition(color .25s ease-in-out);
-    }
-
-    a.logo {
-        color: #555;
-
-        &:hover,
-        &:focus {
-            color: $fx;
-
-            span {
-                color: #555;
-            }
-        }
-    }
-
-    @include breakpoint(baby-bear) {
-        text-align: center;
-        font-size: 2.75em;
-
-        span {
-            display: block;
-        }
-    }
-}
-
 h2 {
     font: 1.8em 'Montserrat', sans-serif;
     padding-bottom: .4em;
@@ -101,35 +38,4 @@ h3 {
     .op & { border-color: $op; span { color: $op; } }
     .ch & { border-color: $ch; span { color: $ch; } }
     .fx & { border-color: $fx; span { color: $fx; } }
-
-/*
-.ie & {
-border-color: $ie;
-background-position: 0 0;
-
-@media all and (max-width: 370px) {
-  background-position: 0 1em;
-}
-}
-
-.ch & {
-border-color: $ch;
-background-position: 0 -5em;
-}
-
-.sa & {
-border-color: $sa;
-background-position: 0 -7.7em;
-}
-
-.op & { 
-border-color: $op;
-background-position: 0 -10.3em;
-}
-
-.fx & { 
-border-color: $fx;
-background-position: 0 -2.5em;
-}
-*/
 }

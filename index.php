@@ -48,7 +48,7 @@
     <article data-high="2" class="header">
         <section data-cols="2">
             <div>
-                <h1><a href="/" class="logo">Browser<span>hacks</span></a></h1>
+                <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
             </div>
             <div data-type="search">
                 <p class="form-wrapper">
