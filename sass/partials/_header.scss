@@ -2,7 +2,7 @@
  * $HEADER *
  * ******* */
 
- .header {
+.header {
     margin: 3em 0 2.5em 0;
 
     section:first-child {
@@ -51,6 +51,19 @@
     @include breakpoint(mama-bear) {
         text-align: center;
     }
+}
+
+.shortcut {
+    @include inline-block(middle);
+    background: #f5f2f0;
+    border-radius: .2em;
+    padding: .1em;
+    width: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+    color: rgba(0,0,0,.6);
+    border: 1px solid rgba(0,0,0,0.15);
 }
 
     

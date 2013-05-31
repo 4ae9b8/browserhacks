@@ -19,7 +19,7 @@
 		background: rgba(0, 0, 0, .05);
 		border-bottom: .25em solid $color-quotes;
 
-    @include breakpoint(mama-bear){ min-height:7em; }
+    	@include breakpoint(mama-bear){ min-height:7em; }
 		@include breakpoint(baby-bear){ min-height:8.5em; }
 	}
 

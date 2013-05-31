@@ -748,7 +748,7 @@ $hacks = array(
     'legacy' => false
   ),
   array(
-    'type' => 'javascript',
+    'type' => 'JavaScriptpt',
     'browser' => array('sa'),
     'data-version' => array('6'),
     'label' => '',

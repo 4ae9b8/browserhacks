@@ -28,10 +28,8 @@ h3 {
     span {
         font-size: 1.5em;
         @include inline-block(middle);
-        vertical-align: middle;
         text-shadow: 0 1px solid rgba(0,0,0,.1);
     }
-    
 
     .ie & { border-color: $ie; span { color: $ie; } }
     .sa & { border-color: $sa; span { color: $sa; } }

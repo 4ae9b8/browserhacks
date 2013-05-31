@@ -1,38 +1,21 @@
-/*
- * crystallo
- * ultra responsive to be a responsive css framework.
- *
- * crystallo is a solid & simple responsive (not yet) framework 
- * to help you kick-start any form of web application.
- *
- * Get it here
- * http://github.com/TimPietrusky/crystallo
- *
- * 2012 - 2013 by Tim Pietrusky
- * http://timpietrusky.com
+/* ********* *
+ * CRYSTALLO *
+ * ********* */
+
+/**
+ * Padding for the columns (section > div)
  */
+$crystallo-padding-top:    .5em;
+$crystallo-padding-right:  .5em;
+$crystallo-padding-bottom: .5em;
+$crystallo-padding-left:   .5em;
 
-/*
- * compass
- */
-@import "compass/css3/box-sizing";
-
- /*
-  * Padding for the columns (section > div)
-  */
-$crystallo-padding: .5em;
-
-$crystallo-padding-top:    $crystallo-padding;
-$crystallo-padding-right:  $crystallo-padding;
-$crystallo-padding-bottom: $crystallo-padding;
-$crystallo-padding-left:   $crystallo-padding;
-
-/*
+/**
  * Do you need IE <= 8 support?
  */
  $crystallo-ie: true; 
 
-/*
+/**
  * The code starts here...
  */
 *,
@@ -82,10 +65,10 @@ section {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-
+  
   /* vertical align */
   &[data-valign='center'] {
-    display:block;
+    display:table;
 
     > div,
     > div + * {
@@ -114,7 +97,7 @@ pre[data-text]:after {
   left:0;
 }
 
-/*
+/**
  * 1 column
  */
 section[data-cols='1'] {
@@ -123,7 +106,7 @@ section[data-cols='1'] {
   }
 }
 
-/*
+/**
  * 2 columns
  */
 section[data-cols='2'] {}
@@ -176,7 +159,7 @@ section[data-cols='3'] {}
   }
 }
 
-/*
+/**
  * 4 columns
  */
 section[data-cols='4'] {}
@@ -193,7 +176,7 @@ section[data-cols='4'] {}
   }
 }
 
-/*
+/**
  * 5 columns
  */
 section[data-cols='5'] {}

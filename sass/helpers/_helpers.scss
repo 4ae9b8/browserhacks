@@ -3,47 +3,6 @@
  * ******** */
 
 /**
- * Variables
- */
-$ie: #0a90dd;
-$fx: #f77918;
-$ch: gold;
-$sa: #999;
-$op: #f63b3c;
-$us: #4ae9b8;
-$prism_css: #690;
-
-/**
- * Media Queries handler
- */
-@mixin breakpoint($point) {
-  @if $point == papa-bear {
-    @media (min-width: 66em) { @content; }
-  }
-  @if $point == mama-bear {
-    @media (max-width: 66em) { @content; }
-  }
-  @if $point == baby-bear {
-    @media (max-width: 44em) { @content; } 
-  }
-}
-
-/**
- * Retina dispalys handler
- */
-@mixin retina() {
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) { 
-    @content;
-  }
-}
-
-/**
  * Clearfix + silent clearfix
  */
 .clearfix:after {
@@ -58,6 +17,9 @@ $prism_css: #690;
   clear: both;
 }
 
+/**
+ * Visually yet accessible content
+ */ 
 .visually-hidden { 
   position: absolute; 
   overflow: hidden; 
@@ -66,6 +28,9 @@ $prism_css: #690;
   margin: -1px; padding: 0; border: 0; 
 }
 
+/**
+ * Hidden on small views
+ */
 .desktop-only {
   @include breakpoint(mama-bear) {
     display: none;

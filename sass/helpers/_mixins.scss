@@ -1,0 +1,33 @@
+/* ******* *
+ * $MIXINS *
+ * ******* */
+
+/**
+ * Media Queries handler
+ */
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 66em) { @content; }
+  }
+  @if $point == mama-bear {
+    @media (max-width: 66em) { @content; }
+  }
+  @if $point == baby-bear {
+    @media (max-width: 44em) { @content; } 
+  }
+}
+
+/**
+ * Retina dispalys handler
+ */
+@mixin retina() {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    @content;
+  }
+}

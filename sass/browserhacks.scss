@@ -1,41 +1,28 @@
-/**
- * Compass imports
- */
+// Compass
 @import "compass/css3/images";
 @import "compass/css3";
 @import "compass/css3/user-interface";
 @import "compass/css3/filter";
 
-/**
- * Stylesheet imports
- * _crystallo: Tim Pietrusky's framework
- * _helpers: helper classes, mixins and variables
- * _prism: syntax highlighter
- * _font-awesome: icon font
- * _browser-icons: icons for browsers
- * _google-fonts: custom fonts
- * _animation: CSS powered animation on the home page
- * _structure: layout
- * _header: header
- * _headings: titles
- * _nav: top navigation
- * _search: main search engine
- * _main: a bunch of stuff
- * _quotes: quotes widget
- * _retina: retina specific stuff
- */
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
 @import "helpers/helpers";
 
+// Vendors
 @import "vendors/prism";
 @import "vendors/browserhacks-icons";
 @import "vendors/google-fonts";
 
+// Layout
 @import "layout/structure";
 @import "layout/crystallo";
 
+// Partials
 @import "partials/header";
 @import "partials/headings";
 @import "partials/nav";
 @import "partials/search";
 @import "partials/main";
 @import "partials/quotes";
+@import "partials/footer";

@@ -3,57 +3,52 @@
  * ********** */
 
 article {
-  
-  &,
-  &[data-high="3"].active {
-    margin-top: 0;
-  }
-
-  &[data-high="3"] {
-    background: rgba(255, 255, 255, .3);
-    margin-bottom:1em;
-
-    &.filtered {
-      section[data-cols="2"] {
-        > div {
-          width: 100%;
-        }
-      }
+    &, 
+    &[data-high="3"].active {
+        margin-top: 0;
     }
-  }
 
-  &[data-high="4"] {
-    margin-bottom:2em;
-  }
+    &[data-high="3"] {
+        background: rgba(255, 255, 255, .3);
+        margin-bottom:1em;
 
-  &[data-text]:after {
-    content:attr(data-text);
-    top: 0;
-    left: 0;
-    z-index:-1;
-  }
+        &.filtered section[data-cols="2"] > div {
+            width: 100%;
+        }
+    }
+
+    &[data-high="4"] {
+        margin-bottom:2em;
+    }
+
+    &[data-text]:after {
+        content:attr(data-text);
+        top: 0;
+        left: 0;
+        z-index:-1;
+    }
 }
 
 section {
-  padding: 0 1em;
+    padding: 0 1em;
 
-  section {
-    padding: 0;
-  }
-
-  &[data-valign='center'] {
-    text-align:center;
-
-    p, ul, ol {
-      text-align: left;
+    section {
+        padding: 0;
     }
 
-    ul, ol {
-      padding-left: 1.5em;
-    }
-  }
+    &[data-valign='center'] {
+        text-align:center;
 
-  &[data-valign='right'] {
-    text-align:right;
-  }
+        p, ul, ol {
+            text-align: left;
+        }
+
+        ul, ol {
+            padding-left: 1.5em;
+        }
+    }
+
+    &[data-valign='right'] {
+        text-align:right;
+    }
 }
