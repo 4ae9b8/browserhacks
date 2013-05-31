@@ -109,7 +109,12 @@
     <!-- Resources -->
     <!-- Quotes -->
     <article data-high="4" id="quotes">
-      <section data-cols="2" class="quotes">
+        <section data-cols="1">
+            <div>
+                <h2>Additional informations</h2>
+            </div>
+        </section>
+        <section data-cols="2" class="quotes">
         <div>
             <p>Browserhacks is mostly based on the <a href="http://www.paulirish.com/2009/browser-specific-css-hacks/">big list of CSS browser hacks</a> by Paul Irish. Other posts like <a href="http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/">Moving IE specific CSS to media blocks</a> by Keith Clark, <a href="http://www.thespanner.co.uk/2009/01/29/detecting-browsers-javascript-hacks/">Detecting browsers with JS hacks</a> by Gareth Eyes and <a href="https://gist.github.com/necolas/983116">IE CSS hacks</a> by Nicolas Gallagher greatly helped.</p>
             <p>If you'd like to contribute, please hit us on <a href="https://github.com/4ae9b8/browserhacks">GitHub</a>.</p>
@@ -118,7 +123,7 @@
             <p>You may also want to have a look at these related resources:</p>
             <ul>
                 <li><a href="http://csswizardry.com/2013/04/shame-css/">shame.css concept</a> by Harry Roberts</li>
-                <li><a href="http://webaim.org/blog/user-agent-string-history/">history bind user-agent strings</a> by Aaron Andersen</li>
+                <li><a href="http://webaim.org/blog/user-agent-string-history/">history behind user-agent strings</a> by Aaron Andersen</li>
                 <li><a href="http://mathiasbynens.be/demo/css-hacks">hunting a CSS hack for IE 8 only</a> by Mathias Bynens</li>
             </ul>
         </div>
