@@ -86,7 +86,6 @@ foreach($browsers as $kb => $vb):
             $dump .= "<span class='test_css_".$indexCSS."'>".$l."</span>";
             
             // Append things to the dump
-            $cssDump .= "/* ".$k['label']." */\n";
             $cssDump .= str_replace('.selector','.test_css_'.$indexCSS, $l)."\n\r";
             
             $indexCSS++; // Increment index
@@ -102,7 +101,6 @@ foreach($browsers as $kb => $vb):
             $dump .= "<span class='".$name."'>var isHacked = ".$l."</span>";
             
             // Append things to the dump
-            $jsDump .= "/* ".$k['label']." */\n";
             $jsDump .= "var ".$name." = ".$k['test']."\n";
             $jsDump .= "if (".$name.") $('.".$name."').addClass(testClass);\n\r";
             
