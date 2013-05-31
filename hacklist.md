@@ -276,7 +276,7 @@
 
 ### MEDIA HACKS
 
-	/* Opera 7/15, Chrome */
+	/* Opera 7/15, Chrome, IE 10 */
 	@media all and (min-width: 0px){}
 
 	/* Opera 11-  */
