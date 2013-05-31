@@ -125,6 +125,13 @@ $quotes = array(
         "author" => "Hans Grimm",
         "twitter" => "grimmweb",
         "avatar" => "https://si0.twimg.com/profile_images/1891287990/HG_avatar_2010_HR_bigger.jpg"
+    ),
+    array(
+        "quote" => "It makes me both happy and depressed at the same time...",
+        "from" => "https://twitter.com/toddvachon/status/340172953549418496",
+        "author" => "Todd Vachon",
+        "twitter" => "toddvachon",
+        "avatar" => "https://si0.twimg.com/profile_images/2205551628/todd_port200x200_bigger.jpg"
     )
 ); 
 
