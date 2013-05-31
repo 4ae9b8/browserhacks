@@ -96,18 +96,16 @@ a {
 }
 
 .browser-icon {
-    @include inline-block(middle);
+    vertical-align: middle;
 }
 
 .browser-version {
     padding: 0 .25em;
     font-size: .8em;
     font-weight: bold;
-    @include inline-block(middle);
 }
 
 .browser-name { 
-    vertical-align: middle;
     @include breakpoint(mama-bear) {
         display: none; 
     }
