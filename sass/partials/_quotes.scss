@@ -79,7 +79,7 @@
 				top: -.625em;
 			}
 
-			@include filter(grayscale(0) blur(0));
+			@include filter(none);
 
 			.quote-authors__avatar {
 				box-shadow: 
