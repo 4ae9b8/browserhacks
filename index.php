@@ -80,7 +80,7 @@
     <article data-high="1" data-type="description">
         <section data-cols="3" data-valign="center">
             <div>
-                <h2 data-type="1"></span>What's this?</h2>
+                <h2 data-type="1">What's this?</h2>
                 <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs.
                 <!-- Special thanks to <a href="http://paulirish.com/2009/browser-specific-css-hacks/">Paul Irish' comprehensive post</a> and <a href="https://gist.github.com/983116">Nicolas Gallagher's additions</a>.-->
                 <span class="desktop-only">Press the first letter of a browser to jump to the according section, like <span class="shortcut">F</span> for Firefox.</span></p>
@@ -95,7 +95,7 @@
                 </ol>
             </div>
             <div>
-                <h2 data-type="3"></span>Reminder!</h2>
+                <h2 data-type="3">Reminder!</h2>
                 <p>Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most cases you should fix your CSS/JS or use <a href="http://modernizr.com">feature detection</a>.</p>
             </div>
         </section>
