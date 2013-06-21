@@ -417,6 +417,16 @@ $hacks = array(
     'legacy' => false
   ),
   array(
+    'type' => 'selector',
+    'browser' => array('ie'),
+    'data-version' => array('10+'),
+    'label' => '',
+    'language' => 'css',
+    'code' => "_::-ms-reveal, .selector {}",
+    'test' => "_::-ms-reveal, .selector { background: lightgreen; }",
+    'legacy' => false
+  ),
+  array(
     'type' => 'media',
     'browser' => array('ie'),
     'data-version' => array('8-'),
