@@ -287,6 +287,16 @@ $hacks = array(
     'legacy' => false
   ),
   array(
+    'type' => 'selector',
+    'browser' => array('ie'),
+    'data-version' => array('10+'),
+    'label' => '',
+    'language' => 'css',
+    'code' => "_::-ms-reveal, .selector {}",
+    'test' => "_::-ms-reveal, .selector { background: lightgreen; }",
+    'legacy' => false
+  ),
+  array(
     'type' => 'propertyValue',
     'browser' => array('ie'),
     'data-version' => array('6'),
@@ -414,16 +424,6 @@ $hacks = array(
     'language' => 'css',
     'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}",
     'test' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .selector { background: lightgreen; } }",
-    'legacy' => false
-  ),
-  array(
-    'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('10+'),
-    'label' => '',
-    'language' => 'css',
-    'code' => "_::-ms-reveal, .selector {}",
-    'test' => "_::-ms-reveal, .selector { background: lightgreen; }",
     'legacy' => false
   ),
   array(
@@ -637,7 +637,7 @@ $hacks = array(
     'legacy' => false
   ),
   array(
-    'type' => 'selector',
+    'type' => 'media',
     'browser' => array('op','ch', 'ie'),
     'data-version' => array('7|15','*', '10'),
     'label' => '',
