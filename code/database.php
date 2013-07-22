@@ -469,6 +469,116 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
+    'data-version' => array('6-'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && !window.XMLHttpRequest;',
+    'test' => 'document.all && !window.XMLHttpRequest;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('6+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && document.compatMode;',
+    'test' => 'document.all && document.compatMode;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('7-'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && !document.querySelector;',
+    'test' => 'document.all && !document.querySelector;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('7'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && window.XMLHttpRequest && !document.addEventListener;',
+    'test' => 'document.all && window.XMLHttpRequest && !document.addEventListener;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('7+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && window.XMLHttpRequest;',
+    'test' => 'document.all && window.XMLHttpRequest;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('8+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && document.querySelector;',
+    'test' => 'document.all && document.querySelector;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('8-'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && !document.addEventListener;',
+    'test' => 'document.all && !document.addEventListener;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('9-'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && !window.atob;',
+    'test' => 'document.all && !window.atob;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('9'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && document.addEventListener && !window.atob;',
+    'test' => 'document.all && document.addEventListener && !window.atob;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('9+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && document.addEventListener;',
+    'test' => 'document.all && document.addEventListener;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('10+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => 'var isIE = document.all && window.atob;',
+    'test' => 'document.all && window.atob;',
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
     "data-version" => array('*'),
     'label' => "",
     "language" => "javascript",
@@ -499,16 +609,6 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('7-'),
-    'label' => '',
-    'language' => 'javascript',
-    'code' => 'var isIE = document.all && !document.querySelector;',
-    'test' => 'document.all && !document.querySelector;',
-    'legacy' => false
-  ),
-  array(
-    'type' => 'javascript',
-    'browser' => array('ie'),
     'data-version' => array('6|7|8|9'),
     'label' => '',
     'language' => 'javascript',
@@ -522,8 +622,8 @@ $hacks = array(
     'data-version' => array('7'),
     'label' => '',
     'language' => 'javascript',
-    'code' => "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\")!=-1;",
-    'test' => "navigator.appVersion.indexOf(\"MSIE 7.\")!=-1;",
+    'code' => "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
+    'test' => "navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
     'legacy' => false
   ),
   array(
@@ -572,8 +672,8 @@ $hacks = array(
     'data-version' => array('10'),
     'label' => '',
     'language' => 'javascript',
-    'code' => "var isIE = document.body.style.msTouchAction != undefined;",
-    'test' => "document.body.style.msTouchAction != undefined;",
+    'code' => "var isIE = document.body.style.msTouchAction !== undefined;",
+    'test' => "document.body.style.msTouchAction !== undefined;",
     'legacy' => false
   ),
   array(
