@@ -82,8 +82,18 @@ $hacks = array(
     'data-version' => array('*', '14+'),
     'label' => '',
     'language' => 'javascript',
-    'code' => "var isChrome = !!window.chrome;",
+    'code' => "var isChromium = !!window.chrome;",
     'test' => "!!window.chrome;",
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ch'),
+    'data-version' => array('14+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isChrome = !!window.chrome && !!window.chrome.webstore;",
+    'test' => "!!window.chrome && !!window.chrome.webstore;",
     'legacy' => false
   ),
   array(
@@ -184,6 +194,16 @@ $hacks = array(
     'language' => 'javascript',
     'code' => "var isFF = !!window.globalStorage;",
     'test' => "!!window.globalStorage;",
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('fx'),
+    'data-version' => array('1.5+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isFF = typeof InstallTrigger !== 'undefined';",
+    'test' => "typeof InstallTrigger !== 'undefined';",
     'legacy' => false
   ),
   array(
@@ -389,6 +409,16 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie'),
+    'data-version' => array('8-'),
+    'label' => 'Everything but Internet Explorer 8-',
+    'language' => 'css',
+    'code' => "@media screen and (min-width: 400px) {}",
+    'test' => "@media screen and (min-width: 400px) { .selector { background: lightgreen; } }",
+    'legacy' => false
+  ),
+  array(
+    'type' => 'media',
+    'browser' => array('ie'),
     'data-version' => array('8'),
     'label' => '',
     'language' => 'css',
@@ -428,12 +458,12 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
-    'label' => 'Everything but Internet Explorer 8-',
-    'language' => 'css',
-    'code' => "@media screen and (min-width: 400px) {}",
-    'test' => "@media screen and (min-width: 400px) { .selector { background: lightgreen; } }",
+    'browser' => array('ie', 'sa'),
+    "data-version" => array('*', '6-'),
+    'label' => "Everything but Internet Explorer and Safari 6-",
+    "language" => "css",
+    "code" => "@media screen { @media (min-width: 0px) {} }",
+    "test" => "@media screen { @media (min-width: 0px) { .selector { background: lightgreen; } } }",
     'legacy' => false
   ),
   array(
