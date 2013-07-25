@@ -14,7 +14,7 @@
     <meta property="og:description" content="An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.">
     <meta property="og:image" content="http://browserhacks.com/img/browserhacks_200.jpg">
     <meta property="og:url" content="http://browserhacks.com">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
@@ -75,6 +75,16 @@
                 </a>
             </div>
         </section>
+        
+        <section data-cols="1" data-valign="center">
+            <div>
+                <div id="carbonads-container">
+                    <div class="carbonad" style="margin: .5em auto">
+                        <div id="azcarbon"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </article>
     
     <article data-high="1" data-type="description">
@@ -93,12 +103,6 @@
                     <li>Add the style you want between the braces</li>
                     <li>Enjoy the new styles for the browser you targeted!</li>
                 </ol>
-
-                <div id="carbonads-container">
-                    <div class="carbonad" style="margin: .5em auto">
-                        <div id="azcarbon"></div>
-                    </div>
-                </div>
             </div>
             <div>
                 <h2 data-type="3">Reminder!</h2>
@@ -204,6 +208,5 @@
     <?php else: ?>
         <script src="js/main.js"></script>
     <?php endif; ?>
-        <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/47409/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
     </body>
 </html>
