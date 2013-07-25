@@ -93,6 +93,12 @@
                     <li>Add the style you want between the braces</li>
                     <li>Enjoy the new styles for the browser you targeted!</li>
                 </ol>
+
+                <div id="carbonads-container">
+                    <div class="carbonad" style="margin: .5em auto">
+                        <div id="azcarbon"></div>
+                    </div>
+                </div>
             </div>
             <div>
                 <h2 data-type="3">Reminder!</h2>
@@ -198,5 +204,6 @@
     <?php else: ?>
         <script src="js/main.js"></script>
     <?php endif; ?>
+        <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/47409/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
     </body>
 </html>
