@@ -139,7 +139,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('fx','ie','op', 'ch'),
-    'data-version' => array('3.5+','9+','12-','29+'),
+    'data-version' => array('3.5+','9|10','12-','29+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (min-resolution: +72dpi) {}",
@@ -369,7 +369,7 @@ $hacks = array(
   array(
     'type' => 'propertyValue',
     'browser' => array('ie'),
-    'data-version' => array('9+'),
+    'data-version' => array('9|10'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector:nth-of-type(1n) { property: value\9; }",
@@ -429,7 +429,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie','op'),
-    'data-version' => array('8+','12-'),
+    'data-version' => array('8|9|10','12-'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen\\0 {}",
@@ -439,7 +439,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie','sa'),
-    'data-version' => array('9+','4'),
+    'data-version' => array('9|10','4'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (min-width:0\\0) {}",
@@ -449,7 +449,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie'),
-    'data-version' => array('10+'),
+    'data-version' => array('10'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}",
@@ -459,8 +459,8 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('ie', 'sa'),
-    "data-version" => array('*', '6-'),
-    'label' => "Everything but Internet Explorer and Safari 6-",
+    "data-version" => array('10-', '6-'),
+    'label' => "Everything but Internet Explorer 10- and Safari 6-",
     "language" => "css",
     "code" => "@media screen { @media (min-width: 0px) {} }",
     "test" => "@media screen { @media (min-width: 0px) { .selector { background: lightgreen; } } }",
@@ -479,7 +479,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('6+'),
+    'data-version' => array('6|7|8|9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.compatMode;',
@@ -509,7 +509,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('7+'),
+    'data-version' => array('7|8|9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && window.XMLHttpRequest;',
@@ -519,7 +519,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('8+'),
+    'data-version' => array('8|9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.querySelector;',
@@ -559,7 +559,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('9+'),
+    'data-version' => array('9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.addEventListener;',
@@ -569,7 +569,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('10+'),
+    'data-version' => array('10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && window.atob;',
@@ -579,7 +579,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    "data-version" => array('*'),
+    "data-version" => array('10-'),
     'label' => "",
     "language" => "javascript",
     "code" => "var isIE = /*@cc_on!@*/false;",
@@ -669,7 +669,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('10'),
+    'data-version' => array('10+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = document.body.style.msTouchAction !== undefined;",
@@ -679,7 +679,7 @@ $hacks = array(
   array(
     'type' => 'javascript',
     'browser' => array('ie'),
-    'data-version' => array('10'),
+    'data-version' => array('10+'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = window.navigator.msPointerEnabled;',
@@ -769,7 +769,7 @@ $hacks = array(
   array(
     'type' => 'media',
     'browser' => array('op','ch', 'ie'),
-    'data-version' => array('7|15','*', '10'),
+    'data-version' => array('7|15','*', '10+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media all and (min-width: 0px) {}",
