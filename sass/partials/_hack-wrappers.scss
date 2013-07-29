@@ -3,6 +3,24 @@
  * More in _prism.scss
  * regarding syntax highlighting
  */ 
+.hack-wrapper pre { 
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    background: #f5f2f0;
+    margin-bottom: 0;
+    padding: .5em;
+    border-bottom: .1em solid rgba(0,0,0,.1);
+
+    &.legacy {
+        display: none;
+    }
+
+    @include breakpoint(baby-bear) {
+        width: 100%; 
+        margin: 1% 0 0 0; 
+    }
+}
+
 .browser-list {
     list-style: none;
     margin: 0 0 .5em 0;
@@ -31,23 +49,5 @@
 .browser-name { 
     @include breakpoint(mama-bear) {
         display: none; 
-    }
-}
-
-.hack-wrapper pre { 
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-    background: #f5f2f0;
-    margin-bottom: 0;
-    padding: .5em;
-    border-bottom: .1em solid rgba(0,0,0,.1);
-
-    .token.comment {
-        color:#666;
-    }
-
-    @include breakpoint(baby-bear) {
-        width: 100%; 
-        margin: 1% 0 0 0; 
     }
 }

@@ -257,7 +257,7 @@ $hacks = array(
     'language' => 'css',
     'code' => "* html .selector  {} \n.unused-class.selector {}",
     'test' => "* html .selector  { background: lightgreen; } \n.unused-class.selector { background: lightgreen; }",
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'selector',
@@ -287,7 +287,7 @@ $hacks = array(
     'language' => 'css',
     'code' => "html > body .selector {}",
     'test' => "html > body .selector { background: lightgreen; }",
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'selector',
@@ -327,7 +327,7 @@ $hacks = array(
     'language' => 'css',
     'code' => ".selector { _property: value; } \n.selector { -property: value; }",
     'test' => ".selector { _background: lightgreen;  } \n.selector { -background: lightgreen;  }",
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'propertyValue',
@@ -387,7 +387,7 @@ $hacks = array(
     'language' => 'css',
     'code' => ".selector { property/**/: value; }",
     'test' => ".selector { background/**/: lightgreen; }",
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'media',
@@ -477,7 +477,7 @@ $hacks = array(
     'language' => 'javascript',
     'code' => 'var isIE = document.all && !window.XMLHttpRequest;',
     'test' => 'document.all && !window.XMLHttpRequest;',
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'javascript',
@@ -807,7 +807,7 @@ $hacks = array(
     'language' => 'css',
     'code' => "html:first-child .selector {}",
     'test' => "html:first-child .selector { background: lightgreen; }",
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'javascript',
@@ -817,7 +817,7 @@ $hacks = array(
     'language' => 'javascript',
     'code' => "var isOpera = /^function \(/.test([].sort);",
     'test' => "/^function \(/.test([].sort);",
-    'legacy' => false
+    'legacy' => true
   ),
   array(
     'type' => 'selector',

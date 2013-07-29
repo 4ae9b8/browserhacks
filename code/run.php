@@ -61,7 +61,8 @@ foreach($browsers as $kb => $vb):
         // END CAPTION
 
         // Output the hack
-        $dump  = "<div class='hack-wrapper' data-version='".$k['data-version'][$version]."'>";
+        $isLegacy = $k['legacy'] == true ? 'legacy' : '';
+        $dump  = "<div class='hack-wrapper ".$isLegacy."' data-version='".$k['data-version'][$version]."'>";
         $dump .= "<pre class='language-".$k['language']."'>";
         $dump .= "<code>";
         $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';

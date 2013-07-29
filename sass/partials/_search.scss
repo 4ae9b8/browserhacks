@@ -49,3 +49,17 @@
         padding: 0;
     }
 }
+
+.legacy-wrapper {
+    clear: both;
+    text-align: right;
+    font-size: 1.5em;
+
+    label {
+        cursor: pointer;
+    }
+    
+    @include breakpoint(mama-bear) {
+        text-align: center;
+    }
+}

@@ -56,6 +56,10 @@
                     <label for="search" class='visually-hidden'>Find a hack</label>
                     <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
                 </p>
+                <p class='legacy-wrapper'>
+                    <input type="checkbox" name="show-legacy" id="show-legacy">
+                    <label for="show-legacy">Show legacy hacks</label>
+                </p>
             </div>
         </section>
         
@@ -209,5 +213,13 @@
     <?php else: ?>
         <script src="js/main.js"></script>
     <?php endif; ?>
+
+    <?php // @TODO : MOVE THIS TO MAIN.JS ?>
+    <script>
+        $('#show-legacy').on('click', function() {
+            var state = $('#show-legacy').attr('checked') ? 'block' : 'none';
+            $('.legacy').css('display', state);
+        });
+    </script>
     </body>
 </html>
