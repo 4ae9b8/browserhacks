@@ -690,6 +690,26 @@ $hacks = array(
     'legacy' => false
   ),
   array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('10'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isIE = 'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
+    'test' => "'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('ie'),
+    'data-version' => array('11'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
+    'test' => "'-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
+    'legacy' => false
+  ),
+  array(
     'type' => 'html',
     'browser' => array('ie'),
     'data-version' => array('*'),
@@ -771,8 +791,8 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('op','ch', 'ie'),
-    'data-version' => array('7|15','*', '10+'),
+    'browser' => array('op','ch', 'ie', 'fx'),
+    'data-version' => array('7|15','*', '10+', '22+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media all and (min-width: 0px) {}",
