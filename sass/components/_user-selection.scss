@@ -1,7 +1,11 @@
 /**
  * User selection
  */
-::-moz-selection,
+::-moz-selection { 
+    color: #fff; 
+    background: rgba(0, 0, 0, .9);
+} 
+
 ::selection { 
     color: #fff; 
     background: rgba(0, 0, 0, .9);
