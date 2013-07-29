@@ -9,15 +9,17 @@ array_sort_by_column($hacks, 'type', SORT_DESC);
 foreach($browsers as $kb => $vb):
   // Output browser heading
   ?>
-  <article data-high="3" class="<?php echo $kb; ?>" id="<?php echo $kb ?>">
-    <section data-cols="1">
+  <article class="browser-wrapper <?php echo $kb; ?>" data-high="3" id="<?php echo $kb ?>">
+    <section class="browser-wrapper__heading" data-cols="1">
       <div>
         <h2 class="th"><span class='browserhacks-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
       </div>
-  <?php
+
+      <?php
       // Foreach hack
       foreach($hacks as $k):
         // Check if current hack is from current browser
+
         // If it isn't, break
         $checkBrowser = in_array($kb, $k['browser']);
         if(!$checkBrowser) continue;
@@ -26,12 +28,12 @@ foreach($browsers as $kb => $vb):
         if($k['type'] != $last_type) {
           ?>
           </section>
-          <section data-cols="1" data-type="<?php echo $k['type']; ?>-parent">
+          <section class="browser-wrapper__subheading" data-cols="1" data-type="<?php echo $k['type']; ?>-parent">
             <div>
               <h3><!--<span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span>--><?php echo $hack_types[$k['type']]['title']; ?></h3>
             </div>
           </section>
-          <section data-cols="2" data-type="<?php echo $k['type']; ?>-childs">
+          <section class='browser-wrapper__hack-wrapper' data-cols="2" data-type="<?php echo $k['type']; ?>-childs">
           <?php
         }
 
@@ -62,7 +64,7 @@ foreach($browsers as $kb => $vb):
 
         // Output the hack
         $isLegacy = $k['legacy'] == true ? 'legacy' : '';
-        $dump  = "<div class='hack-wrapper ".$isLegacy."' data-version='".$k['data-version'][$version]."'>";
+        $dump  = "<div class='browser-wrapper__hack ".$isLegacy."' data-version='".$k['data-version'][$version]."'>";
         $dump .= "<pre class='language-".$k['language']."'>";
         $dump .= "<code>";
         $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';

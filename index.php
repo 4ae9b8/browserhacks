@@ -220,6 +220,15 @@
             var state = $('#show-legacy').attr('checked') ? 'block' : 'none';
             $('.legacy').css('display', state);
         });
+
+        var $wrapper = $('.browser-wrapper__hack-wrapper');
+
+        $wrapper.each(function() {
+            $(this).find('.browser-wrapper__hack').sort(function (a, b) {
+                return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
+            }).appendTo( $(this) );
+        });
+        
     </script>
     </body>
 </html>

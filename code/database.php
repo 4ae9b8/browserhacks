@@ -29,22 +29,28 @@ $hack_types = array (
 
 $browsers = array(
   'ch' => array(
-    'name' => 'chrome',
+    'name'   => 'chrome',
+    'legacy' => '1'
   ),
   'fx' => array(
     'name' => 'firefox',
+    'legacy' => '3.6'
   ),
   'ie' => array(
     'name' => 'Internet Explorer',
+    'legacy' => '6'
   ),
   'op' => array(
-    'name' => 'opera',
+    'name'   => 'opera',
+    'legacy' => '9'
   ),
   'sa' => array(
-    'name' => 'safari',
+    'name'   => 'safari',
+    'legacy' => '4'
   ),
   'an' => array(
-    'name' => 'android'
+    'name'   => 'android',
+    'legacy' => '2.3'
   )
 );
 
