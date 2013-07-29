@@ -30,10 +30,14 @@ h3 {
         @include inline-block(middle);
         text-shadow: 0 1px solid rgba(0,0,0,.1);
     }
+}
 
-    .ie & { border-color: $ie; span { color: $ie; } }
-    .sa & { border-color: $sa; span { color: $sa; } }
-    .op & { border-color: $op; span { color: $op; } }
-    .ch & { border-color: $ch; span { color: $ch; } }
-    .fx & { border-color: $fx; span { color: $fx; } }
+@each $b in $browsers {
+    .#{nth($b, 1)} .th {
+        border-color: nth($b, 2);
+
+        span {
+            color: nth($b, 2);
+        }
+    }
 }

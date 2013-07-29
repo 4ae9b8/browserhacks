@@ -534,6 +534,7 @@
   $(document).on('keydown', function (e) {
     var el, 
         specialKey = e.metaKey || e.ctrlKey;
+    if(e.which == 65 && !specialKey) el = document.getElementById('an');
     if(e.which == 67 && !specialKey) el = document.getElementById('ch');
     if(e.which == 83 && !specialKey) el = document.getElementById('sa');
     if(e.which == 79 && !specialKey) el = document.getElementById('op');

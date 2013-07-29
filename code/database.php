@@ -39,17 +39,20 @@ $browsers = array(
   ),
   'op' => array(
     'name' => 'opera',
-  )
-,  'sa' => array(
+  ),
+  'sa' => array(
     'name' => 'safari',
+  ),
+  'an' => array(
+    'name' => 'android'
   )
 );
 
 $hacks = array(
   array(
     'type' => 'selector',
-    'browser' => array('ch','sa','ie'),
-    'data-version' => array('24-','6','7'),
+    'browser' => array('ch','sa','ie','an'),
+    'data-version' => array('24-','6','7','4.1+'),
     'label' => '',
     'language' => 'css',
     'code' => "::made-up-pseudo-element, .selector {}",
@@ -58,8 +61,8 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ch','sa', 'op'),
-    'data-version' => array('*','3+', '9.26-|14+'),
+    'browser' => array('ch','sa', 'op','an'),
+    'data-version' => array('*','3+', '9.26-|14+','2.3+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}",
@@ -78,8 +81,8 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ch', 'op'),
-    'data-version' => array('*', '14+'),
+    'browser' => array('ch', 'op', 'an'),
+    'data-version' => array('*', '14+', '4.0.4'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isChromium = !!window.chrome;",
@@ -438,8 +441,8 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie','sa'),
-    'data-version' => array('9|10','4'),
+    'browser' => array('ie','sa','an'),
+    'data-version' => array('9|10','4','2.3+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (min-width:0\\0) {}",

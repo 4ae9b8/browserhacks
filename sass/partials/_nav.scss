@@ -18,7 +18,7 @@
     }
 
     li {
-        width: 20%;
+        width: 100%/length($browsers);
         float: left;
     }
 
@@ -50,9 +50,10 @@
         }
     }
 
-    .ch a { background: $ch; }
-    .ie a { background: $ie; }
-    .fx a { background: $fx; }
-    .op a { background: $op; }
-    .sa a { background: $sa; }
+    
+    @each $b in $browsers {
+        .#{nth($b, 1)} a {
+            background: nth($b, 2);
+        }
+    }
 }
