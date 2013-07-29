@@ -1,22 +1,40 @@
 <?php
 function returnVersion($version) {
   $a = explode('|', $version);
+
   if(count($a) > 1) {
     $continuous = true;
     $len = count($a);
 
     for($i = 0; $i < $len-1; $i++) {
-        $thisV = floor(floatval($a[$i]));
+      $thisV = floor(floatval($a[$i]));
       $nextV = floor(floatval($a[$i+1]));
-        if ($thisV+1 !== $nextV){
-            $continuous = false;
-            break;
-        }
+      if ($thisV+1 !== $nextV){
+          $continuous = false;
+          break;
+      }
     }
 
-    if ($continuous) return $a[0]."-".$a[$len-1];
+    if ($continuous) 
+      return $a[0]."-".$a[$len-1];
   }
+
   return $version;
+}
+
+// @TODO fix
+function isLegacy($version, $limit) {
+
+  if($version == "*" 
+  || strstr($version, '-')
+  || strstr($version, '|'))
+    return false;
+
+  if(floatval($version) <= $limit) 
+    return true;
+
+  return false;
+
 }
 
 // Re-ordering array by type

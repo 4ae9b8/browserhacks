@@ -1,84 +1,98 @@
 <?php
-// Save type from last hack
-$last_type = null;
 
 // Re-ordering array by type
 array_sort_by_column($hacks, 'type', SORT_DESC);
 
+// Save type from last hack
+$last_type = null;
+$dump      = "";
+
 // Sort by browser
-foreach($browsers as $kb => $vb):
+foreach($browsers as $key => $val):
+
   // Output browser heading
-  ?>
-  <article class="browser-wrapper <?php echo $kb; ?>" data-high="3" id="<?php echo $kb ?>">
-    <section class="browser-wrapper__heading" data-cols="1">
-      <div>
-        <h2 class="th"><span class='browserhacks-<?php echo $kb; ?>'></span> <a href="#<?php echo $kb ?>"><?php echo ucfirst($vb['name']); ?></a></h2>
-      </div>
+  $dump .= "<article class='browser-wrapper ".$key."' data-high='3' id='".$key."'>";
+  $dump .= "<section class='browser-wrapper__heading' data-cols='1'>";
+  $dump .= "<div>";
+  $dump .= "<h2 class='th'>";
+  $dump .= "<span class='browserhacks-".$key."'></span> ";
+  $dump .= "<a href='#".$key."'>".ucfirst($val['name'])."</a>";
+  $dump .= "</h2>";
+  $dump .= "</div>";
 
-      <?php
-      // Foreach hack
-      foreach($hacks as $k):
-        // Check if current hack is from current browser
+  foreach($hacks as $hack):
+    // Check if current hack ($hack['browser']) is from current browser ($key)
+    $checkBrowser = in_array($key, $hack['browser']);
+    // If it isn't, break
+    if(!$checkBrowser) 
+      continue;
 
-        // If it isn't, break
-        $checkBrowser = in_array($kb, $k['browser']);
-        if(!$checkBrowser) continue;
+    // If current type ($hack['type']) is different from type of last hack ($last_type), 
+    // then display type heading
+    if($hack['type'] != $last_type) {
+      $dump .= "</section>";
+      $dump .= "<section class='browser-wrapper__subheading' data-cols='1' data-type='".$hack['type']."-parent'>";
+      $dump .= "<div>";
+      $dump .= "<h3>".$hack_types[$hack['type']]['title']."</h3>";
+      $dump .= "</div>";
+      $dump .= "</section>";
+      $dump .= "<section class='browser-wrapper__hack-wrapper' data-cols='2' data-type='".$hack['type']."-childs'>";
+    }
 
-        // If current type is different from type of last hack, display type heading
-        if($k['type'] != $last_type) {
-          ?>
-          </section>
-          <section class="browser-wrapper__subheading" data-cols="1" data-type="<?php echo $k['type']; ?>-parent">
-            <div>
-              <h3><!--<span class="<?php echo $hack_types[$k['type']]['icon']; ?>"></span>--><?php echo $hack_types[$k['type']]['title']; ?></h3>
-            </div>
-          </section>
-          <section class='browser-wrapper__hack-wrapper' data-cols="2" data-type="<?php echo $k['type']; ?>-childs">
-          <?php
-        }
+    // CAPTION
+    // Creation of the caption (hacks legend) for the current hack
+    $caption = "<ul class='browser-list'>";
+    $i = 0;
+    $isLegacy = false;
 
-        // Get the index of the current browser in the array of hacked browsers
-        $version = $checkBrowser ? array_search($kb, $k['browser']) : null; 
+    foreach($hack['browser'] as $b) {
+      $label          = ucfirst($browsers[$b]['name']);  
 
-        // CAPTION
-        $caption = "<ul class='browser-list'>";
+      // Get version of hacked browser ($b) for current hack
+      $displayVersion = returnVersion($hack['data-version'][$i]);
 
-        $i = 0;
-        foreach($k['browser'] as $b) {
+      // Check if current hack is legacy
+      $isLegacy       = isLegacy($displayVersion, $browsers[$b]['legacy']);
 
-          $label = ucfirst($browsers[$b]['name']);
-          
-          $displayVersion = returnVersion($k['data-version'][$i]);
-          $displayVersion = str_replace('|','/', $displayVersion); 
+      // Replace pipes with slashes for better readability
+      $displayVersion = str_replace('|','/', $displayVersion); 
 
-          $caption .= "<li class='browser-list__item'>";
-          $caption .= " <span class='browser-icon browserhacks-".$b."'></span>";
-          $caption .= " <span class='browser-name'>".$label."</span>";
-          $caption .= " <span class='browser-version'>".$displayVersion."</span>";
-          $caption .= "</li>"; 
-          $i++;
-        }
+      $caption .= "<li class='browser-list__item'>";
+      $caption .= " <span class='browser-icon browserhacks-".$b."'></span>";
+      $caption .= " <span class='browser-name'>".$label."</span>";
+      $caption .= " <span class='browser-version'>".$displayVersion."</span>";
+      $caption .= "</li>"; 
+      $i++;
+    }
 
-        $caption .= "</ul>";
-        // END CAPTION
+    $caption .= "</ul>";
+    // END CAPTION
 
-        // Output the hack
-        $isLegacy = $k['legacy'] == true ? 'legacy' : '';
-        $dump  = "<div class='browser-wrapper__hack ".$isLegacy."' data-version='".$k['data-version'][$version]."'>";
-        $dump .= "<pre class='language-".$k['language']."'>";
-        $dump .= "<code>";
-        $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';
-        $dump .= $k['code'];
-        $dump .= "</code>";
-        $dump .= "</pre>";
-        $dump .= $caption;
-        $dump .= "</div>";
+    // Get the index of the current browser in the array of hacked browsers
+    $version = array_search($key, $hack['browser']); 
+
+    // Output the hack
+    $legacyClass = $isLegacy == true ? 'legacy' : '';    
+
+    $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-version='".$hack['data-version'][$version]."'>";
+    $dump .= "<pre class='language-".$hack['language']."'>";
+    $dump .= "<code>";
+    $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
+    $dump .= $hack['code'];
+    $dump .= "</code>";
+    $dump .= "</pre>";
+    $dump .= $caption;
+    $dump .= "</div>";
         
-        echo $dump;
-        // Set new last type
-        $last_type = $k['type'];
-        endforeach; ?>
-    </section>
-  </article>
-<?php endforeach; 
+    // Set new last type
+    $last_type = $hack['type'];
+
+  endforeach;
+
+  $dump .= "  </section>";
+  $dump .= "</article>";
+
+endforeach; 
+
+echo $dump;
 ?>

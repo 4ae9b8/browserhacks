@@ -3,21 +3,23 @@
  * More in _prism.scss
  * regarding syntax highlighting
  */ 
-.browser-wrapper__hack pre { 
-    -webkit-overflow-scrolling: touch;
-    overflow-scrolling: touch;
-    background: #f5f2f0;
-    margin-bottom: 0;
-    padding: .5em;
-    border-bottom: .1em solid rgba(0,0,0,.1);
+.browser-wrapper__hack {
+    pre { 
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        background: #f5f2f0;
+        margin-bottom: 0;
+        padding: .5em;
+        border-bottom: .1em solid rgba(0,0,0,.1);
+
+        @include breakpoint(baby-bear) {
+            width: 100%; 
+            margin: 1% 0 0 0; 
+        }
+    }
 
     &.legacy {
         display: none;
-    }
-
-    @include breakpoint(baby-bear) {
-        width: 100%; 
-        margin: 1% 0 0 0; 
     }
 }
 

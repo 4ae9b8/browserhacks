@@ -227,8 +227,7 @@
             $(this).find('.browser-wrapper__hack').sort(function (a, b) {
                 return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
             }).appendTo( $(this) );
-        });
-        
+        });     
     </script>
     </body>
 </html>
