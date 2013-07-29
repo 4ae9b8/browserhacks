@@ -1,0 +1,64 @@
+/**
+ * Header/footer button groups
+ */
+.btn-group {
+    a {
+        display: block;
+    }
+
+    button { 
+        text-transform: uppercase;
+        color: #333;
+        font: 1em 'Montserrat', sans-serif;
+        text-shadow: 0 1px rgba(255,255,255,.3);
+        letter-spacing: -1px;
+
+        &:hover,
+        &:focus {
+            text-shadow: none;
+        }
+
+        span {
+            position: absolute;
+            left: 6px;
+            font-size: 4em;
+            top: -12px;
+            opacity: 0.3;
+        }
+    }
+}
+
+/**
+ * Buttons
+ */
+button {
+    border:none;
+    height:3em;
+    background: #ccc;
+    background: rgba(0, 0, 0, .125);
+    font-size: 1.2em;
+    overflow: hidden;
+    position: relative;
+    @include user-select(none);
+    @include transition(.25s);
+
+    &:hover,
+    &:focus {
+        background: #0a90dd;
+        color: white;
+        @include user-select(none);
+    }
+
+    &[data-type="2"] {
+        text-align:left;
+        padding-left: 5em;
+    }
+
+    &[data-width="50"] {
+        width:50%;
+    }
+
+    &[data-width="33"] {
+        width:33.3%;
+    }
+}

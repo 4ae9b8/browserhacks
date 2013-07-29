@@ -1,0 +1,17 @@
+/**
+ * Scrollbars
+ */
+::-webkit-scrollbar {
+    width: .5em;
+    height: .35em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(217, 217, 217, .5);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aaa; 
+}

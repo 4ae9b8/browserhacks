@@ -2,38 +2,16 @@
  * $MAIN *
  * ***** */
 
- ::-webkit-scrollbar {
-    width: .5em;
-    height: .35em;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: rgba(217, 217, 217, .5);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #aaa; 
-}
-
 /**
-* User selection
-*/
-::-moz-selection,
-::selection { 
-    color: #fff; 
-    background: rgba(0, 0, 0, .9);
-} 
-
-/**
-* Body
-*/
+ * Body
+ */
 body {
     font: 1.2em/1.5 "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial","Lucida Grande",sans-serif;
     position: relative;
 
-    @include breakpoint(baby-bear) { font-size:.925em; }
+    @include breakpoint(baby-bear) { 
+        font-size:.925em;
+    }
 }
 
 
@@ -45,21 +23,21 @@ a {
     &:visited,
     &:active {
         text-decoration:none;
-        color: $ie;
+        color: #0a90dd;
         @include transition(color .25s ease-in-out)
     }
 
     &:hover,
     &:focus {
-        color: $sa;
+        color: #999;
     }
 }
 
 /**
-* Hacks containers
-* More in _prism.scss
-* regarding syntax highlighting
-*/ 
+ * Hacks containers
+ * More in _prism.scss
+ * regarding syntax highlighting
+ */ 
 .browser-list {
     list-style: none;
     margin: 0 0 .5em 0;
@@ -155,7 +133,7 @@ button {
 
     &:hover,
     &:focus {
-        background: $ie;
+        background: #0a90dd;
         color: white;
         @include user-select(none);
     }
@@ -175,10 +153,10 @@ button {
 }
 
 .ua {
-    background: lighten($ie, 45%);
+    background: lighten(#0a90dd, 45%);
     border-radius: .2em;
     font-size: .8em;
-    color: adjust-hue(lighten($ie, 25%), 10%);
+    color: adjust-hue(lighten(#0a90dd, 25%), 10%);
     padding: .5em;
     float: left;
     margin: 0;

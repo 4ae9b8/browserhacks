@@ -23,7 +23,7 @@
     letter-spacing: -2px;
 
     span {
-        color: $fx;
+        color: #f77918;
         @include transition(color .25s ease-in-out);
     }
 
@@ -32,7 +32,7 @@
 
         &:hover,
         &:focus {
-            color: $fx;
+            color: #f77918;
 
             span {
                 color: #555;

@@ -1,8 +1,5 @@
 // Compass
-@import "compass/css3/images";
 @import "compass/css3";
-@import "compass/css3/user-interface";
-@import "compass/css3/filter";
 
 // Helpers
 @import "helpers/variables";
@@ -19,10 +16,17 @@
 @import "layout/crystallo";
 
 // Partials
+@import "partials/base";
 @import "partials/header";
 @import "partials/headings";
+@import "partials/hack-wrappers";
 @import "partials/nav";
 @import "partials/search";
-@import "partials/main";
 @import "partials/quotes";
 @import "partials/footer";
+
+// Components
+@import "components/scrollbars";
+@import "components/buttons";
+@import "components/user-agent";
+@import "components/user-selection";

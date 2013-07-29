@@ -13,10 +13,6 @@
     z-index: 2;
     font-size:1em;
 
-    @include breakpoint(mama-bear) {
-        font-size:.75em;
-    }
-
     li {
         width: 100%/length($browsers);
         float: left;
@@ -50,10 +46,13 @@
         }
     }
 
-    
     @each $b in $browsers {
         .#{nth($b, 1)} a {
             background: nth($b, 2);
         }
+    }
+
+    @include breakpoint(mama-bear) {
+        font-size:.75em;
     }
 }
