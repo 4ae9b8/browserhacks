@@ -220,7 +220,7 @@
     <script>
         $('#show-legacy').on('click', function() {
             var state = $('#show-legacy').attr('checked') ? 'block' : 'none';
-            $('.legacy').css('display', state);
+            $('.browser-wrapper__hack--legacy').css('display', state);
         });
 
         var $wrapper = $('.browser-wrapper__hack-wrapper');

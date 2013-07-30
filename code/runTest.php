@@ -14,8 +14,8 @@ $jsDump  = "var testClass = 'js-succeed';\n\r";
 
 
 foreach($browsers as $key => $val):
-  $dump .= "<article data-high='3' class='".$key."' id='".$key."'>";
-  $dump .= "<section data-cols='1'>";
+  $dump .= "<article data-high='3' class='browser-wrapper ".$key."' id='".$key."'>";
+  $dump .= "<section data-cols='1' class='browser-wrapper__heading'>";
   $dump .= "<div>";
   $dump .= "<h2 class='th'><span class='browserhacks-".$key."'></span> <a href='#".$key."'>".ucfirst($val['name'])."</a></h2>";
   $dump .= "</div>";
@@ -33,7 +33,7 @@ foreach($browsers as $key => $val):
     // If current type is different from type of last hack, display type heading
     if($k['type'] != $last_type) {
       $dump .= "</section>";
-      $dump .= "<section data-cols='1' data-type='".$k['type']."-parent'>";
+      $dump .= "<section data-cols='1' class='browser-wrapper__subheading' data-type='".$k['type']."-parent'>";
       $dump .= "<div><h3>".$hack_types[$k['type']]['title']."</h3></div>";
       $dump .= "</section>";
       $dump .= "<section data-cols='1' data-type='".$k['type']."-childs'>";
@@ -66,7 +66,7 @@ foreach($browsers as $key => $val):
     // END CAPTION
 
     // OUTPUT
-    $dump .= "<div class='hack-wrapper'>";
+    $dump .= "<div class='browser-wrapper__hack'>";
     $dump .= "<pre class='language-".$k['language']."' ".$dv.">";
     $dump .= "<code>";
     $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';
@@ -120,7 +120,7 @@ foreach($browsers as $key => $val):
     // Set new last type
     $last_type = $k['type'];
     endforeach;
-    
+
   $dump .= "</section>";
   $dump .= "</article>";
 
