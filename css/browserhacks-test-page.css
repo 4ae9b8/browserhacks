@@ -4,15 +4,15 @@ pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: b
 ::made-up-pseudo-element, .test_css_1 { background: lightgreen; }
 .test_css_3 { (;background: lightgreen;); } 
 .test_css_4 { [;background: lightgreen;]; }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_6 { background: lightgreen; } }
-@media all and (min-width: 0px){ .test_css_8 { background: lightgreen; } }
+@media all and (min-width: 0px){ .test_css_6 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_8 { background: lightgreen; } }
 body:empty .test_css_13 { background: lightgreen; }
 body:not(:-moz-handler-blocked) .test_css_15 { background: lightgreen; }
 .test_css_17, x:-moz-any-link { background: lightgreen; }
 .test_css_19, x:-moz-any-link, x:default { background: lightgreen; }
 @-moz-document url-prefix() { .test_css_21 { background: lightgreen; } }
-@media screen and (-moz-images-in-menus:0) { .test_css_23 { background: lightgreen; } }
-@media screen and (min--moz-device-pixel-ratio:0) { .test_css_25 { background: lightgreen; } }
+@media screen and (min--moz-device-pixel-ratio:0) { .test_css_23 { background: lightgreen; } }
+@media screen and (-moz-images-in-menus:0) { .test_css_25 { background: lightgreen; } }
 @media all and (min-width: 0px){ .test_css_27 { background: lightgreen; } }
 _::-ms-reveal, .test_css_37 { background: lightgreen; }
 html > body .test_css_39 { background: lightgreen; }
@@ -24,16 +24,16 @@ pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: b
 body*.test_css_47 { background: lightgreen; } 
 .test_css_48\ { background: lightgreen; }
 .test_css_50, { background: lightgreen; }
-html > /**/ body .test_css_52 { background: lightgreen; }
-head ~ /**/ body .test_css_53 { background: lightgreen; }
-:root *> .test_css_55 { background: lightgreen; } 
-body:last-child .test_css_56 { background: lightgreen; } 
-body:nth-of-type(1) .test_css_57 { background: lightgreen; } 
-body:first-of-type .test_css_58 { background: lightgreen; }
-.test_css_59:not([attr*='']) { background: lightgreen; }
-.test_css_61, x:-moz-any-link { background: lightgreen; }
-.test_css_63, x:-moz-any-link, x:default { background: lightgreen; }
-_:-o-prefocus, .test_css_65 { background: lightgreen; }
+:root *> .test_css_52 { background: lightgreen; } 
+body:last-child .test_css_53 { background: lightgreen; } 
+body:nth-of-type(1) .test_css_54 { background: lightgreen; } 
+body:first-of-type .test_css_55 { background: lightgreen; }
+.test_css_56:not([attr*='']) { background: lightgreen; }
+html > /**/ body .test_css_58 { background: lightgreen; }
+head ~ /**/ body .test_css_59 { background: lightgreen; }
+_:-o-prefocus, .test_css_61 { background: lightgreen; }
+.test_css_63, x:-moz-any-link { background: lightgreen; }
+.test_css_65, x:-moz-any-link, x:default { background: lightgreen; }
 ::made-up-pseudo-element, .test_css_67 { background: lightgreen; }
 .test_css_69 { _background: lightgreen;  } 
 .test_css_70 { -background: lightgreen;  }
@@ -63,9 +63,9 @@ pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: b
 .test_css_98 { |background: lightgreen; }
 .test_css_100:nth-of-type(1n) { background: lightgreen\9; }
 .test_css_102 { background: lightgreen\0/; }
-@media \0screen { .test_css_104 { background: lightgreen; } }
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test_css_106 { background: lightgreen; } }
-@media screen\9 { .test_css_108 { background: lightgreen; } }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test_css_104 { background: lightgreen; } }
+@media screen\9 { .test_css_106 { background: lightgreen; } }
+@media \0screen { .test_css_108 { background: lightgreen; } }
 @media \0screen\,screen\9 { .test_css_110 { background: lightgreen; } }
 @media screen and (min-width: 400px) { .test_css_112 { background: lightgreen; } }
 @media screen\0 { .test_css_114 { background: lightgreen; } }
@@ -73,27 +73,26 @@ pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: b
 @media screen and (min-width:0\0) { .test_css_118 { background: lightgreen; } }
 @media all and (min-width: 0px){ .test_css_120 { background: lightgreen; } }
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_145 { background: lightgreen; } }
-_:-o-prefocus, .test_css_147 { background: lightgreen; }
+*|html[xmlns*=""] .test_css_147 { background: lightgreen; }
 html:first-child .test_css_149 { background: lightgreen; }
-*|html[xmlns*=""] .test_css_151 { background: lightgreen; }
+_:-o-prefocus, .test_css_151 { background: lightgreen; }
 .test_css_153 { background: lightgreen\0/; }
 .test_css_155 { (;background: lightgreen;); } 
 .test_css_156 { [;background: lightgreen;]; }
 @media (min-resolution: .001dpcm) { _:-o-prefocus, .test_css_158 { background: lightgreen; } }
-@media screen\0 { .test_css_160 { background: lightgreen; } }
+@media all and (min-width: 0px){ .test_css_160 { background: lightgreen; } }
 @media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_162 { background: lightgreen; } }
-@media all and (min-width: 0px){ .test_css_164 { background: lightgreen; } }
-html[xmlns*=""] body:last-child .test_css_171 { background: lightgreen; } 
-html[xmlns*=""]:root .test_css_172  { background: lightgreen; }
+html[xmlns*=""] body:last-child .test_css_169 { background: lightgreen; } 
+html[xmlns*=""]:root .test_css_170  { background: lightgreen; }
+*|html[xmlns*=""] .test_css_172 { background: lightgreen; }
 html:first-child .test_css_174 { background: lightgreen; }
-*|html[xmlns*=""] .test_css_176 { background: lightgreen; }
-::made-up-pseudo-element, .test_css_178 { background: lightgreen; }
-.test_css_180 { (;background: lightgreen;); } 
-.test_css_181 { [;background: lightgreen;]; }
-@media screen { @media (min-width: 0px) { .test_css_183 { background: lightgreen; } } }
-@media screen and (min-width:0\0) { .test_css_185 { background: lightgreen; } }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_187 { background: lightgreen; } }
-::made-up-pseudo-element, .test_css_193 { background: lightgreen; }
-@media screen and (min-width:0\0) { .test_css_195 { background: lightgreen; } }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_197 { background: lightgreen; } }
+::made-up-pseudo-element, .test_css_176 { background: lightgreen; }
+.test_css_178 { (;background: lightgreen;); } 
+.test_css_179 { [;background: lightgreen;]; }
+@media screen { @media (min-width: 0px) { .test_css_181 { background: lightgreen; } } }
+@media screen and (min-width:0\0) { .test_css_183 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_185 { background: lightgreen; } }
+::made-up-pseudo-element, .test_css_191 { background: lightgreen; }
+@media screen and (min-width:0\0) { .test_css_193 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_195 { background: lightgreen; } }
 

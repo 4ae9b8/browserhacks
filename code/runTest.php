@@ -23,8 +23,8 @@ foreach($browsers as $key => $val):
   foreach($hacks as $k):
     // Check if current hack is from current browser
     // If it isn't or if current hack is not from current type, break
-    $checkBrowser = in_array($key, $k['browser']);
-    if(!$checkBrowser || empty($k['test'])) continue;
+    if(!isset($k['browsers'][$key]) || empty($k['test'])) 
+      continue;
         
     // Increment indexes
     $indexCSS++;
@@ -38,38 +38,11 @@ foreach($browsers as $key => $val):
       $dump .= "</section>";
       $dump .= "<section data-cols='1' data-type='".$k['type']."-childs'>";
     }
-        
-    // Get the index of the current browser in the array of hacked browsers
-    // Create the data-version output based on the $version variable
-    $version = $checkBrowser ? array_search($key, $k['browser']) : null; 
-    $dv = ($k['data-version'][$version] != 0) ? "data-version='".$k['data-version'][$version]."'" : '';
 
-    // CAPTION
-    $caption = "<ul class='browser-list'>";
-
-    $i = 0;
-    foreach($k['browser'] as $b) {
-
-      $label = ucfirst($browsers[$b]['name']);
-      $displayVersion = returnVersion($k['data-version'][$i]);
-      $displayVersion = str_replace('|','/', $displayVersion);  
-
-      $caption .= "<li class='browser-list__item'>";
-      $caption .= " <span class='browser-icon browserhacks-".$b."'></span>";
-      $caption .= " <span class='browser-name'>".$label."</span>";
-      $caption .= " <span class='browser-version'>".$displayVersion."</span>";
-      $caption .= "</li>"; 
-      $i++;
-    }
-
-    $caption .= "</ul>";
-    // END CAPTION
-
-    // OUTPUT
     $dump .= "<div class='browser-wrapper__hack'>";
-    $dump .= "<pre class='language-".$k['language']."' ".$dv.">";
+    $dump .= "<pre class='language-".$k['language']."' data-version='".$k['browsers'][$key]."'>";
     $dump .= "<code>";
-    $dump .= (!empty($k['label'])) ? "/* ".$k['label']." */\n" : '';
+    $dump .= !empty($k['label']) ? "/* ".$k['label']." */\n" : '';
 
     // If it's a CSS thing
     if($k['language'] == 'css') {
@@ -94,7 +67,7 @@ foreach($browsers as $key => $val):
       foreach($lines as $l) { // Foreach line
         
         // Wrap it in a span with a number
-        $name = "test_js_".$k['browser'][0]."_".$indexJS;
+        $name = "test_js_".$key."_".$indexJS;
         $dump .= "<span class='".$name."'>var isHacked = ".$l."</span>";
         
         // Append things to the dump
@@ -112,7 +85,21 @@ foreach($browsers as $key => $val):
 
     $dump .= "</code>";
     $dump .= "</pre>";
-    $dump .= $caption;
+    $dump .= "<ul class='browser-list'>";
+
+    foreach($k['browsers'] as $name => $version) {
+
+      $label = ucfirst($browsers[$name]['name']);
+      $displayVersion = str_replace('|','/', returnVersion($version));  
+
+      $dump .= "<li class='browser-list__item'>";
+      $dump .= " <span class='browser-icon browserhacks-".$name."'></span>";
+      $dump .= " <span class='browser-name'>".$label."</span>";
+      $dump .= " <span class='browser-version'>".$displayVersion."</span>";
+      $dump .= "</li>"; 
+    }
+
+    $dump .= "</ul>";
     $dump .= "</div>";
     
     //END DUMP

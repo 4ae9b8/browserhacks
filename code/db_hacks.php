@@ -1,9 +1,9 @@
 <?php
+
 $hacks = array(
   array(
     'type' => 'selector',
-    'browser' => array('ch','sa','ie','an'),
-    'data-version' => array('24-','6','7','4.1+'),
+    'browsers' => array('ch'=>'24-','sa'=>'6','ie'=>'7','an'=>'4.1+'),
     'label' => '',
     'language' => 'css',
     'code' => "::made-up-pseudo-element, .selector {}",
@@ -11,8 +11,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ch','sa', 'op','an'),
-    'data-version' => array('*','3+', '9.26-|14+','2.3+'),
+    'browsers' => array('ch'=>'*','sa'=>'3+','op'=>'9.26-|14+','an'=>'2.3+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-webkit-min-device-pixel-ratio:0) {}",
@@ -20,8 +19,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ch','sa', 'op'),
-    'data-version' => array('28-','6-', '14+'),
+    'browsers' => array('ch'=>'28-','sa'=>'6-','op'=>'14+'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector { (;background: lightgreen;); } \n.selector { [;background: lightgreen;]; }",
@@ -29,8 +27,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ch', 'op', 'an'),
-    'data-version' => array('*', '14+', '4.0.4'),
+    'browsers' => array('ch'=>'*','op'=>'14+','an'=>'4.0.4'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isChromium = !!window.chrome;",
@@ -38,17 +35,15 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ch', 'sa', 'op'),
-    'data-version' => array('*', '3+', '14+'),
-    'label' => '',
+    'browsers' => array('ch'=>'*','sa'=>'3+','op'=>'14+'),
+    'label' => "Webkit",
     'language' => 'javascript',
     'code' => "var isWebkit = 'WebkitAppearance' in document.documentElement.style;",
     'test' => "'WebkitAppearance' in document.documentElement.style;"
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ch'),
-    'data-version' => array('14+'),
+    'browsers' => array('ch'=>'14+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isChrome = !!window.chrome && !!window.chrome.webstore;",
@@ -56,8 +51,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('fx'),
-    'data-version' => array('1.5|2'),
+    'browsers' => array('fx'=>'1.5|2'),
     'label' => '',
     'language' => 'css',
     'code' => "body:empty .selector {}",
@@ -65,8 +59,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('fx','ie'),
-    'data-version' => array('2+','7'),
+    'browsers' => array('fx'=>'2+','ie'=>'7'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector, x:-moz-any-link {}",
@@ -74,8 +67,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('fx','ie'),
-    'data-version' => array('3+','7'),
+    'browsers' => array('fx'=>'3+','ie'=>'7'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector, x:-moz-any-link, x:default {}",
@@ -83,8 +75,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('fx'),
-    'data-version' => array('3.5+'),
+    'browsers' => array('fx'=>'3.5+'),
     'label' => '',
     'language' => 'css',
     'code' => "body:not(:-moz-handler-blocked) .selector {}",
@@ -92,8 +83,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('fx'),
-    'data-version' => array('3.6+'),
+    'browsers' => array('fx'=>'3.6+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-moz-images-in-menus:0) {}",
@@ -101,8 +91,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('fx'),
-    'data-version' => array('4+'),
+    'browsers' => array('fx'=>'4+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (min--moz-device-pixel-ratio:0) {}",
@@ -110,8 +99,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('*'),
+    'browsers' => array('fx'=>'*'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = !!window.sidebar;",
@@ -119,8 +107,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('*'),
+    'browsers' => array('fx'=>'*'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = 'MozAppearance' in document.documentElement.style;",
@@ -128,8 +115,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('*'),
+    'browsers' => array('fx'=>'*'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = !!navigator.userAgent.match(/firefox/i);",
@@ -137,8 +123,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('2|3|4|5|6|7|8|9|10|11|12|13'),
+    'browsers' => array('fx'=>'2|3|4|5|6|7|8|9|10|11|12|13'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = !!window.globalStorage;",
@@ -146,8 +131,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('1.5+'),
+    'browsers' => array('fx'=>'1.5+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = typeof InstallTrigger !== 'undefined';",
@@ -155,8 +139,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('2|3'),
+    'browsers' => array('fx'=>'2|3'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = /a/[-1]=='a';",
@@ -164,8 +147,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('2'),
+    'browsers' => array('fx'=>'2'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = (function x(){})[-6]=='x';",
@@ -173,8 +155,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('fx'),
-    'data-version' => array('3'),
+    'browsers' => array('fx'=>'3'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isFF = (function x(){})[-5]=='x';",
@@ -182,8 +163,7 @@ $hacks = array(
   ),
   array(
     'type' => 'misc',
-    'browser' => array('fx'),
-    'data-version' => array('3+'),
+    'browsers' => array('fx'=>'3+'),
     'label' => '',
     'language' => 'css',
     'code' => "@-moz-document url-prefix() {}",
@@ -191,8 +171,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('6-'),
+    'browsers' => array('ie'=>'6-'),
     'label' => '.unused-class can be any unused class',
     'language' => 'css',
     'code' => "* html .selector  {} \n.unused-class.selector {}",
@@ -200,8 +179,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('7-'),
+    'browsers' => array('ie'=>'7-'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector, {}",
@@ -209,8 +187,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('7'),
+    'browsers' => array('ie'=>'7'),
     'label' => '',
     'language' => 'css',
     'code' => "*:first-child+html .selector {} \n.selector, x:-IE7 {} \n*+html .selector {} \nbody*.selector {} \n.selector\ {}",
@@ -218,8 +195,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('6'),
+    'browsers' => array('ie'=>'6'),
     'label' => 'Everything but Internet Explorer 6',
     'language' => 'css',
     'code' => "html > body .selector {}",
@@ -227,8 +203,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('7-'),
+    'browsers' => array('ie'=>'7-'),
     'label' => 'Everything but Internet Explorer 7-',
     'language' => 'css',
     'code' => "html > /**/ body .selector {}\nhead ~ /**/ body .selector {}",
@@ -236,8 +211,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
+    'browsers' => array('ie'=>'8-'),
     'label' => 'Everything but Internet Explorer 8-',
     'language' => 'css',
     'code' => ":root *> .selector {} \nbody:last-child .selector {} \nbody:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}\n.selector:not([attr*='']) {}",
@@ -245,8 +219,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('ie'),
-    'data-version' => array('10+'),
+    'browsers' => array('ie'=>'10+'),
     'label' => '',
     'language' => 'css',
     'code' => "_::-ms-reveal, .selector {}",
@@ -254,8 +227,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie'),
-    'data-version' => array('6'),
+    'browsers' => array('ie'=>'6'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector { _property: value; } \n.selector { -property: value; }",
@@ -263,8 +235,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie'),
-    'data-version' => array('7-'),
+    'browsers' => array('ie'=>'7-'),
     'label' => "Any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
     'language' => 'css',
     'code' => ".selector { !property: value; } \n.selector { \$property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n/* ... */",
@@ -272,8 +243,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie'),
-    'data-version' => array('7-'),
+    'browsers' => array('ie'=>'7-'),
     'label' => 'Acts as an !important; string after ! can be anything',
     'language' => 'css',
     'code' => ".selector { property: value !ie; }",
@@ -281,8 +251,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie'),
-    'data-version' => array('6+'),
+    'browsers' => array('ie'=>'6+'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector { property: value\9; } \n.selector { property/*\**/: value\9; }",
@@ -290,8 +259,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie','op'),
-    'data-version' => array('8|9','10'),
+    'browsers' => array('ie'=>'8|9','op'=>'10'),
     'label' => 'Must go at the END of all rules',
     'language' => 'css',
     'code' => ".selector { property: value\\0/; }",
@@ -299,8 +267,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie'),
-    'data-version' => array('9|10'),
+    'browsers' => array('ie'=>'9|10'),
     'label' => '',
     'language' => 'css',
     'code' => ".selector:nth-of-type(1n) { property: value\9; }",
@@ -308,8 +275,7 @@ $hacks = array(
   ),
   array(
     'type' => 'propertyValue',
-    'browser' => array('ie'),
-    'data-version' => array('6'),
+    'browsers' => array('ie'=>'6'),
     'label' => 'Everything but Internet Explorer 6',
     'language' => 'css',
     'code' => ".selector { property/**/: value; }",
@@ -317,8 +283,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie'),
-    'data-version' => array('7-'),
+    'browsers' => array('ie'=>'7-'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen\\9 {}",
@@ -326,8 +291,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
+    'browsers' => array('ie'=>'8-'),
     'label' => '',
     'language' => 'css',
     'code' => "@media \\0screen\,screen\9 {}",
@@ -335,8 +299,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
+    'browsers' => array('ie'=>'8-'),
     'label' => 'Everything but Internet Explorer 8-',
     'language' => 'css',
     'code' => "@media screen and (min-width: 400px) {}",
@@ -344,8 +307,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie'),
-    'data-version' => array('8'),
+    'browsers' => array('ie'=>'8'),
     'label' => '',
     'language' => 'css',
     'code' => "@media \\0screen {}",
@@ -353,8 +315,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie','op'),
-    'data-version' => array('8|9|10','12-'),
+    'browsers' => array('ie'=>'op'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen\\0 {}",
@@ -362,8 +323,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie','sa','an'),
-    'data-version' => array('9|10','4','2.3+'),
+    'browsers' => array('ie'=>'9|10','sa'=>'4','an'=>'2.3+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (min-width:0\\0) {}",
@@ -371,8 +331,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie'),
-    'data-version' => array('10'),
+    'browsers' => array('ie'=>'10'),
     'label' => '',
     'language' => 'css',
     'code' => "@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {}",
@@ -380,8 +339,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('ie', 'sa'),
-    "data-version" => array('10-', '6-'),
+    'browsers' => array('ie'=>'10-','sa'=>'6-'),
     'label' => "Everything but Internet Explorer 10- and Safari 6-",
     "language" => "css",
     "code" => "@media screen { @media (min-width: 0px) {} }",
@@ -389,8 +347,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('6-'),
+    'browsers' => array('ie'=>'6-'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && !window.XMLHttpRequest;',
@@ -398,8 +355,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9|10'),
+    'browsers' => array('ie'=>'6|7|8|9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.compatMode;',
@@ -407,8 +363,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('7-'),
+    'browsers' => array('ie'=>'7-'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && !document.querySelector;',
@@ -416,8 +371,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('7'),
+    'browsers' => array('ie'=>'7'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && window.XMLHttpRequest && !document.addEventListener;',
@@ -425,8 +379,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('7|8|9|10'),
+    'browsers' => array('ie'=>'7|8|9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && window.XMLHttpRequest;',
@@ -434,8 +387,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('8|9|10'),
+    'browsers' => array('ie'=>'8|9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.querySelector;',
@@ -443,8 +395,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
+    'browsers' => array('ie'=>'8-'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && !document.addEventListener;',
@@ -452,8 +403,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('9-'),
+    'browsers' => array('ie'=>'9-'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && !window.atob;',
@@ -461,8 +411,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('9'),
+    'browsers' => array('ie'=>'9'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.addEventListener && !window.atob;',
@@ -470,8 +419,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('9|10'),
+    'browsers' => array('ie'=>'9|10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.addEventListener;',
@@ -479,8 +427,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('10'),
+    'browsers' => array('ie'=>'10'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && window.atob;',
@@ -488,8 +435,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    "data-version" => array('10-'),
+    'browsers' => array('ie'=>'10-'),
     'label' => "",
     "language" => "javascript",
     "code" => "var isIE = /*@cc_on!@*/false;",
@@ -497,8 +443,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    "data-version" => array("3|4|5|6|7|8|9|10"),
+    'browsers' => array('ie'=>'3|4|5|6|7|8|9|10'),
     'label' => "Check for Internet Explorer version",
     "language" => "javascript",
     "code" => "var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;",
@@ -506,8 +451,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    "data-version" => array('*'),
+    'browsers' => array('ie'=>'*'),
     'label' => "Check for Internet Explorer version",
     "language" => "javascript",
     "code" => "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
@@ -515,8 +459,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => '',
     'language' => 'javascript',
     'code' => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE X]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;",
@@ -524,8 +467,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('7'),
+    'browsers' => array('ie'=>'7'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
@@ -533,8 +475,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
+    'browsers' => array('ie'=>'8-'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = '\\v'=='v';",
@@ -542,8 +483,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('8-'),
+    'browsers' => array('ie'=>'8-'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = !+'\\v1';",
@@ -551,8 +491,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('8'),
+    'browsers' => array('ie'=>'8'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = document.all && document.querySelector && !document.addEventListener;',
@@ -560,8 +499,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('10'),
+    'browsers' => array('ie'=>'10'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;",
@@ -569,8 +507,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('10+'),
+    'browsers' => array('ie'=>'10+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = document.body.style.msTouchAction !== undefined;",
@@ -578,8 +515,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('10+'),
+    'browsers' => array('ie'=>'10+'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isIE = window.navigator.msPointerEnabled;',
@@ -587,8 +523,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('10'),
+    'browsers' => array('ie'=>'10+'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = 'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
@@ -596,8 +531,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('ie'),
-    'data-version' => array('11'),
+    'browsers' => array('ie'=>'11'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
@@ -605,8 +539,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('*'),
+    'browsers' => array('ie'=>'*'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE]> Internet Explorer &lt;![endif]-->',
@@ -614,8 +547,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('*'),
+    'browsers' => array('ie'=>'*'),
     'label' => 'Not Internet Explorer',
     'language' => 'markup',
     'code' => '&lt;!--[if !IE]> Not Internet Explorer &lt;![endif]-->',
@@ -623,8 +555,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE X]> Internet Explorer X &lt;![endif]-->',
@@ -632,8 +563,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE lte X]> Internet Explorer X or less &lt;![endif]-->',
@@ -641,8 +571,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if IE gte X]> Internet Explorer X or greater &lt;![endif]-->',
@@ -650,8 +579,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y &lt;![endif]-->',
@@ -659,8 +587,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => '',
     'language' => 'markup',
     'code' => '&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->',
@@ -668,8 +595,7 @@ $hacks = array(
   ),
   array(
     'type' => 'html',
-    'browser' => array('ie'),
-    'data-version' => array('6|7|8|9'),
+    'browsers' => array('ie'=>'6|7|8|9'),
     'label' => 'Conditional classes',
     'language' => 'markup',
     'code' => "&lt;!--[if lt IE 7]&gt;  &lt;html class='ie ie6 lte9 lte8 lte7'&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 7]&gt;     &lt;html class='ie ie7 lte9 lte8 lte7'&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 8]&gt;     &lt;html class='ie ie8 lte9 lte8'&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 9]&gt;     &lt;html class='ie ie9 lte9'&gt; &lt;![endif]--&gt; \n&lt;!--[if gt IE 9]&gt;  &lt;html&gt; &lt;![endif]--&gt; \n&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html&gt;             &lt;!--&lt;![endif]--&gt;",
@@ -677,8 +603,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('op','ch', 'ie', 'fx'),
-    'data-version' => array('7|15','*', '10+', '22+'),
+    'browsers' => array('op'=>'7|15','ch'=>'*','ie'=>'10+','fx'=>'22+'),
     'label' => '',
     'language' => 'css',
     'code' => "@media all and (min-width: 0px) {}",
@@ -686,8 +611,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('op','sa'),
-    'data-version' => array('9.27-','2'),
+    'browsers' => array('op'=>'9.27-','sa'=>'2'),
     'label' => '',
     'language' => 'css',
     'code' => "html:first-child .selector {}",
@@ -695,8 +619,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('op'),
-    'data-version' => array('9.64-'),
+    'browsers' => array('op'=>'9.64-'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isOpera = /^function \(/.test([].sort);",
@@ -704,8 +627,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('op','ie'),
-    'data-version' => array('9.5|10|11|12','7'),
+    'browsers' => array('op'=>'9.5|10|11|12','ie'=>'7'),
     'label' => '',
     'language' => 'css',
     'code' => "_:-o-prefocus, .selector {}",
@@ -713,8 +635,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('op'),
-    'data-version' => array('11-'),
+    'browsers' => array('op'=>'11-'),
     'label' => '',
     'language' => 'css',
     'code' => "@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {}",
@@ -723,8 +644,7 @@ $hacks = array(
 
   array(
     'type' => 'javascript',
-    'browser' => array('op'),
-    'data-version' => array('12-'),
+    'browsers' => array('op'=>'12-'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isOpera = !!window.opera;",
@@ -732,8 +652,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('op'),
-    'data-version' => array('12-'),
+    'browsers' => array('op'=>'12-'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isOpera = window.opera && window.opera.version() == X;',
@@ -741,8 +660,7 @@ $hacks = array(
   ),
   array(
     'type' => 'media',
-    'browser' => array('op'),
-    'data-version' => array('12'),
+    'browsers' => array('op'=>'12'),
     'label' => '',
     'language' => 'css',
     'code' => '@media (min-resolution: .001dpcm) { _:-o-prefocus, .selector {} }',
@@ -750,8 +668,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('sa'),
-    'data-version' => array('2|3'),
+    'browsers' => array('sa'=>'2|3'),
     'label' => '',
     'language' => 'css',
     'code' => "html[xmlns*=\"\"] body:last-child .selector {} \nhtml[xmlns*=\"\"]:root .selector  {}",
@@ -759,8 +676,7 @@ $hacks = array(
   ),
   array(
     'type' => 'selector',
-    'browser' => array('sa','op'),
-    'data-version' => array('2|3.1','9.25'),
+    'browsers' => array('sa'=>'2|3.1','op'=>'9.25'),
     'label' => '',
     'language' => 'css',
     'code' => "*|html[xmlns*=\"\"] .selector {}",
@@ -768,8 +684,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('sa'),
-    'data-version' => array('5-'),
+    'browsers' => array('sa'=>'5-'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isSafari = /a/.__proto__=='//';",
@@ -777,8 +692,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('sa'), 
-    'data-version' => array('*'),
+    'browsers' => array('sa'=>'*'),
     'label' => '',
     'language' => 'javascript',
     'code' => 'var isSafari = /Constructor/.test(window.HTMLElement);',
@@ -786,8 +700,7 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
-    'browser' => array('sa'),
-    'data-version' => array('6'),
+    'browsers' => array('sa'=>'6'),
     'label' => '',
     'language' => 'javascript',
     'code' => "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",

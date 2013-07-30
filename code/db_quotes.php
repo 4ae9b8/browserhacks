@@ -1,4 +1,5 @@
 <?php
+
 $quotes = array(
 	array(
         "quote" => "Holy shit amazing.",

@@ -21,11 +21,9 @@ foreach($browsers as $key => $val):
   $dump .= "</div>";
 
   foreach($hacks as $hack):
-    // Check if current hack ($hack['browser']) is from current browser ($key)
-    $checkBrowser = in_array($key, $hack['browser']);
+    // Check if current hack is from current browser
     // If it isn't, break
-    if(!$checkBrowser) 
-      continue;
+    if(!isset($hack['browsers'][$key])) continue;
 
     // If current type ($hack['type']) is different from type of last hack ($last_type), 
     // then display type heading
@@ -42,39 +40,34 @@ foreach($browsers as $key => $val):
     // CAPTION
     // Creation of the caption (hacks legend) for the current hack
     $caption = "<ul class='browser-list'>";
-    $i = 0;
     $isLegacy = false;
 
-    foreach($hack['browser'] as $b) {
-      $label          = ucfirst($browsers[$b]['name']);  
+    foreach($hack['browsers'] as $name => $version) {
+      $label          = ucfirst($browsers[$name]['name']);  
 
-      // Get version of hacked browser ($b) for current hack
-      $displayVersion = returnVersion($hack['data-version'][$i]);
+      // Get version of hacked browser for current hack
+      $displayVersion = returnVersion($version);
 
       // Check if current hack is legacy
-      $isLegacy       = isLegacy($displayVersion, $browsers[$b]['legacy']);
+      $isLegacy       = isLegacy($displayVersion, $browsers[$name]['legacy']);
 
       // Replace pipes with slashes for better readability
       $displayVersion = str_replace('|','/', $displayVersion); 
 
       $caption .= "<li class='browser-list__item'>";
-      $caption .= " <span class='browser-icon browserhacks-".$b."'></span>";
+      $caption .= " <span class='browser-icon browserhacks-".$name."'></span>";
       $caption .= " <span class='browser-name'>".$label."</span>";
       $caption .= " <span class='browser-version'>".$displayVersion."</span>";
       $caption .= "</li>"; 
-      $i++;
     }
 
     $caption .= "</ul>";
     // END CAPTION
 
-    // Get the index of the current browser in the array of hacked browsers
-    $version = array_search($key, $hack['browser']); 
-
     // Output the hack
     $legacyClass = $isLegacy === true ? 'browser-wrapper__hack--legacy' : '';    
 
-    $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-browser='".$val['name']."' data-version='".$hack['data-version'][$version]."'>";
+    $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-browser='".$val['name']."' data-version='".$hack['browsers'][$key]."'>";
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>";
     $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
