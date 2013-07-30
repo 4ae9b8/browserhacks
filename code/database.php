@@ -97,6 +97,16 @@ $hacks = array(
   ),
   array(
     'type' => 'javascript',
+    'browser' => array('ch', 'sa', 'op'),
+    'data-version' => array('*', '3+', '14+'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isWebkit = 'WebkitAppearance' in document.documentElement.style;",
+    'test' => "'WebkitAppearance' in document.documentElement.style;",
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
     'browser' => array('ch'),
     'data-version' => array('14+'),
     'label' => '',
@@ -144,16 +154,6 @@ $hacks = array(
     'code' => "body:not(:-moz-handler-blocked) .selector {}",
     'test' => "body:not(:-moz-handler-blocked) .selector { background: lightgreen; }",
     'legacy' => false
-  ), 
-  array(
-    'type' => 'media',
-    'browser' => array('fx','ie','op', 'ch'),
-    'data-version' => array('3.5+','9|10','12-','29+'),
-    'label' => '',
-    'language' => 'css',
-    'code' => "@media screen and (min-resolution: +72dpi) {}",
-    'test' => "@media screen and (min-resolution: +72dpi) { .selector { background: lightgreen; } }",
-    'legacy' => false
   ),
   array(
     'type' => 'media',
@@ -183,6 +183,16 @@ $hacks = array(
     'language' => 'javascript',
     'code' => "var isFF = !!window.sidebar;",
     'test' => "!!window.sidebar;",
+    'legacy' => false
+  ),
+  array(
+    'type' => 'javascript',
+    'browser' => array('fx'),
+    'data-version' => array('*'),
+    'label' => '',
+    'language' => 'javascript',
+    'code' => "var isFF = 'MozAppearance' in document.documentElement.style;",
+    'test' => "'MozAppearance' in document.documentElement.style;",
     'legacy' => false
   ),
   array(
