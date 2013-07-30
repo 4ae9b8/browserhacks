@@ -46,7 +46,7 @@
 
   App.Collections.Quote = Backbone.Collection.extend({
     model : App.Models.Author,
-    url : 'code/quotes.php',
+    url : 'code/db_quotes.php',
 
     initialize : function() {
     }

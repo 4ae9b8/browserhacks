@@ -118,7 +118,9 @@
         
 <?php
   // HTML for the hacks
-  include_once('code/database.php');
+  include_once('code/db_browsers.php');
+  include_once('code/db_hackTypes.php');
+  include_once('code/db_hacks.php');
   include_once('code/run.php');
 ?>
     <!-- Resources -->
