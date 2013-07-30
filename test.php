@@ -42,7 +42,8 @@
         <li class="ie"><a href="#ie"><span class='browserhacks-ie'></span></a></li>
         <li class="op"><a href="#op"><span class='browserhacks-op'></span></a></li>
         <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
-    </ul>
+        <li class="an"><a href="#an"><span class='browserhacks-an'></span></a></li>
+   </ul>
 
     <article data-high="2" class="header header-test">
         <section data-cols="1">
