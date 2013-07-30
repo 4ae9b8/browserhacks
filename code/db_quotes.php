@@ -133,9 +133,15 @@ $quotes = array(
         "author" => "Todd Vachon",
         "twitter" => "toddvachon",
         "avatar" => "https://si0.twimg.com/profile_images/2205551628/todd_port200x200_bigger.jpg"
+    ),
+    array(
+        "quote" => "Front-end developers stop the IE drama and use this fine tool",
+        "from" => "https://twitter.com/iSands/status/361660191030251522",
+        "author" => "iSands",
+        "twitter" => "iSands",
+        "avatar" => "https://si0.twimg.com/profile_images/3542083991/67d43f20e6d42e431d6ce78ed3d55353_bigger.jpeg"
     )
 ); 
 
 shuffle($quotes);
 echo json_encode($quotes);
-?>
