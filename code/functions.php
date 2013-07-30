@@ -25,16 +25,32 @@ function returnVersion($version) {
 // @TODO fix
 function isLegacy($version, $limit) {
 
-  if($version == "*" 
-  || strstr($version, '-')
-  || strstr($version, '|'))
+  // If $version is *
+  if($version == "*")
     return false;
 
+  // If last character of $version is +
+  if(strpos($version, '+') !== false)
+    return false;
+
+  // If $version contains |, we break it down to have the last last int
+  if(strpos($version, '|') !== false) {
+    $a = explode('|', $version);
+    $version = $a[count($a)-1];
+  }
+
+  // If $version contains - but not at the end
+  if(strpos($version, '-') !== false && strpos($version, '-') !== strlen($version)-1) {
+    $a = explode('-', $version);
+    $version = $a[count($a)-1];
+  }
+ 
+  // If the version is less than or equals to $limit
   if(floatval($version) <= $limit) 
     return true;
 
+  // Else
   return false;
-
 }
 
 // Re-ordering array by type

@@ -72,9 +72,9 @@ foreach($browsers as $key => $val):
     $version = array_search($key, $hack['browser']); 
 
     // Output the hack
-    $legacyClass = $isLegacy == true ? 'legacy' : '';    
+    $legacyClass = $isLegacy === true ? 'legacy' : '';    
 
-    $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-version='".$hack['data-version'][$version]."'>";
+    $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-browser='".$val['name']."' data-version='".$hack['data-version'][$version]."'>";
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>";
     $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
