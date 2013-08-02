@@ -1,8 +1,11 @@
 <?php
+
+// Re-ordering array by type
+array_sort_by_column($hacks, 'type', SORT_DESC);
+
 // Save type from last hack
 $last_type = null;
-$dump = "";
-array_sort_by_column($hacks, 'type', SORT_DESC);
+$dump      = "";
 
 // Indexes
 $indexCSS = 0;
@@ -11,7 +14,6 @@ $indexJS  = 0;
 // Dump files
 $cssDump = "pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n.example-span { display: inline-block !important; }\n\r";
 $jsDump  = "var testClass = 'js-succeed';\n\r";
-
 
 foreach($browsers as $key => $val):
   $dump .= "<article data-high='3' class='browser-wrapper ".$key."' id='".$key."'>";

@@ -1,4 +1,7 @@
 <?php
+/**
+ * Transforms 2|3|4|5 into 2-5
+ */
 function returnVersion($version) {
   $a = explode('|', $version);
 
@@ -10,8 +13,8 @@ function returnVersion($version) {
       $thisV = floor(floatval($a[$i]));
       $nextV = floor(floatval($a[$i+1]));
       if ($thisV+1 !== $nextV){
-          $continuous = false;
-          break;
+        $continuous = false;
+        break;
       }
     }
 
@@ -22,7 +25,10 @@ function returnVersion($version) {
   return $version;
 }
 
-// @TODO fix
+/**
+ * Checks if hack is legacy
+ * @TODO: improve
+ */
 function isLegacy($version, $limit) {
 
   // If $version is *
@@ -53,13 +59,15 @@ function isLegacy($version, $limit) {
   return false;
 }
 
-// Re-ordering array by type
+/**
+ * Re-ordering array by type
+ */
 function array_sort_by_column(&$arr, $col, $dir = SORT_ASC) {
-    $sort_col = array();
-    foreach ($arr as $key=> $row) {
-        $sort_col[$key] = $row[$col];
-    }
+  $sort_col = array();
 
-    array_multisort($sort_col, $dir, $arr);
+  foreach ($arr as $key=> $row)
+    $sort_col[$key] = $row[$col];
+
+  array_multisort($sort_col, $dir, $arr);
 }
 ?>

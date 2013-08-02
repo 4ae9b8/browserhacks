@@ -37,34 +37,8 @@ foreach($browsers as $key => $val):
       $dump .= "<section class='browser-wrapper__hack-wrapper' data-cols='2' data-type='".$hack['type']."-childs'>";
     }
 
-    // CAPTION
-    // Creation of the caption (hacks legend) for the current hack
-    $caption = "<ul class='browser-list'>";
-    $isLegacy = false;
-
-    foreach($hack['browsers'] as $name => $version) {
-      $label          = ucfirst($browsers[$name]['name']);  
-
-      // Get version of hacked browser for current hack
-      $displayVersion = returnVersion($version);
-
-      // Check if current hack is legacy
-      $isLegacy       = isLegacy($displayVersion, $browsers[$name]['legacy']);
-
-      // Replace pipes with slashes for better readability
-      $displayVersion = str_replace('|','/', $displayVersion); 
-
-      $caption .= "<li class='browser-list__item'>";
-      $caption .= " <span class='browser-icon browserhacks-".$name."'></span>";
-      $caption .= " <span class='browser-name'>".$label."</span>";
-      $caption .= " <span class='browser-version'>".$displayVersion."</span>";
-      $caption .= "</li>"; 
-    }
-
-    $caption .= "</ul>";
-    // END CAPTION
-
     // Output the hack
+    $isLegacy    = false;
     $legacyClass = $isLegacy === true ? 'browser-wrapper__hack--legacy' : '';    
 
     $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-browser='".$val['name']."' data-version='".$hack['browsers'][$key]."'>";
@@ -74,7 +48,27 @@ foreach($browsers as $key => $val):
     $dump .= $hack['code'];
     $dump .= "</code>";
     $dump .= "</pre>";
-    $dump .= $caption;
+    $dump .= "<ul class='browser-list'>";
+    
+    // Creation of the caption (hacks legend) for the current hack
+    foreach($hack['browsers'] as $name => $version) {
+      // Get version of hacked browser for current hack
+      $displayVersion = returnVersion($version);
+
+      // Check if current hack is legacy
+      $isLegacy       = isLegacy($displayVersion, $browsers[$name]['legacy']);
+
+      // Replace pipes with slashes for better readability
+      $displayVersion = str_replace('|','/', $displayVersion); 
+
+      $dump .= "<li class='browser-list__item'>";
+      $dump .= " <span class='browser-icon browserhacks-".$name."'></span>";
+      $dump .= " <span class='browser-name'>".ucfirst($browsers[$name]['name'])."</span>";
+      $dump .= " <span class='browser-version'>".$displayVersion."</span>";
+      $dump .= "</li>"; 
+    }
+
+    $dump .= "</ul>";
     $dump .= "</div>";
         
     // Set new last type
