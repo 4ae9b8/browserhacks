@@ -550,7 +550,7 @@ $hacks = array(
     'browsers' => array('ie'=>'*'),
     'label'    => 'Not Internet Explorer',
     'language' => 'markup',
-    'code'     => '&lt;!--[if !IE]> Not Internet Explorer &lt;![endif]-->',
+    'code'     => '&lt;![if !IE]> Not Internet Explorer &lt;![endif]>',
     'test'     => ''
   ),
   array(
@@ -566,7 +566,7 @@ $hacks = array(
     'browsers' => array('ie'=>'6|7|8|9'),
     'label'    => '',
     'language' => 'markup',
-    'code'     => '&lt;!--[if IE lte X]> Internet Explorer X or less &lt;![endif]-->',
+    'code'     => '&lt;!--[if lte IE X]> Internet Explorer X or less &lt;![endif]-->',
     'test'     => ''
   ),
   array(
@@ -574,7 +574,7 @@ $hacks = array(
     'browsers' => array('ie'=>'6|7|8|9'),
     'label'    => '',
     'language' => 'markup',
-    'code'     => '&lt;!--[if IE gte X]> Internet Explorer X or greater &lt;![endif]-->',
+    'code'     => '&lt;!--[if gte IE X]> Internet Explorer X or greater &lt;![endif]-->',
     'test'     => ''
   ),
   array(
