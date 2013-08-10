@@ -72,6 +72,8 @@
         new App.Views.Browser({model: browser});
       }, this);
 
+      new App.Views.Keys();
+
       vent.bind("browserMatched", this.browserMatched, this);
       vent.bind("browserNotFound", this.browserNotFound, this);
       vent.bind("searchCancelled", this.removeMessage, this);
@@ -92,11 +94,11 @@
     browserNotFound : function() {
       this.count.browserMatched = this.count.browserMatched + 1;
 
-      if (this.count.browserMatched >= this.collection.length) {
+      if (this.count.browserMatched > this.collection.length) {
         this.count.browserMatched = 0;
 
         if ($('.nothing').length == 0) {
-          $('.header').after("<article data-high='2' class='nothing message'><section data-cols='1'><div><h3>We couldn't find anything matching your search <span>D;</span></h3></div></section></article>");
+          $('.social').after("<article data-high='2' class='nothing message'><section data-cols='1'><div><h3>We couldn't find anything matching your search <span>D;</span></h3></div></section></article>");
         }
       }
     },
@@ -366,6 +368,8 @@
      * Handle focus obtained.
      */
     focus : function(e) {
+      vent.trigger("search_focus", this);
+
       // Hide buttons
       clearTimeout(this.timeoutId);
 
@@ -380,6 +384,8 @@
      * Handle focus lost.
      */
     blur : function(e) {
+      vent.trigger("search_blur", this);
+
       // Search inactive
       $('div[data-type="search"]').removeClass('active');
 
@@ -389,8 +395,59 @@
           this.el_description.show();
         }
       }, this), 175); 
-    }
+    },
+
+
   });
+
+
+
+
+
+
+  /**
+   * Special action of keys pressed. 
+   */
+  App.Views.Keys = Backbone.View.extend({
+    initialize : function() {
+      this.el = $(document);
+
+      // Listener is active by default
+      this.addListener();
+
+      vent.bind("search_focus", this.removeListener, this);
+      vent.bind("search_blur", this.addListener, this);
+    },
+
+    removeListener : function() {
+      this.el.off('keydown');
+    },
+
+    addListener : function() {
+      this.el.on('keydown', this.jumpToBrowser);
+    },
+
+    // Listen to keydown to jump to a specific browser
+    jumpToBrowser : function(e) {
+        var el, 
+            specialKey = e.metaKey || e.ctrlKey;
+        if(e.which == 65 && !specialKey) el = document.getElementById('an');
+        if(e.which == 67 && !specialKey) el = document.getElementById('ch');
+        if(e.which == 83 && !specialKey) el = document.getElementById('sa');
+        if(e.which == 79 && !specialKey) el = document.getElementById('op');
+        if(e.which == 70 && !specialKey) el = document.getElementById('fx');
+        if(e.which == 73 && !specialKey) el = document.getElementById('ie');
+
+        if (typeof el !== "undefined") {
+          el.scrollIntoView(true);
+        }
+    }
+  })
+
+
+
+
+
 
   /* 
    * Quote 
@@ -570,21 +627,4 @@
     var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 4000});
     view_quote.render();
   });
-
-  // Listen to keydown to jump to a specific browser
-  // @TODO [TimPietrusky] - Create a own view
-  $(document).on('keydown', function (e) {
-    var el, 
-        specialKey = e.metaKey || e.ctrlKey;
-    if(e.which == 65 && !specialKey) el = document.getElementById('an');
-    if(e.which == 67 && !specialKey) el = document.getElementById('ch');
-    if(e.which == 83 && !specialKey) el = document.getElementById('sa');
-    if(e.which == 79 && !specialKey) el = document.getElementById('op');
-    if(e.which == 70 && !specialKey) el = document.getElementById('fx');
-    if(e.which == 73 && !specialKey) el = document.getElementById('ie');
-
-    if (typeof el !== "undefined") {
-      el.scrollIntoView(true);
-    }
-    });
 })();
