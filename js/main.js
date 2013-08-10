@@ -456,8 +456,7 @@
     el : $('#show-legacy'),
 
     childs : {
-      legacy : $('.browser-wrapper__hack--legacy'),
-      wrapper : $('.browser-wrapper__hack-wrapper')
+      legacy : $('.browser-wrapper__hack--legacy')
     },
 
     initialize : function() {
@@ -465,12 +464,6 @@
             var state = this.$el.attr('checked') ? 'block' : 'none';
             this.childs.legacy.css('display', state);
         }, this));
-
-        this.childs.wrapper.each(function() {
-            $(this).find('.browser-wrapper__hack').sort(function (a, b) {
-                return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
-            }).appendTo($(this));
-        });   
     }
   });
 
@@ -656,4 +649,11 @@
     var view_quote = new App.Views.Quote({ collection : quote_collection, 'speed' : 4000});
     view_quote.render();
   });
+
+  // #78: Order by browser version
+  $('.browser-wrapper__hack-wrapper').each(function() {
+      $(this).find('.browser-wrapper__hack').sort(function (a, b) {
+          return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
+      }).appendTo($(this));
+  });   
 })();
