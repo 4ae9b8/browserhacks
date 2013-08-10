@@ -62,11 +62,49 @@
    * All browser 
    */
   App.Views.Master = Backbone.View.extend({
+    count : {
+      browserMatched : 0
+    },
+
     initialize : function() {
       // Create all browser views
       this.collection.each(function(browser) {
         new App.Views.Browser({model: browser});
       }, this);
+
+      vent.bind("browserMatched", this.browserMatched, this);
+      vent.bind("browserNotFound", this.browserNotFound, this);
+      vent.bind("searchCancelled", this.removeMessage, this);
+    },
+
+    browserMatched : function() {
+      this.count.browserMatched = this.count.browserMatched - 1;
+
+      if (0 < this.count.browserMatched) {
+        this.count.browserMatched = 1;
+      }
+
+      if ($('.nothing').length > 0) {
+        $('.nothing').remove();
+      }
+    },
+
+    browserNotFound : function() {
+      this.count.browserMatched = this.count.browserMatched + 1;
+
+      if (this.count.browserMatched >= this.collection.length) {
+        this.count.browserMatched = 0;
+
+        if ($('.nothing').length == 0) {
+          $('.header').after("<article data-high='2' class='nothing message'><section data-cols='1'><div><h3>We couldn't find anything matching your search <span>D;</span></h3></div></section></article>");
+        }
+      }
+    },
+
+    removeMessage : function() {
+      if ($('.nothing').length > 0) {
+        $('.nothing').remove();
+      }
     }
   });
 
@@ -120,12 +158,15 @@
         if (browser.indexOf(data.browser) == 0 && !matched) {
           this.show(data);
           matched = true;
+
+          vent.trigger("browserMatched", this);
         }
       }, this);
 
       // Could not match browser
       if (!matched) {
         this.hide(data);
+        vent.trigger("browserNotFound", this);
       }
     },
 
