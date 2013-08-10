@@ -40,6 +40,9 @@ foreach($browsers as $key => $val):
     // Output the hack
     $isLegacy    = false;
 
+
+    $caption = "";
+
     // Creation of the caption (hacks legend) for the current hack
     foreach($hack['browsers'] as $name => $version) {
       // Get version of hacked browser for current hack
@@ -51,7 +54,7 @@ foreach($browsers as $key => $val):
       // Replace pipes with slashes for better readability
       $displayVersion = str_replace('|','/', $displayVersion); 
 
-      $caption = "<li class='browser-list__item'>";
+      $caption .= "<li class='browser-list__item'>";
       $caption .= " <span class='browser-icon browserhacks-".$name."'></span>";
       $caption .= " <span class='browser-name'>".ucfirst($browsers[$name]['name'])."</span>";
       $caption .= " <span class='browser-version'>".$displayVersion."</span>";
