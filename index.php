@@ -218,21 +218,5 @@
     <?php else: ?>
         <script src="js/main.js"></script>
     <?php endif; ?>
-
-    <?php // @TODO : MOVE THIS TO MAIN.JS ?>
-    <script>
-        $('#show-legacy').on('click', function() {
-            var state = $('#show-legacy').attr('checked') ? 'block' : 'none';
-            $('.browser-wrapper__hack--legacy').css('display', state);
-        });
-
-        var $wrapper = $('.browser-wrapper__hack-wrapper');
-
-        $wrapper.each(function() {
-            $(this).find('.browser-wrapper__hack').sort(function (a, b) {
-                return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
-            }).appendTo( $(this) );
-        });     
-    </script>
     </body>
 </html>

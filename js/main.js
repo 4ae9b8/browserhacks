@@ -73,6 +73,7 @@
       }, this);
 
       new App.Views.Keys();
+      new App.Views.Legacy();
 
       vent.bind("browserMatched", this.browserMatched, this);
       vent.bind("browserNotFound", this.browserNotFound, this);
@@ -442,8 +443,36 @@
           el.scrollIntoView(true);
         }
     }
-  })
+  });
 
+
+
+  
+
+  /**
+   * Show / hide lecacy browsers.
+   */
+  App.Views.Legacy = Backbone.View.extend({
+    el : $('#show-legacy'),
+
+    childs : {
+      legacy : $('.browser-wrapper__hack--legacy'),
+      wrapper : $('.browser-wrapper__hack-wrapper')
+    },
+
+    initialize : function() {
+        this.$el.on('click', _.bind(function() {
+            var state = this.$el.attr('checked') ? 'block' : 'none';
+            this.childs.legacy.css('display', state);
+        }, this));
+
+        this.childs.wrapper.each(function() {
+            $(this).find('.browser-wrapper__hack').sort(function (a, b) {
+                return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
+            }).appendTo($(this));
+        });   
+    }
+  });
 
 
 
