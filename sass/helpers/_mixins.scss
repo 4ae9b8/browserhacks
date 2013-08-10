@@ -24,3 +24,17 @@
     }
   }
 }
+
+@mixin bh__linear-gradient($syntax, $size) {
+  $grad : unquote('linear-gradient(' + $syntax);
+  $n : length($browsers);
+  
+  @for $i from 1 through $n {
+    $c: nth(nth($browsers, $i), 2);
+    $grad: $grad, $c ($i - 1) * 100%/$n, $c $i * 100%/$n;
+  }
+  
+  $grad: $grad unquote(')');
+  
+  @include background($grad);
+}

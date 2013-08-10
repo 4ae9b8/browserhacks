@@ -35,7 +35,7 @@
 ?>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
-
+<!--
     <ul class="nav-browser clearfix">
         <li class="ch"><a href="#ch"><span class='browserhacks-ch'></span></a></li>
         <li class="fx"><a href="#fx"><span class='browserhacks-fx'></span></a></li>
@@ -44,9 +44,9 @@
         <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
         <li class="an"><a href="#an"><span class='browserhacks-an'></span></a></li>
     </ul>
-    
-    <!-- Social -->
-    <article data-high="2" class="header">
+-->
+    <!-- Header -->
+    <article class="header">
         <section data-cols="2">
             <div>
                 <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
@@ -57,12 +57,15 @@
                     <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
                 </p>
                 <p class='legacy-wrapper'>
-                    <input type="checkbox" name="show-legacy" id="show-legacy">
-                    <label for="show-legacy">Show legacy hacks</label>
+                    <input type="checkbox" name="show-legacy" id="show-legacy" title="Show / hide hacks for old browser">
+                    <label for="show-legacy" title="Show / hide hacks for old browser">Legacy Hacks</label>
                 </p>
             </div>
         </section>
-        
+    </article>
+    
+    <!-- Social -->
+    <article data-high="2" class="social">
         <section data-cols="3" class="btn-group">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">

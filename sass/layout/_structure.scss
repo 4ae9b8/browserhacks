@@ -3,6 +3,11 @@
  * ********** */
 
 article {
+    &[data-high="1"] {
+        margin-bottom: -4em;
+        z-index: 5;
+    }
+
     &, 
     &[data-high="3"].active {
         margin-top: 0;

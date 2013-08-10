@@ -3,21 +3,46 @@
  * ******* */
 
 .header {
-    margin: 3em 0 2.5em 0;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    background: #fff;
+    background: rgba(#fff, 1);
+    z-index: 1337;
+    box-shadow: 0 .65em .55em -.55em rgba(#000, .1);
 
-    section:first-child {
-        margin-bottom: 2.5em;
+    section {
+        padding-top: 0;
+        padding-right: 0;
+
+        > div {
+            padding-bottom: 0;
+            padding-top: .25em;
+        }
     }
 
     @include breakpoint(mama-bear) {
+        padding-bottom: .25em;
+
         div {
             width: 100% !important;
         }
     }
+
+    &:before {
+        position: absolute;
+        top: 0;
+        content: '';
+        width: 100%;
+        height: .25em;
+        @include background(linear-gradient(left,gold 0%,gold 16.66667%,#f77918 16.66667%,#f77918 33.33333%,#0a90dd 33.33333%,#0a90dd 50%,#f63b3c 50%,#f63b3c 66.66667%,#999 66.66667%,#999 83.33333%,#a4c639 83.33333%,#a4c639 100% ));
+        @include background(linear-gradient(to right,gold 0%,gold 16.66667%,#f77918 16.66667%,#f77918 33.33333%,#0a90dd 33.33333%,#0a90dd 50%,#f63b3c 50%,#f63b3c 66.66667%,#999 66.66667%,#999 83.33333%,#a4c639 83.33333%,#a4c639 100% ));
+    }
 }
 
 .header__title {
-    font:3.5em 'Montserrat', sans-serif;
+    font: 3.35em 'Montserrat', sans-serif;
     text-transform: uppercase;
     margin: 0;
     letter-spacing: -2px;
@@ -41,10 +66,10 @@
     }    
 
     @include breakpoint(baby-bear) {
-        font-size: 2.75em;
+        font-size: 2.35em;
 
         span {
-            display: block;
+            //display: block;
         }
     }
 
@@ -65,5 +90,3 @@
     color: rgba(0,0,0,.6);
     border: 1px solid rgba(0,0,0,0.15);
 }
-
-    
