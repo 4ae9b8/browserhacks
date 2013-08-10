@@ -1,6 +1,7 @@
 .message {
 	&.nothing {
       background: rgba(#c00, .9);
+      margin-top: -2em;
 
       h3 {
       	color: #fff;
@@ -9,9 +10,13 @@
       	text-align: center;
 
       	> span {
-      		float: left;
+      		display: block;
       		width: 100%;
       		font-size: 3em;
+      		margin-top: .25em;
+      		color: #006;
+			
+			@include transform (rotate(-90deg));
       	}
       }
 	}
