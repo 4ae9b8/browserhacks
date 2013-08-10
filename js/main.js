@@ -513,7 +513,8 @@
     {'browser' : 'fx', 'names' : ['firefox', 'mozilla firefox', 'ff']},
     {'browser' : 'ie', 'names' : ['internet explorer', 'ie']},
     {'browser' : 'sa', 'names' : ['safari', 'apple safari']},
-    {'browser' : 'op', 'names' : ['opera', 'op']}
+    {'browser' : 'op', 'names' : ['opera', 'op']},
+    {'browser' : 'an', 'names' : ['android', 'an']}
   ]);
 
   // Holds all browser
