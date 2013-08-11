@@ -38,3 +38,34 @@
   
   @include background($grad);
 }
+
+@mixin stripes($colors, $direction: "to bottom") {  
+    
+    $stripes   : 100% / length($colors);
+    $auto      : not(type-of(nth($colors, 1)) == list);
+    $gradient  : ();
+    
+    @for $i from 1 through length($colors) {
+      $item : nth($colors, $i);
+      $dump : ();
+
+      @if $auto == true {
+        $dump : $item $stripes * ($i - 1), $item $stripes * $i;
+      }
+      
+      @else {
+                
+        @if $i > 1 {
+          $prev : nth($colors, $i - 1);
+          $dump : $dump, nth($item, 1) nth($prev, 2);
+        }
+        $dump : $dump, $item;
+        
+      }
+      
+      $gradient : join($gradient, $dump, comma);
+
+    }
+
+    @include background-image(linear-gradient($direction, $gradient));
+}
