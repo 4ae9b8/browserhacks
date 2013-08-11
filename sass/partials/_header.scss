@@ -56,16 +56,12 @@
         }
     }    
 
-    @include breakpoint(baby-bear) {
-        font-size: 2.35em;
-
-        span {
-            //display: block;
-        }
-    }
-
     @include breakpoint(mama-bear) {
         text-align: center;
+    }
+
+    @include breakpoint(baby-bear) {
+        font-size: 2.35em;
     }
 }
 
