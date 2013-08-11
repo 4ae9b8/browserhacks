@@ -7,7 +7,7 @@ eval `ssh-agent -s`
 ssh-add /root/.ssh/id_rsa.pub
 
 # Get changes from repo
-git pull origin master -force
+/usr/bin/git pull origin master
 
 # Kill the ssh-agent
 kill $SSH_AGENT_PID
