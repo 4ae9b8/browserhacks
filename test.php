@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-test-page.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
+    
     <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -29,10 +30,13 @@
 </head>
 
 <?php
-  // Load Browserhacks and run it
-  include_once('code/Browserhacks.php');
-  include_once('code/functions.php');
-  Browserhacks::run();
+    // Load Browserhacks and run it
+    include_once('code/Browserhacks.php');
+    include_once('code/functions.php');
+    include_once('code/db_browsers.php');
+    include_once('code/db_hackTypes.php');
+    include_once('code/db_hacks.php');
+    Browserhacks::run();
 ?>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true" class="test-page">
@@ -74,10 +78,6 @@
 
     <?php
     // OUTPUT THE WHOLE SHIT
-      // HTML for the hacks
-    include_once('code/db_browsers.php');
-    include_once('code/db_hackTypes.php');
-    include_once('code/db_hacks.php');
     include_once('code/runTest.php');
     ?>
 
