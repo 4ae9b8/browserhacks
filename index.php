@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
-    <!--[if lt IE 9]>
+    <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if IE 7]>

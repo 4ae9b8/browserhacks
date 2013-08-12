@@ -6,7 +6,7 @@ window.onload = function() {
 		el.innerHTML = '<span style="font-family: \'Browserhacks-Icons\'">' + entity + '</span> ' + html;
 	}
 	var icons = {
-			'browserhacks-android' : '&#xe000;',
+			'browserhacks-an' : '&#xe000;',
 			'browserhacks-windows8' : '&#xe001;',
 			'browserhacks-apple' : '&#xe002;',
 			'browserhacks-ch' : '&#xe003;',

@@ -12,6 +12,10 @@
     box-shadow: 0 .65em .55em -.55em rgba(#000, .1);
     padding-top: .5em;
 
+    .test-page & {
+        position: static;
+    }
+
     @include breakpoint(mama-bear) {
         div {
             width: 100% !important;

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-test-page.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
-    <!--[if lt IE 9]>
+    <!--[if IE]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <!--[if IE 7]>
@@ -35,7 +35,8 @@
   Browserhacks::run();
 ?>
 
-<body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
+<body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true" class="test-page">
+    <!--
     <ul class="nav-browser clearfix">
         <li class="ch"><a href="#ch"><span class='browserhacks-ch'></span></a></li>
         <li class="fx"><a href="#fx"><span class='browserhacks-fx'></span></a></li>
@@ -44,8 +45,9 @@
         <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
         <li class="an"><a href="#an"><span class='browserhacks-an'></span></a></li>
    </ul>
+    -->
 
-    <article data-high="2" class="header header-test">
+    <article data-high="2" class="header">
         <section data-cols="1">
             <div>
                 <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a> Testpage</h1>
@@ -58,8 +60,13 @@
                 <p><strong>However</strong>, when the point is to target <em>everything but X</em> (which in most cases is IE), being <span class="example-span">green</span> means your browser is standard compliant so it's a very good thing!</p>
             </div>
             <div>
-                <h2><span class="fontawesome-flag"></span>Want to report something weird?</h2>
+                <h2><span class="fontawesome-flag"></span>Want to report something?</h2>
                 <p>You can help us making this tool even more accurate by reporting things you think are weird or even bugs. Or even better, if you ever happen to find a new hacks, just <a href="https://github.com/4ae9b8/browserhacks/issues?state=open">open an issue on a bug tracker on GitHub</a>. Thanks! :)</p>
+                <div id="carbonads-container">
+                    <div class="carbonad" style="margin: .5em auto">
+                        <div id="azcarbon"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </article>
@@ -90,21 +97,14 @@
         </section>
     </article>
 
-    <script src="js/lib/jquery.js"></script>
-    <script src="js/lib/browserdetect-min.js"></script>
+    <script src="js/libs.js"></script>
+    <!--<script src="js/lib/browserdetect-min.js"></script>-->
     <script src="js/browserhacks-test-page.js"></script>
-    <script></script>
     <?php if (Browserhacks::isLive()): ?>
+        <script src="js/main-min.js"></script> 
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+    <?php else: ?>
+        <script src="js/main.js"></script>
     <?php endif; ?>
-    <script>
-        var $wrapper = $('.browser-wrapper__hack-wrapper');
-
-        $wrapper.each(function() {
-            $(this).find('.browser-wrapper__hack').sort(function (a, b) {
-                return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
-            }).appendTo( $(this) );
-        });     
-    </script>
     </body>
 </html>

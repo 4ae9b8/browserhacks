@@ -4,95 +4,91 @@ pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: b
 ::made-up-pseudo-element, .test_css_1 { background: lightgreen; }
 .test_css_3 { (;background: lightgreen;); } 
 .test_css_4 { [;background: lightgreen;]; }
-@media all and (min-width: 0px){ .test_css_6 { background: lightgreen; } }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_8 { background: lightgreen; } }
-body:empty .test_css_13 { background: lightgreen; }
-body:not(:-moz-handler-blocked) .test_css_15 { background: lightgreen; }
-.test_css_17, x:-moz-any-link { background: lightgreen; }
-.test_css_19, x:-moz-any-link, x:default { background: lightgreen; }
-@-moz-document url-prefix() { .test_css_21 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_6 { background: lightgreen; } }
+body:empty .test_css_11 { background: lightgreen; }
+body:not(:-moz-handler-blocked) .test_css_13 { background: lightgreen; }
+.test_css_15, x:-moz-any-link { background: lightgreen; }
+.test_css_17, x:-moz-any-link, x:default { background: lightgreen; }
+@-moz-document url-prefix() { .test_css_19 { background: lightgreen; } }
+@media screen and (-moz-images-in-menus:0) { .test_css_21 { background: lightgreen; } }
 @media screen and (min--moz-device-pixel-ratio:0) { .test_css_23 { background: lightgreen; } }
-@media screen and (-moz-images-in-menus:0) { .test_css_25 { background: lightgreen; } }
-@media all and (min-width: 0px){ .test_css_27 { background: lightgreen; } }
-_::-ms-reveal, .test_css_37 { background: lightgreen; }
-html > body .test_css_39 { background: lightgreen; }
-* html .test_css_41  { background: lightgreen; } 
-.unused-class.test_css_42 { background: lightgreen; }
-*:first-child+html .test_css_44 { background: lightgreen; } 
-.test_css_45, x:-IE7 { background: lightgreen; } 
-*+html .test_css_46 { background: lightgreen; } 
-body*.test_css_47 { background: lightgreen; } 
-.test_css_48\ { background: lightgreen; }
-.test_css_50, { background: lightgreen; }
-:root *> .test_css_52 { background: lightgreen; } 
-body:last-child .test_css_53 { background: lightgreen; } 
-body:nth-of-type(1) .test_css_54 { background: lightgreen; } 
-body:first-of-type .test_css_55 { background: lightgreen; }
-.test_css_56:not([attr*='']) { background: lightgreen; }
-html > /**/ body .test_css_58 { background: lightgreen; }
-head ~ /**/ body .test_css_59 { background: lightgreen; }
-_:-o-prefocus, .test_css_61 { background: lightgreen; }
-.test_css_63, x:-moz-any-link { background: lightgreen; }
-.test_css_65, x:-moz-any-link, x:default { background: lightgreen; }
-::made-up-pseudo-element, .test_css_67 { background: lightgreen; }
-.test_css_69 { _background: lightgreen;  } 
-.test_css_70 { -background: lightgreen;  }
-.test_css_72 { background/**/: lightgreen; }
-.test_css_74 { background: lightgreen\9; } 
-.test_css_75 { background/*\**/: lightgreen\9; }
-.test_css_77 { background: lightgreen !ie; }
-.test_css_79 { !background: lightgreen; } 
-.test_css_80 { $background: lightgreen; } 
-.test_css_81 { &background: lightgreen; } 
-.test_css_82 { *background: lightgreen; } 
-.test_css_83 { )background: lightgreen; } 
-.test_css_84 { =background: lightgreen; } 
-.test_css_85 { %background: lightgreen; } 
-.test_css_86 { +background: lightgreen; } 
-.test_css_87 { @background: lightgreen; } 
-.test_css_88 { ,background: lightgreen; } 
-.test_css_89 { .background: lightgreen; } 
-.test_css_90 { /background: lightgreen; } 
-.test_css_91 { `background: lightgreen; } 
-.test_css_92 { [background: lightgreen; } 
-.test_css_93 { ]background: lightgreen; } 
-.test_css_94 { #background: lightgreen; } 
-.test_css_95 { ~background: lightgreen; } 
-.test_css_96 { ?background: lightgreen; } 
-.test_css_97 { :background: lightgreen; } 
-.test_css_98 { |background: lightgreen; }
-.test_css_100:nth-of-type(1n) { background: lightgreen\9; }
-.test_css_102 { background: lightgreen\0/; }
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test_css_104 { background: lightgreen; } }
-@media screen\9 { .test_css_106 { background: lightgreen; } }
-@media \0screen { .test_css_108 { background: lightgreen; } }
-@media \0screen\,screen\9 { .test_css_110 { background: lightgreen; } }
-@media screen and (min-width: 400px) { .test_css_112 { background: lightgreen; } }
-@media screen\0 { .test_css_114 { background: lightgreen; } }
-@media screen { @media (min-width: 0px) { .test_css_116 { background: lightgreen; } } }
-@media screen and (min-width:0\0) { .test_css_118 { background: lightgreen; } }
-@media all and (min-width: 0px){ .test_css_120 { background: lightgreen; } }
-@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_145 { background: lightgreen; } }
-*|html[xmlns*=""] .test_css_147 { background: lightgreen; }
-html:first-child .test_css_149 { background: lightgreen; }
-_:-o-prefocus, .test_css_151 { background: lightgreen; }
-.test_css_153 { background: lightgreen\0/; }
-.test_css_155 { (;background: lightgreen;); } 
-.test_css_156 { [;background: lightgreen;]; }
-@media (min-resolution: .001dpcm) { _:-o-prefocus, .test_css_158 { background: lightgreen; } }
-@media all and (min-width: 0px){ .test_css_160 { background: lightgreen; } }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_162 { background: lightgreen; } }
-html[xmlns*=""] body:last-child .test_css_169 { background: lightgreen; } 
-html[xmlns*=""]:root .test_css_170  { background: lightgreen; }
-*|html[xmlns*=""] .test_css_172 { background: lightgreen; }
-html:first-child .test_css_174 { background: lightgreen; }
-::made-up-pseudo-element, .test_css_176 { background: lightgreen; }
-.test_css_178 { (;background: lightgreen;); } 
-.test_css_179 { [;background: lightgreen;]; }
-@media screen { @media (min-width: 0px) { .test_css_181 { background: lightgreen; } } }
-@media screen and (min-width:0\0) { .test_css_183 { background: lightgreen; } }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_185 { background: lightgreen; } }
-::made-up-pseudo-element, .test_css_191 { background: lightgreen; }
-@media screen and (min-width:0\0) { .test_css_193 { background: lightgreen; } }
-@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_195 { background: lightgreen; } }
+_::-ms-reveal, .test_css_33 { background: lightgreen; }
+html > body .test_css_35 { background: lightgreen; }
+* html .test_css_37  { background: lightgreen; } 
+.unused-class.test_css_38 { background: lightgreen; }
+*:first-child+html .test_css_40 { background: lightgreen; } 
+.test_css_41, x:-IE7 { background: lightgreen; } 
+*+html .test_css_42 { background: lightgreen; } 
+body*.test_css_43 { background: lightgreen; } 
+.test_css_44\ { background: lightgreen; }
+.test_css_46, { background: lightgreen; }
+html > /**/ body .test_css_48 { background: lightgreen; }
+head ~ /**/ body .test_css_49 { background: lightgreen; }
+:root *> .test_css_51 { background: lightgreen; } 
+body:last-child .test_css_52 { background: lightgreen; } 
+body:nth-of-type(1) .test_css_53 { background: lightgreen; } 
+body:first-of-type .test_css_54 { background: lightgreen; }
+.test_css_55:not([attr*='']) { background: lightgreen; }
+_:-o-prefocus, .test_css_57 { background: lightgreen; }
+.test_css_59, x:-moz-any-link { background: lightgreen; }
+.test_css_61, x:-moz-any-link, x:default { background: lightgreen; }
+::made-up-pseudo-element, .test_css_63 { background: lightgreen; }
+.test_css_65 { _background: lightgreen;  } 
+.test_css_66 { -background: lightgreen;  }
+.test_css_68 { background/**/: lightgreen; }
+.test_css_70 { background: lightgreen\9; } 
+.test_css_71 { background/*\**/: lightgreen\9; }
+.test_css_73 { background: lightgreen !ie; }
+.test_css_75 { !background: lightgreen; } 
+.test_css_76 { $background: lightgreen; } 
+.test_css_77 { &background: lightgreen; } 
+.test_css_78 { *background: lightgreen; } 
+.test_css_79 { )background: lightgreen; } 
+.test_css_80 { =background: lightgreen; } 
+.test_css_81 { %background: lightgreen; } 
+.test_css_82 { +background: lightgreen; } 
+.test_css_83 { @background: lightgreen; } 
+.test_css_84 { ,background: lightgreen; } 
+.test_css_85 { .background: lightgreen; } 
+.test_css_86 { /background: lightgreen; } 
+.test_css_87 { `background: lightgreen; } 
+.test_css_88 { [background: lightgreen; } 
+.test_css_89 { ]background: lightgreen; } 
+.test_css_90 { #background: lightgreen; } 
+.test_css_91 { ~background: lightgreen; } 
+.test_css_92 { ?background: lightgreen; } 
+.test_css_93 { :background: lightgreen; } 
+.test_css_94 { |background: lightgreen; }
+.test_css_96:nth-of-type(1n) { background: lightgreen\9; }
+.test_css_98 { background: lightgreen\0/; }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .test_css_100 { background: lightgreen; } }
+@media screen\9 { .test_css_102 { background: lightgreen; } }
+@media \0screen { .test_css_104 { background: lightgreen; } }
+@media \0screen\,screen\9 { .test_css_106 { background: lightgreen; } }
+@media screen and (min-width: 400px) { .test_css_108 { background: lightgreen; } }
+@media screen\0 { .test_css_110 { background: lightgreen; } }
+@media screen { @media (min-width: 0px) { .test_css_112 { background: lightgreen; } } }
+@media screen and (min-width:0\0) { .test_css_114 { background: lightgreen; } }
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .test_css_139 { background: lightgreen; } }
+html:first-child .test_css_141 { background: lightgreen; }
+_:-o-prefocus, .test_css_143 { background: lightgreen; }
+*|html[xmlns*=""] .test_css_145 { background: lightgreen; }
+.test_css_147 { background: lightgreen\0/; }
+.test_css_149 { (;background: lightgreen;); } 
+.test_css_150 { [;background: lightgreen;]; }
+@media (min-resolution: .001dpcm) { _:-o-prefocus, .test_css_152 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_154 { background: lightgreen; } }
+html[xmlns*=""] body:last-child .test_css_161 { background: lightgreen; } 
+html[xmlns*=""]:root .test_css_162  { background: lightgreen; }
+html:first-child .test_css_164 { background: lightgreen; }
+*|html[xmlns*=""] .test_css_166 { background: lightgreen; }
+::made-up-pseudo-element, .test_css_168 { background: lightgreen; }
+.test_css_170 { (;background: lightgreen;); } 
+.test_css_171 { [;background: lightgreen;]; }
+@media screen { @media (min-width: 0px) { .test_css_173 { background: lightgreen; } } }
+@media screen and (min-width:0\0) { .test_css_175 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_177 { background: lightgreen; } }
+::made-up-pseudo-element, .test_css_183 { background: lightgreen; }
+@media screen and (min-width:0\0) { .test_css_185 { background: lightgreen; } }
+@media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_187 { background: lightgreen; } }
 
