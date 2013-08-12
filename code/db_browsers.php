@@ -1,6 +1,10 @@
 <?php
 
 $browsers = array(
+  'an' => array(
+    'name'   => 'android',
+    'legacy' => '2.3'
+  ),
   'ch' => array(
     'name'   => 'chrome',
     'legacy' => '1'
@@ -20,9 +24,5 @@ $browsers = array(
   'sa' => array(
     'name'   => 'safari',
     'legacy' => '4'
-  ),
-  'an' => array(
-    'name'   => 'android',
-    'legacy' => '2.3'
   )
 );
