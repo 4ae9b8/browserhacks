@@ -1,6 +1,6 @@
 pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }
-.example-span, .js-succeed { background: lightgreen; }
-.example-span { display: inline-block !important; }
+.example-span, .js-succeed { background: lightgreen; }
+.example-span { display: inline-block !important; }
 ::made-up-pseudo-element, .test_css_1 { background: lightgreen; }
 @media screen and (min-width:0\0) { .test_css_3 { background: lightgreen; } }
 @media screen and (-webkit-min-device-pixel-ratio:0) { .test_css_5 { background: lightgreen; } }
