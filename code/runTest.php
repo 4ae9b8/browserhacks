@@ -125,6 +125,6 @@ $JSFile  = "js/browserhacks-test-page.js";
 $currentCSSFile = file_get_contents($CSSFile);
 $currentJSFile  = file_get_contents($JSFile);
 
-if($currentCSSFile != $cssDump) file_put_contents("css/browserhacks-test-page.css", $cssDump);
-if($currentJSFile  != $jsDump)  file_put_contents("js/browserhacks-test-page.js", $jsDump);
+if($currentCSSFile != $cssDump) file_put_contents($CSSFile , $cssDump);
+if($currentJSFile  != $jsDump)  file_put_contents($JSFile  ,  $jsDump);
 ?>
