@@ -18,3 +18,6 @@ Reminder!
 ---------
 
 Please keep in mind using a hack is not always the perfect solution. It can be useful to fix some weird browser specific bug, but in most cases you should fix your CSS/JS.
+
+
+Here is a little pen to fork and edit when we want to ask for people's help to test a hack: http://codepen.io/HugoGiraudel/pen/HEoJx.
