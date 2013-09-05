@@ -374,7 +374,7 @@ $hacks = array(
     'browsers' => array('ie'=>'7'),
     'label'    => '',
     'language' => 'javascript',
-    'code'     => 'var isIE = document.all && window.XMLHttpRequest && !document.addEventListener;',
+    'code'     => 'var isIE = document.all && window.XMLHttpRequest && !document.querySelector;',
     'test'     => 'document.all && window.XMLHttpRequest && !document.addEventListener;'
   ),
   array(
