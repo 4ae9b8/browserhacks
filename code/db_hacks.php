@@ -264,7 +264,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => ".selector { property: value\\0/; }",
     'test'     => ".selector { background: lightgreen\\0/; }"
-  ),
+  ),/* Doesn't seem to work
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'9|10'),
@@ -272,7 +272,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => ".selector:nth-of-type(1n) { property: value\9; }",
     'test'     => ".selector:nth-of-type(1n) { background: lightgreen\9; }"
-  ),
+  ),*/
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'6'),
@@ -312,7 +312,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => "@media \\0screen {}",
     'test'     => "@media \\0screen { .selector { background: lightgreen; } }"
-  ),
+  ),/* Issue with versioning
   array(
     'type'     => 'media',
     'browsers' => array('ie'=>'op'),
@@ -320,7 +320,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => "@media screen\\0 {}",
     'test'     => "@media screen\\0 { .selector { background: lightgreen; } }"
-  ),
+  ),*/
   array(
     'type'     => 'media',
     'browsers' => array('ie'=>'9|10','sa'=>'4','an'=>'2.3+'),
@@ -339,8 +339,8 @@ $hacks = array(
   ),
   array(
     'type'     => 'media',
-    'browsers' => array('ie'=>'10-','sa'=>'6-'),
-    'label'    => "Everything but Internet Explorer 10- and Safari 6-",
+    'browsers' => array('ie'=>'*','sa'=>'*'),
+    'label'    => "Everything but Internet Explorer and Safari",
     'language' => "css",
     'code'     => "@media screen { @media (min-width: 0px) {} }",
     'test'     => "@media screen { @media (min-width: 0px) { .selector { background: lightgreen; } } }"
@@ -636,7 +636,7 @@ $hacks = array(
 
   array(
     'type'     => 'javascript',
-    'browsers' => array('op'=>'12-'),
+    'browsers' => array('op'=>'12.16-'),
     'label'    => '',
     'language' => 'javascript',
     'code'     => "var isOpera = !!window.opera;",
