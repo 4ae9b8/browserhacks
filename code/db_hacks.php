@@ -296,7 +296,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => "@media \\0screen\\,screen\\9 {}",
     'test'     => "@media \\0screen\\,screen\\9 { .selector { background: lightgreen; } }"
-  ),
+  ),/* Not a hack 
   array(
     'type'     => 'media',
     'browsers' => array('ie'=>'8-'),
@@ -304,7 +304,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => "@media screen and (min-width: 400px) {}",
     'test'     => "@media screen and (min-width: 400px) { .selector { background: lightgreen; } }"
-  ),
+  ),*/
   array(
     'type'     => 'media',
     'browsers' => array('ie'=>'8'),
