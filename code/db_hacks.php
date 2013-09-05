@@ -272,15 +272,15 @@ $hacks = array(
     'language' => 'css',
     'code'     => ".selector:nth-of-type(1n) { property: value\9; }",
     'test'     => ".selector:nth-of-type(1n) { background: lightgreen\9; }"
-  ),*/
+  ),*//* Dpesn't work on IE 6...
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'6'),
     'label'    => 'Everything but Internet Explorer 6',
     'language' => 'css',
-    'code'     => ".selector { property/**/: value; }",
-    'test'     => ".selector { background/**/: lightgreen; }"
-  ),
+    'code'     => ".selector { property/**\/: value; }",
+    'test'     => ".selector { background/**\/: lightgreen; }"
+  ),*/
   array(
     'type'     => 'media',
     'browsers' => array('ie'=>'7-'),
