@@ -294,8 +294,8 @@ $hacks = array(
     'browsers' => array('ie'=>'8-'),
     'label'    => '',
     'language' => 'css',
-    'code'     => "@media \\0screen\,screen\9 {}",
-    'test'     => "@media \\0screen\,screen\9 { .selector { background: lightgreen; } }"
+    'code'     => "@media \\0screen\\,screen\\9 {}",
+    'test'     => "@media \\0screen\\,screen\\9 { .selector { background: lightgreen; } }"
   ),
   array(
     'type'     => 'media',
