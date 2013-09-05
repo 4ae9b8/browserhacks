@@ -256,7 +256,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => ".selector { property: value\9; } \n.selector { property/*\**/: value\9; }",
     'test'     => ".selector { background: lightgreen\9; } \n.selector { background/*\**/: lightgreen\9; }"
-  ),
+  ),/* Doesn't seem to work
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'8|9','op'=>'10'),
@@ -264,7 +264,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => ".selector { property: value\\0/; }",
     'test'     => ".selector { background: lightgreen\\0/; }"
-  ),/* Doesn't seem to work
+  ),*//* Doesn't seem to work
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'9|10'),
