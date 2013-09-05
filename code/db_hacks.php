@@ -216,7 +216,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => ":root *> .selector {} \nbody:last-child .selector {} \nbody:nth-of-type(1) .selector {} \nbody:first-of-type .selector {}\n.selector:not([attr*='']) {}",
     'test'     => ":root *> .selector { background: lightgreen; } \nbody:last-child .selector { background: lightgreen; } \nbody:nth-of-type(1) .selector { background: lightgreen; } \nbody:first-of-type .selector { background: lightgreen; }\n.selector:not([attr*='']) { background: lightgreen; }"
-  ),
+  ),/* Target 5 browsers... No point in keeping this 
   array(
     'type'     => 'selector',
     'browsers' => array('ie'=>'10+'),
@@ -224,7 +224,7 @@ $hacks = array(
     'language' => 'css',
     'code'     => "_::-ms-reveal, .selector {}",
     'test'     => "_::-ms-reveal, .selector { background: lightgreen; }"
-  ),
+  ),*/
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'6'),
