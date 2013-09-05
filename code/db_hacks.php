@@ -323,7 +323,7 @@ $hacks = array(
   ),*/
   array(
     'type'     => 'media',
-    'browsers' => array('ie'=>'9+','sa'=>'4','an'=>'2.3+'),
+    'browsers' => array('ie'=>'10+','sa'=>'4','an'=>'2.3+'),
     'label'    => '',
     'language' => 'css',
     'code'     => "@media screen and (min-width:0\\0) {}",
