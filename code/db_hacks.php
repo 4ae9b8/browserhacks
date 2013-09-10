@@ -699,3 +699,8 @@ $hacks = array(
     'test'     => "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";"
   )
 );
+
+// Adding a unique ID to each hack
+for($i = 0; $i < count($hacks); $i++) {
+    $hacks[$i]['id'] = $i;
+}
