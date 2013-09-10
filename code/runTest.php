@@ -118,11 +118,11 @@ $currentJSFile  = file_get_contents($JSFile);
 
 if($currentCSSFile != $cssDump) {
   file_put_contents($CSSFile , $cssDump);
-  header('refresh:0');
+  header('refresh:0;');
 }
 
 if($currentJSFile  != $jsDump) {
   file_put_contents($JSFile  ,  $jsDump);
-  header('refresh:0');
+  header('refresh:0;');
 }
 ?>
