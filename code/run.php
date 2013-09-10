@@ -60,8 +60,10 @@ foreach($browsers as $key => $val):
       $caption .= " <span class='browser-version'>".$displayVersion."</span>";
       $caption .= "</li>"; 
     }
+    
+    $legacy = $isLegacy === true ? "data-legacy='true'" : "data-legacy='false'";
 
-    $dump .= "<div class='browser-wrapper__hack' data-legacy='".$isLegacy === true."' id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'>";
+    $dump .= "<div class='browser-wrapper__hack' ".$legacy." id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'>";
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>";
     $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
