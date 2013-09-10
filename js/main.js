@@ -456,7 +456,7 @@
     el : $('#show-legacy'),
 
     childs : {
-      legacy : $('.browser-wrapper__hack--legacy')
+      legacy : $('[data-legacy=true]')
     },
 
     initialize : function() {
