@@ -71,7 +71,7 @@ foreach($browsers as $key => $val):
     $lines = explode("\n", $hack['code']); // Explode on line breaks
 
     for($i = 0; $i < count($lines); $i++) {
-      $dump .= "<span class='line'>".$lines[$i]."</span>";
+      $dump .= "<span class='line'>".$lines[$i]."</span>\n";
     }
     
     $dump .= "</code>";
