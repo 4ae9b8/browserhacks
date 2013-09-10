@@ -67,7 +67,13 @@ foreach($browsers as $key => $val):
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>";
     $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
-    $dump .= $hack['code'];
+    
+    $lines = explode("\n", $k['code']); // Explode on line breaks
+
+    for($i = 0; $i < count($lines); $i++) {
+      $dump .= "<span class='line'>".$lines[$i]."</span>";
+    }
+    
     $dump .= "</code>";
     $dump .= "</pre>";
     $dump .= "<ul class='browser-list'>";
