@@ -7,10 +7,6 @@ array_sort_by_column($hacks, 'type', SORT_DESC);
 $last_type = null;
 $dump      = "";
 
-// Indexes
-$indexCSS = 0;
-$indexJS  = 0;
-
 // Dump files
 $cssDump = "pre span, .example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n.example-span { display: inline-block !important; }\n\r";
 $jsDump  = "var testClass = 'js-succeed';\n\r";
@@ -27,10 +23,6 @@ foreach($browsers as $key => $val):
     // If it isn't or if current hack is not from current type, break
     if(!isset($k['browsers'][$key]) || empty($k['test'])) 
       continue;
-        
-    // Increment indexes
-    $indexCSS++;
-    $indexJS++;
 
     // If current type is different from type of last hack, display type heading
     if($k['type'] != $last_type) {
@@ -51,33 +43,32 @@ foreach($browsers as $key => $val):
       
       $lines = explode("\n", $k['test']); // Explode on line breaks
 
-      foreach($lines as $l) { // Foreach line
+      for($i = 0; $i < count($lines); $i++) {
+        
+        $name = "test_css_".$k['id']."-".$i;
         
         // Wrap it in a span with a number
-        $dump .= "<span class='test_css_".$indexCSS."'>".$l."</span>";
+        $dump .= "<span class='".$name."'>".$lines[$i]."</span>";
         
         // Append things to the dump
-        $cssDump .= str_replace('.selector','.test_css_'.$indexCSS, $l)."\n\r";
+        $cssDump .= str_replace('.selector',".".$name, $lines[$i])."\n\r";
         
-        $indexCSS++; // Increment index
       }
 
     // If it's a JS thing
     } else if($k['language'] == 'javascript') {
       $lines = explode("\n", $k['test']); // Explode on line breaks
       
-      foreach($lines as $l) { // Foreach line
+      for($i = 0; $i < count($lines); $i++) {
         
         // Wrap it in a span with a number
-        $name = "test_js_".$key."_".$indexJS;
-        $dump .= "<span class='".$name."'>var isHacked = ".$l."</span>";
+        $name = "test_js_".$key."_".$k['id']."-".$i;
+        $dump .= "<span class='".$name."'>var isHacked = ".$lines[$i]."</span>";
         
         // Append things to the dump
         $jsDump .= "var ".$name." = ".$k['test']."\n";
         $jsDump .= "if (".$name.") $('.".$name."').addClass(testClass);\n\r";
-        
-        $indexJS++; // Increment index
-
+      
       }
 
     // If it's neither CSS nor JS
