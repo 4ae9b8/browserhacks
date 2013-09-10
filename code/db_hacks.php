@@ -701,6 +701,6 @@ $hacks = array(
 );
 
 // Adding a unique ID to each hack
-for($i = 1; $i <= count($hacks); $i++) {
+for($i = 0; $i < count($hacks); $i++) {
     $hacks[$i]['id'] = $i;
 }
