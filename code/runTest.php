@@ -41,7 +41,7 @@ foreach($browsers as $key => $val):
       $dump .= "<section data-cols='1' data-type='".$k['type']."-childs'>";
     }
 
-    $dump .= "<div class='browser-wrapper__hack'>";
+    $dump .= "<div class='browser-wrapper__hack' id='hack-".$k['id']."'>";
     $dump .= "<pre class='language-".$k['language']."' data-version='".$k['browsers'][$key]."'>";
     $dump .= "<code>";
     $dump .= !empty($k['label']) ? "/* ".$k['label']." */\n" : '';
