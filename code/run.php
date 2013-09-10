@@ -61,7 +61,7 @@ foreach($browsers as $key => $val):
       $caption .= "</li>"; 
     }
 
-    $dump .= "<div class='browser-wrapper__hack ".$legacyClass."' data-legacy='".$isLegacy."' id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'>";
+    $dump .= "<div class='browser-wrapper__hack' data-legacy='".$isLegacy."' id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'>";
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>";
     $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
