@@ -21,11 +21,19 @@
     &.browser-wrapper__hack--legacy {
         display: none;
     }
+
+    &[data-legacy=true] {
+        display: none;
+    }
+
+    &:target {
+        border: 1px solid deepskyblue;
+    }
 }
 
 .browser-list {
     list-style: none;
-    margin: 0 0 .5em 0;
+    margin: 0;
     padding: 0;
     background: #f5f2f0;
 }
