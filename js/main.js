@@ -141,7 +141,7 @@
       this.model.set('hackTypes', hackTypes);
 
       // The specific hacks
-      this.hackChilds = this.$el.find('.hack-wrapper');
+      this.hackChilds = this.$el.find('.browser-wrapper__hack');
 
       // Listen to events
       vent.bind("search", this.handleSearch, this);
@@ -188,7 +188,7 @@
         this.hackChilds.hide();
 
         // Find only matched childs
-        var matched = this.$el.find('.hack-wrapper[data-version*="'+data.version+'"], .hack-wrapper[data-version="*"]');
+        var matched = this.$el.find('.browser-wrapper__hack[data-version*="'+data.version+'"], .browser-wrapper__hack[data-version="*"]');
 
         // Filter the matched childs
         _.each(matched, function(item) {
@@ -212,7 +212,7 @@
         }, this);
 
         // Find +
-        _.each(this.$el.find('.hack-wrapper[data-version*="+"]'), function(item) {
+        _.each(this.$el.find('.browser-wrapper__hack[data-version*="+"]'), function(item) {
           _item = $(item);
           version_plus = _item.attr('data-version').split('+');
           if (version_plus.length == 2) {
@@ -225,7 +225,7 @@
         }, this);
 
         // Find -
-        _.each(this.$el.find('.hack-wrapper[data-version*="-"]'), function(item) {
+        _.each(this.$el.find('.browser-wrapper__hack[data-version*="-"]'), function(item) {
           _item = $(item);
           version_minus = _item.attr('data-version').split('-');
           if (version_minus.length == 2) {
@@ -243,7 +243,7 @@
         // Hide empty hack types
         _.each(this.model.get('hackTypes'), function(type) {
           // Get the amount of visible hacks
-          count = this.$el.find('[data-type="'+type+'-childs"] .hack-wrapper:visible').length;
+          count = this.$el.find('[data-type="'+type+'-childs"] .browser-wrapper__hack:visible').length;
           
           // Hide title if no hacks are visible
           if (count == 0) {
