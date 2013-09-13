@@ -20,7 +20,18 @@
             color: #000;
         }
     }
- }
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        box-shadow: .55em .65em .55em -.55em rgba(#000, .1);
+        background: white;
+        z-index: 11;
+    }
+}
 
  /*
 

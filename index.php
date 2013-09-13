@@ -40,22 +40,24 @@
 ?>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
-<!--
-    <ul class="nav-browser clearfix">
-        <li class="ch"><a href="#ch"><span class='browserhacks-ch'></span></a></li>
-        <li class="fx"><a href="#fx"><span class='browserhacks-fx'></span></a></li>
-        <li class="ie"><a href="#ie"><span class='browserhacks-ie'></span></a></li>
-        <li class="op"><a href="#op"><span class='browserhacks-op'></span></a></li>
-        <li class="sa"><a href="#sa"><span class='browserhacks-sa'></span></a></li>
-        <li class="an"><a href="#an"><span class='browserhacks-an'></span></a></li>
-    </ul>
--->
+
+    <article class="supra">
+        <section data-cols="1">
+            <div>
+                <h1>Browserhacks</h1>
+            </div>
+        </section>
+    </article>
 
     <!-- Header -->
     <article class="header">
         <section data-cols="2">
-            <div>
+            <!--<div>
                 <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
+            </div>-->
+            <div class="search"  data-type="search">
+                <label for="search" class='visually-hidden'>Find a hack</label>
+                <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
             </div>
             <div class="options">
                 <p class='option-wrapper'>
@@ -101,10 +103,10 @@
                 </a>
             </div>
 
-            <div class="search"  data-type="search">
+            <!--<div class="search"  data-type="search">
                 <label for="search" class='visually-hidden'>Find a hack</label>
                 <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
-            </div>
+            </div>-->
             
         </section>
         
@@ -119,8 +121,8 @@
         </section>
     </article>
     
-    <article data-high="1" data-type="description">
-        <section data-cols="3" data-valign="center">
+    <article data-high="1" data-type="description" class="description">
+        <section data-cols="3">
             <div>
                 <h2 data-type="1">What's this?</h2>
                 <p>Browserhacks is an extensive list of <strong>browser specific CSS and JavaScript hacks</strong> from all over the interwebs.
@@ -274,6 +276,7 @@
             document.styleSheets[0].disabled = false;
             tests(true);
             
+
         </script>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     <?php else: ?>
@@ -316,6 +319,15 @@
             $('#show-test').attr('checked', 'checked');
             document.styleSheets[0].disabled = false;
             tests(true);
+
+            var $header = $('.search');
+            var origOffsetY = $header.offset().top;
+
+            function onScroll(e) {
+                window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
+            }
+
+            $(document).on('scroll', onScroll);
             
         </script>
    <?php endif; ?>

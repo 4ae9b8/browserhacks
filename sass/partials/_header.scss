@@ -4,7 +4,6 @@
 
 .header {
     background: #fff;
-    //box-shadow: 0 .65em .55em -.55em rgba(#000, .1);
     padding-top: .5em;
 
     .test-page & {
@@ -27,7 +26,7 @@
         @each $b in $browsers {
           $stripes: append($stripes, nth($b, 2));
         }
-        @include stripes($stripes, to right);
+        //@include stripes($stripes, to right);
     }
 }
 
@@ -75,4 +74,29 @@
     color: #666;
     color: rgba(0,0,0,.6);
     border: 1px solid rgba(0,0,0,0.15);
+}
+
+.description {
+    h2 {
+        text-align: center;
+    }
+}
+
+.supra {
+    $stripes: ();
+    @each $b in $browsers {
+      $stripes: append($stripes, nth($b, 2));
+    }
+    @include stripes($stripes, to right);
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        color: #555;
+        $v: .1em;
+        text-shadow: 0 $v white, $v $v white, $v 0 white, $v $v*-1 white, 0 $v*-1 white, $v*-1 $v white, $v*-1 0 white, $v*-1 $v*-1 white;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+    }
 }
