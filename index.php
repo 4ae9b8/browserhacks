@@ -275,6 +275,15 @@
             $('#show-test').attr('checked', 'checked');
             document.styleSheets[0].disabled = false;
             tests(true);
+
+            var $header = $('.search');
+            var origOffsetY = $header.offset().top;
+
+            function onScroll(e) {
+                window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
+            }
+
+            $(document).on('scroll', onScroll);
             
 
         </script>
