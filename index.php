@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="css/browserhacks.css">
+    <link rel="stylesheet" href="css/browserhacks-test-page.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
     
     <!--[if IE]>
@@ -243,9 +244,11 @@
                 var $code = $(this);
                 var lines = $code.html().split('\n');
                 var dump  = "";
+                var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
 
                 for(var i = 0, len = lines.length; i < len; i++) {
-                    dump += "<span class='line'>" + lines[i] + "</span>";
+                    var hackClass = "hack_" + id + "_" + i;
+                    dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
                 }
 
                 $code.html(dump);
@@ -255,6 +258,7 @@
               _select(this);
             });
         </script>
-    <?php endif; ?>
+        <script src="js/browserhacks-test-page.js"></script> 
+   <?php endif; ?>
     </body>
 </html>

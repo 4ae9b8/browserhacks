@@ -7,6 +7,10 @@ array_sort_by_column($hacks, 'type', SORT_DESC);
 $last_type = null;
 $dump      = "";
 
+// Dump files
+$cssDump = ".example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n.example-span { display: inline-block !important; }\n\r";
+$jsDump  = "var testClass = 'js-succeed';\n\r";
+
 // Sort by browser
 foreach($browsers as $key => $val):
 
@@ -39,8 +43,6 @@ foreach($browsers as $key => $val):
 
     // Output the hack
     $isLegacy    = false;
-
-
     $caption = "";
 
     // Creation of the caption (hacks legend) for the current hack
@@ -64,16 +66,34 @@ foreach($browsers as $key => $val):
     $legacy = $isLegacy === true ? "data-legacy='true'" : "data-legacy='false'";
 
     $dump .= "<div class='browser-wrapper__hack' ".$legacy." id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'>";
+    $dump .= !empty($hack['label']) ? "<p class='browser-wrapper__label'>/* ".$hack['label']." */</p>" : '';
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>";
-    $dump .= !empty($hack['label']) ? "/* ".$hack['label']." */\n" : '';
     
-    $lines = explode("\n", $hack['code']); // Explode on line breaks
+    // If it's a CSS thing
+    if($hack['language'] == 'css' || $hack['language'] == 'javascript') {
+      
+      $lines = explode("\n", $hack['test']); // Explode on line breaks
+      
+      for($i = 0; $i < count($lines); $i++) {
+        $name  = "hack_".$hack['id']."_".$i;
+
+        if($hack['language'] == 'css') {
+          $cssDump .= str_replace('.selector',".".$name, $lines[$i])."\n\r";
+        } 
+        else if($hack['language'] == 'javascript') {
+          $jsDump .= "var ".$name." = ".$hack['test']."\n";
+          $jsDump .= "if (".$name.") $('.".$name."').addClass(testClass);\n\r";
+        }
+      } 
+    }
+
+    //$lines = explode("\n", $hack['code']); // Explode on line breaks
 
     for($i = 0; $i < count($lines); $i++) {
-      $dump .= "<span class='line'>".$lines[$i]."</span>\n";
+      //$dump .= "<span class='line'>".$lines[$i]."</span>\n";
     }
-    
+    $dump .= $hack['code'];
     $dump .= "</code>";
     $dump .= "</pre>";
     $dump .= "<ul class='browser-list'>";
@@ -93,4 +113,19 @@ foreach($browsers as $key => $val):
 endforeach; 
 
 echo $dump;
+
+// Create/update test files
+$CSSFile = "css/browserhacks-test-page.css";
+$JSFile  = "js/browserhacks-test-page.js";
+
+$currentCSSFile = file_get_contents($CSSFile);
+$currentJSFile  = file_get_contents($JSFile);
+
+if($currentCSSFile != $cssDump) {
+  file_put_contents($CSSFile , $cssDump);
+}
+
+if($currentJSFile  != $jsDump) {
+  file_put_contents($JSFile  ,  $jsDump);
+}
 ?>

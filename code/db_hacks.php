@@ -273,9 +273,9 @@ $hacks = array(
   array(
     'type'     => 'propertyValue',
     'browsers' => array('ie'=>'7-'),
-    'label'    => "Any combination of these characters: \n ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
+    'label'    => "Any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
     'language' => 'css',
-    'code'     => ".selector { !property: value; } \n.selector { \$property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n/* ... */",
+    'code'     => ".selector { !property: value; } \n.selector { \$property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n.selector { )property: value; } \n.selector { =property: value; } \n.selector { %property: value; } \n.selector { +property: value; } \n.selector { @property: value; } \n.selector { ,property: value; } \n.selector { .property: value; } \n.selector { /property: value; } \n.selector { `property: value; } \n.selector { [property: value; } \n.selector { ]property: value; } \n.selector { #property: value; } \n.selector { ~property: value; } \n.selector { ?property: value; } \n.selector { :property: value; } \n.selector { |property: value; }",
     'test'     => ".selector { !background: lightgreen; } \n.selector { \$background: lightgreen; } \n.selector { &background: lightgreen; } \n.selector { *background: lightgreen; } \n.selector { )background: lightgreen; } \n.selector { =background: lightgreen; } \n.selector { %background: lightgreen; } \n.selector { +background: lightgreen; } \n.selector { @background: lightgreen; } \n.selector { ,background: lightgreen; } \n.selector { .background: lightgreen; } \n.selector { /background: lightgreen; } \n.selector { `background: lightgreen; } \n.selector { [background: lightgreen; } \n.selector { ]background: lightgreen; } \n.selector { #background: lightgreen; } \n.selector { ~background: lightgreen; } \n.selector { ?background: lightgreen; } \n.selector { :background: lightgreen; } \n.selector { |background: lightgreen; }",
     'safe'     => false
   ),
@@ -525,7 +525,7 @@ $hacks = array(
     'code'     => "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
     'test'     => "(function() { if (new RegExp(\"MSIE ([0-9]{1,}[\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
     'safe'     => false
-  ),
+  ),/* Mess with test page
   array(
     'type'     => 'javascript',
     'browsers' => array('ie'=>'6|7|8|9'),
@@ -534,7 +534,7 @@ $hacks = array(
     'code'     => "(checkIE = document.createElement(\"b\")).innerHTML = \"&lt;!--[if IE X]>&lt;i>&lt;/i>&lt;![endif]-->\"; \nvar isIE = checkIE.getElementsByTagName(\"i\").length == 1;",
     'test'     => "",
     'safe'     => false
-  ),
+  ),*/
   array(
     'type'     => 'javascript',
     'browsers' => array('ie'=>'7'),

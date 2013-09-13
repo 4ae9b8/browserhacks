@@ -25,15 +25,28 @@
     }
 
     &:target {
-        pre {
-            border: .15em solid deepskyblue;
-            border-bottom: none;
+        $border: .15em solid deepskyblue;
+
+        .browser-wrapper__label {
+            border: $border;
             border-radius: .25em .25em 0 0;
+            border-bottom: none;
+        }
+
+        pre {
+            border-top: $border;
+            border-right: $border;
+            border-left: $border;
+        }
+
+        .browser-wrapper__label + pre {
+            border-top: none;
         }
 
         .browser-list {
-            border: .15em solid deepskyblue;
-            border-top: none;
+            border-bottom: $border;
+            border-right: $border;
+            border-left: $border;
             border-radius: 0 0 .25em .25em;
         }
     }
@@ -41,6 +54,16 @@
 
 .line {
     display: block;
+    border-radius: .2em;
+    margin: .1em 0;
+}
+
+.browser-wrapper__label {
+    margin: 0;
+    padding: .5em .5em 0 .5em;
+    color: #888;
+    line-height: 1.35;
+    background: #f5f2f0;
 }
 
 .browser-list {
