@@ -4,11 +4,7 @@
 
 .header {
     background: #fff;
-    padding-top: .5em;
-
-    .test-page & {
-        position: static;
-    }
+    padding-top: 1em;
 
     @include breakpoint(mama-bear) {
         div {
@@ -49,7 +45,7 @@
     }
 }
 
-.header-logo {
+.header__logo {
 
     h1 {
         font: 2.2em 'Montserrat', sans-serif;
@@ -63,7 +59,7 @@
         @include transition(color .25s ease-in-out);
     }
 
-    a.logo {
+    .header__link {
         color: #555;
 
         &:hover,

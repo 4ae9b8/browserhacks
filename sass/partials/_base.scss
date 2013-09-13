@@ -14,10 +14,7 @@ body {
       font-size:.925em;
     }
 
-    &.test-page {
-        margin-top: 0;
-    }
-
+    // Color stripes
     &:before {
         content: '';
         position: absolute;

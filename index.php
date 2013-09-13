@@ -40,23 +40,13 @@
 ?>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
-<!--
-    <article class="supra">
-        <section data-cols="1">
-            <div>
-                <h1>Browserhacks</h1>
-            </div>
-        </section>
-    </article>-->
-
-
     
     <!-- Social -->
-    <article data-high="2" class="social">
+    <article data-high="2" class="header">
         <section data-cols="3" class="btn-group">
-            <div class="header-logo">
+            <div class="header__logo">
                 <h1>
-                    <a href="http://browserhacks.com" class="logo">
+                    <a href="http://browserhacks.com" class="header__link">
                         Browser<span>hacks</span>
                     </a>
                 </h1>
@@ -80,13 +70,8 @@
             </div>
         </section>
 
-    <!-- Header -->
-    <article class="header">
         <section data-cols="2">
-            <!--<div>
-                <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
-            </div>-->
-            <div class="search"  data-type="search">
+            <div class="search" data-type="search">
                 <label for="search" class='visually-hidden'>Find a hack</label>
                 <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
             </div>
@@ -99,20 +84,11 @@
                     <input type="checkbox" name="show-test" id="show-test" title="Show / hide tests for your browser">
                     <label for="show-test" title="Show / hide tests for your browser">Enable tests</label>
                 </p>
-            </div><!--
-            <div data-type="search">
-                <p class="form-wrapper">
-                    <label for="search" class='visually-hidden'>Find a hack</label>
-                    <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
-                </p>
-                <p class='legacy-wrapper'>
-                    <input type="checkbox" name="show-legacy" id="show-legacy" title="Show / hide hacks for old browser">
-                    <label for="show-legacy" title="Show / hide hacks for old browser">Legacy Hacks</label>
-                </p>
-            </div>-->
+            </div>
         </section>
-    </article>    
+    </article>
 
+    <article class="ad">
         <section data-cols="1" data-valign="center">
             <div>
                 <div id="carbonads-container">
@@ -237,111 +213,62 @@
     </script>
 
     <script src="js/libs.js"></script>
-    
+    <script src="js/main.min.js"></script> 
+    <script src="js/browserhacks-test-page.js"></script>
+    <script src="js/lib/prism.min.js" data-manual="true"></script>
+    <script>    
+        // Run Prism once
+        Prism.highlightAll(false);
+  
+        // Split code blocks into lines
+        $('pre > code').each(function() {
+            var $code = $(this);
+            var lines = $code.html().split('\n');
+            var dump  = "";
+            var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
+
+            for(var i = 0, len = lines.length; i < len; i++) {
+                var hackClass = "hack_" + id + "_" + i;
+                dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
+            }
+
+            $code.html(dump);
+
+        }).on('click', '.line', function() {
+          _select(this);
+        });
+
+        // ------------
+        // Enable tests
+        $el = $('#show-test');
+        $el.on('click', function() {
+            var state  = !!$(this).attr('checked');
+            document.styleSheets[0].disabled = !state;
+            console.log(state);
+            tests(state); 
+        });
+        
+        // Defaults
+        $('#show-test').attr('checked', 'checked');
+        document.styleSheets[0].disabled = false;
+        tests(true);
+
+        // Sticky searchbar
+        // @TODO: rely on position: sticky if supporter
+        var $header = $('.search');
+        var origOffsetY = $header.offset().top;
+
+        function onScroll(e) {
+            window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
+        }
+
+        $(document).on('scroll', onScroll);
+    </script>
+
     <?php if (Browserhacks::isLive()): ?>
-        <script src="js/main.min.js"></script> 
-        <script src="js/browserhacks-test-page.js"></script>
-        <script src="js/lib/prism.min.js" data-manual="true"></script> 
-        <script>    
-            // Run Prism once
-            Prism.highlightAll(false);
-      
-            // Split code blocks into lines
-            $('pre > code').each(function() {
-                var $code = $(this);
-                var lines = $code.html().split('\n');
-                var dump  = "";
-                var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
-
-                for(var i = 0, len = lines.length; i < len; i++) {
-                    var hackClass = "hack_" + id + "_" + i;
-                    dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
-                }
-
-                $code.html(dump);
-
-            }).on('click', '.line', function() {
-              _select(this);
-            });
-
-            // ------------
-            // Enable tests
-            $el = $('#show-test');
-            $el.on('click', function() {
-                var state  = !!$(this).attr('checked');
-                document.styleSheets[0].disabled = !state;
-                console.log(state);
-                tests(state); 
-            });
-            
-            // Defaults
-            $('#show-test').attr('checked', 'checked');
-            document.styleSheets[0].disabled = false;
-            tests(true);
-
-            var $header = $('.search');
-            var origOffsetY = $header.offset().top;
-
-            function onScroll(e) {
-                window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
-            }
-
-            $(document).on('scroll', onScroll);
-            
-
-        </script>
-        <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
-    <?php else: ?>
-        <script src="js/main.min.js"></script> 
-        <script src="js/browserhacks-test-page.js"></script>
-        <script src="js/lib/prism.min.js" data-manual="true"></script> 
-        <script>    
-            // Run Prism once
-            Prism.highlightAll(false);
-      
-            // Split code blocks into lines
-            $('pre > code').each(function() {
-                var $code = $(this);
-                var lines = $code.html().split('\n');
-                var dump  = "";
-                var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
-
-                for(var i = 0, len = lines.length; i < len; i++) {
-                    var hackClass = "hack_" + id + "_" + i;
-                    dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
-                }
-
-                $code.html(dump);
-
-            }).on('click', '.line', function() {
-              _select(this);
-            });
-
-            // ------------
-            // Enable tests
-            $el = $('#show-test');
-            $el.on('click', function() {
-                var state  = !!$(this).attr('checked');
-                document.styleSheets[0].disabled = !state;
-                console.log(state);
-                tests(state); 
-            });
-            
-            // Defaults
-            $('#show-test').attr('checked', 'checked');
-            document.styleSheets[0].disabled = false;
-            tests(true);
-
-            var $header = $('.search');
-            var origOffsetY = $header.offset().top;
-
-            function onScroll(e) {
-                window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
-            }
-
-            $(document).on('scroll', onScroll);
-            
-        </script>
-   <?php endif; ?>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+            </script>
+    <?php endif; ?>
     </body>
 </html>
