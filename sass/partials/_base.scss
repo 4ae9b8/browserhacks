@@ -8,15 +8,9 @@
 body {
     font: 1.2em/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica","Arial", "Lucida Grande", sans-serif;
     position: relative;
-    margin-top: 6em;
-
-    @include breakpoint(mama-bear) { 
-      margin-top: 10em;
-    }
 
     @include breakpoint(baby-bear) { 
       font-size:.925em;
-      margin-top: 12em;
     }
 
     &.test-page {

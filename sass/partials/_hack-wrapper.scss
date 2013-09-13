@@ -4,6 +4,8 @@
  * regarding syntax highlighting
  */ 
 .browser-wrapper__hack {
+    position: relative;
+
     pre { 
         -webkit-overflow-scrolling: touch;
         overflow-scrolling: touch;
@@ -18,17 +20,27 @@
         }
     }
 
-    &.browser-wrapper__hack--legacy {
-        display: none;
-    }
-
     &[data-legacy=true] {
         display: none;
     }
 
     &:target {
-        border: 1px solid deepskyblue;
+        pre {
+            border: .15em solid deepskyblue;
+            border-bottom: none;
+            border-radius: .25em .25em 0 0;
+        }
+
+        .browser-list {
+            border: .15em solid deepskyblue;
+            border-top: none;
+            border-radius: 0 0 .25em .25em;
+        }
     }
+}
+
+.line {
+    display: block;
 }
 
 .browser-list {
@@ -59,5 +71,19 @@
 .browser-name { 
     @include breakpoint(mama-bear) {
         display: none; 
+    }
+}
+
+.browser-wrapper__link {
+    bottom: .5em;
+    right: .5em;
+    position: absolute;
+    display: block;
+    color: silver;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+    font-size: .8em;
+
+    @include breakpoint(mama-bear) { 
+        font-size: 1em;
     }
 }

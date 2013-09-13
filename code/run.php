@@ -79,6 +79,7 @@ foreach($browsers as $key => $val):
     $dump .= "<ul class='browser-list'>";
     $dump .= $caption;
     $dump .= "</ul>";
+    $dump .= "<a href='#hack-".$hack['id']."' class='browser-wrapper__link'>#</a>";
     $dump .= "</div>";
         
     // Set new last type

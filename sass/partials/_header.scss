@@ -3,13 +3,8 @@
  * ******* */
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     background: #fff;
-    z-index: 11;
-    box-shadow: 0 .65em .55em -.55em rgba(#000, .1);
+    //box-shadow: 0 .65em .55em -.55em rgba(#000, .1);
     padding-top: .5em;
 
     .test-page & {
