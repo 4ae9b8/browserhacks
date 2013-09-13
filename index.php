@@ -16,8 +16,8 @@
     <meta property="og:url" content="http://browserhacks.com">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="stylesheet" href="css/browserhacks-test-page.css">
+    <link rel="stylesheet" href="css/browserhacks.css">
     <link rel="shortcut icon" href="img/browserhacks.ico" type="image/x-icon">
     
     <!--[if IE]>
@@ -57,6 +57,16 @@
             <div>
                 <h1 class="header__title"><a href="/" class="logo">Browser<span>hacks</span></a></h1>
             </div>
+            <div class="options">
+                <p class='option-wrapper'>
+                    <input type="checkbox" name="show-legacy" id="show-legacy" title="Show / hide hacks for old browser">
+                    <label for="show-legacy" title="Show / hide hacks for old browser">Legacy Hacks</label>
+                </p>
+                <p class='option-wrapper'>
+                    <input type="checkbox" name="show-test" id="show-test" title="Show / hide tests for your browser">
+                    <label for="show-test" title="Show / hide tests for your browser">Enable tests</label>
+                </p>
+            </div><!--
             <div data-type="search">
                 <p class="form-wrapper">
                     <label for="search" class='visually-hidden'>Find a hack</label>
@@ -66,7 +76,7 @@
                     <input type="checkbox" name="show-legacy" id="show-legacy" title="Show / hide hacks for old browser">
                     <label for="show-legacy" title="Show / hide hacks for old browser">Legacy Hacks</label>
                 </p>
-            </div>
+            </div>-->
         </section>
     </article>
     
@@ -78,16 +88,24 @@
                     <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
                 </a>
             </div>
-            <div>
+
+            <!--<div>
                 <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
                     <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
                 </a>
-            </div>
+            </div>-->
+
             <div>
                 <a href="http://twitter.com/Browserhacks" target="_blank">
                     <button data-type="2"><span class="browserhacks-twitter"></span> @browserhacks</button>
                 </a>
             </div>
+
+            <div class="search"  data-type="search">
+                <label for="search" class='visually-hidden'>Find a hack</label>
+                <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
+            </div>
+            
         </section>
         
         <section data-cols="1" data-valign="center">
@@ -216,30 +234,16 @@
     <script src="js/libs.js"></script>
     
     <?php if (Browserhacks::isLive()): ?>
-        <script src="js/main.js"></script> 
-        <script src="js/lib/prism.min.js" data-manual="true"></script> 
-        <script>
-            Prism.highlightAll(false);
-      
-            $('pre > code').each(function() {
-                var $code = $(this);
-                var lines = $code.html().split('\n');
-                var dump  = "";
-
-                for(var i = 0, len = lines.length; i < len; i++) {
-                    dump += "<span class='line'>" + lines[i] + "</span>\n";
-                }
-
-                $code.html(dump);
-            });
-        </script>
         <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
     <?php else: ?>
-        <script src="js/main.js"></script> 
+        <script src="js/main.min.js"></script> 
+        <script src="js/browserhacks-test-page.js"></script>
         <script src="js/lib/prism.min.js" data-manual="true"></script> 
         <script>
+            // Run Prism once
             Prism.highlightAll(false);
       
+            // Split code blocks into lines
             $('pre > code').each(function() {
                 var $code = $(this);
                 var lines = $code.html().split('\n');
@@ -252,13 +256,25 @@
                 }
 
                 $code.html(dump);
-            });
 
-            $('pre > code').on('click', '.line', function() {
+            }).on('click', '.line', function() {
               _select(this);
             });
+
+            $el = $('#show-test');
+            $el.on('click', function() {
+                var state  = !!$(this).attr('checked');
+                document.styleSheets[0].disabled = !state;
+                console.log(state);
+                tests(state); 
+            });
+            
+            // Defaults
+            $('#show-test').attr('checked', 'checked');
+            document.styleSheets[0].disabled = false;
+            tests(true);
+            
         </script>
-        <script src="js/browserhacks-test-page.js"></script> 
    <?php endif; ?>
     </body>
 </html>

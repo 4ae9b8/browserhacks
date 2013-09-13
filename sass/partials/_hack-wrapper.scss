@@ -6,10 +6,14 @@
 .browser-wrapper__hack {
     position: relative;
 
+    > div {
+        background: #f5f2f0;
+        border-radius: .25em;
+    }
+
     pre { 
         -webkit-overflow-scrolling: touch;
         overflow-scrolling: touch;
-        background: #f5f2f0;
         margin-bottom: 0;
         padding: .5em;
         border-bottom: .1em solid rgba(0,0,0,.1);
@@ -24,31 +28,8 @@
         display: none;
     }
 
-    &:target {
-        $border: .15em solid deepskyblue;
-
-        .browser-wrapper__label {
-            border: $border;
-            border-radius: .25em .25em 0 0;
-            border-bottom: none;
-        }
-
-        pre {
-            border-top: $border;
-            border-right: $border;
-            border-left: $border;
-        }
-
-        .browser-wrapper__label + pre {
-            border-top: none;
-        }
-
-        .browser-list {
-            border-bottom: $border;
-            border-right: $border;
-            border-left: $border;
-            border-radius: 0 0 .25em .25em;
-        }
+    &:target > div {
+        border: .15em solid deepskyblue;
     }
 }
 
@@ -63,14 +44,12 @@
     padding: .5em .5em 0 .5em;
     color: #888;
     line-height: 1.35;
-    background: #f5f2f0;
 }
 
 .browser-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    background: #f5f2f0;
 }
 
 .browser-list__item {
@@ -102,8 +81,7 @@
     right: .5em;
     position: absolute;
     display: block;
-    color: silver;
-    padding: 0.25em 0.5em 0.25em 0.5em;
+    padding: 0.5em 0.75em;
     font-size: .8em;
 
     @include breakpoint(mama-bear) { 

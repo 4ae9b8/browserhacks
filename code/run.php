@@ -9,7 +9,7 @@ $dump      = "";
 
 // Dump files
 $cssDump = ".example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n.example-span { display: inline-block !important; }\n\r";
-$jsDump  = "var testClass = 'js-succeed';\n\r";
+$jsDump  = "var testClass = 'js-succeed';\n\rfunction enable_test() {\n\r";
 
 // Sort by browser
 foreach($browsers as $key => $val):
@@ -65,15 +65,19 @@ foreach($browsers as $key => $val):
     
     $legacy = $isLegacy === true ? "data-legacy='true'" : "data-legacy='false'";
 
-    $dump .= "<div class='browser-wrapper__hack' ".$legacy." id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'>";
+    $dump .= "<div class='browser-wrapper__hack' ".$legacy." id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'><div>";
     $dump .= !empty($hack['label']) ? "<p class='browser-wrapper__label'>/* ".$hack['label']." */</p>" : '';
     $dump .= "<pre class='language-".$hack['language']."'>";
-    $dump .= "<code>";
-    
-    // If it's a CSS thing
+    $dump .= "<code>".$hack['code']."</code>";
+    $dump .= "</pre>";
+    $dump .= "<ul class='browser-list'>".$caption."</ul>";
+    $dump .= "<a href='#hack-".$hack['id']."' class='browser-wrapper__link'>#</a>";
+    $dump .= "</div>";
+    $dump .= "</div>";
+
+    // If it's either CSS or JS, prepare the CSS/JS test files
     if($hack['language'] == 'css' || $hack['language'] == 'javascript') {
-      
-      $lines = explode("\n", $hack['test']); // Explode on line breaks
+      $lines = explode("\n", $hack['test']);
       
       for($i = 0; $i < count($lines); $i++) {
         $name  = "hack_".$hack['id']."_".$i;
@@ -87,20 +91,6 @@ foreach($browsers as $key => $val):
         }
       } 
     }
-
-    //$lines = explode("\n", $hack['code']); // Explode on line breaks
-
-    for($i = 0; $i < count($lines); $i++) {
-      //$dump .= "<span class='line'>".$lines[$i]."</span>\n";
-    }
-    $dump .= $hack['code'];
-    $dump .= "</code>";
-    $dump .= "</pre>";
-    $dump .= "<ul class='browser-list'>";
-    $dump .= $caption;
-    $dump .= "</ul>";
-    $dump .= "<a href='#hack-".$hack['id']."' class='browser-wrapper__link'>#</a>";
-    $dump .= "</div>";
         
     // Set new last type
     $last_type = $hack['type'];
@@ -112,6 +102,7 @@ foreach($browsers as $key => $val):
 
 endforeach; 
 
+$jsDump .= "}\n\rfunction disable_test() {\n    $('.'+testClass).removeClass(testClass);\n}\n\rfunction tests(state) {\n    if(state == true) enable_test();\n    if(state == false) disable_test();\n}";
 echo $dump;
 
 // Create/update test files

@@ -468,7 +468,20 @@
   });
 
 
+  App.Views.Legacy = Backbone.View.extend({
+    el : $('#show-test'),
 
+    childs : {
+      legacy : $('[data-legacy=true]')
+    },
+
+    initialize : function() {
+      this.$el.on('click', _.bind(function() {
+          var state = this.$el.attr('checked') ? 'block' : 'none';
+          this.childs.legacy.css('display', state);
+      }, this));
+    }
+  });
 
 
   /* 

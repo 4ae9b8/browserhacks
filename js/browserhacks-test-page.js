@@ -1,4 +1,5 @@
 var testClass = 'js-succeed';
+function enable_test() {
 var hack_4_0 = !!window.chrome;
 if (hack_4_0) $('.hack_4_0').addClass(testClass);
 var hack_6_0 = !!window.chrome && !!window.chrome.webstore;
@@ -87,4 +88,11 @@ if (hack_79_0) $('.hack_79_0').addClass(testClass);
 if (hack_81_0) $('.hack_81_0').addClass(testClass);
 var hack_5_0 = 'WebkitAppearance' in document.documentElement.style;
 if (hack_5_0) $('.hack_5_0').addClass(testClass);
-
+}
+function disable_test() {
+    $('.'+testClass).removeClass(testClass);
+}
+function tests(state) {
+    if(state == true) enable_test();
+    if(state == false) disable_test();
+}

@@ -2,13 +2,7 @@
  * $SEARCH *
  * ******* */
 
-.form-wrapper {
-    margin: 0;
-    padding: .5em 0 .5em .5em;
-    position: relative;
-    width: 60%;
-    float: left;
-
+ .search {
     input {
         width: 100%;
         background: rgba(#eee, .3);
@@ -26,7 +20,17 @@
             color: #000;
         }
     }
+ }
 
+ /*
+
+.form-wrapper {
+    margin: 0;
+    padding: .5em 0 .5em .5em;
+    position: relative;
+    float: right;
+
+    /*
     @include breakpoint(papa-bear) {
         &:before {
             content: '';
@@ -56,8 +60,9 @@
         }
     }
 }
+*/
 
-.legacy-wrapper {
+.option-wrapper {
     float: right;
     width: 40%;
     font-size: 1.25em;
