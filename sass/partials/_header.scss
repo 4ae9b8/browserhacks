@@ -30,39 +30,6 @@
     }
 }
 
-.header__title {
-    font: 3.35em 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-    letter-spacing: -2px;
-
-    span {
-        color: #f77918;
-        @include transition(color .25s ease-in-out);
-    }
-
-    a.logo {
-        color: #555;
-
-        &:hover,
-        &:focus {
-            color: #f77918;
-
-            span {
-                color: #555;
-            }
-        }
-    }    
-
-    @include breakpoint(mama-bear) {
-        text-align: center;
-    }
-
-    @include breakpoint(baby-bear) {
-        font-size: 2.35em;
-    }
-}
-
 .shortcut {
     @include inline-block(middle);
     background: #f5f2f0;
@@ -82,21 +49,52 @@
     }
 }
 
-.supra {
-    $stripes: ();
-    @each $b in $browsers {
-      $stripes: append($stripes, nth($b, 2));
-    }
-    @include stripes($stripes, to right);
+.header-logo {
 
     h1 {
-        margin: 0;
-        padding: 0;
-        color: #555;
-        $v: .1em;
-        text-shadow: 0 $v white, $v $v white, $v 0 white, $v $v*-1 white, 0 $v*-1 white, $v*-1 $v white, $v*-1 0 white, $v*-1 $v*-1 white;
-        font-size: 1.2em;
+        font: 2.2em 'Montserrat', sans-serif;
         text-transform: uppercase;
-        font-family: 'Montserrat', sans-serif;
+        letter-spacing: -2px;
+        margin: 0;
+    }
+
+    span {
+        color: #f77918;
+        @include transition(color .25s ease-in-out);
+    }
+
+    a.logo {
+        color: #555;
+
+        &:hover,
+        &:focus {
+            color: #f77918;
+
+            span {
+                color: #555;
+            }
+        }
+    }    
+}
+
+.social {
+    @include breakpoint(mama-bear) {
+        .header-logo {
+            width: 100%;
+            text-align: center;
+        }
+
+        .header-logo + div,
+        .header-logo + div + div {
+            width: 50%;
+        }
+    }
+
+    @include breakpoint(baby-bear) {
+        .header-logo,
+        .header-logo + div,
+        .header-logo + div + div {
+            width: 100%;
+        }
     }
 }

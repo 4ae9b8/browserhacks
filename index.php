@@ -40,14 +40,45 @@
 ?>
 
 <body id="browserhacks" data-max-width="1024" data-theme="browserhacks" data-auto-extend="true">
-
+<!--
     <article class="supra">
         <section data-cols="1">
             <div>
                 <h1>Browserhacks</h1>
             </div>
         </section>
-    </article>
+    </article>-->
+
+
+    
+    <!-- Social -->
+    <article data-high="2" class="social">
+        <section data-cols="3" class="btn-group">
+            <div class="header-logo">
+                <h1>
+                    <a href="http://browserhacks.com" class="logo">
+                        Browser<span>hacks</span>
+                    </a>
+                </h1>
+            </div>
+            <div>
+                <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
+                    <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
+                </a>
+            </div>
+
+            <!--<div>
+                <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
+                    <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
+                </a>
+            </div>-->
+
+            <div>
+                <a href="http://twitter.com/Browserhacks" target="_blank">
+                    <button data-type="2"><span class="browserhacks-twitter"></span> @browserhacks</button>
+                </a>
+            </div>
+        </section>
 
     <!-- Header -->
     <article class="header">
@@ -80,36 +111,8 @@
                 </p>
             </div>-->
         </section>
-    </article>
-    
-    <!-- Social -->
-    <article data-high="2" class="social">
-        <section data-cols="3" class="btn-group">
-            <div>
-                <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
-                </a>
-            </div>
+    </article>    
 
-            <!--<div>
-                <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                    <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
-                </a>
-            </div>-->
-
-            <div>
-                <a href="http://twitter.com/Browserhacks" target="_blank">
-                    <button data-type="2"><span class="browserhacks-twitter"></span> @browserhacks</button>
-                </a>
-            </div>
-
-            <!--<div class="search"  data-type="search">
-                <label for="search" class='visually-hidden'>Find a hack</label>
-                <input type="text" name="search" id="search" placeholder="Search e.g. IE 6" spellcheck="false">
-            </div>-->
-            
-        </section>
-        
         <section data-cols="1" data-valign="center">
             <div>
                 <div id="carbonads-container">

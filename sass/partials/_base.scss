@@ -8,6 +8,7 @@
 body {
     font: 1.2em/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica","Arial", "Lucida Grande", sans-serif;
     position: relative;
+    padding-top: 1em;
 
     @include breakpoint(baby-bear) { 
       font-size:.925em;
@@ -15,6 +16,21 @@ body {
 
     &.test-page {
         margin-top: 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: .5em;
+        $stripes: ();
+        @each $b in $browsers {
+          $stripes: append($stripes, nth($b, 2));
+        }
+        @include stripes($stripes, to right);
+
     }
 }
 
