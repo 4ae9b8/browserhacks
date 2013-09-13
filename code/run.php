@@ -8,8 +8,8 @@ $last_type = null;
 $dump      = "";
 
 // Dump files
-$cssDump = ".example-span, .js-succeed { padding: .2em; margin: .2em 0; display: block; border-radius: 3px; }\n.example-span, .js-succeed { background: lightgreen; }\n.example-span { display: inline-block !important; }\n\r";
-$jsDump  = "var testClass = 'js-succeed';\n\rfunction enable_test() {\n\r";
+$cssDump = "";
+$jsDump  = "var testClass='js-succeed';function enable_test(){";
 
 // Sort by browser
 foreach($browsers as $key => $val):
@@ -42,31 +42,36 @@ foreach($browsers as $key => $val):
     }
 
     // Output the hack
-    $isLegacy    = false;
-    $caption = "";
+    $isLegacy = false;
+    $caption  = "";
 
     // Creation of the caption (hacks legend) for the current hack
     foreach($hack['browsers'] as $name => $version) {
       // Get version of hacked browser for current hack
-      $displayVersion = returnVersion($version);
-
-      // Check if current hack is legacy
-      $isLegacy       = isLegacy($displayVersion, $browsers[$name]['legacy']);
+      $version = returnVersion($version);
 
       // Replace pipes with slashes for better readability
-      $displayVersion = str_replace('|','/', $displayVersion); 
+      $displayVersion = str_replace('|','/', $version); 
 
       $caption .= "<li class='browser-list__item'>";
       $caption .= " <span class='browser-icon browserhacks-".$name."'></span>";
       $caption .= " <span class='browser-name'>".ucfirst($browsers[$name]['name'])."</span>";
       $caption .= " <span class='browser-version'>".$displayVersion."</span>";
       $caption .= "</li>"; 
+
+      // Check if current hack is legacy
+      $isLegacy = isLegacy($version, $browsers[$name]['legacy']);
     }
     
-    $legacy = $isLegacy === true ? "data-legacy='true'" : "data-legacy='false'";
-
-    $dump .= "<div class='browser-wrapper__hack' ".$legacy." id='hack-".$hack['id']."' data-version='".$hack['browsers'][$key]."'><div>";
-    $dump .= !empty($hack['label']) ? "<p class='browser-wrapper__label'>/* ".$hack['label']." */</p>" : '';
+    $dump .= "<div 
+                class='browser-wrapper__hack' 
+                id='hack-".$hack['id']."' 
+                data-legacy='".var_export($isLegacy, true)."'
+                data-version='".$hack['browsers'][$key]."'>";
+    $dump .= "<div>";
+    $dump .= !empty($hack['label']) 
+              ? "<p class='browser-wrapper__label'>/* ".$hack['label']." */</p>" 
+              : '';
     $dump .= "<pre class='language-".$hack['language']."'>";
     $dump .= "<code>".$hack['code']."</code>";
     $dump .= "</pre>";
@@ -80,14 +85,14 @@ foreach($browsers as $key => $val):
       $lines = explode("\n", $hack['test']);
       
       for($i = 0; $i < count($lines); $i++) {
-        $name  = "hack_".$hack['id']."_".$i;
+        $name  = "hack_".$hack['id']."_".$i; // Name the class
 
         if($hack['language'] == 'css') {
-          $cssDump .= str_replace('.selector',".".$name, $lines[$i])."\n\r";
+          $cssDump .= str_replace('.selector',".".$name, $lines[$i]);
         } 
         else if($hack['language'] == 'javascript') {
-          $jsDump .= "var ".$name." = ".$hack['test']."\n";
-          $jsDump .= "if (".$name.") $('.".$name."').addClass(testClass);\n\r";
+          $jsDump .= "var ".$name."=".$hack['test'];
+          $jsDump .= "if(".$name.") $('.".$name."').addClass(testClass);";
         }
       } 
     }
@@ -97,12 +102,12 @@ foreach($browsers as $key => $val):
 
   endforeach;
 
-  $dump .= "  </section>";
+  $dump .= "</section>";
   $dump .= "</article>";
 
 endforeach; 
 
-$jsDump .= "}\n\rfunction disable_test() {\n    $('.'+testClass).removeClass(testClass);\n}\n\rfunction tests(state) {\n    if(state == true) enable_test();\n    if(state == false) disable_test();\n}";
+$jsDump .= "}function disable_test(){\$('.'+testClass).removeClass(testClass);}function tests(state){if(state==true)enable_test();if(state==false)disable_test();}";
 echo $dump;
 
 // Create/update test files
@@ -112,11 +117,9 @@ $JSFile  = "js/browserhacks-test-page.js";
 $currentCSSFile = file_get_contents($CSSFile);
 $currentJSFile  = file_get_contents($JSFile);
 
-if($currentCSSFile != $cssDump) {
-  file_put_contents($CSSFile , $cssDump);
-}
+if($currentCSSFile != $cssDump)
+  file_put_contents($CSSFile, $cssDump);
 
-if($currentJSFile  != $jsDump) {
-  file_put_contents($JSFile  ,  $jsDump);
-}
+if($currentJSFile != $jsDump)
+  file_put_contents($JSFile, $jsDump);
 ?>

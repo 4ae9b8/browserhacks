@@ -261,6 +261,8 @@
               _select(this);
             });
 
+            // ------------
+            // Enable tests
             $el = $('#show-test');
             $el.on('click', function() {
                 var state  = !!$(this).attr('checked');
