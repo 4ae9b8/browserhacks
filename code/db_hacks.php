@@ -537,6 +537,14 @@ $hacks = array(
   ),*/
   array(
     'type'     => 'javascript',
+    'browsers' => array('ie'=>'*'),
+    'label'    => '',
+    'language' => 'javascript',
+    'code'     => "var isIE = !!document.uniqueID;",
+    'test'     => "!!document.uniqueID;"
+  ),
+  array(
+    'type'     => 'javascript',
     'browsers' => array('ie'=>'7'),
     'label'    => '',
     'language' => 'javascript',
