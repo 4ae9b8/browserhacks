@@ -913,7 +913,7 @@
   {
     "type": "media",
     "browsers": {
-      "ch": "22+"
+      "ch": "22|23|24|25|26|27|28"
     },
     "label": "",
     "language": "css",
