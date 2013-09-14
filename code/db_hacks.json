@@ -909,5 +909,16 @@
     "code": "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
     "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
     "safe": false
+  },
+  {
+    "type": "media",
+    "browsers": {
+      "ch": "22+"
+    },
+    "label": "",
+    "language": "css",
+    "code": "@media \\0 screen {}",
+    "test": "@media \\0 screen { .selector { background: lightgreen; } }",
+    "safe": false
   }
 ]
