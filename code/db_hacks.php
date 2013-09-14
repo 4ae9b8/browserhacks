@@ -792,5 +792,5 @@ $hacks = array(
 
 // Adding a unique ID to each hack
 for($i = 0; $i < count($hacks); $i++) {
-    $hacks[$i]['id'] = $i + 1;
+    $hacks[$i]['id'] = md5($hacks[$i]['code']);
 }

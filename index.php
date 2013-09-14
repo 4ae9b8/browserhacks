@@ -53,7 +53,7 @@
             </div>
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
-                    <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
+                    <button data-type="2"><span class="browserhacks-github"></span> Contribute on GitHub</button>
                 </a>
             </div>
 
@@ -162,15 +162,10 @@
 
     <!-- Social -->
     <article data-high="4">
-        <section data-cols="3" class="btn-group">
+        <section data-cols="2" class="btn-group">
             <div>
                 <a href="https://github.com/4ae9b8/browserhacks" target="_blank">
                     <button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button>
-                </a>
-            </div>
-            <div>
-                <a href="http://test.browserhacks.<?php echo Browserhacks::getTLD(); ?>" target="_blank">
-                    <button data-type="2"><span class="browserhacks-magic"></span> Almighty test page</button>
                 </a>
             </div>
             <div>

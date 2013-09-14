@@ -76,7 +76,7 @@ foreach($browsers as $key => $val):
     $dump .= "<code>".$hack['code']."</code>";
     $dump .= "</pre>";
     $dump .= "<ul class='browser-list'>".$caption."</ul>";
-    //$dump .= "<a href='#hack-".$hack['id']."' class='browser-wrapper__link'>#</a>";
+    $dump .= "<a href='#hack-".$hack['id']."' class='browser-wrapper__link'>#</a>";
     $dump .= "</div>";
     $dump .= "</div>";
 
