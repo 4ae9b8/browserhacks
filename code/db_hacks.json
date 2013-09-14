@@ -917,8 +917,8 @@
     },
     "label": "",
     "language": "css",
-    "code": "@media \\0 screen {}",
-    "test": "@media \\0 screen { .selector { background: lightgreen; } }",
+    "code": "@media \\\\0 screen {}",
+    "test": "@media \\\\0 screen { .selector { background: lightgreen; } }",
     "safe": false
   }
 ]
