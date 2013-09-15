@@ -10,10 +10,9 @@ How to?
 -------
 
  1. Checkout this branch
- 2. run `grunt dev`
-
-Browserhacks should run on `http://localhost:8000`.
-You can edit scss or the handelbars template in ./assemble/templates/(layout|pages)
+ 2. `npm install`
+ 3. run `grunt dev`
+ 4. Browserhacks should run on `http://localhost:8000`. You can edit scss or the handelbars template in ./assemble/templates/(layout|pages)
 
 
 Reminder!
