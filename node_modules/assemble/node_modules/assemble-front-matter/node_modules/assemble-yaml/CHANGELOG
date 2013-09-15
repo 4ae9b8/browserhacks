@@ -1,0 +1,4 @@
+v0.1.0:
+  date: "2013-08-11"
+  changes:
+    - Initial setup - Migrated from main Assemble repo

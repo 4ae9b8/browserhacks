@@ -1,0 +1,11 @@
+{
+  "name": "assemble-front-matter",
+  "version": "0.1.0",
+  "repo": "assemble/assemble-front-matter",
+  "main": [
+    "./lib/index.js"
+  ],
+  "dependencies": {
+    "assemble-yaml": "~0.1.0"
+  }
+}

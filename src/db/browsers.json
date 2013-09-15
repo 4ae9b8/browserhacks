@@ -1,0 +1,26 @@
+{
+  "an": {
+    "name": "android",
+    "legacy": "2.3"
+  },
+  "ch": {
+    "name": "chrome",
+    "legacy": "1"
+  },
+  "fx": {
+    "name": "firefox",
+    "legacy": "3.6"
+  },
+  "ie": {
+    "name": "Internet Explorer",
+    "legacy": "6"
+  },
+  "op": {
+    "name": "opera",
+    "legacy": "9"
+  },
+  "sa": {
+    "name": "safari",
+    "legacy": "4"
+  }
+}
