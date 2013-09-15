@@ -9,10 +9,12 @@ Browserhacks is an extensive list of browser specific CSS and JavaScript hacks f
 How to?
 -------
 
-1. Pick the hack you want
-2. Copy it into your stylesheet
-3. Add the style you want between the braces
-4. Enjoy the new styles for the browser you targeted!
+ 1. Checkout this branch
+ 2. run `grunt dev`
+
+Browserhacks should run on `http://localhost:8000`.
+You can edit scss or the handelbars template in ./assemble/templates/(layout|pages)
+
 
 Reminder!
 ---------
