@@ -207,10 +207,9 @@
         <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
     </script>
 
-    <script src="js/libs.js"></script>
+    <script src="js/libs.js" data-manual="true"></script>
     <script src="js/main.min.js"></script> 
     <script src="js/browserhacks-test-page.js"></script>
-    <script src="js/lib/prism.min.js" data-manual="true"></script>
     <script>    
         // Run Prism once
         Prism.highlightAll(false);
