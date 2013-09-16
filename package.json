@@ -1,7 +1,7 @@
 {
   "name": "browserhacks",
   "version": "0.0.1",
-  "description": "Source of Hacks",
+  "description": "Source of CSS and JS Hacks",
   "author": "",
   "license": "MIT",
   "devDependencies": {

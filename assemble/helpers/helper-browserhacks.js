@@ -7,6 +7,7 @@
       }
       return options.inverse(this);
     },
+
     fromObj = function(obj, /*keys ...*/ options){
         var result = obj;
         for (var i=1;i<arguments.length;i++){
@@ -16,6 +17,7 @@
         }
         return result;
     },
+    
     setValue = function(key, value, option) {
       this[key] = value;
     },

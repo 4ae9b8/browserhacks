@@ -39,15 +39,12 @@
     margin: .1em 0;
 }
 
-.example-span, .run-test .js-succeed {
+/* Highlight tests only when asked */
+.run-test .js-succeed {
     padding: .2em;
     margin: .2em 0;
     display: block;
     background: lightgreen; 
-}
-
-.example-span {
-    display: inline-block !important;
 }
 
 .browser-wrapper__label {

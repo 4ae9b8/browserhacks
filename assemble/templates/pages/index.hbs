@@ -1,4 +1,5 @@
 {{! This dose go against no logic in templates but works very well }}
+
 {{#each browsers}}
   <article class='browser-wrapper {{@key}}' data-high='3' id='{{@key}}'>
     <section class='browser-wrapper__heading' data-cols='1'>
@@ -11,8 +12,11 @@
       </div>
 
       {{! Get hacks for this browser }}
+
       {{#eachFilteredBrowser ../hacks @key}}
+
         {{! If current type (type) is different from type of last hack (../lasttype) display type heading }}
+
         {{#isnt type lasttype}}
           </section>
           <section class='browser-wrapper__subheading' data-cols='1' data-type='{{type}}-parent'>
@@ -24,7 +28,7 @@
 
         {{/isnt}}
 
-        <div class='browser-wrapper__hack' id='hack-{{id}}' data-legacy='false' data-version='{{fromObj browsers ../browser}}'>
+        <div class='browser-wrapper__hack' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='false' data-version='{{fromObj browsers @key}}'>
           <div>
           {{#if label}}
             <p class='browser-wrapper__label'>{{label}}</p>

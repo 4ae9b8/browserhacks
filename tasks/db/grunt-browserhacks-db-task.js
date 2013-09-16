@@ -20,6 +20,7 @@ module.exports = function(grunt) {
     hacks.forEach(function(hack){
       addId(hack);
       cssLint(hack);
+      //@TODO isLegacy(hack);
 
       // Run test then sort.
       typeArr = typeArrays[hack.type] || [];
