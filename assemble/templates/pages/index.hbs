@@ -28,7 +28,7 @@
 
         {{/isnt}}
 
-        <div class='browser-wrapper__hack' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{isLegacy browsers @key ../../browsers }}' data-version='{{fromObj browsers @key}}'>
+        <div class='browser-wrapper__hack' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
           <div>
           {{#if label}}
             <p class='browser-wrapper__label'>{{label}}</p>
@@ -39,7 +39,7 @@
               <li class='browser-list__item'>
                 <span class='browser-icon browserhacks-{{@key}}'></span>
                 <span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>
-                <span class='browser-version'>{{formatVersion ../browsers @key}}</span>
+                <span class='browser-version'>{{fromObj ../browsers @key 'humanVersion'}}</span>
               </li>
             {{/each}}
           </ul>
