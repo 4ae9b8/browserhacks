@@ -429,6 +429,7 @@
     },
 
     // Listen to keydown to jump to a specific browser
+    // @TODO generate this from browsers.json
     jumpToBrowser : function(e) {
         var el, 
             specialKey = e.metaKey || e.ctrlKey;
@@ -445,10 +446,6 @@
     }
   });
 
-
-
-  
-
   /**
    * Show / hide lecacy browsers.
    */
@@ -462,24 +459,9 @@
     initialize : function() {
         this.$el.on('click', _.bind(function() {
             var state = this.$el.attr('checked') ? 'block' : 'none';
+            console.log(state);
             this.childs.legacy.css('display', state);
         }, this));
-    }
-  });
-
-
-  App.Views.Legacy = Backbone.View.extend({
-    el : $('#show-test'),
-
-    childs : {
-      legacy : $('[data-legacy=true]')
-    },
-
-    initialize : function() {
-      this.$el.on('click', _.bind(function() {
-          var state = this.$el.attr('checked') ? 'block' : 'none';
-          this.childs.legacy.css('display', state);
-      }, this));
     }
   });
 

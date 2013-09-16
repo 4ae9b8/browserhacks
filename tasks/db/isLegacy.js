@@ -1,5 +1,3 @@
-
-
 var isLegacy = function(version, limit){
   // If version is *
   if(version == "*")
