@@ -17,7 +17,7 @@
         }
         return result;
     },
-    
+
     setValue = function(key, value, option) {
       this[key] = value;
     },
@@ -30,8 +30,8 @@
         var continuous = true;
 
         for (var i=0;i< version.length-1;i++){
-          var thisV = parseInt(version[i], 10),
-              nextV = parseInt(version[i+1],10);
+          var thisV = parseFloat(version[i], 10),
+              nextV = parseFloat(version[i+1],10);
           if (thisV+1 !== nextV){
             continuous = false;
             break;
@@ -61,6 +61,41 @@
         }
       }
       return result;
+    },
+
+    isLegacy = function(hackBrowsers, currentBrowserName, allBrowsers){
+      var version = formatVersion.call(this, hackBrowsers, currentBrowserName),
+          limit   = parseFloat( allBrowsers[currentBrowserName].legacy , 10 );
+
+
+      console.log(version, limit);
+
+      // If $version is *
+      if(version == "*")
+        return 'false';
+
+      // If last character of version is +
+      if(version[version.length-1] === '+')
+        return 'false';
+
+      // If $version contains |, we break it down to have the last int
+      if(version.indexOf('|') > 0) {
+        version =  version.substr(version.lastIndexOf('|'));
+      }
+
+      // If version contains - but not at the end
+      if(version.indexOf('-') > 0 && version[version.length-1] !== '-') {
+        version = version.substr(version.lastIndexOf('-'));
+      }
+
+      // If the version is less than or equals to $limit
+      if(parseFloat(version) <= limit){
+        return 'true';
+      }
+
+
+      // Else
+      return 'false';
     };
 
 
@@ -68,6 +103,7 @@
     Handlebars.registerHelper('fromObj',             fromObj);
     Handlebars.registerHelper('setValue',            setValue);
     Handlebars.registerHelper('formatVersion',       formatVersion);
+    Handlebars.registerHelper('isLegacy',            isLegacy);
     Handlebars.registerHelper('eachFilteredBrowser', eachFilteredBrowser);
 
   };
