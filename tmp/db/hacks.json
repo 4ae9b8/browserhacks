@@ -415,7 +415,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isChromium = !!window.chrome;",
-    "test": "!!window.chrome;",
+    "test": "!!window.chrome",
     "safe": false,
     "id": "dee2c3ab477a0324b6a2283c434108c8"
   },
@@ -429,7 +429,7 @@
     "label": "Webkit",
     "language": "javascript",
     "code": "var isWebkit = 'WebkitAppearance' in document.documentElement.style;",
-    "test": "'WebkitAppearance' in document.documentElement.style;",
+    "test": "'WebkitAppearance' in document.documentElement.style",
     "safe": false,
     "id": "dbcf58b998334c91bca391a786104338"
   },
@@ -441,7 +441,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isChrome = !!window.chrome && !!window.chrome.webstore;",
-    "test": "!!window.chrome && !!window.chrome.webstore;",
+    "test": "!!window.chrome && !!window.chrome.webstore",
     "safe": false,
     "id": "eccc7dba00901e9aaeffec592ce1f82c"
   },
@@ -453,7 +453,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = !!window.sidebar;",
-    "test": "!!window.sidebar;",
+    "test": "!!window.sidebar",
     "safe": false,
     "id": "bc74b0938bafbf5176b9430961353b77"
   },
@@ -465,7 +465,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = 'MozAppearance' in document.documentElement.style;",
-    "test": "'MozAppearance' in document.documentElement.style;",
+    "test": "'MozAppearance' in document.documentElement.style",
     "safe": false,
     "id": "ce7e6261734828e5c6726be60a80f928"
   },
@@ -477,7 +477,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = !!navigator.userAgent.match(/firefox/i);",
-    "test": "!!navigator.userAgent.match(/firefox/i);",
+    "test": "!!navigator.userAgent.match(/firefox/i)",
     "safe": false,
     "id": "b3c30c5aee06b9717eda9a5266f0eb07"
   },
@@ -489,7 +489,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = !!window.globalStorage;",
-    "test": "!!window.globalStorage;",
+    "test": "!!window.globalStorage",
     "safe": false,
     "id": "245829712a4b69641301103cc22e36d1"
   },
@@ -501,7 +501,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = typeof InstallTrigger !== 'undefined';",
-    "test": "typeof InstallTrigger !== 'undefined';",
+    "test": "typeof InstallTrigger !== 'undefined'",
     "safe": false,
     "id": "5a1cb80ceddd743787b315c9b7d2a9d5"
   },
@@ -513,7 +513,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = /a/[-1]=='a';",
-    "test": "/a/[-1]=='a';",
+    "test": "/a/[-1]=='a'",
     "safe": false,
     "id": "d99de65d2582f524f7244f4d8409d6fb"
   },
@@ -525,7 +525,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = (function x(){})[-6]=='x';",
-    "test": "(function x(){})[-6]=='x';",
+    "test": "(function x(){})[-6]=='x'",
     "safe": false,
     "id": "04f69fb60016138076b823155e984107"
   },
@@ -537,7 +537,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = (function x(){})[-5]=='x';",
-    "test": "(function x(){})[-5]=='x';",
+    "test": "(function x(){})[-5]=='x'",
     "safe": false,
     "id": "0c2a6587c43ad573dec07b4a651fd4f7"
   },
@@ -549,7 +549,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !window.XMLHttpRequest;",
-    "test": "document.all && !window.XMLHttpRequest;",
+    "test": "document.all && !window.XMLHttpRequest",
     "safe": false,
     "id": "03472e2d8dc3db02e71eee8bf9146dc5"
   },
@@ -561,7 +561,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.compatMode;",
-    "test": "document.all && document.compatMode;",
+    "test": "document.all && document.compatMode",
     "safe": false,
     "id": "a3e8f965193032bb6100e21a892ae4db"
   },
@@ -573,7 +573,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !document.querySelector;",
-    "test": "document.all && !document.querySelector;",
+    "test": "document.all && !document.querySelector",
     "safe": false,
     "id": "97d30c60bf089f00e24cad546a668ee7"
   },
@@ -585,7 +585,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && window.XMLHttpRequest && !document.querySelector;",
-    "test": "document.all && window.XMLHttpRequest && !document.addEventListener;",
+    "test": "document.all && window.XMLHttpRequest && !document.addEventListener",
     "safe": false,
     "id": "c20bb618bd84abb4ca0c6c73800e12ec"
   },
@@ -597,7 +597,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && window.XMLHttpRequest;",
-    "test": "document.all && window.XMLHttpRequest;",
+    "test": "document.all && window.XMLHttpRequest",
     "safe": false,
     "id": "852ae8003cf03813d4d75ebe4c3cd898"
   },
@@ -609,7 +609,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.querySelector;",
-    "test": "document.all && document.querySelector;",
+    "test": "document.all && document.querySelector",
     "safe": false,
     "id": "99981129ff3b2b3a6cb52391716f5d8b"
   },
@@ -621,7 +621,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !document.addEventListener;",
-    "test": "document.all && !document.addEventListener;",
+    "test": "document.all && !document.addEventListener",
     "safe": false,
     "id": "e2cb1ecfc2d67744c30566414042c53c"
   },
@@ -633,7 +633,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.querySelector && !document.addEventListener;",
-    "test": "document.all && document.querySelector && !document.addEventListener;",
+    "test": "document.all && document.querySelector && !document.addEventListener",
     "safe": false,
     "id": "c35e14c072b093320f9fb583d4724fc8"
   },
@@ -645,7 +645,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !window.atob;",
-    "test": "document.all && !window.atob;",
+    "test": "document.all && !window.atob",
     "safe": false,
     "id": "e71d8692f65334173fee715c222cb805"
   },
@@ -657,7 +657,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.addEventListener && !window.atob;",
-    "test": "document.all && document.addEventListener && !window.atob;",
+    "test": "document.all && document.addEventListener && !window.atob",
     "safe": false,
     "id": "3ccf60c3e853ba37d5a42ab9654c5400"
   },
@@ -669,7 +669,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.addEventListener;",
-    "test": "document.all && document.addEventListener;",
+    "test": "document.all && document.addEventListener",
     "safe": false,
     "id": "e19dff0ea4b8edbf29f9b1b64d5bb1aa"
   },
@@ -681,7 +681,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && window.atob;",
-    "test": "document.all && window.atob;",
+    "test": "document.all && window.atob",
     "safe": false,
     "id": "2adf6a094f55d62e5d392e1639874a53"
   },
@@ -693,7 +693,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = /*@cc_on!@*/false;",
-    "test": "/*@cc_on!@*/false;",
+    "test": "/*@cc_on!@*/false",
     "safe": false,
     "id": "51eca7694aed2dcc3266bc9c8de72872"
   },
@@ -705,7 +705,7 @@
     "label": "Check for Internet Explorer version",
     "language": "javascript",
     "code": "var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;",
-    "test": "/*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;",
+    "test": "/*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0",
     "safe": false,
     "id": "5320ac4c34021dd71500e5df46cdc728"
   },
@@ -717,7 +717,7 @@
     "label": "Check for Internet Explorer version",
     "language": "javascript",
     "code": "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
-    "test": "(function() { if (new RegExp(\"MSIE ([0-9]{1,}[\\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
+    "test": "new RegExp('MSIE ([0-9]{1,}[\\.0-9]{0,})').exec(navigator.userAgent) != null",
     "safe": false,
     "id": "d5ce2e767150e222dee23513236d18c1"
   },
@@ -729,7 +729,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
-    "test": "navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
+    "test": "navigator.appVersion.indexOf(\"MSIE 7.\") !== -1",
     "safe": false,
     "id": "9433f56f91129911581d66a555ce5a8c"
   },
@@ -741,7 +741,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = '\\v'=='v';",
-    "test": "'\\v'=='v';",
+    "test": "'\\v'=='v'",
     "safe": false,
     "id": "a43251169f364d54a7a8d9fe0686267d"
   },
@@ -753,7 +753,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = !+'\\v1';",
-    "test": "!+'\\v1';",
+    "test": "!+'\\v1'",
     "safe": false,
     "id": "f4dc26dee810cf17378f81e5a1c3bb38"
   },
@@ -765,7 +765,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;",
-    "test": "eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;",
+    "test": "eval(\"/*@cc_on!@*/false\") && document.documentMode === 10",
     "safe": false,
     "id": "00a6520d3a8eb63235c297f57a954fb0"
   },
@@ -777,7 +777,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.body.style.msTouchAction !== undefined;",
-    "test": "document.body.style.msTouchAction !== undefined;",
+    "test": "document.body.style.msTouchAction !== undefined",
     "safe": false,
     "id": "a2481568d22565334dcf541979e164ac"
   },
@@ -789,7 +789,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = window.navigator.msPointerEnabled;",
-    "test": "window.navigator.msPointerEnabled;",
+    "test": "window.navigator.msPointerEnabled",
     "safe": false,
     "id": "2f32c95ac8c021c463de0fdf685acb29"
   },
@@ -801,7 +801,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = 'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
-    "test": "'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
+    "test": "'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style",
     "safe": false,
     "id": "ffee86f252accaf9db9ed8b89a46b4ca"
   },
@@ -813,7 +813,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
-    "test": "'-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
+    "test": "'-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style",
     "safe": false,
     "id": "acea075d0ac6954f275a70023906050c"
   },
@@ -825,7 +825,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isOpera = /^function \\(/.test([].sort);",
-    "test": "/^function \\(/.test([].sort);",
+    "test": "/^function \\(/.test([].sort)",
     "safe": false,
     "id": "3aedd37d5df858c460d27a0321a03370"
   },
@@ -837,7 +837,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isOpera = !!window.opera;",
-    "test": "!!window.opera;",
+    "test": "!!window.opera",
     "safe": false,
     "id": "fe2a5c116acfe1bbf9488604d9848fed"
   },
@@ -849,7 +849,7 @@
     "label": "Replace X by the version",
     "language": "javascript",
     "code": "var isOpera = window.opera && window.opera.version() == X;",
-    "test": "window.opera && window.opera.version() == X;",
+    "test": "window.opera && window.opera.version() == X",
     "safe": false,
     "id": "ec2607bc3d422d7f05e82c2ea49b0a61"
   },
@@ -861,7 +861,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isSafari = /a/.__proto__=='//';",
-    "test": "/a/.__proto__=='//';",
+    "test": "/a/.__proto__=='//'",
     "safe": false,
     "id": "3e68270c67701bc3a7c9523ed706025e"
   },
@@ -873,7 +873,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isSafari = /Constructor/.test(window.HTMLElement);",
-    "test": "/Constructor/.test(window.HTMLElement);",
+    "test": "/Constructor/.test(window.HTMLElement)",
     "safe": false,
     "id": "2fc15dc3d92559c634695a16b8ac13ab"
   },
@@ -885,7 +885,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
-    "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
+    "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\"",
     "safe": false,
     "id": "391e805cc2f5ebb6ddf861760fc082ba"
   },

@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     var hacks       = grunt.file.readJSON(src),
         cssDump  = '';
-        jsDump   = 'var testClass = "js-succeed";\n\rfunction enable_test() {';
+        jsDump   = 'var testClass = "js-succeed";\n\r';
 
     for (var i in hacks){
       var hack = hacks[i];
@@ -37,15 +37,15 @@ module.exports = function(grunt) {
 
           if(hack.language === 'css') {
             cssDump += lines[b].replace(/\.selector/g, '.run-test .'+name);
-          }else if(hack.language === 'javascript') {
-            jsDump += "var " + name + " = " + hack.test + '\n';
+          } else if(hack.language === 'javascript') {
+            jsDump += "var " + name + " = " + hack.test + ';\n';
             jsDump += "if (" + name + ") $('." + name + "').addClass(testClass);\n";
           }
         }
       }
     }
 
-    jsDump += '}\n\rfunction disable_test() {\n$("." + testClass).removeClass(testClass);\n}\n\rfunction tests(state) {\nif(state == true) enable_test();\nif(state == false)disable_test();\n}';
+    //jsDump += '}\n\rfunction disable_test() {\n$("." + testClass).removeClass(testClass);\n}\n\rfunction tests(state) {\nif(state == true) enable_test();\nif(state == false)disable_test();\n}';
 
     grunt.file.write(path.join(destJs,  destname+'.js'),  jsDump);
     grunt.file.write(path.join(destCss, destname+'.css'), cssDump);

@@ -48,7 +48,7 @@ module.exports = function(grunt){
             './src/js/lib/carbonads.min.js',
             './src/js/main.js',
 
-            './tmp/js/browserhacks-test-page.js'
+            //'./tmp/js/browserhacks-test-page.js'
           ]
        }
       }
@@ -66,6 +66,13 @@ module.exports = function(grunt){
       iecss : {
         files : [
           {expand:true, cwd: './tmp/css', src: ['browserhacks-ie.css'], dest : './dist/css/'}
+        ]
+      },
+
+      /* Prevent the JS tests to be minified */
+      js : {
+        files : [
+          {expand:true, cwd: './tmp/js', src: ['browserhacks-test-page.js'], dest: './dist/js'}
         ]
       },
 

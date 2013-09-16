@@ -50,7 +50,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isChromium = !!window.chrome;",
-    "test": "!!window.chrome;",
+    "test": "!!window.chrome",
     "safe": false
   },
   {
@@ -63,7 +63,7 @@
     "label": "Webkit",
     "language": "javascript",
     "code": "var isWebkit = 'WebkitAppearance' in document.documentElement.style;",
-    "test": "'WebkitAppearance' in document.documentElement.style;",
+    "test": "'WebkitAppearance' in document.documentElement.style",
     "safe": false
   },
   {
@@ -74,7 +74,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isChrome = !!window.chrome && !!window.chrome.webstore;",
-    "test": "!!window.chrome && !!window.chrome.webstore;",
+    "test": "!!window.chrome && !!window.chrome.webstore",
     "safe": false
   },
   {
@@ -153,7 +153,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = !!window.sidebar;",
-    "test": "!!window.sidebar;",
+    "test": "!!window.sidebar",
     "safe": false
   },
   {
@@ -164,7 +164,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = 'MozAppearance' in document.documentElement.style;",
-    "test": "'MozAppearance' in document.documentElement.style;",
+    "test": "'MozAppearance' in document.documentElement.style",
     "safe": false
   },
   {
@@ -175,7 +175,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = !!navigator.userAgent.match(/firefox/i);",
-    "test": "!!navigator.userAgent.match(/firefox/i);",
+    "test": "!!navigator.userAgent.match(/firefox/i)",
     "safe": false
   },
   {
@@ -186,7 +186,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = !!window.globalStorage;",
-    "test": "!!window.globalStorage;",
+    "test": "!!window.globalStorage",
     "safe": false
   },
   {
@@ -197,7 +197,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = typeof InstallTrigger !== 'undefined';",
-    "test": "typeof InstallTrigger !== 'undefined';",
+    "test": "typeof InstallTrigger !== 'undefined'",
     "safe": false
   },
   {
@@ -208,7 +208,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = /a/[-1]=='a';",
-    "test": "/a/[-1]=='a';",
+    "test": "/a/[-1]=='a'",
     "safe": false
   },
   {
@@ -219,7 +219,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = (function x(){})[-6]=='x';",
-    "test": "(function x(){})[-6]=='x';",
+    "test": "(function x(){})[-6]=='x'",
     "safe": false
   },
   {
@@ -230,7 +230,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isFF = (function x(){})[-5]=='x';",
-    "test": "(function x(){})[-5]=='x';",
+    "test": "(function x(){})[-5]=='x'",
     "safe": false
   },
   {
@@ -442,7 +442,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !window.XMLHttpRequest;",
-    "test": "document.all && !window.XMLHttpRequest;",
+    "test": "document.all && !window.XMLHttpRequest",
     "safe": false
   },
   {
@@ -453,7 +453,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.compatMode;",
-    "test": "document.all && document.compatMode;",
+    "test": "document.all && document.compatMode",
     "safe": false
   },
   {
@@ -464,7 +464,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !document.querySelector;",
-    "test": "document.all && !document.querySelector;",
+    "test": "document.all && !document.querySelector",
     "safe": false
   },
   {
@@ -475,7 +475,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && window.XMLHttpRequest && !document.querySelector;",
-    "test": "document.all && window.XMLHttpRequest && !document.addEventListener;",
+    "test": "document.all && window.XMLHttpRequest && !document.addEventListener",
     "safe": false
   },
   {
@@ -486,7 +486,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && window.XMLHttpRequest;",
-    "test": "document.all && window.XMLHttpRequest;",
+    "test": "document.all && window.XMLHttpRequest",
     "safe": false
   },
   {
@@ -497,7 +497,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.querySelector;",
-    "test": "document.all && document.querySelector;",
+    "test": "document.all && document.querySelector",
     "safe": false
   },
   {
@@ -508,7 +508,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !document.addEventListener;",
-    "test": "document.all && !document.addEventListener;",
+    "test": "document.all && !document.addEventListener",
     "safe": false
   },
   {
@@ -519,7 +519,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.querySelector && !document.addEventListener;",
-    "test": "document.all && document.querySelector && !document.addEventListener;",
+    "test": "document.all && document.querySelector && !document.addEventListener",
     "safe": false
   },
   {
@@ -530,7 +530,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && !window.atob;",
-    "test": "document.all && !window.atob;",
+    "test": "document.all && !window.atob",
     "safe": false
   },
   {
@@ -541,7 +541,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.addEventListener && !window.atob;",
-    "test": "document.all && document.addEventListener && !window.atob;",
+    "test": "document.all && document.addEventListener && !window.atob",
     "safe": false
   },
   {
@@ -552,7 +552,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && document.addEventListener;",
-    "test": "document.all && document.addEventListener;",
+    "test": "document.all && document.addEventListener",
     "safe": false
   },
   {
@@ -563,7 +563,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.all && window.atob;",
-    "test": "document.all && window.atob;",
+    "test": "document.all && window.atob",
     "safe": false
   },
   {
@@ -574,7 +574,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = /*@cc_on!@*/false;",
-    "test": "/*@cc_on!@*/false;",
+    "test": "/*@cc_on!@*/false",
     "safe": false
   },
   {
@@ -585,7 +585,7 @@
     "label": "Check for Internet Explorer version",
     "language": "javascript",
     "code": "var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;",
-    "test": "/*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;",
+    "test": "/*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0",
     "safe": false
   },
   {
@@ -596,7 +596,7 @@
     "label": "Check for Internet Explorer version",
     "language": "javascript",
     "code": "var ieVersion = (function() { if (new RegExp(\"MSIE ([0-9]{1,}[\\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
-    "test": "(function() { if (new RegExp(\"MSIE ([0-9]{1,}[\\.0-9]{0,})\").exec(navigator.userAgent) != null) { return parseFloat( RegExp.$1 ); } else { return false; } })();",
+    "test": "new RegExp('MSIE ([0-9]{1,}[\\.0-9]{0,})').exec(navigator.userAgent) != null",
     "safe": false
   },
   {
@@ -607,7 +607,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
-    "test": "navigator.appVersion.indexOf(\"MSIE 7.\") !== -1;",
+    "test": "navigator.appVersion.indexOf(\"MSIE 7.\") !== -1",
     "safe": false
   },
   {
@@ -618,7 +618,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = '\\v'=='v';",
-    "test": "'\\v'=='v';",
+    "test": "'\\v'=='v'",
     "safe": false
   },
   {
@@ -629,7 +629,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = !+'\\v1';",
-    "test": "!+'\\v1';",
+    "test": "!+'\\v1'",
     "safe": false
   },
   {
@@ -640,7 +640,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;",
-    "test": "eval(\"/*@cc_on!@*/false\") && document.documentMode === 10;",
+    "test": "eval(\"/*@cc_on!@*/false\") && document.documentMode === 10",
     "safe": false
   },
   {
@@ -651,7 +651,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = document.body.style.msTouchAction !== undefined;",
-    "test": "document.body.style.msTouchAction !== undefined;",
+    "test": "document.body.style.msTouchAction !== undefined",
     "safe": false
   },
   {
@@ -662,7 +662,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = window.navigator.msPointerEnabled;",
-    "test": "window.navigator.msPointerEnabled;",
+    "test": "window.navigator.msPointerEnabled",
     "safe": false
   },
   {
@@ -673,7 +673,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = 'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
-    "test": "'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;",
+    "test": "'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style",
     "safe": false
   },
   {
@@ -684,7 +684,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
-    "test": "'-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;",
+    "test": "'-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style",
     "safe": false
   },
   {
@@ -795,7 +795,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isOpera = /^function \\(/.test([].sort);",
-    "test": "/^function \\(/.test([].sort);",
+    "test": "/^function \\(/.test([].sort)",
     "safe": false
   },
   {
@@ -829,7 +829,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isOpera = !!window.opera;",
-    "test": "!!window.opera;",
+    "test": "!!window.opera",
     "safe": false
   },
   {
@@ -840,7 +840,7 @@
     "label": "Replace X by the version",
     "language": "javascript",
     "code": "var isOpera = window.opera && window.opera.version() == X;",
-    "test": "window.opera && window.opera.version() == X;",
+    "test": "window.opera && window.opera.version() == X",
     "safe": false
   },
   {
@@ -885,7 +885,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isSafari = /a/.__proto__=='//';",
-    "test": "/a/.__proto__=='//';",
+    "test": "/a/.__proto__=='//'",
     "safe": false
   },
   {
@@ -896,7 +896,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isSafari = /Constructor/.test(window.HTMLElement);",
-    "test": "/Constructor/.test(window.HTMLElement);",
+    "test": "/Constructor/.test(window.HTMLElement)",
     "safe": false
   },
   {
@@ -907,7 +907,7 @@
     "label": "",
     "language": "javascript",
     "code": "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
-    "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
+    "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\"",
     "safe": false
   }
 ]
