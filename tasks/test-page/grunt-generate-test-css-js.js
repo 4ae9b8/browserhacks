@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     var hacks       = grunt.file.readJSON(src),
         cssDump  = '';
-        jsDump   = 'var testClass="js-succeed";function enable_test(){';
+        jsDump   = 'var testClass = "js-succeed";\n\rfunction enable_test() {';
 
     for (var i in hacks){
       var hack = hacks[i];
@@ -36,16 +36,16 @@ module.exports = function(grunt) {
           var name  = 'hack_' + hack.id + '_' + b; // Name the class
 
           if(hack.language === 'css') {
-            cssDump += lines[b].replace(/\.selector/g, '.'+name);
+            cssDump += lines[b].replace(/\.selector/g, '.run-test .'+name);
           }else if(hack.language === 'javascript') {
-            jsDump += "var " + name + "=" + hack.test;
-            jsDump += "if(" + name + ") $('." + name + "').addClass(testClass);";
+            jsDump += "var " + name + " = " + hack.test + '\n';
+            jsDump += "if (" + name + ") $('." + name + "').addClass(testClass);\n";
           }
         }
       }
     }
 
-    jsDump += '}function disable_test(){$("."+testClass).removeClass(testClass);}function tests(state){if(state==true)enable_test();if(state==false)disable_test();}';
+    jsDump += '}\n\rfunction disable_test() {\n$("." + testClass).removeClass(testClass);\n}\n\rfunction tests(state) {\nif(state == true) enable_test();\nif(state == false)disable_test();\n}';
 
     grunt.file.write(path.join(destJs,  destname+'.js'),  jsDump);
     grunt.file.write(path.join(destCss, destname+'.css'), cssDump);

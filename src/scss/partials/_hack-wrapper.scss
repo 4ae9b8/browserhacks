@@ -16,7 +16,7 @@
         overflow-scrolling: touch;
         margin-bottom: 0;
         padding: .5em;
-        border-bottom: .1em solid rgba(0,0,0,.1);
+        border-bottom: .1em solid #DDD;
 
         @include breakpoint(baby-bear) {
             width: 100%; 
@@ -52,9 +52,13 @@
 
 .browser-wrapper__label {
     margin: 0;
-    padding: .5em .5em 0 .5em;
+    padding: .25em .75em;
     color: #888;
     line-height: 1.35;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    text-shadow: 0 1px white;
+    font-size: .8em;
+    border-bottom: 1px solid #DDD;
 }
 
 .browser-list {

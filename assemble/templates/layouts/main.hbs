@@ -215,14 +215,18 @@
         $el = $('#show-test');
         $el.on('click', function() {
             var state  = !!$(this).attr('checked');
-            document.styleSheets[0].disabled = !state;
-            console.log(state);
+            if(state) $('.browser-wrapper').addClass('run-test');
+            else $('.browser-wrapper').removeClass('run-test');
+
+            //document.styleSheets[0].disabled = !state;
+            //console.log(state);
             tests(state);
         });
 
         // Defaults
         $('#show-test').attr('checked', 'checked');
-        document.styleSheets[0].disabled = false;
+        $('.browser-wrapper').addClass('run-test');
+        //document.styleSheets[0].disabled = false;
         tests(true);
 
         // Sticky searchbar
