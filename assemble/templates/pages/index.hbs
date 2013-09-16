@@ -28,7 +28,7 @@
 
         {{/isnt}}
 
-        <div class='browser-wrapper__hack' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='false' data-version='{{fromObj browsers @key}}'>
+        <div class='browser-wrapper__hack' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{isLegacy browsers @key ../../browsers }}' data-version='{{fromObj browsers @key}}'>
           <div>
           {{#if label}}
             <p class='browser-wrapper__label'>{{label}}</p>
