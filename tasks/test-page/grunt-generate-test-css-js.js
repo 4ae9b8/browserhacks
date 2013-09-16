@@ -45,8 +45,6 @@ module.exports = function(grunt) {
       }
     }
 
-    //jsDump += '}\n\rfunction disable_test() {\n$("." + testClass).removeClass(testClass);\n}\n\rfunction tests(state) {\nif(state == true) enable_test();\nif(state == false)disable_test();\n}';
-
     grunt.file.write(path.join(destJs,  destname+'.js'),  jsDump);
     grunt.file.write(path.join(destCss, destname+'.css'), cssDump);
 

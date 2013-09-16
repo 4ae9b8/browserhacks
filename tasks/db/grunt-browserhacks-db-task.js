@@ -1,5 +1,5 @@
-var addId   = require('./addid'),
-    cssLint = require('./csslint');
+  var addId   = require('./addid'),
+      cssLint = require('./csslint');
 
 module.exports = function(grunt) {
   grunt.registerTask('updateDatabase', 'Update the database used by Browserhacks.', function(){
@@ -20,7 +20,6 @@ module.exports = function(grunt) {
     hacks.forEach(function(hack){
       addId(hack);
       cssLint(hack);
-      //@TODO isLegacy(hack);
 
       // Run test then sort.
       typeArr = typeArrays[hack.type] || [];

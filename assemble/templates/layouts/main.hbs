@@ -189,10 +189,9 @@
 
     <script src="js/main.min.js" data-manual="true"></script>
     <script>
-        // Run Prism once
+        // ------------
+        // Execute JS tests
         Prism.highlightAll(false);
-
-        // Split code blocks into lines
         $('pre > code').each(function() {
             var $code = $(this);
             var lines = $code.html().split('\n');
@@ -206,6 +205,8 @@
 
             $code.html(dump);
 
+        // ------------
+        // One-click to select
         }).on('click', '.line', function() {
           _select(this);
         });
@@ -214,7 +215,7 @@
         // Enable tests
         $('#show-test').on('click', function() {
             $('.browser-wrapper').toggleClass('run-test');
-        }).click();
+        }).click(); 
 
         // ------------
         // Sticky searchbar

@@ -11,7 +11,7 @@ module.exports = function(hack){
     if (filterdMessages.length > 0){
       hack.safe = false;
       hack.csslint = filterdMessages[0].message;
-    }else{
+    } else {
       hack.safe = true;
     }
   }
