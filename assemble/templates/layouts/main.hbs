@@ -212,32 +212,18 @@
 
         // ------------
         // Enable tests
-        $el = $('#show-test');
-        $el.on('click', function() {
-            var state  = !!$(this).attr('checked');
-            if(state) $('.browser-wrapper').addClass('run-test');
-            else $('.browser-wrapper').removeClass('run-test');
+        $('#show-test').on('click', function() {
+            $('.browser-wrapper').toggleClass('run-test');
+        }).click();
 
-            //document.styleSheets[0].disabled = !state;
-            //console.log(state);
-            //tests(state);
-        });
-
-        // Defaults
-        $('#show-test').attr('checked', 'checked');
-        $('.browser-wrapper').addClass('run-test');
-        //document.styleSheets[0].disabled = false;
-        //tests(true);
 
         // Sticky searchbar
         // @TODO: rely on position: sticky if supporter
         var $header = $('.search');
         var origOffsetY = $header.offset().top;
-
         function onScroll(e) {
             window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
         }
-
         $(document).on('scroll', onScroll);
     </script>
     <script src="js/browserhacks-test-page.js"></script>
