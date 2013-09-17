@@ -160,6 +160,14 @@ module.exports = function(grunt){
           './dist/**/*.{html,js,css,png,svg,ico}',
         ]
       }
+    },
+
+
+    'gh-pages' : {
+        options: {
+          base: 'dist'
+        },
+        src: ['**']
     }
 
   });
@@ -194,6 +202,8 @@ module.exports = function(grunt){
 
                                 'copy'          // Copy fonts/images/iecss (Images could be done using imagemin)
                               ]);
+
+  grunt.registerTask('publish', ['clean', 'build', 'gh-pages']);
 
   grunt.registerTask('dev', ['build', 'connect', 'watch']);
 
