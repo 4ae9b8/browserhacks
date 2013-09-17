@@ -21,7 +21,7 @@
 
   /***************************************************
    *
-   * Models 
+   * Models
    */
   App.Models.Browser = Backbone.Model.extend({
     defaults : {
@@ -38,7 +38,7 @@
 
   /***************************************************
    *
-   * Collections 
+   * Collections
    */
   App.Collections.Browser = Backbone.Collection.extend({
     model : App.Models.Browser
@@ -46,7 +46,7 @@
 
   App.Collections.Quote = Backbone.Collection.extend({
     model : App.Models.Author,
-    url : 'code/db_quotes.php',
+    url : 'quotes.json',
 
     initialize : function() {
     }
@@ -55,11 +55,11 @@
 
   /***************************************************
    *
-   * Views 
+   * Views
    */
 
-  /* 
-   * All browser 
+  /*
+   * All browser
    */
   App.Views.Master = Backbone.View.extend({
     count : {
@@ -112,14 +112,14 @@
   });
 
 
-  /* 
-   * A single browser 
+  /*
+   * A single browser
    */
   App.Views.Browser = Backbone.View.extend({
     hackChilds : null,
 
     initialize : function() {
-      // The browser 
+      // The browser
       this.$el = $('#' + this.model.get('browser'));
 
       /*
@@ -155,7 +155,7 @@
     handleSearch : function(data) {
       var names = this.model.get('names'),
           matched = false;
-      
+
       // Match the browser
       _.each(names, function(browser) {
         if (browser.indexOf(data.browser) == 0 && !matched) {
@@ -244,7 +244,7 @@
         _.each(this.model.get('hackTypes'), function(type) {
           // Get the amount of visible hacks
           count = this.$el.find('[data-type="'+type+'-childs"] .browser-wrapper__hack:visible').length;
-          
+
           // Hide title if no hacks are visible
           if (count == 0) {
             this.$el.find('[data-type="'+type+'-parent"] h3').hide();
@@ -279,7 +279,7 @@
     },
 
     /*
-     * Hide browser when just a number was entered into the search. 
+     * Hide browser when just a number was entered into the search.
      */
     searchNumber : function(data) {
       this.hide();
@@ -287,8 +287,8 @@
   });
 
 
-  /* 
-   * Search 
+  /*
+   * Search
    */
   App.Views.Search = Backbone.View.extend({
     el : 'input#search',
@@ -318,7 +318,7 @@
     },
 
     /*
-     * There was some interaction with the search field. 
+     * There was some interaction with the search field.
      */
     keyup : function(e) {
       this.value = this.$el.val().toLowerCase().trim();
@@ -395,7 +395,7 @@
         if (!this.isSearching) {
           this.el_description.show();
         }
-      }, this), 175); 
+      }, this), 175);
     },
 
 
@@ -407,7 +407,7 @@
 
 
   /**
-   * Special action of keys pressed. 
+   * Special action of keys pressed.
    */
   App.Views.Keys = Backbone.View.extend({
     initialize : function() {
@@ -431,7 +431,7 @@
     // Listen to keydown to jump to a specific browser
     // @TODO generate this from browsers.json
     jumpToBrowser : function(e) {
-        var el, 
+        var el,
             specialKey = e.metaKey || e.ctrlKey;
         if(e.which == 65 && !specialKey) el = document.getElementById('an');
         if(e.which == 67 && !specialKey) el = document.getElementById('ch');
@@ -466,8 +466,8 @@
   });
 
 
-  /* 
-   * Quote 
+  /*
+   * Quote
    */
   App.Views.Quote = Backbone.View.extend({
     el : $('.quotes'),
@@ -580,8 +580,8 @@
     }
   });
 
-  /* 
-   * Author 
+  /*
+   * Author
    */
   App.Views.Author = Backbone.View.extend({
     tagName : 'li',
@@ -611,7 +611,7 @@
       if (active) {
         this.$el.addClass('active');
       } else {
-        this.$el.removeClass('active');        
+        this.$el.removeClass('active');
       }
     }
   });
@@ -622,10 +622,10 @@
    * Start the app
    */
 
-  // A collection of browsers
+  // A collection of browsers @TODO Read the browsers.json
   var collection_browser = new App.Collections.Browser([
     {'browser' : 'an', 'names' : ['android', 'an']},
-    {'browser' : 'ch', 'names' : ['chrome', 'ch']}, 
+    {'browser' : 'ch', 'names' : ['chrome', 'ch']},
     {'browser' : 'fx', 'names' : ['firefox', 'mozilla firefox', 'ff']},
     {'browser' : 'ie', 'names' : ['internet explorer', 'ie']},
     {'browser' : 'sa', 'names' : ['safari', 'apple safari']},
@@ -650,5 +650,5 @@
       $(this).find('.browser-wrapper__hack').sort(function (a, b) {
           return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
       }).appendTo($(this));
-  });   
+  });
 })();
