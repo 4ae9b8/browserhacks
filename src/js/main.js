@@ -429,7 +429,7 @@
     },
 
     // Listen to keydown to jump to a specific browser
-    // @TODO generate this from browsers.json
+    // @TODO Tim: generate this from browsers.json
     jumpToBrowser : function(e) {
         var el,
             specialKey = e.metaKey || e.ctrlKey;
@@ -651,4 +651,62 @@
           return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
       }).appendTo($(this));
   });
+
+  // ------------
+  // Execute JS tests
+  // @TODO Tim: move wherever it belongs
+  // ------------
+
+  // We run Prism once and only once
+  Prism.highlightAll(false);
+
+  // We add .line spans for each hack in every code block
+  $('pre > code').each(function() {
+      var $code = $(this);
+      var lines = $code.html().split('\n');
+      var dump  = "";
+      var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
+
+      for(var i = 0, len = lines.length; i < len; i++) {
+          var hackClass = "hack_" + id + "_" + i;
+          dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
+      }
+
+      $code.html(dump);
+  });
+
+  // ------------
+  // One-click to select
+  // @TODO Tim: move wherever it belongs
+  // ------------
+
+  // Bind one-click selection to lines
+  $('pre > code').on('click', '.line', function() {
+    _select(this); // Awesome select library ;)
+  });
+
+  // ------------
+  // Enable tests
+  // @TODO Tim: move wherever it belongs
+  // ------------
+
+  // When clicking the checkbox, we toggle the run-test class
+  // All tests are made once and only once on page load
+  // We only decide to put the green background when checkbox is checked 
+  $('#show-test').on('click', function() {
+      $('.browser-wrapper').toggleClass('run-test');
+  }).click(); // Trigger tests on load
+
+  // ------------
+  // Sticky searchbar
+  // @TODO Tim: move wherever it belongs
+  // @TODO Hugo: rely on position: sticky if supported
+  // ------------
+
+  var $header = $('.search');
+  var origOffsetY = $header.offset().top;
+  function onScroll(e) {
+      window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
+  }
+  $(document).on('scroll', onScroll);
 })();

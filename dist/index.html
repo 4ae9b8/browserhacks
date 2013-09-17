@@ -48,43 +48,4 @@ html[xmlns*=""]:root .selector  {}</code></pre><ul class="browser-list"><li clas
           <div class="avatar-<%= twitter %>"></div>
         </div>
 
-        <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a></script><!-- Social --><article data-high="4"><section data-cols="2" class="btn-group"><div><a href="https://github.com/4ae9b8/browserhacks" target="_blank"><button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button></a></div><div><a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank"><button data-type="2"><span class="browserhacks-twitter"></span> Spread the word</button></a></div></section></article><!-- Top & Handcrafted --><article data-high="3"><section data-cols="1"><div><footer><p><a href="#browserhacks" title="top" class="btn-top"><span class="browserhacks-arrow-up"></span></a> &copy; Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> with contributions of the <a href="http://4ae9b8.com" target="_blank">#4ae9b8</a> Team.</p></footer></div></section></article><script src="js/main.min.js" data-manual="true"></script><script>// ------------
-        // Execute JS tests
-        Prism.highlightAll(false);
-
-        $('pre > code').each(function() {
-            var $code = $(this);
-            var lines = $code.html().split('\n');
-            var dump  = "";
-            var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
-
-            for(var i = 0, len = lines.length; i < len; i++) {
-                var hackClass = "hack_" + id + "_" + i;
-                dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
-            }
-
-            $code.html(dump);
-
-        // ------------
-        // One-click to select
-        }).on('click', '.line', function() {
-          _select(this);
-        });
-
-        testWidget.init();
-
-        // ------------
-        // Enable tests
-        $('#show-test').on('click', function() {
-            $('.browser-wrapper').toggleClass('run-test');
-        }).click();
-
-        // ------------
-        // Sticky searchbar
-        // @TODO: rely on position: sticky if supported
-        var $header = $('.search');
-        var origOffsetY = $header.offset().top;
-        function onScroll(e) {
-            window.scrollY >= origOffsetY ? $header.addClass('sticky') : $header.removeClass('sticky');
-        }
-        $(document).on('scroll', onScroll);</script><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script></body></html>
+        <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a></script><!-- Social --><article data-high="4"><section data-cols="2" class="btn-group"><div><a href="https://github.com/4ae9b8/browserhacks" target="_blank"><button data-type="2"><span class="browserhacks-github"></span> Add hacks / report bugs</button></a></div><div><a href="http://twitter.com/share?text=An+extensive+list+of+CSS/JS+@Browserhacks+from+all+over+the+interwebs+curated+by+@HugoGiraudel+and+@TimPietrusky&url=http://browserhacks.com" target="_blank"><button data-type="2"><span class="browserhacks-twitter"></span> Spread the word</button></a></div></section></article><!-- Top & Handcrafted --><article data-high="3"><section data-cols="1"><div><footer><p><a href="#browserhacks" title="top" class="btn-top"><span class="browserhacks-arrow-up"></span></a> &copy; Handcrafted 2013 by <a href="https://twitter.com/HugoGiraudel" target="_blank" class="avatar avatar--hugo">Hugo Giraudel</a> and <a href="https://twitter.com/TimPietrusky" target="_blank" class="avatar avatar--tim">Tim Pietrusky</a> with contributions of the <a href="http://4ae9b8.com" target="_blank">#4ae9b8</a> Team.</p></footer></div></section></article><script src="js/main.min.js" data-manual="true"></script><script>testWidget.init();</script><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script></body></html>
