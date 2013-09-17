@@ -138,7 +138,7 @@ module.exports = function(grunt){
     watch: {
       scss: {
         files: ['./src/scss/**/*.scss'],
-        tasks: ['compass:dist', 'concat:css', 'copy:img']
+        tasks: ['buildcss', 'copy:img']
       },
       db : {
         files : ['./src/db/*'],
@@ -150,7 +150,7 @@ module.exports = function(grunt){
       },
       js: {
         files: ['./src/js/**/*.js'],
-        tasks: ['uglify:dist', 'concat:js']
+        tasks: ['buildjs']
       },
       livereload: {
         options: {
@@ -165,9 +165,10 @@ module.exports = function(grunt){
 
     'gh-pages' : {
         options: {
-          base: 'dist'
+          base: 'dist',
+          push:false
         },
-        src: ['**']
+        src: ['**/*']
     }
 
   });
@@ -184,8 +185,13 @@ module.exports = function(grunt){
   grunt.registerTask('buildhtml', ['assemble:browserhacks', 'htmlmin:dist']);
 
   grunt.registerTask('buildjs', [
-                                 'uglify:dist',  //  Uglify JS
-                                  'concat',       // Concat the Compiled Sass with the ./tmp/css/browserhacks-test-page.css and add add the browserhakcs-test-page.js
+                                 'uglify:dist',     //  Uglify JS
+                                 'concat:js',       // Concat main.min.js with ./tmp/js/browserhacks-test-page.js
+                                ]);
+
+  grunt.registerTask('buildcss', [
+                                  'compass:dist',  // Compile sass using compass
+                                  'concat:css'    // Concat the Compiled Sass with the ./tmp/css/browserhacks-test-page.css
                                 ]);
 
   grunt.registerTask('cleanbuild', ['clean', 'build']);
@@ -195,10 +201,8 @@ module.exports = function(grunt){
                                 'generateTestCssJs', // Generating the CSS and JS needed for testing all the hacks
 
                                 'buildhtml',      // Build up the browserhacks index.html
-
                                 'buildjs',
-
-                                'compass:dist',    // Compile sass using compass
+                                'buildcss',
 
                                 'copy'          // Copy fonts/images/iecss (Images could be done using imagemin)
                               ]);
