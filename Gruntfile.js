@@ -107,6 +107,12 @@ module.exports = function(grunt){
         files:[
           {expand:true, cwd: './src/db', src: ['quotes.json'], dest : './dist'}
         ]
+      },
+
+      htaccess:{
+        files:[
+          {expand:true, cwd: './src', src: ['.htaccess'], dest : './dist'}
+        ]
       }
     },
 
