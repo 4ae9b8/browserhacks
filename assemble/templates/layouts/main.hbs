@@ -188,12 +188,12 @@
             </div>
         </section>
     </article>
-
     <script src="js/main.min.js" data-manual="true"></script>
     <script>
         // ------------
         // Execute JS tests
         Prism.highlightAll(false);
+
         $('pre > code').each(function() {
             var $code = $(this);
             var lines = $code.html().split('\n');
@@ -212,6 +212,8 @@
         }).on('click', '.line', function() {
           _select(this);
         });
+
+        testWidget.init();
 
         // ------------
         // Enable tests
