@@ -1,4 +1,5 @@
 .sass-cache/
+.grunt/
 sftp-config.json
 Thumbs.db
 node_modules/

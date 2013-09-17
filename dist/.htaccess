@@ -6,7 +6,7 @@
   RewriteRule (.*) /test.php [L]
 
   # Redirect preview.browserhacks.com to browserhacks.com to remove it from the index
-  RewriteCond %{HTTP_HOST} ^preview\. [NC] 
+  RewriteCond %{HTTP_HOST} ^preview\. [NC]
   RewriteRule ^(.*)$ http://browserhacks.com/$1 [L,R=301]
 
 </IfModule>

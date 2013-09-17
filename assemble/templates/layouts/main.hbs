@@ -109,9 +109,10 @@
 
     {{> body }}
 
+
     <!-- Additional informations -->
-    <article data-high="4" id="quotes">
-        <section data-cols="2" class="quotes">
+    <article data-high="4">
+        <section data-cols="2">
         <div>
             <h2>Additional informations</h2>
             <p>Browserhacks is mostly based on the <a href="http://www.paulirish.com/2009/browser-specific-css-hacks/">big list of CSS browser hacks</a> by Paul Irish. Other posts like <a href="http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/">Moving IE specific CSS to media blocks</a> by Keith Clark, <a href="http://www.thespanner.co.uk/2009/01/29/detecting-browsers-javascript-hacks/">Detecting browsers with JS hacks</a> by Gareth Eyes and <a href="https://gist.github.com/necolas/983116">IE CSS hacks</a> by Nicolas Gallagher greatly helped.</p>
@@ -134,10 +135,26 @@
       <section data-cols="1" class="quotes">
         <div>
           <blockquote class="quote"></blockquote>
-          <ul class="quote-authors"></ul>
+          <ul class="quote-authors">
+          </ul>
         </div>
       </section>
     </article>
+
+    <!-- Template: Quote -->
+    <script id="template_quote" type="text/template">
+       <p class="quote-content"><%= quote %></p>
+       &mdash; <a href="<%= from %>" class="quote-author" target="_blank"><%= author %></a>
+    </script>
+
+    <!-- Template: Author -->
+    <script id="template_author" type="text/template">
+        <div class="quote-authors__avatar">
+          <div class="avatar-<%= twitter %>"></div>
+        </div>
+
+        <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
+    </script>
 
 
     <!-- Social -->
@@ -172,21 +189,6 @@
         </section>
     </article>
 
-    <!-- Template: Quote -->
-    <script id="template_quote" type="text/template">
-       <p class="quote-content"><%= quote %></p>
-       &mdash; <a href="<%= from %>" class="quote-author" target="_blank"><%= author %></a>
-    </script>
-
-    <!-- Template: Author -->
-    <script id="template_author" type="text/template">
-        <div class="quote-authors__avatar">
-          <div class="avatar-<%= twitter %>"></div>
-        </div>
-
-        <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
-    </script>
-
     <script src="js/main.min.js" data-manual="true"></script>
     <script>
         // ------------
@@ -215,7 +217,7 @@
         // Enable tests
         $('#show-test').on('click', function() {
             $('.browser-wrapper').toggleClass('run-test');
-        }).click(); 
+        }).click();
 
         // ------------
         // Sticky searchbar
@@ -227,9 +229,8 @@
         }
         $(document).on('scroll', onScroll);
     </script>
-    <script src="js/browserhacks-test-page.js"></script>
-    <!--<script type="text/javascript">
+    <script type="text/javascript">
         var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-38522111-1']);_gaq.push(['_setDomainName', 'browserhacks.com']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
-    </script>-->
+    </script>
     </body>
 </html>
