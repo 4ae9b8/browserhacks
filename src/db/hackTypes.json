@@ -1,0 +1,26 @@
+{
+  "selector": {
+    "title": "Selector Hacks",
+    "icon": "fontawesome-link"
+  },
+  "media": {
+    "title": "Media Query Hacks",
+    "icon": "fontawesome-resize-small"
+  },
+  "javascript": {
+    "title": "JavaScript Hacks",
+    "icon": "fontawesome-fire"
+  },
+  "propertyValue": {
+    "title": "Property/Value Hacks",
+    "icon": "fontawesome-paper-clip"
+  },
+  "misc": {
+    "title": "Miscellaneous",
+    "icon": "fontawesome-beaker"
+  },
+  "html": {
+    "title": "Conditional comments",
+    "icon": "fontawesome-th-large"
+  }
+}

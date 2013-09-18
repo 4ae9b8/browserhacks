@@ -1,0 +1,38 @@
+{
+  "an": {
+    "name": "android",
+    "legacy": "2.3",
+    "key": 65,
+    "alias": ["android", "an"]
+  },
+  "ch": {
+    "name": "chrome",
+    "legacy": "1",
+    "key": 67,
+    "alias": ["chrome", "ch"]
+  },
+  "fx": {
+    "name": "firefox",
+    "legacy": "3.6",
+    "key": 70,
+    "alias": ["firefox", "mozilla firefox", "ff"]
+  },
+  "ie": {
+    "name": "Internet Explorer",
+    "legacy": "6",
+    "key": 73,
+    "alias": ["internet explorer", "ie"]
+  },
+  "op": {
+    "name": "opera",
+    "legacy": "9",
+    "key": 79,
+    "alias": ["opera", "op"]
+  },
+  "sa": {
+    "name": "safari",
+    "legacy": "4",
+    "key": 83,
+    "alias": ["safari", "apple safari"]
+  }
+}
