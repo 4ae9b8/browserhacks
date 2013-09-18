@@ -27,7 +27,9 @@ Created by
 Thanks to
 ---------
 
-* [Fabrice Weinberg](http://twitter.com/fweinb) for his help when moving to Grunt
-* [Sara Soueidan](http://twitter.com/sarasoueidan)
-* [Ana Tudor](http://twitter.com/thebabydino)
-* [Mads Cordes](http://twitter.com/mobilpadde)
+* [Fabrice Weinberg](http://twitter.com/fweinb) for his awesome help when moving to Grunt
+* [Sara Soueidan](http://twitter.com/sarasoueidan), [Ana Tudor](http://twitter.com/thebabydino), [Mads Cordes](http://twitter.com/mobilpadde) for their kind help
+* [Paul Irish](http://twitter.com/paul_irish) for [his great post on CSS hacks](http://www.paulirish.com/2009/browser-specific-css-hacks/)
+* [Keith Clarke](http://twitter.com/keithclarkecouk) for [his @media block CSS hacks](http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/)
+* [Nicolas Gallagher](http://twitter.com/necolas) for [his IE CSS hacks](https://gist.github.com/necolas/983116)
+* And various nice contributors :)
