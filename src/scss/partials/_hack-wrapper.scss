@@ -9,6 +9,7 @@
     > div {
         background: #f5f2f0;
         border-radius: .25em;
+        overflow: hidden;
     }
 
     pre { 
@@ -58,13 +59,14 @@
     border-bottom: 1px solid #DDD;
 }
 
-.browser-list {
+.hack-list {
+    float: left;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.browser-list__item {
+.hack-list__item {
     padding: .25em .5em .25em .5em;
     @include inline-block(middle);
     font-size: .8em;
@@ -99,4 +101,12 @@
     @include breakpoint(mama-bear) { 
         font-size: 1em;
     }
+}
+
+.hack-list--options {
+    float: right;
+}
+
+.hack-list--options li:last-of-type {
+    border-right: none;
 }

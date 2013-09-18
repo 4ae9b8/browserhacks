@@ -17,6 +17,7 @@
         }
         return result;
     },
+
     eachFilteredBrowser = function(obj, filter, options){
       var result = '', lasttype = '';
       for (var i in obj){
@@ -30,9 +31,16 @@
         }
       }
       return result;
+    },
+
+    ifCond = function (val1, val2, options) {
+      if (val1 === val2) {
+        return options.fn(this);
+      }
+      return options.inverse(this);
     };
 
-
+    Handlebars.registerHelper('ifCond',              ifCond);
     Handlebars.registerHelper('inObj',               inObj);
     Handlebars.registerHelper('fromObj',             fromObj);
     Handlebars.registerHelper('eachFilteredBrowser', eachFilteredBrowser);

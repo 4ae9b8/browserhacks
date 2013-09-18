@@ -7,18 +7,26 @@ window.onload = function() {
 	}
 	var icons = {
 			'browserhacks-an' : '&#xe000;',
-			'browserhacks-windows8' : '&#xe001;',
-			'browserhacks-apple' : '&#xe002;',
-			'browserhacks-ch' : '&#xe003;',
-			'browserhacks-fx' : '&#xe004;',
-			'browserhacks-ie' : '&#xe005;',
-			'browserhacks-op' : '&#xe006;',
-			'browserhacks-sa' : '&#xe007;',
-			'browserhacks-github' : '&#xe008;',
-			'browserhacks-magic' : '&#xe009;',
-			'browserhacks-twitter' : '&#xe00a;',
-			'browserhacks-arrow-up' : '&#xe00b;'
+			'browserhacks-ch' : '&#xe001;',
+			'browserhacks-sa' : '&#xe002;',
+			'browserhacks-ie' : '&#xe003;',
+			'browserhacks-op' : '&#xe004;',
+			'browserhacks-windows8' : '&#xe005;',
+			'browserhacks-windows' : '&#xe006;',
+			'browserhacks-fx' : '&#xe007;',
+			'browserhacks-magic' : '&#xe008;',
+			'browserhacks-twitter' : '&#xe009;',
+			'browserhacks-github' : '&#xe00c;',
+			'browserhacks-arrow-up' : '&#xe00a;',
+			'browserhacks-apple' : '&#xe00b;',
+			'browserhacks-valid' : '&#xe00d;',
+			'browserhacks-invalid' : '&#xe00e;',
+			'browserhacks-css3' : '&#xe00f;',
+			'browserhacks-file-css' : '&#xe010;',
+			'browserhacks-file-xml' : '&#xe011;',
+			'browserhacks-html5' : '&#xe012;'
 		},
+
 		els = document.getElementsByTagName('*'),
 		i, attr, html, c, el;
 	for (i = 0; ; i += 1) {

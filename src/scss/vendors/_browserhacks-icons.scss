@@ -13,6 +13,7 @@
 	font-style: normal;
 }
 
+.browserhacks-windows,
 .browserhacks-windows8, 
 .browserhacks-apple, 
 .browserhacks-an, 
@@ -24,7 +25,13 @@
 .browserhacks-github, 
 .browserhacks-magic, 
 .browserhacks-twitter, 
-.browserhacks-arrow-up {
+.browserhacks-arrow-up,
+.browserhacks-valid, 
+.browserhacks-invalid, 
+.browserhacks-css3, 
+.browserhacks-file-css, 
+.browserhacks-file-xml, 
+.browserhacks-html5 {
 	&:before {
 		font-family: 'Browserhacks-Icons';
 		speak: none;
@@ -40,36 +47,57 @@
 .browserhacks-an:before {
 	content: "\e000";
 }
-.browserhacks-windows8:before {
+.browserhacks-ch:before {
 	content: "\e001";
 }
-.browserhacks-apple:before {
+.browserhacks-sa:before {
 	content: "\e002";
 }
-.browserhacks-ch:before {
+.browserhacks-ie:before {
 	content: "\e003";
 }
-.browserhacks-fx:before {
+.browserhacks-op:before {
 	content: "\e004";
 }
-.browserhacks-ie:before {
+.browserhacks-windows8:before {
 	content: "\e005";
 }
-.browserhacks-op:before {
+.browserhacks-windows:before {
 	content: "\e006";
 }
-.browserhacks-sa:before {
+.browserhacks-fx:before {
 	content: "\e007";
 }
-.browserhacks-github:before {
+.browserhacks-magic:before {
 	content: "\e008";
 }
-.browserhacks-magic:before {
+.browserhacks-twitter:before {
 	content: "\e009";
 }
-.browserhacks-twitter:before {
-	content: "\e00a";
+.browserhacks-github:before {
+	content: "\e00c";
 }
 .browserhacks-arrow-up:before {
+	content: "\e00a";
+}
+.browserhacks-apple:before {
 	content: "\e00b";
+}
+.browserhacks-valid:before {
+	content: "\e00d";
+}
+.browserhacks-invalid:before {
+	content: "\e00e";
+}
+.browserhacks-css3:before {
+	content: "\e00f";
+}
+.browserhacks-file-css:before {
+	content: "\e010";
+}
+.browserhacks-file-xml:before {
+	content: "\e011";
+}
+.browserhacks-html5:before {
+	content: "\e012";
 }
