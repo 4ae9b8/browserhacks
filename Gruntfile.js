@@ -196,7 +196,7 @@ module.exports = function(grunt){
 
   grunt.registerTask('buildcss', [
                                   'compass:dist',  // Compile sass using compass
-                                  'concat:css'    // Concat the Compiled Sass with the ./tmp/css/browserhacks-test-page.css
+                                  'concat:css'     // Concat the Compiled Sass with the ./tmp/css/browserhacks-test-page.css
                                 ]);
 
   grunt.registerTask('cleanbuild', ['clean', 'build']);
@@ -205,15 +205,23 @@ module.exports = function(grunt){
                                 'updateDatabase',    // Update ./src/db/hacks.json testing against csslint and adding a id to each test
                                 'generateTestCssJs', // Generating the CSS and JS needed for testing all the hacks
 
-                                'buildhtml',      // Build up the browserhacks index.html
-                                'buildjs',
-                                'buildcss',
+                                'buildhtml',         // Build up the Browserhacks index.html
+                                'buildjs',           // Build up the main JS file
+                                'buildcss',          // Build up the main CSS file
 
-                                'copy'          // Copy fonts/images/iecss (Images could be done using imagemin)
+                                'copy'               // Copy fonts/images/iecss (Images could be done using imagemin)
                               ]);
 
-  grunt.registerTask('publish', ['clean', 'build', 'gh-pages']);
+  grunt.registerTask('publish', [
+                                  'clean', 
+                                  'build', 
+                                  'gh-pages'
+                                ]);
 
-  grunt.registerTask('dev', ['build', 'connect', 'watch']);
+  grunt.registerTask('dev', [
+                              'build', 
+                              'connect',
+                              'watch'
+                            ]);
 
 };
