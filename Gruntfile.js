@@ -114,6 +114,12 @@ module.exports = function(grunt){
         files:[
           {expand:true, cwd: './src', src: ['.htaccess'], dest : './dist'}
         ]
+      },
+
+      cname : {
+        files:[
+          {expand:true,cwd: './', src:['CNAME'], dest :'./dist'}
+        ]
       }
     },
 
