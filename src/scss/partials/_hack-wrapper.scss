@@ -1,0 +1,112 @@
+/**
+ * Hacks containers
+ * More in _prism.scss
+ * regarding syntax highlighting
+ */ 
+.browser-wrapper__hack {
+    position: relative;
+
+    > div {
+        background: #f5f2f0;
+        border-radius: .25em;
+        overflow: hidden;
+    }
+
+    pre { 
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        margin-bottom: 0;
+        padding: .5em;
+        border-bottom: .1em solid #DDD;
+
+        @include breakpoint(baby-bear) {
+            width: 100%; 
+            margin: 1% 0 0 0; 
+        }
+    }
+
+    &[data-legacy=true] {
+        display: none;
+    }
+
+    &:target > div {
+        border: .15em solid deepskyblue;
+    }
+}
+
+.line {
+    display: block;
+    border-radius: .2em;
+    margin: .1em 0;
+}
+
+/* Highlight tests only when asked */
+.run-test .js-succeed {
+    padding: .2em;
+    margin: .2em 0;
+    display: block;
+    background: lightgreen; 
+}
+
+.browser-wrapper__label {
+    margin: 0;
+    padding: .25em .75em;
+    color: #888;
+    line-height: 1.35;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    text-shadow: 0 1px white;
+    font-size: .8em;
+    border-bottom: 1px solid #DDD;
+}
+
+.hack-list {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hack-list__item {
+    padding: .25em .5em .25em .5em;
+    @include inline-block(middle);
+    font-size: .8em;
+    color: #333;
+    border-right: 1px solid rgba(0,0,0,0.1);
+
+    @include breakpoint(mama-bear) { 
+        font-size: 1em;
+    }
+}
+
+.browser-version {
+    padding: 0 .25em;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+.browser-name { 
+    @include breakpoint(mama-bear) {
+        display: none; 
+    }
+}
+
+.browser-wrapper__link {
+    bottom: .5em;
+    right: .5em;
+    position: absolute;
+    display: block;
+    padding: 0.5em 0.75em;
+    font-size: .8em;
+
+    @include breakpoint(mama-bear) { 
+        font-size: 1em;
+    }
+}
+
+.hack-list--options {
+    float: right;
+}
+
+.hack-list--options li:last-of-type {
+    border-right: none;
+}
