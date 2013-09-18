@@ -39,6 +39,7 @@ module.exports = function(grunt){
     compass: {
       dist: {
         options: {
+          httpGeneratedImagesPath : '../img/',
           basePath : './src',
           outputStyle: 'compressed',
           sassDir:    'scss',
@@ -171,6 +172,7 @@ module.exports = function(grunt){
 
     'gh-pages' : {
         options: {
+          clone : 'gh-pages-branch',
           base: 'dist'
         },
         src: ['**/*']
@@ -213,13 +215,13 @@ module.exports = function(grunt){
                               ]);
 
   grunt.registerTask('publish', [
-                                  'clean', 
-                                  'build', 
+                                  'clean',
+                                  'build',
                                   'gh-pages'
                                 ]);
 
   grunt.registerTask('dev', [
-                              'build', 
+                              'build',
                               'connect',
                               'watch'
                             ]);
