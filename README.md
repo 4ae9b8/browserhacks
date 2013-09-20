@@ -33,3 +33,17 @@ Thanks to
 * [Keith Clarke](http://twitter.com/keithclarkecouk) for [his @media block CSS hacks](http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/)
 * [Nicolas Gallagher](http://twitter.com/necolas) for [his IE CSS hacks](https://gist.github.com/necolas/983116)
 * And various nice contributors :)
+
+
+Deployment
+----------
+
+Our live stable version is the ```gh-pages``` branch. This is updated through the grunt ```publish``` task.
+Our preview/beta version is the ```master``` branch. This is checked with 5minfork.com.
+So when we want to do something new:
+
+1. We pull the repo locally
+2. We work on ```master``` branch
+3. We push to ```master```
+4. We check on 5minfork.com
+5. We go wild with grunt ```publish```
