@@ -1,5 +1,5 @@
 .sass-cache/
-gh-pages-branch/
+.grunt/
 sftp-config.json
 Thumbs.db
 node_modules/

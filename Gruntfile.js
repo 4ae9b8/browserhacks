@@ -178,7 +178,6 @@ module.exports = function(grunt){
 
     'gh-pages' : {
         options: {
-          clone : 'gh-pages-branch',
           base: 'dist'
         },
         src: ['**/*']
