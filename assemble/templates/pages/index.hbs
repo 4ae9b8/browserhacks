@@ -24,35 +24,35 @@
 							<h3>{{fromObj ../../../hackTypes type 'title'}}</h3>
 						</div>
 					</section>
-					<section class='browser-wrapper__hack-wrapper' data-cols='2' data-type='{{type}}-childs'>
+					<section class='browser-wrapper__hack-wrapper grid' data-cols='2' data-type='{{type}}-childs'>
 
 				{{/isnt}}
 
-				<div class='browser-wrapper__hack' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
-					<div>
-					{{#if label}}
-						<p class='browser-wrapper__label'>{{label}}</p>
-					{{/if}}
-					<pre class='language-{{language}}'><code>{{{code}}}</code></pre>
-					<ul class='hack-list'>
-						{{#each browsers}}
-							<li class='hack-list__item'>
-								<span class='browser-icon browserhacks-{{@key}}'></span>
-								<span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>
-								<span class='browser-version'>{{fromObj ../browsers @key 'humanVersion'}}</span>
-							</li>
-						{{/each}}
-					</ul>
-					<ul class="hack-list  hack-list--options">
-						{{#ifCond language "css" }}
-							{{#if safe}}
-								<li class='hack-list__item'><span class="browserhacks-valid" title="Valid CSS"></span> <span class="browserhacks-css3" title="Valid CSS"></span></li>
-							{{else}}
-								<li class='hack-list__item'><span class="browserhacks-invalid" title="Invalid CSS: {{csslint}}"></span> <span class="browserhacks-css3" title="Invalid CSS: {{csslint}}"></span></li>
-							{{/if}}
-						{{/ifCond}}
-						<li class='hack-list__item'><a href='#hack-{{id}}'>#</a></li>
-					</ul>
+				<div class='browser-wrapper__hack grid__col--50' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
+					<div class="hack">
+						{{#if label}}
+							<p class='browser-wrapper__label'>{{label}}</p>
+						{{/if}}
+						<pre class='language-{{language}}'><code>{{{code}}}</code></pre>
+						<ul class='hack-list'>
+							{{#each browsers}}
+								<li class='hack-list__item'>
+									<span class='browser-icon browserhacks-{{@key}}'></span>
+									<span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>
+									<span class='browser-version'>{{fromObj ../browsers @key 'humanVersion'}}</span>
+								</li>
+							{{/each}}
+						</ul>
+						<ul class="hack-list  hack-list--options">
+							{{#ifCond language "css" }}
+								{{#if safe}}
+									<li class='hack-list__item'><span class="browserhacks-valid" title="Valid CSS"></span> <span class="browserhacks-css3" title="Valid CSS"></span></li>
+								{{else}}
+									<li class='hack-list__item'><span class="browserhacks-invalid" title="Invalid CSS: {{csslint}}"></span> <span class="browserhacks-css3" title="Invalid CSS: {{csslint}}"></span></li>
+								{{/if}}
+							{{/ifCond}}
+							<li class='hack-list__item'><a href='#hack-{{id}}'>#</a></li>
+						</ul>
 					</div>
 				</div>
 

@@ -219,13 +219,12 @@ h2 {
 		@include section-border($safari);
 	}
 }
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
+.hack {
+	background-color: $darkWhite;
+	border: 1px solid $lightGrey;
+	margin-bottom: $baseline;
+
+	pre {
+		margin: 0;
+	}
 }
