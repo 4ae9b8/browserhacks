@@ -3,6 +3,7 @@
 }
 html {
 	border-top: ($baseline / 3) solid $white;
+	overflow-x: hidden;
 
 	&:after {
 		content: '';
@@ -109,8 +110,8 @@ html {
 	h2 {
 		color: $darkGrey;
 		font-size: 2em;
-		line-height: 1.5;
-		margin-bottom: 0;
+		line-height: 1;
+		margin-bottom: ($baseline / 3);
 	}
 	p,
 	li {
@@ -140,6 +141,12 @@ html {
 	box-shadow: 0 .1em .1em hsla(0,0%,0%,.1);
 	padding: ($baseline / 2) $baseline;
 
+	&.fixed {
+		left: 0;
+		position: fixed;
+		right: 0;
+		top: 0;
+	}
 	input[type="checkbox"] {
 		margin-right: ($baseline / 4);
 		position: relative;
