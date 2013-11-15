@@ -17,6 +17,10 @@
 @mixin section-border($color) {
 	border-color: tint($color, 25%);
 	background-color: tint($color, 85%);
+
+	span {
+		color: $color;
+	}
 }
 @mixin transition($time: .15s) {
 	-webkit-transition: $time;

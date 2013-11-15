@@ -24,6 +24,9 @@ html {
 		);
   }
 }
+body {
+	overflow-x: hidden;
+}
 .header {
 	border-bottom: 1px solid $lightGrey;
 	overflow: hidden;
@@ -35,7 +38,6 @@ html {
 
 	h1 {
 		font-size: 2.5em;
-		font-weight: normal;
 		line-height: 1.2;
 		margin-bottom: 0;
 	}
@@ -148,7 +150,6 @@ html {
 		top: 0;
 	}
 	input[type="checkbox"] {
-		margin-right: ($baseline / 4);
 		position: relative;
 		top: -($baseline / 8);
 		vertical-align: middle;
@@ -158,6 +159,7 @@ html {
 		font-size: 1.2em;
 		line-height: 2.5;
 		margin-right: ($baseline / 1.2);
+		padding-left: (($baseline / 1.2) / 4);
 	}
 }
 .search__input {
@@ -171,6 +173,51 @@ html {
 	padding: ($baseline / 3) ($baseline / 2);
 	width: 100%;
 	vertical-align: baseline;
+}
+.browser-wrapper {
+	padding: 0 $baseline;
+
+	h2 {
+		background-color: lightgrey;
+		border-top: (($baseline / 2.25) / 3) solid grey;
+		margin: (($baseline / 2.25) * 2) (($baseline / 2.25) * -1) 0;
+		padding: ($baseline / 4) ($baseline / 2.25) ($baseline / 3);
+
+		span {
+			margin-right: (($baseline / 2.25) / 2);
+			position: relative;
+			top: (($baseline / 2.25) / 8);
+		}
+		a {
+			color: $black;
+			text-decoration: none;
+		}
+	}
+	h3 {
+		color: $darkGrey;
+		margin-top: (($baseline / 1.5) * 2);
+	}
+}
+h2 {
+
+	.an & {
+		@include section-border($android);
+	}
+	.ch & {
+		@include section-border($chrome);
+	}
+	.fx & {
+		@include section-border($firefox);
+	}
+	.ie & {
+		@include section-border($internetExplorer);
+	}
+	.op & {
+		@include section-border($opera);
+	}
+	.sa & {
+		@include section-border($safari);
+	}
 }
 .visually-hidden {
 	border: 0;

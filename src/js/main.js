@@ -351,7 +351,7 @@
 				}
 
 				// Hide description
-				this.el_description.hide();
+				// this.el_description.hide();
 
 			// Field is empty
 			} else {
@@ -361,7 +361,7 @@
 				vent.trigger("searchCancelled");
 
 				// Show description
-				this.el_description.show();
+				// this.el_description.show();
 			}
 		},
 
@@ -393,7 +393,7 @@
 			// Show buttons & description
 			this.timeoutId = setTimeout(_.bind(function() {
 				if (!this.isSearching) {
-					this.el_description.show();
+					// this.el_description.show();
 				}
 			}, this), 175);
 		},
