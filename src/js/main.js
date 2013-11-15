@@ -692,7 +692,7 @@
 
   // When clicking the checkbox, we toggle the run-test class
   // All tests are made once and only once on page load
-  // We only decide to put the green background when checkbox is checked 
+  // We only decide to put the green background when checkbox is checked
   $('#show-test').on('click', function() {
       $('.browser-wrapper').toggleClass('run-test');
   }).click(); // Trigger tests on load

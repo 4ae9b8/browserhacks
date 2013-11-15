@@ -1,0 +1,31 @@
+.grid {
+	margin: 0 -.75em;
+}
+[class*="grid__col--"] {
+	padding: 0 .75em;
+}
+@media (min-width: 40em) { /* 640px */
+	[class*="grid__col--"] {
+		display: inline-block;
+		vertical-align: top;
+		-webkit-box-sizing: border-box; /* Enables the use of padding without breaking the grid */
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+	.grid[class*="grid__col--"] {
+		margin: 0;
+		padding: 0;
+	}
+	.grid__col--20  { width: 20%; }
+	.grid__col--25  { width: 25%; }
+	.grid__col--30  { width: 30%; }
+	.grid__col--33  { width: 33.33333333%; }
+	.grid__col--40  { width: 40%; }
+	.grid__col--50  { width: 50%; }
+	.grid__col--60  { width: 60%; }
+	.grid__col--66  { width: 66.66666666%; }
+	.grid__col--70  { width: 70%; }
+	.grid__col--75  { width: 75%; }
+	.grid__col--80  { width: 80%; }
+	.grid__col--100 { width: 100%; }
+}

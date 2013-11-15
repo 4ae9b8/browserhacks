@@ -1,0 +1,89 @@
+html {
+    color: $black;
+    font-family: $copyFont;
+    font-size: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $titleFont;
+    font-weight: bold;
+    margin: 0;
+}
+h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: .5em;
+}
+h2 {
+    font-size: 2.25em;
+    line-height: 1.333333333;
+    margin-bottom: 0.666666666em;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+h4 {
+    font-size: 1.3125em;
+    line-height: 1.142857142;
+    margin-bottom: 1.142857142em;
+}
+h5 {
+    font-size: 1.125em;
+    line-height: 1.333333333;
+    margin-bottom: 1.333333333em;
+}
+h6 {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+p,
+blockquote {
+    font-size: 1em;
+    margin: 0 0 1.5em;
+    line-height: 1.5;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}
+p a:link,
+p a:visited {
+	border-bottom: 1px solid $internetExplorer;
+    color: $internetExplorer;
+    text-decoration: none;
+    @include transition;
+}
+p a:hover,
+p a:focus {
+	border-color: lighten($internetExplorer, 20%);
+    color: lighten($internetExplorer, 20%);
+}
+p a:active {
+    position: relative;
+    top: 1px;
+    @include transition(0s);
+}
+dl,
+ol,
+ul {
+    font-size: 1em;
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+ol,
+ul {
+	margin-left: $baseline;
+}
+dd,
+dt,
+li {
+    line-height: 1.5;
+    margin: 0;
+}

@@ -1,36 +1,10 @@
-// Compass
-@import "compass/css3";
-@import "compass/css3/user-interface";
-
-// Helpers
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/helpers";
-
-// Vendors
-@import "vendors/prism";
-@import "vendors/browserhacks-icons";
-@import "vendors/google-fonts";
-
-// Layout
-@import "layout/structure";
-@import "layout/crystallo";
-
-// Partials
-@import "partials/base";
-@import "partials/header";
-@import "partials/headings";
-@import "partials/hack-wrapper";
-//@import "partials/nav";
-@import "partials/search";
-@import "partials/ad";
-@import "partials/options";
-@import "partials/quotes";
-@import "partials/footer";
-
-// Components
-@import "components/scrollbars";
-@import "components/buttons";
-@import "components/messages";
-@import "components/user-agent";
-@import "components/user-selection";
+@import 'fonts';
+@import 'settings';
+@import 'mixins';
+@import 'components';
+@import 'grid';
+@import 'icons';
+@import 'layout';
+@import 'normalize';
+@import 'project';
+@import 'typography';
