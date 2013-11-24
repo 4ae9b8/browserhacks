@@ -23,11 +23,11 @@ Created by
 
 * [Tim Pietrusky](http://twitter.com/timpietrusky)
 * [Hugo Giraudel](http://twitter.com/hugogiraudel)
+* [Fabrice Weinberg](http://twitter.com/fweinb)
 
 Thanks to
 ---------
 
-* [Fabrice Weinberg](http://twitter.com/fweinb) for his awesome help when moving to Grunt
 * [Jeff Clayton](https://github.com/jeffclayton) for his help with testing hacks
 * [Sara Soueidan](http://twitter.com/sarasoueidan), [Ana Tudor](http://twitter.com/thebabydino), [Mads Cordes](http://twitter.com/mobilpadde) for their kind help
 * [Paul Irish](http://twitter.com/paul_irish) for [his great post on CSS hacks](http://www.paulirish.com/2009/browser-specific-css-hacks/)
