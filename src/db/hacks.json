@@ -1,33 +1,5 @@
 [
   {
-    "type": "selector",
-    "browsers": {
-      "ch": "24-",
-      "sa": "6",
-      "ie": "7",
-      "an": "4.1+"
-    },
-    "label": "",
-    "language": "css",
-    "code": "::made-up-pseudo-element, .selector {}",
-    "test": "::made-up-pseudo-element, .selector { background: lightgreen; }",
-    "safe": false
-  },
-  {
-    "type": "media",
-    "browsers": {
-      "ch": "*",
-      "sa": "3+",
-      "op": "9.26-|14+",
-      "an": "2.3+"
-    },
-    "label": "",
-    "language": "css",
-    "code": "@media screen and (-webkit-min-device-pixel-ratio:0) {}",
-    "test": "@media screen and (-webkit-min-device-pixel-ratio:0) { .selector { background: lightgreen; } }",
-    "safe": false
-  },
-  {
     "type": "propertyValue",
     "browsers": {
       "ch": "28-",
