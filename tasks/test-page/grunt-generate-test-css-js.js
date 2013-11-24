@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       grunt.file.mkdir(destJs);
     }
 
-    var hacks       = grunt.file.readJSON(src),
+    var hacks    = grunt.file.readJSON(src),
         cssDump  = "";
         jsDump   = "var testWidgetSettings,testWidget={settings:{testClass:'js-succeed'},init:function(){testWidgetSettings=this.settings;this.runTests();},runTests:function(){";
 

@@ -1,7 +1,7 @@
 var addId      = require('./addid'),
     cssLint    = require('./csslint'),
     addVersion = require('./formatVersion.js'),
-    addLegacy   = require('./isLegacy');
+    addLegacy  = require('./isLegacy');
     
 module.exports = function(grunt) {
   grunt.registerTask('updateDatabase', 'Update the database used by Browserhacks.', function(){
