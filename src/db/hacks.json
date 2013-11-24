@@ -101,6 +101,17 @@
     "safe": false
   },
   {
+    "type": "media",
+    "browsers": {
+      "fx": "3-"
+    },
+    "label": "",
+    "language": "css",
+    "code": "@media \\0 all {}",
+    "test": "@media \\0 all { body:last-child .selector { background: lightgreen; } }",
+    "safe": false
+  },
+  {
     "type": "selector",
     "browsers": {
       "fx": "3+",
@@ -143,6 +154,17 @@
     "language": "css",
     "code": "@media screen and (min--moz-device-pixel-ratio:0) {}",
     "test": "@media screen and (min--moz-device-pixel-ratio:0) { .selector { background: lightgreen; } }",
+    "safe": false
+  },
+  {
+    "type": "media",
+    "browsers": {
+      "fx": "8+"
+    },
+    "label": "",
+    "language": "css",
+    "code": "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) {}\n@media all and (-moz-images-in-menus:0) and (min-resolution: .001dpcm) {}",
+    "test": "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }\n@media all and (-moz-images-in-menus:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }",
     "safe": false
   },
   {
@@ -855,6 +877,17 @@
     "safe": false
   },
   {
+    "type": "javascript",
+    "browsers": {
+      "op": "*"
+    },
+    "label": "",
+    "language": "javascript",
+    "code": "var isOpera = !!window.opera || /opera|opr/i.test(navigator.userAgent);",
+    "test": "!!window.opera || /opera|opr/i.test(navigator.userAgent)",
+    "safe": false
+  },
+  {
     "type": "selector",
     "browsers": {
       "sa": "2|3"
@@ -895,8 +928,8 @@
     },
     "label": "",
     "language": "javascript",
-    "code": "var isSafari = /Constructor/.test(window.HTMLElement);",
-    "test": "/Constructor/.test(window.HTMLElement)",
+    "code": "var isSafari = /constructor/i.test(window.HTMLElement);",
+    "test": "/constructor/i.test(window.HTMLElement)",
     "safe": false
   },
   {
@@ -919,6 +952,18 @@
     "language": "css",
     "code": "@media \\\\0 screen {}",
     "test": "@media \\\\0 screen { .selector { background: lightgreen; } }",
+    "safe": false
+  },
+  {
+    "type": "media",
+    "browsers": {
+      "ch": "29+",
+      "op": "16+"
+    },
+    "label": "",
+    "language": "css",
+    "code": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {}",
+    "test": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }",
     "safe": false
   }
 ]

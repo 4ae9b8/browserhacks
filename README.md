@@ -28,6 +28,7 @@ Thanks to
 ---------
 
 * [Fabrice Weinberg](http://twitter.com/fweinb) for his awesome help when moving to Grunt
+* [Jeff Clayton](https://github.com/jeffclayton) for his help with testing hacks
 * [Sara Soueidan](http://twitter.com/sarasoueidan), [Ana Tudor](http://twitter.com/thebabydino), [Mads Cordes](http://twitter.com/mobilpadde) for their kind help
 * [Paul Irish](http://twitter.com/paul_irish) for [his great post on CSS hacks](http://www.paulirish.com/2009/browser-specific-css-hacks/)
 * [Keith Clarke](http://twitter.com/keithclarkecouk) for [his @media block CSS hacks](http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/)
@@ -38,12 +39,12 @@ Thanks to
 Deployment
 ----------
 
-Our live stable version is the ```gh-pages``` branch. This is updated through the grunt ```publish``` task.
-Our preview/beta version is the ```master``` branch. This is checked with 5minfork.com.
+Our live stable version is the `gh-pages` branch. This is updated through the grunt `publish` task.
+Our preview/beta version is the `master` branch. This is checked with 5minfork.com.
 So when we want to do something new:
 
 1. We pull the repo locally
-2. We work on ```master``` branch
-3. We push to ```master```
+2. We work on `master` branch
+3. We push to `master`
 4. We check on 5minfork.com
-5. We go wild with grunt ```publish```
+5. We go wild with grunt `publish`

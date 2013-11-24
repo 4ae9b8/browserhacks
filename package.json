@@ -4,6 +4,10 @@
   "description": "Source of CSS and JS Hacks",
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4ae9b8/browserhacks.git"
+  },
   "devDependencies": {
     "csslint": "~0.9.10",
     "MD5": "~1.1.0",

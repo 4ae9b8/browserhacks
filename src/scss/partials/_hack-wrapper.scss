@@ -88,6 +88,8 @@
     @include breakpoint(mama-bear) {
         display: none; 
     }
+
+    text-transform: capitalize;
 }
 
 .browser-wrapper__link {

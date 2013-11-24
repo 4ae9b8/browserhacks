@@ -646,8 +646,10 @@
   });
 
   // #78: Order by browser version
-  $('.browser-wrapper__hack-wrapper').each(function() {
-      $(this).find('.browser-wrapper__hack').sort(function (a, b) {
+  var hackWrapper = $('.browser-wrapper__hack-wrapper');
+  hackWrapper.each(function() {
+    var node = $(this);
+      node.find('.browser-wrapper__hack').sort(function (a, b) {
           return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
       }).appendTo($(this));
   });
@@ -661,7 +663,8 @@
   Prism.highlightAll(false);
 
   // We add .line spans for each hack in every code block
-  $('pre > code').each(function() {
+  var codeBlocks = $('pre > code');
+  codeBlocks.each(function() {
       var $code = $(this);
       var lines = $code.html().split('\n');
       var dump  = "";
@@ -681,7 +684,7 @@
   // ------------
 
   // Bind one-click selection to lines
-  $('pre > code').on('click', '.line', function() {
+  codeBlocks.on('click', '.line', function() {
     _select(this); // Awesome select library ;)
   });
 
