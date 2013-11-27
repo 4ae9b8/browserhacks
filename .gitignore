@@ -4,3 +4,4 @@ sftp-config.json
 Thumbs.db
 node_modules/
 tmp/
+npm-debug.log
