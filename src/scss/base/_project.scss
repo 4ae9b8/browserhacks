@@ -82,7 +82,7 @@ span.line {
     }
 }
 
-footer {
+.footer {
     background-color: $darkWhite;
     border-top: 1px solid darken($lightGrey, 5%);
     padding: $baseline $baseline 0;
@@ -112,4 +112,9 @@ footer {
     span:before {
         line-height: 1.5;
     }
+}
+
+.centered {
+    padding-left: 7.5% !important;
+    padding-right: 7.5% !important;
 }

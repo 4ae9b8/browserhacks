@@ -4,12 +4,12 @@
 	<article class='browser-wrapper {{@key}}' data-high='3' id='{{@key}}'>
 		<section class='browser-wrapper__heading' data-cols='1'>
 
-			<div>
-				<h2 class='th'>
+			<h2 class='th'>
+				<div class="centered">
 					<span class='browserhacks-{{@key}}'></span>
 					<a href='#{{@key}}'>{{capitalizeFirst name}}</a>
-				</h2>
-			</div>
+				</div>
+			</h2>
 
 			{{! Get hacks for this browser }}
 
@@ -19,16 +19,16 @@
 
 				{{#isnt type lasttype}}
 					</section>
-					<section class='browser-wrapper__subheading' data-cols='1' data-type='{{type}}-parent'>
+					<section class='browser-wrapper__subheading  centered' data-cols='1' data-type='{{type}}-parent'>
 						<div>
 							<h3>{{fromObj ../../../hackTypes type 'title'}}</h3>
 						</div>
 					</section>
-					<section class='browser-wrapper__hack-wrapper grid' data-cols='2' data-type='{{type}}-childs'>
+					<section class='browser-wrapper__hack-wrapper grid  centered' data-cols='2' data-type='{{type}}-childs'>
 
 				{{/isnt}}
 
-				<div class='browser-wrapper__hack grid__col--50' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
+				<div class='browser-wrapper__hack grid__col--50 ' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
 					<div class="hack">
 						{{#if label}}
 							<p class='browser-wrapper__label'>{{label}}</p>
