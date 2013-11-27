@@ -28,7 +28,7 @@ body {
 	overflow-x: hidden;
 }
 .header {
-	border-bottom: 1px solid $lightGrey;
+	border-bottom: 1px solid darken($lightGrey, 5%);
 	overflow: hidden;
 	padding: $baseline $baseline 0;
 	text-align: right;
@@ -66,7 +66,8 @@ body {
 		}
 	}
 }
-.header__links {
+.header__links,
+.footer__links {
 
 	a {
 		background-color: $internetExplorer;
@@ -101,7 +102,7 @@ body {
 }
 .description {
 	background-color: $darkWhite;
-	border-bottom: 1px solid $lightGrey;
+	border-bottom: 1px solid darken($lightGrey, 5%);
 	margin: 0 ($baseline * -1);
 	padding: $baseline $baseline 0;
 
@@ -124,7 +125,7 @@ body {
 }
 .browserstack-ad {
 	background-color: $white;
-	border: 1px solid $lightGrey;
+	border: 1px solid darken($lightGrey, 5%);
 	margin-bottom: $baseline;
 }
 .shortcut {
@@ -290,9 +291,8 @@ span.line {
 }
 .additional-info {
 	background-color: $darkWhite;
-	border-bottom: 1px solid $lightGrey;
-	border-top: 1px solid $lightGrey;
-	margin-bottom: $baseline;
+	border-bottom: 1px solid darken($lightGrey, 5%);
+	border-top: 1px solid darken($lightGrey, 5%);
 	margin-top: $baseline;
 	padding: $baseline $baseline 0;
 
@@ -308,5 +308,101 @@ span.line {
 	}
 	p {
 		margin-bottom: ($baseline / 1.2);
+	}
+}
+footer {
+	background-color: $darkWhite;
+	border-top: 1px solid darken($lightGrey, 5%);
+	padding: $baseline $baseline 0;
+	text-align: right;
+
+	.copyright {
+		float: left;
+		text-align: left;
+
+		p {
+			@include inline-block;
+		}
+	}
+}
+.btn-top {
+	color: $internetExplorer;
+	font-size: 2em;
+	margin-right: ($baseline / 4);
+	text-decoration: none;
+	@include transition;
+
+	&:hover,
+	&:focus {
+		color: lighten($internetExplorer, 20%);
+	}
+	span:before {
+		line-height: 1.5;
+	}
+}
+#quotes {
+	background-color: tint($internetExplorer, 90%);
+}
+.quote {
+	background-color: tint($opera, 90%);
+	border-bottom: (($baseline / 3) / 1.5) solid $opera;
+	font-size: 1.5em;
+	margin-bottom: 0;
+	padding: (($baseline * 2) / 1.5) 0;
+	text-align: center;
+
+	p {
+		font-style: italic;
+		margin-bottom: 0;
+		@include inline-block;
+
+		&:after {
+			content: '\201d';
+		}
+		&:before {
+			content: '\201c';
+		}
+	}
+	a {
+		color: $internetExplorer;
+		text-decoration: none;
+
+		&:hover,
+		&:focus  {
+			color: lighten($internetExplorer, 20%);
+		}
+	}
+}
+.quote-authors {
+	list-style: none;
+	overflow-x: auto;
+	margin: 0;
+	white-space: nowrap;
+
+	li {
+		@include inline-block;
+
+		a {
+			border-bottom: 0 !important;
+			display: block;
+			padding: ($baseline * 1.5) $baseline $baseline;
+			text-decoration: none;
+		}
+	}
+	.active {
+		position: relative;
+
+		a:after {
+			border-left: $baseline solid transparent;
+			border-right: $baseline solid transparent;
+			border-top: $baseline solid $opera;
+			content: '';
+			height: 0;
+			left: 50%;
+			margin-left: ($baseline * -1);
+			position: absolute;
+			top: 0;
+			width: 0;
+		}
 	}
 }
