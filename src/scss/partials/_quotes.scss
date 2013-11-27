@@ -42,17 +42,17 @@
 
     li {
         @include inline-block;
-        -webkit-filter: blur(1px);
-        -moz-filter: blur(1px);
-        -ms-filter: blur(1px);
-        -o-filter: blur(1px);
-        filter: blur(1px);
+        -webkit-filter: grayscale(100%) blur(1px);
+        -moz-filter: grayscale(100%) blur(1px);
+        -ms-filter: grayscale(100%) blur(1px);
+        -o-filter: grayscale(100%) blur(1px);
+        filter: grayscale(100%) blur(1px);
 
         a {
             border-bottom: 0 !important;
             display: block;
             font-size: .8em;
-            padding: 0 1.5em 1em;
+            padding: 0 2em 1em;
             text-decoration: none;
             color: #333;
         }
@@ -76,11 +76,11 @@
     }
 
     .active, li:hover, li:focus {
-        -webkit-filter: blur(0);
-        -moz-filter: blur(0);
-        -ms-filter: blur(0);
-        -o-filter: blur(0);
-        filter: blur(0);
+        -webkit-filter: grayscale(0) blur(0);
+        -moz-filter: grayscale(0) blur(0);
+        -ms-filter: grayscale(0) blur(0);
+        -o-filter: grayscale(0) blur(0);
+        filter: grayscale(0) blur(0);
     }
 
 }
