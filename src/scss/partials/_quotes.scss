@@ -13,7 +13,7 @@
     p {
         font-style: italic;
         margin-bottom: 0;
-        @include inline-block;
+        @include inline-block(none);
 
         &:after {
             content: '\201d';
@@ -42,12 +42,19 @@
 
     li {
         @include inline-block;
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        -ms-filter: blur(1px);
+        -o-filter: blur(1px);
+        filter: blur(1px);
 
         a {
             border-bottom: 0 !important;
             display: block;
-            padding: ($baseline * 1.5) $baseline $baseline;
+            font-size: .8em;
+            padding: 0 1.5em 1em;
             text-decoration: none;
+            color: #333;
         }
     }
     
@@ -67,4 +74,51 @@
             width: 0;
         }
     }
+
+    .active, li:hover, li:focus {
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        -ms-filter: blur(0);
+        -o-filter: blur(0);
+        filter: blur(0);
+    }
+
 }
+
+.avatar-sprite, 
+.avatar-ashleycallahan, 
+.avatar-bluespore, 
+.avatar-chinchang457, 
+.avatar-codepo8, 
+.avatar-desainersingit, 
+.avatar-fabien_doiron, 
+.avatar-garazi, .avatar-grimmweb, 
+.avatar-iSands, 
+.avatar-jaredsartin, 
+.avatar-markszymik, 
+.avatar-nate_weldon, 
+.avatar-paul_irish, 
+.avatar-petesena, 
+.avatar-ronicadesign, 
+.avatar-sgalineau, 
+.avatar-shakeeb, 
+.avatar-slashlv, 
+.avatar-therusstler, 
+.avatar-toddvachon {
+    background-image: url('../img/avatar-s5b3bfef4fa.png');
+    background-repeat: no-repeat;
+}
+
+.quotes .quote-authors__avatar>div {
+    width: 73px;
+    height: 73px;
+    display: block;
+    margin: 1em auto;
+    border-radius: 50%;
+    border: 3px solid tint($opera, 90%);
+    box-shadow: 0 0 0 3px #eee;
+}
+
+@import "compass/utilities/sprites";
+@import "avatar/*.png";
+@include all-avatar-sprites;
