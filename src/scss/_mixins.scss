@@ -8,6 +8,10 @@
 	   -moz-box-sizing: $value;
 			box-sizing: $value;
 }
+@mixin inline-block {
+	display: inline-block;
+	vertical-align: top;
+}
 @mixin linear-gradient($angle, $colorStops...) {
 	background-image: -webkit-linear-gradient($angle, $colorStops);
 	background-image:    -moz-linear-gradient($angle, $colorStops);

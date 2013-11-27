@@ -37,8 +37,8 @@
 						<ul class='hack-list'>
 							{{#each browsers}}
 								<li class='hack-list__item'>
-									<span class='browser-icon browserhacks-{{@key}}'></span>
-									<span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>
+									<span class='browser-icon browserhacks-{{@key}}'></span>&nbsp;
+									<span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>&nbsp;
 									<span class='browser-version'>{{fromObj ../browsers @key 'humanVersion'}}</span>
 								</li>
 							{{/each}}
@@ -51,7 +51,7 @@
 									<li class='hack-list__item'><span class="browserhacks-invalid" title="Invalid CSS: {{csslint}}"></span> <span class="browserhacks-css3" title="Invalid CSS: {{csslint}}"></span></li>
 								{{/if}}
 							{{/ifCond}}
-							<li class='hack-list__item'><a href='#hack-{{id}}'>#</a></li>
+							<li class='hack-list__item hack-id'><a href='#hack-{{id}}'>#</a></li>
 						</ul>
 					</div>
 				</div>

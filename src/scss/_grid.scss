@@ -4,7 +4,7 @@
 [class*="grid__col--"] {
 	padding: 0 .75em;
 }
-@media (min-width: 40em) { /* 640px */
+@media (min-width: 76em) { /* 1216px */
 	[class*="grid__col--"] {
 		display: inline-block;
 		vertical-align: top;

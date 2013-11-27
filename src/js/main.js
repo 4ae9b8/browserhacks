@@ -720,8 +720,6 @@
 
 		var scrollDistance = $(this).scrollTop();
 
-		console.log('Offset: ' + offset + ' | Scroll Distance: ' + scrollDistance);
-
 		if (offset <= scrollDistance) {
 
 			$search.addClass('fixed');
