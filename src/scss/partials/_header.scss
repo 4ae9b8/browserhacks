@@ -111,6 +111,12 @@
     p {
         margin-bottom: ($baseline / 1.2);
     }
+
+    @include bp(small) {
+        h2 {
+            text-align: center;
+        }
+    }
 }
 .browserstack-ad {
     background-color: $white;
@@ -138,11 +144,19 @@
         margin: 0 auto;
         display: block;
     }
+
+    @include bp(small) {
+        margin: .5em auto;
+    }
 }
 
 .carbonad {
     max-width: 100%;
     margin: .5em 0;
+
+    @include bp(small) {
+        margin: .5em auto;
+    }
 }
 
 .shortcut {

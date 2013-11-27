@@ -115,6 +115,8 @@ span.line {
 }
 
 .centered {
-    padding-left: 7.5% !important;
-    padding-right: 7.5% !important;
+    @include bp(large) {
+        padding-right: 7.5% !important;
+        padding-left: 7.5% !important;
+    }
 }
