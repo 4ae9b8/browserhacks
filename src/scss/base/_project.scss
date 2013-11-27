@@ -1,0 +1,115 @@
+.browser-wrapper {
+    padding: 0 $baseline;
+
+    h2 {
+        background-color: lightgrey;
+        border-top: (($baseline / 2.25) / 3) solid grey;
+        margin: (($baseline / 2.25) * 2) (($baseline / 2.25) * -1) 0;
+        padding: ($baseline / 4) ($baseline / 2.25) ($baseline / 3);
+
+        span {
+            margin-right: (($baseline / 2.25) / 2);
+            position: relative;
+            top: (($baseline / 2.25) / 8);
+        }
+
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+    }
+
+    h3 {
+        color: $darkGrey;
+        margin-top: (($baseline / 1.5) * 2);
+    }
+}
+
+h2 {
+    .an & {
+        @include section-border($android);
+    }
+
+    .ch & {
+        @include section-border($chrome);
+    }
+
+    .fx & {
+        @include section-border($firefox);
+    }
+
+    .ie & {
+        @include section-border($internetExplorer);
+    }
+
+    .op & {
+        @include section-border($opera);
+    }
+
+    .sa & {
+        @include section-border($safari);
+    }
+}
+
+span.line {
+    border-radius: 4px;
+    margin: -2px;
+    padding: 2px;
+    display: block;
+}
+
+.additional-info {
+    background-color: $darkWhite;
+    border-bottom: 1px solid darken($lightGrey, 5%);
+    border-top: 1px solid darken($lightGrey, 5%);
+    margin-top: $baseline;
+    padding: $baseline $baseline 0;
+
+    h2 {
+        color: $darkGrey;
+        font-size: 2em;
+        line-height: 1;
+        margin-bottom: ($baseline / 3);
+    }
+
+    p,
+    li {
+        font-size: 1.2em;
+    }
+
+    p {
+        margin-bottom: ($baseline / 1.2);
+    }
+}
+
+footer {
+    background-color: $darkWhite;
+    border-top: 1px solid darken($lightGrey, 5%);
+    padding: $baseline $baseline 0;
+    text-align: right;
+
+    .copyright {
+        float: left;
+        text-align: left;
+
+        p {
+            @include inline-block;
+        }
+    }
+}
+
+.btn-top {
+    color: $internetExplorer;
+    font-size: 2em;
+    margin-right: ($baseline / 4);
+    text-decoration: none;
+    @include transition(.15s);
+
+    &:hover,
+    &:focus {
+        color: lighten($internetExplorer, 20%);
+    }
+    span:before {
+        line-height: 1.5;
+    }
+}

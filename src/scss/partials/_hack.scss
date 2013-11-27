@@ -1,0 +1,68 @@
+.hack {
+    background-color: darken($darkWhite, 5%);
+    border: 1px solid darken($lightGrey, 5%);
+    margin-bottom: $baseline;
+    overflow: hidden;
+
+    .browser-wrapper__label {
+        border-bottom: 1px solid darken($lightGrey, 5%);
+        margin-bottom: 0;
+        padding: ($baseline / 4) ($baseline / 2);
+    }
+
+    pre {
+        background-color: $darkWhite;
+        border-bottom: 1px solid darken($lightGrey, 5%);
+        border-right: 1px solid darken($lightGrey, 5%);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        margin: 0 -1px 0 0;
+        padding: ($baseline / 2);
+    }
+
+    .hack-list {
+        float: left;
+        list-style: none;
+        margin: 0;
+
+        li {
+            border-right: 1px solid darken($lightGrey, 5%);
+            padding: ($baseline / 4) ($baseline / 2);
+            @include inline-block;
+
+            span {
+                font-size: .8em;
+            }
+            .browser-version {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .hack-list--options {
+        float: right;
+
+        li {
+            border-left: 1px solid darken($lightGrey, 5%);
+            border-right: 0;
+        }
+        
+        .hack-id {
+            padding: 0;
+
+            a {
+                border-bottom: 0;
+                color: $internetExplorer;
+                display: block;
+                padding: ($baseline / 4) ($baseline / 2);
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    color: lighten($internetExplorer, 20%);
+                }
+            }
+        }
+    }
+}

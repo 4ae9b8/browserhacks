@@ -1,96 +1,165 @@
-/* ******* *
- * $HEADER *
- * ******* */
-
 .header {
-    background: #fff;
-    padding-top: 1em;
-
-    @include breakpoint(mama-bear) {
-        div {
-            width: 100% !important;
-        }
-    }
-
-    &:before {
-        position: absolute;
-        top: 0;
-        content: '';
-        width: 100%;
-        height: .5em;
-        $stripes: ();
-        @each $b in $browsers {
-          $stripes: append($stripes, nth($b, 2));
-        }
-        //@include stripes($stripes, to right);
-    }
+    border-bottom: 1px solid darken($lightGrey, 5%);
+    overflow: hidden;
+    padding: $baseline $baseline 0;
+    text-align: right;
 }
-
-.shortcut {
-    @include inline-block(middle);
-    background: #f5f2f0;
-    border-radius: .2em;
-    padding: .1em;
-    width: 1.5em;
-    text-align: center;
-    font-weight: bold;
-    color: #666;
-    color: rgba(0,0,0,.6);
-    border: 1px solid rgba(0,0,0,0.15);
-}
-
-.description {
-    h2 {
-        text-align: center;
-    }
-}
-
 .header__logo {
+    float: left;
 
     h1 {
-        font: 2.2em 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        letter-spacing: -2px;
-        margin: 0;
+        font-size: 2.5em;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+    a {
+        color: $black;
+        display: block;
+        margin: ((($baseline / 2.5) / 2) * -1);
+        padding: (($baseline / 2.5) / 2);
+        text: {
+            decoration: none;
+            transform: uppercase;
+        }
+        @include transition(.15s);
+
+        span {
+            color: $firefox;
+            @include transition(.15s);
+        }
+        &:hover,
+        &:focus {
+            color: $safari;
+
+            span {
+                color: $chrome;
+            }
+        }
     }
 
-    span {
-        color: #f77918;
-        @include transition(color .25s ease-in-out);
+    @include bp(small) {
+        float: none;
+        text-align: center;
+        margin-bottom: .5em;
     }
-
-    .header__link {
-        color: #555;
+}
+.header__links,
+.footer__links {
+    a {
+        background-color: $internetExplorer;
+        border: 1px solid darken($internetExplorer, 10%);
+        color: $white;
+        margin-bottom: $baseline;
+        margin-left: $baseline;
+        padding: ($baseline / 2) $baseline;
+        text-decoration: none;
+        box-shadow: inset 0 1px 0 hsla(0,0%,100%,.25);
+        @include inline-block;
+        @include transition(.15s);
 
         &:hover,
         &:focus {
-            color: #f77918;
-
-            span {
-                color: #555;
-            }
+            background-color: lighten($internetExplorer, 5%);
         }
-    }    
+
+        &:active {
+            background-color: darken($internetExplorer, 5%);
+            box-shadow: inset 0 1px 0 hsla(0,0%,0%,.1);
+        }
+    }
+
+    span {
+        font-size: 1.5em;
+        height: (($baseline / 1.5) * .9);
+        line-height: 1;
+        margin-right: ($baseline / 2);
+        position: relative;
+        top: -1px;
+        @include inline-block;
+    }
+
+    @include bp(small) {
+        margin-bottom: 1em;
+        a {
+            width: 49%;
+            text-align: center;
+            margin: 0;
+            font-size: .7em;
+        }
+
+        a:first-of-type {
+            margin-right: .5%;
+        }
+
+        a:last-of-type {
+            margin-left: .5%;
+        }
+    }
 }
 
-.social {
-    @include breakpoint(mama-bear) {
-        .header-logo {
-            width: 100%;
-            text-align: center;
-        }
+.description {
+    background-color: $darkWhite;
+    border-bottom: 1px solid darken($lightGrey, 5%);
+    margin: 0 ($baseline * -1);
+    padding: $baseline $baseline 0;
 
-        .header-logo + div,
-        .header-logo + div + div {
-            width: 50%;
-        }
+    .grid__col--25 {
+        padding: 0 $baseline;
+    }
+    h2 {
+        color: $darkGrey;
+        font-size: 2em;
+        line-height: 1;
+        margin-bottom: ($baseline / 3);
+    }
+    p,
+    li {
+        font-size: 1.2em;
+    }
+    p {
+        margin-bottom: ($baseline / 1.2);
+    }
+}
+.browserstack-ad {
+    background-color: $white;
+    border: 1px solid darken($lightGrey, 5%);
+    width: 300px;
+    max-width: 100%;
+    margin-bottom: $baseline;
+    padding-top: .5em;
+    position: relative;
+
+    p {
+        font-size: .8em;
+        text-transform: uppercase;
+        color: #888;
+        position: absolute;
+        left: 5.7em;
     }
 
-    @include breakpoint(baby-bear) {
-        .header-logo,
-        .header-logo + div,
-        .header-logo + div + div {
-            width: 100%;
-        }
+    a {
+        text-decoration: none;
+        display: block;
     }
+
+    img {
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+.carbonad {
+    max-width: 100%;
+    margin: .5em 0;
+}
+
+.shortcut {
+    background-color: $white;
+    border: 1px solid darken($lightGrey, 10%);
+    border-bottom-width: 2px;
+    border-radius: .25em;
+    font-family: monospace;
+    position: relative;
+    padding: .25em .5em;
+    top: -.125em;
 }

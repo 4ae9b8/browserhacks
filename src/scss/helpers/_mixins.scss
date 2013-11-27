@@ -1,71 +1,22 @@
-/* ******* *
- * $MIXINS *
- * ******* */
+@mixin section-border($color) {
+    border-color: tint($color, 25%);
+    background-color: tint($color, 85%);
 
-/**
- * Media Queries handler
- */
-@mixin breakpoint($point) {
-  @if $point == papa-bear {
-    @media (min-width: 66em) { @content; }
-  }
-  @if $point == mama-bear {
-    @media (max-width: 66em) { @content; }
-  }
-  @if $point == baby-bear {
-    @media (max-width: 44em) { @content; } 
-  }
-  @if $point == retina {
-    @media 
-      only screen and (-webkit-min-device-pixel-ratio: 1.3),
-      only screen and (min-resolution: 124.8dpi),
-      only screen and (min-resolution: 1.3dppx) {
-        @content;
+    span {
+        color: $color;
     }
-  }
 }
 
-@mixin bh__linear-gradient($syntax, $size) {
-  $grad : unquote('linear-gradient(' + $syntax);
-  $n : length($browsers);
-  
-  @for $i from 1 through $n {
-    $c: nth(nth($browsers, $i), 2);
-    $grad: $grad, $c ($i - 1) * 100%/$n, $c $i * 100%/$n;
-  }
-  
-  $grad: $grad unquote(')');
-  
-  @include background($grad);
-}
-
-@mixin stripes($colors, $direction: "to bottom") {  
-    
-    $stripes   : 100% / length($colors);
-    $auto      : not(type-of(nth($colors, 1)) == list);
-    $gradient  : ();
-    
-    @for $i from 1 through length($colors) {
-      $item : nth($colors, $i);
-      $dump : ();
-
-      @if $auto == true {
-        $dump : $item $stripes * ($i - 1), $item $stripes * $i;
-      }
-      
-      @else {
-                
-        @if $i > 1 {
-          $prev : nth($colors, $i - 1);
-          $dump : $dump, nth($item, 1) nth($prev, 2);
+@mixin bp($bp) {
+    @if $bp == small {
+        @media (max-width: 65em) {
+            @content;
         }
-        $dump : $dump, $item;
-        
-      }
-      
-      $gradient : join($gradient, $dump, comma);
+    } 
 
+    @else if $bp == large {
+        @media (min-width: 65em) {
+            @content;
+        }
     }
-
-    @include background-image(linear-gradient($direction, $gradient));
 }

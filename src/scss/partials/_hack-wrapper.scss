@@ -18,11 +18,6 @@
         margin-bottom: 0;
         padding: .5em;
         border-bottom: .1em solid #DDD;
-
-        @include breakpoint(baby-bear) {
-            width: 100%; 
-            margin: 1% 0 0 0; 
-        }
     }
 
     &[data-legacy=true] {
@@ -72,10 +67,6 @@
     font-size: .8em;
     color: #333;
     border-right: 1px solid rgba(0,0,0,0.1);
-
-    @include breakpoint(mama-bear) { 
-        font-size: 1em;
-    }
 }
 
 .browser-version {
@@ -85,9 +76,6 @@
 }
 
 .browser-name { 
-    @include breakpoint(mama-bear) {
-        display: none; 
-    }
 
     text-transform: capitalize;
 }
@@ -100,9 +88,6 @@
     padding: 0.5em 0.75em;
     font-size: .8em;
 
-    @include breakpoint(mama-bear) { 
-        font-size: 1em;
-    }
 }
 
 .hack-list--options {

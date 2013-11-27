@@ -1,74 +1,42 @@
-/* ******* *
- * $SEARCH *
- * ******* */
+.search {
+    background-color: hsla(0,0%,100%,.95);
+    border-bottom: 1px solid darken($lightGrey, 5%);
+    box-shadow: 0 .1em .1em hsla(0,0%,0%,.1);
+    padding: ($baseline / 2) $baseline;
+    @include  background-image(linear-gradient(0deg, hsla(0,0%,100%,0), white));
 
- .search {
-    input {
-        width: 100%;
-        background: rgba(#eee, .3);
-        height: 1.5em;
-        font: 2em/1.5 sans-serif;
-        padding: 0 .5em;
-        outline: none;
-        border: none;
-        border-left: .25em solid rgba(0, 0, 0, .3);
-        @include transition(.25s);
-
-        &:focus {
-            background: rgba(#999, 0.2);
-            border-color: #0a90dd;
-            color: #000;
-        }
-    }
-
-    &.sticky {
-        position: fixed;
-        top: 0;
+    &.fixed {
         left: 0;
+        position: fixed;
         right: 0;
-        height: auto;
-        box-shadow: .55em .65em .55em -.55em rgba(#000, .1);
-        background: white;
-        z-index: 11;
+        top: 0;
+        z-index: 999;
+    }
+
+    input[type="checkbox"] {
+        position: relative;
+        top: -($baseline / 8);
+        vertical-align: middle;
+    }
+
+    label {
+        cursor: pointer;
+        font-size: 1.2em;
+        line-height: 2.5;
+        margin-right: ($baseline / 1.2);
+        padding-left: (($baseline / 1.2) / 4);
     }
 }
 
- /*
-
-.form-wrapper {
+.search__input {
+    background-color: $darkWhite;
+    border: 1px solid darken($lightGrey, 25%);
+    box-shadow: inset 0 .1em .1em hsla(0,0%,0%,.1);
+    color: $black;
+    font-size: 1.25em;
+    line-height: 1.2;
     margin: 0;
-    padding: .5em 0 .5em .5em;
-    position: relative;
-    float: right;
-
-    /*
-    @include breakpoint(papa-bear) {
-        &:before {
-            content: '';
-            position: absolute;
-            width: 0; 
-            height: 0;
-            left: -1.3em; 
-            border-top: 1.5em solid transparent;
-            border-bottom: 1.5em solid transparent; 
-            border-right: 1.5em solid rgba(0,0,0,.3); 
-            @include transition(.25s ease-in-out);
-        }
-
-        .active &:before { border-right-color: #0a90dd; }
-    }
-
-    @include breakpoint(mama-bear) {
-        padding: 0;
-    }
-
-    @include breakpoint(baby-bear) {
-        float: none;
-        width: auto;
-
-        input {
-            font-size: 1.5em;
-        }
-    }
+    padding: ($baseline / 3) ($baseline / 2);
+    width: 100%;
+    vertical-align: baseline;
 }
-*/
