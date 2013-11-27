@@ -80,19 +80,11 @@
 
     @include bp(small) {
         margin-bottom: 1em;
+
         a {
-            width: 49%;
+            width: 100%;
             text-align: center;
-            margin: 0;
-            font-size: .7em;
-        }
-
-        a:first-of-type {
-            margin-right: .5%;
-        }
-
-        a:last-of-type {
-            margin-left: .5%;
+            margin: 0 0 .5em 0;
         }
     }
 }

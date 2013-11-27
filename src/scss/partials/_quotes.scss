@@ -36,6 +36,7 @@
 }
 .quote-authors {
     list-style: none;
+    overflow-y: hidden;
     overflow-x: auto;
     margin: 0;
     white-space: nowrap;
