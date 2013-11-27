@@ -52,8 +52,8 @@ module.exports = function(grunt){
 
 		uglify: {
 			dist : {
-			 files: {
-				 './tmp/js/main.min.js': [
+				files: {
+					'./tmp/js/main.min.js': [
 
 						'./src/js/lib/jquery.min.js',
 						'./src/js/lib/jquery.mousewheel.js',
@@ -67,7 +67,7 @@ module.exports = function(grunt){
 						// We can't uglify the browserhacks-test-page because some test would break (see concat js)
 						//'./tmp/js/browserhacks-test-page.js'
 					]
-			 }
+				}
 			}
 		},
 

@@ -13,11 +13,11 @@
 
 	window.$.fn._show = function() {
 		this.show();
-	}
+	};
 
 	window.$.fn._hide = function() {
 		this.hide();
-	}
+	};
 
 	/***************************************************
 	 *
@@ -158,7 +158,7 @@
 
 			// Match the browser
 			_.each(names, function(browser) {
-				if (browser.indexOf(data.browser) == 0 && !matched) {
+				if (browser.indexOf(data.browser) === 0 && !matched) {
 					this.show(data);
 					matched = true;
 
@@ -181,7 +181,7 @@
 			this.$el.addClass('active');
 
 			// Filter version
-			if (data.version != null) {
+			if (data.version !== null) {
 				// data.version = ~~data.version;
 
 				// Hide all childs
@@ -200,7 +200,7 @@
 					_.each(versions, function(version) {
 
 						// Show version which starts with value
-						if (version.indexOf(data.version) == 0) {
+						if (version.indexOf(data.version) === 0) {
 							_item.show();
 						}
 
@@ -246,7 +246,7 @@
 					count = this.$el.find('[data-type="'+type+'-childs"] .browser-wrapper__hack:visible').length;
 
 					// Hide title if no hacks are visible
-					if (count == 0) {
+					if (count === 0) {
 						this.$el.find('[data-type="'+type+'-parent"] h3').hide();
 					}
 				}, this);
@@ -324,7 +324,7 @@
 			this.value = this.$el.val().toLowerCase().trim();
 
 			// Something was entered
-			if (this.value != '') {
+			if (this.value !== '') {
 				this.isSearching = true;
 
 				// Split Browser from version
@@ -336,7 +336,7 @@
 					this.browser = this.split[1].trim();
 
 					// Get the version
-					if (this.split[2] != "") {
+					if (this.split[2] !== "") {
 						this.version = this.split[2].trim();
 					} else {
 						this.version = null;
@@ -518,7 +518,7 @@
 		},
 
 		handleClick : function(id) {
-			if (this.interval_move != null) {
+			if (this.interval_move !== null) {
 				clearInterval(this.interval_move);
 				this.interval_move = null;
 			}
@@ -530,10 +530,10 @@
 		 * Update the quotes content and activates/deactivates authors in the list
 		 */
 		updateText : function(id) {
-			var id = typeof id != 'undefined' ? id : 0;
+			id = typeof id !== 'undefined' ? id : 0;
 
 			// Is loaded or at the end of
-			if (this.current != -1) {
+			if (this.current !== -1) {
 				// Deactivate current
 				this.authors[this.current].setActive(false);
 
@@ -699,12 +699,13 @@
 	// Sticky search
 	var $content = $('#content'),
 		$search = $('#search'),
+		$window = $(window),
 		offset = $search.offset().top + 8,  // + height of coloured bar at top of page
 		height = $search.outerHeight();
 
-	$(window).scroll(function (e) {
+	$window.scroll(function (e) {
 
-		var scrollDistance = $(this).scrollTop();
+		var scrollDistance = $window.scrollTop();
 
 		if (offset <= scrollDistance) {
 
@@ -717,4 +718,5 @@
 			$content.css('padding-top', 0);
 		}
 	}).trigger('scroll');
+
 })();
