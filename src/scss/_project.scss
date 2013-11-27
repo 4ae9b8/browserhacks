@@ -142,6 +142,7 @@ body {
 	border-bottom: 1px solid darken($lightGrey, 5%);
 	box-shadow: 0 .1em .1em hsla(0,0%,0%,.1);
 	padding: ($baseline / 2) $baseline;
+	@include linear-gradient(0deg, hsla(0,0%,100%,0), white);
 
 	&.fixed {
 		left: 0;
@@ -223,7 +224,6 @@ h2 {
 .hack {
 	background-color: darken($darkWhite, 5%);
 	border: 1px solid darken($lightGrey, 5%);
-	box-shadow: 0 0 0 2px hsla(0,0%,0%,.025);
 	margin-bottom: $baseline;
 	overflow: hidden;
 
@@ -265,9 +265,21 @@ h2 {
 			border-left: 1px solid darken($lightGrey, 5%);
 			border-right: 0;
 		}
-		.hack-id a {
-			color: $internetExplorer;
-			text-decoration: none;
+		.hack-id {
+			padding: 0;
+
+			a {
+				border-bottom: 0;
+				color: $internetExplorer;
+				display: block;
+				padding: ($baseline / 4) ($baseline / 2);
+				text-decoration: none;
+
+				&:hover,
+				&:focus {
+					color: lighten($internetExplorer, 20%);
+				}
+			}
 		}
 	}
 }
@@ -275,4 +287,26 @@ span.line {
 	border-radius: 4px;
 	margin: -2px;
 	padding: 2px;
+}
+.additional-info {
+	background-color: $darkWhite;
+	border-bottom: 1px solid $lightGrey;
+	border-top: 1px solid $lightGrey;
+	margin-bottom: $baseline;
+	margin-top: $baseline;
+	padding: $baseline $baseline 0;
+
+	h2 {
+		color: $darkGrey;
+		font-size: 2em;
+		line-height: 1;
+		margin-bottom: ($baseline / 3);
+	}
+	p,
+	li {
+		font-size: 1.2em;
+	}
+	p {
+		margin-bottom: ($baseline / 1.2);
+	}
 }

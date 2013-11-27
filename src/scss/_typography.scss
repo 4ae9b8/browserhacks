@@ -54,18 +54,23 @@ blockquote {
             hyphens: auto;
 }
 p a:link,
-p a:visited {
+p a:visited,
+li a:link,
+li a:visited  {
 	border-bottom: 1px solid $internetExplorer;
     color: $internetExplorer;
     text-decoration: none;
     @include transition;
 }
 p a:hover,
-p a:focus {
+p a:focus,
+li a:hover,
+li a:focus  {
 	border-color: lighten($internetExplorer, 20%);
     color: lighten($internetExplorer, 20%);
 }
-p a:active {
+p a:active,
+li a:active {
     position: relative;
     top: 1px;
     @include transition(0s);
