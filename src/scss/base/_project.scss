@@ -1,6 +1,4 @@
 .browser-wrapper {
-    padding: 0 $baseline;
-
     h2 {
         background-color: lightgrey;
         border-top: (($baseline / 2.25) / 3) solid grey;
@@ -21,7 +19,7 @@
 
     h3 {
         color: $darkGrey;
-        margin-top: (($baseline / 1.5) * 2);
+        margin-top: $baseline;
     }
 }
 
