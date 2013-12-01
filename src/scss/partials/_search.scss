@@ -7,18 +7,20 @@
     @include  background-image(linear-gradient(0deg, hsla(0,0%,100%,0), white));
     z-index: 999;
 
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -ms-sticky;
-    position: -o-sticky;
-    position: sticky;
-    top: 0;
+    @include bp(large) {
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+        top: 0;
 
-    // position: sticky polyfill
-    &.fixed {
-        left: 0;
-        position: fixed;
-        right: 0;
+        // position: sticky polyfill
+        &.fixed {
+            left: 0;
+            position: fixed;
+            right: 0;
+        }
     }
 
     input[type="checkbox"] {

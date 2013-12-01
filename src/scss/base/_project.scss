@@ -2,8 +2,9 @@
     h2 {
         background-color: lightgrey;
         border-top: (($baseline / 2.25) / 3) solid grey;
-        margin: (($baseline / 2.25) * 2) (0) 0;
-        padding: ($baseline / 4) (0) ($baseline / 3);
+        margin-top: ($baseline / 2.25);
+        padding-top: ($baseline / 4); 
+        padding-bottom: ($baseline / 3);
 
         span {
             margin-right: (($baseline / 2.25) / 2);
@@ -121,16 +122,13 @@ span.line {
         padding-right: 7.5% !important;
         padding-left: 7.5% !important;
     }
+
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
 .nothing {
     padding: $baseline 0;
     font-size: $baseline;
-}
-
-#content {
-    @include bp(small) {
-        padding: $baseline;
-    }
 }
