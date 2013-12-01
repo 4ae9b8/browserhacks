@@ -7,15 +7,16 @@
  */
 .browser-wrapper__hack {
     position: relative;
-
-    /* Technique used from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-C*/
-    padding-top:80px;
-    margin-top:-80px;
-
     -webkit-background-clip:content-box;
     background-clip:content-box;
 
-    &:target .hack {
-        border: .15em solid deepskyblue;
+    &:target {
+        /* Technique used from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-C*/
+        padding-top:80px;
+        margin-top:-80px;
+
+        .hack {
+            border: .15em solid deepskyblue;
+        }
     }
 }
