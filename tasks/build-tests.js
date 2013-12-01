@@ -25,16 +25,7 @@ module.exports = function(grunt) {
 
     var hacks    = grunt.file.readJSON(src),
         cssDump  = "";
-        jsDump   = "\
-        var testWidget = {\
-          settings: {\
-            testClass: 'js-succeed',\
-            testNode: document.createElement('div')\
-          },\
-          init:function() {\
-            this.runTests();\
-          },\
-          runTests: function() { var a;";
+        jsDump   = "var testWidget = {settings:{testClass:'js-succeed',testNode:document.createElement('div')},init:function(){this.runTests();},runTests:function(){";
 
     for (var i in hacks) {
       var hack = hacks[i];

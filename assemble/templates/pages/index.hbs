@@ -1,62 +1,55 @@
-{{! This dose go against no logic in templates but works very well }}
+{{! This does go against no logic in templates but works very well }}
 
 {{#each browsers}}
-	<article class='browser-wrapper {{@key}}' data-high='3' id='{{@key}}'>
-		<section class='browser-wrapper__heading' data-cols='1'>
+    <article class='browser-wrapper {{@key}}' id='{{@key}}'>
 
-			<h2 class='th'>
-				<div class="centered">
-					<span class='browserhacks-{{@key}}'></span>
-					<a href='#{{@key}}'>{{capitalizeFirst name}}</a>
-				</div>
-			</h2>
+            <h2 class="centered">
+                <a href='#{{@key}}'><span class='browserhacks-{{@key}}'></span> {{capitalizeFirst name}}</a>
+            </h2>
 
-			{{! Get hacks for this browser }}
+            {{! Get hacks for this browser }}
 
-			{{#eachFilteredBrowser ../hacks @key}}
+            {{#eachFilteredBrowser ../hacks @key}}
 
-				{{! If current type (type) is different from type of last hack (../lasttype) display type heading }}
+                {{! If current type (type) is different from type of last hack (../lasttype) display type heading }}
 
-				{{#isnt type lasttype}}
-					</section>
-					<section class='browser-wrapper__subheading  centered' data-cols='1' data-type='{{type}}-parent'>
-						<h3>{{fromObj ../../../hackTypes type 'title'}}</h3>
-					</section>
-					<section class='browser-wrapper__hack-wrapper grid  centered' data-cols='2' data-type='{{type}}-childs'>
+                {{#isnt type lasttype}}
+                    </section>
+                    <h3 class='centered' data-type='{{type}}-parent'>{{fromObj ../../../hackTypes type 'title'}}</h3>
+                    <section class='grid  centered' data-type='{{type}}-childs'>
 
-				{{/isnt}}
+                {{/isnt}}
 
-				<div class='browser-wrapper__hack grid__col--50 ' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
-					<div class="hack">
-						{{#if label}}
-							<p class='browser-wrapper__label'>{{label}}</p>
-						{{/if}}
-						<pre class='language-{{language}}'><code>{{{code}}}</code></pre>
-						<ul class='hack-list'>
-							{{#each browsers}}
-								<li class='hack-list__item'>
-									<span class='browser-icon browserhacks-{{@key}}'></span>&nbsp;
-									<span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>&nbsp;
-									<span class='browser-version'>{{fromObj ../browsers @key 'humanVersion'}}</span>
-								</li>
-							{{/each}}
-						</ul>
-						<ul class="hack-list  hack-list--options">
-							{{#ifCond language "css" }}
-								{{#if safe}}
-									<li class='hack-list__item'><span class="browserhacks-valid" title="Valid CSS"></span> <span class="browserhacks-css3" title="Valid CSS"></span></li>
-								{{else}}
-									<li class='hack-list__item'><span class="browserhacks-invalid" title="Invalid CSS: {{csslint}}"></span> <span class="browserhacks-css3" title="Invalid CSS: {{csslint}}"></span></li>
-								{{/if}}
-							{{/ifCond}}
-							<li class='hack-list__item hack-id'><a href='#hack-{{id}}'>#</a></li>
-						</ul>
-					</div>
-				</div>
+                <div class='browser-wrapper__hack grid__col--50 ' id='hack-{{id}}' data-safe='{{safe}}' data-legacy='{{fromObj browsers @key 'legacy' }}' data-version='{{fromObj browsers @key 'version'}}'>
+                    <div class="hack">
+                        {{#if label}}
+                            <p class='browser-wrapper__label'>{{label}}</p>
+                        {{/if}}
+                        <pre class='language-{{language}}'><code>{{{code}}}</code></pre>
+                        <ul class='hack-list'>
+                            {{#each browsers}}
+                                <li class='hack-list__item'>
+                                    <span class='browser-icon browserhacks-{{@key}}'></span>&nbsp;
+                                    <span class='browser-name'>{{fromObj ../../../browsers @key 'name'}}</span>&nbsp;
+                                    <span class='browser-version'>{{fromObj ../browsers @key 'humanVersion'}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <ul class="hack-list  hack-list--options">
+                            {{#ifCond language "css" }}
+                                {{#if safe}}
+                                    <li class='hack-list__item'><span class="browserhacks-valid" title="Valid CSS"></span> <span class="browserhacks-css3" title="Valid CSS"></span></li>
+                                {{else}}
+                                    <li class='hack-list__item'><span class="browserhacks-invalid" title="Invalid CSS: {{csslint}}"></span> <span class="browserhacks-css3" title="Invalid CSS: {{csslint}}"></span></li>
+                                {{/if}}
+                            {{/ifCond}}
+                            <li class='hack-list__item  hack-id'><a href='#hack-{{id}}'>#</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-			{{/eachFilteredBrowser}}
+            {{/eachFilteredBrowser}}
 
-		</section>
-	</article>
+    </article>
 
 {{/each}}

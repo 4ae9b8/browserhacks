@@ -2,8 +2,8 @@
     h2 {
         background-color: lightgrey;
         border-top: (($baseline / 2.25) / 3) solid grey;
-        margin: (($baseline / 2.25) * 2) (($baseline / 2.25) * -1) 0;
-        padding: ($baseline / 4) ($baseline / 2.25) ($baseline / 3);
+        margin: (($baseline / 2.25) * 2) (0) 0;
+        padding: ($baseline / 4) (0) ($baseline / 3);
 
         span {
             margin-right: (($baseline / 2.25) / 2);
