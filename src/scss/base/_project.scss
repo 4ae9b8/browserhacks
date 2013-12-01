@@ -125,6 +125,12 @@ span.line {
 
 
 .nothing {
-    padding: 1em 0;
-    font-size: 1.5em;
+    padding: $baseline 0;
+    font-size: $baseline;
+}
+
+#content {
+    @include bp(small) {
+        padding: $baseline;
+    }
 }

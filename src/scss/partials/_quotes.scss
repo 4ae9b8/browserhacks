@@ -33,6 +33,11 @@
             color: lighten($internetExplorer, 20%);
         }
     }
+
+    @include bp(small) {
+        padding-left: $baseline;
+        padding-right: $baseline;
+    }
 }
 .quote-authors {
     list-style: none;
