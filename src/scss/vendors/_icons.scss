@@ -17,6 +17,7 @@
 .browserhacks-fx,
 .browserhacks-ie,
 .browserhacks-op,
+.browserhacks-om,
 .browserhacks-sa,
 .browserhacks-github,
 .browserhacks-magic,
@@ -53,7 +54,8 @@
 .browserhacks-ie:before {
     content: "\e003";
 }
-.browserhacks-op:before {
+.browserhacks-op:before,
+.browserhacks-om:before {
     content: "\e004";
 }
 .browserhacks-windows8:before {

@@ -140,6 +140,17 @@
     "safe": false
   },
   {
+    "type": "media",
+    "browsers": {
+      "fx": "11+"
+    },
+    "label": "",
+    "language": "css",
+    "code": "@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) { .selector {} } }\n@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) { .selector {} } }",
+    "test": "@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) { .selector { background: lightgreen; } } }\n@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) { .selector { background: lightgreen; } } }",
+    "safe": false
+  },
+  {
     "type": "javascript",
     "browsers": {
       "fx": "*"
@@ -936,6 +947,17 @@
     "language": "css",
     "code": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {}",
     "test": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }",
+    "safe": false
+  },
+  {
+    "type": "javascript",
+    "browsers": {
+      "om": "*"
+    },
+    "label": "",
+    "language": "javascript",
+    "code": "var isOperaMini = Object.prototype.toString.call(window.operamini) === '[object OperaMini]';",
+    "test": "Object.prototype.toString.call(window.operamini) === '[object OperaMini]'",
     "safe": false
   }
 ]

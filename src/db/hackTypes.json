@@ -1,26 +1,20 @@
 {
   "selector": {
-    "title": "Selector Hacks",
-    "icon": "fontawesome-link"
+    "title": "Selector Hacks"
   },
   "media": {
-    "title": "Media Query Hacks",
-    "icon": "fontawesome-resize-small"
+    "title": "Media Query Hacks"
   },
   "javascript": {
-    "title": "JavaScript Hacks",
-    "icon": "fontawesome-fire"
+    "title": "JavaScript Hacks"
   },
   "propertyValue": {
-    "title": "Property/Value Hacks",
-    "icon": "fontawesome-paper-clip"
+    "title": "Property/Value Hacks"
   },
   "misc": {
-    "title": "Miscellaneous",
-    "icon": "fontawesome-beaker"
+    "title": "Miscellaneous"
   },
   "html": {
-    "title": "Conditional comments",
-    "icon": "fontawesome-th-large"
+    "title": "Conditional comments"
   }
 }

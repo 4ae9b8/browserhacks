@@ -1,12 +1,12 @@
 {
   "an": {
-    "name": "android",
+    "name": "Android",
     "legacy": "2.3",
     "key": 65,
     "alias": ["android", "an"]
   },
   "ch": {
-    "name": "chrome",
+    "name": "Chrome",
     "legacy": "1",
     "key": 67,
     "alias": ["chrome", "ch"]
@@ -24,13 +24,19 @@
     "alias": ["internet explorer", "ie"]
   },
   "op": {
-    "name": "opera",
+    "name": "Opera",
     "legacy": "9",
     "key": 79,
     "alias": ["opera", "op"]
   },
+  "om": {
+    "name": "Opera Mini",
+    "legacy": "1",
+    "key": 83,
+    "alias": ["opera mini", "op mini", "om"]
+  },
   "sa": {
-    "name": "safari",
+    "name": "Safari",
     "legacy": "4",
     "key": 83,
     "alias": ["safari", "apple safari"]

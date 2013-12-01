@@ -47,6 +47,10 @@ h2 {
     .sa & {
         @include section-border($safari);
     }
+
+    .om & {
+        @include section-border($operaMini);
+    }
 }
 
 span.line {
