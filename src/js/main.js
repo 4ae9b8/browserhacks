@@ -694,25 +694,26 @@
 
     // Sticky search
     var $content = $('#content'),
-        $search = $('#search'),
-        $window = $(window),
-        offset = $search.offset().top + 8,  // + height of coloured bar at top of page
-        height = $search.outerHeight();
+        $search  = $('.search'),
+        $window  = $(window),
+        offset   = $search.offset().top + 8,  // + height of coloured bar at top of page
+        height   = $search.outerHeight();
+    
+    if($search.css('position') !== 'sticky') {
+        $window.on('scroll', function (e) {
+            var scrollDistance = $window.scrollTop();
 
-    $window.scroll(function (e) {
+            if (offset <= scrollDistance) {
 
-        var scrollDistance = $window.scrollTop();
+                $search.addClass('fixed');
+                $content.css('padding-top', height);
 
-        if (offset <= scrollDistance) {
+            } else {
 
-            $search.addClass('fixed');
-            $content.css('padding-top', height);
-
-        } else {
-
-            $search.removeClass('fixed');
-            $content.css('padding-top', 0);
-        }
-    }).trigger('scroll');
+                $search.removeClass('fixed');
+                $content.css('padding-top', 0);
+            }
+        }).trigger('scroll');
+    }
 
 })();

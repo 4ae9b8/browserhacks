@@ -5,13 +5,19 @@
     box-shadow: 0 .1em .1em hsla(0,0%,0%,.1);
     padding: ($baseline / 2) $baseline;
     @include  background-image(linear-gradient(0deg, hsla(0,0%,100%,0), white));
+    z-index: 999;
+
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 0;
 
     &.fixed {
         left: 0;
         position: fixed;
         right: 0;
-        top: 0;
-        z-index: 999;
     }
 
     input[type="checkbox"] {
