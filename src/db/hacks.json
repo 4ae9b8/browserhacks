@@ -63,13 +63,12 @@
   {
     "type": "selector",
     "browsers": {
-      "fx": "2+",
-      "ie": "7"
+      "fx": "2+"
     },
     "label": "",
     "language": "css",
-    "code": ".selector, x:-moz-any-link {}",
-    "test": ".selector, x:-moz-any-link { background: lightgreen; }",
+    "code": "body:last-child .selector, x:-moz-any-link {}",
+    "test": "body:last-child .selector, x:-moz-any-link { background: lightgreen; }",
     "safe": false
   },
   {
@@ -86,13 +85,12 @@
   {
     "type": "selector",
     "browsers": {
-      "fx": "3+",
-      "ie": "7"
+      "fx": "3+"
     },
     "label": "",
     "language": "css",
-    "code": ".selector, x:-moz-any-link, x:default {}",
-    "test": ".selector, x:-moz-any-link, x:default { background: lightgreen; }",
+    "code": "body:last-child .selector, x:-moz-any-link, x:default {}",
+    "test": "body:last-child .selector, x:-moz-any-link, x:default { background: lightgreen; }",
     "safe": false
   },
   {
@@ -773,13 +771,12 @@
   {
     "type": "selector",
     "browsers": {
-      "op": "9.5|10|11|12",
-      "ie": "7"
+      "op": "9.5|10|11|12"
     },
     "label": "",
     "language": "css",
-    "code": "_:-o-prefocus, .selector {}",
-    "test": "_:-o-prefocus, .selector { background: lightgreen; }",
+    "code": "_:-o-prefocus, body:last-child .selector {}",
+    "test": "_:-o-prefocus, body:last-child .selector { background: lightgreen; }",
     "safe": false
   },
   {

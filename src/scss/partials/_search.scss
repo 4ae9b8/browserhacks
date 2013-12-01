@@ -14,6 +14,7 @@
     position: sticky;
     top: 0;
 
+    // position: sticky polyfill
     &.fixed {
         left: 0;
         position: fixed;

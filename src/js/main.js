@@ -690,7 +690,7 @@
     // We only decide to put the green background when checkbox is checked
     $('#show-test').on('click', function() {
             $('.browser-wrapper').toggleClass('run-test');
-    }).click(); // Trigger tests on load
+    }).trigger('click'); // Trigger tests on load
 
     // Sticky search
     var $content = $('#content'),
