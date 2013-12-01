@@ -889,8 +889,8 @@
     },
     "label": "",
     "language": "javascript",
-    "code": "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\";",
-    "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\"",
+    "code": "var isSafari = !!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\" && !window.chrome;",
+    "test": "!!navigator.userAgent.match(/safari/i) && !navigator.userAgent.match(/chrome/i) && typeof document.body.style.webkitFilter !== \"undefined\" && !window.chrome",
     "safe": false
   },
   {
@@ -925,6 +925,17 @@
     "language": "javascript",
     "code": "var isOperaMini = Object.prototype.toString.call(window.operamini) === '[object OperaMini]';",
     "test": "Object.prototype.toString.call(window.operamini) === '[object OperaMini]'",
+    "safe": false
+  },
+  {
+    "type": "javascript",
+    "browsers": {
+      "om": "*"
+    },
+    "label": "",
+    "language": "javascript",
+    "code": "var isOperaMini = (navigator.userAgent.indexOf('Opera Mini') > -1);",
+    "test": "(navigator.userAgent.indexOf('Opera Mini') > -1)",
     "safe": false
   }
 ]
