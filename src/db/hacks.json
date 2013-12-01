@@ -695,23 +695,23 @@
   {
     "type": "html",
     "browsers": {
-      "ie": "*"
+      "ie": "9-"
     },
     "label": "",
     "language": "markup",
-    "code": "&lt;!--[if IE]> Internet Explorer &lt;![endif]-->",
-    "test": "",
+    "code": "&lt;!--[if IE]> Internet Explorer 9- &lt;![endif]-->",
+    "test": "<!--[if IE]><i></i><![endif]-->",
     "safe": false
   },
   {
     "type": "html",
     "browsers": {
-      "ie": "*"
+      "ie": "9-"
     },
-    "label": "Not Internet Explorer",
+    "label": "Not Internet Explorer 9-",
     "language": "markup",
-    "code": "&lt;![if !IE]> Not Internet Explorer &lt;![endif]>",
-    "test": "",
+    "code": "&lt;!--[if !IE]>&lt;!--> Not Internet Explorer 9- &lt;!--&lt;![endif]-->",
+    "test": "<!--[if !IE]><!--><i></i><!--<![endif]-->",
     "safe": false
   },
   {
@@ -721,8 +721,8 @@
     },
     "label": "",
     "language": "markup",
-    "code": "&lt;!--[if IE X]> Internet Explorer X &lt;![endif]-->",
-    "test": "",
+    "code": "&lt;!--[if IE 6]> Internet Explorer 6 &lt;![endif]-->\n&lt;!--[if IE 7]> Internet Explorer 7 &lt;![endif]-->\n&lt;!--[if IE 8]> Internet Explorer 8 &lt;![endif]-->\n&lt;!--[if IE 9]> Internet Explorer 9 &lt;![endif]-->",
+    "test": "<!--[if IE 6]><i></i><![endif]-->\n<!--[if IE 7]><i></i><![endif]-->\n<!--[if IE 8]><i></i><![endif]-->\n<!--[if IE 9]><i></i><![endif]-->",
     "safe": false
   },
   {
@@ -732,8 +732,8 @@
     },
     "label": "",
     "language": "markup",
-    "code": "&lt;!--[if lte IE X]> Internet Explorer X or less &lt;![endif]-->",
-    "test": "",
+    "code": "&lt;!--[if lte IE 6]> Internet Explorer 6 or less &lt;![endif]-->\n&lt;!--[if lte IE 7]> Internet Explorer 7 or less &lt;![endif]-->\n&lt;!--[if lte IE 8]> Internet Explorer 8 or less &lt;![endif]-->\n&lt;!--[if lte IE 9]> Internet Explorer 9 or less &lt;![endif]-->",
+    "test": "<!--[if lte IE 6]><i></i><![endif]-->\n<!--[if lte IE 7]><i></i><![endif]-->\n<!--[if lte IE 8]><i></i><![endif]-->\n<!--[if lte IE 9]><i></i><![endif]-->",
     "safe": false
   },
   {
@@ -743,41 +743,8 @@
     },
     "label": "",
     "language": "markup",
-    "code": "&lt;!--[if gte IE X]> Internet Explorer X or greater &lt;![endif]-->",
-    "test": "",
-    "safe": false
-  },
-  {
-    "type": "html",
-    "browsers": {
-      "ie": "6|7|8|9"
-    },
-    "label": "",
-    "language": "markup",
-    "code": "&lt;!--[if (IE X)|(IE Y)]> Internet Explorer X or Internet Explorer Y &lt;![endif]-->",
-    "test": "",
-    "safe": false
-  },
-  {
-    "type": "html",
-    "browsers": {
-      "ie": "6|7|8|9"
-    },
-    "label": "",
-    "language": "markup",
-    "code": "&lt;!--[if (gte IE X)&(lte IE Y)]> Internet Explorer between X and Y (included)&lt;![endif]-->",
-    "test": "",
-    "safe": false
-  },
-  {
-    "type": "html",
-    "browsers": {
-      "ie": "6|7|8|9"
-    },
-    "label": "Conditional classes",
-    "language": "markup",
-    "code": "&lt;!--[if lt IE 7]&gt;  &lt;html class='ie ie6 lte9 lte8 lte7'&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 7]&gt;     &lt;html class='ie ie7 lte9 lte8 lte7'&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 8]&gt;     &lt;html class='ie ie8 lte9 lte8'&gt; &lt;![endif]--&gt; \n&lt;!--[if IE 9]&gt;     &lt;html class='ie ie9 lte9'&gt; &lt;![endif]--&gt; \n&lt;!--[if gt IE 9]&gt;  &lt;html class='ie'&gt; &lt;![endif]--&gt; \n&lt;!--[if !IE]&gt;&lt;!--&gt; &lt;html&gt;             &lt;!--&lt;![endif]--&gt;",
-    "test": "",
+    "code": "&lt;!--[if gte IE 6]> Internet Explorer 6 or greater &lt;![endif]-->\n&lt;!--[if gte IE 7]> Internet Explorer 7 or greater &lt;![endif]-->\n&lt;!--[if gte IE 8]> Internet Explorer 8 or greater &lt;![endif]-->\n&lt;!--[if gte IE 9]> Internet Explorer 9 or greater &lt;![endif]-->\n",
+    "test": "<!--[if gte IE 6]><i></i><![endif]-->\n<!--[if gte IE 7]><i></i><![endif]-->\n<!--[if gte IE 8]><i></i><![endif]-->\n<!--[if gte IE 9]><i></i><![endif]-->\n",
     "safe": false
   },
   {

@@ -25,21 +25,38 @@ module.exports = function(grunt) {
 
     var hacks    = grunt.file.readJSON(src),
         cssDump  = "";
-        jsDump   = "var testWidgetSettings,testWidget={settings:{testClass:'js-succeed'},init:function(){testWidgetSettings=this.settings;this.runTests();},runTests:function(){";
+        jsDump   = "\
+        var testWidget = {\
+          settings: {\
+            testClass: 'js-succeed',\
+            testNode: document.createElement('div')\
+          },\
+          init:function() {\
+            this.runTests();\
+          },\
+          runTests: function() { var a;";
 
-    for (var i in hacks){
+    for (var i in hacks) {
       var hack = hacks[i];
-      if(hack.language === 'css' || hack.language === 'javascript') {
+      if(hack.language === 'css' || hack.language === 'javascript' || hack.language == "markup") {
         var lines = hack.test.split('\n');
 
-        for(b= 0; b < lines.length; b++) {
+        for(b = 0; b < lines.length; b++) {
+          var line = lines[b];
           var name  = 'hack_' + hack.id + '_' + b; // Name the class
 
           if(hack.language === 'css') {
-            cssDump += lines[b].replace(/\.selector/g, '.run-test .'+name);
-          } else if(hack.language === 'javascript') {
-            jsDump += "var " + name + "=" + hack.test + ';';
-            jsDump += "if(" + name + ") $('." + name + "').addClass(testWidgetSettings.testClass);";
+            cssDump += line.replace(/\.selector/g, '.run-test .' + name);
+          } 
+
+          else if(hack.language === 'javascript') {
+            jsDump += "var " + name + "=" + line + ";";
+            jsDump += "if(" + name + ") $('." + name + "').addClass(testWidget.settings.testClass);";
+          }
+
+          else if(hack.language === 'markup') {
+            jsDump += "testWidget.settings.testNode.innerHTML = '" + line + "';";
+            jsDump += "if(testWidget.settings.testNode.getElementsByTagName('i').length > 0) $('." + name + "').addClass(testWidget.settings.testClass);";
           }
         }
       }

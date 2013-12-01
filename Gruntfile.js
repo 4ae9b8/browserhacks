@@ -98,17 +98,6 @@ module.exports = function(grunt){
 
         /* Copy remaining assets */
         copy: {
-            iecss : {
-                files : [
-                    {
-                        expand:true, 
-                        cwd: './tmp/css', 
-                        src: ['browserhacks-ie.css'], 
-                        dest : './dist/css/'
-                    }
-                ]
-            },
-
             fonts : {
                 files:[
                     {
