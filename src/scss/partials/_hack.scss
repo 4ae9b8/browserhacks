@@ -66,3 +66,9 @@
         }
     }
 }
+
+@include bp(small) {
+    .browser-name {
+        display: none;
+    }
+}
