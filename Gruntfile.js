@@ -1,12 +1,13 @@
 module.exports = function(grunt){
 
-    require('load-grunt-tasks')(grunt, ['grunt-*', 'assemble']);
-
+    require('load-grunt-tasks')(grunt, [
+        'grunt-*', 
+        'assemble'
+    ]);
 
     grunt.initConfig({
 
         pkg: grunt.file.readJSON('package.json'),
-
 
         assemble: {
             options: {
@@ -14,13 +15,21 @@ module.exports = function(grunt){
             },
             browserhacks: {
                 options : {
-                    data: ['./tmp/db/hacks.json', './src/db/browsers.json', './src/db/hackTypes.json', './src/db/quotes.json'],
+                    data: [
+                        './tmp/db/hacks.json', 
+                        './src/db/browsers.json', 
+                        './src/db/hackTypes.json', 
+                        './src/db/quotes.json'
+                    ],
                     helpers : './assemble/helpers/helper-*.js',
                     layout: 'main.hbs',
                 },
-                files: [
-                    { expand: true, cwd: './assemble/templates/pages', src: ['*.hbs'], dest: './dist' }
-                ]
+                files: [{ 
+                    expand: true, 
+                    cwd: './assemble/templates/pages', 
+                    src: ['*.hbs'], 
+                    dest: './dist' 
+                }]
             }
         },
 
@@ -53,7 +62,6 @@ module.exports = function(grunt){
             dist : {
                 files: {
                 './tmp/js/main.min.js': [
-
                     './src/js/lib/jquery.min.js',
                     './src/js/lib/jquery.mousewheel.js',
                     './src/js/lib/underscore.min.js',
@@ -62,7 +70,6 @@ module.exports = function(grunt){
                     './src/js/lib/select.min.js',
                     './src/js/lib/carbonads.min.js',
                     './src/js/main.js',
-
                     // We can't uglify the browserhacks-test-page because some test would break (see concat js)
                     //'./tmp/js/browserhacks-test-page.js'
                     ]
@@ -72,13 +79,19 @@ module.exports = function(grunt){
 
         concat: {
             css: {
-                src: ['./tmp/css/browserhacks.css', './tmp/css/browserhacks-test-page.css'],
+                src: [
+                    './tmp/css/browserhacks.css', 
+                    './tmp/css/browserhacks-test-page.css'
+                ],
                 dest: 'dist/css/browserhacks.css'
             },
 
             /* Prevent the browserhacks-test-page.js to be minified. Just concat it*/
             js : {
-                src : ['./tmp/js/main.min.js', './tmp/js/browserhacks-test-page.js'],
+                src : [
+                    './tmp/js/main.min.js', 
+                    './tmp/js/browserhacks-test-page.js'
+                ],
                 dest: './dist/js/main.min.js'
             }
         },
@@ -87,55 +100,75 @@ module.exports = function(grunt){
         copy: {
             iecss : {
                 files : [
-                    {expand:true, cwd: './tmp/css', src: ['browserhacks-ie.css'], dest : './dist/css/'}
+                    {
+                        expand:true, 
+                        cwd: './tmp/css', 
+                        src: ['browserhacks-ie.css'], 
+                        dest : './dist/css/'
+                    }
                 ]
             },
 
             fonts : {
                 files:[
-                    {expand:true, cwd: './src/fonts', src: ['*'], dest : './dist/fonts'}
+                    {
+                        expand:true, 
+                        cwd: './src/fonts', 
+                        src: ['*'], 
+                        dest : './dist/fonts'
+                    }
                 ]
             },
 
             img : {
-                files:[
-                    {expand:true, cwd: './src/img', src: ['*'], dest : './dist/img'}
-                ]
+                files:[{
+                    expand: true, 
+                    cwd: './src/img', 
+                    src: ['*'], 
+                    dest : './dist/img'
+                }]
             },
 
             quotes : {
-                files:[
-                    {expand:true, cwd: './src/db', src: ['quotes.json'], dest : './dist'}
-                ]
+                files:[{
+                    expand: true, 
+                    cwd: './src/db', 
+                    src: ['quotes.json'], 
+                    dest : './dist'
+                }]
             },
 
             htaccess:{
-                files:[
-                    {expand:true, cwd: './src', src: ['.htaccess'], dest : './dist'}
-                ]
+                files:[{
+                    expand: true, 
+                    cwd: './src', 
+                    src: ['.htaccess'], 
+                    dest : './dist'
+                }]
             },
 
             cname : {
-                files:[
-                    {expand:true,cwd: './', src:['CNAME'], dest :'./dist'}
-                ]
+                files:[{
+                    expand: true,
+                    cwd: './', 
+                    src:['CNAME'], 
+                    dest :'./dist'
+                }]
             }
         },
 
-        updateDatabase : {
+        buildDB : {
             src  : './src/db/hacks.json',
             dest : './tmp/db/hacks.json'
         },
 
-        /* This must run after updateDatabase */
-        generateTestCssJs : {
-            src : '<%= updateDatabase.dest %>',
-
+        /* This must run after buildDB */
+        buildTests : {
+            src : '<%= buildDB.dest %>',
             destCss : './tmp/css',
             destJs  : './tmp/js',
             destname : 'browserhacks-test-page'
         },
-
 
         connect: {
             server: {
@@ -150,19 +183,22 @@ module.exports = function(grunt){
         watch: {
             scss: {
                 files: ['./src/scss/*.scss'],
-                tasks: ['buildcss', 'copy:img']
+                tasks: ['buildCSS', 'copy:img']
             },
             db : {
                 files : ['./src/db/*'],
-                tasks: ['build']
+                tasks: ['buildDB']
             },
             html: {
-                files: ['./assemble/templates/**/*.hbs', './assemble/helpers/*.js'],
-                tasks: 'buildhtml'
+                files: [
+                    './assemble/templates/**/*.hbs', 
+                    './assemble/helpers/*.js'
+                ],
+                tasks: 'buildHTML'
             },
             js: {
                 files: ['./src/js/**/*.js'],
-                tasks: ['buildjs']
+                tasks: ['buildJS']
             },
             livereload: {
                 options: {
@@ -185,8 +221,8 @@ module.exports = function(grunt){
 
     });
 
-    require('./tasks/db/grunt-browserhacks-db-task.js')(grunt);
-    require('./tasks/test-page/grunt-generate-test-css-js.js')(grunt);
+    require('./tasks/build-database.js')(grunt);
+    require('./tasks/build-tests.js')(grunt);
 
 
     grunt.registerTask('clean', function(){
@@ -194,41 +230,44 @@ module.exports = function(grunt){
         grunt.file.delete('./tmp');
     });
 
-    grunt.registerTask('buildhtml', ['assemble:browserhacks', 'htmlmin:dist']);
+    grunt.registerTask('buildHTML', [
+        'assemble:browserhacks', 
+        'htmlmin:dist'
+    ]);
 
-    grunt.registerTask('buildjs', [
+    grunt.registerTask('buildJS', [
         'uglify:dist',     //  Uglify JS
         'concat:js',       // Concat main.min.js with ./tmp/js/browserhacks-test-page.js
     ]);
 
-    grunt.registerTask('buildcss', [
+    grunt.registerTask('buildCSS', [
         'compass:dist',  // Compile sass using compass
         'concat:css'     // Concat the Compiled Sass with the ./tmp/css/browserhacks-test-page.css
     ]);
 
-    grunt.registerTask('cleanbuild', ['clean', 'build']);
+    grunt.registerTask('cleanbuild', [
+        'clean', 
+        'build'
+    ]);
 
     grunt.registerTask('build', [
-        'updateDatabase',    // Update ./src/db/hacks.json testing against csslint and adding a id to each test
-        'generateTestCssJs', // Generating the CSS and JS needed for testing all the hacks
-
-        'buildhtml',         // Build up the Browserhacks index.html
-        'buildjs',           // Build up the main JS file
-        'buildcss',          // Build up the main CSS file
-
-        'copy'               // Copy fonts/images/iecss (Images could be done using imagemin)
+        'buildDB',    // Update ./src/db/hacks.json testing against csslint and adding a id to each test
+        'buildTests', // Generating the CSS and JS needed for testing all the hacks
+        'buildHTML',  // Build up the Browserhacks index.html
+        'buildJS',    // Build up the main JS file
+        'buildCSS',   // Build up the main CSS file
+        'copy'        // Copy fonts/images/iecss (Images could be done using imagemin)
     ]);
 
     grunt.registerTask('publish', [
-        'clean',
-        'build',
+        'cleanbuild',
         'gh-pages'
     ]);
 
     grunt.registerTask('dev', [
-       'build',
-       'connect',
-       'watch'
+        'build',
+        'connect',
+        'watch'
     ]);
 
 };
