@@ -99,7 +99,7 @@
 				this.count.browserMatched = 0;
 
 				if ($('.nothing').length == 0) {
-					$('.social').after("<article data-high='2' class='nothing message'><section data-cols='1'><div><h3>We couldn't find anything matching your search <span>D;</span></h3></div></section></article>");
+					$('#content').append("<article class='nothing  centered'><p>We couldn't find anything matching your search!</p3></article>");
 				}
 			}
 		},
@@ -432,7 +432,8 @@
 		// @TODO Tim: generate this from browsers.json
 		jumpToBrowser : function(e) {
 				var el,
-						specialKey = e.metaKey || e.ctrlKey;
+					specialKey = e.metaKey || e.ctrlKey;
+
 				if(e.which == 65 && !specialKey) el = document.getElementById('an');
 				if(e.which == 67 && !specialKey) el = document.getElementById('ch');
 				if(e.which == 83 && !specialKey) el = document.getElementById('sa');
@@ -628,7 +629,8 @@
 		{'browser' : 'fx', 'names' : ['firefox', 'mozilla firefox', 'ff']},
 		{'browser' : 'ie', 'names' : ['internet explorer', 'ie']},
 		{'browser' : 'sa', 'names' : ['safari', 'apple safari']},
-		{'browser' : 'op', 'names' : ['opera', 'op']}
+		{'browser' : 'op', 'names' : ['opera', 'op']},
+		{'browser' : 'om', 'names' : ['opera mini', 'opera', 'om', 'op', 'mini']}
 	]);
 
 	// Holds all browser
