@@ -1,8 +1,9 @@
 var addId      = require('./add-id'),
     cssLint    = require('./css-lint'),
+    jsHint     = require('./js-hint'),
     addVersion = require('./format-version'),
     addLegacy  = require('./is-legacy');
-    
+
 module.exports = function(grunt) {
   grunt.registerTask('buildDB', 'Update the database.', function() {
     grunt.config.requires('buildDB.src');
@@ -24,6 +25,7 @@ module.exports = function(grunt) {
       addVersion(hack, browsers);
       addLegacy(hack, browsers);
       cssLint(hack);
+      jsHint(hack);
 
       // Run test then sort.
       typeArr = typeArrays[hack.type] || [];

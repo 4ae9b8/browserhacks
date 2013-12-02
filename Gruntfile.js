@@ -1,7 +1,7 @@
 module.exports = function(grunt){
 
     require('load-grunt-tasks')(grunt, [
-        'grunt-*', 
+        'grunt-*',
         'assemble'
     ]);
 
@@ -16,19 +16,19 @@ module.exports = function(grunt){
             browserhacks: {
                 options : {
                     data: [
-                        './tmp/db/hacks.json', 
-                        './src/db/browsers.json', 
-                        './src/db/hackTypes.json', 
+                        './tmp/db/hacks.json',
+                        './src/db/browsers.json',
+                        './src/db/hackTypes.json',
                         './src/db/quotes.json'
                     ],
                     helpers : './assemble/helpers/helper-*.js',
                     layout: 'main.hbs',
                 },
-                files: [{ 
-                    expand: true, 
-                    cwd: './assemble/templates/pages', 
-                    src: ['*.hbs'], 
-                    dest: './dist' 
+                files: [{
+                    expand: true,
+                    cwd: './assemble/templates/pages',
+                    src: ['*.hbs'],
+                    dest: './dist'
                 }]
             }
         },
@@ -80,7 +80,7 @@ module.exports = function(grunt){
         concat: {
             css: {
                 src: [
-                    './tmp/css/browserhacks.css', 
+                    './tmp/css/browserhacks.css',
                     './tmp/css/browserhacks-test-page.css'
                 ],
                 dest: 'dist/css/browserhacks.css'
@@ -89,7 +89,7 @@ module.exports = function(grunt){
             /* Prevent the browserhacks-test-page.js to be minified. Just concat it*/
             js : {
                 src : [
-                    './tmp/js/main.min.js', 
+                    './tmp/js/main.min.js',
                     './tmp/js/browserhacks-test-page.js'
                 ],
                 dest: './dist/js/main.min.js'
@@ -101,9 +101,9 @@ module.exports = function(grunt){
             fonts : {
                 files:[
                     {
-                        expand:true, 
-                        cwd: './src/fonts', 
-                        src: ['*'], 
+                        expand:true,
+                        cwd: './src/fonts',
+                        src: ['*'],
                         dest : './dist/fonts'
                     }
                 ]
@@ -111,27 +111,27 @@ module.exports = function(grunt){
 
             img : {
                 files:[{
-                    expand: true, 
-                    cwd: './src/img', 
-                    src: ['*'], 
+                    expand: true,
+                    cwd: './src/img',
+                    src: ['*'],
                     dest : './dist/img'
                 }]
             },
 
             quotes : {
                 files:[{
-                    expand: true, 
-                    cwd: './src/db', 
-                    src: ['quotes.json'], 
+                    expand: true,
+                    cwd: './src/db',
+                    src: ['quotes.json'],
                     dest : './dist'
                 }]
             },
 
             htaccess:{
                 files:[{
-                    expand: true, 
-                    cwd: './src', 
-                    src: ['.htaccess'], 
+                    expand: true,
+                    cwd: './src',
+                    src: ['.htaccess'],
                     dest : './dist'
                 }]
             },
@@ -139,8 +139,8 @@ module.exports = function(grunt){
             cname : {
                 files:[{
                     expand: true,
-                    cwd: './', 
-                    src:['CNAME'], 
+                    cwd: './',
+                    src:['CNAME'],
                     dest :'./dist'
                 }]
             }
@@ -180,7 +180,7 @@ module.exports = function(grunt){
             },
             html: {
                 files: [
-                    './assemble/templates/**/*.hbs', 
+                    './assemble/templates/**/*.hbs',
                     './assemble/helpers/*.js'
                 ],
                 tasks: 'buildHTML'
@@ -220,7 +220,7 @@ module.exports = function(grunt){
     });
 
     grunt.registerTask('buildHTML', [
-        'assemble:browserhacks', 
+        'assemble:browserhacks',
         'htmlmin:dist'
     ]);
 
@@ -235,7 +235,7 @@ module.exports = function(grunt){
     ]);
 
     grunt.registerTask('cleanbuild', [
-        'clean', 
+        'clean',
         'build'
     ]);
 
