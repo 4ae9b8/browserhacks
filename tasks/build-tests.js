@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           var name  = 'hack_' + hack.id + '_' + b; // Name the class
 
           if(hack.language === 'css') {
-            cssDump += line.replace(/\.selector/g, '.run-test .' + name);
+            cssDump += line.replace(/\.selector/g, '.run-test .' + name) + '\n';
           }
 
           else if(hack.language === 'javascript') {

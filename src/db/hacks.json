@@ -332,7 +332,7 @@
     "label": "",
     "language": "css",
     "code": ".selector { _property: value; } \n.selector { -property: value; }",
-    "test": ".selector { _background: lightgreen;  } \n.selector { -background: lightgreen;  }",
+    "test": ".selector { _background: lightgreen; } \n.selector { -background: lightgreen; }",
     "safe": false
   },
   {
@@ -342,8 +342,8 @@
     },
     "label": "Any combination of these characters: ! $ & * ( ) = % + @ , . / ` [ ] # ~ ? : < > |",
     "language": "css",
-    "code": ".selector { !property: value; } \n.selector { $property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n.selector { )property: value; } \n.selector { =property: value; } \n.selector { %property: value; } \n.selector { +property: value; } \n.selector { @property: value; } \n.selector { ,property: value; } \n.selector { .property: value; } \n.selector { /property: value; } \n.selector { `property: value; } \n.selector { [property: value; } \n.selector { ]property: value; } \n.selector { #property: value; } \n.selector { ~property: value; } \n.selector { ?property: value; } \n.selector { :property: value; } \n.selector { |property: value; }",
-    "test": ".selector { !background: lightgreen; } \n.selector { $background: lightgreen; } \n.selector { &background: lightgreen; } \n.selector { *background: lightgreen; } \n.selector { )background: lightgreen; } \n.selector { =background: lightgreen; } \n.selector { %background: lightgreen; } \n.selector { +background: lightgreen; } \n.selector { @background: lightgreen; } \n.selector { ,background: lightgreen; } \n.selector { .background: lightgreen; } \n.selector { /background: lightgreen; } \n.selector { `background: lightgreen; } \n.selector { [background: lightgreen; } \n.selector { ]background: lightgreen; } \n.selector { #background: lightgreen; } \n.selector { ~background: lightgreen; } \n.selector { ?background: lightgreen; } \n.selector { :background: lightgreen; } \n.selector { |background: lightgreen; }",
+    "code": ".selector { !property: value; } \n.selector { $property: value; } \n.selector { &property: value; } \n.selector { *property: value; } \n.selector { )property: value; } \n.selector { =property: value; } \n.selector { %property: value; } \n.selector { +property: value; } \n.selector { @property: value; } \n.selector { ,property: value; } \n.selector { .property: value; } \n.selector { /property: value; } \n.selector { `property: value; } \n.selector { ]property: value; } \n.selector { #property: value; } \n.selector { ~property: value; } \n.selector { ?property: value; } \n.selector { :property: value; } \n.selector { |property: value; }",
+    "test": ".selector { !background: lightgreen; } \n.selector { $background: lightgreen; } \n.selector { &background: lightgreen; } \n.selector { *background: lightgreen; } \n.selector { )background: lightgreen; } \n.selector { =background: lightgreen; } \n.selector { %background: lightgreen; } \n.selector { +background: lightgreen; } \n.selector { @background: lightgreen; } \n.selector { ,background: lightgreen; } \n.selector { .background: lightgreen; } \n.selector { /background: lightgreen; } \n.selector { `background: lightgreen; }\n.selector { ]background: lightgreen; } \n.selector { #background: lightgreen; } \n.selector { ~background: lightgreen; } \n.selector { ?background: lightgreen; } \n.selector { :background: lightgreen; } \n.selector { |background: lightgreen; }",
     "safe": false
   },
   {
@@ -706,9 +706,9 @@
     "browsers": {
       "ie": "9-"
     },
-    "label": "Not Internet Explorer 9-",
+    "label": "Everything but Internet Explorer 9-",
     "language": "markup",
-    "code": "&lt;!--[if !IE]>&lt;!--> Not Internet Explorer 9- &lt;!--&lt;![endif]-->",
+    "code": "&lt;!--[if !IE]>&lt;!--> Everything but Internet Explorer 9- &lt;!--&lt;![endif]-->",
     "test": "<!--[if !IE]><!--><i></i><!--<![endif]-->",
     "safe": false
   },
@@ -910,6 +910,18 @@
     "language": "javascript",
     "code": "var isOperaMini = Object.prototype.toString.call(window.operamini) === '[object OperaMini]';",
     "test": "Object.prototype.toString.call(window.operamini) === '[object OperaMini]'",
+    "safe": false
+  },
+  {
+    "type": "media",
+    "browsers": {
+      "ch": "28+",
+      "op": "16+"
+    },
+    "label": "",
+    "language": "css",
+    "code": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector {} }",
+    "test": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }",
     "safe": false
   },
   {
