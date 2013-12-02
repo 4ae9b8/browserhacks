@@ -38,8 +38,21 @@
         return options.fn(this);
       }
       return options.inverse(this);
+    },
+
+    debug = function(optionalValue) {
+      console.log("Current Context");
+      console.log("====================");
+      console.log(this);
+     
+      if (optionalValue) {
+        console.log("Value");
+        console.log("====================");
+        console.log(optionalValue);
+      }
     };
 
+    Handlebars.registerHelper("debug",               debug);
     Handlebars.registerHelper('ifCond',              ifCond);
     Handlebars.registerHelper('inObj',               inObj);
     Handlebars.registerHelper('fromObj',             fromObj);

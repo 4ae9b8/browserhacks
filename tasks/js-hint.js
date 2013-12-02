@@ -4,6 +4,7 @@ module.exports = function(hack){
   if (hack.language === 'javascript' && !hack.safe){
 
     // Use hack.code because hack.test will be invalid.
+    // That's not ideal.
     hack.safe = JSHINT(hack.code);
 
     hack.jshint = JSHINT.errors.filter(function (er) {
@@ -11,8 +12,8 @@ module.exports = function(hack){
       return er && er.id === "(error)";
     }).map(function (er) {
       // Build Message + Chararacter string
-      return er.raw + ' (char:'+er.character+')';
-    });
+      return er.raw + ' (col ' + er.character + ')';
+    }).toString();
 
   }
 };

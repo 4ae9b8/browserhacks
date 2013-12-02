@@ -46,5 +46,5 @@ So when we want to do something new:
 1. We pull the repo locally
 2. We work on `master` branch
 3. We push to `master`
-4. We check on 5minfork.com
+4. We check on [5minfork.com](http://5minfork.com)
 5. We go wild with grunt `publish`
