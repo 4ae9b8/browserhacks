@@ -902,18 +902,6 @@
     "safe": false
   },
   {
-    "type": "media",
-    "browsers": {
-      "ch": "29+",
-      "op": "16+"
-    },
-    "label": "",
-    "language": "css",
-    "code": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {}",
-    "test": "@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }",
-    "safe": false
-  },
-  {
     "type": "javascript",
     "browsers": {
       "om": "*"
