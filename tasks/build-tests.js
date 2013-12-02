@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 
           if(hack.language === 'css') {
             cssDump += line.replace(/\.selector/g, '.run-test .' + name);
-          } 
+          }
 
           else if(hack.language === 'javascript') {
             jsDump += "var " + name + "=" + line + ";";
