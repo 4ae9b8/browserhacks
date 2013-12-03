@@ -915,7 +915,7 @@
   {
     "type": "media",
     "browsers": {
-      "ch": "28+",
+      "ch": "29+",
       "op": "16+"
     },
     "label": "",
