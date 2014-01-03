@@ -34,8 +34,8 @@
     },
     "label": "Webkit",
     "language": "javascript",
-    "code": "var isWebkit = 'WebkitAppearance' in document.documentElement.style;",
-    "test": "'WebkitAppearance' in document.documentElement.style",
+    "code": "var isWebkit = 'webkitAppearance' in document.documentElement.style;",
+    "test": "'webkitAppearance' in document.documentElement.style",
     "safe": false
   },
   {
