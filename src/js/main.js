@@ -698,8 +698,8 @@
         $window  = $(window),
         offset   = $search.offset().top + 8,  // + height of coloured bar at top of page
         height   = $search.outerHeight();
-    
-    if($search.css('position') !== 'sticky'  &&  $window.width() <= 767) {
+
+    if($search.css('position') !== 'sticky'  &&  $window.width() >= 767) {
         $window.on('scroll', function (e) {
             var scrollDistance = $window.scrollTop();
 
