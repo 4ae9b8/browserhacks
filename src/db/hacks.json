@@ -331,8 +331,8 @@
     },
     "label": "Everything but Internet Explorer 9-",
     "language": "css",
-    "code": "html[lang='\nen'] .selector {}",
-    "test": "html[lang='\nen'] .selector { background: lightgreen; }",
+    "code": "html[lang='\\nen'] .selector {}",
+    "test": "html[lang='\\nen'] .selector { background: lightgreen; }",
     "safe": false
   },
   {
@@ -371,7 +371,7 @@
   {
     "type": "propertyValue",
     "browsers": {
-      "ie": "6+"
+      "ie": "6|7|8|9|10"
     },
     "label": "",
     "language": "css",
