@@ -30,11 +30,9 @@ module.exports = function(grunt) {
     for (var i in hacks) {
       var hack = hacks[i];
       if(hack.language === 'css' || hack.language === 'javascript' || hack.language == "markup") {
-        var lines = hack.test.split('\n');
-
-        for(b = 0; b < lines.length; b++) {
-          var line = lines[b];
-          var name  = 'hack_' + hack.id + '_' + b; // Name the class
+        for(b = 0; b < hack.test.length; b++) {
+          var line = hack.test[b];
+          var name = 'hack_' + hack.id + '_' + b; // Name the class
 
           if(hack.language === 'css') {
             cssDump += line.replace(/\.selector/g, '.run-test .' + name) + '\n';

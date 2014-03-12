@@ -642,9 +642,9 @@
 
     // #78: Order by browser version
     $('.browser-wrapper section').each(function() {
-            $(this).find('.browser-wrapper__hack').sort(function (a, b) {
-                    return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
-            }).appendTo($(this));
+        $(this).find('.browser-wrapper__hack').sort(function (a, b) {
+            return +parseFloat(a.getAttribute('data-version')) - +parseFloat(b.getAttribute('data-version'));
+        }).appendTo($(this));
     });
 
     // ------------
@@ -657,17 +657,19 @@
 
     // We add .line spans for each hack in every code block
     $('pre > code').each(function() {
-            var $code = $(this);
-            var lines = $code.html().split('\n');
-            var dump  = "";
-            var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
+        var $code = $(this);
+        var lines = $code.html().split('\n');
+        var dump  = "";
+        var id = $code.closest('.browser-wrapper__hack').attr('id').split('-')[1];
 
-            for(var i = 0, len = lines.length; i < len; i++) {
-                    var hackClass = "hack_" + id + "_" + i;
-                    dump += "<span class='line " + hackClass + "'>" + lines[i] + "</span>";
+        for(var i = 0, len = lines.length; i < len; i++) {
+            var hackClass = "hack_" + id + "_" + i;
+            if (lines[i] !== '') {
+                dump += "<span class='line  " + hackClass + "'>" + lines[i] + "</span>";
             }
+        }
 
-            $code.html(dump);
+        $code.html(dump);
     });
 
     // ------------

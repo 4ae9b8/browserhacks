@@ -164,7 +164,7 @@ module.exports = function(grunt){
                 options: {
                     port: 8000,
                     base: './dist',
-                    open : true
+                    open: true
                 }
             }
         },
@@ -175,7 +175,7 @@ module.exports = function(grunt){
                 tasks: ['buildCSS', 'copy:img']
             },
             db : {
-                files : ['./src/db/*'],
+                files: ['./src/db/*'],
                 tasks: ['buildDB']
             },
             html: {
