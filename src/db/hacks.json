@@ -3,8 +3,8 @@
     "type": "propertyValue",
     "browsers": {
       "ch": "28-",
-      "sa": "6-",
-      "op": "14+"
+      "sa": "7-",
+      "ie": "6-7"
     },
     "label": "",
     "language": "css",
@@ -384,22 +384,20 @@
       "*:first-child+html .selector {}",
       ".selector, x:-IE7 {}",
       "*+html .selector {}",
-      "body*.selector {}",
-      ".selector\\ {}"
+      "body*.selector {}"
     ],
     "test": [
       "*:first-child+html .selector { background: lightgreen; }",
       ".selector, x:-IE7 { background: lightgreen; }",
       "*+html .selector { background: lightgreen; }",
-      "body*.selector { background: lightgreen; }",
-      ".selector\\ { background: lightgreen; }"
+      "body*.selector { background: lightgreen; }"
     ],
     "safe": false
   },
   {
     "type": "selector",
     "browsers": {
-      "ie": "7"
+      "ie": "7-"
     },
     "label": "",
     "language": "css",
@@ -567,7 +565,7 @@
   {
     "type": "propertyValue",
     "browsers": {
-      "ie": "6|7|8|9|10"
+      "ie": "6|7|8"
     },
     "label": "",
     "language": "css",
@@ -646,7 +644,7 @@
   {
     "type": "media",
     "browsers": {
-      "ie": "10"
+      "ie": "10+"
     },
     "label": "",
     "language": "css",
@@ -661,10 +659,12 @@
   {
     "type": "media",
     "browsers": {
-      "ie": "*",
-      "sa": "*"
+      "ch": "26+",
+      "fx": "11+",
+      "op": "14+",
+      "sa": "7+"
     },
-    "label": "Everything but Internet Explorer and Safari",
+    "label": "Everything recent but Internet Explorer",
     "language": "css",
     "code": [
       "@media screen { @media (min-width: 0px) {} }"
@@ -1146,7 +1146,7 @@
   {
     "type": "selector",
     "browsers": {
-      "op": "9.5|10|11|12"
+      "op": "9.5|10|11|12|13|14|15|16"
     },
     "label": "",
     "language": "css",
@@ -1206,7 +1206,7 @@
   {
     "type": "media",
     "browsers": {
-      "op": "12"
+      "op": "12+"
     },
     "label": "",
     "language": "css",
@@ -1314,7 +1314,8 @@
   {
     "type": "media",
     "browsers": {
-      "ch": "22|23|24|25|26|27|28"
+      "ch": "22|23|24|25|26|27|28",
+      "sa": "7+"
     },
     "label": "",
     "language": "css",
