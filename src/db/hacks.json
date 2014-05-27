@@ -462,6 +462,22 @@
   {
     "type": "selector",
     "browsers": {
+      "ie": "8-",
+      "fx": "*"
+    },
+    "label": "Everything but Firefox and Internet Explorer 8-",
+    "language": "css",
+    "code": [
+      "_::selection, .selector:not([attr*='']) {}"
+    ],
+    "test": [
+      "_::selection, .selector:not([attr*='']) { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "selector",
+    "browsers": {
       "ie": "8-"
     },
     "label": "Everything but Internet Explorer 8-",
