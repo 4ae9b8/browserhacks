@@ -1058,7 +1058,7 @@
     "label": "",
     "language": "markup",
     "code": [
-      "&lt;!--[if IE]> Internet Explorer 9- &lt;![endif]-->"
+      "<!--[if IE]> Internet Explorer 9- <![endif]-->"
     ],
     "test": [
       "<!--[if IE]><i></i><![endif]-->"
@@ -1073,7 +1073,7 @@
     "label": "Everything but Internet Explorer 9-",
     "language": "markup",
     "code": [
-      "&lt;!--[if !IE]>&lt;!--> Everything but Internet Explorer 9- &lt;!--&lt;![endif]-->"
+      "<!--[if !IE]><!--> Everything but Internet Explorer 9- <!--<![endif]-->"
     ],
     "test": [
       "<!--[if !IE]><!--><i></i><!--<![endif]-->"
@@ -1088,10 +1088,10 @@
     "label": "",
     "language": "markup",
     "code": [
-      "&lt;!--[if IE 6]> Internet Explorer 6 &lt;![endif]-->",
-      "&lt;!--[if IE 7]> Internet Explorer 7 &lt;![endif]-->",
-      "&lt;!--[if IE 8]> Internet Explorer 8 &lt;![endif]-->",
-      "&lt;!--[if IE 9]> Internet Explorer 9 &lt;![endif]-->"
+      "<!--[if IE 6]> Internet Explorer 6 <![endif]-->",
+      "<!--[if IE 7]> Internet Explorer 7 <![endif]-->",
+      "<!--[if IE 8]> Internet Explorer 8 <![endif]-->",
+      "<!--[if IE 9]> Internet Explorer 9 <![endif]-->"
     ],
     "test": [
       "<!--[if IE 6]><i></i><![endif]-->",
@@ -1109,10 +1109,10 @@
     "label": "",
     "language": "markup",
     "code": [
-      "&lt;!--[if lte IE 6]> Internet Explorer 6 or less &lt;![endif]-->",
-      "&lt;!--[if lte IE 7]> Internet Explorer 7 or less &lt;![endif]-->",
-      "&lt;!--[if lte IE 8]> Internet Explorer 8 or less &lt;![endif]-->",
-      "&lt;!--[if lte IE 9]> Internet Explorer 9 or less &lt;![endif]-->"
+      "<!--[if lte IE 6]> Internet Explorer 6 or less <![endif]-->",
+      "<!--[if lte IE 7]> Internet Explorer 7 or less <![endif]-->",
+      "<!--[if lte IE 8]> Internet Explorer 8 or less <![endif]-->",
+      "<!--[if lte IE 9]> Internet Explorer 9 or less <![endif]-->"
     ],
     "test": [
       "<!--[if lte IE 6]><i></i><![endif]-->",
@@ -1130,10 +1130,10 @@
     "label": "",
     "language": "markup",
     "code": [
-      "&lt;!--[if gte IE 6]> Internet Explorer 6 or greater &lt;![endif]-->",
-      "&lt;!--[if gte IE 7]> Internet Explorer 7 or greater &lt;![endif]-->",
-      "&lt;!--[if gte IE 8]> Internet Explorer 8 or greater &lt;![endif]-->",
-      "&lt;!--[if gte IE 9]> Internet Explorer 9 or greater &lt;![endif]-->"
+      "<!--[if gte IE 6]> Internet Explorer 6 or greater <![endif]-->",
+      "<!--[if gte IE 7]> Internet Explorer 7 or greater <![endif]-->",
+      "<!--[if gte IE 8]> Internet Explorer 8 or greater <![endif]-->",
+      "<!--[if gte IE 9]> Internet Explorer 9 or greater <![endif]-->"
     ],
     "test": [
       "<!--[if gte IE 6]><i></i><![endif]-->",
