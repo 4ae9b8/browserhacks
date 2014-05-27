@@ -23,6 +23,7 @@ body*.run-test .hack_4240a7dbdfd467fec4ffdda9b877f3b4_3 { background: lightgreen
 html > body .run-test .hack_da690292d4fddd94dc7bdd50e38b5713_0 { background: lightgreen; }
 html > /**/ body .run-test .hack_34e070c6d1cbbb94dfb54fce88134ecb_0 { background: lightgreen; }
 head ~ /**/ body .run-test .hack_34e070c6d1cbbb94dfb54fce88134ecb_1 { background: lightgreen; }
+_::selection, .run-test .hack_24f051c1d4bebed8a8ffad21a399cd97_0:not([attr*='']) { background: lightgreen; }
 :root * > .run-test .hack_49540f30666ef983820af94a4a469952_0 { background: lightgreen; }
 body:last-child .run-test .hack_49540f30666ef983820af94a4a469952_1 { background: lightgreen; }
 body:nth-of-type(1) .run-test .hack_49540f30666ef983820af94a4a469952_2 { background: lightgreen; }
