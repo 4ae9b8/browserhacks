@@ -1,5 +1,23 @@
 [
   {
+    "type": "selector",
+    "browsers": {
+      "ch": "*",
+      "sa": "*",
+      "op": "14+",
+      "an": "*"
+    },
+    "label": "WebKit",
+    "language": "css",
+    "code": [
+        ".selector:not(*:root) {}"
+    ],
+    "test": [
+        ".selector:not(*:root) { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
     "type": "propertyValue",
     "browsers": {
       "ch": "28-",
