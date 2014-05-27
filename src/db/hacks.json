@@ -707,6 +707,21 @@
   {
     "type": "javascript",
     "browsers": {
+      "ie": "6|7|8|9|10"
+    },
+    "label": "",
+    "language": "javascript",
+    "code": [
+      "var isIE = !!window.ActiveXObject;"
+    ],
+    "test": [
+      "!!window.ActiveXObject"
+    ],
+    "safe": false
+  },
+  {
+    "type": "javascript",
+    "browsers": {
       "ie": "7-"
     },
     "label": "",
