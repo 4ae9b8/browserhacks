@@ -643,7 +643,7 @@
     "browsers": {
       "ie": "7-"
     },
-    "label": "Everything but Internet Explorer 7-",
+    "label": "Everything but Internet Explorer ≤7",
     "language": "css",
     "code": [
       "html > /**/ body .selector {}",
@@ -661,7 +661,7 @@
       "ie": "8-",
       "fx": "*"
     },
-    "label": "Everything but Firefox and Internet Explorer 8-",
+    "label": "Everything but Firefox and Internet Explorer ≤8",
     "language": "css",
     "code": [
       "_::selection, .selector:not([attr*='']) {}"
@@ -676,7 +676,7 @@
     "browsers": {
       "ie": "8-"
     },
-    "label": "Everything but Internet Explorer 8-",
+    "label": "Everything but Internet Explorer ≤8",
     "language": "css",
     "code": [
       ":root .selector {}",
@@ -699,7 +699,7 @@
     "browsers": {
       "ie": "9-"
     },
-    "label": "Everything but Internet Explorer 9-",
+    "label": "Everything but Internet Explorer ≤9",
     "language": "css",
     "code": [
       "html[lang='\\\nen'] .selector {}"
@@ -922,7 +922,7 @@
       "ie": "*",
       "sa": "6-"
     },
-    "label": "Everything but Internet Explorer and Safari 6-",
+    "label": "Everything but Internet Explorer and Safari ≤6",
     "language": "css",
     "code": [
       "@media screen { @media (min-width: 0px) {} }"
@@ -1312,10 +1312,10 @@
     "browsers": {
       "ie": "9-"
     },
-    "label": "Everything but Internet Explorer 9-",
+    "label": "Everything but Internet Explorer ≤9",
     "language": "markup",
     "code": [
-      "<!--[if !IE]><!--> Everything but Internet Explorer 9- <!--<![endif]-->"
+      "<!--[if !IE]><!--> Everything but Internet Explorer ≤9 <!--<![endif]-->"
     ],
     "test": [
       "<!--[if !IE]><!--><i></i><!--<![endif]-->"
