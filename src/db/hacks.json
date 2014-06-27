@@ -21,7 +21,7 @@
     "type": "supports",
     "browsers": {
       "ch": "28+",
-      "op": "14+",
+      "op": "14+"
     },
     "label": "",
     "language": "css",

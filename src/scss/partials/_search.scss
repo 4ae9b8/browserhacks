@@ -14,6 +14,9 @@
         position: -o-sticky;
         position: sticky;
         top: 0;
+        -webkit-transform:translateZ(0);
+        -ms-transform:translateZ(0);
+        transform:translateZ(0);
 
         // position: sticky polyfill
         &.fixed {
