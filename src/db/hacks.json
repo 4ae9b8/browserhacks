@@ -1039,7 +1039,7 @@
   {
     "type": "javascript",
     "browsers": {
-      "ie": "10+"
+      "ie": "10"
     },
     "label": "",
     "language": "javascript",
