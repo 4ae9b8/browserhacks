@@ -37,7 +37,6 @@ html[xmlns*=""]:root .run-test .hack_3a0d9f6c9689d662d829b303c8ce819a_1  { backg
 *|html[xmlns*=""] .run-test .hack_052b7c66f249a55209252eddeea351f9_0 { background: lightgreen; }
 _::-moz-svg-foreign-content, :root .run-test .hack_8bacb43ba70fb5c9ccd3029729a78760_0 { background: lightgreen; }
 @supports (-webkit-appearance:none) { .run-test .hack_8a0d11a6b2e3d172711eed35cb7237b9_0 { background: lightgreen; } }
-@supports (-moz-appearance:meterbar) { .run-test .hack_8e9b5504d9fda44ec75169381b3c3157_0 { background: lightgreen; } }
 @supports (-moz-appearance:meterbar) and (display:flex) { .run-test .hack_4b5cb295c5a512baabcebfa69ff17f86_0 { background: lightgreen; } }
 @supports (-moz-appearance:meterbar) and (cursor:zoom-in) { .run-test .hack_11e3e2451e94e4e6a26da2112bb07508_0 { background: lightgreen; } }
 @supports (-moz-appearance:meterbar) and (background-attachment:local) { .run-test .hack_60d68ac2dde6cf9b6a9c680211976345_0 { background: lightgreen; } }
