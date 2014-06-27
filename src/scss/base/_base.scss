@@ -2,20 +2,21 @@
 	@include box-sizing(border-box);
 }
 
-html {
+body {
 	border-top: ($baseline / 3) solid $white;
 	overflow-x: hidden;
+	position: relative;
 
 	&:after {
 		content: '';
 		height: ($baseline / 3);
-		left: 0;
 		position: absolute;
+		left: 0;
 		top: 0;
 		right: 0;
 		z-index: 1;
 		@include background-image(linear-gradient(
-			90deg,
+			to right,
 			$android 17%,
 			$chrome 17%, $chrome 33%,
 			$firefox 33%, $firefox 50%,
@@ -26,6 +27,6 @@ html {
 	}
 }
 
-body {
+html {
 	overflow-x: hidden;
 }
