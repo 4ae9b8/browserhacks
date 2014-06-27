@@ -16,5 +16,8 @@
   },
   "html": {
     "title": "Conditional comments"
+  },
+  "supports": {
+    "title": "Supports Hacks"
   }
 }

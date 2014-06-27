@@ -18,6 +18,22 @@
     "safe": false
   },
   {
+    "type": "supports",
+    "browsers": {
+      "ch": "28+",
+      "op": "14+",
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-webkit-appearance:none) {}"
+    ],
+    "test": [
+      "@supports (-webkit-appearance:none) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
     "type": "propertyValue",
     "browsers": {
       "ch": "28-",
@@ -191,6 +207,21 @@
     "safe": false
   },
   {
+    "type": "selector",
+    "browsers": {
+      "fx": "6+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "_::-moz-progress-bar, body:last-child .selector {}"
+    ],
+    "test": [
+      "_::-moz-progress-bar, body:last-child .selector { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
     "type": "media",
     "browsers": {
       "fx": "8+"
@@ -225,6 +256,156 @@
     "safe": false
   },
   {
+    "type": "supports",
+    "browsers": {
+      "fx": "16+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "selector",
+    "browsers": {
+      "fx": "21+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "_::-moz-range-track, body:last-child .selector {}"
+    ],
+    "test": [
+      "_::-moz-range-track, body:last-child .selector { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "22+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (display:flex) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (display:flex) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "24+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (cursor:zoom-in) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (cursor:zoom-in) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "25+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (background-attachment:local) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (background-attachment:local) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "26+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (image-orientation:90deg) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (image-orientation:90deg) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "27+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (all:initial) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (all:initial) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "28+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (list-style-type:japanese-formal) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (list-style-type:japanese-formal) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "media",
+    "browsers": {
+      "fx": "29+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) {}"
+    ],
+    "test": [
+      "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "supports",
+    "browsers": {
+      "fx": "30+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
     "type": "javascript",
     "browsers": {
       "fx": "*"
@@ -236,6 +417,21 @@
     ],
     "test": [
       "!!window.sidebar"
+    ],
+    "safe": false
+  },
+  {
+    "type": "selector",
+    "browsers": {
+      "fx": "*"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "_:-moz-tree-row(hover), .selector {}"
+    ],
+    "test": [
+      "_:-moz-tree-row(hover), .selector { background: lightgreen; }"
     ],
     "safe": false
   },
@@ -483,7 +679,7 @@
     "label": "Everything but Internet Explorer 8-",
     "language": "css",
     "code": [
-      ":root * > .selector {}",
+      ":root .selector {}",
       "body:last-child .selector {}",
       "body:nth-of-type(1) .selector {}",
       "body:first-of-type .selector {}",
@@ -672,6 +868,36 @@
     ],
     "test": [
       "@media screen and (min-width:0\\0) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "selector",
+    "browsers": {
+      "ie": "10+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "_:-ms-input-placeholder, :root .selector {}"
+    ],
+    "test": [
+      "_:-ms-input-placeholder, :root .selector { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "selector",
+    "browsers": {
+      "ie": "11+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "_:-ms-fullscreen, :root .selector {}"
+    ],
+    "test": [
+      "_:-ms-fullscreen, :root .selector { background: lightgreen; }"
     ],
     "safe": false
   },
@@ -1310,6 +1536,21 @@
     ],
     "test": [
       "*|html[xmlns*=\"\"] .selector { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
+    "type": "selector",
+    "browsers": {
+      "sa": "5.1-6"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "_::-moz-svg-foreign-content, :root .selector {}"
+    ],
+    "test": [
+      "_::-moz-svg-foreign-content, :root .selector { background: lightgreen; }"
     ],
     "safe": false
   },
