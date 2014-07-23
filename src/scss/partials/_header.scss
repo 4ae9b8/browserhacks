@@ -163,6 +163,11 @@
     }
 }
 
+.carbonad-text {
+    float: none !important;
+    display: inline-block !important;
+}
+
 .shortcut {
     background-color: $white;
     border: 1px solid darken($lightGrey, 10%);
