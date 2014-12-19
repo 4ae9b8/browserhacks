@@ -406,6 +406,21 @@
     "safe": false
   },
   {
+    "type": "supports",
+    "browsers": {
+      "fx": "35+"
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports (-moz-appearance:meterbar) and (filter:opacity(1)) {}"
+    ],
+    "test": [
+      "@supports (-moz-appearance:meterbar) and (filter:opacity(1)) { .selector { background: lightgreen; } }"
+    ],
+    "safe": false
+  },
+  {
     "type": "javascript",
     "browsers": {
       "fx": "*"
