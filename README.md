@@ -14,7 +14,7 @@ How to?
 
 1. Pick the hack you want
 2. Copy it into your stylesheet
-3. Add thes style you want between the braces
+3. Add the styles you want between the braces
 4. Enjoy the new styles for the browser you targeted!
 
 
