@@ -21,6 +21,7 @@
     "type": "supports",
     "browsers": {
       "ch": "28+",
+      "sa": "9+",
       "op": "14+"
     },
     "label": "",
