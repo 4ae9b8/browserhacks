@@ -25,6 +25,11 @@ Created by
 * [Hugo Giraudel](http://twitter.com/hugogiraudel)
 * [Fabrice Weinberg](http://twitter.com/fweinb)
 
+Updates by
+---------
+
+* [Jeff Clayton](https://github.com/jeffclayton) 
+
 Thanks to
 ---------
 
