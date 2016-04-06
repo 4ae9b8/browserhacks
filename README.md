@@ -29,7 +29,7 @@ Thanks to
 ---------
 
 * [Joshua Hibbert](https://twitter.com/_joshnh) for the design
-* [Jeff Clayton](https://github.com/jeffclayton) for his help with testing hacks
+* [Jeff Clayton](https://github.com/jeffclayton) for his help with testing hacks and creating new ones, now also an administrator.
 * [Sara Soueidan](http://twitter.com/sarasoueidan), [Ana Tudor](http://twitter.com/thebabydino), [Mads Cordes](http://twitter.com/mobilpadde) for their kind help
 * [Paul Irish](http://twitter.com/paul_irish) for [his great post on CSS hacks](http://www.paulirish.com/2009/browser-specific-css-hacks/)
 * [Keith Clarke](http://twitter.com/keithclarkecouk) for [his @media block CSS hacks](http://blog.keithclark.co.uk/moving-ie-specific-css-into-media-blocks/)
