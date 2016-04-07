@@ -25,8 +25,8 @@ body:last-child .run-test .hack_1aaa2cce9e371d212109d5b1b8229ef6_1 { background:
 body:nth-of-type(1) .run-test .hack_1aaa2cce9e371d212109d5b1b8229ef6_2 { background: lightgreen; }
 body:first-of-type .run-test .hack_1aaa2cce9e371d212109d5b1b8229ef6_3 { background: lightgreen; }
 .run-test .hack_1aaa2cce9e371d212109d5b1b8229ef6_4:not([attr*='']) { background: lightgreen; }
-html[lang='\
-en'] .run-test .hack_e6b158b7e27bcb157326348efb5c0bb2_0 { background: lightgreen; }
+/* Hack Removed - Could not Reproduce: html[lang='\
+en'] .run-test .hack_e6b158b7e27bcb157326348efb5c0bb2_0 { background: lightgreen; } */
 _:-ms-input-placeholder, :root .run-test .hack_f1070533535a12744a0381a75087a915_0 { background: lightgreen; }
 _:-ms-fullscreen, :root .run-test .hack_d19e53a0fdfba5ec0f283ae86175a3af_0 { background: lightgreen; }
 html:first-child .run-test .hack_54eb761b77f24e4235c7e54927f1be11_0 { background: lightgreen; }
