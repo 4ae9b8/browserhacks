@@ -1,7 +1,7 @@
 # Site settings
 title: Browserhacks
 description: > # this means to ignore newlines until "baseurl:"
-  Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.
+  An extensive list of browser specific CSS and JavaScript hacks from all over the interwebs curated by @HugoGiraudel and @TimPietrusky
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://browserhacks.com" # the base hostname & protocol for your site
 twitter_username: browserhacks
@@ -20,3 +20,9 @@ exclude:
   - package.json
   - README.md
   - tasks/
+  - assets/images/svg/
+  - assets/images/avatar/
+  - assets/js/vendor/
+  - assets/js/src/
+  - assets/js/main.js
+  - assets/js/tests.js

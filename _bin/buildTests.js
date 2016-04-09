@@ -40,6 +40,7 @@ function getJavaScriptForJavaScriptTest (test, name) {
 
 var cssDump = ''
 var jsDump = `
+(function () {
   var testWidget = {
     settings: {
       testClass: '${TEST_CLASS}',
@@ -70,8 +71,11 @@ hacks.forEach(function (hack) {
 })
 
 jsDump += `
-  }
-};`;
+    }
+  };
+
+  testWidget.init();
+})`;
 
 var CSS_OUTPUT_PATH = path.resolve(__dirname, '..', 'assets/css/tests.css')
 var JS_OUTPUT_PATH = path.resolve(__dirname, '..', 'assets/js/tests.js')

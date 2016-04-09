@@ -1,4 +1,5 @@
 
+(function () {
   var testWidget = {
     settings: {
       testClass: 'js-succeed',
@@ -473,5 +474,8 @@
       }
     }
   
-  }
-};
+    }
+  };
+
+  testWidget.init();
+})

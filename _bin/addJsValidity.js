@@ -1,4 +1,4 @@
-var JSHINT = require( 'jshint' ).JSHINT;
+var JSHINT = require('jshint').JSHINT;
 
 module.exports = function (hack) {
   if (hack.language !== 'javascript') {

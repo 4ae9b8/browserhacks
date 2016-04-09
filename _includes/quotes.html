@@ -1,25 +1,22 @@
-<div id="quotes">
+<div id="quotes" data-quotes-data='{{ site.data.quotes|jsonify }}'>
   <div class="quotes">
     <div>
-      <blockquote class="quote">
-        <p class="quote-content">
-          {{ site.data.quotes[0].quote }}
-        </p>
-        &mdash; <a href="{{ site.data.quotes[0].from }}" class="quote-author" target="_blank">
-          {{ site.data.quotes[0].author }}
-        </a>
-      </blockquote>
-      <ul class="quote-authors">
-        {% for quote in site.data.quotes %}
-          <li>
-            <div class="quote-authors__avatar">
-              <div class="avatar-{{ quote.twitter }}"></div>
-            </div>
-
-            <a href="{{ quote.from }}" class="quote-authors__name" target="_blank">{{ quote.author }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <blockquote class="quote"></blockquote>
+      <ul class="quote-authors"></ul>
     </div>
   </div>
 </div>
+
+<!-- Template: Quote -->
+<script id="template_quote" type="text/template">
+   <p class="quote-content"><%= quote %></p>
+   &mdash; <a href="<%= from %>" class="quote-author" target="_blank"><%= author %></a>
+</script>
+
+<!-- Template: Author -->
+<script id="template_author" type="text/template">
+    <div class="quote-authors__avatar">
+      <div class="avatar-<%= twitter %>"></div>
+    </div>
+    <a href="<%= from %>" class="quote-authors__name" target="_blank"><%= author %></a>
+</script>

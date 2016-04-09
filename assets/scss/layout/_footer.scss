@@ -35,14 +35,14 @@
   content: url('../images/fabrice_weinberg.png');
 }
 
-
-
 .btn-top {
   color: map-get($browser-themes, 'ie');
   font-size: 2em;
   margin-right: ($baseline / 4);
   text-decoration: none;
   transition: 0.15s;
+  display: inline-block;
+  transform: translateY(-8px);
 
   &:hover,
   &:focus {

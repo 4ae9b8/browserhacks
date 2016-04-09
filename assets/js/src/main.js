@@ -1,4 +1,7 @@
+import Search from './Search'
+
 (function (global) {
+
 
   $('document').ready(function () {
     $('.hacks-wrapper').each(function (index, wrapper) {
@@ -18,7 +21,6 @@
 
     Prism && Prism.highlightAll(false)
     
-    // We add .line spans for each hack in every code block
     $('.js-code').each(function (index, code) {
       var $code = $(code)
       var lines = $code.html().split('\n')
@@ -33,5 +35,8 @@
 
       $code.html(dump)
     })
+
+    $('.search').show()
+    var search = new Search($('.search__input'), $('.hack-wrapper'))
   })
 }())

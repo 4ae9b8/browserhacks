@@ -5,19 +5,21 @@
 {% include head.html %}
 
 <body id="browserhacks">
-    {% include sprite.svg %}
-    {% include header.html %}
-    {% include intro.html %}
-    {% include search.html %}
+  {% include sprite.svg %}
+  {% include header.html %}
+  {% include intro.html %}
+  {% include search.html %}
 
-    <!-- Content -->
-    <main id="content" class="main" aria-label="Content">
-        {{ content }}
-    </main>
-
+  <!-- Content -->
+  <main id="content" class="main" aria-label="Content">
+    {{ content }}
+  
     {% include extra.html %}
     {% include quotes.html %}
-    {% include footer.html %}
-    {% include scripts.html %}
-    </body>
+  </main>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+
 </html>
