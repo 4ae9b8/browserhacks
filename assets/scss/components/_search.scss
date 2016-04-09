@@ -25,6 +25,19 @@
       right: 0;
     }
   }
+
+  @include bp('small') {
+    padding-bottom: $baseline;
+  }
+}
+
+.search__group {
+  float: left;
+  padding: 0.5em 0;
+
+  @include bp('small') {
+    float: none;
+  }
 }
 
 .search input[type='checkbox'] {
@@ -36,7 +49,6 @@
 .search label {
   cursor: pointer;
   font-size: 1.2em;
-  line-height: 2.5;
   margin-right: ($baseline / 1.2);
   padding-left: (($baseline / 1.2) / 4);
 }

@@ -3,6 +3,10 @@
   overflow: hidden;
   padding: $baseline $baseline 0;
   text-align: right;
+
+  @include bp('small') {
+    padding-bottom: $baseline;
+  }
 }
 
 .header__logo {
@@ -76,6 +80,8 @@
   }
 
   @include bp('small') {
+    padding-bottom: $baseline;
+
     h2 {
       text-align: center;
     }

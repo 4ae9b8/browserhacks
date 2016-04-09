@@ -1,6 +1,6 @@
 <!doctype html>
-<!--[if lt IE 9]> <html class="ie"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if lt IE 9]> <html lang="en" class="ie no-js"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
 <head>
   <title>Browserhacks</title>
@@ -23,6 +23,10 @@
   <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
+  <script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'') + ' js'
+  </script>
 </head>
 
 
@@ -152,12 +156,16 @@
   </div>
 </div>
 
-  <div class="search  centered  grid">
+  <div class="search centered grid js-powered">
   <div class="options grid__col--50">
-    <input type="checkbox" name="show-legacy" id="show-legacy" title="Show / hide hacks for old browser">
-    <label for="show-legacy" title="Show / hide hacks for old browser">Show legacy hacks</label>
-    <input type="checkbox" name="show-test" id="show-test" title="Show / hide tests for your browser">
-    <label for="show-test" title="Show / hide tests for your browser">Enable tests</label>
+    <div class="search__group">
+      <input type="checkbox" name="show-legacy" id="show-legacy" title="Show / hide hacks for old browser">
+      <label for="show-legacy" title="Show / hide hacks for old browser">Show legacy hacks</label>
+    </div>
+    <div class="search__group">
+      <input type="checkbox" name="show-test" id="show-test" title="Show / hide tests for your browser">
+      <label for="show-test" title="Show / hide tests for your browser">Enable tests</label>
+    </div>
   </div>
  
   <div class="grid__col--50" data-type="search">
@@ -7647,7 +7655,7 @@ html[xmlns*=&quot;&quot;]:root .selector  {}
   </div>
 </div>
 
-    <div id="quotes" data-quotes-data='[{"quote":"Holy shit amazing.","from":"https://twitter.com/paul_irish/status/307636394061332480","author":"Paul Irish","twitter":"paul_irish"},{"quote":"When in doubt hack it out. Browserhacks for your dev dome.","from":"https://twitter.com/petesena/status/308592704575643648","author":"Peter Sena","twitter":"petesena"},{"quote":"One browser engineer’s bug is a web developer’s hack.","from":"https://twitter.com/sgalineau/status/309070517019754496","author":"Sylvain Galineau","twitter":"sgalineau"},{"quote":"This is definitely what i need, browser #hacks!","from":"https://twitter.com/desainersingit/status/309242123977388032","author":"DesainerSingit","twitter":"desainersingit"},{"quote":"Browser hacks, boom boom!","from":"https://twitter.com/bluespore/status/308508912909434880","author":"Sean Bullock","twitter":"bluespore"},{"quote":"Not sure if sloppy or suave.","from":"https://twitter.com/jaredsartin/status/307515588736069633","author":"Jared Sartin","twitter":"jaredsartin"},{"quote":"Will come in very handy. :)","from":"https://twitter.com/chinchang457/status/305987566061101056","author":"Kushagra Kour","twitter":"chinchang457"},{"quote":"Sometime it feels like i’m in the hack business and not software development.","from":"https://twitter.com/nate_weldon/status/306829916274585601","author":"Nate Weldon","twitter":"nate_weldon"},{"quote":"Browserhacks - must have for all front-end developers","from":"https://twitter.com/markszymik/status/307490939067305984","author":"Mark Szymic","twitter":"markszymik"},{"quote":"Brilliant! *bookmarked*","from":"https://twitter.com/ronicadesign/status/308623081126129665","author":"Veronica Domeier","twitter":"ronicadesign"},{"quote":"Mega useful browserhacks collected.","from":"https://twitter.com/therusstler/status/309272969140654080","author":"Russ Brown","twitter":"therusstler"},{"quote":"Finally a home for browser-specific css/js hacks.","from":"https://twitter.com/shakeeb/status/307889195052056577","author":"Shakeeb Rahman","twitter":"shakeeb"},{"quote":"Fantastic collection of CSS/JS hacks!","from":"https://twitter.com/ashleycallahan/status/309790286287093761","author":"Ashley Callaha","twitter":"ashleycallahan"},{"quote":"Just amazing.","from":"https://twitter.com/fabien_doiron/status/311100048811368449","author":"Fabien Doiron","twitter":"fabien_doiron"},{"quote":"Browserhacks lets you sleep at night. Or keep your hair. Or both.","from":"https://twitter.com/slashlv/status/311316552966348800","author":"Luke Van Deman","twitter":"slashlv"},{"quote":"Knowledge is dangerous – especially *this* knowledge","from":"https://twitter.com/garazi/status/327169357035745281","author":"Greg R","twitter":"garazi"},{"quote":"browserhacks.com - well, no. don’t","from":"https://twitter.com/codepo8/status/322846891358420992","author":"Christian Heilmann","twitter":"codepo8"},{"quote":"A sometimes necessary evil.","from":"https://twitter.com/grimmweb/status/339470059820949504","author":"Hans Grimm","twitter":"grimmweb"},{"quote":"It makes me both happy and depressed at the same time...","from":"https://twitter.com/toddvachon/status/340172953549418496","author":"Todd Vachon","twitter":"toddvachon"},{"quote":"Front-end developers stop the IE drama and use this fine tool","from":"https://twitter.com/iSands/status/361660191030251522","author":"iSands","twitter":"iSands"}]'>
+    <div class="js-powered" id="quotes" data-quotes-data='[{"quote":"Holy shit amazing.","from":"https://twitter.com/paul_irish/status/307636394061332480","author":"Paul Irish","twitter":"paul_irish"},{"quote":"When in doubt hack it out. Browserhacks for your dev dome.","from":"https://twitter.com/petesena/status/308592704575643648","author":"Peter Sena","twitter":"petesena"},{"quote":"One browser engineer’s bug is a web developer’s hack.","from":"https://twitter.com/sgalineau/status/309070517019754496","author":"Sylvain Galineau","twitter":"sgalineau"},{"quote":"This is definitely what i need, browser #hacks!","from":"https://twitter.com/desainersingit/status/309242123977388032","author":"DesainerSingit","twitter":"desainersingit"},{"quote":"Browser hacks, boom boom!","from":"https://twitter.com/bluespore/status/308508912909434880","author":"Sean Bullock","twitter":"bluespore"},{"quote":"Not sure if sloppy or suave.","from":"https://twitter.com/jaredsartin/status/307515588736069633","author":"Jared Sartin","twitter":"jaredsartin"},{"quote":"Will come in very handy. :)","from":"https://twitter.com/chinchang457/status/305987566061101056","author":"Kushagra Kour","twitter":"chinchang457"},{"quote":"Sometime it feels like i’m in the hack business and not software development.","from":"https://twitter.com/nate_weldon/status/306829916274585601","author":"Nate Weldon","twitter":"nate_weldon"},{"quote":"Browserhacks - must have for all front-end developers","from":"https://twitter.com/markszymik/status/307490939067305984","author":"Mark Szymic","twitter":"markszymik"},{"quote":"Brilliant! *bookmarked*","from":"https://twitter.com/ronicadesign/status/308623081126129665","author":"Veronica Domeier","twitter":"ronicadesign"},{"quote":"Mega useful browserhacks collected.","from":"https://twitter.com/therusstler/status/309272969140654080","author":"Russ Brown","twitter":"therusstler"},{"quote":"Finally a home for browser-specific css/js hacks.","from":"https://twitter.com/shakeeb/status/307889195052056577","author":"Shakeeb Rahman","twitter":"shakeeb"},{"quote":"Fantastic collection of CSS/JS hacks!","from":"https://twitter.com/ashleycallahan/status/309790286287093761","author":"Ashley Callaha","twitter":"ashleycallahan"},{"quote":"Just amazing.","from":"https://twitter.com/fabien_doiron/status/311100048811368449","author":"Fabien Doiron","twitter":"fabien_doiron"},{"quote":"Browserhacks lets you sleep at night. Or keep your hair. Or both.","from":"https://twitter.com/slashlv/status/311316552966348800","author":"Luke Van Deman","twitter":"slashlv"},{"quote":"Knowledge is dangerous – especially *this* knowledge","from":"https://twitter.com/garazi/status/327169357035745281","author":"Greg R","twitter":"garazi"},{"quote":"browserhacks.com - well, no. don’t","from":"https://twitter.com/codepo8/status/322846891358420992","author":"Christian Heilmann","twitter":"codepo8"},{"quote":"A sometimes necessary evil.","from":"https://twitter.com/grimmweb/status/339470059820949504","author":"Hans Grimm","twitter":"grimmweb"},{"quote":"It makes me both happy and depressed at the same time...","from":"https://twitter.com/toddvachon/status/340172953549418496","author":"Todd Vachon","twitter":"toddvachon"},{"quote":"Front-end developers stop the IE drama and use this fine tool","from":"https://twitter.com/iSands/status/361660191030251522","author":"iSands","twitter":"iSands"}]'>
   <div class="quotes">
     <div>
       <blockquote class="quote"></blockquote>
