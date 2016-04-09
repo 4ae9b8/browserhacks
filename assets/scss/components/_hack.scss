@@ -1,0 +1,79 @@
+.hack {
+  background-color: darken($dark-white, 5%);
+  border: 1px solid darken($light-grey, 5%);
+  margin-bottom: $baseline;
+  overflow: hidden;
+}
+
+.hack__label {
+  border-bottom: 1px solid darken($light-grey, 5%);
+  margin-bottom: 0;
+  padding: ($baseline / 4) ($baseline / 2);
+}
+
+.hack__code {
+  background-color: $dark-white;
+  border-bottom: 1px solid darken($light-grey, 5%);
+  border-right: 1px solid darken($light-grey, 5%);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  margin: 0 -1px 0 0;
+  padding: ($baseline / 2);
+}
+
+.hack__list {
+  float: left;
+  list-style: none;
+  margin: 0;
+}
+
+.hack__list-item {
+  border-right: 1px solid darken($light-grey, 5%);
+  padding: ($baseline / 4) ($baseline / 2);
+  display: inline-block;
+  vertical-align: middle;
+
+  span {
+    font-size: .8em;
+  }
+
+  .browser-name {
+    text-transform: capitalize;
+  }
+
+  .browser-version {
+    font-weight: bold;
+  }
+}
+
+.hack__list--options {
+  float: right;
+}
+
+.hack__list--options .hack__list-item {
+  border-left: 1px solid darken($light-grey, 5%);
+  border-right: 0;
+}
+
+.hack__id {
+  padding: 0;
+}
+
+.hack__id a {
+  border-bottom: 0 !important;
+  display: block;
+  padding: ($baseline / 4) ($baseline / 2);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: lighten(map-get($browser-themes, 'ie'), 20%);
+  }
+}
+
+@include bp('small') {
+  .browser-name {
+    display: none;
+  }
+}

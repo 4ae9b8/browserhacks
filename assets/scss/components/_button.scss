@@ -1,0 +1,28 @@
+.button {
+  background-color: map-get($browser-themes, 'ie');
+  border: 1px solid darken(map-get($browser-themes, 'ie'), 10%);
+  color: $white;
+  margin-bottom: $baseline;
+  margin-left: $baseline;
+  padding: ($baseline / 2) $baseline;
+  text-decoration: none;
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.25);
+  display: inline-block;
+  transition: 0.15s;
+
+  &:hover,
+  &:focus {
+    background-color: lighten(map-get($browser-themes, 'ie'), 5%);
+  }
+
+  &:active {
+    background-color: darken(map-get($browser-themes, 'ie'), 5%);
+    box-shadow: inset 0 1px 0 hsla(0, 0%, 0%, 0.1);
+  }
+
+  @include bp('small') {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 0.5em 0;
+  }
+}

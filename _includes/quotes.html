@@ -1,0 +1,25 @@
+<div id="quotes">
+  <div class="quotes">
+    <div>
+      <blockquote class="quote">
+        <p class="quote-content">
+          {{ site.data.quotes[0].quote }}
+        </p>
+        &mdash; <a href="{{ site.data.quotes[0].from }}" class="quote-author" target="_blank">
+          {{ site.data.quotes[0].author }}
+        </a>
+      </blockquote>
+      <ul class="quote-authors">
+        {% for quote in site.data.quotes %}
+          <li>
+            <div class="quote-authors__avatar">
+              <div class="avatar-{{ quote.twitter }}"></div>
+            </div>
+
+            <a href="{{ quote.from }}" class="quote-authors__name" target="_blank">{{ quote.author }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

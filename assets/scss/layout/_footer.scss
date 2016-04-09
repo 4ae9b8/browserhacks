@@ -1,0 +1,55 @@
+.footer {
+  background-color: $dark-white;
+  border-top: 1px solid darken($light-grey, 5%);
+  padding: $baseline $baseline 0;
+  text-align: right;
+}
+
+.footer .copyright {
+  float: left;
+  text-align: left;
+}
+
+.footer .copyright p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**
+* Footer avatars
+*/
+.avatar:before {
+  vertical-align:-50%;
+  padding:0 .25em;
+}
+
+.avatar--hugo:before {
+  content: url('../images/hugo_giraudel.png');
+}
+
+.avatar--tim:before {
+  content: url('../images/tim_pietrusky.jpg');
+}
+
+.avatar--fabrice:before {
+  content: url('../images/fabrice_weinberg.png');
+}
+
+
+
+.btn-top {
+  color: map-get($browser-themes, 'ie');
+  font-size: 2em;
+  margin-right: ($baseline / 4);
+  text-decoration: none;
+  transition: 0.15s;
+
+  &:hover,
+  &:focus {
+    color: lighten(map-get($browser-themes, 'ie'), 20%);
+  }
+}
+
+.btn-top span:before {
+  line-height: 1.5;
+}

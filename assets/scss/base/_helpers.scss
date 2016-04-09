@@ -1,0 +1,32 @@
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.centered {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include bp('large') {
+    padding-right: 7.5% !important;
+    padding-left: 7.5% !important;
+  }
+}
+
+.nothing {
+  padding: $baseline 0;
+  font-size: $baseline;
+}
+
+span.line {
+  border-radius: 4px;
+  margin: -2px;
+  padding: 2px;
+  display: block;
+}

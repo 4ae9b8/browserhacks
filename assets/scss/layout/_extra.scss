@@ -1,0 +1,23 @@
+.additional-info {
+  background-color: $dark-white;
+  border-bottom: 1px solid darken($light-grey, 5%);
+  border-top: 1px solid darken($light-grey, 5%);
+  margin-top: $baseline;
+  padding: $baseline $baseline 0;
+}
+
+.additional-info h2 {
+  color: $dark-grey;
+  font-size: 2em;
+  line-height: 1;
+  margin-bottom: ($baseline / 3);
+}
+
+.additional-info p,
+.additional-info li {
+  font-size: 1.2em;
+}
+
+.additional-info p {
+  margin-bottom: ($baseline / 1.2);
+}

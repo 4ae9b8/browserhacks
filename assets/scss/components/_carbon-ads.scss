@@ -1,0 +1,45 @@
+.browserstack-ad {
+  background-color: $white;
+  border: 1px solid darken($light-grey, 5%);
+  width: 300px;
+  max-width: 100%;
+  margin-bottom: $baseline;
+  padding-top: 0.5em;
+  position: relative;
+
+  @include bp('small') {
+    margin: 0.5em auto;
+  }
+}
+
+.browserstack-ad p {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #888;
+  position: absolute;
+  left: 5.7em;
+}
+
+.browserstack-ad a {
+  text-decoration: none;
+  display: block;
+}
+
+.browserstack-ad img {
+  margin: 0 auto;
+  display: block;
+}
+
+.carbonad {
+  max-width: 100%;
+  margin: 0.5em 0;
+
+  @include bp('small') {
+    margin: 0.5em auto;
+  }
+}
+
+.carbonad-text {
+  float: none !important;
+  display: inline-block !important;
+}

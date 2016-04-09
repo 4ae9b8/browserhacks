@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+{% for browser in site.data.browsers| %}
+  {% assign browser_shortname = browser[0] %}
+
+  <div id="{{ browser_shortname }}"
+    class="browser-wrapper browser-wrapper--{{ browser_shortname }}">
+    <h2 class="browser-wrapper__title centered">
+      <a href="#{{ browser_shortname }}">
+        {% include icon.html icon=browser_shortname %}
+        {{ browser[1].name|capitalize }}
+      </a>
+    </h2>
+
+    {% assign groups = site.data.hacks|group_by:"type" %}
+    {% for type in groups %}
+
+      {% if type.items|size > 0 %}
+        <div class="hacks-wrapper grid centered" data-type="{{ type.name }}-childs">
+          <h3 class="hacks-wrapper__title" data-type="{{ type.name }}-parent">
+            {{ site.data.hackTypes[type.name].title }}
+          </h3>
+
+          {% for hack in type.items %}
+            {% assign hack_id = hack.code|join('')|md5 %}
+            {% if hack.browsers[browser_shortname] %}
+            <div
+              class="js-hack hack-wraper grid__col--50 "
+              id="hack-{{ hack.id }}"
+              data-safe="{{ hack.safe }}"
+              data-legacy="{{ hack.browsers[browser_shortname].legacy }}"
+              data-version="{{ hack.browsers[browser_shortname].version }}">
+            
+              <div class="hack">
+                {% if hack.label != "" %}
+                  <p class="hack__label">{{ hack.label }}</p>
+                {% endif %}
+                
+<pre class="hack__code language-{{ hack.language }}"><code class="js-code">{% for code in hack.code %}{{ code|escape }}
+{% endfor %}</code></pre>
+                
+                <ul class="hack__list">
+                  {% for browser in hack.browsers %}
+                    <li class="hack__list-item">
+                      {% assign tmp = browser[0] %}
+                      {% include icon.html icon=tmp %}
+                      <span class="browser-name">
+                        {{ site.data.browsers[tmp].name }}
+                      </span>
+                      <span class="browser-version">
+                        {{ browser[1].humanVersion }}
+                      </span>
+                    </li>
+                  {% endfor %}
+                </ul>
+                  
+                <ul class="hack__list  hack__list--options">
+                  <li class="hack__list-item  hack__id">
+                    <a href="#hack-{{ hack.id }}">#</a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endfor %}
+
+  </div>
+{% endfor %}

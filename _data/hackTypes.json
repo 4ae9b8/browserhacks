@@ -1,0 +1,23 @@
+{
+  "selector": {
+    "title": "Selector Hacks"
+  },
+  "media": {
+    "title": "Media Query Hacks"
+  },
+  "javascript": {
+    "title": "JavaScript Hacks"
+  },
+  "propertyValue": {
+    "title": "Property/Value Hacks"
+  },
+  "misc": {
+    "title": "Miscellaneous"
+  },
+  "html": {
+    "title": "Conditional comments"
+  },
+  "supports": {
+    "title": "Supports Hacks"
+  }
+}

@@ -1,0 +1,29 @@
+.hacks-wrapper__title {
+  padding: 0 0.75em;
+}
+
+/**
+* Hacks containers
+*
+* Make deepskyblue border on target
+* TODO: Find a better way to write this magic number ( offset from fixed header )
+*
+*/
+.hack-wrapper {
+  position: relative;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+
+  /**
+   * Technique from
+   * http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-C
+   */
+  &:target {
+    padding-top: 80px;
+    margin-top: -80px;
+  }
+}
+
+.hack-wrapper:target .hack {
+  border: 0.15em solid deepskyblue;
+}

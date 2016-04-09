@@ -1,0 +1,39 @@
+.browser-wrapper__title {
+  background-color: lightgrey;
+  border-top: (($baseline / 2.25) / 3) solid grey;
+  margin-top: ($baseline / 2.25);
+  padding-top: ($baseline / 4); 
+  padding-bottom: ($baseline / 3);
+}
+
+.browser-wrapper__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.browser-wrapper__title span {
+  margin-right: (($baseline / 2.25) / 2);
+  position: relative;
+  top: (($baseline / 2.25) / 8);
+}
+
+.browser-wrapper__title a {
+  color: $black;
+  text-decoration: none;
+}
+
+.browser-wrapper h3 {
+  color: $dark-grey;
+  margin-top: $baseline;
+}
+
+@each $browser, $color in $browser-themes {
+  .browser-wrapper--#{$browser} .browser-wrapper__title {
+    border-color: tint($color, 25%);
+    background-color: tint($color, 85%);
+
+    span {
+      color: $color;
+    }
+  }
+}

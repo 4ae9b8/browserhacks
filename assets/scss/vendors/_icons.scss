@@ -1,0 +1,102 @@
+@font-face {
+  font-family: 'Browserhacks-Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Browserhacks-Icons.eot');
+  src: url('../fonts/Browserhacks-Icons.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Browserhacks-Icons.woff') format('woff'),
+       url('../fonts/Browserhacks-Icons.ttf') format('truetype'),
+       url('../fonts/Browserhacks-Icons.svg#Browserhacks-Icons') format('svg');
+}
+
+.browserhacks-windows,
+.browserhacks-windows8,
+.browserhacks-apple,
+.browserhacks-an,
+.browserhacks-ch,
+.browserhacks-fx,
+.browserhacks-ie,
+.browserhacks-op,
+.browserhacks-om,
+.browserhacks-sa,
+.browserhacks-github,
+.browserhacks-magic,
+.browserhacks-twitter,
+.browserhacks-arrow-up,
+.browserhacks-valid,
+.browserhacks-invalid,
+.browserhacks-css3,
+.browserhacks-file-css,
+.browserhacks-file-xml,
+.browserhacks-html5 {
+
+  &:before {
+    font-family: 'Browserhacks-Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.browserhacks-an:before {
+  content: '\e000';
+}
+.browserhacks-ch:before {
+  content: '\e001';
+}
+.browserhacks-sa:before {
+  content: '\e002';
+}
+.browserhacks-ie:before {
+  content: '\e003';
+}
+.browserhacks-op:before,
+.browserhacks-om:before {
+  content: '\e004';
+}
+.browserhacks-windows8:before {
+  content: '\e005';
+}
+.browserhacks-windows:before {
+  content: '\e006';
+}
+.browserhacks-fx:before {
+  content: '\e007';
+}
+.browserhacks-magic:before {
+  content: '\e008';
+}
+.browserhacks-twitter:before {
+  content: '\e009';
+}
+.browserhacks-github:before {
+  content: '\e00c';
+}
+.browserhacks-arrow-up:before {
+  content: '\e00a';
+}
+.browserhacks-apple:before {
+  content: '\e00b';
+}
+.browserhacks-valid:before {
+  content: '\e00d';
+}
+.browserhacks-invalid:before {
+  content: '\e00e';
+}
+.browserhacks-css3:before {
+  content: '\e00f';
+}
+.browserhacks-file-css:before {
+  content: '\e010';
+}
+.browserhacks-file-xml:before {
+  content: '\e011';
+}
+.browserhacks-html5:before {
+  content: '\e012';
+}

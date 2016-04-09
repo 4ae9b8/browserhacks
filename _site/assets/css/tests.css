@@ -1,0 +1,89 @@
+.run-test .hack_f4ade0540d8e891e8190065f75acb186_0:not(*:root) { background: lightgreen; }
+@supports (-webkit-appearance:none) { .run-test .hack_8a0d11a6b2e3d172711eed35cb7237b9_0 { background: lightgreen; } }
+.run-test .hack_1253ba9a80fabdf7239969c7bd4b0cf2_0 { (;background: lightgreen;); }
+.run-test .hack_1253ba9a80fabdf7239969c7bd4b0cf2_1 { [;background: lightgreen;]; }
+body:empty .run-test .hack_fd8df6c81198ebb2d240e77fda6d5154_0 { background: lightgreen; }
+body:last-child .run-test .hack_756739b33c37fb7db4cce645bbf7ea5f_0, x:-moz-any-link { background: lightgreen; }
+@media \0 all { body:last-child .run-test .hack_411240e387db3ac5b87da57714e25d22_0 { background: lightgreen; } }
+body:last-child .run-test .hack_027f55be40d457f6a614adb09da0037f_0, x:-moz-any-link, x:default { background: lightgreen; }
+body:not(:-moz-handler-blocked) .run-test .hack_ac5c4714c7405861a285fd127f15338e_0 { background: lightgreen; }
+@media screen and (-moz-images-in-menus:0) { .run-test .hack_b660126302b8b5360308ecedb06f468c_0 { background: lightgreen; } }
+@media screen and (min--moz-device-pixel-ratio:0) { .run-test .hack_48ca6fc2947b7850c571a2f69bdbffbd_0 { background: lightgreen; } }
+_::-moz-progress-bar, body:last-child .run-test .hack_443a4eb168ccf066e7c2909be4911af1_0 { background: lightgreen; }
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .run-test .hack_12fab4e42897a8439c42d9e92d5f1047_0 { background: lightgreen; } }
+@media all and (-moz-images-in-menus:0) and (min-resolution: .001dpcm) { .run-test .hack_12fab4e42897a8439c42d9e92d5f1047_1 { background: lightgreen; } }
+@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) { .run-test .hack_e8ca8ddfaa1ad94670089d93c96bb02f_0 { background: lightgreen; } } }
+@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) { .run-test .hack_e8ca8ddfaa1ad94670089d93c96bb02f_1 { background: lightgreen; } } }
+@supports (-moz-appearance:meterbar) { .run-test .hack_8e9b5504d9fda44ec75169381b3c3157_0 { background: lightgreen; } }
+_::-moz-range-track, body:last-child .run-test .hack_8b9c5852c4b9eb1f2cbaf7d82e0c6576_0 { background: lightgreen; }
+@supports (-moz-appearance:meterbar) and (display:flex) { .run-test .hack_4b5cb295c5a512baabcebfa69ff17f86_0 { background: lightgreen; } }
+@supports (-moz-appearance:meterbar) and (cursor:zoom-in) { .run-test .hack_11e3e2451e94e4e6a26da2112bb07508_0 { background: lightgreen; } }
+@supports (-moz-appearance:meterbar) and (background-attachment:local) { .run-test .hack_60d68ac2dde6cf9b6a9c680211976345_0 { background: lightgreen; } }
+@supports (-moz-appearance:meterbar) and (image-orientation:90deg) { .run-test .hack_ab54e21b1631fd90a20bd5c1b5c74a76_0 { background: lightgreen; } }
+@supports (-moz-appearance:meterbar) and (all:initial) { .run-test .hack_28132284f15805605566007edc4a7c39_0 { background: lightgreen; } }
+@supports (-moz-appearance:meterbar) and (list-style-type:japanese-formal) { .run-test .hack_3a88b4a228be1a8e90204f8aa9783b65_0 { background: lightgreen; } }
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) { .run-test .hack_36e9719b0244c5806423ca3c8ce02bdc_0 { background: lightgreen; } }
+@supports (-moz-appearance:meterbar) and (background-blend-mode:difference,normal) { .run-test .hack_cfd4c21603b122acfda8e81f41cdb320_0 { background: lightgreen; } }
+_:-moz-tree-row(hover), .run-test .hack_fcd70847fc9af76ec582d13fe50066c8_0 { background: lightgreen; }
+@-moz-document url-prefix() { .run-test .hack_758bff81c5c32351b02e10480b5ed48e_0 { background: lightgreen; } }
+* html .run-test .hack_f0ed28ec60d48b6b0b6e4e8dc9fc8d06_0  { background: lightgreen; }
+.unused-class.run-test .hack_f0ed28ec60d48b6b0b6e4e8dc9fc8d06_1 { background: lightgreen; }
+.run-test .hack_102de2b99b6dad1dc48a7f17846bd6d7_0, { background: lightgreen; }
+*:first-child+html .run-test .hack_a5de699b3f472f6949830085de812183_0 { background: lightgreen; }
+.run-test .hack_a5de699b3f472f6949830085de812183_1, x:-IE7 { background: lightgreen; }
+*+html .run-test .hack_a5de699b3f472f6949830085de812183_2 { background: lightgreen; }
+body*.run-test .hack_a5de699b3f472f6949830085de812183_3 { background: lightgreen; }
+.run-test .hack_a1cb5e7ad258ad5ed8bbaac04b701415_0\ { background: lightgreen; }
+html > body .run-test .hack_da690292d4fddd94dc7bdd50e38b5713_0 { background: lightgreen; }
+html > /**/ body .run-test .hack_4f592507d299160304b57a02664d7b31_0 { background: lightgreen; }
+head ~ /**/ body .run-test .hack_4f592507d299160304b57a02664d7b31_1 { background: lightgreen; }
+_::selection, .run-test .hack_24f051c1d4bebed8a8ffad21a399cd97_0:not([attr*='']) { background: lightgreen; }
+:root * > .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_0 { background: lightgreen; }
+body:last-child .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_1 { background: lightgreen; }
+body:nth-of-type(1) .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_2 { background: lightgreen; }
+body:first-of-type .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_3 { background: lightgreen; }
+.run-test .hack_319658f3c65762a24dc67d5ccf8cd452_4:not([attr*='']) { background: lightgreen; }
+html[lang='\
+en'] .run-test .hack_e6b158b7e27bcb157326348efb5c0bb2_0 { background: lightgreen; }
+.run-test .hack_1a8dbf9f026f452604757340923e4e62_0 { _background: lightgreen; }
+.run-test .hack_1a8dbf9f026f452604757340923e4e62_1 { -background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_0 { !background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_1 { $background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_2 { &background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_3 { *background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_4 { )background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_5 { =background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_6 { %background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_7 { +background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_8 { @background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_9 { ,background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_10 { .background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_11 { /background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_12 { `background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_13 { ]background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_14 { #background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_15 { ~background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_16 { ?background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_17 { :background: lightgreen; }
+.run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_18 { |background: lightgreen; }
+.run-test .hack_90ce8e1eeeb5f3d0971df30d412934b4_0 { background: lightgreen !ie; }
+.run-test .hack_69e3a6b66e01ffc5d9ef77c0ff65aa1d_0 { background: lightgreen\9; }
+.run-test .hack_69e3a6b66e01ffc5d9ef77c0ff65aa1d_1 { background/*\**/: lightgreen\9; }
+@media screen\9 { .run-test .hack_6615a4a5434dc55fc1c01736edb32cb7_0 { background: lightgreen; } }
+@media \0screen\,screen\9 { .run-test .hack_7e41bb4d3e33ad5da4d7d737b7bf3981_0 { background: lightgreen; } }
+@media \0screen { .run-test .hack_c9242a5ec3f073257e275102be15d95f_0 { background: lightgreen; } }
+@media screen and (min-width:0\0) { .run-test .hack_a60b03e301a67f76a5a22221c739dc64_0 { background: lightgreen; } }
+_:-ms-input-placeholder, :root .run-test .hack_f1070533535a12744a0381a75087a915_0 { background: lightgreen; }
+_:-ms-fullscreen, :root .run-test .hack_d19e53a0fdfba5ec0f283ae86175a3af_0 { background: lightgreen; }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .run-test .hack_28f493d247a12ab654f6c3637f6978d5_0 { background: lightgreen; } }
+@media screen { @media (min-width: 0px) { .run-test .hack_448c4b5ec6e62bb3c328cca118f0a80d_0 { background: lightgreen; } } }
+html:first-child .run-test .hack_54eb761b77f24e4235c7e54927f1be11_0 { background: lightgreen; }
+_:-o-prefocus, body:last-child .run-test .hack_a3f166304aafed524566bc6814e1d5c7_0 { background: lightgreen; }
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .run-test .hack_da316470409d77b36c0d01785685f40c_0 { background: lightgreen; } }
+@media (min-resolution: .001dpcm) { _:-o-prefocus, .run-test .hack_71627a771f70379e1704bbf6132792cb_0 { background: lightgreen; } }
+html[xmlns*=""] body:last-child .run-test .hack_a43e38ac042db6a675dcc6ff76841c67_0 { background: lightgreen; }
+html[xmlns*=""]:root .run-test .hack_a43e38ac042db6a675dcc6ff76841c67_1  { background: lightgreen; }
+*|html[xmlns*=""] .run-test .hack_052b7c66f249a55209252eddeea351f9_0 { background: lightgreen; }
+_::-moz-svg-foreign-content, :root .run-test .hack_8bacb43ba70fb5c9ccd3029729a78760_0 { background: lightgreen; }
+@media \\0 screen { .run-test .hack_a13653e3599eb6e6c11ba7f1a859193e_0 { background: lightgreen; } }
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .run-test .hack_ac2480b5c83038f2d838e2a62e28a307_0 { background: lightgreen; } }

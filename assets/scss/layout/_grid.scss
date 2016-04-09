@@ -1,0 +1,33 @@
+.grid {
+  margin: 0 -0.75em;
+}
+
+[class*='grid__col--'] {
+  padding: 0 0.75em;
+}
+
+@include bp('large') { /* 1216px */
+  [class*='grid__col--'] {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+  }
+
+  .grid[class*='grid__col--'] {
+    margin: 0;
+    padding: 0;
+  }
+
+  .grid__col--20  { width: (100% / 5); }
+  .grid__col--25  { width: (100% / 4); }
+  .grid__col--30  { width: (100% / 10 * 3); }
+  .grid__col--33  { width: (100% / 3); }
+  .grid__col--40  { width: (100% / 10 * 4); }
+  .grid__col--50  { width: (100% / 2); }
+  .grid__col--60  { width: (100% / 10 * 6); }
+  .grid__col--66  { width: (100% / 3 * 2); }
+  .grid__col--70  { width: (100% / 10 * 7); }
+  .grid__col--75  { width: (100% / 4 * 3); }
+  .grid__col--80  { width: (100% / 10 * 8); }
+  .grid__col--100 { width: 100%; }
+}

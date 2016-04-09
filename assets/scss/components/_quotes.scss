@@ -1,0 +1,186 @@
+#quotes {
+  background-color: tint(map-get($browser-themes, 'ie'), 90%);
+}
+
+.quote {
+  background-color: tint(map-get($browser-themes, 'op'), 90%);
+  border-bottom: (($baseline / 3) / 1.5) solid map-get($browser-themes, 'op');
+  font-size: 1.5em;
+  margin-bottom: 0;
+  padding: (($baseline * 2) / 1.5) 0;
+  text-align: center;
+
+  p {
+    font-style: italic;
+    margin-bottom: 0;
+    display: inline-block;
+
+    &:after {
+      content: '\201d';
+    }
+
+    &:before {
+      content: '\201c';
+    }
+  }
+
+  a {
+    color: map-get($browser-themes, 'ie');
+    text-decoration: none;
+
+    &:hover,
+    &:focus  {
+      color: lighten(map-get($browser-themes, 'ie'), 20%);
+    }
+  }
+
+  @include bp('small') {
+    padding-left: $baseline;
+    padding-right: $baseline;
+  }
+}
+
+.quote-authors {
+  list-style: none;
+  overflow-y: hidden;
+  overflow-x: auto;
+  margin: 0;
+  white-space: nowrap;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-filter: grayscale(100%) blur(1px);
+    -moz-filter: grayscale(100%) blur(1px);
+    -ms-filter: grayscale(100%) blur(1px);
+    filter: grayscale(100%) blur(1px);
+
+    a {
+      border-bottom: 0 !important;
+      display: block;
+      font-size: 0.8em;
+      padding: 0 2em 1em;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+  
+  .active {
+    position: relative;
+
+    a:after {
+      border-left: $baseline solid transparent;
+      border-right: $baseline solid transparent;
+      border-top: $baseline solid map-get($browser-themes, 'op');
+      content: '';
+      height: 0;
+      left: 50%;
+      margin-left: ($baseline * -1);
+      position: absolute;
+      top: 0;
+      width: 0;
+    }
+  }
+
+  .active, li:hover, li:focus {
+    -webkit-filter: grayscale(0) blur(0);
+    -moz-filter: grayscale(0) blur(0);
+    -ms-filter: grayscale(0) blur(0);
+    filter: grayscale(0) blur(0);
+  }
+}
+
+.avatar-sprite, 
+.avatar-ashleycallahan, 
+.avatar-bluespore, 
+.avatar-chinchang457, 
+.avatar-codepo8, 
+.avatar-desainersingit, 
+.avatar-fabien_doiron, 
+.avatar-garazi, .avatar-grimmweb, 
+.avatar-iSands, 
+.avatar-jaredsartin, 
+.avatar-markszymik, 
+.avatar-nate_weldon, 
+.avatar-paul_irish, 
+.avatar-petesena, 
+.avatar-ronicadesign, 
+.avatar-sgalineau, 
+.avatar-shakeeb, 
+.avatar-slashlv, 
+.avatar-therusstler, 
+.avatar-toddvachon {
+  background-image: url('../images/avatar-s5b3bfef4fa.png');
+  background-repeat: no-repeat;
+}
+
+.quotes .quote-authors__avatar > div {
+  width: 73px;
+  height: 73px;
+  display: block;
+  margin: 1em auto;
+  border-radius: 50%;
+  border: 3px solid tint(map-get($browser-themes, 'op'), 90%);
+  box-shadow: 0 0 0 3px #eee;
+}
+
+.avatar-ashleycallahan {
+    background-position: 0 -584px
+}
+.avatar-bluespore {
+    background-position: 0 -1387px
+}
+.avatar-chinchang457 {
+    background-position: 0 -511px
+}
+.avatar-codepo8 {
+    background-position: 0 -438px
+}
+.avatar-desainersingit {
+    background-position: 0 -1022px
+}
+.avatar-fabien_doiron {
+    background-position: 0 -365px
+}
+.avatar-garazi {
+    background-position: 0 -949px
+}
+.avatar-grimmweb {
+    background-position: 0 -1314px
+}
+.avatar-iSands {
+    background-position: 0 -657px
+}
+.avatar-jaredsartin {
+    background-position: 0 -730px
+}
+.avatar-markszymik {
+    background-position: 0 -1241px
+}
+.avatar-nate_weldon {
+    background-position: 0 -292px
+}
+.avatar-paul_irish {
+    background-position: 0 -803px
+}
+.avatar-petesena {
+    background-position: 0 -219px
+}
+.avatar-ronicadesign {
+    background-position: 0 0
+}
+.avatar-sgalineau {
+    background-position: 0 -73px
+}
+.avatar-shakeeb {
+    background-position: 0 -146px
+}
+.avatar-slashlv {
+    background-position: 0 -1168px
+}
+.avatar-therusstler {
+    background-position: 0 -876px
+}
+.avatar-toddvachon {
+    background-position: 0 -1095px
+}

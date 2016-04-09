@@ -1,0 +1,24 @@
+// Font Families
+$copy-font: 'Open Sans', sans-serif;
+$title-font: 'Montserrat', 'Open Sans', sans-serif;
+
+// Browser Colours
+$browser-themes: (
+  'an': #a4c639,
+  'ch': #ffd700,
+  'fx': #f77918,
+  'ie': #0a90dd,
+  'op': #f63b3c,
+  'om': darken(#f63b3c, 30%),
+  'sa': #999999,
+);
+
+// Other Colours
+$black: #333;
+$dark-grey: #666;
+$dark-white: #f3f3f3;
+$light-grey: #ddd;
+$white: #fff;
+
+// Baseline
+$baseline: 1.5em;

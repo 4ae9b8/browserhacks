@@ -1,0 +1,11 @@
+@mixin bp($bp) {
+  @if ($bp == 'small') {
+    @media (max-width: 65em) {
+      @content;
+    }
+  } @else if ($bp == 'large') {
+    @media (min-width: 65em) {
+      @content;
+    }
+  }
+}

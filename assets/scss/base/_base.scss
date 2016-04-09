@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: inherit;
+  position: relative;
+
+  &:after {
+    content: '';
+    height: ($baseline / 3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-image: linear-gradient(
+      to right,
+      map-get($browser-themes, 'an') 17%,
+      map-get($browser-themes, 'ch') 17%, map-get($browser-themes, 'ch') 33%,
+      map-get($browser-themes, 'fx') 33%, map-get($browser-themes, 'fx') 50%,
+      map-get($browser-themes, 'ie') 50%, map-get($browser-themes, 'ie') 67%,
+      map-get($browser-themes, 'op') 67%, map-get($browser-themes, 'op') 83%,
+      map-get($browser-themes, 'sa') 83%
+    );
+  }
+}
