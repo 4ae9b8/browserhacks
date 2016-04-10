@@ -3,6 +3,7 @@
     "icons": "spritesh --input assets/images/svg --output _includes/sprite.svg --viewbox \"0 0 16 16\" --prefix icon-",
     "build-tests": "_bin/buildTests.js",
     "build-database": "_bin/buildDatabase.js",
+    "build": "npm run build-tests && npm run build-database",
     "js": "cat assets/js/vendor/jquery.min.js assets/js/vendor/select.min.js assets/js/vendor/underscore.min.js assets/js/vendor/backbone.min.js assets/js/vendor/carbonads.min.js assets/js/vendor/prism.min.js assets/js/main.js assets/js/tests.js | uglifyjs > assets/js/main.min.js"
   },
   "devDependencies": {

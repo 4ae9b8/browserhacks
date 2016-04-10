@@ -90,4 +90,4 @@ The **code** key is an array of expressions for the hack. Certain hacks can be w
 
 The **test** key is an array of expressions for the test. It should be a direct copy of the `code` array, except the braces should be filled with a `background: lightgreen;` in case of a selector, or `.selector { background: lightgreen; }` in case of a media expression. Take example on other existing hacks.
 
-Once you’ve done that, simply run `npm run build-database` to complete the hack with a unique ID, a human-readable version, a check for whether or not it’s a legacy hack, and so on.
+Once you’ve done that, simply run `npm run build` to complete the hack with a unique ID, a human-readable version, a check for whether or not it’s a legacy hack, and create dynamic tests.
