@@ -1,7 +1,7 @@
 Browserhacks.com
 ================
 
-What's this?
+What’s this?
 ------------
 
 Browserhacks is an extensive list of browser specific CSS and JavaScript hacks from all over the interwebs.
@@ -25,10 +25,12 @@ Created by
 * [Hugo Giraudel](http://twitter.com/hugogiraudel)
 * [Fabrice Weinberg](http://twitter.com/fweinb)
 
+
 Updates by
 ---------
 
 * [Jeff Clayton](https://github.com/jeffclayton) 
+
 
 Thanks to
 ---------
@@ -45,12 +47,47 @@ Thanks to
 Deployment
 ----------
 
-Our live stable version is the `gh-pages` branch. This is updated through the grunt `publish` task.
-Our preview/beta version is the `master` branch. This is checked with 5minfork.com.
-So when we want to do something new:
+The site is a Jekyll setup hosted on GitHub Pages. Simply update the `gh-pages` branch to update the site (direct edit on GitHub, manual push or pull-request merge).
 
-1. We pull the repo locally
-2. We work on `master` branch
-3. We push to `master`
-4. We check on [5minfork.com](http://5minfork.com)
-5. We go wild with grunt `publish`
+Adding new hacks
+----------------
+
+Adding a new hack is as simple as adding a new entry in [`_data/hacks.json`](https://github.com/4ae9b8/browserhacks/blob/gh-pages/_data/hacks.json). Like this:
+
+```json
+{
+  "type": "selector",
+  "browsers": {
+    "ch": "*",
+    "op": "14+"
+  },
+  "label": "A label for your hack if necessary.",
+  "language": "css",
+  "code": [
+    ".selector:not(*:root) {}"
+  ],
+  "test": [
+    ".selector:not(*:root) { background: lightgreen; }"
+  ]
+}
+```
+
+The **type** key defines which type of hack it is; valid types are listed in [`_data/hackTypes.json`](https://github.com/4ae9b8/browserhacks/blob/gh-pages/_data/hackTypes.json).
+
+The **browsers** key is an object mapping a browser’s shortname to a version expression; valid browsers are listed in [`_data/browsers.json`](https://github.com/4ae9b8/browserhacks/blob/gh-pages/_data/browsers.json). Versions can be:
+
+* strict version (e.g. `42`)
+* strict versiond (e.g. `42|43`)
+* version and up (e.g. `42+`)
+* version and below (e.g. `42-`)
+* any version (e.g. `*`)
+
+The **label** key can be left empty, or describe the hack if it is necessary.
+
+The **language** key defines how to display the hack, and how to create the dynamic test for it. Possible languages are `css`, `javascript` and `markup`. 
+
+The **code** key is an array of expressions for the hack. Certain hacks can be written in several forms, hence the need for an array.
+
+The **test** key is an array of expressions for the test. It should be a direct copy of the `code` array, except the braces should be filled with a `background: lightgreen;` in case of a selector, or `.selector { background: lightgreen; }` in case of a media expression. Take example on other existing hacks.
+
+Once you’ve done that, simply run `npm run build-database` to complete the hack with a unique ID, a human-readable version, a check for whether or not it’s a legacy hack, and so on.
