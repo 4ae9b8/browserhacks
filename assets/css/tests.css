@@ -43,8 +43,6 @@ body:last-child .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_1 { background:
 body:nth-of-type(1) .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_2 { background: lightgreen; }
 body:first-of-type .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_3 { background: lightgreen; }
 .run-test .hack_319658f3c65762a24dc67d5ccf8cd452_4:not([attr*='']) { background: lightgreen; }
-html[lang='\
-en'] .run-test .hack_e6b158b7e27bcb157326348efb5c0bb2_0 { background: lightgreen; }
 .run-test .hack_1a8dbf9f026f452604757340923e4e62_0 { _background: lightgreen; }
 .run-test .hack_1a8dbf9f026f452604757340923e4e62_1 { -background: lightgreen; }
 .run-test .hack_aff8d8f6c5ce6a560158ada7b9007854_0 { !background: lightgreen; }
