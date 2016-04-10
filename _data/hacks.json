@@ -970,26 +970,6 @@
     "id": "319658f3c65762a24dc67d5ccf8cd452"
   },
   {
-    "type": "selector",
-    "browsers": {
-      "ie": {
-        "version": "9-",
-        "humanVersion": "≤ 9",
-        "legacy": false
-      }
-    },
-    "label": "Everything but Internet Explorer ≤9",
-    "language": "css",
-    "code": [
-      "html[lang='\\\nen'] .selector {}"
-    ],
-    "test": [
-      "html[lang='\\\nen'] .selector { background: lightgreen; }"
-    ],
-    "safe": false,
-    "id": "e6b158b7e27bcb157326348efb5c0bb2"
-  },
-  {
     "type": "propertyValue",
     "browsers": {
       "ie": {
