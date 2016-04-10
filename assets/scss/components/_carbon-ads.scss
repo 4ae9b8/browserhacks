@@ -4,8 +4,8 @@
   width: 300px;
   max-width: 100%;
   margin-bottom: $baseline;
-  padding-top: 0.5em;
   position: relative;
+  padding: 5px;
 
   @include bp('small') {
     margin: 0.5em auto;
@@ -13,11 +13,13 @@
 }
 
 .browserstack-ad p {
-  font-size: 0.8em;
+  font-size: 0.7em;
   text-transform: uppercase;
   color: #888;
   position: absolute;
-  left: 5.7em;
+  left: 25%;
+  top: 5px;
+  white-space: nowrap;
 }
 
 .browserstack-ad a {
