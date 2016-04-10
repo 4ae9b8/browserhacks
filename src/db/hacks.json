@@ -1603,7 +1603,7 @@
     "type": "media",
     "browsers": {
       "ch": "22|23|24|25|26|27|28",
-      "sa": "7+"
+      "sa": "6.1-7.0"
     },
     "label": "",
     "language": "css",
