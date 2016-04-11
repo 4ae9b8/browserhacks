@@ -374,7 +374,7 @@
     initialize: function () {
       this.$el.on('click', $.proxy(function () {
         this.body.toggleClass('run-test')
-      }, this))
+      }, this)).trigger('click')
     }
   })
 
