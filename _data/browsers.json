@@ -18,10 +18,10 @@
     "alias": ["firefox", "mozilla firefox", "ff"]
   },
   "ie": {
-    "name": "Internet Explorer",
+    "name": "Internet Explorer and Edge",
     "legacy": "6",
     "key": 73,
-    "alias": ["internet explorer", "ie"]
+    "alias": ["internet explorer", "ie", "edge"]
   },
   "op": {
     "name": "Opera",
