@@ -79,7 +79,7 @@
         "version": "12+",
         "humanVersion": ">= 12",
         "legacy": false
-      }
+      },
       "op": {
         "version": "14+",
         "humanVersion": "≥ 14",
