@@ -18,7 +18,7 @@
     "alias": ["firefox", "mozilla firefox", "ff"]
   },
   "ie": {
-    "name": "Internet Explorer <= 11 and Edge >= 12",
+    "name": "Internet Explorer/Edge",
     "legacy": "6",
     "key": 73,
     "alias": ["internet explorer", "msie", "ie", "microsoft edge", "ms edge", "edge", "ed"]
