@@ -46,6 +46,11 @@
         "humanVersion": "≥ 9",
         "legacy": false
       },
+      "ie": {
+        "version": "12+",
+        "humanVersion": ">= 12",
+        "legacy": false
+      },
       "op": {
         "version": "14+",
         "humanVersion": "≥ 14",
@@ -73,11 +78,6 @@
       "sa": {
         "version": "7-",
         "humanVersion": "≤ 7",
-        "legacy": false
-      },
-      "ie": {
-        "version": "12+",
-        "humanVersion": ">= 12",
         "legacy": false
       },
       "op": {
