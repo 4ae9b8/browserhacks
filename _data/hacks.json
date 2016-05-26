@@ -2183,5 +2183,23 @@
     ],
     "id": "70b623e6ee3d3af7c3ca68b71c5fb29f",
     "jshint": ""
+  },
+  {
+    "type": "javascript",
+    "browsers": {
+      "ie": {
+        "version": "12+",
+        "humanVersion": "≥ 12",
+        "legacy": false
+      }
+    },
+    "label": "",
+    "language": "javascript",
+    "code": [
+      "var isEdge = 'msLaunchUri' in navigator && !('documentMode' in document)"
+    ],
+    "test": [
+      "'msLaunchUri' in navigator && !('documentMode' in document)"
+    ]
   }
 ]
