@@ -277,9 +277,9 @@
     "type": "media",
     "browsers": {
       "fx": {
-        "version": "3.6+",
-        "humanVersion": "≥ 3.6",
-        "legacy": false
+        "version": "3.6|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31|32|33|34|35|36|37|38|39|40|41|42|43|44|45|46|47|48|49|50|51",
+        "humanVersion": "3.6-51",
+        "legacy": true
       }
     },
     "label": "",
@@ -342,12 +342,10 @@
     "label": "",
     "language": "css",
     "code": [
-      "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) {}",
-      "@media all and (-moz-images-in-menus:0) and (min-resolution: .001dpcm) {}"
+      "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) {}"
     ],
     "test": [
-      "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }",
-      "@media all and (-moz-images-in-menus:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }"
+      "@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: .001dpcm) { .selector { background: lightgreen; } }"
     ],
     "id": "12fab4e42897a8439c42d9e92d5f1047"
   },
@@ -363,12 +361,10 @@
     "label": "",
     "language": "css",
     "code": [
-      "@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) {} }",
-      "@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) {} }"
+      "@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) {} }"
     ],
     "test": [
-      "@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) { .selector { background: lightgreen; } } }",
-      "@media all and (-moz-images-in-menus:0) { @media (min-width: 0px) { .selector { background: lightgreen; } } }"
+      "@media all and (min--moz-device-pixel-ratio:0) { @media (min-width: 0px) { .selector { background: lightgreen; } } }"
     ],
     "id": "e8ca8ddfaa1ad94670089d93c96bb02f"
   },
