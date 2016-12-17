@@ -710,6 +710,21 @@
     "safe": false
   },
   {
+    "type": "selector",
+    "browsers": {
+      "ie": "10-",
+    },
+    "label": "Everything but Internet Explorer 10-",
+    "language": "css",
+    "code": [
+      "@media all and (-ms-high-contrast: none) {}"
+    ],
+    "test": [
+      "@media all and (-ms-high-contrast: none) { background: lightgreen; }"
+    ],
+    "safe": false
+  },
+  {
     "type": "propertyValue",
     "browsers": {
       "ie": "6"
