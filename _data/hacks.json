@@ -48,7 +48,7 @@
       },
       "ie": {
         "version": "12+",
-        "humanVersion": ">= 12",
+        "humanVersion": "≥ 12",
         "legacy": false
       },
       "op": {
@@ -81,8 +81,13 @@
         "legacy": false
       },
       "op": {
-        "version": "14+",
-        "humanVersion": "≥ 14",
+        "version": "14|15",
+        "humanVersion": "14-15",
+        "legacy": false
+      },
+      "an": {
+        "version": "4.4-",
+        "humanVersion": "≤ 4.4",
         "legacy": false
       }
     },
@@ -1202,13 +1207,23 @@
         "humanVersion": "*",
         "legacy": false
       },
+      "ch": {
+        "version": "25-",
+        "humanVersion": "≤ 25",
+        "legacy": true
+      },
       "sa": {
         "version": "6-",
         "humanVersion": "≤ 6",
         "legacy": false
+      },
+      "an": {
+        "version": "4.2-",
+        "humanVersion": "≤ 4.2",
+        "legacy": false
       }
     },
-    "label": "Everything but Internet Explorer and Safari ≤6",
+    "label": "Everything but Internet Explorer, Chrome ≤25, Safari ≤6, Android Browser ≤4.2",
     "language": "css",
     "code": [
       "@media screen { @media (min-width: 0px) {} }"
