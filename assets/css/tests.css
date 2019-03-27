@@ -75,6 +75,7 @@ _:-ms-input-placeholder, :root .run-test .hack_f1070533535a12744a0381a75087a915_
 _:-ms-fullscreen, :root .run-test .hack_d19e53a0fdfba5ec0f283ae86175a3af_0 { background: lightgreen; }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { .run-test .hack_28f493d247a12ab654f6c3637f6978d5_0 { background: lightgreen; } }
 @media screen { @media (min-width: 0px) { .run-test .hack_448c4b5ec6e62bb3c328cca118f0a80d_0 { background: lightgreen; } } }
+@supports not (width: max-content) { .run-test .hack_undefined_0 { background: lightgreen; } }
 html:first-child .run-test .hack_54eb761b77f24e4235c7e54927f1be11_0 { background: lightgreen; }
 _:-o-prefocus, body:last-child .run-test .hack_a3f166304aafed524566bc6814e1d5c7_0 { background: lightgreen; }
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) { .run-test .hack_da316470409d77b36c0d01785685f40c_0 { background: lightgreen; } }
