@@ -2183,5 +2183,25 @@
     ],
     "id": "70b623e6ee3d3af7c3ca68b71c5fb29f",
     "jshint": ""
+  },
+  {
+    "type": "javascript",
+    "browsers": {
+      "sa": {
+        "version": "9.1+",
+        "humanVersion": "≥ 9.1",
+        "legacy": false
+      }
+    },
+    "label": "",
+    "language": "javascript",
+    "code": [
+      "var isSafari = 'safari' in window;"
+    ],
+    "test": [
+      "'safari' in window"
+    ],
+    "id": "safari-in-window",
+    "jshint": ""
   }
 ]
