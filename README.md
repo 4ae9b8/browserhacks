@@ -22,14 +22,14 @@ Created by
 ---------
 
 * [Tim Pietrusky](http://twitter.com/timpietrusky)
-* [Hugo Giraudel](http://twitter.com/hugogiraudel)
+* [Kitty Giraudel](http://twitter.com/KittyGiraudel)
 * [Fabrice Weinberg](http://twitter.com/fweinb)
 
 
 Updates by
 ---------
 
-* [Jeff Clayton](https://github.com/jeffclayton) 
+* [Jeff Clayton](https://github.com/jeffclayton)
 
 
 Thanks to
@@ -84,7 +84,7 @@ The **browsers** key is an object mapping a browser’s shortname to a version e
 
 The **label** key can be left empty, or describe the hack if it is necessary.
 
-The **language** key defines how to display the hack, and how to create the dynamic test for it. Possible languages are `css`, `javascript` and `markup`. 
+The **language** key defines how to display the hack, and how to create the dynamic test for it. Possible languages are `css`, `javascript` and `markup`.
 
 The **code** key is an array of expressions for the hack. Certain hacks can be written in several forms, hence the need for an array.
 
