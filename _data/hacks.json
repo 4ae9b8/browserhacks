@@ -1812,6 +1812,25 @@
     "id": "58baa7f3b74d3e0aaa1d921c4f1bc2d0"
   },
   {
+    "type": "supports",
+    "browsers": {
+      "ie": {
+        "version": "*",
+        "humanVersion": "*",
+        "legacy": false
+      }
+    },
+    "label": "",
+    "language": "css",
+    "code": [
+      "@supports not (width: max-content) {}"
+    ],
+    "test": [
+      "@supports not (width: max-content) { .selector { background: lightgreen; } }"
+    ],
+    "id": "acc6fd90bd8d5abe12cd0111e82297ca"
+  },
+  {
     "type": "selector",
     "browsers": {
       "op": {
